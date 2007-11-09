@@ -1,0 +1,27 @@
+<h1>Listing pdfs</h1>
+
+<table>
+  <tr>
+  <% for column in Pdf.content_columns %>
+    <th><%= column.human_name %></th>
+  <% end %>
+  </tr>
+  
+<% for pdf in @pdfs %>
+  <tr>
+  <% for column in Pdf.content_columns %>
+    <td><%=h pdf.send(column.name) %></td>
+  <% end %>
+    <td><%= link_to 'Show', :action => 'show', :id => pdf %></td>
+    <td><%= link_to 'Edit', :action => 'edit', :id => pdf %></td>
+    <td><%= link_to 'Destroy', { :action => 'destroy', :id => pdf }, :confirm => 'Are you sure?', :method => :post %></td>
+  </tr>
+<% end %>
+</table>
+
+<%= link_to 'Previous page', { :page => @pdf_pages.current.previous } if @pdf_pages.current.previous %>
+<%= link_to 'Next page', { :page => @pdf_pages.current.next } if @pdf_pages.current.next %> 
+
+<br />
+
+<%= link_to 'New pdf', :action => 'new' %>
