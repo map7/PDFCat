@@ -1,4 +1,4 @@
 class Pdf < ActiveRecord::Base
-	belongs_to :cat
+	belongs_to :category
 	validates_presence_of :pdfdate, :pdfname, :filename
 end

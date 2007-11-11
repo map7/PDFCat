@@ -2,14 +2,19 @@
 # migrations feature of ActiveRecord to incrementally modify your database, and
 # then regenerate this schema definition.
 
-ActiveRecord::Schema.define(:version => 1) do
+ActiveRecord::Schema.define(:version => 5) do
+
+  create_table "categories", :force => true do |t|
+    t.column "name",        :string
+    t.column "description", :string
+  end
 
   create_table "pdfs", :force => true do |t|
-    t.column "pdfdate",  :date
-    t.column "pdfname",  :string
-    t.column "filename", :string
-    t.column "pdfnote",  :text
-    t.column "cat_id",   :integer
+    t.column "pdfdate",     :date
+    t.column "pdfname",     :string
+    t.column "filename",    :string
+    t.column "pdfnote",     :text
+    t.column "category_id", :integer
   end
 
 end
