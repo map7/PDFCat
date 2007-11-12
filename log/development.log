@@ -3257,3 +3257,593 @@ Processing PdfsController#index (for 127.0.0.1 at 2007-11-12 14:04:23) [GET]
 Rendering layoutfalseactionlist within layouts/application
 Rendering pdfs/list
 Completed in 0.01990 (50 reqs/sec) | Rendering: 0.01129 (56%) | DB: 0.00329 (16%) | 200 OK [http://localhost/pdfs]
+
+
+Processing PdfsController#index (for 127.0.0.1 at 2007-11-12 14:08:22) [GET]
+  Session ID: 960a680d02d6b9d35aa9843023b06506
+  Parameters: {"action"=>"index", "controller"=>"pdfs"}
+  [4;36;1mSQL (0.011199)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mPdf Columns (0.001480)[0m   [0mSHOW FIELDS FROM pdfs[0m
+  [4;36;1mSQL (0.000422)[0m   [0;1mSELECT count(*) AS count_all FROM pdfs [0m
+  [4;35;1mPdf Load (0.000896)[0m   [0mSELECT * FROM pdfs LIMIT 0, 10[0m
+Rendering layoutfalseactionlist within layouts/application
+Rendering pdfs/list
+Completed in 0.06757 (14 reqs/sec) | Rendering: 0.01561 (23%) | DB: 0.01400 (20%) | 200 OK [http://localhost/pdfs]
+
+
+Processing PdfsController#index (for 127.0.0.1 at 2007-11-12 14:08:23) [GET]
+  Session ID: 960a680d02d6b9d35aa9843023b06506
+  Parameters: {"action"=>"index", "controller"=>"pdfs"}
+  [4;36;1mPdf Columns (0.007256)[0m   [0;1mSHOW FIELDS FROM pdfs[0m
+  [4;35;1mSQL (0.000886)[0m   [0mSELECT count(*) AS count_all FROM pdfs [0m
+  [4;36;1mPdf Load (0.001352)[0m   [0;1mSELECT * FROM pdfs LIMIT 0, 10[0m
+Rendering layoutfalseactionlist within layouts/application
+Rendering pdfs/list
+Completed in 0.04235 (23 reqs/sec) | Rendering: 0.01795 (42%) | DB: 0.00949 (22%) | 200 OK [http://localhost/pdfs]
+
+
+Processing PdfsController#index (for 127.0.0.1 at 2007-11-12 14:08:47) [GET]
+  Session ID: 960a680d02d6b9d35aa9843023b06506
+  Parameters: {"action"=>"index", "controller"=>"pdfs"}
+  [4;35;1mPdf Columns (0.002333)[0m   [0mSHOW FIELDS FROM pdfs[0m
+  [4;36;1mSQL (0.000888)[0m   [0;1mSELECT count(*) AS count_all FROM pdfs [0m
+  [4;35;1mPdf Load (0.001047)[0m   [0mSELECT * FROM pdfs LIMIT 0, 10[0m
+Rendering layoutfalseactionlist within layouts/application
+Rendering pdfs/list
+Completed in 0.02219 (45 reqs/sec) | Rendering: 0.01273 (57%) | DB: 0.00427 (19%) | 200 OK [http://localhost/pdfs]
+
+
+Processing PdfsController#index (for 127.0.0.1 at 2007-11-12 14:08:50) [GET]
+  Session ID: 960a680d02d6b9d35aa9843023b06506
+  Parameters: {"action"=>"index", "controller"=>"pdfs"}
+  [4;36;1mPdf Columns (0.001852)[0m   [0;1mSHOW FIELDS FROM pdfs[0m
+  [4;35;1mSQL (0.000463)[0m   [0mSELECT count(*) AS count_all FROM pdfs [0m
+  [4;36;1mPdf Load (0.001013)[0m   [0;1mSELECT * FROM pdfs LIMIT 0, 10[0m
+Rendering layoutfalseactionlist within layouts/application
+Rendering pdfs/list
+Completed in 0.01960 (51 reqs/sec) | Rendering: 0.01133 (57%) | DB: 0.00333 (16%) | 200 OK [http://localhost/pdfs]
+
+
+Processing PdfsController#index (for 127.0.0.1 at 2007-11-12 14:09:15) [GET]
+  Session ID: 960a680d02d6b9d35aa9843023b06506
+  Parameters: {"action"=>"index", "controller"=>"pdfs"}
+  [4;35;1mPdf Columns (0.001703)[0m   [0mSHOW FIELDS FROM pdfs[0m
+  [4;36;1mSQL (0.000835)[0m   [0;1mSELECT count(*) AS count_all FROM pdfs [0m
+  [4;35;1mPdf Load (0.002745)[0m   [0mSELECT * FROM pdfs LIMIT 0, 10[0m
+Rendering layoutfalseactionlist within layouts/application
+Rendering pdfs/list
+Completed in 0.02333 (42 reqs/sec) | Rendering: 0.01270 (54%) | DB: 0.00528 (22%) | 200 OK [http://localhost/pdfs]
+
+
+Processing PdfsController#index (for 127.0.0.1 at 2007-11-12 14:09:36) [GET]
+  Session ID: 960a680d02d6b9d35aa9843023b06506
+  Parameters: {"action"=>"index", "controller"=>"pdfs"}
+  [4;36;1mPdf Columns (0.001642)[0m   [0;1mSHOW FIELDS FROM pdfs[0m
+  [4;35;1mSQL (0.006856)[0m   [0mSELECT count(*) AS count_all FROM pdfs [0m
+  [4;36;1mPdf Load (0.004112)[0m   [0;1mSELECT * FROM pdfs LIMIT 0, 10[0m
+Rendering layoutfalseactionlist within layouts/application
+Rendering pdfs/list
+
+
+ActionView::TemplateError (No such file or directory - script/../config/../app/views/pdfs/list.rhtml) in app/views/pdfs/list.rhtml:
+
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_view/base.rb:440:in `mtime'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_view/base.rb:440:in `compile_template?'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_view/base.rb:317:in `compile_and_render_template'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_view/base.rb:301:in `render_template'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_view/base.rb:260:in `render_file'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:806:in `render_file'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:738:in `render_with_no_layout'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:863:in `render_without_layout'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:798:in `render_action'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:748:in `render_with_no_layout'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/deprecation.rb:44:in `silence'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:747:in `render_with_no_layout'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/layout.rb:244:in `render_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/benchmarking.rb:50:in `render'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/benchmarking.rb:50:in `render'
+    app/controllers/pdfs_controller.rb:4:in `index'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:1095:in `send'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:1095:in `perform_action_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:632:in `call_filter'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:634:in `call_filter'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:619:in `perform_action_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/benchmarking.rb:66:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/benchmarking.rb:66:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/rescue.rb:83:in `perform_action'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:430:in `send'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:430:in `process_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:624:in `process_without_session_management_support'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/session_management.rb:114:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:330:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.2.3/lib/dispatcher.rb:41:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.2.3/lib/webrick_server.rb:113:in `handle_dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.2.3/lib/webrick_server.rb:79:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.2.3/lib/webrick_server.rb:63:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.2.3/lib/commands/servers/webrick.rb:59
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:495:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:495:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.2.3/lib/commands/server.rb:39
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    script/server:3
+
+
+Rendering /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/templates/rescues/layout.rhtml (500 Internal Error)
+
+
+Processing PdfsController#index (for 127.0.0.1 at 2007-11-12 14:09:40) [GET]
+  Session ID: 960a680d02d6b9d35aa9843023b06506
+  Parameters: {"action"=>"index", "controller"=>"pdfs"}
+  [4;35;1mPdf Columns (0.001885)[0m   [0mSHOW FIELDS FROM pdfs[0m
+  [4;36;1mSQL (0.001024)[0m   [0;1mSELECT count(*) AS count_all FROM pdfs [0m
+  [4;35;1mPdf Load (0.001551)[0m   [0mSELECT * FROM pdfs LIMIT 0, 10[0m
+Rendering layoutfalseactionlist within layouts/application
+Rendering pdfs/list
+
+
+ActionView::TemplateError (No such file or directory - script/../config/../app/views/pdfs/list.rhtml) in app/views/pdfs/list.rhtml:
+
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_view/base.rb:440:in `mtime'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_view/base.rb:440:in `compile_template?'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_view/base.rb:317:in `compile_and_render_template'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_view/base.rb:301:in `render_template'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_view/base.rb:260:in `render_file'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:806:in `render_file'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:738:in `render_with_no_layout'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:863:in `render_without_layout'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:798:in `render_action'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:748:in `render_with_no_layout'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/deprecation.rb:44:in `silence'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:747:in `render_with_no_layout'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/layout.rb:244:in `render_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/benchmarking.rb:50:in `render'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/benchmarking.rb:50:in `render'
+    app/controllers/pdfs_controller.rb:4:in `index'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:1095:in `send'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:1095:in `perform_action_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:632:in `call_filter'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:634:in `call_filter'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:619:in `perform_action_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/benchmarking.rb:66:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/benchmarking.rb:66:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/rescue.rb:83:in `perform_action'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:430:in `send'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:430:in `process_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:624:in `process_without_session_management_support'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/session_management.rb:114:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:330:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.2.3/lib/dispatcher.rb:41:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.2.3/lib/webrick_server.rb:113:in `handle_dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.2.3/lib/webrick_server.rb:79:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.2.3/lib/webrick_server.rb:63:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.2.3/lib/commands/servers/webrick.rb:59
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:495:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:495:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.2.3/lib/commands/server.rb:39
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    script/server:3
+
+
+Rendering /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/templates/rescues/layout.rhtml (500 Internal Error)
+
+
+Processing PdfsController#index (for 127.0.0.1 at 2007-11-12 14:09:43) [GET]
+  Session ID: 960a680d02d6b9d35aa9843023b06506
+  Parameters: {"action"=>"index", "controller"=>"pdfs"}
+  [4;36;1mPdf Columns (0.001677)[0m   [0;1mSHOW FIELDS FROM pdfs[0m
+  [4;35;1mSQL (0.000500)[0m   [0mSELECT count(*) AS count_all FROM pdfs [0m
+  [4;36;1mPdf Load (0.001420)[0m   [0;1mSELECT * FROM pdfs LIMIT 0, 10[0m
+Rendering layoutfalseactionlist within layouts/application
+Rendering pdfs/list
+
+
+ActionView::TemplateError (No such file or directory - script/../config/../app/views/pdfs/list.rhtml) in app/views/pdfs/list.rhtml:
+
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_view/base.rb:440:in `mtime'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_view/base.rb:440:in `compile_template?'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_view/base.rb:317:in `compile_and_render_template'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_view/base.rb:301:in `render_template'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_view/base.rb:260:in `render_file'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:806:in `render_file'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:738:in `render_with_no_layout'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:863:in `render_without_layout'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:798:in `render_action'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:748:in `render_with_no_layout'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/deprecation.rb:44:in `silence'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:747:in `render_with_no_layout'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/layout.rb:244:in `render_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/benchmarking.rb:50:in `render'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/benchmarking.rb:50:in `render'
+    app/controllers/pdfs_controller.rb:4:in `index'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:1095:in `send'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:1095:in `perform_action_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:632:in `call_filter'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:634:in `call_filter'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:619:in `perform_action_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/benchmarking.rb:66:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/benchmarking.rb:66:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/rescue.rb:83:in `perform_action'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:430:in `send'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:430:in `process_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:624:in `process_without_session_management_support'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/session_management.rb:114:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:330:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.2.3/lib/dispatcher.rb:41:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.2.3/lib/webrick_server.rb:113:in `handle_dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.2.3/lib/webrick_server.rb:79:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.2.3/lib/webrick_server.rb:63:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.2.3/lib/commands/servers/webrick.rb:59
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:495:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:495:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.2.3/lib/commands/server.rb:39
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    script/server:3
+
+
+Rendering /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/templates/rescues/layout.rhtml (500 Internal Error)
+
+
+Processing PdfsController#index (for 127.0.0.1 at 2007-11-12 14:14:10) [GET]
+  Session ID: 960a680d02d6b9d35aa9843023b06506
+  Parameters: {"action"=>"index", "controller"=>"pdfs"}
+  [4;35;1mPdf Columns (0.001816)[0m   [0mSHOW FIELDS FROM pdfs[0m
+  [4;36;1mSQL (0.001728)[0m   [0;1mSELECT count(*) AS count_all FROM pdfs [0m
+  [4;35;1mPdf Load (0.002543)[0m   [0mSELECT * FROM pdfs LIMIT 0, 10[0m
+Rendering  within layouts/application
+Rendering pdfs/index
+Completed in 0.02333 (42 reqs/sec) | Rendering: 0.01226 (52%) | DB: 0.00609 (26%) | 200 OK [http://localhost/pdfs]
+
+
+Processing PdfsController#index (for 127.0.0.1 at 2007-11-12 14:14:12) [GET]
+  Session ID: 960a680d02d6b9d35aa9843023b06506
+  Parameters: {"action"=>"index", "controller"=>"pdfs"}
+  [4;36;1mPdf Columns (0.001809)[0m   [0;1mSHOW FIELDS FROM pdfs[0m
+  [4;35;1mSQL (0.000538)[0m   [0mSELECT count(*) AS count_all FROM pdfs [0m
+  [4;36;1mPdf Load (0.001101)[0m   [0;1mSELECT * FROM pdfs LIMIT 0, 10[0m
+Rendering  within layouts/application
+Rendering pdfs/index
+Completed in 0.01895 (52 reqs/sec) | Rendering: 0.01050 (55%) | DB: 0.00345 (18%) | 200 OK [http://localhost/pdfs]
+
+
+Processing PdfsController#index (for 127.0.0.1 at 2007-11-12 14:14:14) [GET]
+  Session ID: 960a680d02d6b9d35aa9843023b06506
+  Parameters: {"action"=>"index", "controller"=>"pdfs"}
+  [4;35;1mPdf Columns (0.001696)[0m   [0mSHOW FIELDS FROM pdfs[0m
+  [4;36;1mSQL (0.000420)[0m   [0;1mSELECT count(*) AS count_all FROM pdfs [0m
+  [4;35;1mPdf Load (0.000960)[0m   [0mSELECT * FROM pdfs LIMIT 0, 10[0m
+Rendering  within layouts/application
+Rendering pdfs/index
+Completed in 0.01836 (54 reqs/sec) | Rendering: 0.01046 (56%) | DB: 0.00308 (16%) | 200 OK [http://localhost/pdfs]
+
+
+Processing PdfsController#index (for 127.0.0.1 at 2007-11-12 14:14:15) [GET]
+  Session ID: 960a680d02d6b9d35aa9843023b06506
+  Parameters: {"action"=>"index", "controller"=>"pdfs"}
+  [4;36;1mPdf Columns (0.002319)[0m   [0;1mSHOW FIELDS FROM pdfs[0m
+  [4;35;1mSQL (0.000537)[0m   [0mSELECT count(*) AS count_all FROM pdfs [0m
+  [4;36;1mPdf Load (0.001107)[0m   [0;1mSELECT * FROM pdfs LIMIT 0, 10[0m
+Rendering  within layouts/application
+Rendering pdfs/index
+Completed in 0.02123 (47 reqs/sec) | Rendering: 0.01122 (52%) | DB: 0.00396 (18%) | 200 OK [http://localhost/pdfs]
+
+
+Processing PdfsController#new (for 127.0.0.1 at 2007-11-12 14:14:17) [GET]
+  Session ID: 960a680d02d6b9d35aa9843023b06506
+  Parameters: {"action"=>"new", "controller"=>"pdfs"}
+  [4;35;1mPdf Columns (0.009989)[0m   [0mSHOW FIELDS FROM pdfs[0m
+Rendering  within layouts/application
+Rendering pdfs/new
+  [4;36;1mCategory Load (0.003160)[0m   [0;1mSELECT * FROM categories [0m
+  [4;35;1mCategory Columns (0.001933)[0m   [0mSHOW FIELDS FROM categories[0m
+Rendered pdfs/_form (0.02693)
+Completed in 0.05517 (18 reqs/sec) | Rendering: 0.02848 (51%) | DB: 0.01508 (27%) | 200 OK [http://localhost/pdfs/new]
+
+
+Processing PdfsController#create (for 127.0.0.1 at 2007-11-12 14:14:23) [POST]
+  Session ID: 960a680d02d6b9d35aa9843023b06506
+  Parameters: {"category"=>"1", "commit"=>"Create", "action"=>"create", "controller"=>"pdfs", "pdf"=>{"pdfdate(3i)"=>"12", "pdfname"=>"test8", "filename"=>"t", "pdfnote"=>"", "pdfdate(1i)"=>"2007", "pdfdate(2i)"=>"11"}}
+  [4;36;1mPdf Columns (0.001761)[0m   [0;1mSHOW FIELDS FROM pdfs[0m
+  [4;35;1mCategory Columns (0.001544)[0m   [0mSHOW FIELDS FROM categories[0m
+  [4;36;1mCategory Load (0.000817)[0m   [0;1mSELECT * FROM categories WHERE (categories.`id` = 1) [0m
+  [4;35;1mSQL (0.000153)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000335)[0m   [0;1mINSERT INTO pdfs (`pdfname`, `pdfdate`, `category_id`, `filename`, `pdfnote`) VALUES('test8', '2007-11-12', 1, 't', '')[0m
+  [4;35;1mSQL (0.000685)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/pdfs
+Completed in 0.01920 (52 reqs/sec) | DB: 0.00530 (27%) | 302 Found [http://localhost/pdfs/create]
+
+
+Processing PdfsController#index (for 127.0.0.1 at 2007-11-12 14:14:23) [GET]
+  Session ID: 960a680d02d6b9d35aa9843023b06506
+  Parameters: {"action"=>"index", "controller"=>"pdfs"}
+  [4;36;1mPdf Columns (0.002006)[0m   [0;1mSHOW FIELDS FROM pdfs[0m
+  [4;35;1mSQL (0.001026)[0m   [0mSELECT count(*) AS count_all FROM pdfs [0m
+  [4;36;1mPdf Load (0.000998)[0m   [0;1mSELECT * FROM pdfs LIMIT 0, 10[0m
+Rendering  within layouts/application
+Rendering pdfs/index
+Completed in 0.02030 (49 reqs/sec) | Rendering: 0.01120 (55%) | DB: 0.00403 (19%) | 200 OK [http://localhost/pdfs]
+
+
+Processing PdfsController#show (for 127.0.0.1 at 2007-11-12 14:14:27) [GET]
+  Session ID: 960a680d02d6b9d35aa9843023b06506
+  Parameters: {"action"=>"show", "id"=>"2", "controller"=>"pdfs"}
+  [4;35;1mPdf Columns (0.001786)[0m   [0mSHOW FIELDS FROM pdfs[0m
+  [4;36;1mPdf Load (0.000757)[0m   [0;1mSELECT * FROM pdfs WHERE (pdfs.`id` = 2) [0m
+Rendering  within layouts/application
+Rendering pdfs/show
+Completed in 0.01185 (84 reqs/sec) | Rendering: 0.00420 (35%) | DB: 0.00254 (21%) | 200 OK [http://localhost/pdfs/show/2]
+
+
+Processing PdfsController#list (for 127.0.0.1 at 2007-11-12 14:14:28) [GET]
+  Session ID: 960a680d02d6b9d35aa9843023b06506
+  Parameters: {"action"=>"list", "controller"=>"pdfs"}
+Rendering  within layouts/application
+Rendering pdfs/list
+
+
+ActionView::TemplateError (No such file or directory - script/../config/../app/views/pdfs/list.rhtml) in app/views/pdfs/list.rhtml:
+
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_view/base.rb:440:in `mtime'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_view/base.rb:440:in `compile_template?'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_view/base.rb:317:in `compile_and_render_template'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_view/base.rb:301:in `render_template'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_view/base.rb:260:in `render_file'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:806:in `render_file'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:711:in `render_with_no_layout'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/layout.rb:247:in `render_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/benchmarking.rb:50:in `render'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/benchmarking.rb:50:in `render'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:1101:in `perform_action_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:632:in `call_filter'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:634:in `call_filter'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:619:in `perform_action_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/benchmarking.rb:66:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/benchmarking.rb:66:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/rescue.rb:83:in `perform_action'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:430:in `send'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:430:in `process_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:624:in `process_without_session_management_support'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/session_management.rb:114:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:330:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.2.3/lib/dispatcher.rb:41:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.2.3/lib/webrick_server.rb:113:in `handle_dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.2.3/lib/webrick_server.rb:79:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.2.3/lib/webrick_server.rb:63:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.2.3/lib/commands/servers/webrick.rb:59
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:495:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:495:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.2.3/lib/commands/server.rb:39
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    script/server:3
+
+
+Rendering /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/templates/rescues/layout.rhtml (500 Internal Error)
+
+
+Processing PdfsController#index (for 127.0.0.1 at 2007-11-12 14:14:32) [GET]
+  Session ID: 960a680d02d6b9d35aa9843023b06506
+  Parameters: {"action"=>"index", "controller"=>"pdfs"}
+  [4;35;1mPdf Columns (0.001726)[0m   [0mSHOW FIELDS FROM pdfs[0m
+  [4;36;1mSQL (0.000517)[0m   [0;1mSELECT count(*) AS count_all FROM pdfs [0m
+  [4;35;1mPdf Load (0.001035)[0m   [0mSELECT * FROM pdfs LIMIT 0, 10[0m
+Rendering  within layouts/application
+Rendering pdfs/index
+Completed in 0.02097 (47 reqs/sec) | Rendering: 0.01117 (53%) | DB: 0.00328 (15%) | 200 OK [http://localhost/pdfs]
+
+
+Processing PdfsController#show (for 127.0.0.1 at 2007-11-12 14:15:19) [GET]
+  Session ID: 960a680d02d6b9d35aa9843023b06506
+  Parameters: {"action"=>"show", "id"=>"2", "controller"=>"pdfs"}
+  [4;36;1mPdf Columns (0.001689)[0m   [0;1mSHOW FIELDS FROM pdfs[0m
+  [4;35;1mPdf Load (0.001025)[0m   [0mSELECT * FROM pdfs WHERE (pdfs.`id` = 2) [0m
+Rendering  within layouts/application
+Rendering pdfs/show
+Completed in 0.01328 (75 reqs/sec) | Rendering: 0.00601 (45%) | DB: 0.00271 (20%) | 200 OK [http://localhost/pdfs/show/2]
+
+
+Processing PdfsController#index (for 127.0.0.1 at 2007-11-12 14:15:20) [GET]
+  Session ID: 960a680d02d6b9d35aa9843023b06506
+  Parameters: {"action"=>"index", "controller"=>"pdfs"}
+  [4;36;1mPdf Columns (0.002874)[0m   [0;1mSHOW FIELDS FROM pdfs[0m
+  [4;35;1mSQL (0.000796)[0m   [0mSELECT count(*) AS count_all FROM pdfs [0m
+  [4;36;1mPdf Load (0.000996)[0m   [0;1mSELECT * FROM pdfs LIMIT 0, 10[0m
+Rendering  within layouts/application
+Rendering pdfs/index
+Completed in 0.02103 (47 reqs/sec) | Rendering: 0.01127 (53%) | DB: 0.00467 (22%) | 200 OK [http://localhost/pdfs]
+
+
+Processing CategoriesController#index (for 127.0.0.1 at 2007-11-12 14:15:58) [GET]
+  Session ID: 960a680d02d6b9d35aa9843023b06506
+  Parameters: {"action"=>"index", "controller"=>"categories"}
+  [4;35;1mCategory Columns (0.002126)[0m   [0mSHOW FIELDS FROM categories[0m
+  [4;36;1mSQL (0.000785)[0m   [0;1mSELECT count(*) AS count_all FROM categories [0m
+  [4;35;1mCategory Load (0.000533)[0m   [0mSELECT * FROM categories LIMIT 0, 10[0m
+Rendering  within layouts/application
+Rendering categories/index
+Completed in 0.02031 (49 reqs/sec) | Rendering: 0.01151 (56%) | DB: 0.00344 (16%) | 200 OK [http://localhost/categories]
+
+
+Processing CategoriesController#show (for 127.0.0.1 at 2007-11-12 14:16:17) [GET]
+  Session ID: 960a680d02d6b9d35aa9843023b06506
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"categories"}
+  [4;36;1mCategory Columns (0.001466)[0m   [0;1mSHOW FIELDS FROM categories[0m
+  [4;35;1mCategory Load (0.002436)[0m   [0mSELECT * FROM categories WHERE (categories.`id` = 1) [0m
+Rendering  within layouts/application
+Rendering categories/show
+Completed in 0.01322 (75 reqs/sec) | Rendering: 0.00350 (26%) | DB: 0.00390 (29%) | 200 OK [http://localhost/categories/show/1]
+
+
+Processing CategoriesController#index (for 127.0.0.1 at 2007-11-12 14:16:19) [GET]
+  Session ID: 960a680d02d6b9d35aa9843023b06506
+  Parameters: {"action"=>"index", "controller"=>"categories"}
+  [4;36;1mCategory Columns (0.001328)[0m   [0;1mSHOW FIELDS FROM categories[0m
+  [4;35;1mSQL (0.000391)[0m   [0mSELECT count(*) AS count_all FROM categories [0m
+  [4;36;1mCategory Load (0.000419)[0m   [0;1mSELECT * FROM categories LIMIT 0, 10[0m
+Rendering  within layouts/application
+Rendering categories/index
+Completed in 0.01121 (89 reqs/sec) | Rendering: 0.00380 (33%) | DB: 0.00214 (19%) | 200 OK [http://localhost/categories]
+
+
+Processing CategoriesController#index (for 127.0.0.1 at 2007-11-12 14:16:21) [GET]
+  Session ID: 960a680d02d6b9d35aa9843023b06506
+  Parameters: {"action"=>"index", "controller"=>"categories"}
+  [4;35;1mCategory Columns (0.002475)[0m   [0mSHOW FIELDS FROM categories[0m
+  [4;36;1mSQL (0.000689)[0m   [0;1mSELECT count(*) AS count_all FROM categories [0m
+  [4;35;1mCategory Load (0.000514)[0m   [0mSELECT * FROM categories LIMIT 0, 10[0m
+Rendering  within layouts/application
+Rendering categories/index
+Completed in 0.01270 (78 reqs/sec) | Rendering: 0.00364 (28%) | DB: 0.00368 (28%) | 200 OK [http://localhost/categories]
+
+
+Processing CategoriesController#new (for 127.0.0.1 at 2007-11-12 14:16:24) [GET]
+  Session ID: 960a680d02d6b9d35aa9843023b06506
+  Parameters: {"action"=>"new", "controller"=>"categories"}
+  [4;36;1mCategory Columns (0.001578)[0m   [0;1mSHOW FIELDS FROM categories[0m
+Rendering  within layouts/application
+Rendering categories/new
+Rendered categories/_form (0.00345)
+Completed in 0.01774 (56 reqs/sec) | Rendering: 0.01114 (62%) | DB: 0.00158 (8%) | 200 OK [http://localhost/categories/new]
+
+
+Processing CategoriesController#create (for 127.0.0.1 at 2007-11-12 14:16:28) [POST]
+  Session ID: 960a680d02d6b9d35aa9843023b06506
+  Parameters: {"commit"=>"Create", "category"=>{"name"=>"CGU", "description"=>""}, "action"=>"create", "controller"=>"categories"}
+  [4;35;1mCategory Columns (0.002331)[0m   [0mSHOW FIELDS FROM categories[0m
+  [4;36;1mSQL (0.000571)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.001205)[0m   [0mINSERT INTO categories (`name`, `description`) VALUES('CGU', '')[0m
+  [4;36;1mSQL (0.000623)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/categories
+Completed in 0.01261 (79 reqs/sec) | DB: 0.00473 (37%) | 302 Found [http://localhost/categories/create]
+
+
+Processing CategoriesController#index (for 127.0.0.1 at 2007-11-12 14:16:28) [GET]
+  Session ID: 960a680d02d6b9d35aa9843023b06506
+  Parameters: {"action"=>"index", "controller"=>"categories"}
+  [4;35;1mCategory Columns (0.001400)[0m   [0mSHOW FIELDS FROM categories[0m
+  [4;36;1mSQL (0.000497)[0m   [0;1mSELECT count(*) AS count_all FROM categories [0m
+  [4;35;1mCategory Load (0.000590)[0m   [0mSELECT * FROM categories LIMIT 0, 10[0m
+Rendering  within layouts/application
+Rendering categories/index
+Completed in 0.01212 (82 reqs/sec) | Rendering: 0.00435 (35%) | DB: 0.00249 (20%) | 200 OK [http://localhost/categories]
+
+
+Processing PdfsController#index (for 127.0.0.1 at 2007-11-12 14:16:31) [GET]
+  Session ID: 960a680d02d6b9d35aa9843023b06506
+  Parameters: {"action"=>"index", "controller"=>"pdfs"}
+  [4;36;1mPdf Columns (0.001693)[0m   [0;1mSHOW FIELDS FROM pdfs[0m
+  [4;35;1mSQL (0.000412)[0m   [0mSELECT count(*) AS count_all FROM pdfs [0m
+  [4;36;1mPdf Load (0.000930)[0m   [0;1mSELECT * FROM pdfs LIMIT 0, 10[0m
+Rendering  within layouts/application
+Rendering pdfs/index
+Completed in 0.01869 (53 reqs/sec) | Rendering: 0.01078 (57%) | DB: 0.00304 (16%) | 200 OK [http://localhost/pdfs]
+
+
+Processing PdfsController#edit (for 127.0.0.1 at 2007-11-12 14:16:34) [GET]
+  Session ID: 960a680d02d6b9d35aa9843023b06506
+  Parameters: {"action"=>"edit", "id"=>"8", "controller"=>"pdfs"}
+  [4;35;1mPdf Columns (0.001596)[0m   [0mSHOW FIELDS FROM pdfs[0m
+  [4;36;1mPdf Load (0.000744)[0m   [0;1mSELECT * FROM pdfs WHERE (pdfs.`id` = 8) [0m
+Rendering  within layouts/application
+Rendering pdfs/edit
+  [4;35;1mCategory Load (0.001199)[0m   [0mSELECT * FROM categories [0m
+  [4;36;1mCategory Columns (0.001354)[0m   [0;1mSHOW FIELDS FROM categories[0m
+Rendered pdfs/_form (0.01132)
+Completed in 0.02222 (45 reqs/sec) | Rendering: 0.01284 (57%) | DB: 0.00489 (22%) | 200 OK [http://localhost/pdfs/edit/8]
+
+
+Processing PdfsController#update (for 127.0.0.1 at 2007-11-12 14:16:38) [POST]
+  Session ID: 960a680d02d6b9d35aa9843023b06506
+  Parameters: {"category"=>"3", "commit"=>"Edit", "action"=>"update", "id"=>"8", "controller"=>"pdfs", "pdf"=>{"pdfdate(3i)"=>"12", "pdfname"=>"test6", "filename"=>"test", "pdfnote"=>"", "pdfdate(1i)"=>"2007", "pdfdate(2i)"=>"11"}}
+  [4;35;1mPdf Columns (0.001646)[0m   [0mSHOW FIELDS FROM pdfs[0m
+  [4;36;1mPdf Load (0.000686)[0m   [0;1mSELECT * FROM pdfs WHERE (pdfs.`id` = 8) [0m
+  [4;35;1mCategory Columns (0.001529)[0m   [0mSHOW FIELDS FROM categories[0m
+  [4;36;1mCategory Load (0.000598)[0m   [0;1mSELECT * FROM categories WHERE (categories.`id` = 3) [0m
+  [4;35;1mSQL (0.000271)[0m   [0mBEGIN[0m
+  [4;36;1mPdf Update (0.000459)[0m   [0;1mUPDATE pdfs SET `pdfdate` = '2007-11-12', `pdfname` = 'test6', `category_id` = 3, `filename` = 'test', `pdfnote` = '' WHERE `id` = 8[0m
+  [4;35;1mSQL (0.000639)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/pdfs/show/8
+Completed in 0.07061 (14 reqs/sec) | DB: 0.00583 (8%) | 302 Found [http://localhost/pdfs/update/8]
+
+
+Processing PdfsController#show (for 127.0.0.1 at 2007-11-12 14:16:38) [GET]
+  Session ID: 960a680d02d6b9d35aa9843023b06506
+  Parameters: {"action"=>"show", "id"=>"8", "controller"=>"pdfs"}
+  [4;36;1mPdf Columns (0.002766)[0m   [0;1mSHOW FIELDS FROM pdfs[0m
+  [4;35;1mPdf Load (0.000824)[0m   [0mSELECT * FROM pdfs WHERE (pdfs.`id` = 8) [0m
+Rendering  within layouts/application
+Rendering pdfs/show
+Completed in 0.01205 (82 reqs/sec) | Rendering: 0.00344 (28%) | DB: 0.00359 (29%) | 200 OK [http://localhost/pdfs/show/8]
+
+
+Processing PdfsController#index (for 127.0.0.1 at 2007-11-12 14:16:40) [GET]
+  Session ID: 960a680d02d6b9d35aa9843023b06506
+  Parameters: {"action"=>"index", "controller"=>"pdfs"}
+  [4;36;1mPdf Columns (0.001777)[0m   [0;1mSHOW FIELDS FROM pdfs[0m
+  [4;35;1mSQL (0.000487)[0m   [0mSELECT count(*) AS count_all FROM pdfs [0m
+  [4;36;1mPdf Load (0.001050)[0m   [0;1mSELECT * FROM pdfs LIMIT 0, 10[0m
+Rendering  within layouts/application
+Rendering pdfs/index
+Completed in 0.02196 (45 reqs/sec) | Rendering: 0.01132 (51%) | DB: 0.00331 (15%) | 200 OK [http://localhost/pdfs]
