@@ -1081,4 +1081,2105 @@ A         pdfcat_notes.abw.bak~
 A         test/functional/categories_controller_test.rb
 A         typescript
 [ws10@ws10 ~/livedata/programming/rails/pdfcat]$ svn ci
-(B)0[1;66r[m[4l[?1h=[H[2J[1B--This line, and those below, will be ignored--[2BA    test/functional/categories_controller_test.rb[1BA    app/helpers/categories_helper.rb[1BM    app/models/category.rb[1BM    app/models/pdf.rb[1BM    app/controllers/pdfs_controller.rb[1BA    app/controllers/categories_controller.rb[1BA    app/views/layouts/categories.rhtml[1BA    app/views/categories[1BA    app/views/categories/list.rhtml[1BA    app/views/categories/show.rhtml[1BA    app/views/categories/_form.rhtml[1BA    app/views/categories/edit.rhtml[1BA    app/views/categories/new.rhtml[1BM    log/development.log[1BM    pdfcat_notes.abw[1BM    db/schema.rb[1BA    db/migrate/004_add_column_pdfs_category_id.rb[1BA    db/migrate/005_remove_column_pdfs_cat_id.rb[1BA    db/migrate/003_add_column_category_description.rb[1BA    config/lighttpd.conf[1BA    typescript[1BA    pdfcat_notes.abw.bak~[1B~[1B~[1B~[1B~[1B~[1B~[1B~[1B~[1B~[1B~[1B~[1B~[1B~[1B~[1B~[1B~[1B~[1B~[1B~[1B~[1B~[1B~[1B~[1B~[1B~[1B~[1B~[1B~[1B~[1B~[1B~[1B~[1B~[1B~[1B~[1B~[1B~[1B~[1B~[1B~[H[65Bsvn-commit.tmp: unmodified: line 1[H[65B[K[HLinkCreated categories7[2;65r8[1BM[1;66r[2;1HMakde a many to one relationship between categoreisy and pies and pdfs7[3;65r8[1BM[1;66r[3;1H7[3;65r8M[1;66r[4;1HIE: Category has m_many pdfs7[5;65r8[1BM[1;66r[5;1H[5;9H 
+(B)0[1;66r[m[4l[?1h=[H[2J[1B--This line, and those below, will be ignored--[2BA    test/functional/categories_controller_test.rb[1BA    app/helpers/categories_helper.rb[1BM    app/models/category.rb[1BM    app/models/pdf.rb[1BM    app/controllers/pdfs_controller.rb[1BA    app/controllers/categories_controller.rb[1BA    app/views/layouts/categories.rhtml[1BA    app/views/categories[1BA    app/views/categories/list.rhtml[1BA    app/views/categories/show.rhtml[1BA    app/views/categories/_form.rhtml[1BA    app/views/categories/edit.rhtml[1BA    app/views/categories/new.rhtml[1BM    log/development.log[1BM    pdfcat_notes.abw[1BM    db/schema.rb[1BA    db/migrate/004_add_column_pdfs_category_id.rb[1BA    db/migrate/005_remove_column_pdfs_cat_id.rb[1BA    db/migrate/003_add_column_category_description.rb[1BA    config/lighttpd.conf[1BA    typescript[1BA    pdfcat_notes.abw.bak~[1B~[1B~[1B~[1B~[1B~[1B~[1B~[1B~[1B~[1B~[1B~[1B~[1B~[1B~[1B~[1B~[1B~[1B~[1B~[1B~[1B~[1B~[1B~[1B~[1B~[1B~[1B~[1B~[1B~[1B~[1B~[1B~[1B~[1B~[1B~[1B~[1B~[1B~[1B~[1B~[H[65Bsvn-commit.tmp: unmodified: line 1[H[65B[K[HLinkCreated categories7[2;65r8[1BM[1;66r[2;1HMakde a many to one relationship between categoreisy and pies and pdfs7[3;65r8[1BM[1;66r[3;1H7[3;65r8M[1;66r[4;1HIE: Category has m_many pdfs7[5;65r8[1BM[1;66r[5;1H[5;9H    Pdf belongs_to Category[61BCopying file for recovery...[K[5;28H[61B:xsvn-commit.tmp: 29 lines, 950 characters[?1l>
+[65;41H.[1B[66;1H[?1l>Adding         app/controllers/categories_controller.rb
+Sending        app/controllers/pdfs_controller.rb
+Adding         app/helpers/categories_helper.rb
+Sending        app/models/category.rb
+Sending        app/models/pdf.rb
+Adding         app/views/categories
+Adding         app/views/categories/_form.rhtml
+Adding         app/views/categories/edit.rhtml
+Adding         app/views/categories/list.rhtml
+Adding         app/views/categories/new.rhtml
+Adding         app/views/categories/show.rhtml
+Adding         app/views/layouts/categories.rhtml
+Adding         config/lighttpd.conf
+Adding         db/migrate/003_add_column_category_description.rb
+Adding         db/migrate/004_add_column_pdfs_category_id.rb
+Adding         db/migrate/005_remove_column_pdfs_cat_id.rb
+Sending        db/schema.rb
+Sending        log/development.log
+Sending        pdfcat_notes.abw
+Adding         pdfcat_notes.abw.bak~
+Adding         test/functional/categories_controller_test.rb
+Adding         typescript
+Transmitting file data .....................
+Committed revision 548.
+[ws10@ws10 ~/livedata/programming/rails/pdfcat]$ svn st
+[ws10@ws10 ~/livedata/programming/rails/pdfcat]$ svn up
+At revision 548.
+[ws10@ws10 ~/livedata/programming/rails/pdfcat]$ svn log
+------------------------------------------------------------------------
+r548 | (no author) | 2007-11-12 10:19:38 +1100 (Mon, 12 Nov 2007) | 6 lines
+
+Created categories
+Made a many to one relationship between categories and pdfs
+
+IE: Category has_many pdfs
+    Pdf belongs_to Category
+
+------------------------------------------------------------------------
+r547 | (no author) | 2007-11-12 09:20:04 +1100 (Mon, 12 Nov 2007) | 2 lines
+
+Added category table
+
+------------------------------------------------------------------------
+r543 | (no author) | 2007-11-09 15:22:41 +1100 (Fri, 09 Nov 2007) | 1 line
+
+initial import
+------------------------------------------------------------------------
+[ws10@ws10 ~/livedata/programming/rails/pdfcat]$ script/generate scaffold categor       Cageory     gt  tegory
+      exists  app/controllers/
+      exists  app/helpers/
+      exists  app/views/categories
+      exists  app/views/layouts/
+      exists  test/functional/
+  dependency  model
+      exists    app/models/
+      exists    test/unit/
+      exists    test/fixtures/
+        skip    app/models/category.rb
+   identical    test/unit/category_test.rb
+   identical    test/fixtures/categories.yml
+overwrite app/views/categories/_form.rhtml? [Ynaqd] a
+forcing scaffold
+       force  app/views/categories/_form.rhtml
+   identical  app/views/categories/list.rhtml
+   identical  app/views/categories/show.rhtml
+   identical  app/views/categories/new.rhtml
+   identical  app/views/categories/edit.rhtml
+   identical  app/controllers/categories_controller.rb
+   identical  test/functional/categories_controller_test.rb
+   identical  app/helpers/categories_helper.rb
+   identical  app/views/layouts/categories.rhtml
+   identical  public/stylesheets/scaffold.css
+[ws10@ws10 ~/livedata/programming/rails/pdfcat]$ script/generate scaffold Category        Pdf
+      exists  app/controllers/
+      exists  app/helpers/
+      exists  app/views/pdfs
+      exists  app/views/layouts/
+      exists  test/functional/
+  dependency  model
+      exists    app/models/
+      exists    test/unit/
+      exists    test/fixtures/
+        skip    app/models/pdf.rb
+   identical    test/unit/pdf_test.rb
+   identical    test/fixtures/pdfs.yml
+   identical  app/views/pdfs/_form.rhtml
+   identical  app/views/pdfs/list.rhtml
+   identical  app/views/pdfs/show.rhtml
+   identical  app/views/pdfs/new.rhtml
+   identical  app/views/pdfs/edit.rhtml
+   identical  app/controllers/pdfs_controller.rb
+   identical  test/functional/pdfs_controller_test.rb
+   identical  app/helpers/pdfs_helper.rb
+   identical  app/views/layouts/pdfs.rhtml
+   identical  public/stylesheets/scaffold.css
+[ws10@ws10 ~/livedata/programming/rails/pdfcat]$ cd app/views/layouts/
+[ws10@ws10 ~/livedata/programming/rails/pdfcat/app/views/layouts]$ l
+total 10
+drwxrwxr-x  3 ws10  wheel  512 Nov 12 09:50 .
+drwxrwxr-x  6 ws10  wheel  512 Nov 12 09:34 ..
+drwxrwxr-x  6 ws10  wheel  512 Nov 12 10:26 .svn
+-rw-r--r--  1 ws10  wheel  473 Nov 12 09:50 categories.rhtml
+-rw-r--r--  1 ws10  wheel  467 Nov 12 09:50 pdfs.rhtml
+[ws10@ws10 ~/livedata/programming/rails/pdfcat/app/views/layouts]$ mv pdfrs   s fs.rhtml application.rhtml
+[ws10@ws10 ~/livedata/programming/rails/pdfcat/app/views/layouts]$ vim application.rhtml 
+[?1h=[>c[1;66r[27m[m[H[2J[?25l[66;1H"application.rhtml" 17L, 467C[1;1H[34m<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">[m
+
+[36m<[m[33mhtml[m[36m xmlns=[m[31m"http://www.w3.org/1999/xhtml"[m[36m xml:[m[32mlang[m[36m=[m[31m"en"[m[36m [m[32mlang[m[36m=[m[31m"en"[m[36m>
+<[m[33mhead[m[36m>[m
+[35m  [m[36m<[m[33mmeta[m[36m [m[32mhttp-equiv[m[36m=[m[31m"content-type"[m[36m [m[32mcontent[m[36m=[m[31m"text/html;charset=UTF-8"[m[36m />[m
+[35m  [m[36m<[m[33mtitle[m[36m>[m[35mPdfs: <%=[m controller.action_name [35m%>[m[36m</[m[33mtitle[m[36m>[m
+[35m  <%=[m stylesheet_link_tag [35m'[m[31mscaffold[m[35m'[m [35m%>[m
+[36m</[m[33mhead[m[36m>
+<[m[33mbody[m[36m>
+
+<[m[33mp[m[36m [m[32mstyle[m[36m=[m[31m"color: green"[m[36m>[m[35m<%=[m flash[[36m:notice[m] [35m%>[m[36m</[m[33mp[m[36m>[m
+
+[35m<%=[m [33myield[m  [35m%>[m
+
+[36m</[m[33mbody[m[36m>
+</[m[33mhtml[m[36m>[m
+[1m[34m~                                                                                                                                                                                  [19;1H~                                                                                                                                                                                  [20;1H~                                                                                                                                                                                  [21;1H~                                                                                                                                                                                  [22;1H~                                                                                                                                                                                  [23;1H~                                                                                                                                                                                  [24;1H~                                                                                                                                                                                  [25;1H~                                                                                                                                                                                  [26;1H~                                                                                                                                                                                  [27;1H~                                                                                                                                                                                  [28;1H~                                                                                                                                                                                  [29;1H~                                                                                                                                                                                  [30;1H~                                                                                                                                                                                  [31;1H~                                                                                                                                                                                  [32;1H~                                                                                                                                                                                  [33;1H~                                                                                                                                                                                  [34;1H~                                                                                                                                                                                  [35;1H~                                                                                                                                                                                  [36;1H~                                                                                                                                                                                  [37;1H~                                                                                                                                                                                  [38;1H~                                                                                                                                                                                  [39;1H~                                                                                                                                                                                  [40;1H~                                                                                                                                                                                  [41;1H~                                                                                                                                                                                  [42;1H~                                                                                                                                                                                  [43;1H~                                                                                                                                                                                  [44;1H~                                                                                                                                                                                  [45;1H~                                                                                                                                                                                  [46;1H~                                                                                                                                                                                  [47;1H~                                                                                                                                                                                  [48;1H~                                                                                                                                                                                  [49;1H~                                                                                                                                                                                  [50;1H~                                                                                                                                                                                  [51;1H~                                                                                                                                                                                  [52;1H~                                                                                                                                                                                  [53;1H~                                                                                                                                                                                  [54;1H~                                                                                                                                                                                  [55;1H~                                                                                                                                                                                  [56;1H~                                                                                                                                                                                  [57;1H~                                                                                                                                                                                  [58;1H~                                                                                                                                                                                  [59;1H~                                                                                                                                                                                  [60;1H~                                                                                                                                                                                  [61;1H~                                                                                                                                                                                  [62;1H~                                                                                                                                                                                  [63;1H~                                                                                                                                                                                  [64;1H~                                                                                                                                                                                  [65;1H~                                                                                                                                                                                  [m[66;162H1,1[11CAll]2;application.rhtml (/storage/livedata/programming/rails/pdfcat/app/views/layouts) - VIM]1;application.rhtml[1;1H[?25h[?25l[66;152H~@k[1;1H[66;152H   [2;1H[66;162H2[2;1H[?25h[?25l[66;152H~@k[2;1H[66;152H   [3;1H[66;162H3,0-1[3;1H[?25h[?25l[66;152H~@k[3;1H[66;152H   [4;1H[66;162H4,1  [4;1H[?25h[?25l[66;152H~@k[4;1H[66;152H   [5;1H[66;162H5[5;1H[?25h[?25l[66;152H~@k[5;1H[66;152H   [6;1H[66;162H6[6;1H[?25h[?25l[66;152H~@k[6;1H[66;152H   [7;1H[66;162H7[7;1H[?25h[?25l[66;152H~@k[7;1H[66;152H   [8;1H[66;162H8[8;1H[?25h[?25l[66;152Ho[8;1H[66;152H [9;3H[66;1H[1m-- INSERT --[m[66;13H[K[66;162H9,3[11CAll[9;65r[9;1H[L[1;66r[9;1H[35m  [m[66;162H[K[66;162H9,3[11CAll]2;application.rhtml + (/storage/livedata/programming/rails/pdfcat/app/views/layouts) - VIM]1;application.rhtml[9;3H[?25h[?25l[35mt[m[66;164H4[9;4H[?25h[?25l[35me[m[66;164H5[9;5H[?25h[?25l[35ms[m[66;164H6[9;6H[?25h[?25l[35mt[m[66;164H7[9;7H[?25h[66;1H[K[9;6H[?25l[66;152H^[[9;6H[?25h[?25l[66;152H  [9;7H[66;162H9,6[11CAll[9;6H[?25h[?25l[66;152H:[9;6H[66;152H[K[66;1H:[?25hw[?25l[?25h[?25l"application.rhtml" 18L, 474C written[9;6H[66;162H9,6[11CAll]2;application.rhtml (/storage/livedata/programming/rails/pdfcat/app/views/layouts) - VIM]1;application.rhtml[66;162H[K[66;162H9,6[11CAll[9;6H[?25h[?25l[66;152H:[9;6H[66;1H[K[66;1H:[?25hx[?25l[?25h[?25l]2;mrxvt]1;mrxvt[?1l>[?25h[66;1H[K[66;1H[ws10@ws10 ~/livedata/programming/rails/pdfcat/app/views/layouts]$ rm categories.rhtml 
+[ws10@ws10 ~/livedata/programming/rails/pdfcat/app/views/layouts]$ rm categories.rhtml [4hvi[4lm application.rhtml 
+[?1h=[>c[1;66r[27m[m[H[2J[?25l[66;1H"application.rhtml" 18L, 474C[1;1H[34m<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">[m
+
+[36m<[m[33mhtml[m[36m xmlns=[m[31m"http://www.w3.org/1999/xhtml"[m[36m xml:[m[32mlang[m[36m=[m[31m"en"[m[36m [m[32mlang[m[36m=[m[31m"en"[m[36m>
+<[m[33mhead[m[36m>[m
+[35m  [m[36m<[m[33mmeta[m[36m [m[32mhttp-equiv[m[36m=[m[31m"content-type"[m[36m [m[32mcontent[m[36m=[m[31m"text/html;charset=UTF-8"[m[36m />[m
+[35m  [m[36m<[m[33mtitle[m[36m>[m[35mPdfs: <%=[m controller.action_name [35m%>[m[36m</[m[33mtitle[m[36m>[m
+[35m  <%=[m stylesheet_link_tag [35m'[m[31mscaffold[m[35m'[m [35m%>
+  test[m
+[36m</[m[33mhead[m[36m>
+<[m[33mbody[m[36m>
+
+<[m[33mp[m[36m [m[32mstyle[m[36m=[m[31m"color: green"[m[36m>[m[35m<%=[m flash[[36m:notice[m] [35m%>[m[36m</[m[33mp[m[36m>[m
+
+[35m<%=[m [33myield[m  [35m%>[m
+
+[36m</[m[33mbody[m[36m>
+</[m[33mhtml[m[36m>[m
+[1m[34m~                                                                                                                                                                                  [20;1H~                                                                                                                                                                                  [21;1H~                                                                                                                                                                                  [22;1H~                                                                                                                                                                                  [23;1H~                                                                                                                                                                                  [24;1H~                                                                                                                                                                                  [25;1H~                                                                                                                                                                                  [26;1H~                                                                                                                                                                                  [27;1H~                                                                                                                                                                                  [28;1H~                                                                                                                                                                                  [29;1H~                                                                                                                                                                                  [30;1H~                                                                                                                                                                                  [31;1H~                                                                                                                                                                                  [32;1H~                                                                                                                                                                                  [33;1H~                                                                                                                                                                                  [34;1H~                                                                                                                                                                                  [35;1H~                                                                                                                                                                                  [36;1H~                                                                                                                                                                                  [37;1H~                                                                                                                                                                                  [38;1H~                                                                                                                                                                                  [39;1H~                                                                                                                                                                                  [40;1H~                                                                                                                                                                                  [41;1H~                                                                                                                                                                                  [42;1H~                                                                                                                                                                                  [43;1H~                                                                                                                                                                                  [44;1H~                                                                                                                                                                                  [45;1H~                                                                                                                                                                                  [46;1H~                                                                                                                                                                                  [47;1H~                                                                                                                                                                                  [48;1H~                                                                                                                                                                                  [49;1H~                                                                                                                                                                                  [50;1H~                                                                                                                                                                                  [51;1H~                                                                                                                                                                                  [52;1H~                                                                                                                                                                                  [53;1H~                                                                                                                                                                                  [54;1H~                                                                                                                                                                                  [55;1H~                                                                                                                                                                                  [56;1H~                                                                                                                                                                                  [57;1H~                                                                                                                                                                                  [58;1H~                                                                                                                                                                                  [59;1H~                                                                                                                                                                                  [60;1H~                                                                                                                                                                                  [61;1H~                                                                                                                                                                                  [62;1H~                                                                                                                                                                                  [63;1H~                                                                                                                                                                                  [64;1H~                                                                                                                                                                                  [65;1H~                                                                                                                                                                                  [m[66;162H9,6[11CAll]2;application.rhtml (/storage/livedata/programming/rails/pdfcat/app/views/layouts) - VIM]1;application.rhtml[9;6H[?25h[?25l[66;152Hd[9;6H[?25h[?25l[66;153Hd[9;6H[66;152H  [9;1H[9;65r[65;1H
+[1;66r[65;1H[1m[34m~                                                                                                                                                                                  [m[66;1H[K[66;162H9,1[11CAll]2;application.rhtml + (/storage/livedata/programming/rails/pdfcat/app/views/layouts) - VIM]1;application.rhtml[9;1H[?25h[?25l[66;152H~@k[9;1H[66;152H   [10;1H[66;162H10,1[10;1H[?25h[?25l[66;152Ho[10;1H[66;152H [11;5H[66;1H[1m-- INSERT --[m[66;162H[K[66;162H11,2-5[8CAll[11;65r[11;1H[L[1;66r[66;162H[K[66;162H11,2-5[8CAll[11;5H[?25h[?25l[1m[37m[41m<[m[66;165H3-6[11;6H[?25h[?25l[35m<%[m
+
+<p style=[35m"[m[31mcolor: green[m[35m"[m><%= [66;165H4-7[11;7H[?25h[?25l[35m=[m[66;165H5-8[11;8H[?25h[?25l[66;165H6-9[11;9H[?25h[?25ll[66;165H7-10[11;10H[?25h[?25li[66;165H8-11[11;11H[?25h[?25ln[66;165H9-12[11;12H[?25h[?25lk[66;165H10-13[11;13H[?25h[?25l_[66;166H1-14[11;14H[?25h[?25lt[66;166H2-15[11;15H[?25h[?25lo[66;166H3-16[11;16H[?25h[?25l[66;166H4-17[11;17H[?25h[?25l[35m'[m
+
+[31m<p style="color: green"><%= flash[:notice] %></p>
+
+<%= yield  %>
+
+</body>
+</html>[m[66;166H5-18[11;18H[?25h[?25l[31mC[m[66;166H6-19[11;19H[?25h[?25l[31ma[m[66;166H7-20[11;20H[?25h[?25l[31mt[m[66;166H8-21[11;21H[?25h[?25l[31me[m[66;166H9-22[11;22H[?25h[?25l[31mg[m[66;165H20-23[11;23H[?25h[?25l[31mo[m[66;166H1-24[11;24H[?25h[?25l[31mr[m[66;166H2-25[11;25H[?25h[?25l[31my[m[66;166H3-26[11;26H[?25h[?25l[11;25H[K[66;166H2-25[11;25H[?25h[?25l[31mi[m[66;166H3-26[11;26H[?25h[?25l[31me[m[66;166H4-27[11;27H[?25h[?25l[31ms[m[66;166H5-28[11;28H[?25h[?25l[35m'[m
+
+<p style=[35m"[m[31mcolor: green[m[35m"[m><%= flash[[36m:notice[m] [35m%>[m[36m</[m[33mp[m[36m>[m
+
+[35m<%=[m [33myield[m  [35m%>[m
+
+[36m</[m[33mbody[m[36m>
+</[m[33mhtml[m[36m>[m[66;166H6-29[11;29H[?25h[?25l[11;28H[K[13;1H[31m<p style="color: green"><%= flash[:notice] %></p>
+
+<%= yield  %>
+
+</body>
+</html>[m[66;166H5-28[11;28H[?25h[?25l[11;27H[K[66;166H4-27[11;27H[?25h[?25l[11;26H[K[66;166H3-26[11;26H[?25h[?25l[11;25H[K[66;166H2-25[11;25H[?25h[?25l[31my[m[66;166H3-26[11;26H[?25h[?25l[35m'[m
+
+<p style=[35m"[m[31mcolor: green[m[35m"[m><%= flash[[36m:notice[m] [35m%>[m[36m</[m[33mp[m[36m>[m
+
+[35m<%=[m [33myield[m  [35m%>[m
+
+[36m</[m[33mbody[m[36m>
+</[m[33mhtml[m[36m>[m[66;166H4-27[11;27H[?25h[?25l[66;166H5-28[11;28H[?25h[?25l[66;166H4-27[11;27H[?25h[?25l,[66;166H5-28[11;28H[?25h[?25l[66;166H6-29[11;29H[?25h[?25l{[66;166H7-30[11;30H[?25h[?25l[66;166H8-31[11;31H[?25h[?25l[66;166H7-30[11;30H[?25h[?25l[11;29H[K[66;166H6-29[11;29H[?25h[?25l:[66;166H7-30[11;30H[?25h[?25l[36m:c[m[66;166H8-31[11;31H[?25h[?25l[36mo[m[66;166H9-32[11;32H[?25h[?25l[36mn[m[66;165H30-33[11;33H[?25h[?25l[36mt[m[66;166H1-34[11;34H[?25h[?25l[36mr[m[66;166H2-35[11;35H[?25h[?25l[36mo[m[66;166H3-36[11;36H[?25h[?25l[36ml[m[66;166H4-37[11;37H[?25h[?25l[36ml[m[66;166H5-38[11;38H[?25h[?25l[36me[m[66;166H6-39[11;39H[?25h[?25l[36mr[m[66;166H7-40[11;40H[?25h[?25l[66;166H8-41[11;41H[?25h[?25l=[66;166H9-42[11;42H[?25h[?25l>[66;165H40-43[11;43H[?25h[?25l[66;166H1-44[11;44H[?25h[?25l[35m'[m
+
+[31m<p style="color: green"><%= flash[:notice] %></p>
+
+<%= yield  %>
+
+</body>
+</html>[m[66;166H2-45[11;45H[?25h[?25l[31mc[m[66;166H3-46[11;46H[?25h[?25l[31ma[m[66;166H4-47[11;47H[?25h[?25l[31mt[m[66;166H5-48[11;48H[?25h[?25l[31mg[m[66;166H6-49[11;49H[?25h[?25l[11;48H[K[66;166H5-48[11;48H[?25h[?25l[31me[m[66;166H6-49[11;49H[?25h[?25l[31mg[m[66;166H7-50[11;50H[?25h[?25l[31mo[m[66;166H8-51[11;51H[?25h[?25l[31mr[m[66;166H9-52[11;52H[?25h[?25l[31my[m[66;165H50-53[11;53H[?25h[?25l[11;52H[K[66;165H49-52[11;52H[?25h[?25l[31mi[m[66;165H50-53[11;53H[?25h[?25l[31me[m[66;166H1-54[11;54H[?25h[?25l[31ms[m[66;166H2-55[11;55H[?25h[?25l[35m'[m
+
+<p style=[35m"[m[31mcolor: green[m[35m"[m><%= flash[[36m:notice[m] [35m%>[m[36m</[m[33mp[m[36m>[m
+
+[35m<%=[m [33myield[m  [35m%>[m
+
+[36m</[m[33mbody[m[36m>
+</[m[33mhtml[m[36m>[m[66;166H3-56[11;56H[?25h[66;1H[K[11;55H[?25l[66;152H^[[11;55H[?25h[?25l[66;152H  [11;56H[66;162H11,52-55      All[11;55H[?25h[?25l[66;152H:[11;55H[66;152H[K[66;1H:[?25hw[?25l[?25h[?25l"application.rhtml" 18L, 520C written[11;55H[66;162H11,52-55      All]2;application.rhtml (/storage/livedata/programming/rails/pdfcat/app/views/layouts) - VIM]1;application.rhtml[66;162H[K[66;162H11,52-55      All[11;55H[?25h[?25l[66;152Ha[11;55H[66;152H [11;56H[66;1H[1m-- INSERT --[m[66;13H[K[66;162H11,53-56      All[11;56H[?25h[?25l[66;166H4-57]2;application.rhtml + (/storage/livedata/programming/rails/pdfcat/app/views/layouts) - VIM]1;application.rhtml[11;57H[?25h[?25l%[66;166H5-58[11;58H[?25h[?25l[35m%>[m
+
+[36m<[m[33mp[m[36m [m[32mstyle[m[36m=[m[31m"color: green"[m[36m>[m[35m<%=[m[66;166H6-59[11;59H[?25h[66;1H[K[11;58H[?25l[66;152H^[[11;58H[?25h[?25l[66;152H  [11;59H[66;162H11,55-58      All[11;58H[?25h[?25l[66;152H:[11;58H[66;152H[K[66;1H:[?25hw[?25l[?25h[?25l"application.rhtml" 18L, 523C written[11;58H[66;162H11,55-58      All]2;application.rhtml (/storage/livedata/programming/rails/pdfcat/app/views/layouts) - VIM]1;application.rhtml[66;162H[K[66;162H11,55-58      All[11;58H[?25h[?25l[66;152Hy[11;58H[?25h[?25l[66;153Hy[11;58H[66;152H  [11;58H[?25h[?25l[66;152Hp[11;58H[66;152H [12;5H[12;65r[12;1H[L[1;66r[12;5H[35m<%=[m link_to [35m'[m[31mCategory[m[35m'[m, [36m:controller[m => [35m'[m[31mcategories[m[35m'[m [35m%>[m[66;1H[K[66;162H12,2-5[8CAll]2;application.rhtml + (/storage/livedata/programming/rails/pdfcat/app/views/layouts) - VIM]1;application.rhtml[12;5H[?25h[?25l[66;152H~@k[12;5H[66;152H   [12;6H[66;165H3-6[12;6H[?25h[?25l[66;152H~@k[12;6H[66;152H   [12;7H[66;165H4-7[12;7H[?25h[?25l[66;152H~@k[12;7H[66;152H   [12;8H[66;165H5-8[12;8H[?25h[?25l[66;152H~@k[12;8H[66;152H   [12;9H[66;165H6-9[12;9H[?25h[?25l[66;152H~@k[12;9H[66;152H   [12;10H[66;165H7-10[12;10H[?25h[?25l[66;152H~@k[12;10H[66;152H   [12;11H[66;165H8-11[12;11H[?25h[?25l[66;152H~@k[12;11H[66;152H   [12;12H[66;165H9-12[12;12H[?25h[?25l[66;152H~@k[12;12H[66;152H   [12;13H[66;165H10-13[12;13H[?25h[?25l[66;152H~@k[12;13H[66;152H   [12;14H[66;166H1-14[12;14H[?25h[?25l[66;152H~@k[12;14H[66;152H   [12;15H[66;166H2-15[12;15H[?25h[?25l[66;152H~@k[12;15H[66;152H   [12;16H[66;166H3-16[12;16H[?25h[?25l[66;152H~@k[12;16H[66;152H   [11;16H[66;163H1[11;16H[?25h[?25l[66;152H~@k[11;16H[66;152H   [11;17H[66;166H4-17[11;17H[?25h[?25l[66;152H~@k[11;17H[66;152H   [11;18H[66;166H5-18[11;18H[?25h[?25l[66;152Hc[11;18H[?25h[?25l[66;153Hw[11;18H[66;152H  [11;18H[66;1H[1m-- INSERT --[m[66;162H[K[66;162H11,15-18      All[11;18H[35m'[m, [36m:controller[m => [35m'[m[31mcategories[m[35m'[m [35m%>[m[11;51H[K[11;18H[?25h[?25l[31mP[m[35m'[m, [36m:controller[m => [35m'[m[31mcategories[m[35m'[m [35m%>[m[66;166H6-19[11;19H[?25h[?25l[31md[m[35m'[m, [36m:controller[m => [35m'[m[31mcategories[m[35m'[m [35m%>[m[66;166H7-20[11;20H[?25h[?25l[31mf[m[35m'[m, [36m:controller[m => [35m'[m[31mcategories[m[35m'[m [35m%>[m[66;166H8-21[11;21H[?25h[?25l[66;166H9-22[11;22H[?25h[?25l[66;165H20-23[11;23H[?25h[?25l[66;166H1-24[11;24H[?25h[?25l[66;166H2-25[11;25H[?25h[?25l[66;166H3-26[11;26H[?25h[?25l[66;166H4-27[11;27H[?25h[?25l[66;166H5-28[11;28H[?25h[?25l[66;166H6-29[11;29H[?25h[?25l[66;166H7-30[11;30H[?25h[?25l[66;166H8-31[11;31H[?25h[?25l[66;166H9-32[11;32H[?25h[?25l[66;165H30-33[11;33H[?25h[?25l[66;166H1-34[11;34H[?25h[?25l[66;166H2-35[11;35H[?25h[?25l[66;166H3-36[11;36H[?25h[?25l[66;166H4-37[11;37H[?25h[?25l[66;166H5-38[11;38H[?25h[?25l[66;166H6-39[11;39H[?25h[?25l[66;166H7-40[11;40H[?25h[?25l[66;166H8-41[11;41H[?25h[?25l[66;166H9-42[11;42H[?25h[66;1H[K[11;41H[?25l[66;152H^[[11;41H[?25h[?25l[66;152H  [11;42H[66;162H11,38-41      All[11;41H[?25h[?25l[66;152H~@k[11;41H[66;152H   [11;40H[66;166H7-40[11;40H[?25h[?25l[66;152Hc[11;40H[?25h[?25l[66;153Hw[11;40H[66;152H  [11;40H[66;1H[1m-- INSERT --[m[66;162H[K[66;162H11,37-40      All[11;40H[35m'[m [35m%>[m[11;44H[K[11;40H[?25h[?25l[31mp[m[35m'[m [35m%>[m[66;166H8-41[11;41H[?25h[?25l[31md[m[35m'[m [35m%>[m[66;166H9-42[11;42H[?25h[?25l[31mf[m[35m'[m [35m%>[m[66;165H40-43[11;43H[?25h[?25l[31ms[m[35m'[m [35m%>[m[66;166H1-44[11;44H[?25h[66;1H[K[11;43H[?25l[66;152H^[[11;43H[?25h[?25l[66;152H  [11;44H[66;162H11,40-43      All[11;43H[?25h[?25l[66;152H:[11;43H[66;152H[K[66;1H:[?25hw[?25l[?25h[?25l"application.rhtml" 19L, 568C written[11;43H[66;162H11,40-43      All]2;application.rhtml (/storage/livedata/programming/rails/pdfcat/app/views/layouts) - VIM]1;application.rhtml[66;162H[K[66;162H11,40-43      All[11;43H[?25h[?25l[66;152H~@k[11;43H[66;152H   [10;6H[66;163H0,6    [10;6H[?25h[?25l[66;152H~@k[10;6H[66;152H   [9;7H[66;162H9,7 [9;7H[?25h[?25l[66;152H~@k[9;7H[66;152H   [8;39H[66;162H8,39[8;39H[?25h[?25l[66;152H~@k[8;39H[66;152H   [8;38H[66;165H8[8;38H[?25h[?25l[66;152H~@k[8;38H[66;152H   [8;37H[66;165H7[8;37H[?25h[?25l[66;152H~@k[8;37H[66;152H   [8;36H[66;165H6[8;36H[?25h[?25l[66;152H~@k[8;36H[66;152H   [8;35H[66;165H5[8;35H[?25h[?25l[66;152H~@k[8;35H[66;152H   [8;34H[66;165H4[8;34H[?25h[?25l[66;152H~@k[8;34H[66;152H   [8;33H[66;165H3[8;33H[?25h[?25l[66;152H~@k[8;33H[66;152H   [8;32H[66;165H2[8;32H[?25h[?25l[66;152H~@k[8;32H[66;152H   [8;31H[66;165H1[8;31H[?25h[?25l[66;152H~@k[8;31H[66;152H   [8;30H[66;165H0[8;30H[?25h[?25l[66;152H~@k[8;30H[66;152H   [8;29H[66;164H29[8;29H[?25h[?25l[66;152H~@k[8;29H[66;152H   [8;28H[66;165H8[8;28H[?25h[?25l[66;152Hc[8;28H[?25h[?25l[66;153Hw[8;28H[66;152H  [8;28H[66;1H[1m-- INSERT --[m[66;13H[K[66;162H8,28[10CAll[8;28H[35m'[m [35m%>[m[8;32H[K]2;application.rhtml + (/storage/livedata/programming/rails/pdfcat/app/views/layouts) - VIM]1;application.rhtml[8;28H[?25h[?25l[31ma[m[35m'[m [35m%>[m[66;165H9[8;29H[?25h[?25l[31mp[m[35m'[m [35m%>[m[66;164H30[8;30H[?25h[?25l[31mp[m[35m'[m [35m%>[m[66;165H1[8;31H[?25h[?25l[31ml[m[35m'[m [35m%>[m[66;165H2[8;32H[?25h[?25l[31mi[m[35m'[m [35m%>[m[66;165H3[8;33H[?25h[?25l[31mc[m[35m'[m [35m%>[m[66;165H4[8;34H[?25h[?25l[31ma[m[35m'[m [35m%>[m[66;165H5[8;35H[?25h[?25l[31mt[m[35m'[m [35m%>[m[66;165H6[8;36H[?25h[?25l[31mi[m[35m'[m [35m%>[m[66;165H7[8;37H[?25h[?25l[31mo[m[35m'[m [35m%>[m[66;165H8[8;38H[?25h[?25l[31mn[m[35m'[m [35m%>[m[66;165H9[8;39H[?25h[66;1H[K[8;38H[?25l[66;152H^[[8;38H[?25h[?25l[66;152H  [8;39H[66;162H8,38[10CAll[8;38H[?25h[?25l[66;152H:[8;38H[66;152H[K[66;1H:[?25hw[?25l[?25h[?25l"application.rhtml" 19L, 571C written[8;38H[66;162H8,38[10CAll]2;application.rhtml (/storage/livedata/programming/rails/pdfcat/app/views/layouts) - VIM]1;application.rhtml[66;162H[K[66;162H8,38[10CAll[8;38H[?25h[?25l[66;152H:[8;38H[66;1H[K[66;1H:[?25hx[?25l[?25h[?25l]2;mrxvt]1;application.rhtml[?1l>[?25h[66;1H[K[66;1H[ws10@ws10 ~/livedata/programming/rails/pdfcat/app/views/layouts]$ cd ..     l
+total 8
+drwxrwxr-x  3 ws10  wheel  512 Nov 12 10:42 .
+drwxrwxr-x  6 ws10  wheel  512 Nov 12 09:34 ..
+drwxrwxr-x  6 ws10  wheel  512 Nov 12 10:26 .svn
+-rw-r--r--  1 ws10  wheel  571 Nov 12 10:41 application.rhtml
+[ws10@ws10 ~/livedata/programming/rails/pdfcat/app/views/layouts]$ cd ..
+[ws10@ws10 ~/livedata/programming/rails/pdfcat/app/views]$ l
+total 12
+drwxrwxr-x  6 ws10  wheel  512 Nov 12 09:34 .
+drwxrwxr-x  7 ws10  wheel  512 Nov  9 15:30 ..
+drwxrwxr-x  6 ws10  wheel  512 Nov 12 10:26 .svn
+drwxr-xr-x  3 ws10  wheel  512 Nov 12 10:25 categories
+drwxrwxr-x  3 ws10  wheel  512 Nov 12 10:42 layouts
+drwxrwxr-x  3 ws10  wheel  512 Nov 12 09:50 pdfs
+[ws10@ws10 ~/livedata/programming/rails/pdfcat/app/views]$ cd ..
+[ws10@ws10 ~/livedata/programming/rails/pdfcat/app]$ l
+total 14
+drwxrwxr-x   7 ws10  wheel  512 Nov  9 15:30 .
+drwxrwxr-x  15 ws10  wheel  512 Nov 12 10:26 ..
+drwxrwxr-x   6 ws10  wheel  512 Nov 12 10:26 .svn
+drwxrwxr-x   3 ws10  wheel  512 Nov 12 09:45 controllers
+drwxrwxr-x   3 ws10  wheel  512 Nov 12 09:44 helpers
+drwxrwxr-x   3 ws10  wheel  512 Nov 12 10:15 models
+drwxrwxr-x   6 ws10  wheel  512 Nov 12 09:34 views
+[ws10@ws10 ~/livedata/programming/rails/pdfcat/app]$ cd ..
+[ws10@ws10 ~/livedata/programming/rails/pdfcat]$ find scaffold.css
+find: scaffold.css: No such file or directory
+[ws10@ws10 ~/livedata/programming/rails/pdfcat]$ find scaffold.css [4h.[4l[4h [4l[4h-[4l[4hn[4l[4ha[4l[4hm[4l[4he[4l[4h=[4l
+find: -name=scaffold.css: unknown option
+[ws10@ws10 ~/livedata/programming/rails/pdfcat]$ find . -name=scaffold.css[1P[1P[1P[1P[1P[1P[1P[4h [4l
+.
+./.svn
+./.svn/text-base
+./.svn/text-base/pdfcat_notes.abw.svn-base
+./.svn/text-base/Rakefile.svn-base
+./.svn/text-base/README.svn-base
+./.svn/text-base/pdfcat_notes.abw.bak~.svn-base
+./.svn/text-base/typescript.svn-base
+./.svn/prop-base
+./.svn/props
+./.svn/tmp
+./.svn/tmp/text-base
+./.svn/tmp/prop-base
+./.svn/tmp/props
+./.svn/entries
+./.svn/format
+./.svn/all-wcprops
+./test
+./test/.svn
+./test/.svn/text-base
+./test/.svn/text-base/test_helper.rb.svn-base
+./test/.svn/prop-base
+./test/.svn/props
+./test/.svn/tmp
+./test/.svn/tmp/text-base
+./test/.svn/tmp/prop-base
+./test/.svn/tmp/props
+./test/.svn/entries
+./test/.svn/format
+./test/.svn/all-wcprops
+./test/unit
+./test/unit/.svn
+./test/unit/.svn/text-base
+./test/unit/.svn/text-base/pdf_test.rb.svn-base
+./test/unit/.svn/text-base/category_test.rb.svn-base
+./test/unit/.svn/prop-base
+./test/unit/.svn/props
+./test/unit/.svn/tmp
+./test/unit/.svn/tmp/text-base
+./test/unit/.svn/tmp/prop-base
+./test/unit/.svn/tmp/props
+./test/unit/.svn/entries
+./test/unit/.svn/format
+./test/unit/.svn/all-wcprops
+./test/unit/pdf_test.rb
+./test/unit/category_test.rb
+./test/functional
+./test/functional/.svn
+./test/functional/.svn/text-base
+./test/functional/.svn/text-base/pdfs_controller_test.rb.svn-base
+./test/functional/.svn/text-base/categories_controller_test.rb.svn-base
+./test/functional/.svn/prop-base
+./test/functional/.svn/props
+./test/functional/.svn/tmp
+./test/functional/.svn/tmp/text-base
+./test/functional/.svn/tmp/prop-base
+./test/functional/.svn/tmp/props
+./test/functional/.svn/entries
+./test/functional/.svn/format
+./test/functional/.svn/all-wcprops
+./test/functional/pdfs_controller_test.rb
+./test/functional/categories_controller_test.rb
+./test/integration
+./test/integration/.svn
+./test/integration/.svn/text-base
+./test/integration/.svn/prop-base
+./test/integration/.svn/props
+./test/integration/.svn/tmp
+./test/integration/.svn/tmp/text-base
+./test/integration/.svn/tmp/prop-base
+./test/integration/.svn/tmp/props
+./test/integration/.svn/entries
+./test/integration/.svn/format
+./test/integration/.svn/all-wcprops
+./test/fixtures
+./test/fixtures/.svn
+./test/fixtures/.svn/text-base
+./test/fixtures/.svn/text-base/pdfs.yml.svn-base
+./test/fixtures/.svn/text-base/categories.yml.svn-base
+./test/fixtures/.svn/prop-base
+./test/fixtures/.svn/props
+./test/fixtures/.svn/tmp
+./test/fixtures/.svn/tmp/text-base
+./test/fixtures/.svn/tmp/prop-base
+./test/fixtures/.svn/tmp/props
+./test/fixtures/.svn/entries
+./test/fixtures/.svn/format
+./test/fixtures/.svn/all-wcprops
+./test/fixtures/pdfs.yml
+./test/fixtures/categories.yml
+./test/mocks
+./test/mocks/.svn
+./test/mocks/.svn/text-base
+./test/mocks/.svn/prop-base
+./test/mocks/.svn/props
+./test/mocks/.svn/tmp
+./test/mocks/.svn/tmp/text-base
+./test/mocks/.svn/tmp/prop-base
+./test/mocks/.svn/tmp/props
+./test/mocks/.svn/entries
+./test/mocks/.svn/format
+./test/mocks/.svn/all-wcprops
+./test/mocks/test
+./test/mocks/test/.svn
+./test/mocks/test/.svn/text-base
+./test/mocks/test/.svn/prop-base
+./test/mocks/test/.svn/props
+./test/mocks/test/.svn/tmp
+./test/mocks/test/.svn/tmp/text-base
+./test/mocks/test/.svn/tmp/prop-base
+./test/mocks/test/.svn/tmp/props
+./test/mocks/test/.svn/entries
+./test/mocks/test/.svn/format
+./test/mocks/test/.svn/all-wcprops
+./test/mocks/development
+./test/mocks/development/.svn
+./test/mocks/development/.svn/text-base
+./test/mocks/development/.svn/prop-base
+./test/mocks/development/.svn/props
+./test/mocks/development/.svn/tmp
+./test/mocks/development/.svn/tmp/text-base
+./test/mocks/development/.svn/tmp/prop-base
+./test/mocks/development/.svn/tmp/props
+./test/mocks/development/.svn/entries
+./test/mocks/development/.svn/format
+./test/mocks/development/.svn/all-wcprops
+./test/test_helper.rb
+./app
+./app/.svn
+./app/.svn/text-base
+./app/.svn/prop-base
+./app/.svn/props
+./app/.svn/tmp
+./app/.svn/tmp/text-base
+./app/.svn/tmp/prop-base
+./app/.svn/tmp/props
+./app/.svn/entries
+./app/.svn/format
+./app/.svn/all-wcprops
+./app/helpers
+./app/helpers/.svn
+./app/helpers/.svn/text-base
+./app/helpers/.svn/text-base/application_helper.rb.svn-base
+./app/helpers/.svn/text-base/pdfs_helper.rb.svn-base
+./app/helpers/.svn/text-base/categories_helper.rb.svn-base
+./app/helpers/.svn/prop-base
+./app/helpers/.svn/props
+./app/helpers/.svn/tmp
+./app/helpers/.svn/tmp/text-base
+./app/helpers/.svn/tmp/prop-base
+./app/helpers/.svn/tmp/props
+./app/helpers/.svn/entries
+./app/helpers/.svn/format
+./app/helpers/.svn/all-wcprops
+./app/helpers/application_helper.rb
+./app/helpers/pdfs_helper.rb
+./app/helpers/categories_helper.rb
+./app/models
+./app/models/.svn
+./app/models/.svn/text-base
+./app/models/.svn/text-base/pdf.rb.svn-base
+./app/models/.svn/text-base/category.rb.svn-base
+./app/models/.svn/prop-base
+./app/models/.svn/props
+./app/models/.svn/tmp
+./app/models/.svn/tmp/text-base
+./app/models/.svn/tmp/prop-base
+./app/models/.svn/tmp/props
+./app/models/.svn/entries
+./app/models/.svn/format
+./app/models/.svn/all-wcprops
+./app/models/pdf.rb
+./app/models/category.rb
+./app/controllers
+./app/controllers/.svn
+./app/controllers/.svn/text-base
+./app/controllers/.svn/text-base/pdfs_controller.rb.svn-base
+./app/controllers/.svn/text-base/application.rb.svn-base
+./app/controllers/.svn/text-base/categories_controller.rb.svn-base
+./app/controllers/.svn/prop-base
+./app/controllers/.svn/props
+./app/controllers/.svn/tmp
+./app/controllers/.svn/tmp/text-base
+./app/controllers/.svn/tmp/prop-base
+./app/controllers/.svn/tmp/props
+./app/controllers/.svn/entries
+./app/controllers/.svn/format
+./app/controllers/.svn/all-wcprops
+./app/controllers/pdfs_controller.rb
+./app/controllers/application.rb
+./app/controllers/categories_controller.rb
+./app/views
+./app/views/.svn
+./app/views/.svn/text-base
+./app/views/.svn/prop-base
+./app/views/.svn/props
+./app/views/.svn/tmp
+./app/views/.svn/tmp/text-base
+./app/views/.svn/tmp/prop-base
+./app/views/.svn/tmp/props
+./app/views/.svn/entries
+./app/views/.svn/format
+./app/views/.svn/all-wcprops
+./app/views/layouts
+./app/views/layouts/.svn
+./app/views/layouts/.svn/text-base
+./app/views/layouts/.svn/text-base/pdfs.rhtml.svn-base
+./app/views/layouts/.svn/text-base/categories.rhtml.svn-base
+./app/views/layouts/.svn/prop-base
+./app/views/layouts/.svn/props
+./app/views/layouts/.svn/tmp
+./app/views/layouts/.svn/tmp/text-base
+./app/views/layouts/.svn/tmp/prop-base
+./app/views/layouts/.svn/tmp/props
+./app/views/layouts/.svn/entries
+./app/views/layouts/.svn/format
+./app/views/layouts/.svn/all-wcprops
+./app/views/layouts/application.rhtml
+./app/views/pdfs
+./app/views/pdfs/.svn
+./app/views/pdfs/.svn/text-base
+./app/views/pdfs/.svn/text-base/list.rhtml.svn-base
+./app/views/pdfs/.svn/text-base/show.rhtml.svn-base
+./app/views/pdfs/.svn/text-base/_form.rhtml.svn-base
+./app/views/pdfs/.svn/text-base/edit.rhtml.svn-base
+./app/views/pdfs/.svn/text-base/new.rhtml.svn-base
+./app/views/pdfs/.svn/prop-base
+./app/views/pdfs/.svn/props
+./app/views/pdfs/.svn/tmp
+./app/views/pdfs/.svn/tmp/text-base
+./app/views/pdfs/.svn/tmp/prop-base
+./app/views/pdfs/.svn/tmp/props
+./app/views/pdfs/.svn/entries
+./app/views/pdfs/.svn/format
+./app/views/pdfs/.svn/all-wcprops
+./app/views/pdfs/list.rhtml
+./app/views/pdfs/show.rhtml
+./app/views/pdfs/_form.rhtml
+./app/views/pdfs/new.rhtml
+./app/views/pdfs/edit.rhtml
+./app/views/categories
+./app/views/categories/_form.rhtml
+./app/views/categories/list.rhtml
+./app/views/categories/show.rhtml
+./app/views/categories/new.rhtml
+./app/views/categories/edit.rhtml
+./app/views/categories/.svn
+./app/views/categories/.svn/text-base
+./app/views/categories/.svn/text-base/_form.rhtml.svn-base
+./app/views/categories/.svn/text-base/edit.rhtml.svn-base
+./app/views/categories/.svn/text-base/list.rhtml.svn-base
+./app/views/categories/.svn/text-base/new.rhtml.svn-base
+./app/views/categories/.svn/text-base/show.rhtml.svn-base
+./app/views/categories/.svn/prop-base
+./app/views/categories/.svn/props
+./app/views/categories/.svn/tmp
+./app/views/categories/.svn/tmp/text-base
+./app/views/categories/.svn/tmp/prop-base
+./app/views/categories/.svn/tmp/props
+./app/views/categories/.svn/entries
+./app/views/categories/.svn/format
+./app/views/categories/.svn/all-wcprops
+./tmp
+./tmp/.svn
+./tmp/.svn/text-base
+./tmp/.svn/prop-base
+./tmp/.svn/props
+./tmp/.svn/tmp
+./tmp/.svn/tmp/text-base
+./tmp/.svn/tmp/prop-base
+./tmp/.svn/tmp/props
+./tmp/.svn/entries
+./tmp/.svn/format
+./tmp/.svn/all-wcprops
+./tmp/pids
+./tmp/pids/.svn
+./tmp/pids/.svn/text-base
+./tmp/pids/.svn/prop-base
+./tmp/pids/.svn/props
+./tmp/pids/.svn/tmp
+./tmp/pids/.svn/tmp/text-base
+./tmp/pids/.svn/tmp/prop-base
+./tmp/pids/.svn/tmp/props
+./tmp/pids/.svn/entries
+./tmp/pids/.svn/format
+./tmp/pids/.svn/all-wcprops
+./tmp/cache
+./tmp/cache/.svn
+./tmp/cache/.svn/text-base
+./tmp/cache/.svn/prop-base
+./tmp/cache/.svn/props
+./tmp/cache/.svn/tmp
+./tmp/cache/.svn/tmp/text-base
+./tmp/cache/.svn/tmp/prop-base
+./tmp/cache/.svn/tmp/props
+./tmp/cache/.svn/entries
+./tmp/cache/.svn/format
+./tmp/cache/.svn/all-wcprops
+./tmp/sessions
+./tmp/sessions/.svn
+./tmp/sessions/.svn/text-base
+./tmp/sessions/.svn/text-base/ruby_sess.12340b2e370d4ade.svn-base
+./tmp/sessions/.svn/text-base/ruby_sess.84fc12c0bfc1c601.svn-base
+./tmp/sessions/.svn/prop-base
+./tmp/sessions/.svn/prop-base/ruby_sess.12340b2e370d4ade.svn-base
+./tmp/sessions/.svn/prop-base/ruby_sess.84fc12c0bfc1c601.svn-base
+./tmp/sessions/.svn/props
+./tmp/sessions/.svn/tmp
+./tmp/sessions/.svn/tmp/text-base
+./tmp/sessions/.svn/tmp/prop-base
+./tmp/sessions/.svn/tmp/props
+./tmp/sessions/.svn/entries
+./tmp/sessions/.svn/format
+./tmp/sessions/.svn/all-wcprops
+./tmp/sessions/ruby_sess.12340b2e370d4ade
+./tmp/sessions/ruby_sess.84fc12c0bfc1c601
+./tmp/sockets
+./tmp/sockets/.svn
+./tmp/sockets/.svn/text-base
+./tmp/sockets/.svn/prop-base
+./tmp/sockets/.svn/props
+./tmp/sockets/.svn/tmp
+./tmp/sockets/.svn/tmp/text-base
+./tmp/sockets/.svn/tmp/prop-base
+./tmp/sockets/.svn/tmp/props
+./tmp/sockets/.svn/entries
+./tmp/sockets/.svn/format
+./tmp/sockets/.svn/all-wcprops
+./log
+./log/.svn
+./log/.svn/text-base
+./log/.svn/text-base/test.log.svn-base
+./log/.svn/text-base/development.log.svn-base
+./log/.svn/text-base/production.log.svn-base
+./log/.svn/text-base/server.log.svn-base
+./log/.svn/prop-base
+./log/.svn/props
+./log/.svn/tmp
+./log/.svn/tmp/text-base
+./log/.svn/tmp/prop-base
+./log/.svn/tmp/props
+./log/.svn/entries
+./log/.svn/format
+./log/.svn/all-wcprops
+./log/test.log
+./log/development.log
+./log/production.log
+./log/server.log
+./script
+./script/.svn
+./script/.svn/text-base
+./script/.svn/text-base/console.svn-base
+./script/.svn/text-base/breakpointer.svn-base
+./script/.svn/text-base/server.svn-base
+./script/.svn/text-base/destroy.svn-base
+./script/.svn/text-base/runner.svn-base
+./script/.svn/text-base/about.svn-base
+./script/.svn/text-base/generate.svn-base
+./script/.svn/text-base/plugin.svn-base
+./script/.svn/prop-base
+./script/.svn/prop-base/console.svn-base
+./script/.svn/prop-base/breakpointer.svn-base
+./script/.svn/prop-base/server.svn-base
+./script/.svn/prop-base/destroy.svn-base
+./script/.svn/prop-base/runner.svn-base
+./script/.svn/prop-base/about.svn-base
+./script/.svn/prop-base/generate.svn-base
+./script/.svn/prop-base/plugin.svn-base
+./script/.svn/props
+./script/.svn/tmp
+./script/.svn/tmp/text-base
+./script/.svn/tmp/prop-base
+./script/.svn/tmp/props
+./script/.svn/entries
+./script/.svn/format
+./script/.svn/all-wcprops
+./script/performance
+./script/performance/.svn
+./script/performance/.svn/text-base
+./script/performance/.svn/text-base/benchmarker.svn-base
+./script/performance/.svn/text-base/profiler.svn-base
+./script/performance/.svn/prop-base
+./script/performance/.svn/prop-base/benchmarker.svn-base
+./script/performance/.svn/prop-base/profiler.svn-base
+./script/performance/.svn/props
+./script/performance/.svn/tmp
+./script/performance/.svn/tmp/text-base
+./script/performance/.svn/tmp/prop-base
+./script/performance/.svn/tmp/props
+./script/performance/.svn/entries
+./script/performance/.svn/format
+./script/performance/.svn/all-wcprops
+./script/performance/benchmarker
+./script/performance/profiler
+./script/process
+./script/process/.svn
+./script/process/.svn/text-base
+./script/process/.svn/text-base/spawner.svn-base
+./script/process/.svn/text-base/inspector.svn-base
+./script/process/.svn/text-base/reaper.svn-base
+./script/process/.svn/prop-base
+./script/process/.svn/prop-base/spawner.svn-base
+./script/process/.svn/prop-base/inspector.svn-base
+./script/process/.svn/prop-base/reaper.svn-base
+./script/process/.svn/props
+./script/process/.svn/tmp
+./script/process/.svn/tmp/text-base
+./script/process/.svn/tmp/prop-base
+./script/process/.svn/tmp/props
+./script/process/.svn/entries
+./script/process/.svn/format
+./script/process/.svn/all-wcprops
+./script/process/spawner
+./script/process/inspector
+./script/process/reaper
+./script/console
+./script/breakpointer
+./script/server
+./script/destroy
+./script/runner
+./script/about
+./script/generate
+./script/plugin
+./components
+./components/.svn
+./components/.svn/text-base
+./components/.svn/prop-base
+./components/.svn/props
+./components/.svn/tmp
+./components/.svn/tmp/text-base
+./components/.svn/tmp/prop-base
+./components/.svn/tmp/props
+./components/.svn/entries
+./components/.svn/format
+./components/.svn/all-wcprops
+./config
+./config/.svn
+./config/.svn/text-base
+./config/.svn/text-base/routes.rb.svn-base
+./config/.svn/text-base/database.yml.svn-base
+./config/.svn/text-base/boot.rb.svn-base
+./config/.svn/text-base/environment.rb.svn-base
+./config/.svn/text-base/lighttpd.conf.svn-base
+./config/.svn/prop-base
+./config/.svn/props
+./config/.svn/tmp
+./config/.svn/tmp/text-base
+./config/.svn/tmp/prop-base
+./config/.svn/tmp/props
+./config/.svn/entries
+./config/.svn/format
+./config/.svn/all-wcprops
+./config/environments
+./config/environments/.svn
+./config/environments/.svn/text-base
+./config/environments/.svn/text-base/test.rb.svn-base
+./config/environments/.svn/text-base/development.rb.svn-base
+./config/environments/.svn/text-base/production.rb.svn-base
+./config/environments/.svn/prop-base
+./config/environments/.svn/props
+./config/environments/.svn/tmp
+./config/environments/.svn/tmp/text-base
+./config/environments/.svn/tmp/prop-base
+./config/environments/.svn/tmp/props
+./config/environments/.svn/entries
+./config/environments/.svn/format
+./config/environments/.svn/all-wcprops
+./config/environments/test.rb
+./config/environments/development.rb
+./config/environments/production.rb
+./config/routes.rb
+./config/database.yml
+./config/boot.rb
+./config/environment.rb
+./config/lighttpd.conf
+./db
+./db/.svn
+./db/.svn/text-base
+./db/.svn/text-base/schema.rb.svn-base
+./db/.svn/prop-base
+./db/.svn/props
+./db/.svn/tmp
+./db/.svn/tmp/text-base
+./db/.svn/tmp/prop-base
+./db/.svn/tmp/props
+./db/.svn/entries
+./db/.svn/format
+./db/.svn/all-wcprops
+./db/migrate
+./db/migrate/.svn
+./db/migrate/.svn/text-base
+./db/migrate/.svn/text-base/001_create_pdfs.rb.svn-base
+./db/migrate/.svn/text-base/002_create_categories.rb.svn-base
+./db/migrate/.svn/text-base/003_add_column_category_description.rb.svn-base
+./db/migrate/.svn/text-base/004_add_column_pdfs_category_id.rb.svn-base
+./db/migrate/.svn/text-base/005_remove_column_pdfs_cat_id.rb.svn-base
+./db/migrate/.svn/prop-base
+./db/migrate/.svn/props
+./db/migrate/.svn/tmp
+./db/migrate/.svn/tmp/text-base
+./db/migrate/.svn/tmp/prop-base
+./db/migrate/.svn/tmp/props
+./db/migrate/.svn/entries
+./db/migrate/.svn/format
+./db/migrate/.svn/all-wcprops
+./db/migrate/001_create_pdfs.rb
+./db/migrate/002_create_categories.rb
+./db/migrate/003_add_column_category_description.rb
+./db/migrate/004_add_column_pdfs_category_id.rb
+./db/migrate/005_remove_column_pdfs_cat_id.rb
+./db/schema.rb
+./doc
+./doc/.svn
+./doc/.svn/text-base
+./doc/.svn/text-base/README_FOR_APP.svn-base
+./doc/.svn/prop-base
+./doc/.svn/props
+./doc/.svn/tmp
+./doc/.svn/tmp/text-base
+./doc/.svn/tmp/prop-base
+./doc/.svn/tmp/props
+./doc/.svn/entries
+./doc/.svn/format
+./doc/.svn/all-wcprops
+./doc/README_FOR_APP
+./lib
+./lib/.svn
+./lib/.svn/text-base
+./lib/.svn/prop-base
+./lib/.svn/props
+./lib/.svn/tmp
+./lib/.svn/tmp/text-base
+./lib/.svn/tmp/prop-base
+./lib/.svn/tmp/props
+./lib/.svn/entries
+./lib/.svn/format
+./lib/.svn/all-wcprops
+./lib/tasks
+./lib/tasks/.svn
+./lib/tasks/.svn/text-base
+./lib/tasks/.svn/prop-base
+./lib/tasks/.svn/props
+./lib/tasks/.svn/tmp
+./lib/tasks/.svn/tmp/text-base
+./lib/tasks/.svn/tmp/prop-base
+./lib/tasks/.svn/tmp/props
+./lib/tasks/.svn/entries
+./lib/tasks/.svn/format
+./lib/tasks/.svn/all-wcprops
+./vendor
+./vendor/.svn
+./vendor/.svn/text-base
+./vendor/.svn/prop-base
+./vendor/.svn/props
+./vendor/.svn/tmp
+./vendor/.svn/tmp/text-base
+./vendor/.svn/tmp/prop-base
+./vendor/.svn/tmp/props
+./vendor/.svn/entries
+./vendor/.svn/format
+./vendor/.svn/all-wcprops
+./vendor/plugins
+./vendor/plugins/.svn
+./vendor/plugins/.svn/text-base
+./vendor/plugins/.svn/prop-base
+./vendor/plugins/.svn/props
+./vendor/plugins/.svn/tmp
+./vendor/plugins/.svn/tmp/text-base
+./vendor/plugins/.svn/tmp/prop-base
+./vendor/plugins/.svn/tmp/props
+./vendor/plugins/.svn/entries
+./vendor/plugins/.svn/format
+./vendor/plugins/.svn/all-wcprops
+./public
+./public/.svn
+./public/.svn/text-base
+./public/.svn/text-base/dispatch.cgi.svn-base
+./public/.svn/text-base/dispatch.rb.svn-base
+./public/.svn/text-base/dispatch.fcgi.svn-base
+./public/.svn/text-base/robots.txt.svn-base
+./public/.svn/text-base/500.html.svn-base
+./public/.svn/text-base/404.html.svn-base
+./public/.svn/text-base/index.html.svn-base
+./public/.svn/text-base/.htaccess.svn-base
+./public/.svn/text-base/favicon.ico.svn-base
+./public/.svn/prop-base
+./public/.svn/prop-base/dispatch.cgi.svn-base
+./public/.svn/prop-base/dispatch.rb.svn-base
+./public/.svn/prop-base/dispatch.fcgi.svn-base
+./public/.svn/props
+./public/.svn/tmp
+./public/.svn/tmp/text-base
+./public/.svn/tmp/prop-base
+./public/.svn/tmp/props
+./public/.svn/entries
+./public/.svn/format
+./public/.svn/all-wcprops
+./public/images
+./public/images/.svn
+./public/images/.svn/text-base
+./public/images/.svn/text-base/rails.png.svn-base
+./public/images/.svn/prop-base
+./public/images/.svn/prop-base/rails.png.svn-base
+./public/images/.svn/props
+./public/images/.svn/tmp
+./public/images/.svn/tmp/text-base
+./public/images/.svn/tmp/prop-base
+./public/images/.svn/tmp/props
+./public/images/.svn/entries
+./public/images/.svn/format
+./public/images/.svn/all-wcprops
+./public/images/rails.png
+./public/javascripts
+./public/javascripts/.svn
+./public/javascripts/.svn/text-base
+./public/javascripts/.svn/text-base/prototype.js.svn-base
+./public/javascripts/.svn/text-base/effects.js.svn-base
+./public/javascripts/.svn/text-base/dragdrop.js.svn-base
+./public/javascripts/.svn/text-base/application.js.svn-base
+./public/javascripts/.svn/text-base/controls.js.svn-base
+./public/javascripts/.svn/prop-base
+./public/javascripts/.svn/props
+./public/javascripts/.svn/tmp
+./public/javascripts/.svn/tmp/text-base
+./public/javascripts/.svn/tmp/prop-base
+./public/javascripts/.svn/tmp/props
+./public/javascripts/.svn/entries
+./public/javascripts/.svn/format
+./public/javascripts/.svn/all-wcprops
+./public/javascripts/prototype.js
+./public/javascripts/effects.js
+./public/javascripts/dragdrop.js
+./public/javascripts/application.js
+./public/javascripts/controls.js
+./public/stylesheets
+./public/stylesheets/.svn
+./public/stylesheets/.svn/text-base
+./public/stylesheets/.svn/text-base/scaffold.css.svn-base
+./public/stylesheets/.svn/prop-base
+./public/stylesheets/.svn/props
+./public/stylesheets/.svn/tmp
+./public/stylesheets/.svn/tmp/text-base
+./public/stylesheets/.svn/tmp/prop-base
+./public/stylesheets/.svn/tmp/props
+./public/stylesheets/.svn/entries
+./public/stylesheets/.svn/format
+./public/stylesheets/.svn/all-wcprops
+./public/stylesheets/scaffold.css
+./public/dispatch.cgi
+./public/dispatch.rb
+./public/dispatch.fcgi
+./public/robots.txt
+./public/500.html
+./public/404.html
+./public/index.html
+./public/.htaccess
+./public/favicon.ico
+./pdfcat_notes.abw
+./Rakefile
+./README
+./pdfcat_notes.abw.bak~
+./typescript
+find: scaffold.css: No such file or directory
+[ws10@ws10 ~/livedata/programming/rails/pdfcat]$ find . scaffold.css[4h|[4l[4hg[4l[4hr[4l[4he[4l[4hp[4l[4h [4l
+./public/stylesheets/.svn/text-base/scaffold.css.svn-base
+./public/stylesheets/scaffold.css
+[ws10@ws10 ~/livedata/programming/rails/pdfcat]$ cd public/stylesheets/
+[ws10@ws10 ~/livedata/programming/rails/pdfcat/public/stylesheets]$ cp * 
+.svn/         scaffold.css  
+[ws10@ws10 ~/livedata/programming/rails/pdfcat/public/stylesheets]$ cp scaffold.css application.css
+[ws10@ws10 ~/livedata/programming/rails/pdfcat/public/stylesheets]$ vim application.css
+[?1h=[>c[1;66r[27m[m[H[2J[?25l[66;1H"application.css" 74L, 1152C[1;1H[33mbody[m [36m{[m [32mbackground-color[m: [31m#fff[m; [32mcolor[m: [31m#333[m; [36m}[m
+
+[33mbody[m, [33mp[m, [33mol[m, [33mul[m, [33mtd[m [36m{[m
+  [32mfont-family[m: verdana, arial, helvetica, [32msans-serif[m;
+  [32mfont-size[m:   [31m13px[m;
+  [32mline-height[m: [31m18px[m;
+[36m}[m
+
+[33mpre[m [36m{[m
+  [32mbackground-color[m: [31m#eee[m;
+  [32mpadding[m: [31m10px[m;
+  [32mfont-size[m: [31m11px[m;
+[36m}[m
+
+[33ma[m [36m{[m [32mcolor[m: [31m#000[m; [36m}[m
+[33ma[m:[35mvisited[m [36m{[m [32mcolor[m: [31m#666[m; [36m}[m
+[33ma[m:[35mhover[m [36m{[m [32mcolor[m: [31m#fff[m; [32mbackground-color[m:[31m#000[m; [36m}[m
+
+[35m.[mfieldWithErrors [36m{[m
+  [32mpadding[m: [31m2px[m;
+  [32mbackground-color[m: [31mred[m;
+  [32mdisplay[m: [32mtable[m;
+[36m}
+
+#errorExplanation[m [36m{[m
+  [32mwidth[m: [31m400px[m;
+  [32mborder[m: [31m2px[m [32msolid[m [31mred[m;
+  [32mpadding[m: [31m7px[m;
+  [32mpadding-bottom[m: [31m12px[m;
+  [32mmargin-bottom[m: [31m20px[m;
+  [32mbackground-color[m: [31m#f0f0f0[m;
+[36m}
+
+#errorExplanation[m [33mh2[m [36m{[m
+  [32mtext-align[m: [32mleft[m;
+  [32mfont-weight[m: [32mbold[m;
+  [32mpadding[m: [31m5px[m [31m5px[m [31m5px[m [31m15px[m;
+  [32mfont-size[m: [31m12px[m;
+  [32mmargin[m: [31m-7px[m;
+  [32mbackground-color[m: [31m#c00[m;
+  [32mcolor[m: [31m#fff[m;
+[36m}
+
+#errorExplanation[m [33mp[m [36m{[m
+  [32mcolor[m: [31m#333[m;
+  [32mmargin-bottom[m: [31m0[m;
+  [32mpadding[m: [31m5px[m;
+[36m}
+
+#errorExplanation[m [33mul[m [33mli[m [36m{[m
+  [32mfont-size[m: [31m12px[m;
+  [32mlist-style[m: [32msquare[m;
+[36m}[m
+
+[33mdiv[m[35m.[muploadStatus [36m{[m
+  [32mmargin[m: [31m5px[m;
+[36m}[m
+
+[33mdiv[m[35m.[mprogressBar [36m{[m
+  [32mmargin[m: [31m5px[m;
+[36m}[m
+
+[33mdiv[m[35m.[mprogressBar [33mdiv[m[35m.[mborder [36m{[m
+  [32mbackground-color[m: [31m#fff[m;
+  [32mborder[m: [31m1px[m [32msolid[m grey;[66;162H1,1[11CTop]2;application.css (/storage/livedata/programming/rails/pdfcat/public/stylesheets) - VIM]1;application.css[1;1H[?25h[?25l[66;152H:[1;1H[66;1H[K[66;1H:[?25hq[?25l[?25h[?25l]2;mrxvt]1;application.rhtml[?1l>[?25h[66;1H[K[66;1H[ws10@ws10 ~/livedata/programming/rails/pdfcat/public/stylesheets]$ vim application.css
+[?1h=[>c[1;66r[27m[m[H[2J[?25l[66;1H"application.css" 74L, 1152C[1;1H[33mbody[m [36m{[m [32mbackground-color[m: [31m#fff[m; [32mcolor[m: [31m#333[m; [36m}[m
+
+[33mbody[m, [33mp[m, [33mol[m, [33mul[m, [33mtd[m [36m{[m
+  [32mfont-family[m: verdana, arial, helvetica, [32msans-serif[m;
+  [32mfont-size[m:   [31m13px[m;
+  [32mline-height[m: [31m18px[m;
+[36m}[m
+
+[33mpre[m [36m{[m
+  [32mbackground-color[m: [31m#eee[m;
+  [32mpadding[m: [31m10px[m;
+  [32mfont-size[m: [31m11px[m;
+[36m}[m
+
+[33ma[m [36m{[m [32mcolor[m: [31m#000[m; [36m}[m
+[33ma[m:[35mvisited[m [36m{[m [32mcolor[m: [31m#666[m; [36m}[m
+[33ma[m:[35mhover[m [36m{[m [32mcolor[m: [31m#fff[m; [32mbackground-color[m:[31m#000[m; [36m}[m
+
+[35m.[mfieldWithErrors [36m{[m
+  [32mpadding[m: [31m2px[m;
+  [32mbackground-color[m: [31mred[m;
+  [32mdisplay[m: [32mtable[m;
+[36m}
+
+#errorExplanation[m [36m{[m
+  [32mwidth[m: [31m400px[m;
+  [32mborder[m: [31m2px[m [32msolid[m [31mred[m;
+  [32mpadding[m: [31m7px[m;
+  [32mpadding-bottom[m: [31m12px[m;
+  [32mmargin-bottom[m: [31m20px[m;
+  [32mbackground-color[m: [31m#f0f0f0[m;
+[36m}
+
+#errorExplanation[m [33mh2[m [36m{[m
+  [32mtext-align[m: [32mleft[m;
+  [32mfont-weight[m: [32mbold[m;
+  [32mpadding[m: [31m5px[m [31m5px[m [31m5px[m [31m15px[m;
+  [32mfont-size[m: [31m12px[m;
+  [32mmargin[m: [31m-7px[m;
+  [32mbackground-color[m: [31m#c00[m;
+  [32mcolor[m: [31m#fff[m;
+[36m}
+
+#errorExplanation[m [33mp[m [36m{[m
+  [32mcolor[m: [31m#333[m;
+  [32mmargin-bottom[m: [31m0[m;
+  [32mpadding[m: [31m5px[m;
+[36m}
+
+#errorExplanation[m [33mul[m [33mli[m [36m{[m
+  [32mfont-size[m: [31m12px[m;
+  [32mlist-style[m: [32msquare[m;
+[36m}[m
+
+[33mdiv[m[35m.[muploadStatus [36m{[m
+  [32mmargin[m: [31m5px[m;
+[36m}[m
+
+[33mdiv[m[35m.[mprogressBar [36m{[m
+  [32mmargin[m: [31m5px[m;
+[36m}[m
+
+[33mdiv[m[35m.[mprogressBar [33mdiv[m[35m.[mborder [36m{[m
+  [32mbackground-color[m: [31m#fff[m;
+  [32mborder[m: [31m1px[m [32msolid[m grey;[66;162H1,1[11CTop]2;application.css (/storage/livedata/programming/rails/pdfcat/public/stylesheets) - VIM]1;application.css[1;1H[?25h[?25l[66;152H:[1;1H[66;1H[K[66;1H:[?25hq[?25l[?25h[?25l]2;mrxvt]1;application.rhtml[?1l>[?25h[66;1H[K[66;1H[ws10@ws10 ~/livedata/programming/rails/pdfcat/public/stylesheets]$ rm application.css 
+[ws10@ws10 ~/livedata/programming/rails/pdfcat/public/stylesheets]$ l ../   /livedata/pais/
+..Wastebasket/                  5User Documentation/            fullon.png                      pais_v2.1a.jar                  printer labels.pub
+1Specification/                 6Training/                      hp700pcl.txt                    paisv2.2/                       prototype2.jar
+2Design/                        HP2XX, A HP-GL Converter.htm    old/                            pcl_pack.zip                    prototype2.zip
+3implement/                     PCL_Feature_Support_Matrix.htm  pais3.sql                       pdf_catalog/                    serverdiagram.zip
+4Testing/                       backup_log/                     pais_logo_ideas.svg             printer labels.jpg              solution2/
+[ws10@ws10 ~/livedata/programming/rails/pdfcat/public/stylesheets]$ l /livedata/pais/pdf_catalog/
+200702-scanners.gnumeric              drop_pdfcat.sql                       pdf_cat_use_case.abw                  pop_client.sql
+20070626-pdfcat.tar.gz                drop_pdfcattest.sql                   pdfcat/                               pop_pdf.sql
+200709-email_feature.abw              export_client_list_from_pais.abw      pdfcat_20070726_1630/                 pop_security.sql
+alter_pdfcat.sql                      pdf_cat_database.abw                  pdfcat_20070731_1337_fixed_scroller/  pop_securitytest.sql
+backups/                              pdf_cat_edit_delete.svg               pdfcat_20070802_1023_after_exists/    question.png
+bug_listcatalogs                      pdf_cat_flowchart.png                 pdfcat_20070808_before_svn/           question.svg
+create_pdfcat.sh                      pdf_cat_flowchart.svg                 pdfcat_mick.sh                        sf-netbeans-nbxdoclet-update-0.5.nbm
+create_pdfcat.sql                     pdf_cat_implementation_notes.abw      pop_cat.sql                           using_the_scanner.odt
+create_pdfcattest.sh                  pdf_cat_listing.svg                   pop_catuser.sql                       
+create_pdfcattest.sql                 pdf_cat_pages.svg                     pop_catusertest.sql                   
+[ws10@ws10 ~/livedata/programming/rails/pdfcat/public/stylesheets]$ l /livedata/pais/pdf_catalog/pdf
+pdf_cat_database.abw                 pdf_cat_implementation_notes.abw     pdfcat/                              pdfcat_20070808_before_svn/
+pdf_cat_edit_delete.svg              pdf_cat_listing.svg                  pdfcat_20070726_1630/                pdfcat_mick.sh
+pdf_cat_flowchart.png                pdf_cat_pages.svg                    pdfcat_20070731_1337_fixed_scroller/ 
+pdf_cat_flowchart.svg                pdf_cat_use_case.abw                 pdfcat_20070802_1023_after_exists/   
+[ws10@ws10 ~/livedata/programming/rails/pdfcat/public/stylesheets]$ l /livedata/pais/pdf_catalog/pdfcat
+pdfcat/                              pdfcat_20070731_1337_fixed_scroller/ pdfcat_20070808_before_svn/          
+pdfcat_20070726_1630/                pdfcat_20070802_1023_after_exists/   pdfcat_mick.sh                       
+[ws10@ws10 ~/livedata/programming/rails/pdfcat/public/stylesheets]$ l /livedata/pais/pdf_catalog/pdfcat/
+.svn/     branches/ tags/     trunk/    
+[ws10@ws10 ~/livedata/programming/rails/pdfcat/public/stylesheets]$ l /livedata/pais/pdf_catalog/pdfcat/t
+tags/  trunk/ 
+[ws10@ws10 ~/livedata/programming/rails/pdfcat/public/stylesheets]$ l /livedata/pais/pdf_catalog/pdfcat/trunk/
+.svn/      build/     build.xml  dist/      nbproject/ prod.sh    src/       test/      web/       
+[ws10@ws10 ~/livedata/programming/rails/pdfcat/public/stylesheets]$ l /livedata/pais/pdf_catalog/pdfcat/trunk/
+total 24
+drwxrwxr-x  9 ws10  wheel   512 Oct 16 14:30 .
+drwxrwxr-x  6 ws10  wheel   512 Aug 10 15:44 ..
+drwxrwxr-x  6 ws10  wheel   512 Sep 21 12:22 .svn
+drwxr-xr-x  3 ws10  wheel   512 Sep 10 13:31 build
+-rw-rw-r--  1 ws10  wheel  3064 Oct 16 14:30 build.xml
+drwxrwxr-x  3 ws10  wheel   512 Aug  8 16:24 dist
+drwxrwxr-x  4 ws10  wheel   512 Nov  2 10:45 nbproject
+-rwxrwxr-x  1 ws10  wheel    59 Aug  8 16:24 prod.sh
+drwxrwxr-x  5 ws10  wheel   512 Aug  8 16:24 src
+drwxrwxr-x  4 ws10  wheel   512 Aug  8 16:24 test
+drwxrwxr-x  8 ws10  wheel   512 Sep 11 14:33 web
+[ws10@ws10 ~/livedata/programming/rails/pdfcat/public/stylesheets]$ l /livedata/pais/pdf_catalog/pdfcat/trunk/sr  web
+total 36
+drwxrwxr-x  8 ws10  wheel   512 Sep 11 14:33 .
+drwxrwxr-x  9 ws10  wheel   512 Oct 16 14:30 ..
+drwxrwxr-x  6 ws10  wheel   512 Sep 21 12:22 .svn
+drwxrwxr-x  3 ws10  wheel   512 Aug  8 16:24 META-INF
+drwxrwxr-x  3 ws10  wheel   512 Sep 21 12:28 WEB-INF
+-rw-rw-r--  1 ws10  wheel  7330 Sep 11 14:33 changes.html
+-rw-rw-r--  1 ws10  wheel  7229 Aug 14 10:43 changes.html~
+drwxrwxr-x  3 ws10  wheel   512 Sep 19 11:34 css
+-rw-rw-r--  1 ws10  wheel   337 Aug  8 16:24 index.jsp
+drwxrwxr-x  3 ws10  wheel   512 Sep 19 12:03 js
+-rw-rw-r--  1 ws10  wheel  2025 Aug  8 16:24 login.jsp
+drwxrwxr-x  9 ws10  wheel   512 Aug  8 16:24 pages
+[ws10@ws10 ~/livedata/programming/rails/pdfcat/public/stylesheets]$ l /livedata/pais/pdf_catalog/pdfcat/trunk/web/css
+total 10
+drwxrwxr-x  3 ws10  wheel   512 Sep 19 11:34 .
+drwxrwxr-x  8 ws10  wheel   512 Sep 11 14:33 ..
+drwxrwxr-x  6 ws10  wheel   512 Sep 19 12:14 .svn
+-rw-rw-r--  1 ws10  wheel  3302 Sep 19 11:34 pdfcat.css
+[ws10@ws10 ~/livedata/programming/rails/pdfcat/public/stylesheets]$ l /livedata/pais/pdf_catalog/pdfcat/trunk/web/css[1P[4hc[4l[4hp[4l /livedata/pais/pdf_catalog/pdfcat/trunk/web/css/
+.svn/       pdfcat.css  
+[ws10@ws10 ~/livedata/programming/rails/pdfcat/public/stylesheets]$ cp /livedata/pais/pdf_catalog/pdfcat/trunk/web/css/pdfcat.css .
+[ws10@ws10 ~/livedata/programming/rails/pdfcat/public/stylesheets]$ l
+total 12
+drwxrwxr-x  3 ws10  wheel   512 Nov 12 10:49 .
+drwxrwxr-x  6 ws10  wheel   512 Nov  9 15:30 ..
+drwxrwxr-x  6 ws10  wheel   512 Nov 12 10:26 .svn
+-rw-r--r--  1 ws10  wheel  3302 Nov 12 10:49 pdfcat.css
+-rw-r--r--  1 ws10  wheel  1152 Nov 12 09:50 scaffold.css
+[ws10@ws10 ~/livedata/programming/rails/pdfcat/public/stylesheets]$ mv pdfcat.css application.css
+[ws10@ws10 ~/livedata/programming/rails/pdfcat/public/stylesheets]$ l
+total 12
+drwxrwxr-x  3 ws10  wheel   512 Nov 12 10:49 .
+drwxrwxr-x  6 ws10  wheel   512 Nov  9 15:30 ..
+drwxrwxr-x  6 ws10  wheel   512 Nov 12 10:26 .svn
+-rw-r--r--  1 ws10  wheel  3302 Nov 12 10:49 application.css
+-rw-r--r--  1 ws10  wheel  1152 Nov 12 09:50 scaffold.css
+[ws10@ws10 ~/livedata/programming/rails/pdfcat/public/stylesheets]$ vim application.css 
+[?1h=[>c[1;66r[27m[m[H[2J[?25l[66;1H"application.css" 205L, 3302C[1;1H[34m/* 
+    pdfcat.css
+
+    Author:         Michael Pope
+    Date:           20/07/2007
+    Description:    Style sheet for pdfcat program.
+*/
+
+
+/********************* Main Area *********************/[m
+[33mbody[m[36m{[m
+    [32mmargin[m: [31m0[m;
+[36m}[m
+
+[33mdiv[m[36m#headingback{[m
+    [32mheight[m: [31m40px[m;
+    [32mpadding-top[m: [31m30px[m;
+    [32mpadding-left[m: [31m10px[m;
+    [32mpadding-right[m: [31m10px[m;[21;5H[32mbackground-color[m: [31m#032271[m;
+    [32mcolor[m: [31mwhite[m;
+    [32mmin-width[m: [31m697px[m;
+[36m}[m
+[33mdiv[m[36m#heading{[m
+    [32mfont-style[m: Arial, Helvetic, [32msans-serif[m;
+    [32mfont-size[m: [31m170%[m;
+    [32mfont-weight[m: [32mbold[m;
+    [32mtext-align[m: [32mleft[m;[31;5H[32mfloat[m: [32mleft[m;
+    [32mwidth[m: [31m400px[m;
+[36m}[m
+[33mdiv[m[36m#search{[m
+    [32mfloat[m: [32mright[m;
+    [32mwidth[m: [31m250px[m;
+    [32mpadding-top[m: [31m10px[m;
+    [32mpadding-left[m: [31m20px[m;[40;5H[32mfont-family[m: Tahoma;
+    [32mfont-size[m: [31m80%[m;
+[36m}[m
+
+[35m.[msearchbox[36m{[m
+    [32mmargin[m: [31m0[m;
+    [32mborder[m: [31m0[m;
+    [32mheight[m: [31m15px[m;
+[36m}[m
+
+[35m.[msearchitem[36m{[m[53;5H[32mwidth[m: [31m85px[m;
+    [32mheight[m: [31m18px[m;
+    [32mtext-align[m: [32mcenter[m;[57;5H[32mbackground-color[m: [31m#1b5472[m;[59;5H[32mtext-decoration[m: [32mnone[m;
+    [32mcolor[m: [31mwhite[m;
+    [32mfont-weight[m: [32mbold[m;
+[36m}[m
+
+[35m.[msearchitem:[35mhover[m{
+    background-color: #4e87a5;[66;162H1,1[11CTop]2;application.css (/storage/livedata/programming/rails/pdfcat/public/stylesheets) - VIM]1;application.css[1;1H[?25h[?25l[66;152H:[1;1H[66;1H[K[66;1H:[?25he[?25l[?25h[?25l [?25hs[?25l[?25h...[?25lcaffold.css[?25h[?25l"scaffold.css" 74L, 1152C[1;1H[33mbody[m [36m{[m [32mbackground-color[m: [31m#fff[m; [32mcolor[m: [31m#333[m; [36m}[m[2;1H[K[3;1H[33mbody[m, [33mp[m, [33mol[m, [33mul[m, [33mtd[m [36m{[m
+  [32mfont-family[m: verdana, arial, helvetica, [32msans-serif[m;
+  [32mfont-size[m:   [31m13px[m;[5;21H[K[6;1H  [32mline-height[m: [31m18px[m;[6;21H[K[7;1H[36m}[m[7;2H[K[9;1H[33mpre[m [36m{[m
+  [32mbackground-color[m: [31m#eee[m;[10;26H[K[11;1H  [32mpadding[m: [31m10px[m;
+  [32mfont-size[m: [31m11px[m;
+
+
+[33ma[m [36m{[m [32mcolor[m: [31m#000[m; [36m}[m
+[33ma[m:[35mvisited[m [36m{[m [32mcolor[m: [31m#666[m; [36m}[m
+[33ma[m:[35mhover[m [36m{[m [32mcolor[m: [31m#fff[m; [32mbackground-color[m:[31m#000[m; [36m}[m[18;5H[K[19;1H[35m.[mfieldWithErrors [36m{[m[19;20H[K[20;3H[32mpadding[m: [31m2px[m;
+  [32mbackground-color[m: [31mred[m;[21;25H[K[22;3H[32mdisplay[m: [32mtable[m;
+[36m}[m[23;5H[K[24;1H[K[25;1H[36m#errorExplanation[m [36m{[m
+  [32mwidth[m: [31m400px[m;[26;17H[K[27;3H[32mborder[m: [31m2px[m [32msolid[m [31mred[m;
+  [32mpadding[m: [31m7px[m;[28;16H[K[29;3H[32mpadding-bottom[m: [31m12px[m;
+  [32mmargin-bottom[m: [31m20px[m;
+  [32mbackground-color[m: [31m#f0f0f0[m;
+[36m}[m[32;5H[K[33;1H[K[34;1H[36m#errorExplanation[m [33mh2[m [36m{[m
+  [32mtext-align[m: [32mleft[m;
+  [32mfont-weight[m: [32mbold[m;
+  [32mpadding[m: [31m5px[m [31m5px[m [31m5px[m [31m15px[m;
+  [32mfont-size[m: [31m12px[m;[38;19H[K[39;3H[32mmargin[m: [31m-7px[m;
+  [32mbackground-color[m: [31m#c00[m;
+  [32mcolor[m: [31m#fff[m;[41;16H[K[44;1H[36m#errorExplanation[m [33mp[m [36m{[m
+  [32mcolor[m: [31m#333[m;
+  [32mmargin-bottom[m: [31m0[m;
+  [32mpadding[m: [31m5px[m;[47;16H[K[50;1H[36m#errorExplanation[m [33mul[m [33mli[m [36m{[m
+  [32mfont-size[m: [31m12px[m;
+  [32mlist-style[m: [32msquare[m;
+[36m}[m[53;5H[K[54;5H[K[55;1H[33mdiv[m[35m.[muploadStatus [36m{[m[55;19H[K[56;3H[32mmargin[m: [31m5px[m;
+[36m}[m[57;5H[K[59;1H[33mdiv[m[35m.[mprogressBar [36m{[m[59;18H[K[60;3H[32mmargin[m: [31m5px[m;[60;15H[K[61;1H[36m}[m[61;5H[K[62;1H[K[63;1H[33mdiv[m[35m.[mprogressBar [33mdiv[m[35m.[mborder [36m{[m
+  [32mbackground-color[m: [31m#fff[m;
+  [32mborder[m: [31m1px[m [32msolid[m grey;[65;26H[K[66;162H1,1[11CTop]2;scaffold.css (/storage/livedata/programming/rails/pdfcat/public/stylesheets) - VIM]1;scaffold.css[1;1H[?25h[?25l[66;152H:[1;1H[66;1H[K[66;1H:[?25he[?25l[?25h#[?25l[?25h[?25l"application.css" 205L, 3302C[1;1H[34m/* [m[1;4H[K[2;1H[34m    pdfcat.css[m[3;1H[K[4;1H[34m    Author:         Michael Pope[m[4;33H[K[5;1H[34m    Date:           20/07/2007
+    Description:    Style sheet for pdfcat program.
+*/[m[9;1H[K[10;1H[34m/********************* Main Area *********************/[m
+[33mbody[m[36m{[m[11;6H[K[12;3H  [32mmargin[m: [31m0[m;[12;15H[K[15;1H[33mdiv[m[36m#headingback{[m[15;18H[K[16;1H    [32mheight[m: [31m40px[m;[16;18H[K[17;1H    [32mpadding-top[m: [31m30px[m;[17;24H[K[18;5H[32mpadding-left[m: [31m10px[m;
+    [32mpadding-right[m: [31m10px[m;[20;3H[K[21;3H  [32mbackground-color[m: [31m#032271[m;
+    [32mcolor[m: [31mwhite[m;
+    [32mmin-width[m: [31m697px[m;
+[36m}[m
+[33mdiv[m[36m#heading{[m[25;13H[K[26;3H  [32mfont-style[m: Arial, Helvetic, [32msans-serif[m;
+    [32mfont-size[m: [31m170%[m;[27;21H[K[28;3H  [32mfont-weight[m: [32mbold[m;
+    [32mtext-align[m: [32mleft[m;[29;22H[K[30;3H[K[31;3H  [32mfloat[m: [32mleft[m;[31;17H[K[32;1H    [32mwidth[m: [31m400px[m;
+[36m}[m
+[33mdiv[m[36m#search{[m[34;12H[K[35;3H  [32mfloat[m: [32mright[m;[35;18H[K[36;3H  [32mwidth[m: [31m250px[m;[36;18H[K[37;3H  [32mpadding-top[m: [31m10px[m;[37;24H[K[38;3H  [32mpadding-left[m: [31m20px[m;[39;3H[K[40;3H  [32mfont-family[m: Tahoma;[40;25H[K[41;3H  [32mfont-size[m: [31m80%[m;
+
+
+[35m.[msearchbox[36m{[m[44;12H[K[45;3H  [32mmargin[m: [31m0[m;
+    [32mborder[m: [31m0[m;[46;15H[K[47;3H  [32mheight[m: [31m15px[m;
+
+
+[35m.[msearchitem[36m{[m[50;13H[K[51;3H  [51;5H[K[52;3H  [52;5H[K[53;1H    [32mwidth[m: [31m85px[m;
+    [32mheight[m: [31m18px[m;
+    [32mtext-align[m: [32mcenter[m;[56;3H[K[57;1H    [32mbackground-color[m: [31m#1b5472[m;
+
+    [32mtext-decoration[m: [32mnone[m;
+    [32mcolor[m: [31mwhite[m;
+    [32mfont-weight[m: [32mbold[m;
+[36m}[m[63;1H[K[64;1H[35m.[msearchitem:[35mhover[m{[64;19H[K[65;3H  background-color: #4e87a5;[66;162H1,1[11CTop]2;application.css (/storage/livedata/programming/rails/pdfcat/public/stylesheets) - VIM]1;application.css[1;1H[?25h[?25l[66;152H~@k[1;1H[66;152H   [2;1H[66;162H2[2;1H[?25h[?25l[66;152H~@k[2;1H[66;152H   [3;1H[66;162H3,0-1[3;1H[?25h[?25l[66;152H~@k[3;1H[66;152H   [4;1H[66;162H4,1  [4;1H[?25h[?25l[66;152H~@k[4;1H[66;152H   [5;1H[66;162H5[5;1H[?25h[?25l[66;152H~@k[5;1H[66;152H   [5;2H[66;164H2[5;2H[?25h[?25l[66;152H~@k[5;2H[66;152H   [5;3H[66;164H3[5;3H[?25h[?25l[66;152H~@k[5;3H[66;152H   [5;4H[66;164H4[5;4H[?25h[?25l[66;152H~@k[5;4H[66;152H   [5;5H[66;164H5[5;5H[?25h[?25l[66;152H~@k[5;5H[66;152H   [5;6H[66;164H6[5;6H[?25h[?25l[66;152H~@k[5;6H[66;152H   [5;7H[66;164H7[5;7H[?25h[?25l[66;152H~@k[5;7H[66;152H   [5;8H[66;164H8[5;8H[?25h[?25l[66;152H~@k[5;8H[66;152H   [5;9H[66;164H9[5;9H[?25h[?25l[66;152H~@k[5;9H[66;152H   [6;9H[66;162H6[6;9H[?25h[?25l[66;152H~@k[6;9H[66;152H   [7;2H[66;162H7,2[7;2H[?25h[?25l[66;152H~@k[7;2H[66;152H   [8;1H[66;162H8,0-1[8;1H[?25h[?25l[66;152H~@k[8;1H[66;152H   [9;1H[66;162H9[9;1H[?25h[?25l[66;152H~@k[9;1H[66;152H   [10;9H[66;162H10,9 [10;9H[?25h[?25l[66;152H~@k[10;9H[66;152H   [11;5H[66;163H1,5[11;5H[?25h[?25l[66;152H~@k[11;5H[66;152H   [12;9H[66;163H2,9[12;9H[?25h[?25l[66;152H~@k[12;9H[66;152H   [13;1H[66;163H3,1[13;1H[?25h[?25l[66;152H~@k[13;1H[66;152H   [12;9H[66;163H2,9[12;9H[?25h[?25l[66;152H~@k[12;9H[66;152H   [11;5H[66;163H1,5[11;5H[?25h[?25l[66;152H~@k[11;5H[66;152H   [10;9H[66;163H0,9[10;9H[?25h[?25l[66;152H~@k[10;9H[66;152H   [9;1H[66;162H9,0-1[9;1H[?25h[?25l[66;152H~@k[9;1H[66;152H   [8;1H[66;162H8[8;1H[?25h[?25l[66;152H~@k[8;1H[66;152H   [7;2H[66;162H7,2  [7;2H[?25h[?25l[66;152H~@k[7;2H[66;152H   [6;9H[66;162H6,9[6;9H[?25h[?25l[66;152H$[6;9H[66;152H [6;51H[66;164H51[6;51H[?25h[?25l[66;152Hx[6;51H[66;152H [6;51H[66;152Hdl[6;51H[66;152H  [6;50H[6;51H[K]2;application.css + (/storage/livedata/programming/rails/pdfcat/public/stylesheets) - VIM]1;application.css[66;165H0[6;50H[?25h[?25l[66;152Ha[6;50H[66;152H [6;51H[66;1H[1m-- INSERT --[m[66;13H[K[66;162H6,51[10CTop[6;51H[?25h[?25l[34m [m[66;165H2[6;52H[?25h[?25l[34mw[m[66;165H3[6;53H[?25h[?25l[34mr[m[66;165H4[6;54H[?25h[?25l[34mi[m[66;165H5[6;55H[?25h[?25l[34mt[m[66;165H6[6;56H[?25h[?25l[34mt[m[66;165H7[6;57H[?25h[?25l[34me[m[66;165H8[6;58H[?25h[?25l[34mn[m[66;165H9[6;59H[?25h[?25l[34m [m[66;164H60[6;60H[?25h[?25l[34mi[m[66;165H1[6;61H[?25h[?25l[34mn[m[66;165H2[6;62H[?25h[?25l[34m [m[66;165H3[6;63H[?25h[?25l[34mR[m[66;165H4[6;64H[?25h[?25l[34mu[m[66;165H5[6;65H[?25h[?25l[34mb[m[66;165H6[6;66H[?25h[?25l[34my[m[66;165H7[6;67H[?25h[?25l[34m [m[66;165H8[6;68H[?25h[?25l[34mo[m[66;165H9[6;69H[?25h[?25l[34mn[m[66;164H70[6;70H[?25h[?25l[34m [m[66;165H1[6;71H[?25h[?25l[34mR[m[66;165H2[6;72H[?25h[?25l[34ma[m[66;165H3[6;73H[?25h[?25l[34mi[m[66;165H4[6;74H[?25h[?25l[34ml[m[66;165H5[6;75H[?25h[?25l[34ms[m[66;165H6[6;76H[?25h[66;1H[K[6;75H[?25l[66;152H^[[6;75H[?25h[?25l[66;152H  [6;76H[66;162H6,75[10CTop[6;75H[?25h[?25l[66;152H:[6;75H[66;152H[K[66;1H:[?25hw[?25l[?25h[?25l"application.css" 205L, 3326C written[6;75H[66;162H6,75[10CTop]2;application.css (/storage/livedata/programming/rails/pdfcat/public/stylesheets) - VIM]1;application.css[66;162H[K[66;162H6,75[10CTop[6;75H[?25h[?25l[66;152H~@k[6;75H[66;152H   [6;74H[66;165H4[6;74H[?25h[?25l[66;152H~@k[6;74H[66;152H   [6;73H[66;165H3[6;73H[?25h[?25l[66;152H~@k[6;73H[66;152H   [6;72H[66;165H2[6;72H[?25h[?25l[66;152H~@k[6;72H[66;152H   [6;71H[66;165H1[6;71H[?25h[?25l[66;152H~@k[6;71H[66;152H   [6;70H[66;165H0[6;70H[?25h[?25l[66;152H~@k[6;70H[66;152H   [6;69H[66;164H69[6;69H[?25h[?25l[66;152H~@k[6;69H[66;152H   [6;68H[66;165H8[6;68H[?25h[?25l[66;152H~@k[6;68H[66;152H   [6;67H[66;165H7[6;67H[?25h[?25l[66;152H~@k[6;67H[66;152H   [6;66H[66;165H6[6;66H[?25h[?25l[66;152H~@k[6;66H[66;152H   [6;65H[66;165H5[6;65H[?25h[?25l[66;152H~@k[6;65H[66;152H   [6;64H[66;165H4[6;64H[?25h[?25l[66;152H~@k[6;64H[66;152H   [5;30H[66;162H5,30[5;30H[?25h[?25l[66;152H~@k[5;30H[66;152H   [5;29H[66;164H29[5;29H[?25h[?25l[66;152H~@k[5;29H[66;152H   [5;28H[66;165H8[5;28H[?25h[?25l[66;152H~@k[5;28H[66;152H   [5;27H[66;165H7[5;27H[?25h[?25l[66;152H~@k[5;27H[66;152H   [5;26H[66;165H6[5;26H[?25h[?25l[66;152H~@k[5;26H[66;152H   [5;25H[66;165H5[5;25H[?25h[?25l[66;152H~@k[5;25H[66;152H   [5;24H[66;165H4[5;24H[?25h[?25l[66;152H~@k[5;24H[66;152H   [5;23H[66;165H3[5;23H[?25h[?25l[66;152H~@k[5;23H[66;152H   [5;22H[66;165H2[5;22H[?25h[?25l[66;152H~@k[5;22H[66;152H   [5;21H[66;165H1[5;21H[?25h[?25l[66;152H~@k[5;21H[66;152H   [5;20H[66;165H0[5;20H[?25h[?25l[66;152H~@k[5;20H[66;152H   [5;19H[66;164H19[5;19H[?25h[?25l[66;152H~@k[5;19H[66;152H   [5;20H[66;164H20[5;20H[?25h[?25l[66;152H~@k[5;20H[66;152H   [5;21H[66;165H1[5;21H[?25h[?25l[66;152Hc[5;21H[?25h[?25l[66;153Hw[5;21H[66;152H  [5;21H[66;1H[1m-- INSERT --[m[66;13H[K[66;162H5,21[10CTop[5;21H[34m/07/2007[m[5;29H[K]2;application.css + (/storage/livedata/programming/rails/pdfcat/public/stylesheets) - VIM]1;application.css[5;21H[?25h[?25l[34m1/07/2007[m[66;165H2[5;22H[?25h[?25l[34m2/07/2007[m[66;165H3[5;23H[?25h[66;1H[K[5;22H[?25l[66;152H^[[5;22H[?25h[?25l[66;152H  [5;23H[66;162H5,22[10CTop[5;22H[?25h[?25l[66;152H~@k[5;22H[66;152H   [5;23H[66;165H3[5;23H[?25h[?25l[66;152H~@k[5;23H[66;152H   [5;24H[66;165H4[5;24H[?25h[?25l[66;152H~@k[5;24H[66;152H   [5;25H[66;165H5[5;25H[?25h[?25l[66;152Hr[5;25H[?25h[?25l[66;153H9[5;25H[66;152H  [5;25H[34m9/2007[?25h[?25l[m[66;152H^[[5;25H[?25h[?25l[66;152H  [5;25H[?25h[?25l[66;152H~@k[5;25H[66;152H   [6;25H[66;162H6[6;25H[?25h[?25l[66;152H~@k[6;25H[66;152H   [5;25H[66;162H5[5;25H[?25h[?25l[66;152H~@k[5;25H[66;152H   [5;24H[66;165H4[5;24H[?25h[?25l[66;152Hc[5;24H[?25h[?25l[66;153Hw[5;24H[66;152H  [5;24H[66;1H[1m-- INSERT --[m[66;162H[K[66;162H5,24[10CTop[5;24H[34m/2007[m[5;29H[K[5;24H[?25h[?25l[34m1/2007[m[66;165H5[5;25H[?25h[?25l[34m1/2007[m[66;165H6[5;26H[?25h[66;1H[K[5;25H[?25l[66;152H^[[5;25H[?25h[?25l[66;152H  [5;26H[66;162H5,25[10CTop[5;25H[?25h[?25l[66;152H:[5;25H[66;152H[K[66;1H:[?25hw[?25l[?25h[?25l"application.css" 205L, 3326C written[5;25H[66;162H5,25[10CTop]2;application.css (/storage/livedata/programming/rails/pdfcat/public/stylesheets) - VIM]1;application.css[66;162H[K[66;162H5,25[10CTop[5;25H[?25h[?25l[66;152H~@k[5;25H[66;152H   [6;25H[66;162H6[6;25H[?25h[?25l[66;152H~@k[6;25H[66;152H   [7;2H[66;162H7,2 [7;2H[?25h[?25l[66;152H~@k[7;2H[66;152H   [8;1H[66;162H8,0-1[8;1H[?25h[?25l[66;152H~@k[8;1H[66;152H   [9;1H[66;162H9[9;1H[?25h[?25l[66;152H~@k[9;1H[66;152H   [10;25H[66;162H10,25[10;25H[?25h[?25l[66;152H~@k[10;25H[66;152H   [11;5H[66;163H1,5 [11;5H[?25h[?25l[66;152H~@k[11;5H[66;152H   [12;14H[66;163H2,14[12;14H[?25h[?25l[66;152H~@k[12;14H[66;152H   [13;1H[66;163H3,1 [13;1H[?25h[?25l[66;152H~@k[13;1H[66;152H   [14;1H[66;163H4,0-1[14;1H[?25h[?25l[66;152H~@k[14;1H[66;152H   [15;16H[66;163H5,16 [15;16H[?25h[?25l[66;152H~@k[15;16H[66;152H   [16;17H[66;163H6,17[16;17H[?25h[?25l[66;152H~@k[16;17H[66;152H   [17;22H[66;163H7,22[17;22H[?25h[?25l[66;152H~@k[17;22H[66;152H   [18;23H[66;163H8,23[18;23H[?25h[?25l[66;152H~@k[18;23H[66;152H   [19;24H[66;163H9,24[19;24H[?25h[?25l[66;152H~@k[19;24H[66;152H   [20;1H[66;162H20,0-1[20;1H[?25h[?25l[66;152H~@k[20;1H[66;152H   [21;25H[66;163H1,25 [21;25H[?25h[?25l[66;152H~@k[21;25H[66;152H   [20;1H[66;163H0,0-1[20;1H[?25h[?25l[66;152H~@k[20;1H[66;152H   [19;24H[66;162H19,24 [19;24H[?25h[?25l[66;152H~@k[19;24H[66;152H   [18;23H[66;163H8,23[18;23H[?25h[?25l[66;152H~@k[18;23H[66;152H   [17;22H[66;163H7,22[17;22H[?25h[?25l[66;152H~@k[17;22H[66;152H   [16;17H[66;163H6,17[16;17H[?25h[?25l[66;152H~@k[16;17H[66;152H   [15;16H[66;163H5,16[15;16H[?25h[?25l[66;152H:[15;16H[66;1H[K[66;1H:[?25he[?25l[?25h[?25l"application.css" 205L, 3326C[132C15,16[9CTop[15;16H[?25h[?25l[66;152H:[15;16H[66;1H[K[66;1H:[?25he[?25l[?25h#[?25l[?25h[?25l"scaffold.css" 74L, 1152C[1;1H[33mbody[m [36m{[m [32mbackground-color[m: [31m#fff[m; [32mcolor[m: [31m#333[m; [36m}[m[2;1H[K[3;1H[33mbody[m, [33mp[m, [33mol[m, [33mul[m, [33mtd[m [36m{[m
+  [32mfont-family[m: verdana, arial, helvetica, [32msans-serif[m;
+  [32mfont-size[m:   [31m13px[m;[5;21H[K[6;1H  [32mline-height[m: [31m18px[m;[6;21H[K[7;1H[36m}[m[7;2H[K[9;1H[33mpre[m [36m{[m
+  [32mbackground-color[m: [31m#eee[m;[10;26H[K[11;1H  [32mpadding[m: [31m10px[m;
+  [32mfont-size[m: [31m11px[m;
+
+
+[33ma[m [36m{[m [32mcolor[m: [31m#000[m; [36m}[m
+[33ma[m:[35mvisited[m [36m{[m [32mcolor[m: [31m#666[m; [36m}[m
+[33ma[m:[35mhover[m [36m{[m [32mcolor[m: [31m#fff[m; [32mbackground-color[m:[31m#000[m; [36m}[m[18;5H[K[19;1H[35m.[mfieldWithErrors [36m{[m[19;20H[K[20;3H[32mpadding[m: [31m2px[m;
+  [32mbackground-color[m: [31mred[m;[21;25H[K[22;3H[32mdisplay[m: [32mtable[m;
+[36m}[m[23;5H[K[24;1H[K[25;1H[36m#errorExplanation[m [36m{[m
+  [32mwidth[m: [31m400px[m;[26;17H[K[27;3H[32mborder[m: [31m2px[m [32msolid[m [31mred[m;
+  [32mpadding[m: [31m7px[m;[28;16H[K[29;3H[32mpadding-bottom[m: [31m12px[m;
+  [32mmargin-bottom[m: [31m20px[m;
+  [32mbackground-color[m: [31m#f0f0f0[m;
+[36m}[m[32;5H[K[33;1H[K[34;1H[36m#errorExplanation[m [33mh2[m [36m{[m
+  [32mtext-align[m: [32mleft[m;
+  [32mfont-weight[m: [32mbold[m;
+  [32mpadding[m: [31m5px[m [31m5px[m [31m5px[m [31m15px[m;
+  [32mfont-size[m: [31m12px[m;[38;19H[K[39;3H[32mmargin[m: [31m-7px[m;
+  [32mbackground-color[m: [31m#c00[m;
+  [32mcolor[m: [31m#fff[m;[41;16H[K[44;1H[36m#errorExplanation[m [33mp[m [36m{[m
+  [32mcolor[m: [31m#333[m;
+  [32mmargin-bottom[m: [31m0[m;
+  [32mpadding[m: [31m5px[m;[47;16H[K[50;1H[36m#errorExplanation[m [33mul[m [33mli[m [36m{[m
+  [32mfont-size[m: [31m12px[m;
+  [32mlist-style[m: [32msquare[m;
+[36m}[m[53;5H[K[54;5H[K[55;1H[33mdiv[m[35m.[muploadStatus [36m{[m[55;19H[K[56;3H[32mmargin[m: [31m5px[m;
+[36m}[m[57;5H[K[59;1H[33mdiv[m[35m.[mprogressBar [36m{[m[59;18H[K[60;3H[32mmargin[m: [31m5px[m;[60;15H[K[61;1H[36m}[m[61;5H[K[62;1H[K[63;1H[33mdiv[m[35m.[mprogressBar [33mdiv[m[35m.[mborder [36m{[m
+  [32mbackground-color[m: [31m#fff[m;
+  [32mborder[m: [31m1px[m [32msolid[m grey;[65;26H[K[66;162H1,1[11CTop]2;scaffold.css (/storage/livedata/programming/rails/pdfcat/public/stylesheets) - VIM]1;scaffold.css[1;1H[?25h[?25l[66;152Hy[1;1H[?25h[?25l[66;153Hy[1;1H[66;152H  [1;1H[?25h[?25l[66;152H:[1;1H[66;1H[K[66;1H:[?25he[?25l[?25h#[?25l[?25h[?25l"application.css" 205L, 3326C[1;1H[34m/* [m[1;4H[K[2;1H[34m    pdfcat.css[m[3;1H[K[4;1H[34m    Author:         Michael Pope[m[4;33H[K[5;1H[34m    Date:           12/11/2007
+    Description:    Style sheet for pdfcat program written in Ruby on Rails
+*/[m[9;1H[K[10;1H[34m/********************* Main Area *********************/[m
+[33mbody[m[36m{[m[11;6H[K[12;3H  [32mmargin[m: [31m0[m;[12;15H[K[15;1H[33mdiv[m[36m#headingback{[m[15;18H[K[16;1H    [32mheight[m: [31m40px[m;[16;18H[K[17;1H    [32mpadding-top[m: [31m30px[m;[17;24H[K[18;5H[32mpadding-left[m: [31m10px[m;
+    [32mpadding-right[m: [31m10px[m;[20;3H[K[21;3H  [32mbackground-color[m: [31m#032271[m;
+    [32mcolor[m: [31mwhite[m;
+    [32mmin-width[m: [31m697px[m;
+[36m}[m
+[33mdiv[m[36m#heading{[m[25;13H[K[26;3H  [32mfont-style[m: Arial, Helvetic, [32msans-serif[m;
+    [32mfont-size[m: [31m170%[m;[27;21H[K[28;3H  [32mfont-weight[m: [32mbold[m;
+    [32mtext-align[m: [32mleft[m;[29;22H[K[30;3H[K[31;3H  [32mfloat[m: [32mleft[m;[31;17H[K[32;1H    [32mwidth[m: [31m400px[m;
+[36m}[m
+[33mdiv[m[36m#search{[m[34;12H[K[35;3H  [32mfloat[m: [32mright[m;[35;18H[K[36;3H  [32mwidth[m: [31m250px[m;[36;18H[K[37;3H  [32mpadding-top[m: [31m10px[m;[37;24H[K[38;3H  [32mpadding-left[m: [31m20px[m;[39;3H[K[40;3H  [32mfont-family[m: Tahoma;[40;25H[K[41;3H  [32mfont-size[m: [31m80%[m;
+
+
+[35m.[msearchbox[36m{[m[44;12H[K[45;3H  [32mmargin[m: [31m0[m;
+    [32mborder[m: [31m0[m;[46;15H[K[47;3H  [32mheight[m: [31m15px[m;
+
+
+[35m.[msearchitem[36m{[m[50;13H[K[51;3H  [51;5H[K[52;3H  [52;5H[K[53;1H    [32mwidth[m: [31m85px[m;
+    [32mheight[m: [31m18px[m;
+    [32mtext-align[m: [32mcenter[m;[56;3H[K[57;1H    [32mbackground-color[m: [31m#1b5472[m;
+
+    [32mtext-decoration[m: [32mnone[m;
+    [32mcolor[m: [31mwhite[m;
+    [32mfont-weight[m: [32mbold[m;
+[36m}[m[63;1H[K[64;1H[35m.[msearchitem:[35mhover[m{[64;19H[K[65;3H  background-color: #4e87a5;[66;162H15,16[9CTop]2;application.css (/storage/livedata/programming/rails/pdfcat/public/stylesheets) - VIM]1;application.css[15;16H[?25h[?25l[66;152H~@k[15;16H[66;152H   [14;1H[66;163H4,0-1[14;1H[?25h[?25l[66;152H~@k[14;1H[66;152H   [13;1H[66;163H3,1  [13;1H[?25h[?25l[66;152H~@k[13;1H[66;152H   [12;14H[66;163H2,14[12;14H[?25h[?25l[66;152H~@k[12;14H[66;152H   [11;5H[66;163H1,5 [11;5H[?25h[?25l[66;152H~@k[11;5H[66;152H   [10;16H[66;163H0,16[10;16H[?25h[?25l[66;152Hp[10;16H[66;152H [11;1H[11;65r[11;1H[L[1;66r[11;1H[33mbody[m [36m{[m [32mbackground-color[m: [31m#fff[m; [32mcolor[m: [31m#333[m; [36m}[m[66;1H[K[66;162H11,1[10CTop]2;application.css + (/storage/livedata/programming/rails/pdfcat/public/stylesheets) - VIM]1;application.css[11;1H[?25h[?25l[66;152Ho[11;1H[66;152H [12;1H[66;1H[1m-- INSERT --[m[66;162H[K[66;162H12,1[10CTop[12;65r[12;1H[L[1;66r[66;162H[K[66;162H12,1[10CTop[12;1H[?25h[66;1H[K[12;1H[?25l[66;152H^[[12;1H[?25h[?25l[66;152H  [12;1H[66;162H12,0-1[8CTop[12;1H[?25h[?25l[66;152H~@k[12;1H[66;152H   [12;1H[?25h[?25l[66;152H~@k[12;1H[66;152H   [12;1H[?25h[?25l[66;152H~@k[12;1H[66;152H   [11;1H[66;163H1,1  [11;1H[?25h[?25l[66;152H~@k[11;1H[66;152H   [11;2H[66;165H2[11;2H[?25h[?25l[66;152H~@k[11;2H[66;152H   [11;3H[66;165H3[11;3H[?25h[?25l[66;152H~@k[11;3H[66;152H   [11;4H[66;165H4[11;4H[?25h[?25l[66;152H~@k[11;4H[66;152H   [11;5H[66;165H5[11;5H[?25h[?25l[66;152H~@k[11;5H[66;152H   [11;6H[66;165H6[11;6H[?25h[?25l[66;152H~@k[11;6H[66;152H   [11;7H[66;165H7[11;7H[?25h[?25l[66;152Ha[11;7H[66;152H [11;8H[66;1H[1m-- INSERT --[m[66;162H[K[66;162H11,8[10CTop[11;8H[?25h[?25lmbackground-[32mcolor[m: [31m#fff[m; [32mcolor[m: [31m#333[m; [36m}[m[66;165H9[11;9H[?25h[?25labackground-[32mcolor[m: [31m#fff[m; [32mcolor[m: [31m#333[m; [36m}[m[66;165H10[11;10H[?25h[?25lrbackground-[32mcolor[m: [31m#fff[m; [32mcolor[m: [31m#333[m; [36m}[m[66;166H1[11;11H[?25h[?25lgbackground-[32mcolor[m: [31m#fff[m; [32mcolor[m: [31m#333[m; [36m}[m[66;166H2[11;12H[?25h[?25libackground-[32mcolor[m: [31m#fff[m; [32mcolor[m: [31m#333[m; [36m}[m[66;166H3[11;13H[?25h[?25lnbackground-[32mcolor[m: [31m#fff[m; [32mcolor[m: [31m#333[m; [36m}[m[66;166H4[11;14H[?25h[?25l[32mmargin[m:[32mbackground-color[m: [31m#fff[m; [32mcolor[m: [31m#333[m; [36m}[m[66;166H5[11;15H[?25h[?25l [32mbackground-color[m: [31m#fff[m; [32mcolor[m: [31m#333[m; [36m}[m[66;166H6[11;16H[?25h[?25l[32mbackground-color[m: [31m#fff[m; [32mcolor[m: [31m#333[m; [36m}[m[11;53H[K[66;166H5[11;15H[?25h[?25l [32mbackground-color[m: [31m#fff[m; [32mcolor[m: [31m#333[m; [36m}[m[66;166H6[11;16H[?25h[?25l-[32mbackground-color[m: [31m#fff[m; [32mcolor[m: [31m#333[m; [36m}[m[66;166H7[11;17H[?25h[?25l[32mbackground-color[m: [31m#fff[m; [32mcolor[m: [31m#333[m; [36m}[m[11;54H[K[66;166H6[11;16H[?25h[?25l[31m0[mbackground-[32mcolor[m: [31m#fff[m; [32mcolor[m: [31m#333[m; [36m}[m[66;166H7[11;17H[?25h[?25l;[32mbackground-color[m: [31m#fff[m; [32mcolor[m: [31m#333[m; [36m}[m[66;166H8[11;18H[?25h[?25l [32mbackground-color[m: [31m#fff[m; [32mcolor[m: [31m#333[m; [36m}[m[66;166H9[11;19H[?25h[66;1H[K[11;18H[?25l[66;152H^[[11;18H[?25h[?25l[66;152H  [11;19H[66;162H11,18[9CTop[11;18H[?25h[?25l[66;152H~@k[11;18H[66;152H   [12;1H[66;163H2,0-1[12;1H[?25h[?25l[66;152H~@k[12;1H[66;152H   [13;5H[66;163H3,5  [13;5H[?25h[?25l[66;152Hd[13;5H[?25h[?25l[66;153Hd[13;5H[66;152H  [13;5H[13;65r[65;1H
+[1;66r[13;5Hmargin: 0;
+[1m[37m[41m}[m[65;1H[35m.[msearchitem:[35mhover[m{[66;162H[K[66;162H13,5[10CTop[13;5H[?25h[?25l[66;152Hd[13;5H[?25h[?25l[66;153Hd[13;5H[66;152H  [13;1H[13;65r[65;1H
+[1;66r[65;5Hbackground-color: #4e87a5;[66;162H[K[66;162H13,1[10CTop[13;1H[?25h[?25l[66;152Hd[13;1H[?25h[?25l[66;153Hd[13;1H[66;152H  [13;1H[13;65r[65;1H
+[1;66r[65;1H[1m[37m[41m}[m[66;162H[K[66;162H13,0-1[8CTop[13;1H[?25h[?25l[66;152H:[13;1H[66;152H[K[66;1H:[?25hw[?25l[?25h[?25l"application.css" 204L, 3361C written[13;1H[66;162H13,0-1[8CTop]2;application.css (/storage/livedata/programming/rails/pdfcat/public/stylesheets) - VIM]1;application.css[66;162H[K[66;162H13,0-1[8CTop[13;1H[?25h[?25l[66;152H:[13;1H[66;1H[K[66;1H:[?25he[?25l[?25h#[?25l[?25h[?25l"scaffold.css" 74L, 1152C[1;1H[33mbody[m [36m{[m [32mbackground-color[m: [31m#fff[m; [32mcolor[m: [31m#333[m; [36m}[m[2;1H[K[3;1H[33mbody[m, [33mp[m, [33mol[m, [33mul[m, [33mtd[m [36m{[m
+  [32mfont-family[m: verdana, arial, helvetica, [32msans-serif[m;
+  [32mfont-size[m:   [31m13px[m;[5;21H[K[6;1H  [32mline-height[m: [31m18px[m;[6;21H[K[7;1H[36m}[m[7;2H[K[9;1H[33mpre[m [36m{[m
+  [32mbackground-color[m: [31m#eee[m;[10;26H[K[11;1H  [32mpadding[m: [31m10px[m;[11;17H[K[12;3H[32mfont-size[m: [31m11px[m;
+[36m}[m[14;1H[K[15;1H[33ma[m [36m{[m [32mcolor[m: [31m#000[m; [36m}[m
+[33ma[m:[35mvisited[m [36m{[m [32mcolor[m: [31m#666[m; [36m}[m
+[33ma[m:[35mhover[m [36m{[m [32mcolor[m: [31m#fff[m; [32mbackground-color[m:[31m#000[m; [36m}[m[18;5H[K[19;1H[35m.[mfieldWithErrors [36m{[m
+  [32mpadding[m: [31m2px[m;[20;16H[K[21;3H[32mbackground-color[m: [31mred[m;
+  [32mdisplay[m: [32mtable[m;[22;18H[K[24;1H[K[25;1H[36m#errorExplanation[m [36m{[m[25;20H[K[26;3H[32mwidth[m: [31m400px[m;[26;16H[K[27;3H[32mborder[m: [31m2px[m [32msolid[m [31mred[m;
+  [32mpadding[m: [31m7px[m;[28;17H[K[29;3H[32mpadding-bottom[m: [31m12px[m;
+  [32mmargin-bottom[m: [31m20px[m;
+  [32mbackground-color[m: [31m#f0f0f0[m;[33;1H[K[34;1H[36m#errorExplanation[m [33mh2[m [36m{[m
+  [32mtext-align[m: [32mleft[m;
+  [32mfont-weight[m: [32mbold[m;[36;21H[K[37;3H[32mpadding[m: [31m5px[m [31m5px[m [31m5px[m [31m15px[m;
+  [32mfont-size[m: [31m12px[m;
+  [32mmargin[m: [31m-7px[m;[39;16H[K[40;3H[32mbackground-color[m: [31m#c00[m;
+  [32mcolor[m: [31m#fff[m;
+[36m}[m[43;1H[K[44;1H[36m#errorExplanation[m [33mp[m [36m{[m
+  [32mcolor[m: [31m#333[m;
+  [32mmargin-bottom[m: [31m0[m;
+  [32mpadding[m: [31m5px[m;
+[36m}[m[49;1H[K[50;1H[36m#errorExplanation[m [33mul[m [33mli[m [36m{[m
+  [32mfont-size[m: [31m12px[m;
+  [32mlist-style[m: [32msquare[m;
+[36m}[m[53;5H[K[54;5H[K[55;1H[33mdiv[m[35m.[muploadStatus [36m{[m
+  [32mmargin[m: [31m5px[m;[56;15H[K[57;1H[36m}[m[58;5H[K[59;1H[33mdiv[m[35m.[mprogressBar [36m{[m
+  [32mmargin[m: [31m5px[m;[60;15H[K[63;1H[33mdiv[m[35m.[mprogressBar [33mdiv[m[35m.[mborder [36m{[m
+  [32mbackground-color[m: [31m#fff[m;[64;26H[K[65;1H  [32mborder[m: [31m1px[m [32msolid[m grey;[66;162H1,1[11CTop]2;scaffold.css (/storage/livedata/programming/rails/pdfcat/public/stylesheets) - VIM]1;scaffold.css[1;1H[?25h[?25l[66;152H~@k[1;1H[66;152H   [2;1H[66;162H2,0-1[2;1H[?25h[?25l[66;152H~@k[2;1H[66;152H   [3;1H[66;162H3,1  [3;1H[?25h[?25l[66;152H~@k[3;1H[66;152H   [4;1H[66;162H4[4;1H[?25h[?25l[66;152H~@k[4;1H[66;152H   [1;3H[27m[m[H[2J[27m[m[H[2J[1;3H[32mbackground-color[m: [31m#fff[m;
+  [32mborder[m: [31m1px[m [32msolid[m grey;
+  [32mwidth[m: [31m100%[m;
+[36m}[m
+
+[33mdiv[m[35m.[mprogressBar [33mdiv[m[35m.[mbackground [36m{[m
+  [32mbackground-color[m: [31m#333[m;
+  [32mheight[m: [31m18px[m;
+  [32mwidth[m: [31m0%[m;
+[36m}[m
+
+[1m[34m~                                                                                                                                                                                  [13;1H~                                                                                                                                                                                  [14;1H~                                                                                                                                                                                  [15;1H~                                                                                                                                                                                  [16;1H~                                                                                                                                                                                  [17;1H~                                                                                                                                                                                  [18;1H~                                                                                                                                                                                  [19;1H~                                                                                                                                                                                  [20;1H~                                                                                                                                                                                  [21;1H~                                                                                                                                                                                  [22;1H~                                                                                                                                                                                  [23;1H~                                                                                                                                                                                  [24;1H~                                                                                                                                                                                  [25;1H~                                                                                                                                                                                  [26;1H~                                                                                                                                                                                  [27;1H~                                                                                                                                                                                  [28;1H~                                                                                                                                                                                  [29;1H~                                                                                                                                                                                  [30;1H~                                                                                                                                                                                  [31;1H~                                                                                                                                                                                  [32;1H~                                                                                                                                                                                  [33;1H~                                                                                                                                                                                  [34;1H~                                                                                                                                                                                  [35;1H~                                                                                                                                                                                  [36;1H~                                                                                                                                                                                  [37;1H~                                                                                                                                                                                  [38;1H~                                                                                                                                                                                  [39;1H~                                                                                                                                                                                  [40;1H~                                                                                                                                                                                  [41;1H~                                                                                                                                                                                  [42;1H~                                                                                                                                                                                  [43;1H~                                                                                                                                                                                  [44;1H~                                                                                                                                                                                  [45;1H~                                                                                                                                                                                  [46;1H~                                                                                                                                                                                  [47;1H~                                                                                                                                                                                  [48;1H~                                                                                                                                                                                  [49;1H~                                                                                                                                                                                  [50;1H~                                                                                                                                                                                  [51;1H~                                                                                                                                                                                  [52;1H~                                                                                                                                                                                  [53;1H~                                                                                                                                                                                  [54;1H~                                                                                                                                                                                  [55;1H~                                                                                                                                                                                  [56;1H~                                                                                                                                                                                  [57;1H~                                                                                                                                                                                  [58;1H~                                                                                                                                                                                  [59;1H~                                                                                                                                                                                  [60;1H~                                                                                                                                                                                  [61;1H~                                                                                                                                                                                  [62;1H~                                                                                                                                                                                  [63;1H~                                                                                                                                                                                  [64;1H~                                                                                                                                                                                  [65;1H~                                                                                                                                                                                  [m[66;162H64,3[10CBot[1;3H[?25h[?25l[66;152H~@k[1;3H[66;152H   [65;3H[1;1H[33mbody[m [36m{[m [32mbackground-color[m: [31m#fff[m; [32mcolor[m: [31m#333[m; [36m}[m[2;3H[K[3;1H[33mbody[m, [33mp[m, [33mol[m, [33mul[m, [33mtd[m [36m{[m
+  [32mfont-family[m: verdana, arial, helvetica, [32msans-serif[m;
+  [32mfont-size[m:   [31m13px[m;
+  [32mline-height[m: [31m18px[m;[6;21H[K[7;1H[36m}[m[7;3H[K[8;3H[K[9;1H[33mpre[m [36m{[m[9;6H[K[10;1H  [32mbackground-color[m: [31m#eee[m;
+  [32mpadding[m: [31m10px[m;
+  [32mfont-size[m: [31m11px[m;[12;19H[K[13;1H[36m}[m[13;2H[K[14;1H[K[15;1H[33ma[m [36m{[m [32mcolor[m: [31m#000[m; [36m}[m[15;19H[K[16;1H[33ma[m:[35mvisited[m [36m{[m [32mcolor[m: [31m#666[m; [36m}[m[16;27H[K[17;1H[33ma[m:[35mhover[m [36m{[m [32mcolor[m: [31m#fff[m; [32mbackground-color[m:[31m#000[m; [36m}[m[17;48H[K[18;1H[K[19;1H[35m.[mfieldWithErrors [36m{[m[19;19H[K[20;1H  [32mpadding[m: [31m2px[m;[20;16H[K[21;1H  [32mbackground-color[m: [31mred[m;[21;25H[K[22;1H  [32mdisplay[m: [32mtable[m;[22;18H[K[23;1H[36m}[m[23;2H[K[24;1H[K[25;1H[36m#errorExplanation[m [36m{[m[25;20H[K[26;1H  [32mwidth[m: [31m400px[m;[26;16H[K[27;1H  [32mborder[m: [31m2px[m [32msolid[m [31mred[m;[27;25H[K[28;1H  [32mpadding[m: [31m7px[m;[28;16H[K[29;1H  [32mpadding-bottom[m: [31m12px[m;[29;24H[K[30;1H  [32mmargin-bottom[m: [31m20px[m;[30;23H[K[31;1H  [32mbackground-color[m: [31m#f0f0f0[m;[31;29H[K[32;1H[36m}[m[32;2H[K[33;1H[K[34;1H[36m#errorExplanation[m [33mh2[m [36m{[m[34;23H[K[35;1H  [32mtext-align[m: [32mleft[m;[35;20H[K[36;1H  [32mfont-weight[m: [32mbold[m;[36;21H[K[37;1H  [32mpadding[m: [31m5px[m [31m5px[m [31m5px[m [31m15px[m;[37;29H[K[38;1H  [32mfont-size[m: [31m12px[m;[38;19H[K[39;1H  [32mmargin[m: [31m-7px[m;[39;16H[K[40;1H  [32mbackground-color[m: [31m#c00[m;[40;26H[K[41;1H  [32mcolor[m: [31m#fff[m;[41;15H[K[42;1H[36m}[m[42;2H[K[43;1H[K[44;1H[36m#errorExplanation[m [33mp[m [36m{[m[44;22H[K[45;1H  [32mcolor[m: [31m#333[m;[45;15H[K[46;1H  [32mmargin-bottom[m: [31m0[m;[46;20H[K[47;1H  [32mpadding[m: [31m5px[m;[47;16H[K[48;1H[36m}[m[48;2H[K[49;1H[K[50;1H[36m#errorExplanation[m [33mul[m [33mli[m [36m{[m[50;26H[K[51;1H  [32mfont-size[m: [31m12px[m;[51;19H[K[52;1H  [32mlist-style[m: [32msquare[m;[52;22H[K[53;1H[36m}[m[53;2H[K[54;1H[K[55;1H[33mdiv[m[35m.[muploadStatus [36m{[m[55;19H[K[56;1H  [32mmargin[m: [31m5px[m;[56;15H[K[57;1H[36m}[m[57;2H[K[58;1H[K[59;1H[33mdiv[m[35m.[mprogressBar [36m{[m[59;18H[K[60;1H  [32mmargin[m: [31m5px[m;[60;15H[K[61;1H[36m}[m[61;2H[K[62;1H[K[63;1H[33mdiv[m[35m.[mprogressBar [33mdiv[m[35m.[mborder [36m{[m[63;29H[K[64;1H  [32mbackground-color[m: [31m#fff[m;[64;26H[K[65;1H  [32mborder[m: [31m1px[m [32msolid[m grey;[65;26H[K[66;163H5[12CTop[65;3H[?25h[?25l[66;152H~@k[65;3H[66;152H   [65;3H[1;65r[65;1H
+[1;66r[65;3H[32mwidth[m: [31m100%[m;[66;162H[K[66;162H66,3[10C11%[65;3H[?25h[?25l[66;152H~@k[65;3H[66;152H   [64;3H[66;163H5[64;3H[?25h[?25l[66;152H~@k[64;3H[66;152H   [63;3H[66;163H4[63;3H[?25h[?25l[66;152H~@k[63;3H[66;152H   [62;3H[66;163H3[62;3H[?25h[?25l[66;152H~@k[62;3H[66;152H   [61;1H[66;163H2,0-1[61;1H[?25h[?25l[66;152H~@k[61;1H[66;152H   [60;1H[66;163H1,1  [60;1H[?25h[?25l[66;152H~@k[60;1H[66;152H   [59;3H[66;163H0,3[59;3H[?25h[?25l[66;152H~@k[59;3H[66;152H   [58;3H[66;162H59[58;3H[?25h[?25l[66;152H~@k[58;3H[66;152H   [57;1H[66;163H8,0-1[57;1H[?25h[?25l[66;152H~@k[57;1H[66;152H   [56;1H[66;163H7,1  [56;1H[?25h[?25l[66;152H~@k[56;1H[66;152H   [55;3H[66;163H6,3[55;3H[?25h[?25l[66;152H~@k[55;3H[66;152H   [54;3H[66;163H5[54;3H[?25h[?25l[66;152H~@k[54;3H[66;152H   [53;1H[66;163H4,0-1[53;1H[?25h[?25l[66;152H~@k[53;1H[66;152H   [52;1H[66;163H3,1  [52;1H[?25h[?25l[66;152H~@k[52;1H[66;152H   [51;3H[66;163H2,3[51;3H[?25h[?25l[66;152H~@k[51;3H[66;152H   [50;3H[66;163H1[50;3H[?25h[?25l[66;152H~@k[50;3H[66;152H   [49;3H[66;163H0[49;3H[?25h[?25l[66;152H~@k[49;3H[66;152H   [48;1H[66;162H49,0-1[48;1H[?25h[?25l[66;152H~@k[48;1H[66;152H   [47;1H[66;163H8,1  [47;1H[?25h[?25l[66;152H~@k[47;1H[66;152H   [46;3H[66;163H7,3[46;3H[?25h[?25l[66;152H~@k[46;3H[66;152H   [45;3H[66;163H6[45;3H[?25h[?25l[66;152H~@k[45;3H[66;152H   [44;3H[66;163H5[44;3H[?25h[?25l[66;152H~@k[44;3H[66;152H   [3;1H[1;65r[1;1H[L[1;66r[1;1H[33mbody[m [36m{[m [32mbackground-color[m: [31m#fff[m; [32mcolor[m: [31m#333[m; [36m}[m[66;162H[K[66;162H3,1[11CTop[3;1H[?25h[?25l[66;152H~@k[3;1H[66;152H   [2;1H[66;162H2,0-1[2;1H[?25h[?25l[66;152H~@k[2;1H[66;152H   [3;1H[66;162H3,1  [3;1H[?25h[?25l[66;152Hy[3;1H[?25h[?25l[66;153HG[3;1H[66;1H72 lines yanked[66;152H[K[3;1H[66;162H3,1[11CTop[3;1H[?25h[?25l[66;152H:[3;1H[66;1H[K[66;1H:[?25he[?25l[?25h#[?25l[?25h[?25l"application.css" 204L, 3361C[1;1H[34m/* [m[1;4H[K[2;1H[34m    pdfcat.css[m[3;1H[K[4;1H[34m    Author:         Michael Pope[m[4;33H[K[5;1H[34m    Date:           12/11/2007
+    Description:    Style sheet for pdfcat program written in Ruby on Rails
+*/[m[9;1H[K[10;1H[34m/********************* Main Area *********************/[m
+[33mbody[m [36m{[m [32mmargin[m: [31m0[m; [32mbackground-color[m: [31m#fff[m; [32mcolor[m: [31m#333[m; [36m}[m[12;3H[K[13;1H[K[14;1H[33mdiv[m[36m#headingback{[m
+    [32mheight[m: [31m40px[m;[15;18H[K[16;1H    [32mpadding-top[m: [31m30px[m;[16;23H[K[17;1H    [32mpadding-left[m: [31m10px[m;[17;24H[K[18;5H[32mpadding-right[m: [31m10px[m;[19;1H[K[20;3H  [32mbackground-color[m: [31m#032271[m;
+    [32mcolor[m: [31mwhite[m;[21;18H[K[22;3H  [32mmin-width[m: [31m697px[m;
+
+[33mdiv[m[36m#heading{[m
+    [32mfont-style[m: Arial, Helvetic, [32msans-serif[m;
+    [32mfont-size[m: [31m170%[m;
+    [32mfont-weight[m: [32mbold[m;[27;23H[K[28;3H  [32mtext-align[m: [32mleft[m;[29;3H[K[30;3H  [32mfloat[m: [32mleft[m;[30;18H[K[31;3H  [32mwidth[m: [31m400px[m;[31;18H[K[33;1H[33mdiv[m[36m#search{[m
+    [32mfloat[m: [32mright[m;[34;19H[K[35;3H  [32mwidth[m: [31m250px[m;[35;18H[K[36;3H  [32mpadding-top[m: [31m10px[m;
+    [32mpadding-left[m: [31m20px[m;[37;24H[K[38;3H[K[39;3H  [32mfont-family[m: Tahoma;
+    [32mfont-size[m: [31m80%[m;[40;21H[K[41;1H[36m}[m[41;3H[K[42;1H[K[43;1H[35m.[msearchbox[36m{[m
+    [32mmargin[m: [31m0[m;[44;15H[K[45;3H  [32mborder[m: [31m0[m;
+    [32mheight[m: [31m15px[m;[46;18H[K[47;1H[36m}[m[47;3H[K[48;1H[K[49;1H[35m.[msearchitem[36m{[m
+    [50;5H[K[51;3H  [51;5H[K[52;3H  [32mwidth[m: [31m85px[m;[52;17H[K[53;1H    [32mheight[m: [31m18px[m;
+    [32mtext-align[m: [32mcenter[m;[55;1H[K[56;3H  [32mbackground-color[m: [31m#1b5472[m;[57;1H[K[58;5H[32mtext-decoration[m: [32mnone[m;
+    [32mcolor[m: [31mwhite[m;
+    [32mfont-weight[m: [32mbold[m;
+
+
+[35m.[msearchitem:[35mhover[m{[63;19H[K[64;3H  background-color: #4e87a5;
+[1m[37m[41m}[m[65;3H[K[66;162H13,0-1[8CTop]2;application.css (/storage/livedata/programming/rails/pdfcat/public/stylesheets) - VIM]1;application.css[13;1H[?25h[?25l[66;152H~@k[13;1H[66;152H   [12;1H[66;163H2[12;1H[?25h[?25l[66;152H~@k[12;1H[66;152H   [11;1H[66;163H1,1  [11;1H[?25h[?25l[66;152Hp[11;1H[66;1H72 more lines[66;14H[K[12;1H[33mbody[m, [33mp[m, [33mol[m, [33mul[m, [33mtd[m [36m{[m
+  [32mfont-family[m: verdana, arial, helvetica, [32msans-serif[m;
+  [32mfont-size[m:   [31m13px[m;
+  [32mline-height[m: [31m18px[m;
+[36m}[m[16;5H[K[17;5H[K[18;1H[33mpre[m [36m{[m[18;6H[K[19;3H[32mbackground-color[m: [31m#eee[m;
+  [32mpadding[m: [31m10px[m;[20;17H[K[21;3H[32mfont-size[m: [31m11px[m;
+[36m}[m[22;5H[K[23;1H[K[24;1H[33ma[m [36m{[m [32mcolor[m: [31m#000[m; [36m}[m
+[33ma[m:[35mvisited[m [36m{[m [32mcolor[m: [31m#666[m; [36m}[m[25;27H[K[26;1H[33ma[m:[35mhover[m [36m{[m [32mcolor[m: [31m#fff[m; [32mbackground-color[m:[31m#000[m; [36m}[m[27;5H[K[28;1H[35m.[mfieldWithErrors [36m{[m[28;19H[K[29;3H[32mpadding[m: [31m2px[m;
+  [32mbackground-color[m: [31mred[m;
+  [32mdisplay[m: [32mtable[m;[33;1H[K[34;1H[36m#errorExplanation[m [36m{[m
+  [32mwidth[m: [31m400px[m;[35;16H[K[36;3H[32mborder[m: [31m2px[m [32msolid[m [31mred[m;
+  [32mpadding[m: [31m7px[m;[37;16H[K[38;3H[32mpadding-bottom[m: [31m12px[m;
+  [32mmargin-bottom[m: [31m20px[m;[39;23H[K[40;3H[32mbackground-color[m: [31m#f0f0f0[m;
+
+
+[36m#errorExplanation[m [33mh2[m [36m{[m
+  [32mtext-align[m: [32mleft[m;
+  [32mfont-weight[m: [32mbold[m;
+  [32mpadding[m: [31m5px[m [31m5px[m [31m5px[m [31m15px[m;
+  [32mfont-size[m: [31m12px[m;
+  [32mmargin[m: [31m-7px[m;
+  [32mbackground-color[m: [31m#c00[m;
+  [32mcolor[m: [31m#fff[m;
+[36m}[m[52;5H[K[53;1H[36m#errorExplanation[m [33mp[m [36m{[m
+  [32mcolor[m: [31m#333[m;[54;15H[K[55;3H[32mmargin-bottom[m: [31m0[m;
+  [32mpadding[m: [31m5px[m;[56;16H[K[57;1H[36m}[m[58;5H[K[59;1H[36m#errorExplanation[m [33mul[m [33mli[m [36m{[m
+  [32mfont-size[m: [31m12px[m;[60;19H[K[61;1H  [32mlist-style[m: [32msquare[m;
+[36m}[m[63;1H[K[64;1H[33mdiv[m[35m.[muploadStatus [36m{[m[64;19H[K[65;1H  [32mmargin[m: [31m5px[m;[66;162H12,1[10CTop]2;application.css + (/storage/livedata/programming/rails/pdfcat/public/stylesheets) - VIM]1;application.css[66;162H[K[66;162H12,1[10CTop[12;1H[?25h[?25l[66;152H~@k[12;1H[66;152H   [11;1H[66;163H1[11;1H[?25h[?25l[66;152Ho[11;1H[66;152H [12;1H[66;1H[1m-- INSERT --[m[66;13H[K[66;162H12,1[10CTop[12;65r[12;1H[L[1;66r[66;162H[K[66;162H12,1[10CTop[12;1H[?25h[?25l[27m[m[H[2J[27m[m[H[2J[2;1H[33mdiv[m[35m.[muploadStatus [36m{[m
+  [32mmargin[m: [31m5px[m;
+[36m}[m
+
+[33mdiv[m[35m.[mprogressBar [36m{[m
+  [32mmargin[m: [31m5px[m;
+[36m}[m
+
+[33mdiv[m[35m.[mprogressBar [33mdiv[m[35m.[mborder [36m{[m
+  [32mbackground-color[m: [31m#fff[m;
+  [32mborder[m: [31m1px[m [32msolid[m grey;
+  [32mwidth[m: [31m100%[m;
+[36m}[m
+
+[33mdiv[m[35m.[mprogressBar [33mdiv[m[35m.[mbackground [36m{[m
+  [32mbackground-color[m: [31m#333[m;
+  [32mheight[m: [31m18px[m;
+  [32mwidth[m: [31m0%[m;
+[36m}[m[24;1H[33mdiv[m[36m#headingback{[m
+    [32mheight[m: [31m40px[m;
+    [32mpadding-top[m: [31m30px[m;
+    [32mpadding-left[m: [31m10px[m;
+    [32mpadding-right[m: [31m10px[m;[30;5H[32mbackground-color[m: [31m#032271[m;
+    [32mcolor[m: [31mwhite[m;
+    [32mmin-width[m: [31m697px[m;
+[36m}[m
+[33mdiv[m[36m#heading{[m
+    [32mfont-style[m: Arial, Helvetic, [32msans-serif[m;
+    [32mfont-size[m: [31m170%[m;
+    [32mfont-weight[m: [32mbold[m;
+    [32mtext-align[m: [32mleft[m;[40;5H[32mfloat[m: [32mleft[m;
+    [32mwidth[m: [31m400px[m;
+[36m}[m
+[33mdiv[m[36m#search{[m
+    [32mfloat[m: [32mright[m;
+    [32mwidth[m: [31m250px[m;
+    [32mpadding-top[m: [31m10px[m;
+    [32mpadding-left[m: [31m20px[m;[49;5H[32mfont-family[m: Tahoma;
+    [32mfont-size[m: [31m80%[m;
+[36m}[m
+
+[35m.[msearchbox[36m{[m
+    [32mmargin[m: [31m0[m;
+    [32mborder[m: [31m0[m;
+    [32mheight[m: [31m15px[m;
+[36m}[m
+
+[35m.[msearchitem[36m{[m[62;5H[32mwidth[m: [31m85px[m;
+    [32mheight[m: [31m18px[m;
+    [32mtext-align[m: [32mcenter[m;
+
+[1m-- INSERT --[m[149C64,1[10C29%[1;1H[66;162H[K[66;162H64,1[10C29%[1;1H[?25h[?25l[66;163H5[2;1H[?25h[?25l[66;163H6[3;1H[?25h[?25l[66;163H7[4;1H[?25h[?25l[66;163H8[5;1H[?25h[?25l[27m[m[H[2J[27m[m[H[2J[1;5H[32mtext-align[m: [32mcenter[m;[3;5H[32mbackground-color[m: [31m#1b5472[m;[5;5H[32mtext-decoration[m: [32mnone[m;
+    [32mcolor[m: [31mwhite[m;
+    [32mfont-weight[m: [32mbold[m;
+[36m}[m
+
+[35m.[msearchitem:[35mhover[m{
+    background-color: #4e87a5;
+[1m[37m[41m}[m
+[34m/********************* Login Page *********************/[m
+[33mdiv[m[36m#loginform{[m
+    [32mwidth[m: [31m600px[m;
+    [32mheight[m: [31m100px[m;[18;5H[32mpadding[m: [31m10px[m;
+[36m}[m
+
+[34m/********************* Menu Section *********************/[m
+[35m.[mnav[36m{[m
+    [32mheight[m: [31m18px[m;
+    [32mpadding-bottom[m: [31m0[m;
+    [32mpadding-right[m: [31m30px[m;
+    [32mpadding-left[m: [31m30px[m;[28;5H[32mmargin-bottom[m: [31m20px[m;[30;5H[32mbackground-color[m: [31m#0A4371[m;
+    [32mcolor[m: [31mwhite[m;[33;5H[32mfont-size[m: [31m80%[m;
+    [32mfont-family[m: Tahoma;[36;5H[32mmin-width[m: [31m750px[m;
+[36m}[m
+
+[35m.[mmenuitem[36m{[m
+    [32mmargin-right[m: [31m8px[m;[42;5H[32mposition[m: [32mfloat[m;
+    [32mfloat[m: [32mleft[m;[45;5H[32mwidth[m: [31m85px[m;
+    [32mheight[m: [31m18px[m;
+    [32mtext-align[m: [32mcenter[m;[49;5H[32mbackground-color[m: [31m#1b5472[m;[51;5H[32mtext-decoration[m: [32mnone[m;
+    [32mcolor[m: [31mwhite[m;
+    [32mfont-weight[m: [32mbold[m;
+[36m}[m
+
+[35m.[mmenuitem:[35mhover[m{
+    background-color: #4e87a5;
+[1m[37m[41m}[m
+
+[34m/********************* Tables *********************/[m
+[33mtable[m[36m{[m
+    [32mborder-spacing[m: [31m0px[m;
+    [32mwidth[m: [31m100%[m;
+[36m}[m
+
+[1m-- INSERT --[m[149C127,5[9C59%[1;5H[66;162H[K[66;162H127,5[9C59%[1;5H[?25h[?25lutext-align: [32mcenter[m;[66;166H6[1;6H[?25h[?25lutext-align: [32mcenter[m;[66;166H7[1;7H[?25h[66;1H[K[1;6H[?25l[66;152H^[[1;6H[?25h[?25l[66;152H  [1;7H[66;162H127,6[9C59%[1;6H[?25h[?25l[66;152Hu[1;6H[66;152H [1;5H[32mtext-align[m: [32mcenter[m;[1;24H[K[66;166H5[1;5H[?25h[?25l[66;152Hu[1;5H[66;152H [11;1H[27m[m[H[2J[1;1H[34m/* 
+    pdfcat.css
+
+    Author:         Michael Pope
+    Date:           12/11/2007
+    Description:    Style sheet for pdfcat program written in Ruby on Rails
+*/
+
+
+/********************* Main Area *********************/[m
+[33mbody[m [36m{[m [32mmargin[m: [31m0[m; [32mbackground-color[m: [31m#fff[m; [32mcolor[m: [31m#333[m; [36m}[m
+[33mbody[m, [33mp[m, [33mol[m, [33mul[m, [33mtd[m [36m{[m
+  [32mfont-family[m: verdana, arial, helvetica, [32msans-serif[m;
+  [32mfont-size[m:   [31m13px[m;
+  [32mline-height[m: [31m18px[m;
+[36m}[m
+
+[33mpre[m [36m{[m
+  [32mbackground-color[m: [31m#eee[m;
+  [32mpadding[m: [31m10px[m;
+  [32mfont-size[m: [31m11px[m;
+[36m}[m
+
+[33ma[m [36m{[m [32mcolor[m: [31m#000[m; [36m}[m
+[33ma[m:[35mvisited[m [36m{[m [32mcolor[m: [31m#666[m; [36m}[m
+[33ma[m:[35mhover[m [36m{[m [32mcolor[m: [31m#fff[m; [32mbackground-color[m:[31m#000[m; [36m}[m
+
+[35m.[mfieldWithErrors [36m{[m
+  [32mpadding[m: [31m2px[m;
+  [32mbackground-color[m: [31mred[m;
+  [32mdisplay[m: [32mtable[m;
+[36m}
+
+#errorExplanation[m [36m{[m
+  [32mwidth[m: [31m400px[m;
+  [32mborder[m: [31m2px[m [32msolid[m [31mred[m;
+  [32mpadding[m: [31m7px[m;
+  [32mpadding-bottom[m: [31m12px[m;
+  [32mmargin-bottom[m: [31m20px[m;
+  [32mbackground-color[m: [31m#f0f0f0[m;
+[36m}
+
+#errorExplanation[m [33mh2[m [36m{[m
+  [32mtext-align[m: [32mleft[m;
+  [32mfont-weight[m: [32mbold[m;
+  [32mpadding[m: [31m5px[m [31m5px[m [31m5px[m [31m15px[m;
+  [32mfont-size[m: [31m12px[m;
+  [32mmargin[m: [31m-7px[m;
+  [32mbackground-color[m: [31m#c00[m;
+  [32mcolor[m: [31m#fff[m;
+[36m}
+
+#errorExplanation[m [33mp[m [36m{[m
+  [32mcolor[m: [31m#333[m;
+  [32mmargin-bottom[m: [31m0[m;
+  [32mpadding[m: [31m5px[m;
+[36m}
+
+#errorExplanation[m [33mul[m [33mli[m [36m{[m
+  [32mfont-size[m: [31m12px[m;
+  [32mlist-style[m: [32msquare[m;
+[36m}[m
+
+[33mdiv[m[35m.[muploadStatus [36m{[m
+  [32mmargin[m: [31m5px[m;[66;162H11,1[10CTop[11;1H[?25h[?25l[66;152Hu[11;1H[66;1H72 fewer lines[66;152H[K[11;1H[12;1H[K[13;3H[K[14;1H[33mdiv[m[36m#headingback{[m[14;17H[K[15;3H  [32mheight[m: [31m40px[m;[15;18H[K[16;1H    [32mpadding-top[m: [31m30px[m;
+    [32mpadding-left[m: [31m10px[m;
+    [32mpadding-right[m: [31m10px[m;[19;3H[K[20;3H  [32mbackground-color[m: [31m#032271[m;
+    [32mcolor[m: [31mwhite[m;[21;18H[K[22;1H    [32mmin-width[m: [31m697px[m;
+[36m}[m
+[33mdiv[m[36m#heading{[m[24;13H[K[25;1H    [32mfont-style[m: Arial, Helvetic, [32msans-serif[m;
+    [32mfont-size[m: [31m170%[m;[26;21H[K[27;5H[32mfont-weight[m: [32mbold[m;
+    [32mtext-align[m: [32mleft[m;[29;3H[K[30;3H  [32mfloat[m: [32mleft[m;[30;17H[K[31;3H  [32mwidth[m: [31m400px[m;
+
+[33mdiv[m[36m#search{[m
+    [32mfloat[m: [32mright[m;[34;19H[K[35;3H  [32mwidth[m: [31m250px[m;
+    [32mpadding-top[m: [31m10px[m;[36;23H[K[37;3H  [32mpadding-left[m: [31m20px[m;[38;3H[K[39;3H  [32mfont-family[m: Tahoma;
+    [32mfont-size[m: [31m80%[m;[40;21H[K[43;1H[35m.[msearchbox[36m{[m[43;12H[K[44;3H  [32mmargin[m: [31m0[m;[44;15H[K[45;3H  [32mborder[m: [31m0[m;[45;16H[K[46;3H  [32mheight[m: [31m15px[m;[46;18H[K[47;1H[36m}[m[47;3H[K[48;3H[K[49;1H[35m.[msearchitem[36m{[m[49;13H[K[50;3H  [50;5H[K[51;1H  
+    [32mwidth[m: [31m85px[m;
+    [32mheight[m: [31m18px[m;[53;19H[K[54;3H  [32mtext-align[m: [32mcenter[m;[55;3H[K[56;3H  [32mbackground-color[m: [31m#1b5472[m;[57;1H[K[58;5H[32mtext-decoration[m: [32mnone[m;
+    [32mcolor[m: [31mwhite[m;[59;19H[K[60;3H  [32mfont-weight[m: [32mbold[m;
+[36m}[m[61;3H[K[62;1H[K[63;1H[35m.[msearchitem:[35mhover[m{
+    background-color: #4e87a5;
+[1m[37m[41m}[m[65;3H[K[66;162H11,1[10CTop]2;application.css (/storage/livedata/programming/rails/pdfcat/public/stylesheets) - VIM]1;application.css[66;162H[K[66;162H11,1[10CTop[11;1H[?25h[?25l[66;152Ho[11;1H[66;152H [12;1H[66;1H[1m-- INSERT --[m[66;13H[K[66;162H12,1[10CTop[12;65r[12;1H[L[1;66r[66;162H[K[66;162H12,1[10CTop]2;application.css + (/storage/livedata/programming/rails/pdfcat/public/stylesheets) - VIM]1;application.css[12;1H[?25h[?25l[13;65r[13;1H[L[1;66r[66;162H[K[66;162H13,1[10CTop[13;1H[?25h[?25l[14;65r[14;1H[L[1;66r[66;162H[K[66;162H14,1[10CTop[14;1H[?25h[?25l[15;65r[15;1H[L[1;66r[66;162H[K[66;162H15,1[10CTop[15;1H[?25h[?25l/[66;165H2[15;2H[?25h[?25l[66;165H3[15;3H[?25h[?25l[66;165H2[15;2H[?25h[?25l[34m/*
+
+
+div#headingback{
+    height: 40px;
+    padding-top: 30px;
+    padding-left: 10px;
+    padding-right: 10px;
+
+    background-color: #032271;
+    color: white;
+    min-width: 697px;
+}
+div#heading{
+    font-style: Arial, Helvetic, sans-serif;
+    font-size: 170%;
+    font-weight: bold;
+    text-align: left;
+
+    float: left;
+    width: 400px;
+}
+div#search{
+    float: right;
+    width: 250px;
+    padding-top: 10px;
+    padding-left: 20px;
+
+    font-family: Tahoma;
+    font-size: 80%;
+}
+
+.searchbox{
+    margin: 0;
+    border: 0;
+    height: 15px;
+}
+
+.searchitem{
+    
+    
+    width: 85px;
+    height: 18px;
+    text-align: center;
+
+    background-color: #1b5472;
+
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}[m[66;165H3[15;3H[?25h[?25l[34m*[m[66;165H4[15;4H[?25h[?25l[34m*[m[66;165H5[15;5H[?25h[?25l[34m [m[66;165H6[15;6H[?25h[?25l[34mE[m[66;165H7[15;7H[?25h[?25l[34mN[m[66;165H8[15;8H[?25h[?25l[34mD[m[66;165H9[15;9H[?25h[?25l[34m [m[66;165H10[15;10H[?25h[?25l[34mO[m[66;166H1[15;11H[?25h[?25l[34mF[m[66;166H2[15;12H[?25h[?25l[34m [m[66;166H3[15;13H[?25h[?25l[34mi[m[66;166H4[15;14H[?25h[?25l[34mm[m[66;166H5[15;15H[?25h[?25l[34mp[m[66;166H6[15;16H[?25h[?25l[34mo[m[66;166H7[15;17H[?25h[?25l[34mr[m[66;166H8[15;18H[?25h[?25l[34mt[m[66;166H9[15;19H[?25h[?25l[34m [m[66;165H20[15;20H[?25h[?25l[34m*[m[66;166H1[15;21H[?25h[?25l[34m*[m[66;166H2[15;22H[?25h[?25l[34m/[m
+
+
+[33mdiv[m[36m#headingback{[m
+    [32mheight[m: [31m40px[m;
+    [32mpadding-top[m: [31m30px[m;
+    [32mpadding-left[m: [31m10px[m;
+    [32mpadding-right[m: [31m10px[m;
+
+    [32mbackground-color[m: [31m#032271[m;
+    [32mcolor[m: [31mwhite[m;
+    [32mmin-width[m: [31m697px[m;
+[36m}[m
+[33mdiv[m[36m#heading{[m
+    [32mfont-style[m: Arial, Helvetic, [32msans-serif[m;
+    [32mfont-size[m: [31m170%[m;
+    [32mfont-weight[m: [32mbold[m;
+    [32mtext-align[m: [32mleft[m;
+
+    [32mfloat[m: [32mleft[m;
+    [32mwidth[m: [31m400px[m;
+[36m}[m
+[33mdiv[m[36m#search{[m
+    [32mfloat[m: [32mright[m;
+    [32mwidth[m: [31m250px[m;
+    [32mpadding-top[m: [31m10px[m;
+    [32mpadding-left[m: [31m20px[m;
+
+    [32mfont-family[m: Tahoma;
+    [32mfont-size[m: [31m80%[m;
+[36m}[m
+
+[35m.[msearchbox[36m{[m
+    [32mmargin[m: [31m0[m;
+    [32mborder[m: [31m0[m;
+    [32mheight[m: [31m15px[m;
+[36m}[m
+
+[35m.[msearchitem[36m{[m
+    
+    
+    [32mwidth[m: [31m85px[m;
+    [32mheight[m: [31m18px[m;
+    [32mtext-align[m: [32mcenter[m;
+
+    [32mbackground-color[m: [31m#1b5472[m;
+
+    [32mtext-decoration[m: [32mnone[m;
+    [32mcolor[m: [31mwhite[m;
+    [32mfont-weight[m: [32mbold[m;
+[36m}[m[66;166H3[15;23H[?25h[?25l[66;163H4,1 [14;1H[?25h[?25l[66;163H3[13;1H[?25h[?25l[66;163H2[12;1H[?25h[66;1H[K[12;1H[?25l[66;152H^[[12;1H[?25h[?25l[66;152H  [12;1H[66;162H12,0-1[8CTop[12;1H[?25h[?25l[66;152H~@k[12;1H[66;152H   [11;1H[66;163H1,1  [11;1H[?25h[?25l[66;152Hp[11;1H[66;1H72 more lines[66;152H[K[12;1H[33mbody[m, [33mp[m, [33mol[m, [33mul[m, [33mtd[m [36m{[m
+  [32mfont-family[m: verdana, arial, helvetica, [32msans-serif[m;
+  [32mfont-size[m:   [31m13px[m;
+  [32mline-height[m: [31m18px[m;[15;21H[K[16;1H[36m}[m
+
+[33mpre[m [36m{[m[18;6H[K[19;3H[32mbackground-color[m: [31m#eee[m;
+  [32mpadding[m: [31m10px[m;[20;18H[K[21;3H[32mfont-size[m: [31m11px[m;[21;19H[K[22;1H[36m}[m[22;5H[K[24;1H[33ma[m [36m{[m [32mcolor[m: [31m#000[m; [36m}[m[24;19H[K[25;1H[33ma[m:[35mvisited[m [36m{[m [32mcolor[m: [31m#666[m; [36m}[m
+[33ma[m:[35mhover[m [36m{[m [32mcolor[m: [31m#fff[m; [32mbackground-color[m:[31m#000[m; [36m}[m[27;1H[K[28;1H[35m.[mfieldWithErrors [36m{[m
+  [32mpadding[m: [31m2px[m;[29;17H[K[30;3H[32mbackground-color[m: [31mred[m;
+  [32mdisplay[m: [32mtable[m;[31;18H[K[32;1H[36m}[m[32;5H[K[34;1H[36m#errorExplanation[m [36m{[m
+  [32mwidth[m: [31m400px[m;[35;16H[K[36;1H  [32mborder[m: [31m2px[m [32msolid[m [31mred[m;
+  [32mpadding[m: [31m7px[m;
+  [32mpadding-bottom[m: [31m12px[m;
+  [32mmargin-bottom[m: [31m20px[m;
+  [32mbackground-color[m: [31m#f0f0f0[m;
+[36m}[m[41;5H[K[43;1H[36m#errorExplanation[m [33mh2[m [36m{[m[43;23H[K[44;3H[32mtext-align[m: [32mleft[m;
+  [32mfont-weight[m: [32mbold[m;
+  [32mpadding[m: [31m5px[m [31m5px[m [31m5px[m [31m15px[m;
+  [32mfont-size[m: [31m12px[m;
+  [32mmargin[m: [31m-7px[m;
+  [32mbackground-color[m: [31m#c00[m;
+  [32mcolor[m: [31m#fff[m;[50;15H[K[53;1H[36m#errorExplanation[m [33mp[m [36m{[m
+  [32mcolor[m: [31m#333[m;
+  [32mmargin-bottom[m: [31m0[m;
+  [32mpadding[m: [31m5px[m;[56;16H[K[57;1H[36m}[m[57;5H[K[58;5H[K[59;1H[36m#errorExplanation[m [33mul[m [33mli[m [36m{[m
+  [32mfont-size[m: [31m12px[m;[60;19H[K[61;3H[32mlist-style[m: [32msquare[m;
+[36m}[m[62;5H[K[63;5H[K[64;1H[33mdiv[m[35m.[muploadStatus [36m{[m[64;19H[K[65;1H  [32mmargin[m: [31m5px[m;[66;162H12,1[10CTop[66;162H[K[66;162H12,1[10CTop[12;1H[?25h[?25l[66;152H~@k[12;1H[66;152H   [11;1H[66;163H1[11;1H[?25h[?25l[66;152Ho[11;1H[66;152H [12;1H[66;1H[1m-- INSERT --[m[66;13H[K[66;162H12,1[10CTop[12;65r[12;1H[L[1;66r[66;162H[K[66;162H12,1[10CTop[12;1H[?25h[66;1H[K[12;1H[?25l[66;152H^[[12;1H[?25h[?25l[66;152H  [12;1H[66;162H12,0-1[8CTop[12;1H[?25h[?25l[66;152H:[12;1H[66;152H[K[66;1H:[?25hw[?25l[?25h[?25l"application.css" 281L, 4493C written[12;1H[66;162H12,0-1[8CTop]2;application.css (/storage/livedata/programming/rails/pdfcat/public/stylesheets) - VIM]1;application.css[66;162H[K[66;162H12,0-1[8CTop[12;1H[?25h[?25l[66;152H~@k[12;1H[66;152H   [1;1H[27m[m[H[2J[27m[m[H[2J[2;1H[33mdiv[m[35m.[muploadStatus [36m{[m
+  [32mmargin[m: [31m5px[m;
+[36m}[m
+
+[33mdiv[m[35m.[mprogressBar [36m{[m
+  [32mmargin[m: [31m5px[m;
+[36m}[m
+
+[33mdiv[m[35m.[mprogressBar [33mdiv[m[35m.[mborder [36m{[m
+  [32mbackground-color[m: [31m#fff[m;
+  [32mborder[m: [31m1px[m [32msolid[m grey;
+  [32mwidth[m: [31m100%[m;
+[36m}[m
+
+[33mdiv[m[35m.[mprogressBar [33mdiv[m[35m.[mbackground [36m{[m
+  [32mbackground-color[m: [31m#333[m;
+  [32mheight[m: [31m18px[m;
+  [32mwidth[m: [31m0%[m;
+[36m}[m[25;1H[34m/*** END OF import **/[m
+
+
+[33mdiv[m[36m#headingback{[m
+    [32mheight[m: [31m40px[m;
+    [32mpadding-top[m: [31m30px[m;
+    [32mpadding-left[m: [31m10px[m;
+    [32mpadding-right[m: [31m10px[m;[34;5H[32mbackground-color[m: [31m#032271[m;
+    [32mcolor[m: [31mwhite[m;
+    [32mmin-width[m: [31m697px[m;
+[36m}[m
+[33mdiv[m[36m#heading{[m
+    [32mfont-style[m: Arial, Helvetic, [32msans-serif[m;
+    [32mfont-size[m: [31m170%[m;
+    [32mfont-weight[m: [32mbold[m;
+    [32mtext-align[m: [32mleft[m;[44;5H[32mfloat[m: [32mleft[m;
+    [32mwidth[m: [31m400px[m;
+[36m}[m
+[33mdiv[m[36m#search{[m
+    [32mfloat[m: [32mright[m;
+    [32mwidth[m: [31m250px[m;
+    [32mpadding-top[m: [31m10px[m;
+    [32mpadding-left[m: [31m20px[m;[53;5H[32mfont-family[m: Tahoma;
+    [32mfont-size[m: [31m80%[m;
+[36m}[m
+
+[35m.[msearchbox[36m{[m
+    [32mmargin[m: [31m0[m;
+    [32mborder[m: [31m0[m;
+    [32mheight[m: [31m15px[m;
+[36m}[m
+
+[35m.[msearchitem[36m{[m[66;162H64,0-1[8C29%[1;1H[?25h[?25l[66;152H~@k[1;1H[66;152H   [1;4H
+    [2;5H[K[3;3H  [32mwidth[m: [31m85px[m;
+    [32mheight[m: [31m18px[m;
+    [32mtext-align[m: [32mcenter[m;[6;1H[K[7;3H  [32mbackground-color[m: [31m#1b5472[m;[8;1H[K[9;5H[32mtext-decoration[m: [32mnone[m;
+    [32mcolor[m: [31mwhite[m;[10;18H[K[11;3H  [32mfont-weight[m: [32mbold[m;[11;23H[K[12;1H[36m}[m[12;3H[K[13;3H[K[14;1H[35m.[msearchitem:[35mhover[m{
+    background-color: #4e87a5;
+[1m[37m[41m}[m[16;2H[K[17;1H[34m/********************* Login Page *********************/[m
+[33mdiv[m[36m#loginform{[m[18;15H[K[19;3H  [32mwidth[m: [31m600px[m;
+    [32mheight[m: [31m100px[m;[22;5H[32mpadding[m: [31m10px[m;
+[36m}[m[25;5H[34m****************** Menu Section *********************/[m
+[35m.[mnav[36m{[m
+    [32mheight[m: [31m18px[m;
+    [32mpadding-bottom[m: [31m0[m;
+    [32mpadding-right[m: [31m30px[m;[30;13H[32mleft[m: [31m30px[m;[31;5H[K[32;5H[32mmargin-bottom[m: [31m20px[m;[34;25H[31mA4371[m;[36;5H[K[37;1H    [32mfont-size[m: [31m80%[m;
+    [32mfont-family[m: Tahoma;[39;5H[K[40;5H[32mmin-width[m: [31m750px[m;
+[36m}[m[41;5H[K[42;5H[K[43;1H[35m.[mmenuitem[36m{[m
+    [32mmargin-right[m: [31m8px[m;[45;5H[K[46;1H    [32mposition[m: [32mfloat[m;
+    [32mfloat[m: [32mleft[m;[48;5H[K[49;12H[31m85px[m;[49;17H[K[50;5H[32mheight[m: [31m18px[m;[50;18H[K[51;5H[32mtext-align[m: [32mcenter[m;[53;5H[32mbackground-color[m: [31m#1b5472[m;[54;5H[K[55;1H    [32mtext-decoration[m: [32mnone[m;
+    [32mcolor[m: [31mwhite[m;
+    [32mfont-weight[m: [32mbold[m;
+[36m}[m[58;5H[K[59;5H[K[60;1H[35m.[mmenuitem:[35mhover[m{[60;17H[K[61;1H    background-color: #4e87a5;
+[1m[37m[41m}[m[63;1H[K[64;1H[34m/********************* Tables *********************/[m
+[33mtable[m[36m{[m[66;162H127,4 [8C58[1;4H[?25h[?25l[66;152H~@k[1;4H[66;152H   [1;4H[1;65r[1;1H[L[1;66r[1;1H[35m.[msearchitem[36m{[m[66;162H[K[66;162H126,4[9C57%[1;4H[?25h[?25l[66;152H~@k[1;4H[66;152H   [1;1H[1;65r[1;1H[L[1;66r[66;162H[K[66;162H125,0-1[7C57%[1;1H[?25h[?25l[66;152H~@k[1;1H[66;152H   [1;1H[1;65r[1;1H[L[1;66r[1;1H[36m}[m[66;162H[K[66;162H124,1[9C56%[1;1H[?25h[?25l[66;152H~@k[1;1H[66;152H   [1;4H[1;65r[1;1H[L[1;66r[1;5H[32mheight[m: [31m15px[m;[66;162H[K[66;162H123,4[9C56%[1;4H[?25h[?25l[66;152H~@k[1;4H[66;152H   [2;1H[66;164H4,1[2;1H[?25h[?25l[66;152H~@k[2;1H[66;152H   [3;1H[66;164H5,0-1[3;1H[?25h[?25l[66;152H~@k[3;1H[66;152H   [4;4H[66;164H6,4  [4;4H[?25h[?25l[66;152H~@k[4;4H[66;152H   [5;4H[66;164H7[5;4H[?25h[?25l[66;152H~@k[5;4H[66;152H   [6;4H[66;164H8[6;4H[?25h[?25l[66;152H~@k[6;4H[66;152H   [7;4H[66;164H9[7;4H[?25h[?25l[66;152H~@k[7;4H[66;152H   [8;4H[66;163H30[8;4H[?25h[?25l[66;152H~@k[8;4H[66;152H   [9;4H[66;164H1[9;4H[?25h[?25l[66;152H~@k[9;4H[66;152H   [10;1H[66;164H2,0-1[10;1H[?25h[?25l[66;152H~@k[10;1H[66;152H   [11;4H[66;164H3,4  [11;4H[?25h[?25l[66;152H~@k[11;4H[66;152H   [12;1H[66;164H4,0-1[12;1H[?25h[?25l[66;152H~@k[12;1H[66;152H   [13;4H[66;164H5,4  [13;4H[?25h[?25l[66;152H~@k[13;4H[66;152H   [14;4H[66;164H6[14;4H[?25h[?25l[66;152H~@k[14;4H[66;152H   [15;4H[66;164H7[15;4H[?25h[?25l[66;152H~@k[15;4H[66;152H   [16;1H[66;164H8,1[16;1H[?25h[?25l[66;152H~@k[16;1H[66;152H   [17;1H[66;164H9,0-1[17;1H[?25h[?25l[66;152H~@k[17;1H[66;152H   [18;4H[66;163H40,4  [18;4H[?25h[?25l[66;152H~@k[18;4H[66;152H   [19;4H[66;164H1[19;4H[?25h[?25l[66;152H~@k[19;4H[66;152H   [20;1H[66;164H2,1[20;1H[?25h[?25l[66;152H~@k[20;1H[66;152H   [21;4H[66;164H3,4[21;4H[?25h[?25l[66;152H~@k[21;4H[66;152H   [22;4H[66;164H4[22;4H[?25h[?25l[66;152H~@k[22;4H[66;152H   [23;4H[66;164H5[23;4H[?25h[?25l[23;65r[23;1H[L[1;66r[23;5Hd[66;1H[1m-- INSERT --[m[66;162H[K[66;162H145,3-6[7C56%]2;application.css + (/storage/livedata/programming/rails/pdfcat/public/stylesheets) - VIM]1;application.css[23;6H[?25h[66;1H[K[?25l[66;162H145,2-5[7C56%[23;5H[?25h[?25l[23;65r[23;1H[L[1;66r[23;5Hc[66;1H[1m-- INSERT --[m[66;162H[K[66;162H145,3-6[7C55%[23;6H[?25h[66;1H[K[23;5H[?25l[66;152H^[[23;5H[?25h[?25l[66;152H  [23;6H[66;162H145,2-5[7C55%[23;5H[?25h[?25l[66;152Hu[23;5H[66;152H [23;5H[23;65r[65;1H
+[1;66r[65;1H[35m.[mmenuitem:[35mhover[m{[66;162H[K[66;162H145,2-5[7C56%[23;5H[?25h[?25l[66;152Hu[23;5H[66;152H [23;4H[23;65r[65;1H
+[1;66r[65;5Hbackground-color: #4e87a5;[66;162H[K[66;162H145,4[9C56%]2;application.css (/storage/livedata/programming/rails/pdfcat/public/stylesheets) - VIM]1;application.css[23;4H[?25h[?25l[66;152H:[23;4H[66;152H[K[66;1H:[?25hx[?25l[?25h[?25l]2;mrxvt]1;application.css[?1l>[?25h[66;1H[K[66;1H[ws10@ws10 ~/livedata/programming/rails/pdfcat/public/stylesheets]$ vim application.css l[Kmv pdfcat.css application.cssl[Kcp /livedata/pais/pdf_catalog/pdfcat/trunk/web/css/pdfcat.css .[14Pl /livedata/pais/pdf_catalog/pdfcat/trunk/web/css[K[K[23Prm application.css vim application.css[4hcp scaffold.[4lcss application.css[12Pvim application.cssrm application.css l /livedata/pais/pdf_catalog/pdfcat/trunk/web/csscp /livedata/pais/pdf_catalog/pdfcat/trunk/web/css/pdfcat.css .l[Kmv pdfcat.css application.cssl[Kvim application.css [Kvim application.css 
+[?1h=[>c[1;66r[27m[m[H[2J[?25l[66;1H"application.css" 281L, 4493C[1;5H[32mpadding-top[m: [31m10px[m;
+    [32mpadding-left[m: [31m20px[m;[4;5H[32mfont-family[m: Tahoma;
+    [32mfont-size[m: [31m80%[m;
+[36m}[m
+
+[35m.[msearchbox[36m{[m
+    [32mmargin[m: [31m0[m;
+    [32mborder[m: [31m0[m;
+    [32mheight[m: [31m15px[m;
+[36m}[m
+
+[35m.[msearchitem[36m{[m[17;5H[32mwidth[m: [31m85px[m;
+    [32mheight[m: [31m18px[m;
+    [32mtext-align[m: [32mcenter[m;[21;5H[32mbackground-color[m: [31m#1b5472[m;[23;5H[32mtext-decoration[m: [32mnone[m;
+    [32mcolor[m: [31mwhite[m;
+    [32mfont-weight[m: [32mbold[m;
+[36m}[m
+
+[35m.[msearchitem:[35mhover[m{
+    background-color: #4e87a5;
+[1m[37m[41m}[m
+[34m/********************* Login Page *********************/[m
+[33mdiv[m[36m#loginform{[m
+    [32mwidth[m: [31m600px[m;
+    [32mheight[m: [31m100px[m;[36;5H[32mpadding[m: [31m10px[m;
+[36m}[m
+
+[34m/********************* Menu Section *********************/[m
+[35m.[mnav[36m{[m
+    [32mheight[m: [31m18px[m;
+    [32mpadding-bottom[m: [31m0[m;
+    [32mpadding-right[m: [31m30px[m;
+    [32mpadding-left[m: [31m30px[m;[46;5H[32mmargin-bottom[m: [31m20px[m;[48;5H[32mbackground-color[m: [31m#0A4371[m;
+    [32mcolor[m: [31mwhite[m;[51;5H[32mfont-size[m: [31m80%[m;
+    [32mfont-family[m: Tahoma;[54;5H[32mmin-width[m: [31m750px[m;
+[36m}[m
+
+[35m.[mmenuitem[36m{[m
+    [32mmargin-right[m: [31m8px[m;[60;5H[32mposition[m: [32mfloat[m;
+    [32mfloat[m: [32mleft[m;[63;5H[32mwidth[m: [31m85px[m;
+    [32mheight[m: [31m18px[m;
+    [32mtext-align[m: [32mcenter[m;[66;162H145,4[9C51%]2;application.css (/storage/livedata/programming/rails/pdfcat/public/stylesheets) - VIM]1;application.css[33;4H[?25h[?25l[66;152H~@k[33;4H[66;152H   [34;4H[66;164H6[34;4H[?25h[?25l[66;152H~@k[34;4H[66;152H   [35;1H[66;164H7,0-1[35;1H[?25h[?25l[66;152H~@k[35;1H[66;152H   [36;4H[66;164H8,4  [36;4H[?25h[?25l[66;152H~@k[36;4H[66;152H   [37;1H[66;164H9,1[37;1H[?25h[?25l[66;152H~@k[37;1H[66;152H   [38;1H[66;163H50,0-1[38;1H[?25h[?25l[66;152H~@k[38;1H[66;152H   [39;4H[66;164H1,4  [39;4H[?25h[?25l[66;152H~@k[39;4H[66;152H   [40;4H[66;164H2[40;4H[?25h[?25l[66;152H~@k[40;4H[66;152H   [41;4H[66;164H3[41;4H[?25h[?25l[66;152H~@k[41;4H[66;152H   [42;4H[66;164H4[42;4H[?25h[?25l[66;152H~@k[42;4H[66;152H   [43;4H[66;164H5[43;4H[?25h[?25l[66;152H~@k[43;4H[66;152H   [44;4H[66;164H6[44;4H[?25h[?25l[66;152H~@k[44;4H[66;152H   [45;1H[66;164H7,0-1[45;1H[?25h[?25l[66;152H~@k[45;1H[66;152H   [46;4H[66;164H8,4  [46;4H[?25h[?25l[66;152H~@k[46;4H[66;152H   [47;1H[66;164H9,0-1[47;1H[?25h[?25l[66;152H~@k[47;1H[66;152H   [48;4H[66;163H60,4  [48;4H[?25h[?25l[66;152H~@k[48;4H[66;152H   [49;4H[66;164H1[49;4H[?25h[?25l[66;152H~@k[49;4H[66;152H   [50;1H[66;164H2,0-1[50;1H[?25h[?25l[66;152H~@k[50;1H[66;152H   [51;4H[66;164H3,4  [51;4H[?25h[?25l[66;152H~@k[51;4H[66;152H   [52;4H[66;164H4[52;4H[?25h[?25l[66;152H~@k[52;4H[66;152H   [53;1H[66;164H5,0-1[53;1H[?25h[?25l[66;152H~@k[53;1H[66;152H   [54;4H[66;164H6,4  [54;4H[?25h[?25l[66;152H~@k[54;4H[66;152H   [55;1H[66;164H7,1[55;1H[?25h[?25l[66;152H~@k[55;1H[66;152H   [56;1H[66;164H8,0-1[56;1H[?25h[?25l[66;152H~@k[56;1H[66;152H   [57;4H[66;164H9,4  [57;4H[?25h[?25l[66;152H~@k[57;4H[66;152H   [58;4H[66;163H70[58;4H[?25h[?25l[66;152H~@k[58;4H[66;152H   [59;4H[66;164H1[59;4H[?25h[?25l[66;152H~@k[59;4H[66;152H   [60;4H[66;164H2[60;4H[?25h[?25l[66;152H~@k[60;4H[66;152H   [61;4H[66;164H3[61;4H[?25h[?25l[66;152H~@k[61;4H[66;152H   [62;4H[66;164H4[62;4H[?25h[?25l[66;152H~@k[62;4H[66;152H   [63;4H[66;164H5[63;4H[?25h[?25l[66;152H~@k[63;4H[66;152H   [64;4H[66;164H6[64;4H[?25h[?25l[66;152H~@k[64;4H[66;152H   [65;4H[66;164H7[65;4H[?25h[?25l[66;152H~@k[65;4H[66;152H   [65;1H[1;65r[65;1H
+[1;66r[66;1H[K[66;162H178,0-1[7C52%[65;1H[?25h[?25l[66;152H~@k[65;1H[66;152H   [65;4H[1;65r[65;1H
+[1;66r[65;5H[32mbackground-color[m: [31m#1b5472[m;[66;162H[K[66;162H179,4[9C52%[65;4H[?25h[?25l[66;152H~@k[65;4H[66;152H   [65;1H[1;65r[65;1H
+[1;66r[66;162H[K[66;162H180,0-1[7C53%[65;1H[?25h[?25l[66;152H~@k[65;1H[66;152H   [65;4H[1;65r[65;1H
+[1;66r[65;5H[32mtext-decoration[m: [32mnone[m;[66;162H[K[66;162H181,4[9C53%[65;4H[?25h[?25l[66;152H~@k[65;4H[66;152H   [65;4H[1;65r[65;1H
+[1;66r[65;5H[32mcolor[m: [31mwhite[m;[66;162H[K[66;162H182,4[9C54%[65;4H[?25h[?25l[66;152H~@k[65;4H[66;152H   [65;4H[1;65r[65;1H
+[1;66r[65;5H[32mfont-weight[m: [32mbold[m;[66;162H[K[66;162H183,4[9C54%[65;4H[?25h[?25l[66;152H~@k[65;4H[66;152H   [65;1H[1;65r[65;1H
+[1;66r[65;1H[36m}[m[66;162H[K[66;162H184,1[9C55%[65;1H[?25h[?25l[66;152H~@k[65;1H[66;152H   [65;1H[1;65r[65;1H
+[1;66r[66;162H[K[66;162H185,0-1[7C55%[65;1H[?25h[?25l[66;152H~@k[65;1H[66;152H   [65;4H[1;65r[65;1H
+[1;66r[65;1H[35m.[mmenuitem:[35mhover[m{[66;162H[K[66;162H186,4[9C56%[65;4H[?25h[?25l[66;152H~@k[65;4H[66;152H   [65;4H[1;65r[65;1H
+[1;66r[65;5Hbackground-color: #4e87a5;[66;162H[K[66;162H187,4[9C56%[65;4H[?25h[?25l[66;152H~@k[65;4H[66;152H   [65;1H[1;65r[65;1H
+[1;66r[65;1H[1m[37m[41m}[m[66;162H[K[66;162H188,1[9C56%[65;1H[?25h[?25l[66;152H~@k[65;1H[66;152H   [65;1H[1;65r[65;1H
+[1;66r[66;162H[K[66;162H189,0-1[7C57%[65;1H[?25h[?25l[66;152H~@k[65;1H[66;152H   [65;4H[1;65r[65;1H
+[1;66r[65;1H[34m/********************* Tables *********************/[m[66;162H[K[66;162H190,4[9C57%[65;4H[?25h[?25l[66;152H~@k[65;4H[66;152H   [65;4H[1;65r[65;1H
+[1;66r[65;1H[33mtable[m[36m{[m[66;162H[K[66;162H191,4[9C58%[65;4H[?25h[?25l[66;152H~@k[65;4H[66;152H   [65;4H[1;65r[65;1H
+[1;66r[65;5H[32mborder-spacing[m: [31m0px[m;[66;162H[K[66;162H192,4[9C58%[65;4H[?25h[?25l[66;152H~@k[65;4H[66;152H   [65;4H[1;65r[65;1H
+[1;66r[65;5H[32mwidth[m: [31m100%[m;[66;162H[K[66;162H193,4[9C59%[65;4H[?25h[?25l[66;152H~@k[65;4H[66;152H   [65;1H[1;65r[65;1H
+[1;66r[65;1H[36m}[m[66;162H[K[66;162H194,1[9C59%[65;1H[?25h[?25l[66;152H~@k[65;1H[66;152H   [64;4H[66;164H3,4[64;4H[?25h[?25l[66;152H~@k[64;4H[66;152H   [63;4H[66;164H2[63;4H[?25h[?25l[66;152H~@k[63;4H[66;152H   [65;5H[27m[m[H[2J[1;1H[36m}[m
+
+[33mdiv[m[35m.[mprogressBar [36m{[m
+  [32mmargin[m: [31m5px[m;
+[36m}[m
+
+[33mdiv[m[35m.[mprogressBar [33mdiv[m[35m.[mborder [36m{[m
+  [32mbackground-color[m: [31m#fff[m;
+  [32mborder[m: [31m1px[m [32msolid[m grey;
+  [32mwidth[m: [31m100%[m;
+[36m}[m
+
+[33mdiv[m[35m.[mprogressBar [33mdiv[m[35m.[mbackground [36m{[m
+  [32mbackground-color[m: [31m#333[m;
+  [32mheight[m: [31m18px[m;
+  [32mwidth[m: [31m0%[m;
+[36m}[m[22;1H[34m/*** END OF import **/[m
+
+
+[33mdiv[m[36m#headingback{[m
+    [32mheight[m: [31m40px[m;
+    [32mpadding-top[m: [31m30px[m;
+    [32mpadding-left[m: [31m10px[m;
+    [32mpadding-right[m: [31m10px[m;[31;5H[32mbackground-color[m: [31m#032271[m;
+    [32mcolor[m: [31mwhite[m;
+    [32mmin-width[m: [31m697px[m;
+[36m}[m
+[33mdiv[m[36m#heading{[m
+    [32mfont-style[m: Arial, Helvetic, [32msans-serif[m;
+    [32mfont-size[m: [31m170%[m;
+    [32mfont-weight[m: [32mbold[m;
+    [32mtext-align[m: [32mleft[m;[41;5H[32mfloat[m: [32mleft[m;
+    [32mwidth[m: [31m400px[m;
+[36m}[m
+[33mdiv[m[36m#search{[m
+    [32mfloat[m: [32mright[m;
+    [32mwidth[m: [31m250px[m;
+    [32mpadding-top[m: [31m10px[m;
+    [32mpadding-left[m: [31m20px[m;[50;5H[32mfont-family[m: Tahoma;
+    [32mfont-size[m: [31m80%[m;
+[36m}[m
+
+[35m.[msearchbox[36m{[m
+    [32mmargin[m: [31m0[m;
+    [32mborder[m: [31m0[m;
+    [32mheight[m: [31m15px[m;
+[36m}[m
+
+[35m.[msearchitem[36m{[m[63;5H[32mwidth[m: [31m85px[m;
+    [32mheight[m: [31m18px[m;
+    [32mtext-align[m: [32mcenter[m;[66;162H131,5[9C30%[65;5H[?25h[?25l[66;152H~@k[65;5H[66;152H   [65;1H[1;1H[34m    Author:         Michael Pope
+    Date:           12/11/2007
+    Description:    Style sheet for pdfcat program written in Ruby on Rails
+*/[m[4;3H[K[5;1H[K[7;1H[34m/********************* Main Area *********************/[m
+[33mbody[m [36m{[m [32mmargin[m: [31m0[m; [32mbackground-color[m: [31m#fff[m; [32mcolor[m: [31m#333[m; [36m}[m[9;3H[K[10;1H[33mbody[m, [33mp[m, [33mol[m, [33mul[m, [33mtd[m [36m{[m
+  [32mfont-family[m: verdana, arial, helvetica, [32msans-serif[m;
+  [32mfont-size[m:   [31m13px[m;
+  [32mline-height[m: [31m18px[m;[13;21H[K[14;1H[36m}[m[14;3H[K[15;3H[K[16;1H[33mpre[m [36m{[m[16;6H[K[17;1H  [32mbackground-color[m: [31m#eee[m;
+  [32mpadding[m: [31m10px[m;
+  [32mfont-size[m: [31m11px[m;
+[36m}[m
+
+[33ma[m [36m{[m [32mcolor[m: [31m#000[m; [36m}[m[22;19H[K[23;1H[33ma[m:[35mvisited[m [36m{[m [32mcolor[m: [31m#666[m; [36m}[m
+[33ma[m:[35mhover[m [36m{[m [32mcolor[m: [31m#fff[m; [32mbackground-color[m:[31m#000[m; [36m}[m[25;1H[K[26;1H[35m.[mfieldWithErrors [36m{[m
+  [32mpadding[m: [31m2px[m;[27;16H[K[28;3H[32mbackground-color[m: [31mred[m;
+  [32mdisplay[m: [32mtable[m;[29;18H[K[30;1H[36m}[m[31;5H[K[32;1H[36m#errorExplanation[m [36m{[m
+  [32mwidth[m: [31m400px[m;[33;16H[K[34;1H  [32mborder[m: [31m2px[m [32msolid[m [31mred[m;
+  [32mpadding[m: [31m7px[m;
+  [32mpadding-bottom[m: [31m12px[m;[36;24H[K[37;3H[32mmargin-bottom[m: [31m20px[m;
+  [32mbackground-color[m: [31m#f0f0f0[m;
+[36m}[m[39;5H[K[41;1H[36m#errorExplanation[m [33mh2[m [36m{[m
+  [32mtext-align[m: [32mleft[m;
+  [32mfont-weight[m: [32mbold[m;
+  [32mpadding[m: [31m5px[m [31m5px[m [31m5px[m [31m15px[m;
+  [32mfont-size[m: [31m12px[m;
+  [32mmargin[m: [31m-7px[m;[46;16H[K[47;3H[32mbackground-color[m: [31m#c00[m;
+  [32mcolor[m: [31m#fff[m;[48;15H[K[49;1H[36m}[m[50;5H[K[51;1H[36m#errorExplanation[m [33mp[m [36m{[m
+  [32mcolor[m: [31m#333[m;
+  [32mmargin-bottom[m: [31m0[m;
+  [32mpadding[m: [31m5px[m;
+[36m}[m[55;5H[K[56;5H[K[57;1H[36m#errorExplanation[m [33mul[m [33mli[m [36m{[m
+  [32mfont-size[m: [31m12px[m;
+  [32mlist-style[m: [32msquare[m;
+[36m}[m[60;2H[K[62;1H[33mdiv[m[35m.[muploadStatus [36m{[m
+  [32mmargin[m: [31m5px[m;[63;15H[K[64;1H[36m}[m[64;5H[K[65;5H[K[66;162H68,0-1[8C 1[65;1H[?25h[?25l[66;152H~@k[65;1H[66;152H   [65;1H[1;65r[65;1H
+[1;66r[65;1H[33mdiv[m[35m.[mprogressBar [36m{[m[66;162H[K[66;162H69,1[11C1%[65;1H[?25h[?25l[66;152H~@k[65;1H[66;152H   [64;1H[66;163H8,0-1[64;1H[?25h[?25l[66;152H~@k[64;1H[66;152H   [63;1H[66;163H7,1  [63;1H[?25h[?25l[66;152H~@k[63;1H[66;152H   [62;1H[66;163H6[62;1H[?25h[?25l[66;152H~@k[62;1H[66;152H   [61;1H[66;163H5[61;1H[?25h[?25l[66;152H~@k[61;1H[66;152H   [60;1H[66;163H4,0-1[60;1H[?25h[?25l[66;152H~@k[60;1H[66;152H   [59;1H[66;163H3,1  [59;1H[?25h[?25l[66;152H~@k[59;1H[66;152H   [58;1H[66;163H2[58;1H[?25h[?25l[66;152H~@k[58;1H[66;152H   [57;1H[66;163H1[57;1H[?25h[?25l[66;152H~@k[57;1H[66;152H   [56;1H[66;163H0[56;1H[?25h[?25l[66;152H~@k[56;1H[66;152H   [55;1H[66;162H59,0-1[55;1H[?25h[?25l[66;152H~@k[55;1H[66;152H   [54;1H[66;163H8,1  [54;1H[?25h[?25l[66;152H~@k[54;1H[66;152H   [53;1H[66;163H7[53;1H[?25h[?25l[66;152H~@k[53;1H[66;152H   [52;1H[66;163H6[52;1H[?25h[?25l[66;152H~@k[52;1H[66;152H   [51;1H[66;163H5[51;1H[?25h[?25l[66;152H~@k[51;1H[66;152H   [50;1H[66;163H4[50;1H[?25h[?25l[66;152H~@k[50;1H[66;152H   [49;1H[66;163H3,0-1[49;1H[?25h[?25l[66;152H~@k[49;1H[66;152H   [48;1H[66;163H2,1  [48;1H[?25h[?25l[66;152H~@k[48;1H[66;152H   [47;1H[66;163H1[47;1H[?25h[?25l[66;152H~@k[47;1H[66;152H   [46;1H[66;163H0[46;1H[?25h[?25l[66;152H~@k[46;1H[66;152H   [45;1H[66;162H49[45;1H[?25h[?25l[66;152H~@k[45;1H[66;152H   [44;1H[66;163H8[44;1H[?25h[?25l[66;152H~@k[44;1H[66;152H   [43;1H[66;163H7[43;1H[?25h[?25l[66;152H~@k[43;1H[66;152H   [42;1H[66;163H6[42;1H[?25h[?25l[66;152H~@k[42;1H[66;152H   [41;1H[66;163H5[41;1H[?25h[?25l[66;152H~@k[41;1H[66;152H   [40;1H[66;163H4[40;1H[?25h[?25l[66;152H~@k[40;1H[66;152H   [39;1H[66;163H3,0-1[39;1H[?25h[?25l[66;152H~@k[39;1H[66;152H   [38;1H[66;163H2,1  [38;1H[?25h[?25l[66;152H~@k[38;1H[66;152H   [37;1H[66;163H1[37;1H[?25h[?25l[66;152H~@k[37;1H[66;152H   [36;1H[66;163H0[36;1H[?25h[?25l[66;152H~@k[36;1H[66;152H   [35;1H[66;162H39[35;1H[?25h[?25l[66;152H~@k[35;1H[66;152H   [34;1H[66;163H8[34;1H[?25h[?25l[66;152H~@k[34;1H[66;152H   [33;1H[66;163H7[33;1H[?25h[?25l[66;152H~@k[33;1H[66;152H   [32;1H[66;163H6[32;1H[?25h[?25l[66;152H~@k[32;1H[66;152H   [31;1H[66;163H5[31;1H[?25h[?25l[66;152H~@k[31;1H[66;152H   [30;1H[66;163H4,0-1[30;1H[?25h[?25l[66;152H~@k[30;1H[66;152H   [29;1H[66;163H3,1  [29;1H[?25h[?25l[66;152H~@k[29;1H[66;152H   [28;1H[66;163H2[28;1H[?25h[?25l[66;152H~@k[28;1H[66;152H   [27;1H[66;163H1[27;1H[?25h[?25l[66;152H~@k[27;1H[66;152H   [26;1H[66;163H0[26;1H[?25h[?25l[66;152H~@k[26;1H[66;152H   [25;1H[66;162H29[25;1H[?25h[?25l[66;152H/[25;1H[66;152H[K[66;1H/[?25hl[?25l[25;5H[7ml[m[66;162H29,5[11C1%[66;162H[K[66;3H[?25hi[?25l[25;5Hl[33;17H[7mli[m[32md[m [66;162H37,17[10C1%[66;162H[K[66;4H[?25hn[?25l[1;1H[36m}[m[1;2H[K[2;1H[35m.[mlist-row-even:[35mhover[m{[2;22H[K[3;1H    background-color: [36m#FFE887[m;
+[1m[37m[41m}[m
+
+[35m.[mlist-row-odd[36m{[m[6;15H[K[7;1H    [32mbackground-color[m: [31m#EEEEEE[m;[7;31H[K[8;1H[36m}[m
+[35m.[mlist-row-odd:[35mhover[m{[9;21H[K[10;3H  background-color: [36m#FFE887[m;[10;32H[K[11;1H[1m[37m[41m}[m[11;3H[K[12;3H[K[13;1H[35m.[maction[36m{[m
+    [32mfont-size[m: [31m80%[m;
+[36m}[m[15;2H[K[16;3H[K[17;1H[34m/********************* Forms **********************/[m[18;3H[K[19;1H[33minput[m, [33mtextarea[m[36m{[m
+    [32mborder[m: [31m1px[m [32msolid[m [31m#888[m;
+[36m}[m[21;3H[K[22;1H[K[23;1H[K[25;1H[34m/********************* Errors *********************/[m
+[35m.[merr[36m{[m[26;6H[K[27;3H  [32mcolor[m: [31mred[m;[27;16H[K[28;3H  [28;5H[K[29;1H    [32mfont-size[m: [31m90%[m;
+    [32mfont-weight[m:[32mbold[m;
+[36m}[m[31;2H[K[32;3H[K[33;1H[34m/********************* [m[7mLin[m[34mk *********************/[m
+[35m.[mlink_add[36m{[m[34;12H[K[35;3H  [32mfont-size[m:[31m80%[m;[35;19H[K[36;1H[36m}[m[36;3H[K[37;3H[K[38;1H[K[40;1H[34m/********************* Help Popups *********************/[m[41;3H[K[42;1H[34m/*[m[42;3H[K[43;1H[34m    help_tip is for any information which will not obstruct the users view
+    of the main process and add helpful information to help speed up the users
+    response.[m[45;14H[K[46;1H[34m*/[m[46;3H[K[47;1H[35m.[mhelp_title[36m{[m[47;13H[K[48;1H    [32mfont-weight[m: [32mbold[m;
+    [32mfont-size[m: [31m120%[m;
+[36m}[m[50;2H[K[51;3H[K[52;1H[33mdiv[m[36m#help_jump[m, [33mdiv[m[36m#help_del[m, [33mdiv[m[36m#help_edit[m, [33mdiv[m[36m#help_rotate[m, [33mdiv[m[36m#help_mail[m, [33mdiv[m[36m#help_view{[m
+    [32mposition[m: [32mabsolute[m;
+    [32mmargin[m: [31m0[m;
+    [32mbottom[m: [31m0px[m;
+    [34m/*right: 16px;  Handy if you want a space left for the side bar. */[m
+    [32mdisplay[m: [32mblock[m;
+    [32mwidth[m: [31m100%[m; [58;18H[K[59;1H    [32mheight[m: [31m130px[m;
+    [32mbackground[m: [31m#FFE887[m;
+    [32mcolor[m: [31m#000[m;[61;18H[K[62;3H  [32mtext-align[m: [32mleft[m;
+    [32mfont-size[m: [31m12[m;
+    [32mz-index[m: [31m4[m;[65;1H[K[66;162H235,24[8C93%[66;162H[K[66;5H[?25hk[?25l[33;27H[7mk[m[34m *********************/[m[66;162H235,24[8C93%[66;162H[K[66;6H[?25h_[?25l[1;1H[35m.[mlist-row-even:[35mhover[m{
+    background-color: [36m#FFE887[m;
+[1m[37m[41m}[m[3;5H[K[4;1H[K[5;1H[35m.[mlist-row-odd[36m{[m
+    [32mbackground-color[m: [31m#EEEEEE[m;
+[36m}[m[7;5H[K[8;1H[35m.[mlist-row-odd:[35mhover[m{
+    background-color: [36m#FFE887[m;
+[1m[37m[41m}[m[10;5H[K[11;1H[K[12;1H[35m.[maction[36m{[m
+    [32mfont-size[m: [31m80%[m;
+[36m}[m[14;5H[K[15;1H[K[16;1H[34m/********************* Forms **********************/[m[17;1H[K[18;1H[33minput[m, [33mtextarea[m[36m{[m
+    [32mborder[m: [31m1px[m [32msolid[m [31m#888[m;
+[36m}[m[20;5H[K[21;1H[K[24;1H[34m/********************* Errors *********************/[m
+[35m.[merr[36m{[m[25;6H[K[26;1H    [32mcolor[m: [31mred[m;[27;5H[K[28;5H[32mfont-size[m: [31m90%[m;[29;10H[32mweight[m:[32mbold[m;
+[36m}[m[30;5H[K[31;1H[K[32;1H[34m/********************* Link *********************/[m
+[35m.[m[7mlink_[madd[36m{[m[33;11H[K[34;1H    [32mfont-size[m:[31m80%[m;
+[36m}[m[35;5H[K[36;1H[K[39;1H[34m/********************* Help Popups *********************/[m[40;1H[K[41;1H[34m/*
+    help_tip is for any information which will not obstruct the users view
+    of the main process and add helpful information to help speed up the users
+    response.[m[44;14H[K[45;1H[34m*/[m[45;3H[K[46;1H[35m.[mhelp_title[36m{[m
+    [32mfont-weight[m: [32mbold[m;[48;10H[32msize[m: [31m120%[m;[48;21H[K[49;1H[36m}[m[49;5H[K[50;1H[K[51;1H[33mdiv[m[36m#help_jump[m, [33mdiv[m[36m#help_del[m, [33mdiv[m[36m#help_edit[m, [33mdiv[m[36m#help_rotate[m, [33mdiv[m[36m#help_mail[m, [33mdiv[m[36m#help_view{[m
+    [32mposition[m: [32mabsolute[m; [52;25H[K[53;5H[32mmargin[m: [31m0[m; [53;16H[K[54;5H[32mbottom[m:[2C[31mpx[m;
+    [34m/*right: 16px;  Handy if you want a space left for the side bar. */[m
+    [32mdisplay[m: [32mblock[m; [56;21H[K[57;5H[32mwidth[m: [31m100%[m; [57;18H[K[58;5H[32mheight[m: [31m130px[m;
+    [32mbackground[m: [31m#FFE887[m;
+    [32mcolor[m: [31m#000[m; [60;18H[K[61;5H[32mtext-align[m: [32mleft[m;
+    [32mfont-size[m: [31m12[m; [62;20H[K[63;5H[32mz-index[m: [31m4[m; [63;17H[K[64;5H[K[65;5H[32mvisibility[m: [32mhidden[m;[66;162H236,2[9C93%[66;162H[K[66;7H[?25hn[?25l[1;1H[34m    Date:           12/11/2007
+    Description:    Style sheet for pdfcat program written in Ruby on Rails
+*/[m[5;1H[K[6;1H[34m/********************* Main Area *********************/[m
+[33mbody[m [36m{[m [32mmargin[m: [31m0[m; [32mbackground-color[m: [31m#fff[m; [32mcolor[m: [31m#333[m; [36m}[m[8;1H[K[9;1H[33mbody[m, [33mp[m, [33mol[m, [33mul[m, [33mtd[m [36m{[m[9;23H[K[10;1H  [32mfont-family[m: verdana, arial, helvetica, [32msans-serif[m;
+  [32mfont-size[m:   [31m13px[m;
+  [32mline-height[m: [31m18px[m;
+[36m}[m[13;5H[K[14;1H[K[15;1H[33mpre[m [36m{[m
+  [32mbackground-color[m: [31m#eee[m;[16;26H[K[17;3H[32mpadding[m: [31m10px[m;
+  [32mfont-size[m: [31m11px[m;
+[36m}[m[19;5H[K[20;1H[K[21;1H[33ma[m [36m{[m [32mcolor[m: [31m#000[m; [36m}[m
+[33ma[m:[35mvisited[m [36m{[m [32mcolor[m: [31m#666[m; [36m}[m
+[33ma[m:[35mhover[m [36m{[m [32mcolor[m: [31m#fff[m; [32mbackground-color[m:[31m#000[m; [36m}[m[24;1H[K[25;2HfieldWithErrors [36m{[m
+  [32mpadding[m: [31m2px[m;
+  [32mbackground-color[m: [31mred[m;
+  [32mdisplay[m: [32mtable[m;[28;18H[K[29;1H[36m}[m[29;5H[K[30;1H[K[31;1H[36m#errorExplanation[m [36m{[m
+  [32mwidth[m: [31m400px[m;[32;16H[K[33;1H  [32mborder[m: [31m2px[m [32msolid[m [31mred[m;
+  [32mpadding[m: [31m7px[m;[34;16H[K[35;1H  [32mpadding-bottom[m: [31m12px[m;
+  [32mmargin-bottom[m: [31m20px[m;
+  [32mbackground-color[m: [31m#f0f0f0[m;
+[36m}[m[39;1H[K[40;1H[36m#errorExplanation[m [33mh2[m [36m{[m
+  [32mtext-align[m: [32mleft[m;
+  [32mfont-weight[m: [32mbold[m;[42;21H[K[43;1H  [32mpadding[m: [31m5px[m [31m5px[m [31m5px[m [31m15px[m;[43;29H[K[44;1H  [32mfont-size[m: [31m12px[m;
+  [32mmargin[m: [31m-7px[m;
+  [32mbackground-color[m: [31m#c00[m;
+  [32mcolor[m: [31m#fff[m;[47;15H[K[48;1H[36m}[m[48;5H[K[49;1H[K[50;1H[36m#errorExplanation[m [33mp[m [36m{[m
+  [32mcolor[m: [31m#333[m;[51;16H[K[52;3H[32mmargin-bottom[m: [31m0[m;[52;20H[K[53;3H[32mpadding[m: [31m5px[m;
+[36m}[m[54;5H[K[55;5H[K[56;1H[36m#errorExplanation[m [33mul[m [33mli[m [36m{[m
+  [32mfont-size[m: [31m12px[m;
+  [32mlist-style[m: [32msquare[m;
+[36m}[m[59;5H[K[60;5H[K[61;1H[33mdiv[m[35m.[muploadStatus [36m{[m[61;19H[K[62;3H[32mmargin[m: [31m5px[m;[62;16H[K[63;1H[36m}[m[63;5H[K[65;1H[33mdiv[m[35m.[mprogressBar [36m{[m[65;18H[K[66;162H29,1[11C1%[66;162H[K[66;8H[?25he[?25l[153C29,1[11C1%[66;162H[K[66;9H[?25hw[?25l[152C29,1[11C1%[66;162H[K[66;10H[?25h[?25l[31msearch hit BOTTOM, continuing at TOP[m[1m[37m[41mE486: Pattern not found: link_new[m[66;34H[K[25;1H[66;162H29,1[11C1%[25;1H[?25h[?25l[66;152H~@k[25;1H[66;152H   [1;1H[27m[m[H[2J[27m[m[H[2J[2;1H[33mdiv[m[35m.[mprogressBar [36m{[m
+  [32mmargin[m: [31m5px[m;
+[36m}[m
+
+[33mdiv[m[35m.[mprogressBar [33mdiv[m[35m.[mborder [36m{[m
+  [32mbackground-color[m: [31m#fff[m;
+  [32mborder[m: [31m1px[m [32msolid[m grey;
+  [32mwidth[m: [31m100%[m;
+[36m}[m
+
+[33mdiv[m[35m.[mprogressBar [33mdiv[m[35m.[mbackground [36m{[m
+  [32mbackground-color[m: [31m#333[m;
+  [32mheight[m: [31m18px[m;
+  [32mwidth[m: [31m0%[m;
+[36m}[m[21;1H[34m/*** END OF import **/[m
+
+
+[33mdiv[m[36m#headingback{[m
+    [32mheight[m: [31m40px[m;
+    [32mpadding-top[m: [31m30px[m;
+    [32mpadding-left[m: [31m10px[m;
+    [32mpadding-right[m: [31m10px[m;[30;5H[32mbackground-color[m: [31m#032271[m;
+    [32mcolor[m: [31mwhite[m;
+    [32mmin-width[m: [31m697px[m;
+[36m}[m
+[33mdiv[m[36m#heading{[m
+    [32mfont-style[m: Arial, Helvetic, [32msans-serif[m;
+    [32mfont-size[m: [31m170%[m;
+    [32mfont-weight[m: [32mbold[m;
+    [32mtext-align[m: [32mleft[m;[40;5H[32mfloat[m: [32mleft[m;
+    [32mwidth[m: [31m400px[m;
+[36m}[m
+[33mdiv[m[36m#search{[m
+    [32mfloat[m: [32mright[m;
+    [32mwidth[m: [31m250px[m;
+    [32mpadding-top[m: [31m10px[m;
+    [32mpadding-left[m: [31m20px[m;[49;5H[32mfont-family[m: Tahoma;
+    [32mfont-size[m: [31m80%[m;
+[36m}[m
+
+[35m.[msearchbox[36m{[m
+    [32mmargin[m: [31m0[m;
+    [32mborder[m: [31m0[m;
+    [32mheight[m: [31m15px[m;
+[36m}[m
+
+[35m.[msearchitem[36m{[m[62;5H[32mwidth[m: [31m85px[m;
+    [32mheight[m: [31m18px[m;
+    [32mtext-align[m: [32mcenter[m;[66;162H68,0-1[8C31%[1;1H[?25h[?25l[66;152H~@k[1;1H[66;152H   [2;1H[66;163H9,1  [2;1H[?25h[?25l[66;152H~@k[2;1H[66;152H   [3;1H[66;162H70[3;1H[?25h[?25l[66;152H~@k[3;1H[66;152H   [4;1H[66;163H1[4;1H[?25h[?25l[66;152H~@k[4;1H[66;152H   [5;1H[66;163H2,0-1[5;1H[?25h[?25l[66;152H~@k[5;1H[66;152H   [6;1H[66;163H3,1  [6;1H[?25h[?25l[66;152H~@k[6;1H[66;152H   [7;1H[66;163H4[7;1H[?25h[?25l[66;152H~@k[7;1H[66;152H   [8;1H[66;163H5[8;1H[?25h[?25l[66;152H~@k[8;1H[66;152H   [9;1H[66;163H6[9;1H[?25h[?25l[66;152H~@k[9;1H[66;152H   [10;1H[66;163H7[10;1H[?25h[?25l[66;152H~@k[10;1H[66;152H   [11;1H[66;163H8,0-1[11;1H[?25h[?25l[66;152H~@k[11;1H[66;152H   [12;1H[66;163H9,1  [12;1H[?25h[?25l[66;152H~@k[12;1H[66;152H   [13;1H[66;162H80[13;1H[?25h[?25l[66;152H~@k[13;1H[66;152H   [14;1H[66;163H1[14;1H[?25h[?25l[66;152H~@k[14;1H[66;152H   [15;1H[66;163H2[15;1H[?25h[?25l[66;152H~@k[15;1H[66;152H   [16;1H[66;163H3[16;1H[?25h[?25l[66;152H~@k[16;1H[66;152H   [17;1H[66;163H4,0-1[17;1H[?25h[?25l[66;152H~@k[17;1H[66;152H   [18;1H[66;163H5[18;1H[?25h[?25l[66;152H~@k[18;1H[66;152H   [19;1H[66;163H6[19;1H[?25h[?25l[66;152H~@k[19;1H[66;152H   [20;1H[66;163H7[20;1H[?25h[?25l[66;152H~@k[20;1H[66;152H   [21;1H[66;163H8,1  [21;1H[?25h[?25l[66;152H~@k[21;1H[66;152H   [22;1H[66;163H9,0-1[22;1H[?25h[?25l[66;152H~@k[22;1H[66;152H   [23;1H[66;162H90[23;1H[?25h[?25l[66;152H~@k[23;1H[66;152H   [24;1H[66;163H1,1  [24;1H[?25h[?25l[66;152H~@k[24;1H[66;152H   [25;1H[66;163H2[25;1H[?25h[?25l[66;152H~@k[25;1H[66;152H   [26;1H[66;163H3[26;1H[?25h[?25l[66;152H~@k[26;1H[66;152H   [27;1H[66;163H4[27;1H[?25h[?25l[66;152H~@k[27;1H[66;152H   [28;1H[66;163H5[28;1H[?25h[?25l[66;152H~@k[28;1H[66;152H   [29;1H[66;163H6,0-1[29;1H[?25h[?25l[66;152H~@k[29;1H[66;152H   [30;1H[66;163H7,1  [30;1H[?25h[?25l[66;152H~@k[30;1H[66;152H   [31;1H[66;163H8[31;1H[?25h[?25l[66;152H~@k[31;1H[66;152H   [32;1H[66;163H9[32;1H[?25h[?25l[66;152H~@k[32;1H[66;152H   [33;1H[66;162H100,1[33;1H[?25h[?25l[66;152H~@k[33;1H[66;152H   [34;1H[66;164H1[34;1H[?25h[?25l[66;152H~@k[34;1H[66;152H   [35;1H[66;164H2[35;1H[?25h[?25l[66;152H~@k[35;1H[66;152H   [36;1H[66;164H3[36;1H[?25h[?25l[66;152H~@k[36;1H[66;152H   [37;1H[66;164H4[37;1H[?25h[?25l[66;152H~@k[37;1H[66;152H   [38;1H[66;164H5[38;1H[?25h[?25l[66;152H~@k[38;1H[66;152H   [39;1H[66;164H6,0-1[39;1H[?25h[?25l[66;152H~@k[39;1H[66;152H   [40;1H[66;164H7,1  [40;1H[?25h[?25l[66;152H~@k[40;1H[66;152H   [41;1H[66;164H8[41;1H[?25h[?25l[66;152H~@k[41;1H[66;152H   [42;1H[66;164H9[42;1H[?25h[?25l[66;152H~@k[42;1H[66;152H   [43;1H[66;163H10[43;1H[?25h[?25l[66;152H~@k[43;1H[66;152H   [44;1H[66;164H1[44;1H[?25h[?25l[66;152H~@k[44;1H[66;152H   [45;1H[66;164H2[45;1H[?25h[?25l[66;152H~@k[45;1H[66;152H   [46;1H[66;164H3[46;1H[?25h[?25l[66;152H~@k[46;1H[66;152H   [47;1H[66;164H4[47;1H[?25h[?25l[66;152H~@k[47;1H[66;152H   [48;1H[66;164H5,0-1[48;1H[?25h[?25l[66;152H~@k[48;1H[66;152H   [49;1H[66;164H6,1  [49;1H[?25h[?25l[66;152H~@k[49;1H[66;152H   [50;1H[66;164H7[50;1H[?25h[?25l[66;152H~@k[50;1H[66;152H   [51;1H[66;164H8[51;1H[?25h[?25l[66;152H~@k[51;1H[66;152H   [52;1H[66;164H9,0-1[52;1H[?25h[?25l[66;152H~@k[52;1H[66;152H   [53;1H[66;163H20,1  [53;1H[?25h[?25l[66;152H~@k[53;1H[66;152H   [54;1H[66;164H1[54;1H[?25h[?25l[66;152H~@k[54;1H[66;152H   [55;1H[66;164H2[55;1H[?25h[?25l[66;152H~@k[55;1H[66;152H   [56;1H[66;164H3[56;1H[?25h[?25l[66;152H~@k[56;1H[66;152H   [57;1H[66;164H4[57;1H[?25h[?25l[66;152H~@k[57;1H[66;152H   [58;1H[66;164H5,0-1[58;1H[?25h[?25l[66;152H~@k[58;1H[66;152H   [59;1H[66;164H6,1  [59;1H[?25h[?25l[66;152H~@k[59;1H[66;152H   [60;1H[66;164H7[60;1H[?25h[?25l[66;152H~@k[60;1H[66;152H   [61;1H[66;164H8[61;1H[?25h[?25l[66;152H~@k[61;1H[66;152H   [62;1H[66;164H9[62;1H[?25h[?25l[66;152H~@k[62;1H[66;152H   [63;1H[66;163H30[63;1H[?25h[?25l[66;152H~@k[63;1H[66;152H   [64;1H[66;164H1[64;1H[?25h[?25l[66;152H~@k[64;1H[66;152H   [65;1H[66;164H2,0-1[65;1H[?25h[?25l[66;152H~@k[65;1H[66;152H   [65;1H[1;65r[65;1H
+[1;66r[65;5H[32mbackground-color[m: [31m#1b5472[m;[66;162H[K[66;162H133,1[9C31%[65;1H[?25h[?25l[66;152H~@k[65;1H[66;152H   [65;1H[1;65r[65;1H
+[1;66r[66;162H[K[66;162H134,0-1[7C31%[65;1H[?25h[?25l[66;152H~@k[65;1H[66;152H   [65;1H[1;65r[65;1H
+[1;66r[65;5H[32mtext-decoration[m: [32mnone[m;[66;162H[K[66;162H135,1[9C32%[65;1H[?25h[?25l[66;152H~@k[65;1H[66;152H   [65;1H[1;65r[65;1H
+[1;66r[65;5H[32mcolor[m: [31mwhite[m;[66;162H[K[66;162H136,1[9C32%[65;1H[?25h[?25l[66;152H~@k[65;1H[66;152H   [65;1H[1;65r[65;1H
+[1;66r[65;5H[32mfont-weight[m: [32mbold[m;[66;162H[K[66;162H137,1[9C33%[65;1H[?25h[?25l[66;152H~@k[65;1H[66;152H   [65;1H[1;65r[65;1H
+[1;66r[65;1H[36m}[m[66;162H[K[66;162H138,1[9C33%[65;1H[?25h[?25l[66;152H~@k[65;1H[66;152H   [65;1H[1;65r[65;1H
+[1;66r[66;162H[K[66;162H139,0-1[7C34%[65;1H[?25h[?25l[66;152H~@k[65;1H[66;152H   [65;1H[1;65r[65;1H
+[1;66r[65;1H[35m.[msearchitem:[35mhover[m{[66;162H[K[66;162H140,1[9C34%[65;1H[?25h[?25l[66;152H~@k[65;1H[66;152H   [65;1H[1;65r[65;1H
+[1;66r[65;5Hbackground-color: #4e87a5;[66;162H[K[66;162H141,1[9C35%[65;1H[?25h[?25l[66;152H~@k[65;1H[66;152H   [65;1H[1;65r[65;1H
+[1;66r[65;1H[1m[37m[41m}[m[66;162H[K[66;162H142,1[9C35%[65;1H[?25h[?25l[66;152H~@k[65;1H[66;152H   [65;1H[1;65r[65;1H
+[1;66r[65;1H[34m/********************* Login Page *********************/[m[66;162H[K[66;162H143,1[9C36%[65;1H[?25h[?25l[66;152H~@k[65;1H[66;152H   [65;1H[1;65r[65;1H
+[1;66r[65;1H[33mdiv[m[36m#loginform{[m[66;162H[K[66;162H144,1[9C36%[65;1H[?25h[?25l[66;152H~@k[65;1H[66;152H   [65;1H[1;65r[65;1H
+[1;66r[65;5H[32mwidth[m: [31m600px[m;[66;162H[K[66;162H145,1[9C37%[65;1H[?25h[?25l[66;152H~@k[65;1H[66;152H   [65;1H[1;65r[65;1H
+[1;66r[65;5H[32mheight[m: [31m100px[m;[66;162H[K[66;162H146,1[9C37%[65;1H[?25h[?25l[66;152H~@k[65;1H[66;152H   [65;1H[1;65r[65;1H
+[1;66r[66;162H[K[66;162H147,0-1[7C37%[65;1H[?25h[?25l[66;152H~@k[65;1H[66;152H   [65;1H[1;65r[65;1H
+[1;66r[65;5H[32mpadding[m: [31m10px[m;[66;162H[K[66;162H148,1[9C38%[65;1H[?25h[?25l[66;152H~@k[65;1H[66;152H   [65;1H[1;65r[65;1H
+[1;66r[65;1H[36m}[m[66;162H[K[66;162H149,1[9C38%[65;1H[?25h[?25l[66;152H~@k[65;1H[66;152H   [65;1H[1;65r[65;1H
+[1;66r[66;162H[K[66;162H150,0-1[7C39%[65;1H[?25h[?25l[66;152H~@k[65;1H[66;152H   [65;1H[1;65r[65;1H
+[1;66r[65;1H[34m/********************* Menu Section *********************/[m[66;162H[K[66;162H151,1[9C39%[65;1H[?25h[?25l[66;152H~@k[65;1H[66;152H   [65;1H[1;65r[65;1H
+[1;66r[65;1H[35m.[mnav[36m{[m[66;162H[K[66;162H152,1[9C40%[65;1H[?25h[?25l[66;152H~@k[65;1H[66;152H   [65;1H[1;65r[65;1H
+[1;66r[65;5H[32mheight[m: [31m18px[m;[66;162H[K[66;162H153,1[9C40%[65;1H[?25h[?25l[66;152H~@k[65;1H[66;152H   [65;1H[1;65r[65;1H
+[1;66r[65;5H[32mpadding-bottom[m: [31m0[m;[66;162H[K[66;162H154,1[9C41%[65;1H[?25h[?25l[66;152H~@k[65;1H[66;152H   [65;1H[1;65r[65;1H
+[1;66r[65;5H[32mpadding-right[m: [31m30px[m;[66;162H[K[66;162H155,1[9C41%[65;1H[?25h[?25l[66;152H~@k[65;1H[66;152H   [65;1H[1;65r[65;1H
+[1;66r[65;5H[32mpadding-left[m: [31m30px[m;[66;162H[K[66;162H156,1[9C42%[65;1H[?25h[?25l[66;152H~@k[65;1H[66;152H   [65;1H[1;65r[65;1H
+[1;66r[66;162H[K[66;162H157,0-1[7C42%[65;1H[?25h[?25l[66;152H~@k[65;1H[66;152H   [1;5H[27m[m[H[2J[27m[m[H[2J[1;5H[32mpadding-left[m: [31m30px[m;[3;5H[32mmargin-bottom[m: [31m20px[m;[5;5H[32mbackground-color[m: [31m#0A4371[m;
+    [32mcolor[m: [31mwhite[m;[8;5H[32mfont-size[m: [31m80%[m;
+    [32mfont-family[m: Tahoma;[11;5H[32mmin-width[m: [31m750px[m;
+[36m}[m
+
+[35m.[mmenuitem[36m{[m
+    [32mmargin-right[m: [31m8px[m;[17;5H[32mposition[m: [32mfloat[m;
+    [32mfloat[m: [32mleft[m;[20;5H[32mwidth[m: [31m85px[m;
+    [32mheight[m: [31m18px[m;
+    [32mtext-align[m: [32mcenter[m;[24;5H[32mbackground-color[m: [31m#1b5472[m;[26;5H[32mtext-decoration[m: [32mnone[m;
+    [32mcolor[m: [31mwhite[m;
+    [32mfont-weight[m: [32mbold[m;
+[36m}[m
+
+[35m.[mmenuitem:[35mhover[m{
+    background-color: #4e87a5;
+[1m[37m[41m}[m
+
+[34m/********************* Tables *********************/[m
+[33mtable[m[36m{[m
+    [32mborder-spacing[m: [31m0px[m;
+    [32mwidth[m: [31m100%[m;
+[36m}[m
+
+[33mtr[m[36m{[m
+    [32mtext-align[m: [32mleft[m;
+[36m}[m
+
+
+[35m.[mlist-row-even[36m{[m
+    [32mbackground-color[m: [31m#F8F8F8[m;
+[36m}[m
+[35m.[mlist-row-even:[35mhover[m{
+    background-color: [36m#FFE887[m;
+[1m[37m[41m}[m
+
+[35m.[mlist-row-odd[36m{[m
+    [32mbackground-color[m: [31m#EEEEEE[m;
+[36m}[m
+[35m.[mlist-row-odd:[35mhover[m{
+    background-color: [36m#FFE887[m;
+[1m[37m[41m}[m
+
+[35m.[maction[36m{[m
+    [32mfont-size[m: [31m80%[m;
+[36m}[m
+
+[34m/********************* Forms **********************/[m[66;162H156,5[9C71%[1;5H[?25h[?25l[66;152H~@k[1;5H[66;152H   [1;5H[8C[32mright[m: [31m30px[m;
+    [32mpadding-left[m: [31m30px[m;[3;5H[K[4;5H[32mmargin-bottom[m: [31m20px[m;[5;5H[K[6;5H[32mbackground-color[m: [31m#0A4371[m;
+    [32mcolor[m: [31mwhite[m;[8;5H[K[9;10H[32msize[m: [31m80%[m;[9;20H[K[10;5H[32mfont-family[m: Tahoma;[11;5H[K[12;1H    [32mmin-width[m: [31m750px[m;
+[36m}[m[14;1H[K[15;1H[35m.[mmenuitem[36m{[m[15;11H[K[16;5H[32mmargin-right[m: [31m8px[m;[17;5H[K[18;5H[32mposition[m: [32mfloat[m;
+    [32mfloat[m: [32mleft[m;[20;5H[K[21;5H[32mwidth[m: [31m85px[m;[21;17H[K[22;5H[32mheight[m: [31m18px[m;[22;18H[K[23;5H[32mtext-align[m: [32mcenter[m;[24;5H[K[25;5H[32mbackground-color[m: [31m#1b5472[m;[26;5H[K[27;5H[32mtext-decoration[m: [32mnone[m;
+    [32mcolor[m: [31mwhite[m;[28;18H[K[29;1H    [32mfont-weight[m: [32mbold[m;
+[36m}[m[31;1H[K[32;1H[35m.[mmenuitem:[35mhover[m{[32;17H[K[33;1H    background-color: #4e87a5;
+[1m[37m[41m}[m[35;1H[K[36;1H[34m/********************* Tables *********************/[m
+[33mtable[m[36m{[m[37;7H[K[38;5H[32mborder-spacing[m: [31m0px[m;
+    [32mwidth[m: [31m100%[m;
+[36m}[m[41;1H[K[42;1H[33mtr[m[36m{[m[42;5H[K[43;1H    [32mtext-align[m: [32mleft[m;
+[36m}[m[46;1H[K[47;1H[35m.[mlist-row-even[36m{[m[47;16H[K[48;1H    [32mbackground-color[m: [31m#F8F8F8[m;
+[36m}[m[49;2H[K[50;1H[35m.[mlist-row-even:[35mhover[m{[50;23H[K[51;1H    background-color: [36m#FFE887[m;
+[1m[37m[41m}[m[53;1H[K[54;1H[35m.[mlist-row-odd[36m{[m[54;15H[K[55;1H    [32mbackground-color[m: [31m#EEEEEE[m;
+[36m}[m[56;2H[K[57;1H[35m.[mlist-row-odd:[35mhover[m{[57;21H[K[58;1H    background-color: [36m#FFE887[m;
+[1m[37m[41m}[m[60;1H[K[61;1H[35m.[maction[36m{[m[61;9H[K[62;1H    [32mfont-size[m: [31m80%[m;
+[36m}[m[64;1H[K[65;1H[34m/********************* Forms **********************/[m[66;164H5[1;5H[?25h[?25l[66;152H~@k[1;5H[66;152H   [1;5H[1;65r[1;1H[L[1;66r[1;5H[32mpadding-bottom[m: [31m0[m;[66;162H[K[66;162H154,5[9C70%[1;5H[?25h[?25l[66;152H~@k[1;5H[66;152H   [1;5H[1;65r[1;1H[L[1;66r[1;5H[32mheight[m: [31m18px[m;[66;162H[K[66;162H153,5[9C70%[1;5H[?25h[?25l[66;152H~@k[1;5H[66;152H   [1;5H[1;65r[1;1H[L[1;66r[1;1H[35m.[mnav[36m{[m[66;162H[K[66;162H152,5[9C69%[1;5H[?25h[?25l[66;152H~@k[1;5H[66;152H   [1;5H[1;65r[1;1H[L[1;66r[1;1H[34m/********************* Menu Section *********************/[m[66;162H[K[66;162H151,5[9C69%[1;5H[?25h[?25l[66;152H~@k[1;5H[66;152H   [1;1H[1;65r[1;1H[L[1;66r[66;162H[K[66;162H150,0-1[7C68%[1;1H[?25h[?25l[66;152H~@k[1;1H[66;152H   [1;1H[1;65r[1;1H[L[1;66r[1;1H[36m}[m[66;162H[K[66;162H149,1[9C68%[1;1H[?25h[?25l[66;152H~@k[1;1H[66;152H   [1;5H[1;65r[1;1H[L[1;66r[1;5H[32mpadding[m: [31m10px[m;[66;162H[K[66;162H148,5[9C68%[1;5H[?25h[?25l[66;152H~@k[1;5H[66;152H   [1;1H[1;65r[1;1H[L[1;66r[66;162H[K[66;162H147,0-1[7C67%[1;1H[?25h[?25l[66;152H~@k[1;1H[66;152H   [1;5H[1;65r[1;1H[L[1;66r[1;5H[32mheight[m: [31m100px[m;[66;162H[K[66;162H146,5[9C67%[1;5H[?25h[?25l[66;152H~@k[1;5H[66;152H   [1;5H[1;65r[1;1H[L[1;66r[1;5H[32mwidth[m: [31m600px[m;[66;162H[K[66;162H145,5[9C66%[1;5H[?25h[?25l[66;152H~@k[1;5H[66;152H   [1;5H[1;65r[1;1H[L[1;66r[1;1H[33mdiv[m[36m#loginform{[m[66;162H[K[66;162H144,5[9C66%[1;5H[?25h[?25l[66;152H~@k[1;5H[66;152H   [1;5H[1;65r[1;1H[L[1;66r[1;1H[34m/********************* Login Page *********************/[m[66;162H[K[66;162H143,5[9C65%[1;5H[?25h[?25l[66;152H~@k[1;5H[66;152H   [1;1H[1;65r[1;1H[L[1;66r[1;1H[1m[37m[41m}[m[66;162H[K[66;162H142,1[9C65%[1;1H[?25h[?25l[66;152H~@k[1;1H[66;152H   [1;5H[1;65r[1;1H[L[1;66r[1;5Hbackground-color: #4e87a5;[66;162H[K[66;162H141,5[9C64%[1;5H[?25h[?25l[66;152H~@k[1;5H[66;152H   [1;5H[1;65r[1;1H[L[1;66r[1;1H[35m.[msearchitem:[35mhover[m{[66;162H[K[66;162H140,5[9C64%[1;5H[?25h[?25l[66;152H~@k[1;5H[66;152H   [2;5H[66;164H1[2;5H[?25h[?25l[66;152H~@k[2;5H[66;152H   [3;1H[66;164H2,1[3;1H[?25h[?25l[66;152H~@k[3;1H[66;152H   [4;5H[66;164H3,5[4;5H[?25h[?25l[66;152H~@k[4;5H[66;152H   [5;5H[66;164H4[5;5H[?25h[?25l[66;152H~@k[5;5H[66;152H   [6;5H[66;164H5[6;5H[?25h[?25l[66;152H~@k[6;5H[66;152H   [7;5H[66;164H6[7;5H[?25h[?25l[66;152H~@k[7;5H[66;152H   [8;1H[66;164H7,0-1[8;1H[?25h[?25l[66;152H~@k[8;1H[66;152H   [9;5H[66;164H8,5  [9;5H[?25h[?25l[66;152H~@k[9;5H[66;152H   [10;1H[66;164H9,1[10;1H[?25h[?25l[66;152H~@k[10;1H[66;152H   [11;1H[66;163H50,0-1[11;1H[?25h[?25l[66;152H~@k[11;1H[66;152H   [12;5H[66;164H1,5  [12;5H[?25h[?25l[66;152H~@k[12;5H[66;152H   [13;5H[66;164H2[13;5H[?25h[?25l[66;152H~@k[13;5H[66;152H   [14;5H[66;164H3[14;5H[?25h[?25l[66;152H~@k[14;5H[66;152H   [15;5H[66;164H4[15;5H[?25h[?25l[66;152H~@k[15;5H[66;152H   [16;5H[66;164H5[16;5H[?25h[?25l[66;152H~@k[16;5H[66;152H   [17;5H[66;164H6[17;5H[?25h[?25l[66;152H~@k[17;5H[66;152H   [18;1H[66;164H7,0-1[18;1H[?25h[?25l[66;152H~@k[18;1H[66;152H   [19;5H[66;164H8,5  [19;5H[?25h[?25l[66;152H~@k[19;5H[66;152H   [20;1H[66;164H9,0-1[20;1H[?25h[?25l[66;152H~@k[20;1H[66;152H   [21;5H[66;163H60,5  [21;5H[?25h[?25l[66;152H~@k[21;5H[66;152H   [22;5H[66;164H1[22;5H[?25h[?25l[66;152H~@k[22;5H[66;152H   [23;1H[66;164H2,0-1[23;1H[?25h[?25l[66;152H~@k[23;1H[66;152H   [24;5H[66;164H3,5  [24;5H[?25h[?25l[66;152H~@k[24;5H[66;152H   [25;5H[66;164H4[25;5H[?25h[?25l[66;152H~@k[25;5H[66;152H   [26;1H[66;164H5,0-1[26;1H[?25h[?25l[66;152H~@k[26;1H[66;152H   [27;5H[66;164H6,5  [27;5H[?25h[?25l[66;152H~@k[27;5H[66;152H   [28;1H[66;164H7,1[28;1H[?25h[?25l[66;152H~@k[28;1H[66;152H   [29;1H[66;164H8,0-1[29;1H[?25h[?25l[66;152H~@k[29;1H[66;152H   [30;5H[66;164H9,5  [30;5H[?25h[?25l[66;152H:[30;5H[66;152H[K[66;1H:[?25hx[?25l[?25h[?25l]2;mrxvt]1;application.rhtml[?1l>[?25h[66;1H[K[66;1H[ws10@ws10 ~/livedata/programming/rails/pdfcat/public/stylesheets]$ 

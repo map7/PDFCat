@@ -984,3 +984,1002 @@ Migrating to RemoveColumnPdfsCatId (5)
   [4;36;1mSQL (0.000175)[0m   [0;1mBEGIN[0m
   [4;35;1mPdf Update (0.000432)[0m   [0mUPDATE pdfs SET `pdfdate` = '2007-11-12', `pdfname` = 'Joe\'s Pizza BAS', `category_id` = 2, `filename` = '20071112-joes_pizza_bas.pdf', `pdfnote` = NULL WHERE `id` = 2[0m
   [4;36;1mSQL (0.000579)[0m   [0;1mCOMMIT[0m
+  [4;36;1mSQL (0.000162)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mCategory Columns (0.001250)[0m   [0mSHOW FIELDS FROM categories[0m
+  [4;36;1mSQL (0.000159)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mPdf Columns (0.001424)[0m   [0mSHOW FIELDS FROM pdfs[0m
+
+
+Processing PdfsController#index (for 127.0.0.1 at 2007-11-12 10:28:44) [GET]
+  Session ID: 960a680d02d6b9d35aa9843023b06506
+  Parameters: {"action"=>"index", "controller"=>"pdfs"}
+  [4;36;1mPdf Columns (0.002560)[0m   [0;1mSHOW FIELDS FROM pdfs[0m
+  [4;35;1mSQL (0.002449)[0m   [0mSELECT count(*) AS count_all FROM pdfs [0m
+  [4;36;1mPdf Load (0.000982)[0m   [0;1mSELECT * FROM pdfs LIMIT 0, 10[0m
+Rendering layoutfalseactionlist within layouts/pdfs
+Rendering pdfs/list
+Completed in 0.01555 (64 reqs/sec) | Rendering: 0.00455 (29%) | DB: 0.00599 (38%) | 200 OK [http://localhost/pdfs]
+
+
+Processing CategoriesController#index (for 127.0.0.1 at 2007-11-12 10:28:57) [GET]
+  Session ID: 960a680d02d6b9d35aa9843023b06506
+  Parameters: {"action"=>"index", "controller"=>"categories"}
+  [4;35;1mCategory Columns (0.001622)[0m   [0mSHOW FIELDS FROM categories[0m
+  [4;36;1mSQL (0.003539)[0m   [0;1mSELECT count(*) AS count_all FROM categories [0m
+  [4;35;1mCategory Load (0.002740)[0m   [0mSELECT * FROM categories LIMIT 0, 10[0m
+Rendering layoutfalseactionlist within layouts/categories
+Rendering categories/list
+Completed in 0.02088 (47 reqs/sec) | Rendering: 0.00640 (30%) | DB: 0.00790 (37%) | 200 OK [http://localhost/categories]
+
+
+Processing CategoriesController#edit (for 127.0.0.1 at 2007-11-12 10:29:01) [GET]
+  Session ID: 960a680d02d6b9d35aa9843023b06506
+  Parameters: {"action"=>"edit", "id"=>"1", "controller"=>"categories"}
+  [4;36;1mCategory Columns (0.002182)[0m   [0;1mSHOW FIELDS FROM categories[0m
+  [4;35;1mCategory Load (0.000863)[0m   [0mSELECT * FROM categories WHERE (categories.`id` = 1) [0m
+Rendering  within layouts/categories
+Rendering categories/edit
+Rendered categories/_form (0.00142)
+Completed in 0.01363 (73 reqs/sec) | Rendering: 0.00505 (37%) | DB: 0.00305 (22%) | 200 OK [http://localhost/categories/edit/1]
+
+
+Processing CategoriesController#list (for 127.0.0.1 at 2007-11-12 10:29:04) [GET]
+  Session ID: 960a680d02d6b9d35aa9843023b06506
+  Parameters: {"action"=>"list", "controller"=>"categories"}
+  [4;36;1mCategory Columns (0.001593)[0m   [0;1mSHOW FIELDS FROM categories[0m
+  [4;35;1mSQL (0.000984)[0m   [0mSELECT count(*) AS count_all FROM categories [0m
+  [4;36;1mCategory Load (0.000454)[0m   [0;1mSELECT * FROM categories LIMIT 0, 10[0m
+Rendering  within layouts/categories
+Rendering categories/list
+Completed in 0.01186 (84 reqs/sec) | Rendering: 0.00331 (27%) | DB: 0.00303 (25%) | 200 OK [http://localhost/categories/list]
+
+
+Processing CategoriesController#edit (for 127.0.0.1 at 2007-11-12 10:29:07) [GET]
+  Session ID: 960a680d02d6b9d35aa9843023b06506
+  Parameters: {"action"=>"edit", "id"=>"2", "controller"=>"categories"}
+  [4;35;1mCategory Columns (0.001729)[0m   [0mSHOW FIELDS FROM categories[0m
+  [4;36;1mCategory Load (0.000569)[0m   [0;1mSELECT * FROM categories WHERE (categories.`id` = 2) [0m
+Rendering  within layouts/categories
+Rendering categories/edit
+Rendered categories/_form (0.00050)
+Completed in 0.01094 (91 reqs/sec) | Rendering: 0.00319 (29%) | DB: 0.00230 (21%) | 200 OK [http://localhost/categories/edit/2]
+
+
+Processing CategoriesController#update (for 127.0.0.1 at 2007-11-12 10:29:15) [POST]
+  Session ID: 960a680d02d6b9d35aa9843023b06506
+  Parameters: {"commit"=>"Edit", "category"=>{"name"=>"BAS", "description"=>"Business Activity Statement"}, "action"=>"update", "id"=>"2", "controller"=>"categories"}
+  [4;35;1mCategory Columns (0.001497)[0m   [0mSHOW FIELDS FROM categories[0m
+  [4;36;1mCategory Load (0.000570)[0m   [0;1mSELECT * FROM categories WHERE (categories.`id` = 2) [0m
+  [4;35;1mSQL (0.000112)[0m   [0mBEGIN[0m
+  [4;36;1mCategory Update (0.000335)[0m   [0;1mUPDATE categories SET `description` = 'Business Activity Statement', `name` = 'BAS' WHERE `id` = 2[0m
+  [4;35;1mSQL (0.000584)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/categories/show/2
+Completed in 0.01141 (87 reqs/sec) | DB: 0.00310 (27%) | 302 Found [http://localhost/categories/update/2]
+
+
+Processing CategoriesController#show (for 127.0.0.1 at 2007-11-12 10:29:15) [GET]
+  Session ID: 960a680d02d6b9d35aa9843023b06506
+  Parameters: {"action"=>"show", "id"=>"2", "controller"=>"categories"}
+  [4;36;1mCategory Columns (0.001379)[0m   [0;1mSHOW FIELDS FROM categories[0m
+  [4;35;1mCategory Load (0.000719)[0m   [0mSELECT * FROM categories WHERE (categories.`id` = 2) [0m
+Rendering  within layouts/categories
+Rendering categories/show
+Completed in 0.01065 (93 reqs/sec) | Rendering: 0.00313 (29%) | DB: 0.00210 (19%) | 200 OK [http://localhost/categories/show/2]
+
+
+Processing CategoriesController#list (for 127.0.0.1 at 2007-11-12 10:29:17) [GET]
+  Session ID: 960a680d02d6b9d35aa9843023b06506
+  Parameters: {"action"=>"list", "controller"=>"categories"}
+  [4;36;1mCategory Columns (0.002401)[0m   [0;1mSHOW FIELDS FROM categories[0m
+  [4;35;1mSQL (0.000445)[0m   [0mSELECT count(*) AS count_all FROM categories [0m
+  [4;36;1mCategory Load (0.000541)[0m   [0;1mSELECT * FROM categories LIMIT 0, 10[0m
+Rendering  within layouts/categories
+Rendering categories/list
+Completed in 0.01202 (83 reqs/sec) | Rendering: 0.00329 (27%) | DB: 0.00339 (28%) | 200 OK [http://localhost/categories/list]
+
+
+Processing PdfsController#index (for 127.0.0.1 at 2007-11-12 10:29:26) [GET]
+  Session ID: 960a680d02d6b9d35aa9843023b06506
+  Parameters: {"action"=>"index", "controller"=>"pdfs"}
+  [4;35;1mPdf Columns (0.001751)[0m   [0mSHOW FIELDS FROM pdfs[0m
+  [4;36;1mSQL (0.000453)[0m   [0;1mSELECT count(*) AS count_all FROM pdfs [0m
+  [4;35;1mPdf Load (0.000827)[0m   [0mSELECT * FROM pdfs LIMIT 0, 10[0m
+Rendering layoutfalseactionlist within layouts/pdfs
+Rendering pdfs/list
+Completed in 0.01246 (80 reqs/sec) | Rendering: 0.00460 (36%) | DB: 0.00303 (24%) | 200 OK [http://localhost/pdfs]
+
+
+Processing PdfsController#index (for 127.0.0.1 at 2007-11-12 10:34:06) [GET]
+  Session ID: 960a680d02d6b9d35aa9843023b06506
+  Parameters: {"action"=>"index", "controller"=>"pdfs"}
+  [4;36;1mPdf Columns (0.001698)[0m   [0;1mSHOW FIELDS FROM pdfs[0m
+  [4;35;1mSQL (0.000687)[0m   [0mSELECT count(*) AS count_all FROM pdfs [0m
+  [4;36;1mPdf Load (0.000738)[0m   [0;1mSELECT * FROM pdfs LIMIT 0, 10[0m
+Rendering layoutfalseactionlist within layouts/application
+Rendering pdfs/list
+Completed in 0.01673 (59 reqs/sec) | Rendering: 0.00874 (52%) | DB: 0.00312 (18%) | 200 OK [http://localhost/pdfs]
+
+
+Processing CategoriesController#list (for 127.0.0.1 at 2007-11-12 10:34:11) [GET]
+  Session ID: 960a680d02d6b9d35aa9843023b06506
+  Parameters: {"action"=>"list", "controller"=>"categories"}
+  [4;35;1mCategory Columns (0.001753)[0m   [0mSHOW FIELDS FROM categories[0m
+  [4;36;1mSQL (0.000571)[0m   [0;1mSELECT count(*) AS count_all FROM categories [0m
+  [4;35;1mCategory Load (0.000727)[0m   [0mSELECT * FROM categories LIMIT 0, 10[0m
+Rendering  within layouts/categories
+Rendering categories/list
+Completed in 0.01401 (71 reqs/sec) | Rendering: 0.00548 (39%) | DB: 0.00305 (21%) | 200 OK [http://localhost/categories/list]
+
+
+Processing CategoriesController#list (for 127.0.0.1 at 2007-11-12 10:34:17) [GET]
+  Session ID: 960a680d02d6b9d35aa9843023b06506
+  Parameters: {"action"=>"list", "controller"=>"categories"}
+  [4;36;1mCategory Columns (0.001642)[0m   [0;1mSHOW FIELDS FROM categories[0m
+  [4;35;1mSQL (0.000503)[0m   [0mSELECT count(*) AS count_all FROM categories [0m
+  [4;36;1mCategory Load (0.000541)[0m   [0;1mSELECT * FROM categories LIMIT 0, 10[0m
+Rendering  within layouts/application
+Rendering categories/list
+Completed in 0.01167 (85 reqs/sec) | Rendering: 0.00322 (27%) | DB: 0.00269 (23%) | 200 OK [http://localhost/categories/list]
+
+
+Processing CategoriesController#list (for 127.0.0.1 at 2007-11-12 10:41:13) [GET]
+  Session ID: 960a680d02d6b9d35aa9843023b06506
+  Parameters: {"action"=>"list", "controller"=>"categories"}
+  [4;35;1mCategory Columns (0.001644)[0m   [0mSHOW FIELDS FROM categories[0m
+  [4;36;1mSQL (0.000700)[0m   [0;1mSELECT count(*) AS count_all FROM categories [0m
+  [4;35;1mCategory Load (0.000645)[0m   [0mSELECT * FROM categories LIMIT 0, 10[0m
+Rendering  within layouts/application
+Rendering categories/list
+Completed in 0.01455 (68 reqs/sec) | Rendering: 0.00636 (43%) | DB: 0.00299 (20%) | 200 OK [http://localhost/categories/list]
+
+
+Processing CategoriesController#index (for 127.0.0.1 at 2007-11-12 10:41:15) [GET]
+  Session ID: 960a680d02d6b9d35aa9843023b06506
+  Parameters: {"action"=>"index", "controller"=>"categories"}
+  [4;36;1mCategory Columns (0.001392)[0m   [0;1mSHOW FIELDS FROM categories[0m
+  [4;35;1mSQL (0.000493)[0m   [0mSELECT count(*) AS count_all FROM categories [0m
+  [4;36;1mCategory Load (0.000486)[0m   [0;1mSELECT * FROM categories LIMIT 0, 10[0m
+Rendering layoutfalseactionlist within layouts/application
+Rendering categories/list
+Completed in 0.01127 (88 reqs/sec) | Rendering: 0.00365 (32%) | DB: 0.00237 (21%) | 200 OK [http://localhost/categories]
+
+
+Processing PdfsController#index (for 127.0.0.1 at 2007-11-12 10:41:20) [GET]
+  Session ID: 960a680d02d6b9d35aa9843023b06506
+  Parameters: {"action"=>"index", "controller"=>"pdfs"}
+  [4;35;1mPdf Columns (0.001725)[0m   [0mSHOW FIELDS FROM pdfs[0m
+  [4;36;1mSQL (0.000461)[0m   [0;1mSELECT count(*) AS count_all FROM pdfs [0m
+  [4;35;1mPdf Load (0.000702)[0m   [0mSELECT * FROM pdfs LIMIT 0, 10[0m
+Rendering layoutfalseactionlist within layouts/application
+Rendering pdfs/list
+Completed in 0.01225 (81 reqs/sec) | Rendering: 0.00471 (38%) | DB: 0.00289 (23%) | 200 OK [http://localhost/pdfs]
+
+
+Processing CategoriesController#index (for 127.0.0.1 at 2007-11-12 10:41:21) [GET]
+  Session ID: 960a680d02d6b9d35aa9843023b06506
+  Parameters: {"action"=>"index", "controller"=>"categories"}
+  [4;36;1mCategory Columns (0.001447)[0m   [0;1mSHOW FIELDS FROM categories[0m
+  [4;35;1mSQL (0.001059)[0m   [0mSELECT count(*) AS count_all FROM categories [0m
+  [4;36;1mCategory Load (0.001033)[0m   [0;1mSELECT * FROM categories LIMIT 0, 10[0m
+Rendering layoutfalseactionlist within layouts/application
+Rendering categories/list
+Completed in 0.01245 (80 reqs/sec) | Rendering: 0.00359 (28%) | DB: 0.00354 (28%) | 200 OK [http://localhost/categories]
+
+
+Processing CategoriesController#index (for 127.0.0.1 at 2007-11-12 10:41:31) [GET]
+  Session ID: 960a680d02d6b9d35aa9843023b06506
+  Parameters: {"action"=>"index", "controller"=>"categories"}
+  [4;35;1mCategory Columns (0.001656)[0m   [0mSHOW FIELDS FROM categories[0m
+  [4;36;1mSQL (0.000756)[0m   [0;1mSELECT count(*) AS count_all FROM categories [0m
+  [4;35;1mCategory Load (0.000594)[0m   [0mSELECT * FROM categories LIMIT 0, 10[0m
+Rendering layoutfalseactionlist within layouts/application
+Rendering categories/list
+Completed in 0.01354 (73 reqs/sec) | Rendering: 0.00520 (38%) | DB: 0.00301 (22%) | 200 OK [http://localhost/categories]
+
+
+Processing PdfsController#index (for 127.0.0.1 at 2007-11-12 10:41:33) [GET]
+  Session ID: 960a680d02d6b9d35aa9843023b06506
+  Parameters: {"action"=>"index", "controller"=>"pdfs"}
+  [4;36;1mPdf Columns (0.001707)[0m   [0;1mSHOW FIELDS FROM pdfs[0m
+  [4;35;1mSQL (0.000447)[0m   [0mSELECT count(*) AS count_all FROM pdfs [0m
+  [4;36;1mPdf Load (0.000823)[0m   [0;1mSELECT * FROM pdfs LIMIT 0, 10[0m
+Rendering layoutfalseactionlist within layouts/application
+Rendering pdfs/list
+Completed in 0.01254 (79 reqs/sec) | Rendering: 0.00484 (38%) | DB: 0.00298 (23%) | 200 OK [http://localhost/pdfs]
+
+
+Processing CategoriesController#index (for 127.0.0.1 at 2007-11-12 10:41:34) [GET]
+  Session ID: 960a680d02d6b9d35aa9843023b06506
+  Parameters: {"action"=>"index", "controller"=>"categories"}
+  [4;35;1mCategory Columns (0.001440)[0m   [0mSHOW FIELDS FROM categories[0m
+  [4;36;1mSQL (0.000421)[0m   [0;1mSELECT count(*) AS count_all FROM categories [0m
+  [4;35;1mCategory Load (0.000524)[0m   [0mSELECT * FROM categories LIMIT 0, 10[0m
+Rendering layoutfalseactionlist within layouts/application
+Rendering categories/list
+Completed in 0.01182 (84 reqs/sec) | Rendering: 0.00366 (30%) | DB: 0.00238 (20%) | 200 OK [http://localhost/categories]
+
+
+Processing PdfsController#index (for 127.0.0.1 at 2007-11-12 10:41:35) [GET]
+  Session ID: 960a680d02d6b9d35aa9843023b06506
+  Parameters: {"action"=>"index", "controller"=>"pdfs"}
+  [4;36;1mPdf Columns (0.001523)[0m   [0;1mSHOW FIELDS FROM pdfs[0m
+  [4;35;1mSQL (0.000411)[0m   [0mSELECT count(*) AS count_all FROM pdfs [0m
+  [4;36;1mPdf Load (0.000646)[0m   [0;1mSELECT * FROM pdfs LIMIT 0, 10[0m
+Rendering layoutfalseactionlist within layouts/application
+Rendering pdfs/list
+Completed in 0.01213 (82 reqs/sec) | Rendering: 0.00491 (40%) | DB: 0.00258 (21%) | 200 OK [http://localhost/pdfs]
+
+
+Processing CategoriesController#index (for 127.0.0.1 at 2007-11-12 10:41:36) [GET]
+  Session ID: 960a680d02d6b9d35aa9843023b06506
+  Parameters: {"action"=>"index", "controller"=>"categories"}
+  [4;35;1mCategory Columns (0.001485)[0m   [0mSHOW FIELDS FROM categories[0m
+  [4;36;1mSQL (0.000338)[0m   [0;1mSELECT count(*) AS count_all FROM categories [0m
+  [4;35;1mCategory Load (0.000429)[0m   [0mSELECT * FROM categories LIMIT 0, 10[0m
+Rendering layoutfalseactionlist within layouts/application
+Rendering categories/list
+Completed in 0.01142 (87 reqs/sec) | Rendering: 0.00361 (31%) | DB: 0.00225 (19%) | 200 OK [http://localhost/categories]
+
+
+Processing CategoriesController#index (for 127.0.0.1 at 2007-11-12 10:41:39) [GET]
+  Session ID: 960a680d02d6b9d35aa9843023b06506
+  Parameters: {"action"=>"index", "controller"=>"categories"}
+  [4;36;1mCategory Columns (0.001587)[0m   [0;1mSHOW FIELDS FROM categories[0m
+  [4;35;1mSQL (0.000351)[0m   [0mSELECT count(*) AS count_all FROM categories [0m
+  [4;36;1mCategory Load (0.000424)[0m   [0;1mSELECT * FROM categories LIMIT 0, 10[0m
+Rendering layoutfalseactionlist within layouts/application
+Rendering categories/list
+Completed in 0.01253 (79 reqs/sec) | Rendering: 0.00367 (29%) | DB: 0.00236 (18%) | 200 OK [http://localhost/categories]
+
+
+Processing PdfsController#index (for 127.0.0.1 at 2007-11-12 10:41:39) [GET]
+  Session ID: 960a680d02d6b9d35aa9843023b06506
+  Parameters: {"action"=>"index", "controller"=>"pdfs"}
+  [4;35;1mPdf Columns (0.001767)[0m   [0mSHOW FIELDS FROM pdfs[0m
+  [4;36;1mSQL (0.000478)[0m   [0;1mSELECT count(*) AS count_all FROM pdfs [0m
+  [4;35;1mPdf Load (0.000729)[0m   [0mSELECT * FROM pdfs LIMIT 0, 10[0m
+Rendering layoutfalseactionlist within layouts/application
+Rendering pdfs/list
+Completed in 0.01270 (78 reqs/sec) | Rendering: 0.00503 (39%) | DB: 0.00297 (23%) | 200 OK [http://localhost/pdfs]
+
+
+Processing CategoriesController#index (for 127.0.0.1 at 2007-11-12 10:41:40) [GET]
+  Session ID: 960a680d02d6b9d35aa9843023b06506
+  Parameters: {"action"=>"index", "controller"=>"categories"}
+  [4;36;1mCategory Columns (0.001561)[0m   [0;1mSHOW FIELDS FROM categories[0m
+  [4;35;1mSQL (0.000470)[0m   [0mSELECT count(*) AS count_all FROM categories [0m
+  [4;36;1mCategory Load (0.000485)[0m   [0;1mSELECT * FROM categories LIMIT 0, 10[0m
+Rendering layoutfalseactionlist within layouts/application
+Rendering categories/list
+Completed in 0.01166 (85 reqs/sec) | Rendering: 0.00383 (32%) | DB: 0.00252 (21%) | 200 OK [http://localhost/categories]
+
+
+Processing CategoriesController#index (for 127.0.0.1 at 2007-11-12 10:41:49) [GET]
+  Session ID: 960a680d02d6b9d35aa9843023b06506
+  Parameters: {"action"=>"index", "controller"=>"categories"}
+  [4;35;1mCategory Columns (0.001527)[0m   [0mSHOW FIELDS FROM categories[0m
+  [4;36;1mSQL (0.000828)[0m   [0;1mSELECT count(*) AS count_all FROM categories [0m
+  [4;35;1mCategory Load (0.000705)[0m   [0mSELECT * FROM categories LIMIT 0, 10[0m
+Rendering layoutfalseactionlist within layouts/application
+Rendering categories/list
+Completed in 0.01517 (65 reqs/sec) | Rendering: 0.00630 (41%) | DB: 0.00306 (20%) | 200 OK [http://localhost/categories]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2007-11-12 10:41:49) [GET]
+  Session ID: 960a680d02d6b9d35aa9843023b06506
+  Parameters: {}
+
+
+ActionController::RoutingError (no route found to match "/stylesheets/application.css" with {:method=>:get}):
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/routing.rb:1292:in `recognize_path'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/routing.rb:1282:in `recognize'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.2.3/lib/dispatcher.rb:40:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.2.3/lib/webrick_server.rb:113:in `handle_dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.2.3/lib/webrick_server.rb:79:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.2.3/lib/webrick_server.rb:63:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.2.3/lib/commands/servers/webrick.rb:59
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:495:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:495:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.2.3/lib/commands/server.rb:39
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    script/server:3
+
+
+Rendering /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/templates/rescues/layout.rhtml (404 Page Not Found)
+
+
+Processing CategoriesController#index (for 127.0.0.1 at 2007-11-12 10:42:45) [GET]
+  Session ID: 960a680d02d6b9d35aa9843023b06506
+  Parameters: {"action"=>"index", "controller"=>"categories"}
+  [4;36;1mCategory Columns (0.001854)[0m   [0;1mSHOW FIELDS FROM categories[0m
+  [4;35;1mSQL (0.002449)[0m   [0mSELECT count(*) AS count_all FROM categories [0m
+  [4;36;1mCategory Load (0.000628)[0m   [0;1mSELECT * FROM categories LIMIT 0, 10[0m
+Rendering layoutfalseactionlist within layouts/application
+Rendering categories/list
+Completed in 0.01443 (69 reqs/sec) | Rendering: 0.00376 (26%) | DB: 0.00493 (34%) | 200 OK [http://localhost/categories]
+
+
+Processing CategoriesController#index (for 127.0.0.1 at 2007-11-12 10:49:46) [GET]
+  Session ID: 960a680d02d6b9d35aa9843023b06506
+  Parameters: {"action"=>"index", "controller"=>"categories"}
+  [4;35;1mCategory Columns (0.001638)[0m   [0mSHOW FIELDS FROM categories[0m
+  [4;36;1mSQL (0.001265)[0m   [0;1mSELECT count(*) AS count_all FROM categories [0m
+  [4;35;1mCategory Load (0.000543)[0m   [0mSELECT * FROM categories LIMIT 0, 10[0m
+Rendering layoutfalseactionlist within layouts/application
+Rendering categories/list
+Completed in 0.01438 (69 reqs/sec) | Rendering: 0.00549 (38%) | DB: 0.00345 (23%) | 200 OK [http://localhost/categories]
+
+
+Processing CategoriesController#index (for 127.0.0.1 at 2007-11-12 10:51:08) [GET]
+  Session ID: 960a680d02d6b9d35aa9843023b06506
+  Parameters: {"action"=>"index", "controller"=>"categories"}
+  [4;36;1mCategory Columns (0.001713)[0m   [0;1mSHOW FIELDS FROM categories[0m
+  [4;35;1mSQL (0.000684)[0m   [0mSELECT count(*) AS count_all FROM categories [0m
+  [4;36;1mCategory Load (0.000527)[0m   [0;1mSELECT * FROM categories LIMIT 0, 10[0m
+Rendering layoutfalseactionlist within layouts/application
+Rendering categories/list
+Completed in 0.01205 (82 reqs/sec) | Rendering: 0.00380 (31%) | DB: 0.00292 (24%) | 200 OK [http://localhost/categories]
+
+
+Processing CategoriesController#index (for 127.0.0.1 at 2007-11-12 10:51:09) [GET]
+  Session ID: 960a680d02d6b9d35aa9843023b06506
+  Parameters: {"action"=>"index", "controller"=>"categories"}
+  [4;35;1mCategory Columns (0.002523)[0m   [0mSHOW FIELDS FROM categories[0m
+  [4;36;1mSQL (0.000454)[0m   [0;1mSELECT count(*) AS count_all FROM categories [0m
+  [4;35;1mCategory Load (0.000547)[0m   [0mSELECT * FROM categories LIMIT 0, 10[0m
+Rendering layoutfalseactionlist within layouts/application
+Rendering categories/list
+Completed in 0.01302 (76 reqs/sec) | Rendering: 0.00392 (30%) | DB: 0.00352 (27%) | 200 OK [http://localhost/categories]
+
+
+Processing CategoriesController#index (for 127.0.0.1 at 2007-11-12 10:52:01) [GET]
+  Session ID: 960a680d02d6b9d35aa9843023b06506
+  Parameters: {"action"=>"index", "controller"=>"categories"}
+  [4;36;1mCategory Columns (0.001563)[0m   [0;1mSHOW FIELDS FROM categories[0m
+  [4;35;1mSQL (0.000843)[0m   [0mSELECT count(*) AS count_all FROM categories [0m
+  [4;36;1mCategory Load (0.000674)[0m   [0;1mSELECT * FROM categories LIMIT 0, 10[0m
+Rendering layoutfalseactionlist within layouts/application
+Rendering categories/list
+Completed in 0.01428 (70 reqs/sec) | Rendering: 0.00401 (28%) | DB: 0.00308 (21%) | 200 OK [http://localhost/categories]
+
+
+Processing CategoriesController#index (for 127.0.0.1 at 2007-11-12 10:52:03) [GET]
+  Session ID: 960a680d02d6b9d35aa9843023b06506
+  Parameters: {"action"=>"index", "controller"=>"categories"}
+  [4;35;1mCategory Columns (0.001416)[0m   [0mSHOW FIELDS FROM categories[0m
+  [4;36;1mSQL (0.000508)[0m   [0;1mSELECT count(*) AS count_all FROM categories [0m
+  [4;35;1mCategory Load (0.000538)[0m   [0mSELECT * FROM categories LIMIT 0, 10[0m
+Rendering layoutfalseactionlist within layouts/application
+Rendering categories/list
+Completed in 0.01198 (83 reqs/sec) | Rendering: 0.00391 (32%) | DB: 0.00246 (20%) | 200 OK [http://localhost/categories]
+
+
+Processing CategoriesController#index (for 127.0.0.1 at 2007-11-12 10:52:19) [GET]
+  Session ID: 960a680d02d6b9d35aa9843023b06506
+  Parameters: {"action"=>"index", "controller"=>"categories"}
+  [4;36;1mCategory Columns (0.001743)[0m   [0;1mSHOW FIELDS FROM categories[0m
+  [4;35;1mSQL (0.002307)[0m   [0mSELECT count(*) AS count_all FROM categories [0m
+  [4;36;1mCategory Load (0.000576)[0m   [0;1mSELECT * FROM categories LIMIT 0, 10[0m
+Rendering layoutfalseactionlist within layouts/application
+Rendering categories/list
+Completed in 0.01393 (71 reqs/sec) | Rendering: 0.00367 (26%) | DB: 0.00463 (33%) | 200 OK [http://localhost/categories]
+
+
+Processing PdfsController#index (for 127.0.0.1 at 2007-11-12 10:52:20) [GET]
+  Session ID: 960a680d02d6b9d35aa9843023b06506
+  Parameters: {"action"=>"index", "controller"=>"pdfs"}
+  [4;35;1mPdf Columns (0.001819)[0m   [0mSHOW FIELDS FROM pdfs[0m
+  [4;36;1mSQL (0.000415)[0m   [0;1mSELECT count(*) AS count_all FROM pdfs [0m
+  [4;35;1mPdf Load (0.000749)[0m   [0mSELECT * FROM pdfs LIMIT 0, 10[0m
+Rendering layoutfalseactionlist within layouts/application
+Rendering pdfs/list
+Completed in 0.01252 (79 reqs/sec) | Rendering: 0.00483 (38%) | DB: 0.00298 (23%) | 200 OK [http://localhost/pdfs]
+
+
+Processing CategoriesController#index (for 127.0.0.1 at 2007-11-12 10:52:22) [GET]
+  Session ID: 960a680d02d6b9d35aa9843023b06506
+  Parameters: {"action"=>"index", "controller"=>"categories"}
+  [4;36;1mCategory Columns (0.001403)[0m   [0;1mSHOW FIELDS FROM categories[0m
+  [4;35;1mSQL (0.000474)[0m   [0mSELECT count(*) AS count_all FROM categories [0m
+  [4;36;1mCategory Load (0.000615)[0m   [0;1mSELECT * FROM categories LIMIT 0, 10[0m
+Rendering layoutfalseactionlist within layouts/application
+Rendering categories/list
+Completed in 0.01179 (84 reqs/sec) | Rendering: 0.00373 (31%) | DB: 0.00249 (21%) | 200 OK [http://localhost/categories]
+
+
+Processing PdfsController#index (for 127.0.0.1 at 2007-11-12 10:52:23) [GET]
+  Session ID: 960a680d02d6b9d35aa9843023b06506
+  Parameters: {"action"=>"index", "controller"=>"pdfs"}
+  [4;35;1mPdf Columns (0.001649)[0m   [0mSHOW FIELDS FROM pdfs[0m
+  [4;36;1mSQL (0.000491)[0m   [0;1mSELECT count(*) AS count_all FROM pdfs [0m
+  [4;35;1mPdf Load (0.000763)[0m   [0mSELECT * FROM pdfs LIMIT 0, 10[0m
+Rendering layoutfalseactionlist within layouts/application
+Rendering pdfs/list
+Completed in 0.01363 (73 reqs/sec) | Rendering: 0.00483 (35%) | DB: 0.00290 (21%) | 200 OK [http://localhost/pdfs]
+
+
+Processing PdfsController#index (for 127.0.0.1 at 2007-11-12 10:54:50) [GET]
+  Session ID: 960a680d02d6b9d35aa9843023b06506
+  Parameters: {"action"=>"index", "controller"=>"pdfs"}
+  [4;36;1mPdf Columns (0.001850)[0m   [0;1mSHOW FIELDS FROM pdfs[0m
+  [4;35;1mSQL (0.000827)[0m   [0mSELECT count(*) AS count_all FROM pdfs [0m
+  [4;36;1mPdf Load (0.002474)[0m   [0;1mSELECT * FROM pdfs LIMIT 0, 10[0m
+Rendering layoutfalseactionlist within layouts/application
+Rendering pdfs/list
+Completed in 0.01674 (59 reqs/sec) | Rendering: 0.00662 (39%) | DB: 0.00515 (30%) | 200 OK [http://localhost/pdfs]
+
+
+Processing CategoriesController#index (for 127.0.0.1 at 2007-11-12 10:54:55) [GET]
+  Session ID: 960a680d02d6b9d35aa9843023b06506
+  Parameters: {"action"=>"index", "controller"=>"categories"}
+  [4;35;1mCategory Columns (0.002708)[0m   [0mSHOW FIELDS FROM categories[0m
+  [4;36;1mSQL (0.002477)[0m   [0;1mSELECT count(*) AS count_all FROM categories [0m
+  [4;35;1mCategory Load (0.000851)[0m   [0mSELECT * FROM categories LIMIT 0, 10[0m
+Rendering layoutfalseactionlist within layouts/application
+Rendering categories/list
+Completed in 0.01577 (63 reqs/sec) | Rendering: 0.00384 (24%) | DB: 0.00604 (38%) | 200 OK [http://localhost/categories]
+
+
+Processing PdfsController#index (for 127.0.0.1 at 2007-11-12 10:54:56) [GET]
+  Session ID: 960a680d02d6b9d35aa9843023b06506
+  Parameters: {"action"=>"index", "controller"=>"pdfs"}
+  [4;36;1mPdf Columns (0.001812)[0m   [0;1mSHOW FIELDS FROM pdfs[0m
+  [4;35;1mSQL (0.000422)[0m   [0mSELECT count(*) AS count_all FROM pdfs [0m
+  [4;36;1mPdf Load (0.000762)[0m   [0;1mSELECT * FROM pdfs LIMIT 0, 10[0m
+Rendering layoutfalseactionlist within layouts/application
+Rendering pdfs/list
+Completed in 0.01358 (73 reqs/sec) | Rendering: 0.00511 (37%) | DB: 0.00300 (22%) | 200 OK [http://localhost/pdfs]
+
+
+Processing CategoriesController#index (for 127.0.0.1 at 2007-11-12 10:55:52) [GET]
+  Session ID: 960a680d02d6b9d35aa9843023b06506
+  Parameters: {"action"=>"index", "controller"=>"categories"}
+  [4;35;1mCategory Columns (0.001455)[0m   [0mSHOW FIELDS FROM categories[0m
+  [4;36;1mSQL (0.000754)[0m   [0;1mSELECT count(*) AS count_all FROM categories [0m
+  [4;35;1mCategory Load (0.000533)[0m   [0mSELECT * FROM categories LIMIT 0, 10[0m
+Rendering layoutfalseactionlist within layouts/application
+Rendering categories/list
+Completed in 0.01223 (81 reqs/sec) | Rendering: 0.00400 (32%) | DB: 0.00274 (22%) | 200 OK [http://localhost/categories]
+
+
+Processing PdfsController#index (for 127.0.0.1 at 2007-11-12 10:55:54) [GET]
+  Session ID: 960a680d02d6b9d35aa9843023b06506
+  Parameters: {"action"=>"index", "controller"=>"pdfs"}
+  [4;36;1mPdf Columns (0.002168)[0m   [0;1mSHOW FIELDS FROM pdfs[0m
+  [4;35;1mSQL (0.000630)[0m   [0mSELECT count(*) AS count_all FROM pdfs [0m
+  [4;36;1mPdf Load (0.000691)[0m   [0;1mSELECT * FROM pdfs LIMIT 0, 10[0m
+Rendering layoutfalseactionlist within layouts/application
+Rendering pdfs/list
+Completed in 0.01306 (76 reqs/sec) | Rendering: 0.00484 (37%) | DB: 0.00349 (26%) | 200 OK [http://localhost/pdfs]
+
+
+Processing CategoriesController#index (for 127.0.0.1 at 2007-11-12 10:55:55) [GET]
+  Session ID: 960a680d02d6b9d35aa9843023b06506
+  Parameters: {"action"=>"index", "controller"=>"categories"}
+  [4;35;1mCategory Columns (0.001614)[0m   [0mSHOW FIELDS FROM categories[0m
+  [4;36;1mSQL (0.001046)[0m   [0;1mSELECT count(*) AS count_all FROM categories [0m
+  [4;35;1mCategory Load (0.000644)[0m   [0mSELECT * FROM categories LIMIT 0, 10[0m
+Rendering layoutfalseactionlist within layouts/application
+Rendering categories/list
+Completed in 0.01284 (77 reqs/sec) | Rendering: 0.00387 (30%) | DB: 0.00330 (25%) | 200 OK [http://localhost/categories]
+
+
+Processing CategoriesController#index (for 127.0.0.1 at 2007-11-12 10:56:17) [GET]
+  Session ID: 960a680d02d6b9d35aa9843023b06506
+  Parameters: {"action"=>"index", "controller"=>"categories"}
+  [4;36;1mCategory Columns (0.001389)[0m   [0;1mSHOW FIELDS FROM categories[0m
+  [4;35;1mSQL (0.000696)[0m   [0mSELECT count(*) AS count_all FROM categories [0m
+  [4;36;1mCategory Load (0.000523)[0m   [0;1mSELECT * FROM categories LIMIT 0, 10[0m
+Rendering layoutfalseactionlist within layouts/application
+Rendering categories/list
+
+
+ActionView::TemplateError (undefined method `name' for #<CategoriesController:0x9944d9c>) on line #13 of app/views/layouts/application.rhtml:
+10: <body>
+11: 
+12: 	<div id="headingback">
+13: 		<div id="heading"><%= controller.name %></div>
+14: 	</div>
+15: 
+16: 	
+
+    #{RAILS_ROOT}/app/views/layouts/application.rhtml:13:in `_run_rhtml_47app47views47layouts47application46rhtml'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_view/base.rb:326:in `send'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_view/base.rb:326:in `compile_and_render_template'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_view/base.rb:301:in `render_template'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_view/base.rb:260:in `render_file'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/layout.rb:254:in `render_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/benchmarking.rb:50:in `render'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/benchmarking.rb:50:in `render'
+    app/controllers/categories_controller.rb:4:in `index'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:1095:in `send'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:1095:in `perform_action_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:632:in `call_filter'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:634:in `call_filter'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:619:in `perform_action_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/benchmarking.rb:66:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/benchmarking.rb:66:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/rescue.rb:83:in `perform_action'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:430:in `send'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:430:in `process_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:624:in `process_without_session_management_support'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/session_management.rb:114:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:330:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.2.3/lib/dispatcher.rb:41:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.2.3/lib/webrick_server.rb:113:in `handle_dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.2.3/lib/webrick_server.rb:79:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.2.3/lib/webrick_server.rb:63:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.2.3/lib/commands/servers/webrick.rb:59
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:495:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:495:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.2.3/lib/commands/server.rb:39
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    script/server:3
+
+
+Rendering /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/templates/rescues/layout.rhtml (500 Internal Error)
+
+
+Processing CategoriesController#index (for 127.0.0.1 at 2007-11-12 10:56:24) [GET]
+  Session ID: 960a680d02d6b9d35aa9843023b06506
+  Parameters: {"action"=>"index", "controller"=>"categories"}
+  [4;35;1mCategory Columns (0.001871)[0m   [0mSHOW FIELDS FROM categories[0m
+  [4;36;1mSQL (0.000547)[0m   [0;1mSELECT count(*) AS count_all FROM categories [0m
+  [4;35;1mCategory Load (0.000649)[0m   [0mSELECT * FROM categories LIMIT 0, 10[0m
+Rendering layoutfalseactionlist within layouts/application
+Rendering categories/list
+Completed in 0.01417 (70 reqs/sec) | Rendering: 0.00557 (39%) | DB: 0.00307 (21%) | 200 OK [http://localhost/categories]
+
+
+Processing PdfsController#index (for 127.0.0.1 at 2007-11-12 10:56:30) [GET]
+  Session ID: 960a680d02d6b9d35aa9843023b06506
+  Parameters: {"action"=>"index", "controller"=>"pdfs"}
+  [4;36;1mPdf Columns (0.002007)[0m   [0;1mSHOW FIELDS FROM pdfs[0m
+  [4;35;1mSQL (0.000611)[0m   [0mSELECT count(*) AS count_all FROM pdfs [0m
+  [4;36;1mPdf Load (0.000652)[0m   [0;1mSELECT * FROM pdfs LIMIT 0, 10[0m
+Rendering layoutfalseactionlist within layouts/application
+Rendering pdfs/list
+Completed in 0.01340 (74 reqs/sec) | Rendering: 0.00505 (37%) | DB: 0.00327 (24%) | 200 OK [http://localhost/pdfs]
+
+
+Processing CategoriesController#index (for 127.0.0.1 at 2007-11-12 10:56:31) [GET]
+  Session ID: 960a680d02d6b9d35aa9843023b06506
+  Parameters: {"action"=>"index", "controller"=>"categories"}
+  [4;35;1mCategory Columns (0.001409)[0m   [0mSHOW FIELDS FROM categories[0m
+  [4;36;1mSQL (0.001139)[0m   [0;1mSELECT count(*) AS count_all FROM categories [0m
+  [4;35;1mCategory Load (0.000680)[0m   [0mSELECT * FROM categories LIMIT 0, 10[0m
+Rendering layoutfalseactionlist within layouts/application
+Rendering categories/list
+Completed in 0.01264 (79 reqs/sec) | Rendering: 0.00408 (32%) | DB: 0.00323 (25%) | 200 OK [http://localhost/categories]
+
+
+Processing PdfsController#index (for 127.0.0.1 at 2007-11-12 10:56:32) [GET]
+  Session ID: 960a680d02d6b9d35aa9843023b06506
+  Parameters: {"action"=>"index", "controller"=>"pdfs"}
+  [4;36;1mPdf Columns (0.001513)[0m   [0;1mSHOW FIELDS FROM pdfs[0m
+  [4;35;1mSQL (0.000331)[0m   [0mSELECT count(*) AS count_all FROM pdfs [0m
+  [4;36;1mPdf Load (0.000643)[0m   [0;1mSELECT * FROM pdfs LIMIT 0, 10[0m
+Rendering layoutfalseactionlist within layouts/application
+Rendering pdfs/list
+Completed in 0.01225 (81 reqs/sec) | Rendering: 0.00504 (41%) | DB: 0.00249 (20%) | 200 OK [http://localhost/pdfs]
+
+
+Processing CategoriesController#index (for 127.0.0.1 at 2007-11-12 10:56:34) [GET]
+  Session ID: 960a680d02d6b9d35aa9843023b06506
+  Parameters: {"action"=>"index", "controller"=>"categories"}
+  [4;35;1mCategory Columns (0.002259)[0m   [0mSHOW FIELDS FROM categories[0m
+  [4;36;1mSQL (0.000744)[0m   [0;1mSELECT count(*) AS count_all FROM categories [0m
+  [4;35;1mCategory Load (0.000486)[0m   [0mSELECT * FROM categories LIMIT 0, 10[0m
+Rendering layoutfalseactionlist within layouts/application
+Rendering categories/list
+Completed in 0.01280 (78 reqs/sec) | Rendering: 0.00365 (28%) | DB: 0.00349 (27%) | 200 OK [http://localhost/categories]
+
+
+Processing CategoriesController#index (for 127.0.0.1 at 2007-11-12 10:56:52) [GET]
+  Session ID: 960a680d02d6b9d35aa9843023b06506
+  Parameters: {"action"=>"index", "controller"=>"categories"}
+  [4;36;1mCategory Columns (0.001516)[0m   [0;1mSHOW FIELDS FROM categories[0m
+  [4;35;1mSQL (0.000866)[0m   [0mSELECT count(*) AS count_all FROM categories [0m
+  [4;36;1mCategory Load (0.000552)[0m   [0;1mSELECT * FROM categories LIMIT 0, 10[0m
+Rendering layoutfalseactionlist within layouts/application
+Rendering categories/list
+
+
+ActionView::TemplateError (undefined method `model_name' for #<CategoriesController:0x9989334>) on line #13 of app/views/layouts/application.rhtml:
+10: <body>
+11: 
+12: 	<div id="headingback">
+13: 		<div id="heading"><%= controller.model_name %></div>
+14: 	</div>
+15: 
+16: 	
+
+    #{RAILS_ROOT}/app/views/layouts/application.rhtml:13:in `_run_rhtml_47app47views47layouts47application46rhtml'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_view/base.rb:326:in `send'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_view/base.rb:326:in `compile_and_render_template'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_view/base.rb:301:in `render_template'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_view/base.rb:260:in `render_file'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/layout.rb:254:in `render_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/benchmarking.rb:50:in `render'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/benchmarking.rb:50:in `render'
+    app/controllers/categories_controller.rb:4:in `index'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:1095:in `send'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:1095:in `perform_action_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:632:in `call_filter'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:634:in `call_filter'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:619:in `perform_action_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/benchmarking.rb:66:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/benchmarking.rb:66:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/rescue.rb:83:in `perform_action'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:430:in `send'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:430:in `process_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:624:in `process_without_session_management_support'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/session_management.rb:114:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:330:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.2.3/lib/dispatcher.rb:41:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.2.3/lib/webrick_server.rb:113:in `handle_dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.2.3/lib/webrick_server.rb:79:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.2.3/lib/webrick_server.rb:63:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.2.3/lib/commands/servers/webrick.rb:59
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:495:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:495:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.2.3/lib/commands/server.rb:39
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    script/server:3
+
+
+Rendering /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/templates/rescues/layout.rhtml (500 Internal Error)
+
+
+Processing CategoriesController#index (for 127.0.0.1 at 2007-11-12 10:57:02) [GET]
+  Session ID: 960a680d02d6b9d35aa9843023b06506
+  Parameters: {"action"=>"index", "controller"=>"categories"}
+  [4;35;1mCategory Columns (0.001538)[0m   [0mSHOW FIELDS FROM categories[0m
+  [4;36;1mSQL (0.000487)[0m   [0;1mSELECT count(*) AS count_all FROM categories [0m
+  [4;35;1mCategory Load (0.000546)[0m   [0mSELECT * FROM categories LIMIT 0, 10[0m
+Rendering layoutfalseactionlist within layouts/application
+Rendering categories/list
+Completed in 0.01667 (59 reqs/sec) | Rendering: 0.00855 (51%) | DB: 0.00257 (15%) | 200 OK [http://localhost/categories]
+
+
+Processing PdfsController#index (for 127.0.0.1 at 2007-11-12 10:57:05) [GET]
+  Session ID: 960a680d02d6b9d35aa9843023b06506
+  Parameters: {"action"=>"index", "controller"=>"pdfs"}
+  [4;36;1mPdf Columns (0.001703)[0m   [0;1mSHOW FIELDS FROM pdfs[0m
+  [4;35;1mSQL (0.000348)[0m   [0mSELECT count(*) AS count_all FROM pdfs [0m
+  [4;36;1mPdf Load (0.000635)[0m   [0;1mSELECT * FROM pdfs LIMIT 0, 10[0m
+Rendering layoutfalseactionlist within layouts/application
+Rendering pdfs/list
+Completed in 0.06261 (15 reqs/sec) | Rendering: 0.05523 (88%) | DB: 0.00269 (4%) | 200 OK [http://localhost/pdfs]
+
+
+Processing CategoriesController#index (for 127.0.0.1 at 2007-11-12 10:57:07) [GET]
+  Session ID: 960a680d02d6b9d35aa9843023b06506
+  Parameters: {"action"=>"index", "controller"=>"categories"}
+  [4;35;1mCategory Columns (0.001324)[0m   [0mSHOW FIELDS FROM categories[0m
+  [4;36;1mSQL (0.000328)[0m   [0;1mSELECT count(*) AS count_all FROM categories [0m
+  [4;35;1mCategory Load (0.000496)[0m   [0mSELECT * FROM categories LIMIT 0, 10[0m
+Rendering layoutfalseactionlist within layouts/application
+Rendering categories/list
+Completed in 0.01123 (89 reqs/sec) | Rendering: 0.00380 (33%) | DB: 0.00215 (19%) | 200 OK [http://localhost/categories]
+
+
+Processing PdfsController#index (for 127.0.0.1 at 2007-11-12 10:57:08) [GET]
+  Session ID: 960a680d02d6b9d35aa9843023b06506
+  Parameters: {"action"=>"index", "controller"=>"pdfs"}
+  [4;36;1mPdf Columns (0.001593)[0m   [0;1mSHOW FIELDS FROM pdfs[0m
+  [4;35;1mSQL (0.000600)[0m   [0mSELECT count(*) AS count_all FROM pdfs [0m
+  [4;36;1mPdf Load (0.000652)[0m   [0;1mSELECT * FROM pdfs LIMIT 0, 10[0m
+Rendering layoutfalseactionlist within layouts/application
+Rendering pdfs/list
+Completed in 0.01268 (78 reqs/sec) | Rendering: 0.00514 (40%) | DB: 0.00284 (22%) | 200 OK [http://localhost/pdfs]
+
+
+Processing PdfsController#index (for 127.0.0.1 at 2007-11-12 10:59:09) [GET]
+  Session ID: 960a680d02d6b9d35aa9843023b06506
+  Parameters: {"action"=>"index", "controller"=>"pdfs"}
+  [4;35;1mPdf Columns (0.001756)[0m   [0mSHOW FIELDS FROM pdfs[0m
+  [4;36;1mSQL (0.000692)[0m   [0;1mSELECT count(*) AS count_all FROM pdfs [0m
+  [4;35;1mPdf Load (0.000780)[0m   [0mSELECT * FROM pdfs LIMIT 0, 10[0m
+Rendering layoutfalseactionlist within layouts/application
+Rendering pdfs/list
+Completed in 0.01468 (68 reqs/sec) | Rendering: 0.00683 (46%) | DB: 0.00323 (21%) | 200 OK [http://localhost/pdfs]
+
+
+Processing PdfsController#index (for 127.0.0.1 at 2007-11-12 10:59:16) [GET]
+  Session ID: 960a680d02d6b9d35aa9843023b06506
+  Parameters: {"action"=>"index", "controller"=>"pdfs"}
+  [4;36;1mPdf Columns (0.002240)[0m   [0;1mSHOW FIELDS FROM pdfs[0m
+  [4;35;1mSQL (0.000639)[0m   [0mSELECT count(*) AS count_all FROM pdfs [0m
+  [4;36;1mPdf Load (0.000793)[0m   [0;1mSELECT * FROM pdfs LIMIT 0, 10[0m
+Rendering layoutfalseactionlist within layouts/application
+Rendering pdfs/list
+Completed in 0.01501 (66 reqs/sec) | Rendering: 0.00670 (44%) | DB: 0.00367 (24%) | 200 OK [http://localhost/pdfs]
+
+
+Processing PdfsController#index (for 127.0.0.1 at 2007-11-12 11:00:03) [GET]
+  Session ID: 960a680d02d6b9d35aa9843023b06506
+  Parameters: {"action"=>"index", "controller"=>"pdfs"}
+  [4;35;1mPdf Columns (0.002117)[0m   [0mSHOW FIELDS FROM pdfs[0m
+  [4;36;1mSQL (0.000896)[0m   [0;1mSELECT count(*) AS count_all FROM pdfs [0m
+  [4;35;1mPdf Load (0.002495)[0m   [0mSELECT * FROM pdfs LIMIT 0, 10[0m
+Rendering layoutfalseactionlist within layouts/application
+Rendering pdfs/list
+Completed in 0.01773 (56 reqs/sec) | Rendering: 0.00705 (39%) | DB: 0.00551 (31%) | 200 OK [http://localhost/pdfs]
+
+
+Processing PdfsController#index (for 127.0.0.1 at 2007-11-12 11:02:18) [GET]
+  Session ID: 960a680d02d6b9d35aa9843023b06506
+  Parameters: {"action"=>"index", "controller"=>"pdfs"}
+  [4;36;1mPdf Columns (0.001802)[0m   [0;1mSHOW FIELDS FROM pdfs[0m
+  [4;35;1mSQL (0.002365)[0m   [0mSELECT count(*) AS count_all FROM pdfs [0m
+  [4;36;1mPdf Load (0.000822)[0m   [0;1mSELECT * FROM pdfs LIMIT 0, 10[0m
+Rendering layoutfalseactionlist within layouts/application
+Rendering pdfs/list
+Completed in 0.01844 (54 reqs/sec) | Rendering: 0.00669 (36%) | DB: 0.00499 (27%) | 200 OK [http://localhost/pdfs]
+
+
+Processing PdfsController#index (for 127.0.0.1 at 2007-11-12 11:02:45) [GET]
+  Session ID: 960a680d02d6b9d35aa9843023b06506
+  Parameters: {"action"=>"index", "controller"=>"pdfs"}
+  [4;35;1mPdf Columns (0.001636)[0m   [0mSHOW FIELDS FROM pdfs[0m
+  [4;36;1mSQL (0.000744)[0m   [0;1mSELECT count(*) AS count_all FROM pdfs [0m
+  [4;35;1mPdf Load (0.000923)[0m   [0mSELECT * FROM pdfs LIMIT 0, 10[0m
+Rendering layoutfalseactionlist within layouts/application
+Rendering pdfs/list
+Completed in 0.01493 (66 reqs/sec) | Rendering: 0.00654 (43%) | DB: 0.00330 (22%) | 200 OK [http://localhost/pdfs]
+
+
+Processing PdfsController#index (for 127.0.0.1 at 2007-11-12 11:05:17) [GET]
+  Session ID: 960a680d02d6b9d35aa9843023b06506
+  Parameters: {"action"=>"index", "controller"=>"pdfs"}
+  [4;36;1mPdf Columns (0.001911)[0m   [0;1mSHOW FIELDS FROM pdfs[0m
+  [4;35;1mSQL (0.000806)[0m   [0mSELECT count(*) AS count_all FROM pdfs [0m
+  [4;36;1mPdf Load (0.000713)[0m   [0;1mSELECT * FROM pdfs LIMIT 0, 10[0m
+Rendering layoutfalseactionlist within layouts/application
+Rendering pdfs/list
+Completed in 0.01481 (67 reqs/sec) | Rendering: 0.00666 (44%) | DB: 0.00343 (23%) | 200 OK [http://localhost/pdfs]
+
+
+Processing PdfsController#index (for 127.0.0.1 at 2007-11-12 11:06:33) [GET]
+  Session ID: 960a680d02d6b9d35aa9843023b06506
+  Parameters: {"action"=>"index", "controller"=>"pdfs"}
+  [4;35;1mPdf Columns (0.002056)[0m   [0mSHOW FIELDS FROM pdfs[0m
+  [4;36;1mSQL (0.000832)[0m   [0;1mSELECT count(*) AS count_all FROM pdfs [0m
+  [4;35;1mPdf Load (0.000857)[0m   [0mSELECT * FROM pdfs LIMIT 0, 10[0m
+Rendering layoutfalseactionlist within layouts/application
+Rendering pdfs/list
+Completed in 0.01525 (65 reqs/sec) | Rendering: 0.00655 (42%) | DB: 0.00375 (24%) | 200 OK [http://localhost/pdfs]
+
+
+Processing PdfsController#index (for 127.0.0.1 at 2007-11-12 11:07:31) [GET]
+  Session ID: 960a680d02d6b9d35aa9843023b06506
+  Parameters: {"action"=>"index", "controller"=>"pdfs"}
+  [4;36;1mPdf Columns (0.002670)[0m   [0;1mSHOW FIELDS FROM pdfs[0m
+  [4;35;1mSQL (0.000748)[0m   [0mSELECT count(*) AS count_all FROM pdfs [0m
+  [4;36;1mPdf Load (0.000783)[0m   [0;1mSELECT * FROM pdfs LIMIT 0, 10[0m
+Rendering layoutfalseactionlist within layouts/application
+Rendering pdfs/list
+Completed in 0.02791 (35 reqs/sec) | Rendering: 0.00729 (26%) | DB: 0.00420 (15%) | 200 OK [http://localhost/pdfs]
+
+
+Processing CategoriesController#index (for 127.0.0.1 at 2007-11-12 11:07:34) [GET]
+  Session ID: 960a680d02d6b9d35aa9843023b06506
+  Parameters: {"action"=>"index", "controller"=>"categories"}
+  [4;35;1mCategory Columns (0.003264)[0m   [0mSHOW FIELDS FROM categories[0m
+  [4;36;1mSQL (0.000569)[0m   [0;1mSELECT count(*) AS count_all FROM categories [0m
+  [4;35;1mCategory Load (0.000494)[0m   [0mSELECT * FROM categories LIMIT 0, 10[0m
+Rendering layoutfalseactionlist within layouts/application
+Rendering categories/list
+Completed in 0.01374 (72 reqs/sec) | Rendering: 0.00401 (29%) | DB: 0.00433 (31%) | 200 OK [http://localhost/categories]
+
+
+Processing PdfsController#index (for 127.0.0.1 at 2007-11-12 11:07:35) [GET]
+  Session ID: 960a680d02d6b9d35aa9843023b06506
+  Parameters: {"class"=>"menuitem", "action"=>"index", "controller"=>"pdfs"}
+  [4;36;1mPdf Columns (0.001886)[0m   [0;1mSHOW FIELDS FROM pdfs[0m
+  [4;35;1mSQL (0.000534)[0m   [0mSELECT count(*) AS count_all FROM pdfs [0m
+  [4;36;1mPdf Load (0.000710)[0m   [0;1mSELECT * FROM pdfs LIMIT 0, 10[0m
+Rendering layoutfalseactionlist within layouts/application
+Rendering pdfs/list
+Completed in 0.01295 (77 reqs/sec) | Rendering: 0.00513 (39%) | DB: 0.00313 (24%) | 200 OK [http://localhost/pdfs?class=menuitem]
+
+
+Processing PdfsController#index (for 127.0.0.1 at 2007-11-12 11:08:00) [GET]
+  Session ID: 960a680d02d6b9d35aa9843023b06506
+  Parameters: {"class"=>"menuitem", "action"=>"index", "controller"=>"pdfs"}
+  [4;35;1mPdf Columns (0.001737)[0m   [0mSHOW FIELDS FROM pdfs[0m
+  [4;36;1mSQL (0.000846)[0m   [0;1mSELECT count(*) AS count_all FROM pdfs [0m
+  [4;35;1mPdf Load (0.000860)[0m   [0mSELECT * FROM pdfs LIMIT 0, 10[0m
+Rendering layoutfalseactionlist within layouts/application
+Rendering pdfs/list
+Completed in 0.01681 (59 reqs/sec) | Rendering: 0.00838 (49%) | DB: 0.00344 (20%) | 200 OK [http://localhost/pdfs?class=menuitem]
+
+
+Processing PdfsController#index (for 127.0.0.1 at 2007-11-12 11:08:03) [GET]
+  Session ID: 960a680d02d6b9d35aa9843023b06506
+  Parameters: {"class"=>"menuitem", "action"=>"index", "controller"=>"pdfs"}
+  [4;36;1mPdf Columns (0.001591)[0m   [0;1mSHOW FIELDS FROM pdfs[0m
+  [4;35;1mSQL (0.000329)[0m   [0mSELECT count(*) AS count_all FROM pdfs [0m
+  [4;36;1mPdf Load (0.000647)[0m   [0;1mSELECT * FROM pdfs LIMIT 0, 10[0m
+Rendering layoutfalseactionlist within layouts/application
+Rendering pdfs/list
+Completed in 0.01211 (82 reqs/sec) | Rendering: 0.00493 (40%) | DB: 0.00257 (21%) | 200 OK [http://localhost/pdfs?class=menuitem]
+
+
+Processing CategoriesController#index (for 127.0.0.1 at 2007-11-12 11:08:04) [GET]
+  Session ID: 960a680d02d6b9d35aa9843023b06506
+  Parameters: {"action"=>"index", "controller"=>"categories"}
+  [4;35;1mCategory Columns (0.001710)[0m   [0mSHOW FIELDS FROM categories[0m
+  [4;36;1mSQL (0.000633)[0m   [0;1mSELECT count(*) AS count_all FROM categories [0m
+  [4;35;1mCategory Load (0.000549)[0m   [0mSELECT * FROM categories LIMIT 0, 10[0m
+Rendering layoutfalseactionlist within layouts/application
+Rendering categories/list
+Completed in 0.01317 (75 reqs/sec) | Rendering: 0.00471 (35%) | DB: 0.00289 (21%) | 200 OK [http://localhost/categories]
+
+
+Processing PdfsController#index (for 127.0.0.1 at 2007-11-12 11:08:06) [GET]
+  Session ID: 960a680d02d6b9d35aa9843023b06506
+  Parameters: {"class"=>"menuitem", "action"=>"index", "controller"=>"pdfs"}
+  [4;36;1mPdf Columns (0.001629)[0m   [0;1mSHOW FIELDS FROM pdfs[0m
+  [4;35;1mSQL (0.000340)[0m   [0mSELECT count(*) AS count_all FROM pdfs [0m
+  [4;36;1mPdf Load (0.000636)[0m   [0;1mSELECT * FROM pdfs LIMIT 0, 10[0m
+Rendering layoutfalseactionlist within layouts/application
+Rendering pdfs/list
+Completed in 0.06423 (15 reqs/sec) | Rendering: 0.00576 (8%) | DB: 0.00261 (4%) | 200 OK [http://localhost/pdfs?class=menuitem]
+
+
+Processing CategoriesController#index (for 127.0.0.1 at 2007-11-12 11:08:07) [GET]
+  Session ID: 960a680d02d6b9d35aa9843023b06506
+  Parameters: {"action"=>"index", "controller"=>"categories"}
+  [4;35;1mCategory Columns (0.001504)[0m   [0mSHOW FIELDS FROM categories[0m
+  [4;36;1mSQL (0.000413)[0m   [0;1mSELECT count(*) AS count_all FROM categories [0m
+  [4;35;1mCategory Load (0.000540)[0m   [0mSELECT * FROM categories LIMIT 0, 10[0m
+Rendering layoutfalseactionlist within layouts/application
+Rendering categories/list
+Completed in 0.01142 (87 reqs/sec) | Rendering: 0.00378 (33%) | DB: 0.00246 (21%) | 200 OK [http://localhost/categories]
+
+
+Processing PdfsController#index (for 127.0.0.1 at 2007-11-12 11:08:09) [GET]
+  Session ID: 960a680d02d6b9d35aa9843023b06506
+  Parameters: {"class"=>"menuitem", "action"=>"index", "controller"=>"pdfs"}
+  [4;36;1mPdf Columns (0.001567)[0m   [0;1mSHOW FIELDS FROM pdfs[0m
+  [4;35;1mSQL (0.000336)[0m   [0mSELECT count(*) AS count_all FROM pdfs [0m
+  [4;36;1mPdf Load (0.000664)[0m   [0;1mSELECT * FROM pdfs LIMIT 0, 10[0m
+Rendering layoutfalseactionlist within layouts/application
+Rendering pdfs/list
+Completed in 0.01221 (81 reqs/sec) | Rendering: 0.00506 (41%) | DB: 0.00257 (21%) | 200 OK [http://localhost/pdfs?class=menuitem]
+
+
+Processing CategoriesController#index (for 127.0.0.1 at 2007-11-12 11:08:09) [GET]
+  Session ID: 960a680d02d6b9d35aa9843023b06506
+  Parameters: {"action"=>"index", "controller"=>"categories"}
+  [4;35;1mCategory Columns (0.001563)[0m   [0mSHOW FIELDS FROM categories[0m
+  [4;36;1mSQL (0.000526)[0m   [0;1mSELECT count(*) AS count_all FROM categories [0m
+  [4;35;1mCategory Load (0.000688)[0m   [0mSELECT * FROM categories LIMIT 0, 10[0m
+Rendering layoutfalseactionlist within layouts/application
+Rendering categories/list
+Completed in 0.01193 (83 reqs/sec) | Rendering: 0.00380 (31%) | DB: 0.00278 (23%) | 200 OK [http://localhost/categories]
+
+
+Processing PdfsController#index (for 127.0.0.1 at 2007-11-12 11:08:18) [GET]
+  Session ID: 960a680d02d6b9d35aa9843023b06506
+  Parameters: {"class"=>"menuitem", "action"=>"index", "controller"=>"pdfs"}
+  [4;36;1mPdf Columns (0.001682)[0m   [0;1mSHOW FIELDS FROM pdfs[0m
+  [4;35;1mSQL (0.000777)[0m   [0mSELECT count(*) AS count_all FROM pdfs [0m
+  [4;36;1mPdf Load (0.000752)[0m   [0;1mSELECT * FROM pdfs LIMIT 0, 10[0m
+Rendering layoutfalseactionlist within layouts/application
+Rendering pdfs/list
+Completed in 0.01290 (77 reqs/sec) | Rendering: 0.00496 (38%) | DB: 0.00321 (24%) | 200 OK [http://localhost/pdfs?class=menuitem]
+
+
+Processing CategoriesController#index (for 127.0.0.1 at 2007-11-12 11:08:19) [GET]
+  Session ID: 960a680d02d6b9d35aa9843023b06506
+  Parameters: {"action"=>"index", "controller"=>"categories"}
+  [4;35;1mCategory Columns (0.001608)[0m   [0mSHOW FIELDS FROM categories[0m
+  [4;36;1mSQL (0.000414)[0m   [0;1mSELECT count(*) AS count_all FROM categories [0m
+  [4;35;1mCategory Load (0.000612)[0m   [0mSELECT * FROM categories LIMIT 0, 10[0m
+Rendering layoutfalseactionlist within layouts/application
+Rendering categories/list
+Completed in 0.01191 (83 reqs/sec) | Rendering: 0.00390 (32%) | DB: 0.00263 (22%) | 200 OK [http://localhost/categories]
+
+
+Processing PdfsController#index (for 127.0.0.1 at 2007-11-12 11:08:34) [GET]
+  Session ID: 960a680d02d6b9d35aa9843023b06506
+  Parameters: {"class"=>"menuitem", "action"=>"index", "controller"=>"pdfs"}
+  [4;36;1mPdf Columns (0.001761)[0m   [0;1mSHOW FIELDS FROM pdfs[0m
+  [4;35;1mSQL (0.002653)[0m   [0mSELECT count(*) AS count_all FROM pdfs [0m
+  [4;36;1mPdf Load (0.000842)[0m   [0;1mSELECT * FROM pdfs LIMIT 0, 10[0m
+Rendering layoutfalseactionlist within layouts/application
+Rendering pdfs/list
+Completed in 0.01522 (65 reqs/sec) | Rendering: 0.00495 (32%) | DB: 0.00526 (34%) | 200 OK [http://localhost/pdfs?class=menuitem]
+
+
+Processing CategoriesController#index (for 127.0.0.1 at 2007-11-12 11:08:35) [GET]
+  Session ID: 960a680d02d6b9d35aa9843023b06506
+  Parameters: {"action"=>"index", "controller"=>"categories"}
+  [4;35;1mCategory Columns (0.003396)[0m   [0mSHOW FIELDS FROM categories[0m
+  [4;36;1mSQL (0.000536)[0m   [0;1mSELECT count(*) AS count_all FROM categories [0m
+  [4;35;1mCategory Load (0.000546)[0m   [0mSELECT * FROM categories LIMIT 0, 10[0m
+Rendering layoutfalseactionlist within layouts/application
+Rendering categories/list
+Completed in 0.01426 (70 reqs/sec) | Rendering: 0.00387 (27%) | DB: 0.00448 (31%) | 200 OK [http://localhost/categories]
+
+
+Processing PdfsController#index (for 127.0.0.1 at 2007-11-12 11:08:37) [GET]
+  Session ID: 960a680d02d6b9d35aa9843023b06506
+  Parameters: {"class"=>"menuitem", "action"=>"index", "controller"=>"pdfs"}
+  [4;36;1mPdf Columns (0.001589)[0m   [0;1mSHOW FIELDS FROM pdfs[0m
+  [4;35;1mSQL (0.000336)[0m   [0mSELECT count(*) AS count_all FROM pdfs [0m
+  [4;36;1mPdf Load (0.000639)[0m   [0;1mSELECT * FROM pdfs LIMIT 0, 10[0m
+Rendering layoutfalseactionlist within layouts/application
+Rendering pdfs/list
+Completed in 0.01199 (83 reqs/sec) | Rendering: 0.00486 (40%) | DB: 0.00256 (21%) | 200 OK [http://localhost/pdfs?class=menuitem]
+
+
+Processing PdfsController#index (for 127.0.0.1 at 2007-11-12 11:08:43) [GET]
+  Session ID: 960a680d02d6b9d35aa9843023b06506
+  Parameters: {"class"=>"menuitem", "action"=>"index", "controller"=>"pdfs"}
+  [4;35;1mPdf Columns (0.001573)[0m   [0mSHOW FIELDS FROM pdfs[0m
+  [4;36;1mSQL (0.000490)[0m   [0;1mSELECT count(*) AS count_all FROM pdfs [0m
+  [4;35;1mPdf Load (0.000915)[0m   [0mSELECT * FROM pdfs LIMIT 0, 10[0m
+Rendering layoutfalseactionlist within layouts/application
+Rendering pdfs/list
+Completed in 0.01302 (76 reqs/sec) | Rendering: 0.00517 (39%) | DB: 0.00298 (22%) | 200 OK [http://localhost/pdfs?class=menuitem]
+
+
+Processing CategoriesController#index (for 127.0.0.1 at 2007-11-12 11:08:44) [GET]
+  Session ID: 960a680d02d6b9d35aa9843023b06506
+  Parameters: {"action"=>"index", "controller"=>"categories"}
+  [4;36;1mCategory Columns (0.001549)[0m   [0;1mSHOW FIELDS FROM categories[0m
+  [4;35;1mSQL (0.000529)[0m   [0mSELECT count(*) AS count_all FROM categories [0m
+  [4;36;1mCategory Load (0.000543)[0m   [0;1mSELECT * FROM categories LIMIT 0, 10[0m
+Rendering layoutfalseactionlist within layouts/application
+Rendering categories/list
+Completed in 0.01213 (82 reqs/sec) | Rendering: 0.00399 (32%) | DB: 0.00262 (21%) | 200 OK [http://localhost/categories]

@@ -5,9 +5,19 @@
 <head>
   <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
   <title>Pdfs: <%= controller.action_name %></title>
-  <%= stylesheet_link_tag 'scaffold' %>
+  <%= stylesheet_link_tag 'application' %>
 </head>
 <body>
+
+	<div id="headingback">
+		<div id="heading"><%= controller.controller_name %></div>
+	</div>
+
+	<div class="nav">
+		<%= link_to '<div class="menuitem">Pdf</div>', :controller => 'pdfs', :class => "menuitem" %>
+		<%= link_to '<div class="menuitem">Category</div>', :controller => 'categories' %>
+	</div>
+	
 
 <p style="color: green"><%= flash[:notice] %></p>
 
