@@ -10,6 +10,16 @@
 <p><label for="pdf_filename">Filename</label><br/>
 <%= text_field 'pdf', 'filename'  %></p>
 
+<p><label for="categories">Categories</label><br />
+	<%= select_tag('category',
+			options_for_select(
+				Category.find(:all).collect {|c| [c.name, c.id] },
+				@pdf.category_id
+			)
+		)
+	%>
+</p>
+
 <p><label for="pdf_pdfnote">Pdfnote</label><br/>
 <%= text_area 'pdf', 'pdfnote'  %></p>
 <!--[eoform:pdf]-->

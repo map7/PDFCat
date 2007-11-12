@@ -10,11 +10,11 @@
 <body>
 
 	<div id="headingback">
-		<div id="heading"><%= controller.controller_name %></div>
+		<div id="heading"><%=h controller.controller_name.singularize %></div>
 	</div>
 
 	<div class="nav">
-		<%= link_to '<div class="menuitem">Pdf</div>', :controller => 'pdfs', :class => "menuitem" %>
+		<%= link_to '<div class="menuitem">Pdf</div>', :controller => 'pdfs' %>
 		<%= link_to '<div class="menuitem">Category</div>', :controller => 'categories' %>
 	</div>
 	

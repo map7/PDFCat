@@ -22,6 +22,10 @@ class PdfsController < ApplicationController
 
   def create
     @pdf = Pdf.new(params[:pdf])
+	
+	# Get the category selected from the drop down box and assign this to the foriegn key in pdf table.
+	@pdf.category = Category.find(params[:category]) unless params[:category].blank?
+	
     if @pdf.save
       flash[:notice] = 'Pdf was successfully created.'
       redirect_to :action => 'list'
@@ -36,6 +40,10 @@ class PdfsController < ApplicationController
 
   def update
     @pdf = Pdf.find(params[:id])
+
+	# Get the category selected from the drop down box and assign this to the foriegn key in pdf table.
+	@pdf.category = Category.find(params[:category]) unless params[:category].blank?
+	
     if @pdf.update_attributes(params[:pdf])
       flash[:notice] = 'Pdf was successfully updated.'
       redirect_to :action => 'show', :id => @pdf
