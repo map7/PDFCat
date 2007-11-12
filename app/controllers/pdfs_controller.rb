@@ -21,6 +21,9 @@ class PdfsController < ApplicationController
 	
 	# Get the category selected from the drop down box and assign this to the foriegn key in pdf table.
 	@pdf.category = Category.find(params[:category]) unless params[:category].blank?
+
+	# Get the client select from the drop down..
+	@pdf.client = Client.find(params[:client]) unless params[:client].blank?
 	
     if @pdf.save
       flash[:notice] = 'Pdf was successfully created.'
@@ -39,6 +42,9 @@ class PdfsController < ApplicationController
 
 	# Get the category selected from the drop down box and assign this to the foriegn key in pdf table.
 	@pdf.category = Category.find(params[:category]) unless params[:category].blank?
+	
+	# Get the client select from the drop down..
+	@pdf.client = Client.find(params[:client]) unless params[:client].blank?
 	
     if @pdf.update_attributes(params[:pdf])
       flash[:notice] = 'Pdf was successfully updated.'

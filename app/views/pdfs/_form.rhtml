@@ -10,6 +10,17 @@
 <p><label for="pdf_filename">Filename</label><br/>
 <%= text_field 'pdf', 'filename'  %></p>
 
+
+<p><label for="clients">Clients</label><br />
+	<%= select_tag('client',
+			options_for_select(
+				Client.find(:all).collect {|c| [c.name, c.id] },
+				@pdf.client_id
+			)
+		)
+	%>
+</p>
+
 <p><label for="categories">Categories</label><br />
 	<%= select_tag('category',
 			options_for_select(

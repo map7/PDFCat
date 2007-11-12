@@ -2,16 +2,20 @@
 
 <table>
   <tr>
-  <% for column in Pdf.content_columns %>
-    <th><%= column.human_name %></th>
-  <% end %>
+	  <th>Date</th>
+	  <th>Name</th>
+	  <th>Category</th>
+	  <th>Client</th>
   </tr>
   
 <% for pdf in @pdfs %>
   <tr>
-  <% for column in Pdf.content_columns %>
-    <td><%=h pdf.send(column.name) %></td>
-  <% end %>
+
+	<td><%= pdf.pdfdate %></td>
+	<td><%= pdf.pdfname %></td>
+	<td><%= pdf.category.name %></td>
+	<td><%= pdf.client.name %></td>
+  
     <td><%= link_to 'Show', :action => 'show', :id => pdf %></td>
     <td><%= link_to 'Edit', :action => 'edit', :id => pdf %></td>
     <td><%= link_to 'Destroy', { :action => 'destroy', :id => pdf }, :confirm => 'Are you sure?', :method => :post %></td>
