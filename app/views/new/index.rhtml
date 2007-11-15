@@ -1,0 +1,13 @@
+<h1>File upload</h1>
+
+<table>
+	<tr>
+		<th>File Name</th>
+	</tr>
+    <% for list_file in @upload.list_files %> <!-- call the list_files method in the model -->
+    <tr>
+        <td><%= link_to list_file, :action => "attachment", :filename => list_file %> </td>
+        <td><%= link_to 'Enter',:controller => 'pdfs', :action => 'new', :filename => list_file %></td>
+    </tr>
+<% end %>
+

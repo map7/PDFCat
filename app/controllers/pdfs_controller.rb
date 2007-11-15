@@ -14,6 +14,7 @@ class PdfsController < ApplicationController
 
   def new
     @pdf = Pdf.new
+    @pdf.filename = params[:filename]
   end
 
   def create
