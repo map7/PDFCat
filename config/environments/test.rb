@@ -17,3 +17,7 @@ config.action_controller.perform_caching             = false
 # The :test delivery method accumulates sent emails in the
 # ActionMailer::Base.deliveries array.
 config.action_mailer.delivery_method = :test
+
+SITE_NAME= "Pdfcat-test"
+UPLOAD_DIR = "/livedata/pdfcat_test_upload"
+STORE_DIR = "/livedata/pdfcat_clt"

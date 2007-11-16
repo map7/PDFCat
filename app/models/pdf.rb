@@ -9,7 +9,8 @@ class Pdf < ActiveRecord::Base
 
         files = Array.new
 
-        dir = "/livedata/pdfcat_test_upload"
+		# Get the constant variable from the environment.rb file for each development/testing and production.
+		dir = UPLOAD_DIR
 
         Find.find(dir) do |path|
             if FileTest.directory?(path)
