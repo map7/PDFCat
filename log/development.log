@@ -6838,3 +6838,806 @@ Rendering pdfs/index
   [4;35;1mCategory Load (0.003041)[0m   [0mSELECT * FROM categories WHERE (categories.`id` = 1) [0m
   [4;36;1mClient Load (0.004751)[0m   [0;1mSELECT * FROM clients WHERE (clients.`id` = 1) [0m
 Completed in 0.10280 (9 reqs/sec) | Rendering: 0.01627 (15%) | DB: 0.02133 (20%) | 200 OK [http://localhost/pdfs]
+
+
+Processing PdfsController#index (for 127.0.0.1 at 2007-11-16 10:19:35) [GET]
+  Session ID: 960a680d02d6b9d35aa9843023b06506
+  Parameters: {"action"=>"index", "controller"=>"pdfs"}
+  [4;35;1mPdf Columns (0.001716)[0m   [0mSHOW FIELDS FROM pdfs[0m
+  [4;36;1mSQL (0.000772)[0m   [0;1mSELECT count(*) AS count_all FROM pdfs [0m
+  [4;35;1mPdf Load (0.002595)[0m   [0mSELECT * FROM pdfs LIMIT 0, 10[0m
+Rendering  within layouts/application
+Rendering pdfs/index
+  [4;36;1mCategory Columns (0.001440)[0m   [0;1mSHOW FIELDS FROM categories[0m
+  [4;35;1mCategory Load (0.000729)[0m   [0mSELECT * FROM categories WHERE (categories.`id` = 1) [0m
+  [4;36;1mClient Columns (0.001514)[0m   [0;1mSHOW FIELDS FROM clients[0m
+  [4;35;1mClient Load (0.000689)[0m   [0mSELECT * FROM clients WHERE (clients.`id` = 2) [0m
+  [4;36;1mCategory Load (0.000777)[0m   [0;1mSELECT * FROM categories WHERE (categories.`id` = 1) [0m
+  [4;35;1mClient Load (0.000513)[0m   [0mSELECT * FROM clients WHERE (clients.`id` = 1) [0m
+Completed in 0.03610 (27 reqs/sec) | Rendering: 0.01852 (51%) | DB: 0.01075 (29%) | 200 OK [http://localhost/pdfs]
+
+
+Processing PdfsController#attachment (for 127.0.0.1 at 2007-11-16 10:19:39) [GET]
+  Session ID: 960a680d02d6b9d35aa9843023b06506
+  Parameters: {"action"=>"attachment", "controller"=>"pdfs", "filename"=>"/livedata/pdfcat_test_upload/DOC070731001849(0001).pdf"}
+Completed in 0.00093 (1081 reqs/sec) | Rendering: 0.00005 (5%) | DB: 0.00000 (0%) | 200 OK [http://localhost/pdfs/attachment?filename=%2Flivedata%2Fpdfcat_test_upload%2FDOC070731001849%280001%29.pdf]
+Streaming file /livedata/pdfcat_test_upload/DOC070731001849(0001).pdf
+
+
+Processing PdfsController#attachment (for 127.0.0.1 at 2007-11-16 10:19:46) [GET]
+  Session ID: 960a680d02d6b9d35aa9843023b06506
+  Parameters: {"action"=>"attachment", "controller"=>"pdfs", "filename"=>"t"}
+
+
+ActionController::MissingFile (Cannot read file t):
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/streaming.rb:59:in `send_file'
+    .//app/controllers/pdfs_controller.rb:66:in `attachment'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:1095:in `send'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:1095:in `perform_action_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:632:in `call_filter'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:634:in `call_filter'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:619:in `perform_action_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/benchmarking.rb:66:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/benchmarking.rb:66:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/rescue.rb:83:in `perform_action'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:430:in `send'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:430:in `process_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:624:in `process_without_session_management_support'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/session_management.rb:114:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:330:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.2.3/lib/dispatcher.rb:41:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.2.3/lib/webrick_server.rb:113:in `handle_dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.2.3/lib/webrick_server.rb:79:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.2.3/lib/webrick_server.rb:63:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.2.3/lib/commands/servers/webrick.rb:59
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:495:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:495:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.2.3/lib/commands/server.rb:39
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    script/server:3
+
+
+Rendering /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/templates/rescues/layout.rhtml (500 Internal Error)
+
+
+Processing PdfsController#show (for 127.0.0.1 at 2007-11-16 10:19:59) [GET]
+  Session ID: 960a680d02d6b9d35aa9843023b06506
+  Parameters: {"action"=>"show", "id"=>"11", "controller"=>"pdfs"}
+  [4;36;1mPdf Columns (0.001957)[0m   [0;1mSHOW FIELDS FROM pdfs[0m
+  [4;35;1mPdf Load (0.001189)[0m   [0mSELECT * FROM pdfs WHERE (pdfs.`id` = 11) [0m
+Rendering  within layouts/application
+Rendering pdfs/show
+Completed in 0.01234 (81 reqs/sec) | Rendering: 0.00393 (31%) | DB: 0.00315 (25%) | 200 OK [http://localhost/pdfs/show/11]
+
+
+Processing PdfsController#index (for 127.0.0.1 at 2007-11-16 10:20:01) [GET]
+  Session ID: 960a680d02d6b9d35aa9843023b06506
+  Parameters: {"action"=>"index", "controller"=>"pdfs"}
+  [4;36;1mPdf Columns (0.001805)[0m   [0;1mSHOW FIELDS FROM pdfs[0m
+  [4;35;1mSQL (0.000733)[0m   [0mSELECT count(*) AS count_all FROM pdfs [0m
+  [4;36;1mPdf Load (0.000806)[0m   [0;1mSELECT * FROM pdfs LIMIT 0, 10[0m
+Rendering  within layouts/application
+Rendering pdfs/index
+  [4;35;1mCategory Columns (0.003275)[0m   [0mSHOW FIELDS FROM categories[0m
+  [4;36;1mCategory Load (0.000784)[0m   [0;1mSELECT * FROM categories WHERE (categories.`id` = 1) [0m
+  [4;35;1mClient Columns (0.001426)[0m   [0mSHOW FIELDS FROM clients[0m
+  [4;36;1mClient Load (0.000704)[0m   [0;1mSELECT * FROM clients WHERE (clients.`id` = 2) [0m
+  [4;35;1mCategory Load (0.000707)[0m   [0mSELECT * FROM categories WHERE (categories.`id` = 1) [0m
+  [4;36;1mClient Load (0.000577)[0m   [0;1mSELECT * FROM clients WHERE (clients.`id` = 1) [0m
+Completed in 0.03294 (30 reqs/sec) | Rendering: 0.01673 (50%) | DB: 0.01082 (32%) | 200 OK [http://localhost/pdfs]
+
+
+Processing NewController#index (for 127.0.0.1 at 2007-11-16 10:25:39) [GET]
+  Session ID: 960a680d02d6b9d35aa9843023b06506
+  Parameters: {"action"=>"index", "controller"=>"new"}
+  [4;35;1mPdf Columns (0.001903)[0m   [0mSHOW FIELDS FROM pdfs[0m
+Rendering  within layouts/application
+Rendering new/index
+Completed in 0.02207 (45 reqs/sec) | Rendering: 0.01527 (69%) | DB: 0.00190 (8%) | 200 OK [http://localhost/new]
+
+
+Processing PdfsController#attachment (for 127.0.0.1 at 2007-11-16 10:25:41) [GET]
+  Session ID: 960a680d02d6b9d35aa9843023b06506
+  Parameters: {"action"=>"attachment", "controller"=>"pdfs", "filename"=>"/livedata/pdfcat_test_upload/DOC070731005025(0001).pdf"}
+Completed in 0.00090 (1106 reqs/sec) | Rendering: 0.00005 (5%) | DB: 0.00000 (0%) | 200 OK [http://localhost/pdfs/attachment?filename=%2Flivedata%2Fpdfcat_test_upload%2FDOC070731005025%280001%29.pdf]
+Streaming file /livedata/pdfcat_test_upload/DOC070731005025(0001).pdf
+
+
+Processing NewController#index (for 127.0.0.1 at 2007-11-16 11:55:37) [GET]
+  Session ID: 960a680d02d6b9d35aa9843023b06506
+  Parameters: {"action"=>"index", "controller"=>"new"}
+  [4;36;1mPdf Columns (0.001863)[0m   [0;1mSHOW FIELDS FROM pdfs[0m
+Rendering  within layouts/application
+Rendering new/index
+Completed in 0.02113 (47 reqs/sec) | Rendering: 0.01412 (66%) | DB: 0.00186 (8%) | 200 OK [http://localhost/new]
+
+
+Processing PdfsController#index (for 127.0.0.1 at 2007-11-16 11:55:39) [GET]
+  Session ID: 960a680d02d6b9d35aa9843023b06506
+  Parameters: {"action"=>"index", "controller"=>"pdfs"}
+  [4;35;1mPdf Columns (0.001862)[0m   [0mSHOW FIELDS FROM pdfs[0m
+  [4;36;1mSQL (0.000681)[0m   [0;1mSELECT count(*) AS count_all FROM pdfs [0m
+  [4;35;1mPdf Load (0.000852)[0m   [0mSELECT * FROM pdfs LIMIT 0, 10[0m
+Rendering  within layouts/application
+Rendering pdfs/index
+  [4;36;1mCategory Columns (0.001820)[0m   [0;1mSHOW FIELDS FROM categories[0m
+  [4;35;1mCategory Load (0.001632)[0m   [0mSELECT * FROM categories WHERE (categories.`id` = 1) [0m
+  [4;36;1mClient Columns (0.001682)[0m   [0;1mSHOW FIELDS FROM clients[0m
+  [4;35;1mClient Load (0.001335)[0m   [0mSELECT * FROM clients WHERE (clients.`id` = 2) [0m
+  [4;36;1mCategory Load (0.000947)[0m   [0;1mSELECT * FROM categories WHERE (categories.`id` = 1) [0m
+  [4;35;1mClient Load (0.000915)[0m   [0mSELECT * FROM clients WHERE (clients.`id` = 1) [0m
+Completed in 0.03462 (28 reqs/sec) | Rendering: 0.01604 (46%) | DB: 0.01173 (33%) | 200 OK [http://localhost/pdfs]
+
+
+Processing ClientsController#index (for 127.0.0.1 at 2007-11-16 11:55:40) [GET]
+  Session ID: 960a680d02d6b9d35aa9843023b06506
+  Parameters: {"action"=>"index", "controller"=>"clients"}
+  [4;36;1mClient Columns (0.001435)[0m   [0;1mSHOW FIELDS FROM clients[0m
+  [4;35;1mSQL (0.000893)[0m   [0mSELECT count(*) AS count_all FROM clients [0m
+  [4;36;1mClient Load (0.000872)[0m   [0;1mSELECT * FROM clients LIMIT 0, 10[0m
+Rendering layoutfalseactionlist within layouts/application
+Rendering clients/list
+Completed in 0.02495 (40 reqs/sec) | Rendering: 0.01622 (65%) | DB: 0.00320 (12%) | 200 OK [http://localhost/clients]
+
+
+Processing NewController#index (for 127.0.0.1 at 2007-11-16 11:55:42) [GET]
+  Session ID: 960a680d02d6b9d35aa9843023b06506
+  Parameters: {"action"=>"index", "controller"=>"new"}
+  [4;35;1mPdf Columns (0.001856)[0m   [0mSHOW FIELDS FROM pdfs[0m
+Rendering  within layouts/application
+Rendering new/index
+Completed in 0.02237 (44 reqs/sec) | Rendering: 0.01419 (63%) | DB: 0.00186 (8%) | 200 OK [http://localhost/new]
+
+
+Processing CategoriesController#index (for 127.0.0.1 at 2007-11-16 11:55:43) [GET]
+  Session ID: 960a680d02d6b9d35aa9843023b06506
+  Parameters: {"action"=>"index", "controller"=>"categories"}
+  [4;36;1mCategory Columns (0.001708)[0m   [0;1mSHOW FIELDS FROM categories[0m
+  [4;35;1mSQL (0.001324)[0m   [0mSELECT count(*) AS count_all FROM categories [0m
+  [4;36;1mCategory Load (0.001259)[0m   [0;1mSELECT * FROM categories LIMIT 0, 10[0m
+Rendering  within layouts/application
+Rendering categories/index
+Completed in 0.01658 (60 reqs/sec) | Rendering: 0.00676 (40%) | DB: 0.00429 (25%) | 200 OK [http://localhost/categories]
+
+
+Processing NewController#index (for 127.0.0.1 at 2007-11-16 11:55:45) [GET]
+  Session ID: 960a680d02d6b9d35aa9843023b06506
+  Parameters: {"action"=>"index", "controller"=>"new"}
+  [4;35;1mPdf Columns (0.001953)[0m   [0mSHOW FIELDS FROM pdfs[0m
+Rendering  within layouts/application
+Rendering new/index
+Completed in 0.02119 (47 reqs/sec) | Rendering: 0.01394 (65%) | DB: 0.00195 (9%) | 200 OK [http://localhost/new]
+
+
+Processing PdfsController#index (for 127.0.0.1 at 2007-11-16 12:40:08) [GET]
+  Session ID: 960a680d02d6b9d35aa9843023b06506
+  Parameters: {"action"=>"index", "controller"=>"pdfs"}
+  [4;36;1mPdf Columns (0.001838)[0m   [0;1mSHOW FIELDS FROM pdfs[0m
+  [4;35;1mSQL (0.002723)[0m   [0mSELECT count(*) AS count_all FROM pdfs [0m
+  [4;36;1mPdf Load (0.000996)[0m   [0;1mSELECT * FROM pdfs LIMIT 0, 10[0m
+Rendering  within layouts/application
+Rendering pdfs/index
+  [4;35;1mCategory Columns (0.001543)[0m   [0mSHOW FIELDS FROM categories[0m
+  [4;36;1mCategory Load (0.000719)[0m   [0;1mSELECT * FROM categories WHERE (categories.`id` = 1) [0m
+  [4;35;1mClient Columns (0.001545)[0m   [0mSHOW FIELDS FROM clients[0m
+  [4;36;1mClient Load (0.001632)[0m   [0;1mSELECT * FROM clients WHERE (clients.`id` = 2) [0m
+  [4;35;1mCategory Load (0.001231)[0m   [0mSELECT * FROM categories WHERE (categories.`id` = 1) [0m
+  [4;36;1mClient Load (0.000880)[0m   [0;1mSELECT * FROM clients WHERE (clients.`id` = 1) [0m
+Completed in 0.03748 (26 reqs/sec) | Rendering: 0.01869 (49%) | DB: 0.01311 (34%) | 200 OK [http://localhost/pdfs]
+
+
+Processing ClientsController#index (for 127.0.0.1 at 2007-11-16 12:40:10) [GET]
+  Session ID: 960a680d02d6b9d35aa9843023b06506
+  Parameters: {"action"=>"index", "controller"=>"clients"}
+  [4;35;1mClient Columns (0.001550)[0m   [0mSHOW FIELDS FROM clients[0m
+  [4;36;1mSQL (0.000569)[0m   [0;1mSELECT count(*) AS count_all FROM clients [0m
+  [4;35;1mClient Load (0.000683)[0m   [0mSELECT * FROM clients LIMIT 0, 10[0m
+Rendering layoutfalseactionlist within layouts/application
+Rendering clients/list
+Completed in 0.01263 (79 reqs/sec) | Rendering: 0.00419 (33%) | DB: 0.00280 (22%) | 200 OK [http://localhost/clients]
+
+
+Processing NewController#index (for 127.0.0.1 at 2007-11-16 12:40:12) [GET]
+  Session ID: 960a680d02d6b9d35aa9843023b06506
+  Parameters: {"action"=>"index", "controller"=>"new"}
+  [4;36;1mPdf Columns (0.001891)[0m   [0;1mSHOW FIELDS FROM pdfs[0m
+Rendering  within layouts/application
+Rendering new/index
+Completed in 0.02147 (46 reqs/sec) | Rendering: 0.01442 (67%) | DB: 0.00189 (8%) | 200 OK [http://localhost/new]
+
+
+Processing NewController#index (for 127.0.0.1 at 2007-11-16 15:01:21) [GET]
+  Session ID: 960a680d02d6b9d35aa9843023b06506
+  Parameters: {"action"=>"index", "controller"=>"new"}
+
+
+SyntaxError (./script/../config/../app/models/pdf.rb:26: syntax error, unexpected tSYMBEG, expecting ')'
+	def delete_file(:filename)
+	                 ^
+./script/../config/../app/models/pdf.rb:30: syntax error, unexpected kEND, expecting $end):
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:203:in `load_without_new_constant_marking'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:203:in `load_file'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:202:in `load_file'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:94:in `require_or_load'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:248:in `load_missing_constant'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:452:in `const_missing'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:464:in `const_missing'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:260:in `load_missing_constant'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:468:in `const_missing'
+    .//app/controllers/new_controller.rb:4:in `index'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:1095:in `send'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:1095:in `perform_action_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:632:in `call_filter'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:619:in `perform_action_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/benchmarking.rb:66:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/benchmarking.rb:66:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/rescue.rb:83:in `perform_action'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:430:in `send'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:430:in `process_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:624:in `process_without_session_management_support'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/session_management.rb:114:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:330:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.2.3/lib/dispatcher.rb:41:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.2.3/lib/webrick_server.rb:113:in `handle_dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.2.3/lib/webrick_server.rb:79:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.2.3/lib/webrick_server.rb:63:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.2.3/lib/commands/servers/webrick.rb:59
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:495:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:495:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.2.3/lib/commands/server.rb:39
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    script/server:3
+
+
+Rendering /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/templates/rescues/layout.rhtml (500 Internal Error)
+
+
+Processing NewController#index (for 127.0.0.1 at 2007-11-16 15:01:40) [GET]
+  Session ID: 960a680d02d6b9d35aa9843023b06506
+  Parameters: {"action"=>"index", "controller"=>"new"}
+  [4;35;1mPdf Columns (0.001801)[0m   [0mSHOW FIELDS FROM pdfs[0m
+Rendering  within layouts/application
+Rendering new/index
+Completed in 0.02621 (38 reqs/sec) | Rendering: 0.01935 (73%) | DB: 0.00180 (6%) | 200 OK [http://localhost/new]
+
+
+Processing NewController#destroy (for 127.0.0.1 at 2007-11-16 15:02:02) [GET]
+  Session ID: 960a680d02d6b9d35aa9843023b06506
+  Parameters: {"action"=>"destroy", "controller"=>"new", "filename"=>"/livedata/pdfcat_test_upload/test070731003525(0001).pdf"}
+
+
+NoMethodError (undefined method `delete_file' for Pdf:Class):
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-1.15.3/lib/active_record/base.rb:1235:in `method_missing'
+    .//app/controllers/new_controller.rb:8:in `destroy'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:1095:in `send'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:1095:in `perform_action_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:632:in `call_filter'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:619:in `perform_action_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/benchmarking.rb:66:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/benchmarking.rb:66:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/rescue.rb:83:in `perform_action'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:430:in `send'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:430:in `process_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:624:in `process_without_session_management_support'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/session_management.rb:114:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:330:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.2.3/lib/dispatcher.rb:41:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.2.3/lib/webrick_server.rb:113:in `handle_dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.2.3/lib/webrick_server.rb:79:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.2.3/lib/webrick_server.rb:63:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.2.3/lib/commands/servers/webrick.rb:59
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:495:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:495:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.2.3/lib/commands/server.rb:39
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    script/server:3
+
+
+Rendering /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/templates/rescues/layout.rhtml (500 Internal Error)
+
+
+Processing NewController#destroy (for 127.0.0.1 at 2007-11-16 15:02:37) [GET]
+  Session ID: 960a680d02d6b9d35aa9843023b06506
+  Parameters: {"action"=>"destroy", "controller"=>"new", "filename"=>"/livedata/pdfcat_test_upload/test070731003525(0001).pdf"}
+  [4;36;1mPdf Columns (0.001801)[0m   [0;1mSHOW FIELDS FROM pdfs[0m
+
+
+ArgumentError (wrong number of arguments (1 for 0)):
+    .//app/controllers/new_controller.rb:9:in `delete_file'
+    .//app/controllers/new_controller.rb:9:in `destroy'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:1095:in `send'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:1095:in `perform_action_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:632:in `call_filter'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:619:in `perform_action_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/benchmarking.rb:66:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/benchmarking.rb:66:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/rescue.rb:83:in `perform_action'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:430:in `send'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:430:in `process_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:624:in `process_without_session_management_support'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/session_management.rb:114:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:330:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.2.3/lib/dispatcher.rb:41:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.2.3/lib/webrick_server.rb:113:in `handle_dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.2.3/lib/webrick_server.rb:79:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.2.3/lib/webrick_server.rb:63:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.2.3/lib/commands/servers/webrick.rb:59
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:495:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:495:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.2.3/lib/commands/server.rb:39
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    script/server:3
+
+
+Rendering /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/templates/rescues/layout.rhtml (500 Internal Error)
+
+
+Processing NewController#index (for 127.0.0.1 at 2007-11-16 15:02:41) [GET]
+  Session ID: 960a680d02d6b9d35aa9843023b06506
+  Parameters: {"action"=>"index", "controller"=>"new"}
+  [4;35;1mPdf Columns (0.001835)[0m   [0mSHOW FIELDS FROM pdfs[0m
+Rendering  within layouts/application
+Rendering new/index
+Completed in 0.08250 (12 reqs/sec) | Rendering: 0.01875 (22%) | DB: 0.00364 (4%) | 200 OK [http://localhost/new]
+
+
+Processing NewController#destroy (for 127.0.0.1 at 2007-11-16 15:02:43) [GET]
+  Session ID: 960a680d02d6b9d35aa9843023b06506
+  Parameters: {"action"=>"destroy", "controller"=>"new", "filename"=>"/livedata/pdfcat_test_upload/test070731003525(0001).pdf"}
+  [4;36;1mPdf Columns (0.001740)[0m   [0;1mSHOW FIELDS FROM pdfs[0m
+
+
+ArgumentError (wrong number of arguments (1 for 0)):
+    .//app/controllers/new_controller.rb:9:in `delete_file'
+    .//app/controllers/new_controller.rb:9:in `destroy'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:1095:in `send'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:1095:in `perform_action_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:632:in `call_filter'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:619:in `perform_action_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/benchmarking.rb:66:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/benchmarking.rb:66:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/rescue.rb:83:in `perform_action'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:430:in `send'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:430:in `process_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:624:in `process_without_session_management_support'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/session_management.rb:114:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:330:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.2.3/lib/dispatcher.rb:41:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.2.3/lib/webrick_server.rb:113:in `handle_dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.2.3/lib/webrick_server.rb:79:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.2.3/lib/webrick_server.rb:63:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.2.3/lib/commands/servers/webrick.rb:59
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:495:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:495:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.2.3/lib/commands/server.rb:39
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    script/server:3
+
+
+Rendering /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/templates/rescues/layout.rhtml (500 Internal Error)
+
+
+Processing NewController#index (for 127.0.0.1 at 2007-11-16 15:05:17) [GET]
+  Session ID: 960a680d02d6b9d35aa9843023b06506
+  Parameters: {"action"=>"index", "controller"=>"new"}
+  [4;35;1mPdf Columns (0.001877)[0m   [0mSHOW FIELDS FROM pdfs[0m
+Rendering  within layouts/application
+Rendering new/index
+Completed in 0.02494 (40 reqs/sec) | Rendering: 0.01799 (72%) | DB: 0.00362 (14%) | 200 OK [http://localhost/new]
+
+
+Processing NewController#destroy (for 127.0.0.1 at 2007-11-16 15:05:20) [GET]
+  Session ID: 960a680d02d6b9d35aa9843023b06506
+  Parameters: {"action"=>"destroy", "controller"=>"new", "filename"=>"/livedata/pdfcat_test_upload/test070731003525(0001).pdf"}
+  [4;36;1mPdf Columns (0.002136)[0m   [0;1mSHOW FIELDS FROM pdfs[0m
+Rendering  within layouts/application
+
+
+ActionController::MissingTemplate (Missing template script/../config/../app/views/new/destroy.rhtml):
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:1205:in `assert_existence_of_template_file'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:804:in `render_file'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:711:in `render_with_no_layout'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/layout.rb:247:in `render_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/benchmarking.rb:50:in `render'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/benchmarking.rb:50:in `render'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:1096:in `perform_action_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:632:in `call_filter'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:619:in `perform_action_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/benchmarking.rb:66:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/benchmarking.rb:66:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/rescue.rb:83:in `perform_action'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:430:in `send'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:430:in `process_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:624:in `process_without_session_management_support'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/session_management.rb:114:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:330:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.2.3/lib/dispatcher.rb:41:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.2.3/lib/webrick_server.rb:113:in `handle_dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.2.3/lib/webrick_server.rb:79:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.2.3/lib/webrick_server.rb:63:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.2.3/lib/commands/servers/webrick.rb:59
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:495:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:495:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.2.3/lib/commands/server.rb:39
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    script/server:3
+
+
+Rendering /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/templates/rescues/layout.rhtml (500 Internal Error)
+
+
+Processing NewController#destroy (for 127.0.0.1 at 2007-11-16 15:06:43) [GET]
+  Session ID: 960a680d02d6b9d35aa9843023b06506
+  Parameters: {"action"=>"destroy", "controller"=>"new", "filename"=>"/livedata/pdfcat_test_upload/test070731003525(0001).pdf"}
+  [4;35;1mPdf Columns (0.002787)[0m   [0mSHOW FIELDS FROM pdfs[0m
+
+
+Errno::ENOENT (No such file or directory - /livedata/pdfcat_test_upload/test070731003525(0001).pdf):
+    .//app/models/pdf.rb:27:in `delete'
+    .//app/models/pdf.rb:27:in `delete_file'
+    .//app/controllers/new_controller.rb:9:in `destroy'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:1095:in `send'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:1095:in `perform_action_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:632:in `call_filter'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:619:in `perform_action_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/benchmarking.rb:66:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/benchmarking.rb:66:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/rescue.rb:83:in `perform_action'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:430:in `send'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:430:in `process_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:624:in `process_without_session_management_support'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/session_management.rb:114:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:330:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.2.3/lib/dispatcher.rb:41:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.2.3/lib/webrick_server.rb:113:in `handle_dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.2.3/lib/webrick_server.rb:79:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.2.3/lib/webrick_server.rb:63:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.2.3/lib/commands/servers/webrick.rb:59
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:495:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:495:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.2.3/lib/commands/server.rb:39
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    script/server:3
+
+
+Rendering /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/templates/rescues/layout.rhtml (500 Internal Error)
+
+
+Processing NewController#index (for 127.0.0.1 at 2007-11-16 15:06:54) [GET]
+  Session ID: 960a680d02d6b9d35aa9843023b06506
+  Parameters: {"action"=>"index", "controller"=>"new"}
+  [4;36;1mPdf Columns (0.002512)[0m   [0;1mSHOW FIELDS FROM pdfs[0m
+Rendering  within layouts/application
+Rendering new/index
+Completed in 0.02724 (36 reqs/sec) | Rendering: 0.01846 (67%) | DB: 0.00530 (19%) | 200 OK [http://localhost/new]
+
+
+Processing NewController#destroy (for 127.0.0.1 at 2007-11-16 15:06:56) [GET]
+  Session ID: 960a680d02d6b9d35aa9843023b06506
+  Parameters: {"action"=>"destroy", "controller"=>"new", "filename"=>"/livedata/pdfcat_test_upload/DOC070731001648(0001).pdf"}
+  [4;35;1mPdf Columns (0.001643)[0m   [0mSHOW FIELDS FROM pdfs[0m
+Rendering  within layouts/application
+Rendering new/destroy
+Completed in 0.00914 (109 reqs/sec) | Rendering: 0.00267 (29%) | DB: 0.00164 (17%) | 200 OK [http://localhost/new/destroy?filename=%2Flivedata%2Fpdfcat_test_upload%2FDOC070731001648%280001%29.pdf]
+
+
+Processing NewController#index (for 127.0.0.1 at 2007-11-16 15:06:59) [GET]
+  Session ID: 960a680d02d6b9d35aa9843023b06506
+  Parameters: {"action"=>"index", "controller"=>"new"}
+  [4;36;1mPdf Columns (0.001634)[0m   [0;1mSHOW FIELDS FROM pdfs[0m
+Rendering  within layouts/application
+Rendering new/index
+Completed in 0.02335 (42 reqs/sec) | Rendering: 0.01690 (72%) | DB: 0.00163 (6%) | 200 OK [http://localhost/new]
+
+
+Processing NewController#index (for 127.0.0.1 at 2007-11-16 15:23:44) [GET]
+  Session ID: 960a680d02d6b9d35aa9843023b06506
+  Parameters: {"action"=>"index", "controller"=>"new"}
+  [4;35;1mPdf Columns (0.001835)[0m   [0mSHOW FIELDS FROM pdfs[0m
+Rendering  within layouts/application
+Rendering new/index
+Completed in 0.08500 (11 reqs/sec) | Rendering: 0.07684 (90%) | DB: 0.00184 (2%) | 200 OK [http://localhost/new]
+
+
+Processing NewController#index (for 127.0.0.1 at 2007-11-16 15:26:17) [GET]
+  Session ID: 960a680d02d6b9d35aa9843023b06506
+  Parameters: {"action"=>"index", "controller"=>"new"}
+  [4;36;1mPdf Columns (0.001911)[0m   [0;1mSHOW FIELDS FROM pdfs[0m
+Rendering  within layouts/application
+Rendering new/index
+Completed in 0.02488 (40 reqs/sec) | Rendering: 0.01784 (71%) | DB: 0.00191 (7%) | 200 OK [http://localhost/new]
+
+
+Processing NewController#destroy (for 127.0.0.1 at 2007-11-16 15:26:19) [GET]
+  Session ID: 960a680d02d6b9d35aa9843023b06506
+  Parameters: {"action"=>"destroy", "controller"=>"new", "filename"=>"/livedata/pdfcat_test_upload/DOC070731001827(0001).pdf"}
+  [4;35;1mPdf Columns (0.001819)[0m   [0mSHOW FIELDS FROM pdfs[0m
+Redirected to http://localhost:3000/new
+Completed in 0.00827 (120 reqs/sec) | DB: 0.00182 (22%) | 302 Found [http://localhost/new/destroy?filename=%2Flivedata%2Fpdfcat_test_upload%2FDOC070731001827%280001%29.pdf]
+
+
+Processing NewController#index (for 127.0.0.1 at 2007-11-16 15:26:19) [GET]
+  Session ID: 960a680d02d6b9d35aa9843023b06506
+  Parameters: {"action"=>"index", "controller"=>"new"}
+  [4;36;1mPdf Columns (0.001740)[0m   [0;1mSHOW FIELDS FROM pdfs[0m
+Rendering  within layouts/application
+Rendering new/index
+Completed in 0.02365 (42 reqs/sec) | Rendering: 0.01672 (70%) | DB: 0.00174 (7%) | 200 OK [http://localhost/new]
+
+
+Processing NewController#destroy (for 127.0.0.1 at 2007-11-16 15:26:24) [GET]
+  Session ID: 960a680d02d6b9d35aa9843023b06506
+  Parameters: {"action"=>"destroy", "controller"=>"new", "filename"=>"/livedata/pdfcat_test_upload/DOC070731001849(0001).pdf"}
+  [4;35;1mPdf Columns (0.001748)[0m   [0mSHOW FIELDS FROM pdfs[0m
+Redirected to http://localhost:3000/new
+Completed in 0.00758 (132 reqs/sec) | DB: 0.00175 (23%) | 302 Found [http://localhost/new/destroy?filename=%2Flivedata%2Fpdfcat_test_upload%2FDOC070731001849%280001%29.pdf]
+
+
+Processing NewController#index (for 127.0.0.1 at 2007-11-16 15:26:24) [GET]
+  Session ID: 960a680d02d6b9d35aa9843023b06506
+  Parameters: {"action"=>"index", "controller"=>"new"}
+  [4;36;1mPdf Columns (0.001745)[0m   [0;1mSHOW FIELDS FROM pdfs[0m
+Rendering  within layouts/application
+Rendering new/index
+Completed in 0.02293 (43 reqs/sec) | Rendering: 0.01619 (70%) | DB: 0.00175 (7%) | 200 OK [http://localhost/new]
+
+
+Processing NewController#index (for 127.0.0.1 at 2007-11-16 15:26:48) [GET]
+  Session ID: 960a680d02d6b9d35aa9843023b06506
+  Parameters: {"action"=>"index", "controller"=>"new"}
+  [4;35;1mPdf Columns (0.001694)[0m   [0mSHOW FIELDS FROM pdfs[0m
+Rendering  within layouts/application
+Rendering new/index
+Completed in 0.02450 (40 reqs/sec) | Rendering: 0.01732 (70%) | DB: 0.00169 (6%) | 200 OK [http://localhost/new]
+
+
+Processing NewController#destroy (for 127.0.0.1 at 2007-11-16 15:26:51) [GET]
+  Session ID: 960a680d02d6b9d35aa9843023b06506
+  Parameters: {"action"=>"destroy", "controller"=>"new", "filename"=>"/livedata/pdfcat_test_upload/DOC070731001915(0001).pdf"}
+  [4;36;1mPdf Columns (0.001630)[0m   [0;1mSHOW FIELDS FROM pdfs[0m
+Redirected to http://localhost:3000/new
+Completed in 0.00784 (127 reqs/sec) | DB: 0.00163 (20%) | 302 Found [http://localhost/new/destroy?filename=%2Flivedata%2Fpdfcat_test_upload%2FDOC070731001915%280001%29.pdf]
+
+
+Processing NewController#index (for 127.0.0.1 at 2007-11-16 15:26:51) [GET]
+  Session ID: 960a680d02d6b9d35aa9843023b06506
+  Parameters: {"action"=>"index", "controller"=>"new"}
+  [4;35;1mPdf Columns (0.001633)[0m   [0mSHOW FIELDS FROM pdfs[0m
+Rendering  within layouts/application
+Rendering new/index
+Completed in 0.02277 (43 reqs/sec) | Rendering: 0.01619 (71%) | DB: 0.00163 (7%) | 200 OK [http://localhost/new]
+
+
+Processing NewController#destroy (for 127.0.0.1 at 2007-11-16 15:27:05) [GET]
+  Session ID: 960a680d02d6b9d35aa9843023b06506
+  Parameters: {"action"=>"destroy", "controller"=>"new", "filename"=>"/livedata/pdfcat_test_upload/DOC070731001954(0001).pdf"}
+  [4;36;1mPdf Columns (0.002392)[0m   [0;1mSHOW FIELDS FROM pdfs[0m
+Redirected to http://localhost:3000/new
+Completed in 0.00901 (111 reqs/sec) | DB: 0.00239 (26%) | 302 Found [http://localhost/new/destroy?filename=%2Flivedata%2Fpdfcat_test_upload%2FDOC070731001954%280001%29.pdf]
+
+
+Processing NewController#index (for 127.0.0.1 at 2007-11-16 15:27:05) [GET]
+  Session ID: 960a680d02d6b9d35aa9843023b06506
+  Parameters: {"action"=>"index", "controller"=>"new"}
+  [4;35;1mPdf Columns (0.001952)[0m   [0mSHOW FIELDS FROM pdfs[0m
+Rendering  within layouts/application
+Rendering new/index
+Completed in 0.02163 (46 reqs/sec) | Rendering: 0.01474 (68%) | DB: 0.00195 (9%) | 200 OK [http://localhost/new]
+
+
+Processing NewController#destroy (for 127.0.0.1 at 2007-11-16 15:27:21) [GET]
+  Session ID: 960a680d02d6b9d35aa9843023b06506
+  Parameters: {"action"=>"destroy", "controller"=>"new", "filename"=>"/livedata/pdfcat_test_upload/DOC070731002030(0001).pdf"}
+  [4;36;1mPdf Columns (0.001992)[0m   [0;1mSHOW FIELDS FROM pdfs[0m
+Redirected to http://localhost:3000/new
+Completed in 0.00821 (121 reqs/sec) | DB: 0.00199 (24%) | 302 Found [http://localhost/new/destroy?filename=%2Flivedata%2Fpdfcat_test_upload%2FDOC070731002030%280001%29.pdf]
+
+
+Processing NewController#index (for 127.0.0.1 at 2007-11-16 15:27:21) [GET]
+  Session ID: 960a680d02d6b9d35aa9843023b06506
+  Parameters: {"action"=>"index", "controller"=>"new"}
+  [4;35;1mPdf Columns (0.001797)[0m   [0mSHOW FIELDS FROM pdfs[0m
+Rendering  within layouts/application
+Rendering new/index
+Completed in 0.02120 (47 reqs/sec) | Rendering: 0.01457 (68%) | DB: 0.00180 (8%) | 200 OK [http://localhost/new]
+
+
+Processing NewController#destroy (for 127.0.0.1 at 2007-11-16 15:27:28) [GET]
+  Session ID: 960a680d02d6b9d35aa9843023b06506
+  Parameters: {"action"=>"destroy", "controller"=>"new", "filename"=>"/livedata/pdfcat_test_upload/DOC070731004342(0001).pdf"}
+  [4;36;1mPdf Columns (0.001785)[0m   [0;1mSHOW FIELDS FROM pdfs[0m
+Redirected to http://localhost:3000/new
+Completed in 0.00805 (124 reqs/sec) | DB: 0.00179 (22%) | 302 Found [http://localhost/new/destroy?filename=%2Flivedata%2Fpdfcat_test_upload%2FDOC070731004342%280001%29.pdf]
+
+
+Processing NewController#index (for 127.0.0.1 at 2007-11-16 15:27:28) [GET]
+  Session ID: 960a680d02d6b9d35aa9843023b06506
+  Parameters: {"action"=>"index", "controller"=>"new"}
+  [4;35;1mPdf Columns (0.003727)[0m   [0mSHOW FIELDS FROM pdfs[0m
+Rendering  within layouts/application
+Rendering new/index
+Completed in 0.02456 (40 reqs/sec) | Rendering: 0.01565 (63%) | DB: 0.00373 (15%) | 200 OK [http://localhost/new]
+
+
+Processing NewController#destroy (for 127.0.0.1 at 2007-11-16 15:27:32) [GET]
+  Session ID: 960a680d02d6b9d35aa9843023b06506
+  Parameters: {"action"=>"destroy", "controller"=>"new", "filename"=>"/livedata/pdfcat_test_upload/DOC070731004831(0001).pdf"}
+  [4;36;1mPdf Columns (0.005187)[0m   [0;1mSHOW FIELDS FROM pdfs[0m
+Redirected to http://localhost:3000/new
+Completed in 0.01165 (85 reqs/sec) | DB: 0.00519 (44%) | 302 Found [http://localhost/new/destroy?filename=%2Flivedata%2Fpdfcat_test_upload%2FDOC070731004831%280001%29.pdf]
+
+
+Processing NewController#index (for 127.0.0.1 at 2007-11-16 15:27:32) [GET]
+  Session ID: 960a680d02d6b9d35aa9843023b06506
+  Parameters: {"action"=>"index", "controller"=>"new"}
+  [4;35;1mPdf Columns (0.001733)[0m   [0mSHOW FIELDS FROM pdfs[0m
+Rendering  within layouts/application
+Rendering new/index
+Completed in 0.02061 (48 reqs/sec) | Rendering: 0.01384 (67%) | DB: 0.00173 (8%) | 200 OK [http://localhost/new]
+
+
+Processing NewController#destroy (for 127.0.0.1 at 2007-11-16 15:27:33) [GET]
+  Session ID: 960a680d02d6b9d35aa9843023b06506
+  Parameters: {"action"=>"destroy", "controller"=>"new", "filename"=>"/livedata/pdfcat_test_upload/DOC070731005025(0001).pdf"}
+  [4;36;1mPdf Columns (0.001787)[0m   [0;1mSHOW FIELDS FROM pdfs[0m
+Redirected to http://localhost:3000/new
+Completed in 0.00777 (128 reqs/sec) | DB: 0.00179 (23%) | 302 Found [http://localhost/new/destroy?filename=%2Flivedata%2Fpdfcat_test_upload%2FDOC070731005025%280001%29.pdf]
+
+
+Processing NewController#index (for 127.0.0.1 at 2007-11-16 15:27:33) [GET]
+  Session ID: 960a680d02d6b9d35aa9843023b06506
+  Parameters: {"action"=>"index", "controller"=>"new"}
+  [4;35;1mPdf Columns (0.001701)[0m   [0mSHOW FIELDS FROM pdfs[0m
+Rendering  within layouts/application
+Rendering new/index
+Completed in 0.02068 (48 reqs/sec) | Rendering: 0.01386 (66%) | DB: 0.00170 (8%) | 200 OK [http://localhost/new]
+
+
+Processing NewController#destroy (for 127.0.0.1 at 2007-11-16 15:27:35) [GET]
+  Session ID: 960a680d02d6b9d35aa9843023b06506
+  Parameters: {"action"=>"destroy", "controller"=>"new", "filename"=>"/livedata/pdfcat_test_upload/DOC070731001628(0001).pdf"}
+  [4;36;1mPdf Columns (0.001662)[0m   [0;1mSHOW FIELDS FROM pdfs[0m
+Redirected to http://localhost:3000/new
+Completed in 0.06055 (16 reqs/sec) | DB: 0.00166 (2%) | 302 Found [http://localhost/new/destroy?filename=%2Flivedata%2Fpdfcat_test_upload%2FDOC070731001628%280001%29.pdf]
+
+
+Processing NewController#index (for 127.0.0.1 at 2007-11-16 15:27:35) [GET]
+  Session ID: 960a680d02d6b9d35aa9843023b06506
+  Parameters: {"action"=>"index", "controller"=>"new"}
+  [4;35;1mPdf Columns (0.001661)[0m   [0mSHOW FIELDS FROM pdfs[0m
+Rendering  within layouts/application
+Rendering new/index
+Completed in 0.01920 (52 reqs/sec) | Rendering: 0.01257 (65%) | DB: 0.00166 (8%) | 200 OK [http://localhost/new]
+
+
+Processing NewController#index (for 127.0.0.1 at 2007-11-16 15:27:47) [GET]
+  Session ID: 960a680d02d6b9d35aa9843023b06506
+  Parameters: {"action"=>"index", "controller"=>"new"}
+  [4;36;1mPdf Columns (0.001962)[0m   [0;1mSHOW FIELDS FROM pdfs[0m
+Rendering  within layouts/application
+Rendering new/index
+Completed in 0.02657 (37 reqs/sec) | Rendering: 0.01862 (70%) | DB: 0.00196 (7%) | 200 OK [http://localhost/new]
+
+
+Processing NewController#destroy (for 127.0.0.1 at 2007-11-16 15:27:52) [GET]
+  Session ID: 960a680d02d6b9d35aa9843023b06506
+  Parameters: {"action"=>"destroy", "controller"=>"new", "filename"=>"/livedata/pdfcat_test_upload/test070731003525(0001).pdf"}
+  [4;35;1mPdf Columns (0.001862)[0m   [0mSHOW FIELDS FROM pdfs[0m
+Redirected to http://localhost:3000/new
+Completed in 0.00791 (126 reqs/sec) | DB: 0.00186 (23%) | 302 Found [http://localhost/new/destroy?filename=%2Flivedata%2Fpdfcat_test_upload%2Ftest070731003525%280001%29.pdf]
+
+
+Processing NewController#index (for 127.0.0.1 at 2007-11-16 15:27:52) [GET]
+  Session ID: 960a680d02d6b9d35aa9843023b06506
+  Parameters: {"action"=>"index", "controller"=>"new"}
+  [4;36;1mPdf Columns (0.001762)[0m   [0;1mSHOW FIELDS FROM pdfs[0m
+Rendering  within layouts/application
+Rendering new/index
+Completed in 0.02508 (39 reqs/sec) | Rendering: 0.01822 (72%) | DB: 0.00176 (7%) | 200 OK [http://localhost/new]

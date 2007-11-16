@@ -59,4 +59,13 @@ class PdfsController < ApplicationController
     Pdf.find(params[:id]).destroy
     redirect_to :action => 'index'
   end
+
+
+	# Allow user to open up new files
+    def attachment
+    	send_file(params['filename'],
+			:type         =>  'application/pdf',
+			:disposition  =>  'attachment'
+		)
+    end
 end

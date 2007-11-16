@@ -21,6 +21,10 @@ class Pdf < ActiveRecord::Base
 
 		# Return files back to call.
         files
-
     end
+
+	def delete_file(filename)
+		File.delete(filename)
+	end
+	
 end
