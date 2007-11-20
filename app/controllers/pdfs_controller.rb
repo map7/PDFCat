@@ -25,13 +25,18 @@ class PdfsController < ApplicationController
 
 	# Get the client select from the drop down..
 	@pdf.client = Client.find(params[:client]) unless params[:client].blank?
-	
-    if @pdf.save
-      flash[:notice] = 'Pdf was successfully created.'
-      redirect_to :action => 'index'
-    else
-      render :action => 'new'
-    end
+
+	# Move the file and set the new filename to be saved
+	@pdf.filename = @pdf.move_file	if @pdf.file_exist
+
+	# Check for any errors before the save
+	if @pdf.errors.size == 0 and @pdf.save
+	  flash[:notice] = 'Pdf was successfully created.'
+	  redirect_to :action => 'index'
+	else
+	  render :action => 'new'
+	end
+
   end
 
   def edit
@@ -46,17 +51,30 @@ class PdfsController < ApplicationController
 	
 	# Get the client select from the drop down..
 	@pdf.client = Client.find(params[:client]) unless params[:client].blank?
-	
-    if @pdf.update_attributes(params[:pdf])
-      flash[:notice] = 'Pdf was successfully updated.'
-      redirect_to :action => 'show', :id => @pdf
+
+	# Save the form to the table
+    if @pdf.errors.size == 0 and @pdf.update_attributes(params[:pdf])
+		flash[:notice] = 'Pdf was successfully updated.'
+		redirect_to :action => 'show', :id => @pdf
+
+		# Move the actual file
+		@filename = @pdf.move_file
+
+		# Write changes of the filename back to the pdf object.
+		@pdf.update_attribute(:filename, @filename)
+		
     else
-      render :action => 'edit'
+		render :action => 'edit'
     end
   end
 
   def destroy
+	# delete the physical file.
+	File.delete(Pdf.find(params[:id]).filename)
+	
+	# delete the database record
     Pdf.find(params[:id]).destroy
+	
     redirect_to :action => 'index'
   end
 

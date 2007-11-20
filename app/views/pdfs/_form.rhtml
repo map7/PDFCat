@@ -4,12 +4,11 @@
 <p><label for="pdf_pdfdate">Pdfdate</label><br/>
 <%= date_select 'pdf', 'pdfdate'  %></p>
 
+<p><label for="pdf_filename">Current Filename</label><br/>
+<%= text_field 'pdf','filename' %></p>
+
 <p><label for="pdf_pdfname">Pdfname</label><br/>
 <%= text_field 'pdf', 'pdfname'  %></p>
-
-<p><label for="pdf_filename">Filename</label><br/>
-<%= text_field 'pdf', 'filename'  %></p>
-
 
 <p><label for="clients">Clients</label><br />
 	<%= select_tag('client',
