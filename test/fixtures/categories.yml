@@ -1,5 +1,10 @@
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
-one:
+bas:
   id: 1
-two:
+  name: 'BAS'
+  description: 'Business Activity Statement'
+
+tax:
   id: 2
+  name: 'tax'
+  description: ''

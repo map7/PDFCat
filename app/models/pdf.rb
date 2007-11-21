@@ -3,7 +3,9 @@ class Pdf < ActiveRecord::Base
 	belongs_to :client
 
 	validates_presence_of :pdfdate, :pdfname, :filename
+	validates_uniqueness_of :pdfname, :scope => [:pdfdate, :category_id, :client_id]
 	validate :does_file_exist
+
 
     def list_files
         require 'find'
@@ -63,7 +65,7 @@ class Pdf < ActiveRecord::Base
 	end
 	
 	def does_file_exist
-		errors.add("Filename") if !file_exist
+		errors.add("Filename") if filename.blank? or !file_exist
 	end
 		
 	

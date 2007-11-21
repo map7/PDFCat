@@ -16786,3 +16786,1360 @@ Rendering pdfs/index
   [4;36;1mCategory Load (0.004441)[0m   [0;1mSELECT * FROM categories WHERE (categories.`id` = 1) [0m
   [4;35;1mClient Load (0.000639)[0m   [0mSELECT * FROM clients WHERE (clients.`id` = 1) [0m
 Completed in 0.05217 (19 reqs/sec) | Rendering: 0.02248 (43%) | DB: 0.01979 (37%) | 200 OK [http://localhost/pdfs]
+  [4;36;1mSQL (0.000208)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.026453)[0m   [0mSELECT * FROM schema_info[0m
+  [4;36;1mSQL (0.022239)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.001068)[0m   [0mSHOW FIELDS FROM categories[0m
+  [4;36;1mSQL (0.003342)[0m   [0;1mSHOW KEYS FROM categories[0m
+  [4;35;1mSQL (0.001036)[0m   [0mSHOW FIELDS FROM clients[0m
+  [4;36;1mSQL (0.001204)[0m   [0;1mSHOW KEYS FROM clients[0m
+  [4;35;1mSQL (0.001214)[0m   [0mSHOW FIELDS FROM pdfs[0m
+  [4;36;1mSQL (0.001308)[0m   [0;1mSHOW KEYS FROM pdfs[0m
+  [4;35;1mSQL (0.000239)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.025961)[0m   [0;1mDROP DATABASE IF EXISTS `pdfcat_test`[0m
+  [4;35;1mSQL (0.104106)[0m   [0mCREATE DATABASE `pdfcat_test`[0m
+  [4;36;1mSQL (0.000151)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: #42S02Unknown table 'categories': DROP TABLE categories[0m
+  [4;36;1mSQL (0.062594)[0m   [0;1mCREATE TABLE categories (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) DEFAULT NULL, `description` varchar(255) DEFAULT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: #42S02Unknown table 'clients': DROP TABLE clients[0m
+  [4;36;1mSQL (0.002033)[0m   [0;1mCREATE TABLE clients (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) DEFAULT NULL, `email` varchar(255) DEFAULT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: #42S02Unknown table 'pdfs': DROP TABLE pdfs[0m
+  [4;36;1mSQL (0.002270)[0m   [0;1mCREATE TABLE pdfs (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `pdfdate` date DEFAULT NULL, `pdfname` varchar(255) DEFAULT NULL, `filename` varchar(255) DEFAULT NULL, `pdfnote` text DEFAULT NULL, `category_id` int(11) DEFAULT NULL, `client_id` int(11) DEFAULT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.001243)[0m   [0mCREATE TABLE schema_info (version int(11))[0m
+  [4;36;1mSQL (0.021376)[0m   [0;1mINSERT INTO schema_info (version) VALUES(0)[0m
+  [4;35;1mSQL (0.001188)[0m   [0mSHOW FIELDS FROM schema_info[0m
+  [4;36;1mSQL (0.000461)[0m   [0;1mUPDATE schema_info SET version = 7[0m
+  [4;36;1mSQL (0.000166)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000319)[0m   [0mSELECT * FROM schema_info[0m
+  [4;36;1mSQL (0.000468)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.001163)[0m   [0mSHOW FIELDS FROM categories[0m
+  [4;36;1mSQL (0.001151)[0m   [0;1mSHOW KEYS FROM categories[0m
+  [4;35;1mSQL (0.001135)[0m   [0mSHOW FIELDS FROM clients[0m
+  [4;36;1mSQL (0.001152)[0m   [0;1mSHOW KEYS FROM clients[0m
+  [4;35;1mSQL (0.001586)[0m   [0mSHOW FIELDS FROM pdfs[0m
+  [4;36;1mSQL (0.001196)[0m   [0;1mSHOW KEYS FROM pdfs[0m
+  [4;35;1mSQL (0.000144)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.061296)[0m   [0;1mDROP DATABASE IF EXISTS `pdfcat_test`[0m
+  [4;35;1mSQL (0.000268)[0m   [0mCREATE DATABASE `pdfcat_test`[0m
+  [4;36;1mSQL (0.000163)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: #42S02Unknown table 'categories': DROP TABLE categories[0m
+  [4;36;1mSQL (0.002111)[0m   [0;1mCREATE TABLE categories (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) DEFAULT NULL, `description` varchar(255) DEFAULT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: #42S02Unknown table 'clients': DROP TABLE clients[0m
+  [4;36;1mSQL (0.023217)[0m   [0;1mCREATE TABLE clients (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) DEFAULT NULL, `email` varchar(255) DEFAULT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: #42S02Unknown table 'pdfs': DROP TABLE pdfs[0m
+  [4;36;1mSQL (0.002462)[0m   [0;1mCREATE TABLE pdfs (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `pdfdate` date DEFAULT NULL, `pdfname` varchar(255) DEFAULT NULL, `filename` varchar(255) DEFAULT NULL, `pdfnote` text DEFAULT NULL, `category_id` int(11) DEFAULT NULL, `client_id` int(11) DEFAULT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.001383)[0m   [0mCREATE TABLE schema_info (version int(11))[0m
+  [4;36;1mSQL (0.000320)[0m   [0;1mINSERT INTO schema_info (version) VALUES(0)[0m
+  [4;35;1mSQL (0.001057)[0m   [0mSHOW FIELDS FROM schema_info[0m
+  [4;36;1mSQL (0.000170)[0m   [0;1mUPDATE schema_info SET version = 7[0m
+  [4;36;1mSQL (0.000168)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000385)[0m   [0mSELECT * FROM schema_info[0m
+  [4;36;1mSQL (0.000415)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.001209)[0m   [0mSHOW FIELDS FROM categories[0m
+  [4;36;1mSQL (0.001108)[0m   [0;1mSHOW KEYS FROM categories[0m
+  [4;35;1mSQL (0.001224)[0m   [0mSHOW FIELDS FROM clients[0m
+  [4;36;1mSQL (0.001118)[0m   [0;1mSHOW KEYS FROM clients[0m
+  [4;35;1mSQL (0.001354)[0m   [0mSHOW FIELDS FROM pdfs[0m
+  [4;36;1mSQL (0.001266)[0m   [0;1mSHOW KEYS FROM pdfs[0m
+  [4;35;1mSQL (0.000152)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.003565)[0m   [0;1mDROP DATABASE IF EXISTS `pdfcat_test`[0m
+  [4;35;1mSQL (0.000287)[0m   [0mCREATE DATABASE `pdfcat_test`[0m
+  [4;36;1mSQL (0.000201)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: #42S02Unknown table 'categories': DROP TABLE categories[0m
+  [4;36;1mSQL (0.002092)[0m   [0;1mCREATE TABLE categories (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) DEFAULT NULL, `description` varchar(255) DEFAULT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: #42S02Unknown table 'clients': DROP TABLE clients[0m
+  [4;36;1mSQL (0.002024)[0m   [0;1mCREATE TABLE clients (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) DEFAULT NULL, `email` varchar(255) DEFAULT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: #42S02Unknown table 'pdfs': DROP TABLE pdfs[0m
+  [4;36;1mSQL (0.002167)[0m   [0;1mCREATE TABLE pdfs (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `pdfdate` date DEFAULT NULL, `pdfname` varchar(255) DEFAULT NULL, `filename` varchar(255) DEFAULT NULL, `pdfnote` text DEFAULT NULL, `category_id` int(11) DEFAULT NULL, `client_id` int(11) DEFAULT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.001372)[0m   [0mCREATE TABLE schema_info (version int(11))[0m
+  [4;36;1mSQL (0.000307)[0m   [0;1mINSERT INTO schema_info (version) VALUES(0)[0m
+  [4;35;1mSQL (0.001005)[0m   [0mSHOW FIELDS FROM schema_info[0m
+  [4;36;1mSQL (0.000227)[0m   [0;1mUPDATE schema_info SET version = 7[0m
+  [4;36;1mSQL (0.000210)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000318)[0m   [0mSELECT * FROM schema_info[0m
+  [4;36;1mSQL (0.000415)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.001229)[0m   [0mSHOW FIELDS FROM categories[0m
+  [4;36;1mSQL (0.001360)[0m   [0;1mSHOW KEYS FROM categories[0m
+  [4;35;1mSQL (0.001207)[0m   [0mSHOW FIELDS FROM clients[0m
+  [4;36;1mSQL (0.001074)[0m   [0;1mSHOW KEYS FROM clients[0m
+  [4;35;1mSQL (0.001390)[0m   [0mSHOW FIELDS FROM pdfs[0m
+  [4;36;1mSQL (0.001126)[0m   [0;1mSHOW KEYS FROM pdfs[0m
+  [4;35;1mSQL (0.000176)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.014539)[0m   [0;1mDROP DATABASE IF EXISTS `pdfcat_test`[0m
+  [4;35;1mSQL (0.000266)[0m   [0mCREATE DATABASE `pdfcat_test`[0m
+  [4;36;1mSQL (0.000209)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: #42S02Unknown table 'categories': DROP TABLE categories[0m
+  [4;36;1mSQL (0.002064)[0m   [0;1mCREATE TABLE categories (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) DEFAULT NULL, `description` varchar(255) DEFAULT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: #42S02Unknown table 'clients': DROP TABLE clients[0m
+  [4;36;1mSQL (0.002005)[0m   [0;1mCREATE TABLE clients (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) DEFAULT NULL, `email` varchar(255) DEFAULT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: #42S02Unknown table 'pdfs': DROP TABLE pdfs[0m
+  [4;36;1mSQL (0.002153)[0m   [0;1mCREATE TABLE pdfs (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `pdfdate` date DEFAULT NULL, `pdfname` varchar(255) DEFAULT NULL, `filename` varchar(255) DEFAULT NULL, `pdfnote` text DEFAULT NULL, `category_id` int(11) DEFAULT NULL, `client_id` int(11) DEFAULT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.001335)[0m   [0mCREATE TABLE schema_info (version int(11))[0m
+  [4;36;1mSQL (0.000281)[0m   [0;1mINSERT INTO schema_info (version) VALUES(0)[0m
+  [4;35;1mSQL (0.001005)[0m   [0mSHOW FIELDS FROM schema_info[0m
+  [4;36;1mSQL (0.000166)[0m   [0;1mUPDATE schema_info SET version = 7[0m
+  [4;36;1mSQL (0.000166)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000396)[0m   [0mSELECT * FROM schema_info[0m
+  [4;36;1mSQL (0.000415)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.001290)[0m   [0mSHOW FIELDS FROM categories[0m
+  [4;36;1mSQL (0.001147)[0m   [0;1mSHOW KEYS FROM categories[0m
+  [4;35;1mSQL (0.001103)[0m   [0mSHOW FIELDS FROM clients[0m
+  [4;36;1mSQL (0.001064)[0m   [0;1mSHOW KEYS FROM clients[0m
+  [4;35;1mSQL (0.001382)[0m   [0mSHOW FIELDS FROM pdfs[0m
+  [4;36;1mSQL (0.001127)[0m   [0;1mSHOW KEYS FROM pdfs[0m
+  [4;35;1mSQL (0.000147)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.003413)[0m   [0;1mDROP DATABASE IF EXISTS `pdfcat_test`[0m
+  [4;35;1mSQL (0.000386)[0m   [0mCREATE DATABASE `pdfcat_test`[0m
+  [4;36;1mSQL (0.000158)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: #42S02Unknown table 'categories': DROP TABLE categories[0m
+  [4;36;1mSQL (0.002093)[0m   [0;1mCREATE TABLE categories (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) DEFAULT NULL, `description` varchar(255) DEFAULT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: #42S02Unknown table 'clients': DROP TABLE clients[0m
+  [4;36;1mSQL (0.001902)[0m   [0;1mCREATE TABLE clients (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) DEFAULT NULL, `email` varchar(255) DEFAULT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: #42S02Unknown table 'pdfs': DROP TABLE pdfs[0m
+  [4;36;1mSQL (0.038071)[0m   [0;1mCREATE TABLE pdfs (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `pdfdate` date DEFAULT NULL, `pdfname` varchar(255) DEFAULT NULL, `filename` varchar(255) DEFAULT NULL, `pdfnote` text DEFAULT NULL, `category_id` int(11) DEFAULT NULL, `client_id` int(11) DEFAULT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.001452)[0m   [0mCREATE TABLE schema_info (version int(11))[0m
+  [4;36;1mSQL (0.000311)[0m   [0;1mINSERT INTO schema_info (version) VALUES(0)[0m
+  [4;35;1mSQL (0.001003)[0m   [0mSHOW FIELDS FROM schema_info[0m
+  [4;36;1mSQL (0.000220)[0m   [0;1mUPDATE schema_info SET version = 7[0m
+  [4;36;1mSQL (0.000246)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000318)[0m   [0mSELECT * FROM schema_info[0m
+  [4;36;1mSQL (0.000413)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.001299)[0m   [0mSHOW FIELDS FROM categories[0m
+  [4;36;1mSQL (0.001160)[0m   [0;1mSHOW KEYS FROM categories[0m
+  [4;35;1mSQL (0.001337)[0m   [0mSHOW FIELDS FROM clients[0m
+  [4;36;1mSQL (0.001133)[0m   [0;1mSHOW KEYS FROM clients[0m
+  [4;35;1mSQL (0.001447)[0m   [0mSHOW FIELDS FROM pdfs[0m
+  [4;36;1mSQL (0.001140)[0m   [0;1mSHOW KEYS FROM pdfs[0m
+  [4;35;1mSQL (0.000145)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.003446)[0m   [0;1mDROP DATABASE IF EXISTS `pdfcat_test`[0m
+  [4;35;1mSQL (0.000261)[0m   [0mCREATE DATABASE `pdfcat_test`[0m
+  [4;36;1mSQL (0.000159)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: #42S02Unknown table 'categories': DROP TABLE categories[0m
+  [4;36;1mSQL (0.002010)[0m   [0;1mCREATE TABLE categories (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) DEFAULT NULL, `description` varchar(255) DEFAULT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: #42S02Unknown table 'clients': DROP TABLE clients[0m
+  [4;36;1mSQL (0.001916)[0m   [0;1mCREATE TABLE clients (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) DEFAULT NULL, `email` varchar(255) DEFAULT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: #42S02Unknown table 'pdfs': DROP TABLE pdfs[0m
+  [4;36;1mSQL (0.002123)[0m   [0;1mCREATE TABLE pdfs (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `pdfdate` date DEFAULT NULL, `pdfname` varchar(255) DEFAULT NULL, `filename` varchar(255) DEFAULT NULL, `pdfnote` text DEFAULT NULL, `category_id` int(11) DEFAULT NULL, `client_id` int(11) DEFAULT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.001377)[0m   [0mCREATE TABLE schema_info (version int(11))[0m
+  [4;36;1mSQL (0.000357)[0m   [0;1mINSERT INTO schema_info (version) VALUES(0)[0m
+  [4;35;1mSQL (0.001016)[0m   [0mSHOW FIELDS FROM schema_info[0m
+  [4;36;1mSQL (0.000240)[0m   [0;1mUPDATE schema_info SET version = 7[0m
+  [4;36;1mSQL (0.000276)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000335)[0m   [0mSELECT * FROM schema_info[0m
+  [4;36;1mSQL (0.000424)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.001219)[0m   [0mSHOW FIELDS FROM categories[0m
+  [4;36;1mSQL (0.001364)[0m   [0;1mSHOW KEYS FROM categories[0m
+  [4;35;1mSQL (0.001170)[0m   [0mSHOW FIELDS FROM clients[0m
+  [4;36;1mSQL (0.001079)[0m   [0;1mSHOW KEYS FROM clients[0m
+  [4;35;1mSQL (0.001398)[0m   [0mSHOW FIELDS FROM pdfs[0m
+  [4;36;1mSQL (0.001209)[0m   [0;1mSHOW KEYS FROM pdfs[0m
+  [4;35;1mSQL (0.000192)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.003362)[0m   [0;1mDROP DATABASE IF EXISTS `pdfcat_test`[0m
+  [4;35;1mSQL (0.000299)[0m   [0mCREATE DATABASE `pdfcat_test`[0m
+  [4;36;1mSQL (0.000159)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: #42S02Unknown table 'categories': DROP TABLE categories[0m
+  [4;36;1mSQL (0.002013)[0m   [0;1mCREATE TABLE categories (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) DEFAULT NULL, `description` varchar(255) DEFAULT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: #42S02Unknown table 'clients': DROP TABLE clients[0m
+  [4;36;1mSQL (0.008574)[0m   [0;1mCREATE TABLE clients (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) DEFAULT NULL, `email` varchar(255) DEFAULT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: #42S02Unknown table 'pdfs': DROP TABLE pdfs[0m
+  [4;36;1mSQL (0.002259)[0m   [0;1mCREATE TABLE pdfs (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `pdfdate` date DEFAULT NULL, `pdfname` varchar(255) DEFAULT NULL, `filename` varchar(255) DEFAULT NULL, `pdfnote` text DEFAULT NULL, `category_id` int(11) DEFAULT NULL, `client_id` int(11) DEFAULT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.001365)[0m   [0mCREATE TABLE schema_info (version int(11))[0m
+  [4;36;1mSQL (0.000320)[0m   [0;1mINSERT INTO schema_info (version) VALUES(0)[0m
+  [4;35;1mSQL (0.000944)[0m   [0mSHOW FIELDS FROM schema_info[0m
+  [4;36;1mSQL (0.000268)[0m   [0;1mUPDATE schema_info SET version = 7[0m
+  [4;36;1mSQL (0.000212)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000320)[0m   [0mSELECT * FROM schema_info[0m
+  [4;36;1mSQL (0.000418)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.001223)[0m   [0mSHOW FIELDS FROM categories[0m
+  [4;36;1mSQL (0.001161)[0m   [0;1mSHOW KEYS FROM categories[0m
+  [4;35;1mSQL (0.001106)[0m   [0mSHOW FIELDS FROM clients[0m
+  [4;36;1mSQL (0.001381)[0m   [0;1mSHOW KEYS FROM clients[0m
+  [4;35;1mSQL (0.001485)[0m   [0mSHOW FIELDS FROM pdfs[0m
+  [4;36;1mSQL (0.001118)[0m   [0;1mSHOW KEYS FROM pdfs[0m
+  [4;35;1mSQL (0.000147)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.003566)[0m   [0;1mDROP DATABASE IF EXISTS `pdfcat_test`[0m
+  [4;35;1mSQL (0.000726)[0m   [0mCREATE DATABASE `pdfcat_test`[0m
+  [4;36;1mSQL (0.000169)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: #42S02Unknown table 'categories': DROP TABLE categories[0m
+  [4;36;1mSQL (0.003282)[0m   [0;1mCREATE TABLE categories (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) DEFAULT NULL, `description` varchar(255) DEFAULT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: #42S02Unknown table 'clients': DROP TABLE clients[0m
+  [4;36;1mSQL (0.002087)[0m   [0;1mCREATE TABLE clients (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) DEFAULT NULL, `email` varchar(255) DEFAULT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: #42S02Unknown table 'pdfs': DROP TABLE pdfs[0m
+  [4;36;1mSQL (0.010802)[0m   [0;1mCREATE TABLE pdfs (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `pdfdate` date DEFAULT NULL, `pdfname` varchar(255) DEFAULT NULL, `filename` varchar(255) DEFAULT NULL, `pdfnote` text DEFAULT NULL, `category_id` int(11) DEFAULT NULL, `client_id` int(11) DEFAULT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.001776)[0m   [0mCREATE TABLE schema_info (version int(11))[0m
+  [4;36;1mSQL (0.000413)[0m   [0;1mINSERT INTO schema_info (version) VALUES(0)[0m
+  [4;35;1mSQL (0.000942)[0m   [0mSHOW FIELDS FROM schema_info[0m
+  [4;36;1mSQL (0.000269)[0m   [0;1mUPDATE schema_info SET version = 7[0m
+  [4;36;1mSQL (0.000168)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000317)[0m   [0mSELECT * FROM schema_info[0m
+  [4;36;1mSQL (0.000415)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.001212)[0m   [0mSHOW FIELDS FROM categories[0m
+  [4;36;1mSQL (0.001139)[0m   [0;1mSHOW KEYS FROM categories[0m
+  [4;35;1mSQL (0.001095)[0m   [0mSHOW FIELDS FROM clients[0m
+  [4;36;1mSQL (0.001070)[0m   [0;1mSHOW KEYS FROM clients[0m
+  [4;35;1mSQL (0.001542)[0m   [0mSHOW FIELDS FROM pdfs[0m
+  [4;36;1mSQL (0.002229)[0m   [0;1mSHOW KEYS FROM pdfs[0m
+  [4;35;1mSQL (0.000155)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.003450)[0m   [0;1mDROP DATABASE IF EXISTS `pdfcat_test`[0m
+  [4;35;1mSQL (0.000295)[0m   [0mCREATE DATABASE `pdfcat_test`[0m
+  [4;36;1mSQL (0.000160)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: #42S02Unknown table 'categories': DROP TABLE categories[0m
+  [4;36;1mSQL (0.002127)[0m   [0;1mCREATE TABLE categories (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) DEFAULT NULL, `description` varchar(255) DEFAULT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: #42S02Unknown table 'clients': DROP TABLE clients[0m
+  [4;36;1mSQL (0.002057)[0m   [0;1mCREATE TABLE clients (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) DEFAULT NULL, `email` varchar(255) DEFAULT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: #42S02Unknown table 'pdfs': DROP TABLE pdfs[0m
+  [4;36;1mSQL (0.002083)[0m   [0;1mCREATE TABLE pdfs (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `pdfdate` date DEFAULT NULL, `pdfname` varchar(255) DEFAULT NULL, `filename` varchar(255) DEFAULT NULL, `pdfnote` text DEFAULT NULL, `category_id` int(11) DEFAULT NULL, `client_id` int(11) DEFAULT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.001353)[0m   [0mCREATE TABLE schema_info (version int(11))[0m
+  [4;36;1mSQL (0.000331)[0m   [0;1mINSERT INTO schema_info (version) VALUES(0)[0m
+  [4;35;1mSQL (0.001072)[0m   [0mSHOW FIELDS FROM schema_info[0m
+  [4;36;1mSQL (0.000170)[0m   [0;1mUPDATE schema_info SET version = 7[0m
+  [4;36;1mSQL (0.000157)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mCategory Columns (0.001396)[0m   [0mSHOW FIELDS FROM categories[0m
+  [4;36;1mClient Columns (0.001359)[0m   [0;1mSHOW FIELDS FROM clients[0m
+  [4;36;1mSQL (0.000166)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000320)[0m   [0mSELECT * FROM schema_info[0m
+  [4;36;1mSQL (0.000417)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.001224)[0m   [0mSHOW FIELDS FROM categories[0m
+  [4;36;1mSQL (0.001153)[0m   [0;1mSHOW KEYS FROM categories[0m
+  [4;35;1mSQL (0.001099)[0m   [0mSHOW FIELDS FROM clients[0m
+  [4;36;1mSQL (0.001373)[0m   [0;1mSHOW KEYS FROM clients[0m
+  [4;35;1mSQL (0.001472)[0m   [0mSHOW FIELDS FROM pdfs[0m
+  [4;36;1mSQL (0.001097)[0m   [0;1mSHOW KEYS FROM pdfs[0m
+  [4;35;1mSQL (0.000158)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.003504)[0m   [0;1mDROP DATABASE IF EXISTS `pdfcat_test`[0m
+  [4;35;1mSQL (0.000296)[0m   [0mCREATE DATABASE `pdfcat_test`[0m
+  [4;36;1mSQL (0.000156)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: #42S02Unknown table 'categories': DROP TABLE categories[0m
+  [4;36;1mSQL (0.002675)[0m   [0;1mCREATE TABLE categories (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) DEFAULT NULL, `description` varchar(255) DEFAULT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: #42S02Unknown table 'clients': DROP TABLE clients[0m
+  [4;36;1mSQL (0.002001)[0m   [0;1mCREATE TABLE clients (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) DEFAULT NULL, `email` varchar(255) DEFAULT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: #42S02Unknown table 'pdfs': DROP TABLE pdfs[0m
+  [4;36;1mSQL (0.002323)[0m   [0;1mCREATE TABLE pdfs (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `pdfdate` date DEFAULT NULL, `pdfname` varchar(255) DEFAULT NULL, `filename` varchar(255) DEFAULT NULL, `pdfnote` text DEFAULT NULL, `category_id` int(11) DEFAULT NULL, `client_id` int(11) DEFAULT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.001352)[0m   [0mCREATE TABLE schema_info (version int(11))[0m
+  [4;36;1mSQL (0.000343)[0m   [0;1mINSERT INTO schema_info (version) VALUES(0)[0m
+  [4;35;1mSQL (0.000907)[0m   [0mSHOW FIELDS FROM schema_info[0m
+  [4;36;1mSQL (0.000423)[0m   [0;1mUPDATE schema_info SET version = 7[0m
+  [4;36;1mSQL (0.000323)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing NewController#index (for 127.0.0.1 at 2007-11-21 11:20:44) [GET]
+  Session ID: 960a680d02d6b9d35aa9843023b06506
+  Parameters: {"action"=>"index", "controller"=>"new"}
+  [4;35;1mPdf Columns (0.001729)[0m   [0mSHOW FIELDS FROM pdfs[0m
+Rendering  within layouts/application
+Rendering new/index
+Completed in 0.04190 (23 reqs/sec) | Rendering: 0.03475 (82%) | DB: 0.00205 (4%) | 200 OK [http://localhost/new]
+
+
+Processing PdfsController#new (for 127.0.0.1 at 2007-11-21 11:20:47) [GET]
+  Session ID: 960a680d02d6b9d35aa9843023b06506
+  Parameters: {"action"=>"new", "controller"=>"pdfs", "filename"=>"/livedata/pdfcat_test_upload/DOC070731001849(0001).pdf"}
+  [4;36;1mPdf Columns (0.002107)[0m   [0;1mSHOW FIELDS FROM pdfs[0m
+Rendering  within layouts/application
+Rendering pdfs/new
+  [4;35;1mClient Load (0.003785)[0m   [0mSELECT * FROM clients [0m
+  [4;36;1mClient Columns (0.001658)[0m   [0;1mSHOW FIELDS FROM clients[0m
+  [4;35;1mCategory Load (0.000707)[0m   [0mSELECT * FROM categories [0m
+  [4;36;1mCategory Columns (0.001195)[0m   [0;1mSHOW FIELDS FROM categories[0m
+Rendered pdfs/_form (0.02284)
+Completed in 0.03751 (26 reqs/sec) | Rendering: 0.01931 (51%) | DB: 0.00945 (25%) | 200 OK [http://localhost/pdfs/new?filename=%2Flivedata%2Fpdfcat_test_upload%2FDOC070731001849%280001%29.pdf]
+
+
+Processing PdfsController#index (for 127.0.0.1 at 2007-11-21 11:20:52) [GET]
+  Session ID: 960a680d02d6b9d35aa9843023b06506
+  Parameters: {"action"=>"index", "controller"=>"pdfs"}
+  [4;35;1mPdf Columns (0.001956)[0m   [0mSHOW FIELDS FROM pdfs[0m
+  [4;36;1mSQL (0.000628)[0m   [0;1mSELECT count(*) AS count_all FROM pdfs [0m
+  [4;35;1mPdf Load (0.000829)[0m   [0mSELECT * FROM pdfs LIMIT 0, 10[0m
+Rendering  within layouts/application
+Rendering pdfs/index
+  [4;36;1mCategory Columns (0.002325)[0m   [0;1mSHOW FIELDS FROM categories[0m
+  [4;35;1mCategory Load (0.000761)[0m   [0mSELECT * FROM categories WHERE (categories.`id` = 1) [0m
+  [4;36;1mClient Columns (0.001655)[0m   [0;1mSHOW FIELDS FROM clients[0m
+  [4;35;1mClient Load (0.000907)[0m   [0mSELECT * FROM clients WHERE (clients.`id` = 1) [0m
+  [4;36;1mCategory Load (0.001703)[0m   [0;1mSELECT * FROM categories WHERE (categories.`id` = 1) [0m
+  [4;35;1mClient Load (0.000810)[0m   [0mSELECT * FROM clients WHERE (clients.`id` = 1) [0m
+  [4;36;1mCategory Load (0.000892)[0m   [0;1mSELECT * FROM categories WHERE (categories.`id` = 1) [0m
+  [4;35;1mClient Load (0.001069)[0m   [0mSELECT * FROM clients WHERE (clients.`id` = 1) [0m
+Completed in 0.04476 (22 reqs/sec) | Rendering: 0.02487 (55%) | DB: 0.01353 (30%) | 200 OK [http://localhost/pdfs]
+
+
+Processing PdfsController#create (for 127.0.0.1 at 2007-11-21 11:21:10) [POST]
+  Session ID: 960a680d02d6b9d35aa9843023b06506
+  Parameters: {"category"=>"1", "commit"=>"Create", "client"=>"1", "action"=>"create", "controller"=>"pdfs", "pdf"=>{"pdfdate(3i)"=>"21", "pdfname"=>"test", "filename"=>"/livedata/pdfcat_test_upload/DOC070731001849(0001).pdf", "pdfnote"=>"", "pdfdate(1i)"=>"2007", "pdfdate(2i)"=>"11"}}
+  [4;36;1mPdf Columns (0.003533)[0m   [0;1mSHOW FIELDS FROM pdfs[0m
+  [4;35;1mCategory Columns (0.001554)[0m   [0mSHOW FIELDS FROM categories[0m
+  [4;36;1mCategory Load (0.001000)[0m   [0;1mSELECT * FROM categories WHERE (categories.`id` = 1) [0m
+  [4;35;1mClient Columns (0.001485)[0m   [0mSHOW FIELDS FROM clients[0m
+  [4;36;1mClient Load (0.000536)[0m   [0;1mSELECT * FROM clients WHERE (clients.`id` = 1) [0m
+  [4;35;1mSQL (0.000276)[0m   [0mBEGIN[0m
+  [4;36;1mPdf Load (0.038662)[0m   [0;1mSELECT * FROM pdfs WHERE (pdfs.pdfname = 'test' AND pdfs.category_id = 1 AND pdfs.client_id = 1) LIMIT 1[0m
+  [4;35;1mSQL (0.000892)[0m   [0mCOMMIT[0m
+Rendering layoutfalseactionnew within layouts/application
+Rendering pdfs/new
+  [4;36;1mClient Load (0.001168)[0m   [0;1mSELECT * FROM clients [0m
+  [4;35;1mCategory Load (0.000644)[0m   [0mSELECT * FROM categories [0m
+Rendered pdfs/_form (0.00935)
+Completed in 0.10189 (9 reqs/sec) | Rendering: 0.01205 (11%) | DB: 0.04975 (48%) | 200 OK [http://localhost/pdfs/create]
+
+
+Processing PdfsController#create (for 127.0.0.1 at 2007-11-21 11:21:27) [POST]
+  Session ID: 960a680d02d6b9d35aa9843023b06506
+  Parameters: {"category"=>"1", "commit"=>"Create", "client"=>"1", "action"=>"create", "controller"=>"pdfs", "pdf"=>{"pdfdate(3i)"=>"21", "pdfname"=>"test", "filename"=>"/livedata/pdfcat_test_clt/digitech/tax/20071121-test.pdf", "pdfnote"=>"", "pdfdate(1i)"=>"2007", "pdfdate(2i)"=>"11"}}
+  [4;36;1mPdf Columns (0.001919)[0m   [0;1mSHOW FIELDS FROM pdfs[0m
+  [4;35;1mCategory Columns (0.001522)[0m   [0mSHOW FIELDS FROM categories[0m
+  [4;36;1mCategory Load (0.003208)[0m   [0;1mSELECT * FROM categories WHERE (categories.`id` = 1) [0m
+  [4;35;1mClient Columns (0.002563)[0m   [0mSHOW FIELDS FROM clients[0m
+  [4;36;1mClient Load (0.003353)[0m   [0;1mSELECT * FROM clients WHERE (clients.`id` = 1) [0m
+Rendering layoutfalseactionnew within layouts/application
+Rendering pdfs/new
+  [4;35;1mClient Load (0.000850)[0m   [0mSELECT * FROM clients [0m
+  [4;36;1mCategory Load (0.000636)[0m   [0;1mSELECT * FROM categories [0m
+Rendered pdfs/_form (0.00363)
+Completed in 0.04557 (21 reqs/sec) | Rendering: 0.00750 (16%) | DB: 0.01405 (30%) | 200 OK [http://localhost/pdfs/create]
+
+
+Processing PdfsController#create (for 127.0.0.1 at 2007-11-21 11:21:39) [POST]
+  Session ID: 960a680d02d6b9d35aa9843023b06506
+  Parameters: {"category"=>"1", "commit"=>"Create", "client"=>"1", "action"=>"create", "controller"=>"pdfs", "pdf"=>{"pdfdate(3i)"=>"21", "pdfname"=>"test2", "filename"=>"/livedata/pdfcat_test_clt/digitech/tax/20071121-test.pdf", "pdfnote"=>"", "pdfdate(1i)"=>"2007", "pdfdate(2i)"=>"11"}}
+  [4;35;1mPdf Columns (0.001893)[0m   [0mSHOW FIELDS FROM pdfs[0m
+  [4;36;1mCategory Columns (0.001696)[0m   [0;1mSHOW FIELDS FROM categories[0m
+  [4;35;1mCategory Load (0.001308)[0m   [0mSELECT * FROM categories WHERE (categories.`id` = 1) [0m
+  [4;36;1mClient Columns (0.001489)[0m   [0;1mSHOW FIELDS FROM clients[0m
+  [4;35;1mClient Load (0.000539)[0m   [0mSELECT * FROM clients WHERE (clients.`id` = 1) [0m
+  [4;36;1mSQL (0.000279)[0m   [0;1mBEGIN[0m
+  [4;35;1mPdf Load (0.000987)[0m   [0mSELECT * FROM pdfs WHERE (pdfs.pdfname = 'test2' AND pdfs.pdfdate = '2007-11-21' AND pdfs.category_id = 1 AND pdfs.client_id = 1) LIMIT 1[0m
+  [4;36;1mSQL (0.000347)[0m   [0;1mINSERT INTO pdfs (`pdfname`, `client_id`, `pdfdate`, `category_id`, `filename`, `pdfnote`) VALUES('test2', 1, '2007-11-21', 1, '/livedata/pdfcat_test_clt/digitech/tax/20071121-test2.pdf', '')[0m
+  [4;35;1mSQL (0.002804)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/pdfs
+Completed in 0.03596 (27 reqs/sec) | DB: 0.01134 (31%) | 302 Found [http://localhost/pdfs/create]
+
+
+Processing PdfsController#index (for 127.0.0.1 at 2007-11-21 11:21:39) [GET]
+  Session ID: 960a680d02d6b9d35aa9843023b06506
+  Parameters: {"action"=>"index", "controller"=>"pdfs"}
+  [4;36;1mPdf Columns (0.002006)[0m   [0;1mSHOW FIELDS FROM pdfs[0m
+  [4;35;1mSQL (0.000525)[0m   [0mSELECT count(*) AS count_all FROM pdfs [0m
+  [4;36;1mPdf Load (0.000857)[0m   [0;1mSELECT * FROM pdfs LIMIT 0, 10[0m
+Rendering  within layouts/application
+Rendering pdfs/index
+  [4;35;1mCategory Columns (0.001493)[0m   [0mSHOW FIELDS FROM categories[0m
+  [4;36;1mCategory Load (0.001586)[0m   [0;1mSELECT * FROM categories WHERE (categories.`id` = 1) [0m
+  [4;35;1mClient Columns (0.003474)[0m   [0mSHOW FIELDS FROM clients[0m
+  [4;36;1mClient Load (0.001286)[0m   [0;1mSELECT * FROM clients WHERE (clients.`id` = 1) [0m
+  [4;35;1mCategory Load (0.002701)[0m   [0mSELECT * FROM categories WHERE (categories.`id` = 1) [0m
+  [4;36;1mClient Load (0.001443)[0m   [0;1mSELECT * FROM clients WHERE (clients.`id` = 1) [0m
+  [4;35;1mCategory Load (0.000673)[0m   [0mSELECT * FROM categories WHERE (categories.`id` = 1) [0m
+  [4;36;1mClient Load (0.001004)[0m   [0;1mSELECT * FROM clients WHERE (clients.`id` = 1) [0m
+  [4;35;1mCategory Load (0.001446)[0m   [0mSELECT * FROM categories WHERE (categories.`id` = 1) [0m
+  [4;36;1mClient Load (0.000592)[0m   [0;1mSELECT * FROM clients WHERE (clients.`id` = 1) [0m
+Completed in 0.05241 (19 reqs/sec) | Rendering: 0.02518 (48%) | DB: 0.01909 (36%) | 200 OK [http://localhost/pdfs]
+
+
+Processing NewController#index (for 127.0.0.1 at 2007-11-21 11:21:41) [GET]
+  Session ID: 960a680d02d6b9d35aa9843023b06506
+  Parameters: {"action"=>"index", "controller"=>"new"}
+  [4;35;1mPdf Columns (0.001812)[0m   [0mSHOW FIELDS FROM pdfs[0m
+Rendering  within layouts/application
+Rendering new/index
+Completed in 0.02368 (42 reqs/sec) | Rendering: 0.01606 (67%) | DB: 0.00181 (7%) | 200 OK [http://localhost/new]
+
+
+Processing PdfsController#new (for 127.0.0.1 at 2007-11-21 11:21:44) [GET]
+  Session ID: 960a680d02d6b9d35aa9843023b06506
+  Parameters: {"action"=>"new", "controller"=>"pdfs", "filename"=>"/livedata/pdfcat_test_upload/DOC070731001954(0001).pdf"}
+  [4;36;1mPdf Columns (0.002871)[0m   [0;1mSHOW FIELDS FROM pdfs[0m
+Rendering  within layouts/application
+Rendering pdfs/new
+  [4;35;1mClient Load (0.000790)[0m   [0mSELECT * FROM clients [0m
+  [4;36;1mClient Columns (0.001477)[0m   [0;1mSHOW FIELDS FROM clients[0m
+  [4;35;1mCategory Load (0.000744)[0m   [0mSELECT * FROM categories [0m
+  [4;36;1mCategory Columns (0.002386)[0m   [0;1mSHOW FIELDS FROM categories[0m
+Rendered pdfs/_form (0.02131)
+Completed in 0.03340 (29 reqs/sec) | Rendering: 0.01969 (58%) | DB: 0.00827 (24%) | 200 OK [http://localhost/pdfs/new?filename=%2Flivedata%2Fpdfcat_test_upload%2FDOC070731001954%280001%29.pdf]
+
+
+Processing PdfsController#create (for 127.0.0.1 at 2007-11-21 11:21:47) [POST]
+  Session ID: 960a680d02d6b9d35aa9843023b06506
+  Parameters: {"category"=>"1", "commit"=>"Create", "client"=>"1", "action"=>"create", "controller"=>"pdfs", "pdf"=>{"pdfdate(3i)"=>"21", "pdfname"=>"test2", "filename"=>"/livedata/pdfcat_test_upload/DOC070731001954(0001).pdf", "pdfnote"=>"", "pdfdate(1i)"=>"2007", "pdfdate(2i)"=>"11"}}
+  [4;35;1mPdf Columns (0.001820)[0m   [0mSHOW FIELDS FROM pdfs[0m
+  [4;36;1mCategory Columns (0.001560)[0m   [0;1mSHOW FIELDS FROM categories[0m
+  [4;35;1mCategory Load (0.000520)[0m   [0mSELECT * FROM categories WHERE (categories.`id` = 1) [0m
+  [4;36;1mClient Columns (0.001482)[0m   [0;1mSHOW FIELDS FROM clients[0m
+  [4;35;1mClient Load (0.000487)[0m   [0mSELECT * FROM clients WHERE (clients.`id` = 1) [0m
+Rendering layoutfalseactionnew within layouts/application
+Rendering pdfs/new
+  [4;36;1mClient Load (0.000675)[0m   [0;1mSELECT * FROM clients [0m
+  [4;35;1mCategory Load (0.000458)[0m   [0mSELECT * FROM categories [0m
+Rendered pdfs/_form (0.00333)
+Completed in 0.02965 (33 reqs/sec) | Rendering: 0.00612 (20%) | DB: 0.00700 (23%) | 200 OK [http://localhost/pdfs/create]
+
+
+Processing PdfsController#create (for 127.0.0.1 at 2007-11-21 11:22:28) [POST]
+  Session ID: 960a680d02d6b9d35aa9843023b06506
+  Parameters: {"category"=>"1", "commit"=>"Create", "client"=>"1", "action"=>"create", "controller"=>"pdfs", "pdf"=>{"pdfdate(3i)"=>"21", "pdfname"=>"test3", "filename"=>"/livedata/pdfcat_test_upload/DOC070731001954(0001).pdf", "pdfnote"=>"", "pdfdate(1i)"=>"2007", "pdfdate(2i)"=>"11"}}
+  [4;36;1mPdf Columns (0.001719)[0m   [0;1mSHOW FIELDS FROM pdfs[0m
+  [4;35;1mCategory Columns (0.001405)[0m   [0mSHOW FIELDS FROM categories[0m
+  [4;36;1mCategory Load (0.000573)[0m   [0;1mSELECT * FROM categories WHERE (categories.`id` = 1) [0m
+  [4;35;1mClient Columns (0.001435)[0m   [0mSHOW FIELDS FROM clients[0m
+  [4;36;1mClient Load (0.000538)[0m   [0;1mSELECT * FROM clients WHERE (clients.`id` = 1) [0m
+  [4;35;1mSQL (0.000248)[0m   [0mBEGIN[0m
+  [4;36;1mPdf Load (0.000841)[0m   [0;1mSELECT * FROM pdfs WHERE (pdfs.pdfname = 'test3' AND pdfs.pdfdate = '2007-11-21' AND pdfs.category_id = 1 AND pdfs.client_id = 1) LIMIT 1[0m
+  [4;35;1mSQL (0.000323)[0m   [0mINSERT INTO pdfs (`pdfname`, `client_id`, `pdfdate`, `category_id`, `filename`, `pdfnote`) VALUES('test3', 1, '2007-11-21', 1, '/livedata/pdfcat_test_clt/digitech/tax/20071121-test3.pdf', '')[0m
+  [4;36;1mSQL (0.000591)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/pdfs
+Completed in 0.02851 (35 reqs/sec) | DB: 0.00767 (26%) | 302 Found [http://localhost/pdfs/create]
+
+
+Processing PdfsController#index (for 127.0.0.1 at 2007-11-21 11:22:28) [GET]
+  Session ID: 960a680d02d6b9d35aa9843023b06506
+  Parameters: {"action"=>"index", "controller"=>"pdfs"}
+  [4;35;1mPdf Columns (0.001955)[0m   [0mSHOW FIELDS FROM pdfs[0m
+  [4;36;1mSQL (0.000546)[0m   [0;1mSELECT count(*) AS count_all FROM pdfs [0m
+  [4;35;1mPdf Load (0.001070)[0m   [0mSELECT * FROM pdfs LIMIT 0, 10[0m
+Rendering  within layouts/application
+Rendering pdfs/index
+  [4;36;1mCategory Columns (0.002475)[0m   [0;1mSHOW FIELDS FROM categories[0m
+  [4;35;1mCategory Load (0.000579)[0m   [0mSELECT * FROM categories WHERE (categories.`id` = 1) [0m
+  [4;36;1mClient Columns (0.001444)[0m   [0;1mSHOW FIELDS FROM clients[0m
+  [4;35;1mClient Load (0.000537)[0m   [0mSELECT * FROM clients WHERE (clients.`id` = 1) [0m
+  [4;36;1mCategory Load (0.000577)[0m   [0;1mSELECT * FROM categories WHERE (categories.`id` = 1) [0m
+  [4;35;1mClient Load (0.000409)[0m   [0mSELECT * FROM clients WHERE (clients.`id` = 1) [0m
+  [4;36;1mCategory Load (0.000508)[0m   [0;1mSELECT * FROM categories WHERE (categories.`id` = 1) [0m
+  [4;35;1mClient Load (0.000402)[0m   [0mSELECT * FROM clients WHERE (clients.`id` = 1) [0m
+  [4;36;1mCategory Load (0.000496)[0m   [0;1mSELECT * FROM categories WHERE (categories.`id` = 1) [0m
+  [4;35;1mClient Load (0.000406)[0m   [0mSELECT * FROM clients WHERE (clients.`id` = 1) [0m
+  [4;36;1mCategory Load (0.000488)[0m   [0;1mSELECT * FROM categories WHERE (categories.`id` = 1) [0m
+  [4;35;1mClient Load (0.000404)[0m   [0mSELECT * FROM clients WHERE (clients.`id` = 1) [0m
+Completed in 0.04188 (23 reqs/sec) | Rendering: 0.02350 (56%) | DB: 0.01230 (29%) | 200 OK [http://localhost/pdfs]
+
+
+Processing PdfsController#attachment (for 127.0.0.1 at 2007-11-21 11:22:30) [GET]
+  Session ID: 960a680d02d6b9d35aa9843023b06506
+  Parameters: {"action"=>"attachment", "controller"=>"pdfs", "filename"=>"/livedata/pdfcat_test_clt/digitech/tax/20071121-test3.pdf"}
+Completed in 0.00091 (1102 reqs/sec) | Rendering: 0.00005 (5%) | DB: 0.00000 (0%) | 200 OK [http://localhost/pdfs/attachment?filename=%2Flivedata%2Fpdfcat_test_clt%2Fdigitech%2Ftax%2F20071121-test3.pdf]
+Streaming file /livedata/pdfcat_test_clt/digitech/tax/20071121-test3.pdf
+
+
+Processing ClientsController#index (for 127.0.0.1 at 2007-11-21 11:23:11) [GET]
+  Session ID: 960a680d02d6b9d35aa9843023b06506
+  Parameters: {"action"=>"index", "controller"=>"clients"}
+  [4;36;1mClient Columns (0.003376)[0m   [0;1mSHOW FIELDS FROM clients[0m
+  [4;35;1mSQL (0.007959)[0m   [0mSELECT count(*) AS count_all FROM clients [0m
+  [4;36;1mClient Load (0.000754)[0m   [0;1mSELECT * FROM clients LIMIT 0, 10[0m
+Rendering layoutfalseactionlist within layouts/application
+Rendering clients/list
+Completed in 0.03428 (29 reqs/sec) | Rendering: 0.01368 (39%) | DB: 0.01209 (35%) | 200 OK [http://localhost/clients]
+
+
+Processing ClientsController#new (for 127.0.0.1 at 2007-11-21 11:23:13) [GET]
+  Session ID: 960a680d02d6b9d35aa9843023b06506
+  Parameters: {"action"=>"new", "controller"=>"clients"}
+  [4;35;1mClient Columns (0.001630)[0m   [0mSHOW FIELDS FROM clients[0m
+Rendering  within layouts/application
+Rendering clients/new
+Rendered clients/_form (0.00159)
+Completed in 0.01614 (61 reqs/sec) | Rendering: 0.00918 (56%) | DB: 0.00163 (10%) | 200 OK [http://localhost/clients/new]
+
+
+Processing ClientsController#create (for 127.0.0.1 at 2007-11-21 11:23:19) [POST]
+  Session ID: 960a680d02d6b9d35aa9843023b06506
+  Parameters: {"commit"=>"Create", "client"=>{"name"=>"Digitech", "email"=>""}, "action"=>"create", "controller"=>"clients"}
+  [4;36;1mClient Columns (0.003271)[0m   [0;1mSHOW FIELDS FROM clients[0m
+  [4;35;1mSQL (0.000297)[0m   [0mBEGIN[0m
+  [4;36;1mClient Load (0.000675)[0m   [0;1mSELECT * FROM clients WHERE (clients.name = 'Digitech') LIMIT 1[0m
+  [4;35;1mSQL (0.000179)[0m   [0mCOMMIT[0m
+Rendering layoutfalseactionnew within layouts/application
+Rendering clients/new
+Rendered clients/_form (0.00059)
+Completed in 0.01692 (59 reqs/sec) | Rendering: 0.00566 (33%) | DB: 0.00442 (26%) | 200 OK [http://localhost/clients/create]
+
+
+Processing ClientsController#list (for 127.0.0.1 at 2007-11-21 11:23:23) [GET]
+  Session ID: 960a680d02d6b9d35aa9843023b06506
+  Parameters: {"action"=>"list", "controller"=>"clients"}
+  [4;36;1mClient Columns (0.001569)[0m   [0;1mSHOW FIELDS FROM clients[0m
+  [4;35;1mSQL (0.000742)[0m   [0mSELECT count(*) AS count_all FROM clients [0m
+  [4;36;1mClient Load (0.000492)[0m   [0;1mSELECT * FROM clients LIMIT 0, 10[0m
+Rendering  within layouts/application
+Rendering clients/list
+Completed in 0.01693 (59 reqs/sec) | Rendering: 0.00679 (40%) | DB: 0.00280 (16%) | 200 OK [http://localhost/clients/list]
+
+
+Processing CategoriesController#index (for 127.0.0.1 at 2007-11-21 11:23:48) [GET]
+  Session ID: 960a680d02d6b9d35aa9843023b06506
+  Parameters: {"action"=>"index", "controller"=>"categories"}
+  [4;35;1mCategory Columns (0.001536)[0m   [0mSHOW FIELDS FROM categories[0m
+  [4;36;1mSQL (0.000642)[0m   [0;1mSELECT count(*) AS count_all FROM categories [0m
+  [4;35;1mCategory Load (0.000550)[0m   [0mSELECT * FROM categories LIMIT 0, 10[0m
+Rendering  within layouts/application
+Rendering categories/index
+Completed in 0.01601 (62 reqs/sec) | Rendering: 0.00745 (46%) | DB: 0.00273 (17%) | 200 OK [http://localhost/categories]
+
+
+Processing CategoriesController#new (for 127.0.0.1 at 2007-11-21 11:23:50) [GET]
+  Session ID: 960a680d02d6b9d35aa9843023b06506
+  Parameters: {"action"=>"new", "controller"=>"categories"}
+  [4;36;1mCategory Columns (0.001732)[0m   [0;1mSHOW FIELDS FROM categories[0m
+Rendering  within layouts/application
+Rendering categories/new
+Rendered categories/_form (0.01687)
+Completed in 0.03006 (33 reqs/sec) | Rendering: 0.02290 (76%) | DB: 0.00173 (5%) | 200 OK [http://localhost/categories/new]
+
+
+Processing CategoriesController#create (for 127.0.0.1 at 2007-11-21 11:23:54) [POST]
+  Session ID: 960a680d02d6b9d35aa9843023b06506
+  Parameters: {"commit"=>"Create", "category"=>{"name"=>"tax", "description"=>""}, "action"=>"create", "controller"=>"categories"}
+  [4;35;1mCategory Columns (0.001591)[0m   [0mSHOW FIELDS FROM categories[0m
+  [4;36;1mSQL (0.000206)[0m   [0;1mBEGIN[0m
+  [4;35;1mCategory Load (0.000612)[0m   [0mSELECT * FROM categories WHERE (categories.name = 'tax') LIMIT 1[0m
+  [4;36;1mSQL (0.000235)[0m   [0;1mCOMMIT[0m
+Rendering layoutfalseactionnew within layouts/application
+Rendering categories/new
+Rendered categories/_form (0.00089)
+Completed in 0.01653 (60 reqs/sec) | Rendering: 0.00496 (30%) | DB: 0.00264 (15%) | 200 OK [http://localhost/categories/create]
+
+
+Processing CategoriesController#create (for 127.0.0.1 at 2007-11-21 11:23:58) [POST]
+  Session ID: 960a680d02d6b9d35aa9843023b06506
+  Parameters: {"commit"=>"Create", "category"=>{"name"=>"taX", "description"=>""}, "action"=>"create", "controller"=>"categories"}
+  [4;35;1mCategory Columns (0.001457)[0m   [0mSHOW FIELDS FROM categories[0m
+  [4;36;1mSQL (0.000130)[0m   [0;1mBEGIN[0m
+  [4;35;1mCategory Load (0.000556)[0m   [0mSELECT * FROM categories WHERE (categories.name = 'taX') LIMIT 1[0m
+  [4;36;1mSQL (0.000117)[0m   [0;1mCOMMIT[0m
+Rendering layoutfalseactionnew within layouts/application
+Rendering categories/new
+Rendered categories/_form (0.00068)
+Completed in 0.01328 (75 reqs/sec) | Rendering: 0.00457 (34%) | DB: 0.00226 (17%) | 200 OK [http://localhost/categories/create]
+
+
+Processing CategoriesController#create (for 127.0.0.1 at 2007-11-21 11:24:02) [POST]
+  Session ID: 960a680d02d6b9d35aa9843023b06506
+  Parameters: {"commit"=>"Create", "category"=>{"name"=>"taX", "description"=>""}, "action"=>"create", "controller"=>"categories"}
+  [4;35;1mCategory Columns (0.001511)[0m   [0mSHOW FIELDS FROM categories[0m
+  [4;36;1mSQL (0.000132)[0m   [0;1mBEGIN[0m
+  [4;35;1mCategory Load (0.000558)[0m   [0mSELECT * FROM categories WHERE (categories.name = 'taX') LIMIT 1[0m
+  [4;36;1mSQL (0.001215)[0m   [0;1mCOMMIT[0m
+Rendering layoutfalseactionnew within layouts/application
+Rendering categories/new
+Rendered categories/_form (0.00059)
+Completed in 0.01539 (64 reqs/sec) | Rendering: 0.00448 (29%) | DB: 0.00342 (22%) | 200 OK [http://localhost/categories/create]
+
+
+Processing CategoriesController#list (for 127.0.0.1 at 2007-11-21 11:24:04) [GET]
+  Session ID: 960a680d02d6b9d35aa9843023b06506
+  Parameters: {"action"=>"list", "controller"=>"categories"}
+
+
+ActionController::UnknownAction (No action responded to list):
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:632:in `call_filter'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:634:in `call_filter'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:619:in `perform_action_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/benchmarking.rb:66:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/benchmarking.rb:66:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/rescue.rb:83:in `perform_action'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:430:in `send'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:430:in `process_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:624:in `process_without_session_management_support'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/session_management.rb:114:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:330:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.2.3/lib/dispatcher.rb:41:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.2.3/lib/webrick_server.rb:113:in `handle_dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.2.3/lib/webrick_server.rb:79:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.2.3/lib/webrick_server.rb:63:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.2.3/lib/commands/servers/webrick.rb:59
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:495:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:495:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.2.3/lib/commands/server.rb:39
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    script/server:3
+
+
+Rendering /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/templates/rescues/layout.rhtml (404 Page Not Found)
+
+
+Processing CategoriesController#list (for 127.0.0.1 at 2007-11-21 11:25:27) [GET]
+  Session ID: 960a680d02d6b9d35aa9843023b06506
+  Parameters: {"action"=>"list", "controller"=>"categories"}
+
+
+ActionController::UnknownAction (No action responded to list):
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:632:in `call_filter'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:634:in `call_filter'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:619:in `perform_action_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/benchmarking.rb:66:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/benchmarking.rb:66:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/rescue.rb:83:in `perform_action'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:430:in `send'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:430:in `process_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:624:in `process_without_session_management_support'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/session_management.rb:114:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:330:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.2.3/lib/dispatcher.rb:41:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.2.3/lib/webrick_server.rb:113:in `handle_dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.2.3/lib/webrick_server.rb:79:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.2.3/lib/webrick_server.rb:63:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.2.3/lib/commands/servers/webrick.rb:59
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:495:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:495:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.2.3/lib/commands/server.rb:39
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    script/server:3
+
+
+Rendering /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/templates/rescues/layout.rhtml (404 Page Not Found)
+
+
+Processing CategoriesController#create (for 127.0.0.1 at 2007-11-21 11:25:31) [POST]
+  Session ID: 960a680d02d6b9d35aa9843023b06506
+  Parameters: {"commit"=>"Create", "category"=>{"name"=>"taX", "description"=>""}, "action"=>"create", "controller"=>"categories"}
+  [4;35;1mCategory Columns (0.001378)[0m   [0mSHOW FIELDS FROM categories[0m
+  [4;36;1mSQL (0.000188)[0m   [0;1mBEGIN[0m
+  [4;35;1mCategory Load (0.000515)[0m   [0mSELECT * FROM categories WHERE (categories.name = 'taX') LIMIT 1[0m
+  [4;36;1mSQL (0.000222)[0m   [0;1mCOMMIT[0m
+Rendering layoutfalseactionnew within layouts/application
+Rendering categories/new
+Rendered categories/_form (0.00068)
+Completed in 0.01518 (65 reqs/sec) | Rendering: 0.00643 (42%) | DB: 0.00230 (15%) | 200 OK [http://localhost/categories/create]
+
+
+Processing CategoriesController#index (for 127.0.0.1 at 2007-11-21 11:25:33) [GET]
+  Session ID: 960a680d02d6b9d35aa9843023b06506
+  Parameters: {"action"=>"index", "controller"=>"categories"}
+  [4;35;1mCategory Columns (0.001399)[0m   [0mSHOW FIELDS FROM categories[0m
+  [4;36;1mSQL (0.000558)[0m   [0;1mSELECT count(*) AS count_all FROM categories [0m
+  [4;35;1mCategory Load (0.000510)[0m   [0mSELECT * FROM categories LIMIT 0, 10[0m
+Rendering  within layouts/application
+Rendering categories/index
+Completed in 0.01297 (77 reqs/sec) | Rendering: 0.00496 (38%) | DB: 0.00247 (19%) | 200 OK [http://localhost/categories]
+
+
+Processing PdfsController#index (for 127.0.0.1 at 2007-11-21 11:25:36) [GET]
+  Session ID: 960a680d02d6b9d35aa9843023b06506
+  Parameters: {"action"=>"index", "controller"=>"pdfs"}
+  [4;36;1mPdf Columns (0.003602)[0m   [0;1mSHOW FIELDS FROM pdfs[0m
+  [4;35;1mSQL (0.000603)[0m   [0mSELECT count(*) AS count_all FROM pdfs [0m
+  [4;36;1mPdf Load (0.000985)[0m   [0;1mSELECT * FROM pdfs LIMIT 0, 10[0m
+Rendering  within layouts/application
+Rendering pdfs/index
+  [4;35;1mCategory Columns (0.001744)[0m   [0mSHOW FIELDS FROM categories[0m
+  [4;36;1mCategory Load (0.000664)[0m   [0;1mSELECT * FROM categories WHERE (categories.`id` = 1) [0m
+  [4;35;1mClient Columns (0.001598)[0m   [0mSHOW FIELDS FROM clients[0m
+  [4;36;1mClient Load (0.000643)[0m   [0;1mSELECT * FROM clients WHERE (clients.`id` = 1) [0m
+  [4;35;1mCategory Load (0.001245)[0m   [0mSELECT * FROM categories WHERE (categories.`id` = 1) [0m
+  [4;36;1mClient Load (0.000631)[0m   [0;1mSELECT * FROM clients WHERE (clients.`id` = 1) [0m
+  [4;35;1mCategory Load (0.001923)[0m   [0mSELECT * FROM categories WHERE (categories.`id` = 1) [0m
+  [4;36;1mClient Load (0.005998)[0m   [0;1mSELECT * FROM clients WHERE (clients.`id` = 1) [0m
+  [4;35;1mCategory Load (0.000824)[0m   [0mSELECT * FROM categories WHERE (categories.`id` = 1) [0m
+  [4;36;1mClient Load (0.000561)[0m   [0;1mSELECT * FROM clients WHERE (clients.`id` = 1) [0m
+  [4;35;1mCategory Load (0.001371)[0m   [0mSELECT * FROM categories WHERE (categories.`id` = 1) [0m
+  [4;36;1mClient Load (0.000720)[0m   [0;1mSELECT * FROM clients WHERE (clients.`id` = 1) [0m
+Completed in 0.05892 (16 reqs/sec) | Rendering: 0.02970 (50%) | DB: 0.02311 (39%) | 200 OK [http://localhost/pdfs]
+
+
+Processing ClientsController#index (for 127.0.0.1 at 2007-11-21 11:25:39) [GET]
+  Session ID: 960a680d02d6b9d35aa9843023b06506
+  Parameters: {"action"=>"index", "controller"=>"clients"}
+  [4;35;1mClient Columns (0.001454)[0m   [0mSHOW FIELDS FROM clients[0m
+  [4;36;1mSQL (0.000352)[0m   [0;1mSELECT count(*) AS count_all FROM clients [0m
+  [4;35;1mClient Load (0.000458)[0m   [0mSELECT * FROM clients LIMIT 0, 10[0m
+Rendering layoutfalseactionlist within layouts/application
+Rendering clients/list
+Completed in 0.01245 (80 reqs/sec) | Rendering: 0.00482 (38%) | DB: 0.00226 (18%) | 200 OK [http://localhost/clients]
+
+
+Processing PdfsController#index (for 127.0.0.1 at 2007-11-21 11:25:41) [GET]
+  Session ID: 960a680d02d6b9d35aa9843023b06506
+  Parameters: {"action"=>"index", "controller"=>"pdfs"}
+  [4;36;1mPdf Columns (0.001729)[0m   [0;1mSHOW FIELDS FROM pdfs[0m
+  [4;35;1mSQL (0.000439)[0m   [0mSELECT count(*) AS count_all FROM pdfs [0m
+  [4;36;1mPdf Load (0.001675)[0m   [0;1mSELECT * FROM pdfs LIMIT 0, 10[0m
+Rendering  within layouts/application
+Rendering pdfs/index
+  [4;35;1mCategory Columns (0.001449)[0m   [0mSHOW FIELDS FROM categories[0m
+  [4;36;1mCategory Load (0.000528)[0m   [0;1mSELECT * FROM categories WHERE (categories.`id` = 1) [0m
+  [4;35;1mClient Columns (0.001432)[0m   [0mSHOW FIELDS FROM clients[0m
+  [4;36;1mClient Load (0.000494)[0m   [0;1mSELECT * FROM clients WHERE (clients.`id` = 1) [0m
+  [4;35;1mCategory Load (0.000586)[0m   [0mSELECT * FROM categories WHERE (categories.`id` = 1) [0m
+  [4;36;1mClient Load (0.000411)[0m   [0;1mSELECT * FROM clients WHERE (clients.`id` = 1) [0m
+  [4;35;1mCategory Load (0.000463)[0m   [0mSELECT * FROM categories WHERE (categories.`id` = 1) [0m
+  [4;36;1mClient Load (0.000403)[0m   [0;1mSELECT * FROM clients WHERE (clients.`id` = 1) [0m
+  [4;35;1mCategory Load (0.000517)[0m   [0mSELECT * FROM categories WHERE (categories.`id` = 1) [0m
+  [4;36;1mClient Load (0.000414)[0m   [0;1mSELECT * FROM clients WHERE (clients.`id` = 1) [0m
+  [4;35;1mCategory Load (0.000533)[0m   [0mSELECT * FROM categories WHERE (categories.`id` = 1) [0m
+  [4;36;1mClient Load (0.000406)[0m   [0;1mSELECT * FROM clients WHERE (clients.`id` = 1) [0m
+Completed in 0.03951 (25 reqs/sec) | Rendering: 0.02217 (56%) | DB: 0.01148 (29%) | 200 OK [http://localhost/pdfs]
+
+
+Processing NewController#index (for 127.0.0.1 at 2007-11-21 11:25:42) [GET]
+  Session ID: 960a680d02d6b9d35aa9843023b06506
+  Parameters: {"action"=>"index", "controller"=>"new"}
+  [4;35;1mPdf Columns (0.001708)[0m   [0mSHOW FIELDS FROM pdfs[0m
+Rendering  within layouts/application
+Rendering new/index
+Completed in 0.02199 (45 reqs/sec) | Rendering: 0.01488 (67%) | DB: 0.00171 (7%) | 200 OK [http://localhost/new]
+
+
+Processing PdfsController#index (for 127.0.0.1 at 2007-11-21 11:25:44) [GET]
+  Session ID: 960a680d02d6b9d35aa9843023b06506
+  Parameters: {"action"=>"index", "controller"=>"pdfs"}
+  [4;36;1mPdf Columns (0.001781)[0m   [0;1mSHOW FIELDS FROM pdfs[0m
+  [4;35;1mSQL (0.000390)[0m   [0mSELECT count(*) AS count_all FROM pdfs [0m
+  [4;36;1mPdf Load (0.000856)[0m   [0;1mSELECT * FROM pdfs LIMIT 0, 10[0m
+Rendering  within layouts/application
+Rendering pdfs/index
+  [4;35;1mCategory Columns (0.001530)[0m   [0mSHOW FIELDS FROM categories[0m
+  [4;36;1mCategory Load (0.000498)[0m   [0;1mSELECT * FROM categories WHERE (categories.`id` = 1) [0m
+  [4;35;1mClient Columns (0.001498)[0m   [0mSHOW FIELDS FROM clients[0m
+  [4;36;1mClient Load (0.000530)[0m   [0;1mSELECT * FROM clients WHERE (clients.`id` = 1) [0m
+  [4;35;1mCategory Load (0.000660)[0m   [0mSELECT * FROM categories WHERE (categories.`id` = 1) [0m
+  [4;36;1mClient Load (0.000412)[0m   [0;1mSELECT * FROM clients WHERE (clients.`id` = 1) [0m
+  [4;35;1mCategory Load (0.000505)[0m   [0mSELECT * FROM categories WHERE (categories.`id` = 1) [0m
+  [4;36;1mClient Load (0.000404)[0m   [0;1mSELECT * FROM clients WHERE (clients.`id` = 1) [0m
+  [4;35;1mCategory Load (0.000516)[0m   [0mSELECT * FROM categories WHERE (categories.`id` = 1) [0m
+  [4;36;1mClient Load (0.000407)[0m   [0;1mSELECT * FROM clients WHERE (clients.`id` = 1) [0m
+  [4;35;1mCategory Load (0.000501)[0m   [0mSELECT * FROM categories WHERE (categories.`id` = 1) [0m
+  [4;36;1mClient Load (0.000404)[0m   [0;1mSELECT * FROM clients WHERE (clients.`id` = 1) [0m
+Completed in 0.03908 (25 reqs/sec) | Rendering: 0.02252 (57%) | DB: 0.01089 (27%) | 200 OK [http://localhost/pdfs]
+
+
+Processing ClientsController#index (for 127.0.0.1 at 2007-11-21 11:27:12) [GET]
+  Session ID: 960a680d02d6b9d35aa9843023b06506
+  Parameters: {"action"=>"index", "controller"=>"clients"}
+  [4;35;1mClient Columns (0.003650)[0m   [0mSHOW FIELDS FROM clients[0m
+  [4;36;1mSQL (0.000978)[0m   [0;1mSELECT count(*) AS count_all FROM clients [0m
+  [4;35;1mClient Load (0.000666)[0m   [0mSELECT * FROM clients LIMIT 0, 10[0m
+Rendering layoutfalseactionlist within layouts/application
+Rendering clients/list
+Completed in 0.01705 (58 reqs/sec) | Rendering: 0.00505 (29%) | DB: 0.00529 (31%) | 200 OK [http://localhost/clients]
+
+
+Processing ClientsController#new (for 127.0.0.1 at 2007-11-21 11:27:14) [GET]
+  Session ID: 960a680d02d6b9d35aa9843023b06506
+  Parameters: {"action"=>"new", "controller"=>"clients"}
+  [4;36;1mClient Columns (0.001889)[0m   [0;1mSHOW FIELDS FROM clients[0m
+Rendering  within layouts/application
+Rendering clients/new
+Rendered clients/_form (0.00053)
+Completed in 0.01484 (67 reqs/sec) | Rendering: 0.00612 (41%) | DB: 0.00189 (12%) | 200 OK [http://localhost/clients/new]
+
+
+Processing ClientsController#create (for 127.0.0.1 at 2007-11-21 11:27:24) [POST]
+  Session ID: 960a680d02d6b9d35aa9843023b06506
+  Parameters: {"commit"=>"Create", "client"=>{"name"=>"Fast Line", "email"=>"@"}, "action"=>"create", "controller"=>"clients"}
+  [4;35;1mClient Columns (0.002239)[0m   [0mSHOW FIELDS FROM clients[0m
+  [4;36;1mSQL (0.000348)[0m   [0;1mBEGIN[0m
+  [4;35;1mClient Load (0.000632)[0m   [0mSELECT * FROM clients WHERE (clients.name = 'Fast Line') LIMIT 1[0m
+  [4;36;1mSQL (0.000432)[0m   [0;1mCOMMIT[0m
+Rendering layoutfalseactionnew within layouts/application
+Rendering clients/new
+Rendered clients/_form (0.00070)
+Completed in 0.01991 (50 reqs/sec) | Rendering: 0.00814 (40%) | DB: 0.00365 (18%) | 200 OK [http://localhost/clients/create]
+
+
+Processing ClientsController#create (for 127.0.0.1 at 2007-11-21 11:27:31) [POST]
+  Session ID: 960a680d02d6b9d35aa9843023b06506
+  Parameters: {"commit"=>"Create", "client"=>{"name"=>"Fast Line", "email"=>"a@com"}, "action"=>"create", "controller"=>"clients"}
+  [4;35;1mClient Columns (0.001795)[0m   [0mSHOW FIELDS FROM clients[0m
+  [4;36;1mSQL (0.000364)[0m   [0;1mBEGIN[0m
+  [4;35;1mClient Load (0.000599)[0m   [0mSELECT * FROM clients WHERE (clients.name = 'Fast Line') LIMIT 1[0m
+  [4;36;1mSQL (0.015463)[0m   [0;1mINSERT INTO clients (`name`, `email`) VALUES('Fast Line', 'a@com')[0m
+  [4;35;1mSQL (0.000898)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/clients/list
+Completed in 0.02791 (35 reqs/sec) | DB: 0.01912 (68%) | 302 Found [http://localhost/clients/create]
+
+
+Processing ClientsController#list (for 127.0.0.1 at 2007-11-21 11:27:31) [GET]
+  Session ID: 960a680d02d6b9d35aa9843023b06506
+  Parameters: {"action"=>"list", "controller"=>"clients"}
+  [4;36;1mClient Columns (0.001698)[0m   [0;1mSHOW FIELDS FROM clients[0m
+  [4;35;1mSQL (0.000595)[0m   [0mSELECT count(*) AS count_all FROM clients [0m
+  [4;36;1mClient Load (0.000617)[0m   [0;1mSELECT * FROM clients LIMIT 0, 10[0m
+Rendering  within layouts/application
+Rendering clients/list
+Completed in 0.01804 (55 reqs/sec) | Rendering: 0.00949 (52%) | DB: 0.00291 (16%) | 200 OK [http://localhost/clients/list]
+
+
+Processing ClientsController#edit (for 127.0.0.1 at 2007-11-21 11:27:36) [GET]
+  Session ID: 960a680d02d6b9d35aa9843023b06506
+  Parameters: {"action"=>"edit", "id"=>"3", "controller"=>"clients"}
+  [4;35;1mClient Columns (0.001593)[0m   [0mSHOW FIELDS FROM clients[0m
+  [4;36;1mClient Load (0.000700)[0m   [0;1mSELECT * FROM clients WHERE (clients.`id` = 3) [0m
+Rendering  within layouts/application
+Rendering clients/edit
+Rendered clients/_form (0.00054)
+Completed in 0.01369 (73 reqs/sec) | Rendering: 0.00558 (40%) | DB: 0.00229 (16%) | 200 OK [http://localhost/clients/edit/3]
+
+
+Processing ClientsController#update (for 127.0.0.1 at 2007-11-21 11:27:39) [POST]
+  Session ID: 960a680d02d6b9d35aa9843023b06506
+  Parameters: {"commit"=>"Edit", "client"=>{"name"=>"Fast Line", "email"=>"a@co"}, "action"=>"update", "id"=>"3", "controller"=>"clients"}
+  [4;35;1mClient Columns (0.001470)[0m   [0mSHOW FIELDS FROM clients[0m
+  [4;36;1mClient Load (0.001059)[0m   [0;1mSELECT * FROM clients WHERE (clients.`id` = 3) [0m
+  [4;35;1mSQL (0.000120)[0m   [0mBEGIN[0m
+  [4;36;1mClient Load (0.025129)[0m   [0;1mSELECT * FROM clients WHERE (clients.name = 'Fast Line' AND clients.id <> 3) LIMIT 1[0m
+  [4;35;1mSQL (0.008425)[0m   [0mCOMMIT[0m
+Rendering layoutfalseactionedit within layouts/application
+Rendering clients/edit
+Rendered clients/_form (0.00060)
+Completed in 0.10174 (9 reqs/sec) | Rendering: 0.00488 (4%) | DB: 0.03620 (35%) | 200 OK [http://localhost/clients/update/3]
+
+
+Processing ClientsController#index (for 127.0.0.1 at 2007-11-21 11:27:41) [GET]
+  Session ID: 960a680d02d6b9d35aa9843023b06506
+  Parameters: {"action"=>"index", "controller"=>"clients"}
+  [4;36;1mClient Columns (0.001728)[0m   [0;1mSHOW FIELDS FROM clients[0m
+  [4;35;1mSQL (0.000572)[0m   [0mSELECT count(*) AS count_all FROM clients [0m
+  [4;36;1mClient Load (0.001730)[0m   [0;1mSELECT * FROM clients LIMIT 0, 10[0m
+Rendering layoutfalseactionlist within layouts/application
+Rendering clients/list
+Completed in 0.01657 (60 reqs/sec) | Rendering: 0.00656 (39%) | DB: 0.00403 (24%) | 200 OK [http://localhost/clients]
+
+
+Processing ClientsController#edit (for 127.0.0.1 at 2007-11-21 11:29:22) [GET]
+  Session ID: 960a680d02d6b9d35aa9843023b06506
+  Parameters: {"action"=>"edit", "id"=>"3", "controller"=>"clients"}
+  [4;35;1mClient Columns (0.001608)[0m   [0mSHOW FIELDS FROM clients[0m
+  [4;36;1mClient Load (0.002937)[0m   [0;1mSELECT * FROM clients WHERE (clients.`id` = 3) [0m
+Rendering  within layouts/application
+Rendering clients/edit
+Rendered clients/_form (0.00056)
+Completed in 0.02641 (37 reqs/sec) | Rendering: 0.01624 (61%) | DB: 0.00455 (17%) | 200 OK [http://localhost/clients/edit/3]
+
+
+Processing ClientsController#update (for 127.0.0.1 at 2007-11-21 11:29:24) [POST]
+  Session ID: 960a680d02d6b9d35aa9843023b06506
+  Parameters: {"commit"=>"Edit", "client"=>{"name"=>"Fast Line", "email"=>"a@com"}, "action"=>"update", "id"=>"3", "controller"=>"clients"}
+  [4;35;1mClient Columns (0.001457)[0m   [0mSHOW FIELDS FROM clients[0m
+  [4;36;1mClient Load (0.000621)[0m   [0;1mSELECT * FROM clients WHERE (clients.`id` = 3) [0m
+  [4;35;1mSQL (0.000113)[0m   [0mBEGIN[0m
+  [4;36;1mClient Load (0.000677)[0m   [0;1mSELECT * FROM clients WHERE (clients.name = 'Fast Line' AND clients.id <> 3) LIMIT 1[0m
+  [4;35;1mSQL (0.000121)[0m   [0mCOMMIT[0m
+Rendering layoutfalseactionedit within layouts/application
+Rendering clients/edit
+Rendered clients/_form (0.00059)
+Completed in 0.01461 (68 reqs/sec) | Rendering: 0.00469 (32%) | DB: 0.00299 (20%) | 200 OK [http://localhost/clients/update/3]
+
+
+Processing ClientsController#update (for 127.0.0.1 at 2007-11-21 11:29:34) [POST]
+  Session ID: 960a680d02d6b9d35aa9843023b06506
+  Parameters: {"commit"=>"Edit", "client"=>{"name"=>"Fast Line", "email"=>"map7@iinet.com.au"}, "action"=>"update", "id"=>"3", "controller"=>"clients"}
+  [4;36;1mClient Columns (0.001671)[0m   [0;1mSHOW FIELDS FROM clients[0m
+  [4;35;1mClient Load (0.002778)[0m   [0mSELECT * FROM clients WHERE (clients.`id` = 3) [0m
+  [4;36;1mSQL (0.000271)[0m   [0;1mBEGIN[0m
+  [4;35;1mClient Load (0.000793)[0m   [0mSELECT * FROM clients WHERE (clients.name = 'Fast Line' AND clients.id <> 3) LIMIT 1[0m
+  [4;36;1mClient Update (0.000416)[0m   [0;1mUPDATE clients SET `email` = 'map7@iinet.com.au', `name` = 'Fast Line' WHERE `id` = 3[0m
+  [4;35;1mSQL (0.000700)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/clients/show/3
+Completed in 0.01643 (60 reqs/sec) | DB: 0.00663 (40%) | 302 Found [http://localhost/clients/update/3]
+
+
+Processing ClientsController#show (for 127.0.0.1 at 2007-11-21 11:29:34) [GET]
+  Session ID: 960a680d02d6b9d35aa9843023b06506
+  Parameters: {"action"=>"show", "id"=>"3", "controller"=>"clients"}
+  [4;36;1mClient Columns (0.001714)[0m   [0;1mSHOW FIELDS FROM clients[0m
+  [4;35;1mClient Load (0.001168)[0m   [0mSELECT * FROM clients WHERE (clients.`id` = 3) [0m
+Rendering  within layouts/application
+Rendering clients/show
+Completed in 0.02797 (35 reqs/sec) | Rendering: 0.01846 (65%) | DB: 0.00288 (10%) | 200 OK [http://localhost/clients/show/3]
+
+
+Processing ClientsController#edit (for 127.0.0.1 at 2007-11-21 11:29:38) [GET]
+  Session ID: 960a680d02d6b9d35aa9843023b06506
+  Parameters: {"action"=>"edit", "id"=>"3", "controller"=>"clients"}
+  [4;36;1mClient Columns (0.001732)[0m   [0;1mSHOW FIELDS FROM clients[0m
+  [4;35;1mClient Load (0.002582)[0m   [0mSELECT * FROM clients WHERE (clients.`id` = 3) [0m
+Rendering  within layouts/application
+Rendering clients/edit
+Rendered clients/_form (0.00053)
+Completed in 0.01539 (64 reqs/sec) | Rendering: 0.00483 (31%) | DB: 0.00431 (28%) | 200 OK [http://localhost/clients/edit/3]
+
+
+Processing ClientsController#update (for 127.0.0.1 at 2007-11-21 11:29:44) [POST]
+  Session ID: 960a680d02d6b9d35aa9843023b06506
+  Parameters: {"commit"=>"Edit", "client"=>{"name"=>"Fast Line", "email"=>"map7@hotmail.com"}, "action"=>"update", "id"=>"3", "controller"=>"clients"}
+  [4;36;1mClient Columns (0.001953)[0m   [0;1mSHOW FIELDS FROM clients[0m
+  [4;35;1mClient Load (0.001810)[0m   [0mSELECT * FROM clients WHERE (clients.`id` = 3) [0m
+  [4;36;1mSQL (0.000148)[0m   [0;1mBEGIN[0m
+  [4;35;1mClient Load (0.000684)[0m   [0mSELECT * FROM clients WHERE (clients.name = 'Fast Line' AND clients.id <> 3) LIMIT 1[0m
+  [4;36;1mClient Update (0.000293)[0m   [0;1mUPDATE clients SET `email` = 'map7@hotmail.com', `name` = 'Fast Line' WHERE `id` = 3[0m
+  [4;35;1mSQL (0.000611)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/clients/show/3
+Completed in 0.01479 (67 reqs/sec) | DB: 0.00550 (37%) | 302 Found [http://localhost/clients/update/3]
+
+
+Processing ClientsController#show (for 127.0.0.1 at 2007-11-21 11:29:44) [GET]
+  Session ID: 960a680d02d6b9d35aa9843023b06506
+  Parameters: {"action"=>"show", "id"=>"3", "controller"=>"clients"}
+  [4;36;1mClient Columns (0.001741)[0m   [0;1mSHOW FIELDS FROM clients[0m
+  [4;35;1mClient Load (0.000807)[0m   [0mSELECT * FROM clients WHERE (clients.`id` = 3) [0m
+Rendering  within layouts/application
+Rendering clients/show
+Completed in 0.01556 (64 reqs/sec) | Rendering: 0.00562 (36%) | DB: 0.00255 (16%) | 200 OK [http://localhost/clients/show/3]
+
+
+Processing ClientsController#edit (for 127.0.0.1 at 2007-11-21 11:29:48) [GET]
+  Session ID: 960a680d02d6b9d35aa9843023b06506
+  Parameters: {"action"=>"edit", "id"=>"3", "controller"=>"clients"}
+  [4;36;1mClient Columns (0.004265)[0m   [0;1mSHOW FIELDS FROM clients[0m
+  [4;35;1mClient Load (0.001164)[0m   [0mSELECT * FROM clients WHERE (clients.`id` = 3) [0m
+Rendering  within layouts/application
+Rendering clients/edit
+Rendered clients/_form (0.00053)
+Completed in 0.01938 (51 reqs/sec) | Rendering: 0.00486 (25%) | DB: 0.00543 (28%) | 200 OK [http://localhost/clients/edit/3]
+
+
+Processing ClientsController#update (for 127.0.0.1 at 2007-11-21 11:29:52) [POST]
+  Session ID: 960a680d02d6b9d35aa9843023b06506
+  Parameters: {"commit"=>"Edit", "client"=>{"name"=>"Fast Line", "email"=>"a@hotmail.com"}, "action"=>"update", "id"=>"3", "controller"=>"clients"}
+  [4;36;1mClient Columns (0.001679)[0m   [0;1mSHOW FIELDS FROM clients[0m
+  [4;35;1mClient Load (0.000629)[0m   [0mSELECT * FROM clients WHERE (clients.`id` = 3) [0m
+  [4;36;1mSQL (0.000211)[0m   [0;1mBEGIN[0m
+  [4;35;1mClient Load (0.002260)[0m   [0mSELECT * FROM clients WHERE (clients.name = 'Fast Line' AND clients.id <> 3) LIMIT 1[0m
+  [4;36;1mSQL (0.000915)[0m   [0;1mCOMMIT[0m
+Rendering layoutfalseactionedit within layouts/application
+Rendering clients/edit
+Rendered clients/_form (0.00167)
+Completed in 0.02682 (37 reqs/sec) | Rendering: 0.01375 (51%) | DB: 0.00569 (21%) | 200 OK [http://localhost/clients/update/3]
+
+
+Processing ClientsController#update (for 127.0.0.1 at 2007-11-21 11:29:56) [POST]
+  Session ID: 960a680d02d6b9d35aa9843023b06506
+  Parameters: {"commit"=>"Edit", "client"=>{"name"=>"Fast Line", "email"=>"ab@hotmail.com"}, "action"=>"update", "id"=>"3", "controller"=>"clients"}
+  [4;35;1mClient Columns (0.001443)[0m   [0mSHOW FIELDS FROM clients[0m
+  [4;36;1mClient Load (0.000571)[0m   [0;1mSELECT * FROM clients WHERE (clients.`id` = 3) [0m
+  [4;35;1mSQL (0.000238)[0m   [0mBEGIN[0m
+  [4;36;1mClient Load (0.000608)[0m   [0;1mSELECT * FROM clients WHERE (clients.name = 'Fast Line' AND clients.id <> 3) LIMIT 1[0m
+  [4;35;1mClient Update (0.000346)[0m   [0mUPDATE clients SET `email` = 'ab@hotmail.com', `name` = 'Fast Line' WHERE `id` = 3[0m
+  [4;36;1mSQL (0.000605)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/clients/show/3
+Completed in 0.01260 (79 reqs/sec) | DB: 0.00381 (30%) | 302 Found [http://localhost/clients/update/3]
+
+
+Processing ClientsController#show (for 127.0.0.1 at 2007-11-21 11:29:56) [GET]
+  Session ID: 960a680d02d6b9d35aa9843023b06506
+  Parameters: {"action"=>"show", "id"=>"3", "controller"=>"clients"}
+  [4;35;1mClient Columns (0.001405)[0m   [0mSHOW FIELDS FROM clients[0m
+  [4;36;1mClient Load (0.000535)[0m   [0;1mSELECT * FROM clients WHERE (clients.`id` = 3) [0m
+Rendering  within layouts/application
+Rendering clients/show
+Completed in 0.01118 (89 reqs/sec) | Rendering: 0.00357 (31%) | DB: 0.00194 (17%) | 200 OK [http://localhost/clients/show/3]
+
+
+Processing ClientsController#edit (for 127.0.0.1 at 2007-11-21 11:29:59) [GET]
+  Session ID: 960a680d02d6b9d35aa9843023b06506
+  Parameters: {"action"=>"edit", "id"=>"3", "controller"=>"clients"}
+  [4;35;1mClient Columns (0.001705)[0m   [0mSHOW FIELDS FROM clients[0m
+  [4;36;1mClient Load (0.000565)[0m   [0;1mSELECT * FROM clients WHERE (clients.`id` = 3) [0m
+Rendering  within layouts/application
+Rendering clients/edit
+Rendered clients/_form (0.00051)
+Completed in 0.01210 (82 reqs/sec) | Rendering: 0.00451 (37%) | DB: 0.00227 (18%) | 200 OK [http://localhost/clients/edit/3]
+
+
+Processing ClientsController#update (for 127.0.0.1 at 2007-11-21 11:30:08) [POST]
+  Session ID: 960a680d02d6b9d35aa9843023b06506
+  Parameters: {"commit"=>"Edit", "client"=>{"name"=>"Fast Line", "email"=>"ab@gmail.com"}, "action"=>"update", "id"=>"3", "controller"=>"clients"}
+  [4;35;1mClient Columns (0.001571)[0m   [0mSHOW FIELDS FROM clients[0m
+  [4;36;1mClient Load (0.000910)[0m   [0;1mSELECT * FROM clients WHERE (clients.`id` = 3) [0m
+  [4;35;1mSQL (0.000211)[0m   [0mBEGIN[0m
+  [4;36;1mClient Load (0.000753)[0m   [0;1mSELECT * FROM clients WHERE (clients.name = 'Fast Line' AND clients.id <> 3) LIMIT 1[0m
+  [4;35;1mClient Update (0.000419)[0m   [0mUPDATE clients SET `email` = 'ab@gmail.com', `name` = 'Fast Line' WHERE `id` = 3[0m
+  [4;36;1mSQL (0.002271)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/clients/show/3
+Completed in 0.01676 (59 reqs/sec) | DB: 0.00613 (36%) | 302 Found [http://localhost/clients/update/3]
+
+
+Processing ClientsController#show (for 127.0.0.1 at 2007-11-21 11:30:08) [GET]
+  Session ID: 960a680d02d6b9d35aa9843023b06506
+  Parameters: {"action"=>"show", "id"=>"3", "controller"=>"clients"}
+  [4;35;1mClient Columns (0.001672)[0m   [0mSHOW FIELDS FROM clients[0m
+  [4;36;1mClient Load (0.000662)[0m   [0;1mSELECT * FROM clients WHERE (clients.`id` = 3) [0m
+Rendering  within layouts/application
+Rendering clients/show
+Completed in 0.01282 (78 reqs/sec) | Rendering: 0.00475 (37%) | DB: 0.00233 (18%) | 200 OK [http://localhost/clients/show/3]
+
+
+Processing ClientsController#list (for 127.0.0.1 at 2007-11-21 11:30:11) [GET]
+  Session ID: 960a680d02d6b9d35aa9843023b06506
+  Parameters: {"action"=>"list", "controller"=>"clients"}
+  [4;35;1mClient Columns (0.001451)[0m   [0mSHOW FIELDS FROM clients[0m
+  [4;36;1mSQL (0.000341)[0m   [0;1mSELECT count(*) AS count_all FROM clients [0m
+  [4;35;1mClient Load (0.000497)[0m   [0mSELECT * FROM clients LIMIT 0, 10[0m
+Rendering  within layouts/application
+Rendering clients/list
+Completed in 0.01317 (75 reqs/sec) | Rendering: 0.00507 (38%) | DB: 0.00229 (17%) | 200 OK [http://localhost/clients/list]
+  [4;36;1mSQL (0.000158)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mCategory Columns (0.001143)[0m   [0mSHOW FIELDS FROM categories[0m
+  [4;36;1mSQL (0.000183)[0m   [0;1mBEGIN[0m
+  [4;35;1mCategory Load (0.000637)[0m   [0mSELECT * FROM categories WHERE (categories.name = 'tax') LIMIT 1[0m
+  [4;36;1mSQL (0.000446)[0m   [0;1mCOMMIT[0m
+  [4;36;1mSQL (0.000157)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mClient Columns (0.001424)[0m   [0mSHOW FIELDS FROM clients[0m
+  [4;36;1mSQL (0.000175)[0m   [0;1mBEGIN[0m
+  [4;35;1mClient Load (0.000563)[0m   [0mSELECT * FROM clients WHERE (clients.name = 'test') LIMIT 1[0m
+  [4;36;1mSQL (0.000209)[0m   [0;1mCOMMIT[0m
+  [4;36;1mSQL (0.000154)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mPdf Columns (0.001419)[0m   [0mSHOW FIELDS FROM pdfs[0m
+  [4;36;1mSQL (0.000169)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000319)[0m   [0mSELECT * FROM schema_info[0m
+  [4;36;1mSQL (0.000492)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.002361)[0m   [0mSHOW FIELDS FROM categories[0m
+  [4;36;1mSQL (0.001281)[0m   [0;1mSHOW KEYS FROM categories[0m
+  [4;35;1mSQL (0.001166)[0m   [0mSHOW FIELDS FROM clients[0m
+  [4;36;1mSQL (0.001400)[0m   [0;1mSHOW KEYS FROM clients[0m
+  [4;35;1mSQL (0.001490)[0m   [0mSHOW FIELDS FROM pdfs[0m
+  [4;36;1mSQL (0.001206)[0m   [0;1mSHOW KEYS FROM pdfs[0m
+  [4;35;1mSQL (0.000153)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.003298)[0m   [0;1mDROP DATABASE IF EXISTS `pdfcat_test`[0m
+  [4;35;1mSQL (0.000295)[0m   [0mCREATE DATABASE `pdfcat_test`[0m
+  [4;36;1mSQL (0.000159)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: #42S02Unknown table 'categories': DROP TABLE categories[0m
+  [4;36;1mSQL (0.002203)[0m   [0;1mCREATE TABLE categories (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) DEFAULT NULL, `description` varchar(255) DEFAULT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: #42S02Unknown table 'clients': DROP TABLE clients[0m
+  [4;36;1mSQL (0.002071)[0m   [0;1mCREATE TABLE clients (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) DEFAULT NULL, `email` varchar(255) DEFAULT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: #42S02Unknown table 'pdfs': DROP TABLE pdfs[0m
+  [4;36;1mSQL (0.002034)[0m   [0;1mCREATE TABLE pdfs (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `pdfdate` date DEFAULT NULL, `pdfname` varchar(255) DEFAULT NULL, `filename` varchar(255) DEFAULT NULL, `pdfnote` text DEFAULT NULL, `category_id` int(11) DEFAULT NULL, `client_id` int(11) DEFAULT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.001341)[0m   [0mCREATE TABLE schema_info (version int(11))[0m
+  [4;36;1mSQL (0.000318)[0m   [0;1mINSERT INTO schema_info (version) VALUES(0)[0m
+  [4;35;1mSQL (0.001013)[0m   [0mSHOW FIELDS FROM schema_info[0m
+  [4;36;1mSQL (0.000175)[0m   [0;1mUPDATE schema_info SET version = 7[0m
+  [4;36;1mSQL (0.000158)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mPdf Columns (0.001535)[0m   [0mSHOW FIELDS FROM pdfs[0m
+  [4;36;1mSQL (0.000177)[0m   [0;1mBEGIN[0m
+  [4;35;1mPdf Load (0.000865)[0m   [0mSELECT * FROM pdfs WHERE (pdfs.pdfname = 'Test pdf' AND pdfs.pdfdate = '2007-11-21 11:49:19' AND pdfs.category_id = 1 AND pdfs.client_id = 1) LIMIT 1[0m
+  [4;36;1mSQL (0.000344)[0m   [0;1mINSERT INTO pdfs (`pdfname`, `client_id`, `pdfdate`, `category_id`, `filename`, `pdfnote`) VALUES('Test pdf', 1, '2007-11-21 11:49:19', 1, '/livedata/pdfcat_test_upload/DOC070731002030(0001).pdf', 'testing')[0m
+  [4;35;1mSQL (0.000566)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.000214)[0m   [0;1mBEGIN[0m
+  [4;35;1mPdf Load (0.000957)[0m   [0mSELECT * FROM pdfs WHERE (pdfs.pdfname = 'test2' AND pdfs.pdfdate = '2007-11-21 11:49:19' AND pdfs.category_id = 1 AND pdfs.client_id = 1 AND pdfs.id <> 34) LIMIT 1[0m
+  [4;36;1mPdf Update (0.000442)[0m   [0;1mUPDATE pdfs SET `pdfdate` = '2007-11-21 11:49:19', `pdfname` = 'test2', `category_id` = 1, `client_id` = 1, `filename` = '/livedata/pdfcat_test_upload/DOC070731002030(0001).pdf', `pdfnote` = 'testing' WHERE `id` = 34[0m
+  [4;35;1mSQL (0.000576)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.000174)[0m   [0;1mBEGIN[0m
+  [4;35;1mPdf Load (0.000972)[0m   [0mSELECT * FROM pdfs WHERE (pdfs.pdfname = 'test3' AND pdfs.pdfdate = '2007-11-21 11:49:19' AND pdfs.category_id = 1 AND pdfs.client_id = 1 AND pdfs.id <> 34) LIMIT 1[0m
+  [4;36;1mPdf Update (0.000353)[0m   [0;1mUPDATE pdfs SET `pdfdate` = '2007-11-21 11:49:19', `pdfname` = 'test3', `category_id` = 1, `client_id` = 1, `filename` = '/livedata/pdfcat_test_upload/DOC070731002030(0001).pdf', `pdfnote` = 'testing' WHERE `id` = 34[0m
+  [4;35;1mSQL (0.000639)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.000158)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mPdf Load (0.001095)[0m   [0mSELECT * FROM pdfs [0m
+  [4;36;1mSQL (0.000166)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000315)[0m   [0mSELECT * FROM schema_info[0m
+  [4;36;1mSQL (0.000418)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.001155)[0m   [0mSHOW FIELDS FROM categories[0m
+  [4;36;1mSQL (0.001127)[0m   [0;1mSHOW KEYS FROM categories[0m
+  [4;35;1mSQL (0.001146)[0m   [0mSHOW FIELDS FROM clients[0m
+  [4;36;1mSQL (0.001107)[0m   [0;1mSHOW KEYS FROM clients[0m
+  [4;35;1mSQL (0.001346)[0m   [0mSHOW FIELDS FROM pdfs[0m
+  [4;36;1mSQL (0.001174)[0m   [0;1mSHOW KEYS FROM pdfs[0m
+  [4;35;1mSQL (0.000152)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.003562)[0m   [0;1mDROP DATABASE IF EXISTS `pdfcat_test`[0m
+  [4;35;1mSQL (0.000296)[0m   [0mCREATE DATABASE `pdfcat_test`[0m
+  [4;36;1mSQL (0.000158)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: #42S02Unknown table 'categories': DROP TABLE categories[0m
+  [4;36;1mSQL (0.002035)[0m   [0;1mCREATE TABLE categories (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) DEFAULT NULL, `description` varchar(255) DEFAULT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: #42S02Unknown table 'clients': DROP TABLE clients[0m
+  [4;36;1mSQL (0.002318)[0m   [0;1mCREATE TABLE clients (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) DEFAULT NULL, `email` varchar(255) DEFAULT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: #42S02Unknown table 'pdfs': DROP TABLE pdfs[0m
+  [4;36;1mSQL (0.017558)[0m   [0;1mCREATE TABLE pdfs (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `pdfdate` date DEFAULT NULL, `pdfname` varchar(255) DEFAULT NULL, `filename` varchar(255) DEFAULT NULL, `pdfnote` text DEFAULT NULL, `category_id` int(11) DEFAULT NULL, `client_id` int(11) DEFAULT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.001447)[0m   [0mCREATE TABLE schema_info (version int(11))[0m
+  [4;36;1mSQL (0.000393)[0m   [0;1mINSERT INTO schema_info (version) VALUES(0)[0m
+  [4;35;1mSQL (0.001065)[0m   [0mSHOW FIELDS FROM schema_info[0m
+  [4;36;1mSQL (0.000171)[0m   [0;1mUPDATE schema_info SET version = 7[0m
+  [4;36;1mSQL (0.000158)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mPdf Load (0.001086)[0m   [0mSELECT * FROM pdfs [0m
+  [4;36;1mPdf Columns (0.001631)[0m   [0;1mSHOW FIELDS FROM pdfs[0m
+  [4;35;1mPdf Load (0.000942)[0m   [0mSELECT * FROM pdfs WHERE (pdfs.`id` = 1) [0m
+  [4;36;1mPdf Load (0.000914)[0m   [0;1mSELECT * FROM pdfs LIMIT 1[0m
+  [4;35;1mSQL (0.000276)[0m   [0mBEGIN[0m
+  [4;36;1mPdf Load (0.001103)[0m   [0;1mSELECT * FROM pdfs WHERE (pdfs.pdfname = 'test' AND pdfs.pdfdate = '2007-11-19' AND pdfs.category_id = 1 AND pdfs.client_id = 1 AND pdfs.id <> 29) LIMIT 1[0m
+  [4;35;1mPdf Update (0.000411)[0m   [0mUPDATE pdfs SET `pdfdate` = '2007-11-19', `pdfname` = 'test', `category_id` = 1, `client_id` = 1, `filename` = 'test', `pdfnote` = '' WHERE `id` = 29[0m
+  [4;36;1mSQL (0.000584)[0m   [0;1mCOMMIT[0m
+  [4;35;1mPdf Load (0.000991)[0m   [0mSELECT * FROM pdfs LIMIT 1[0m
+  [4;36;1mSQL (0.000232)[0m   [0;1mBEGIN[0m
+  [4;35;1mPdf Load (0.000916)[0m   [0mSELECT * FROM pdfs WHERE (pdfs.pdfname = 'testeasy' AND pdfs.pdfdate = '2007-11-19' AND pdfs.category_id = 1 AND pdfs.client_id = 1 AND pdfs.id <> 29) LIMIT 1[0m
+  [4;36;1mPdf Update (0.000358)[0m   [0;1mUPDATE pdfs SET `pdfdate` = '2007-11-19', `pdfname` = 'testeasy', `category_id` = 1, `client_id` = 1, `filename` = 'test', `pdfnote` = '' WHERE `id` = 29[0m
+  [4;35;1mSQL (0.000564)[0m   [0mCOMMIT[0m
+  [4;36;1mPdf Load (0.000928)[0m   [0;1mSELECT * FROM pdfs LIMIT 1[0m
+  [4;36;1mSQL (0.000153)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mPdf Columns (0.001483)[0m   [0mSHOW FIELDS FROM pdfs[0m
+  [4;36;1mSQL (0.000265)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000322)[0m   [0mSELECT * FROM schema_info[0m
+  [4;36;1mSQL (0.000422)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.001177)[0m   [0mSHOW FIELDS FROM categories[0m
+  [4;36;1mSQL (0.001176)[0m   [0;1mSHOW KEYS FROM categories[0m
+  [4;35;1mSQL (0.001138)[0m   [0mSHOW FIELDS FROM clients[0m
+  [4;36;1mSQL (0.001369)[0m   [0;1mSHOW KEYS FROM clients[0m
+  [4;35;1mSQL (0.001460)[0m   [0mSHOW FIELDS FROM pdfs[0m
+  [4;36;1mSQL (0.001270)[0m   [0;1mSHOW KEYS FROM pdfs[0m
+  [4;35;1mSQL (0.000160)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.003311)[0m   [0;1mDROP DATABASE IF EXISTS `pdfcat_test`[0m
+  [4;35;1mSQL (0.000330)[0m   [0mCREATE DATABASE `pdfcat_test`[0m
+  [4;36;1mSQL (0.000163)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: #42S02Unknown table 'categories': DROP TABLE categories[0m
+  [4;36;1mSQL (0.002088)[0m   [0;1mCREATE TABLE categories (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) DEFAULT NULL, `description` varchar(255) DEFAULT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: #42S02Unknown table 'clients': DROP TABLE clients[0m
+  [4;36;1mSQL (0.001947)[0m   [0;1mCREATE TABLE clients (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) DEFAULT NULL, `email` varchar(255) DEFAULT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: #42S02Unknown table 'pdfs': DROP TABLE pdfs[0m
+  [4;36;1mSQL (0.002037)[0m   [0;1mCREATE TABLE pdfs (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `pdfdate` date DEFAULT NULL, `pdfname` varchar(255) DEFAULT NULL, `filename` varchar(255) DEFAULT NULL, `pdfnote` text DEFAULT NULL, `category_id` int(11) DEFAULT NULL, `client_id` int(11) DEFAULT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.001400)[0m   [0mCREATE TABLE schema_info (version int(11))[0m
+  [4;36;1mSQL (0.000499)[0m   [0;1mINSERT INTO schema_info (version) VALUES(0)[0m
+  [4;35;1mSQL (0.001024)[0m   [0mSHOW FIELDS FROM schema_info[0m
+  [4;36;1mSQL (0.000262)[0m   [0;1mUPDATE schema_info SET version = 7[0m
+  [4;36;1mSQL (0.000170)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000321)[0m   [0mSELECT * FROM schema_info[0m
+  [4;36;1mSQL (0.000414)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.001225)[0m   [0mSHOW FIELDS FROM categories[0m
+  [4;36;1mSQL (0.001151)[0m   [0;1mSHOW KEYS FROM categories[0m
+  [4;35;1mSQL (0.001178)[0m   [0mSHOW FIELDS FROM clients[0m
+  [4;36;1mSQL (0.001372)[0m   [0;1mSHOW KEYS FROM clients[0m
+  [4;35;1mSQL (0.001412)[0m   [0mSHOW FIELDS FROM pdfs[0m
+  [4;36;1mSQL (0.001094)[0m   [0;1mSHOW KEYS FROM pdfs[0m
+  [4;35;1mSQL (0.000151)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.003381)[0m   [0;1mDROP DATABASE IF EXISTS `pdfcat_test`[0m
+  [4;35;1mSQL (0.000292)[0m   [0mCREATE DATABASE `pdfcat_test`[0m
+  [4;36;1mSQL (0.000159)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: #42S02Unknown table 'categories': DROP TABLE categories[0m
+  [4;36;1mSQL (0.002057)[0m   [0;1mCREATE TABLE categories (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) DEFAULT NULL, `description` varchar(255) DEFAULT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: #42S02Unknown table 'clients': DROP TABLE clients[0m
+  [4;36;1mSQL (0.008690)[0m   [0;1mCREATE TABLE clients (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) DEFAULT NULL, `email` varchar(255) DEFAULT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: #42S02Unknown table 'pdfs': DROP TABLE pdfs[0m
+  [4;36;1mSQL (0.002261)[0m   [0;1mCREATE TABLE pdfs (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `pdfdate` date DEFAULT NULL, `pdfname` varchar(255) DEFAULT NULL, `filename` varchar(255) DEFAULT NULL, `pdfnote` text DEFAULT NULL, `category_id` int(11) DEFAULT NULL, `client_id` int(11) DEFAULT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.001752)[0m   [0mCREATE TABLE schema_info (version int(11))[0m
+  [4;36;1mSQL (0.000313)[0m   [0;1mINSERT INTO schema_info (version) VALUES(0)[0m
+  [4;35;1mSQL (0.001010)[0m   [0mSHOW FIELDS FROM schema_info[0m
+  [4;36;1mSQL (0.000174)[0m   [0;1mUPDATE schema_info SET version = 7[0m
+  [4;36;1mSQL (0.000158)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mPdf Load (0.001070)[0m   [0mSELECT * FROM pdfs [0m
+  [4;36;1mPdf Load (0.001162)[0m   [0;1mSELECT * FROM pdfs [0m
+  [4;35;1mPdf Columns (0.001428)[0m   [0mSHOW FIELDS FROM pdfs[0m
+  [4;36;1mPdf Load (0.000948)[0m   [0;1mSELECT * FROM pdfs WHERE (pdfs.pdfname = 'easy2' AND pdfs.pdfdate IS NULL AND pdfs.category_id IS NULL AND pdfs.client_id IS NULL) LIMIT 1[0m
+  [4;36;1mSQL (0.000166)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000321)[0m   [0mSELECT * FROM schema_info[0m
+  [4;36;1mSQL (0.000429)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.001220)[0m   [0mSHOW FIELDS FROM categories[0m
+  [4;36;1mSQL (0.001167)[0m   [0;1mSHOW KEYS FROM categories[0m
+  [4;35;1mSQL (0.001109)[0m   [0mSHOW FIELDS FROM clients[0m
+  [4;36;1mSQL (0.001330)[0m   [0;1mSHOW KEYS FROM clients[0m
+  [4;35;1mSQL (0.001536)[0m   [0mSHOW FIELDS FROM pdfs[0m
+  [4;36;1mSQL (0.001423)[0m   [0;1mSHOW KEYS FROM pdfs[0m
+  [4;35;1mSQL (0.000168)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.003973)[0m   [0;1mDROP DATABASE IF EXISTS `pdfcat_test`[0m
+  [4;35;1mSQL (0.000333)[0m   [0mCREATE DATABASE `pdfcat_test`[0m
+  [4;36;1mSQL (0.000158)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: #42S02Unknown table 'categories': DROP TABLE categories[0m
+  [4;36;1mSQL (0.011654)[0m   [0;1mCREATE TABLE categories (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) DEFAULT NULL, `description` varchar(255) DEFAULT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: #42S02Unknown table 'clients': DROP TABLE clients[0m
+  [4;36;1mSQL (0.002066)[0m   [0;1mCREATE TABLE clients (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) DEFAULT NULL, `email` varchar(255) DEFAULT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: #42S02Unknown table 'pdfs': DROP TABLE pdfs[0m
+  [4;36;1mSQL (0.002476)[0m   [0;1mCREATE TABLE pdfs (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `pdfdate` date DEFAULT NULL, `pdfname` varchar(255) DEFAULT NULL, `filename` varchar(255) DEFAULT NULL, `pdfnote` text DEFAULT NULL, `category_id` int(11) DEFAULT NULL, `client_id` int(11) DEFAULT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.001403)[0m   [0mCREATE TABLE schema_info (version int(11))[0m
+  [4;36;1mSQL (0.000281)[0m   [0;1mINSERT INTO schema_info (version) VALUES(0)[0m
+  [4;35;1mSQL (0.000893)[0m   [0mSHOW FIELDS FROM schema_info[0m
+  [4;36;1mSQL (0.000176)[0m   [0;1mUPDATE schema_info SET version = 7[0m
+  [4;36;1mSQL (0.000158)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mPdf Columns (0.001666)[0m   [0mSHOW FIELDS FROM pdfs[0m
+  [4;36;1mSQL (0.000153)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mPdf Columns (0.001399)[0m   [0mSHOW FIELDS FROM pdfs[0m
+  [4;36;1mSQL (0.000215)[0m   [0;1mBEGIN[0m
+  [4;35;1mPdf Load (0.000834)[0m   [0mSELECT * FROM pdfs WHERE (pdfs.pdfname IS NULL AND pdfs.pdfdate IS NULL AND pdfs.category_id IS NULL AND pdfs.client_id IS NULL) LIMIT 1[0m
+  [4;36;1mSQL (0.000259)[0m   [0;1mCOMMIT[0m
+  [4;35;1mPdf Load (0.000929)[0m   [0mSELECT * FROM pdfs WHERE (pdfs.pdfname IS NULL AND pdfs.pdfdate IS NULL AND pdfs.category_id IS NULL AND pdfs.client_id IS NULL) LIMIT 1[0m
+  [4;36;1mPdf Load (0.000998)[0m   [0;1mSELECT * FROM pdfs WHERE (pdfs.pdfname IS NULL AND pdfs.pdfdate IS NULL AND pdfs.category_id IS NULL AND pdfs.client_id IS NULL) LIMIT 1[0m
+  [4;35;1mPdf Load (0.006237)[0m   [0mSELECT * FROM pdfs WHERE (pdfs.pdfname = 't' AND pdfs.pdfdate = '2007-11-11' AND pdfs.category_id IS NULL AND pdfs.client_id IS NULL) LIMIT 1[0m
+  [4;36;1mPdf Load (0.001019)[0m   [0;1mSELECT * FROM pdfs WHERE (pdfs.pdfname = 't' AND pdfs.pdfdate = '2007-11-11' AND pdfs.category_id IS NULL AND pdfs.client_id IS NULL) LIMIT 1[0m
+  [4;35;1mPdf Load (0.000923)[0m   [0mSELECT * FROM pdfs WHERE (pdfs.pdfname = 't' AND pdfs.pdfdate = '2007-11-11' AND pdfs.category_id IS NULL AND pdfs.client_id IS NULL) LIMIT 1[0m
+  [4;36;1mPdf Load (0.000892)[0m   [0;1mSELECT * FROM pdfs WHERE (pdfs.pdfname = 't' AND pdfs.pdfdate = '2007-11-11' AND pdfs.category_id IS NULL AND pdfs.client_id IS NULL) LIMIT 1[0m
+  [4;35;1mPdf Load (0.001002)[0m   [0mSELECT * FROM pdfs WHERE (pdfs.pdfname = 't' AND pdfs.pdfdate = '2007-11-11' AND pdfs.category_id IS NULL AND pdfs.client_id IS NULL) LIMIT 1[0m
+  [4;36;1mPdf Load (0.000995)[0m   [0;1mSELECT * FROM pdfs WHERE (pdfs.pdfname = 't' AND pdfs.pdfdate = '2007-11-11' AND pdfs.category_id IS NULL AND pdfs.client_id IS NULL) LIMIT 1[0m
+
+
+Processing PdfsController#index (for 127.0.0.1 at 2007-11-21 12:34:31) [GET]
+  Session ID: 960a680d02d6b9d35aa9843023b06506
+  Parameters: {"action"=>"index", "controller"=>"pdfs"}
+  [4;36;1mSQL (0.000483)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mPdf Columns (0.002153)[0m   [0mSHOW FIELDS FROM pdfs[0m
+  [4;36;1mSQL (0.000494)[0m   [0;1mSELECT count(*) AS count_all FROM pdfs [0m
+  [4;35;1mPdf Load (0.001088)[0m   [0mSELECT * FROM pdfs LIMIT 0, 10[0m
+Rendering  within layouts/application
+Rendering pdfs/index
+  [4;36;1mCategory Columns (0.001536)[0m   [0;1mSHOW FIELDS FROM categories[0m
+  [4;35;1mCategory Load (0.000916)[0m   [0mSELECT * FROM categories WHERE (categories.`id` = 1) [0m
+  [4;36;1mClient Columns (0.001531)[0m   [0;1mSHOW FIELDS FROM clients[0m
+  [4;35;1mClient Load (0.000615)[0m   [0mSELECT * FROM clients WHERE (clients.`id` = 1) [0m
+  [4;36;1mCategory Load (0.001800)[0m   [0;1mSELECT * FROM categories WHERE (categories.`id` = 1) [0m
+  [4;35;1mClient Load (0.001045)[0m   [0mSELECT * FROM clients WHERE (clients.`id` = 1) [0m
+  [4;36;1mCategory Load (0.000773)[0m   [0;1mSELECT * FROM categories WHERE (categories.`id` = 1) [0m
+  [4;35;1mClient Load (0.004796)[0m   [0mSELECT * FROM clients WHERE (clients.`id` = 1) [0m
+  [4;36;1mCategory Load (0.000961)[0m   [0;1mSELECT * FROM categories WHERE (categories.`id` = 1) [0m
+  [4;35;1mClient Load (0.000640)[0m   [0mSELECT * FROM clients WHERE (clients.`id` = 1) [0m
+  [4;36;1mCategory Load (0.000797)[0m   [0;1mSELECT * FROM categories WHERE (categories.`id` = 1) [0m
+  [4;35;1mClient Load (0.000643)[0m   [0mSELECT * FROM clients WHERE (clients.`id` = 1) [0m
+  [4;36;1mCategory Load (0.000853)[0m   [0;1mSELECT * FROM categories WHERE (categories.`id` = 1) [0m
+  [4;35;1mClient Load (0.000708)[0m   [0mSELECT * FROM clients WHERE (clients.`id` = 1) [0m
+Completed in 0.10369 (9 reqs/sec) | Rendering: 0.04990 (48%) | DB: 0.02183 (21%) | 200 OK [http://localhost/pdfs]
+
+
+Processing PdfsController#show (for 127.0.0.1 at 2007-11-21 12:34:37) [GET]
+  Session ID: 960a680d02d6b9d35aa9843023b06506
+  Parameters: {"action"=>"show", "id"=>"34", "controller"=>"pdfs"}
+  [4;36;1mPdf Columns (0.001883)[0m   [0;1mSHOW FIELDS FROM pdfs[0m
+  [4;35;1mPdf Load (0.000986)[0m   [0mSELECT * FROM pdfs WHERE (pdfs.`id` = 34) [0m
+Rendering  within layouts/application
+Rendering pdfs/show
+Completed in 0.02058 (48 reqs/sec) | Rendering: 0.01164 (56%) | DB: 0.00287 (13%) | 200 OK [http://localhost/pdfs/show/34]
+
+
+Processing PdfsController#index (for 127.0.0.1 at 2007-11-21 12:34:39) [GET]
+  Session ID: 960a680d02d6b9d35aa9843023b06506
+  Parameters: {"action"=>"index", "controller"=>"pdfs"}
+  [4;36;1mPdf Columns (0.001731)[0m   [0;1mSHOW FIELDS FROM pdfs[0m
+  [4;35;1mSQL (0.000433)[0m   [0mSELECT count(*) AS count_all FROM pdfs [0m
+  [4;36;1mPdf Load (0.001032)[0m   [0;1mSELECT * FROM pdfs LIMIT 0, 10[0m
+Rendering  within layouts/application
+Rendering pdfs/index
+  [4;35;1mCategory Columns (0.001605)[0m   [0mSHOW FIELDS FROM categories[0m
+  [4;36;1mCategory Load (0.000510)[0m   [0;1mSELECT * FROM categories WHERE (categories.`id` = 1) [0m
+  [4;35;1mClient Columns (0.001466)[0m   [0mSHOW FIELDS FROM clients[0m
+  [4;36;1mClient Load (0.000762)[0m   [0;1mSELECT * FROM clients WHERE (clients.`id` = 1) [0m
+  [4;35;1mCategory Load (0.000667)[0m   [0mSELECT * FROM categories WHERE (categories.`id` = 1) [0m
+  [4;36;1mClient Load (0.000425)[0m   [0;1mSELECT * FROM clients WHERE (clients.`id` = 1) [0m
+  [4;35;1mCategory Load (0.000523)[0m   [0mSELECT * FROM categories WHERE (categories.`id` = 1) [0m
+  [4;36;1mClient Load (0.000506)[0m   [0;1mSELECT * FROM clients WHERE (clients.`id` = 1) [0m
+  [4;35;1mCategory Load (0.000515)[0m   [0mSELECT * FROM categories WHERE (categories.`id` = 1) [0m
+  [4;36;1mClient Load (0.000421)[0m   [0;1mSELECT * FROM clients WHERE (clients.`id` = 1) [0m
+  [4;35;1mCategory Load (0.000529)[0m   [0mSELECT * FROM categories WHERE (categories.`id` = 1) [0m
+  [4;36;1mClient Load (0.000433)[0m   [0;1mSELECT * FROM clients WHERE (clients.`id` = 1) [0m
+  [4;35;1mCategory Load (0.000624)[0m   [0mSELECT * FROM categories WHERE (categories.`id` = 1) [0m
+  [4;36;1mClient Load (0.000425)[0m   [0;1mSELECT * FROM clients WHERE (clients.`id` = 1) [0m
+Completed in 0.09471 (10 reqs/sec) | Rendering: 0.07617 (80%) | DB: 0.01261 (13%) | 200 OK [http://localhost/pdfs]
+
+
+Processing PdfsController#show (for 127.0.0.1 at 2007-11-21 12:34:41) [GET]
+  Session ID: 960a680d02d6b9d35aa9843023b06506
+  Parameters: {"action"=>"show", "id"=>"32", "controller"=>"pdfs"}
+  [4;35;1mPdf Columns (0.001880)[0m   [0mSHOW FIELDS FROM pdfs[0m
+  [4;36;1mPdf Load (0.001250)[0m   [0;1mSELECT * FROM pdfs WHERE (pdfs.`id` = 32) [0m
+Rendering  within layouts/application
+Rendering pdfs/show
+Completed in 0.01467 (68 reqs/sec) | Rendering: 0.00555 (37%) | DB: 0.00313 (21%) | 200 OK [http://localhost/pdfs/show/32]
+
+
+Processing PdfsController#index (for 127.0.0.1 at 2007-11-21 12:34:46) [GET]
+  Session ID: 960a680d02d6b9d35aa9843023b06506
+  Parameters: {"action"=>"index", "controller"=>"pdfs"}
+  [4;35;1mPdf Columns (0.002110)[0m   [0mSHOW FIELDS FROM pdfs[0m
+  [4;36;1mSQL (0.000588)[0m   [0;1mSELECT count(*) AS count_all FROM pdfs [0m
+  [4;35;1mPdf Load (0.001096)[0m   [0mSELECT * FROM pdfs LIMIT 0, 10[0m
+Rendering  within layouts/application
+Rendering pdfs/index
+  [4;36;1mCategory Columns (0.002722)[0m   [0;1mSHOW FIELDS FROM categories[0m
+  [4;35;1mCategory Load (0.001017)[0m   [0mSELECT * FROM categories WHERE (categories.`id` = 1) [0m
+  [4;36;1mClient Columns (0.001796)[0m   [0;1mSHOW FIELDS FROM clients[0m
+  [4;35;1mClient Load (0.000590)[0m   [0mSELECT * FROM clients WHERE (clients.`id` = 1) [0m
+  [4;36;1mCategory Load (0.000632)[0m   [0;1mSELECT * FROM categories WHERE (categories.`id` = 1) [0m
+  [4;35;1mClient Load (0.000611)[0m   [0mSELECT * FROM clients WHERE (clients.`id` = 1) [0m
+  [4;36;1mCategory Load (0.000728)[0m   [0;1mSELECT * FROM categories WHERE (categories.`id` = 1) [0m
+  [4;35;1mClient Load (0.000631)[0m   [0mSELECT * FROM clients WHERE (clients.`id` = 1) [0m
+  [4;36;1mCategory Load (0.000675)[0m   [0;1mSELECT * FROM categories WHERE (categories.`id` = 1) [0m
+  [4;35;1mClient Load (0.000662)[0m   [0mSELECT * FROM clients WHERE (clients.`id` = 1) [0m
+  [4;36;1mCategory Load (0.000703)[0m   [0;1mSELECT * FROM categories WHERE (categories.`id` = 1) [0m
+  [4;35;1mClient Load (0.000497)[0m   [0mSELECT * FROM clients WHERE (clients.`id` = 1) [0m
+  [4;36;1mCategory Load (0.001437)[0m   [0;1mSELECT * FROM categories WHERE (categories.`id` = 1) [0m
+  [4;35;1mClient Load (0.000770)[0m   [0mSELECT * FROM clients WHERE (clients.`id` = 1) [0m
+Completed in 0.05052 (19 reqs/sec) | Rendering: 0.02738 (54%) | DB: 0.01726 (34%) | 200 OK [http://localhost/pdfs]
+
+
+Processing PdfsController#attachment (for 127.0.0.1 at 2007-11-21 12:34:49) [GET]
+  Session ID: 960a680d02d6b9d35aa9843023b06506
+  Parameters: {"action"=>"attachment", "controller"=>"pdfs", "filename"=>"/livedata/pdfcat_test_clt/digitech/tax/20071121-test2.pdf"}
+Completed in 0.00091 (1095 reqs/sec) | Rendering: 0.00005 (5%) | DB: 0.00000 (0%) | 200 OK [http://localhost/pdfs/attachment?filename=%2Flivedata%2Fpdfcat_test_clt%2Fdigitech%2Ftax%2F20071121-test2.pdf]
+Streaming file /livedata/pdfcat_test_clt/digitech/tax/20071121-test2.pdf
+
+
+Processing NewController#index (for 127.0.0.1 at 2007-11-21 12:34:54) [GET]
+  Session ID: 960a680d02d6b9d35aa9843023b06506
+  Parameters: {"action"=>"index", "controller"=>"new"}
+  [4;36;1mPdf Columns (0.001975)[0m   [0;1mSHOW FIELDS FROM pdfs[0m
+Rendering  within layouts/application
+Rendering new/index
+Completed in 0.10864 (9 reqs/sec) | Rendering: 0.10035 (92%) | DB: 0.00198 (1%) | 200 OK [http://localhost/new]
+
+
+Processing PdfsController#new (for 127.0.0.1 at 2007-11-21 12:34:57) [GET]
+  Session ID: 960a680d02d6b9d35aa9843023b06506
+  Parameters: {"action"=>"new", "controller"=>"pdfs", "filename"=>"/livedata/pdfcat_test_upload/DOC070731002030(0001).pdf"}
+  [4;35;1mPdf Columns (0.001913)[0m   [0mSHOW FIELDS FROM pdfs[0m
+Rendering  within layouts/application
+Rendering pdfs/new
+  [4;36;1mClient Load (0.002938)[0m   [0;1mSELECT * FROM clients [0m
+  [4;35;1mClient Columns (0.001411)[0m   [0mSHOW FIELDS FROM clients[0m
+  [4;36;1mCategory Load (0.001010)[0m   [0;1mSELECT * FROM categories [0m
+  [4;35;1mCategory Columns (0.001736)[0m   [0mSHOW FIELDS FROM categories[0m
+Rendered pdfs/_form (0.03063)
+Completed in 0.04306 (23 reqs/sec) | Rendering: 0.02811 (65%) | DB: 0.00901 (20%) | 200 OK [http://localhost/pdfs/new?filename=%2Flivedata%2Fpdfcat_test_upload%2FDOC070731002030%280001%29.pdf]
+
+
+Processing PdfsController#create (for 127.0.0.1 at 2007-11-21 12:35:21) [POST]
+  Session ID: 960a680d02d6b9d35aa9843023b06506
+  Parameters: {"category"=>"1", "commit"=>"Create", "client"=>"1", "action"=>"create", "controller"=>"pdfs", "pdf"=>{"pdfdate(3i)"=>"21", "pdfname"=>"test2", "filename"=>"/livedata/pdfcat_test_upload/DC070731002030(0001).pdf", "pdfnote"=>"", "pdfdate(1i)"=>"2007", "pdfdate(2i)"=>"11"}}
+  [4;36;1mPdf Columns (0.001890)[0m   [0;1mSHOW FIELDS FROM pdfs[0m
+  [4;35;1mCategory Columns (0.001381)[0m   [0mSHOW FIELDS FROM categories[0m
+  [4;36;1mCategory Load (0.000668)[0m   [0;1mSELECT * FROM categories WHERE (categories.`id` = 1) [0m
+  [4;35;1mClient Columns (0.001416)[0m   [0mSHOW FIELDS FROM clients[0m
+  [4;36;1mClient Load (0.000493)[0m   [0;1mSELECT * FROM clients WHERE (clients.`id` = 1) [0m
+  [4;35;1mSQL (0.000166)[0m   [0mBEGIN[0m
+  [4;36;1mPdf Load (0.000828)[0m   [0;1mSELECT * FROM pdfs WHERE (pdfs.pdfname = 'test2' AND pdfs.pdfdate = '2007-11-21' AND pdfs.category_id = 1 AND pdfs.client_id = 1) LIMIT 1[0m
+  [4;35;1mSQL (0.000326)[0m   [0mCOMMIT[0m
+Rendering layoutfalseactionnew within layouts/application
+Rendering pdfs/new
+  [4;36;1mClient Load (0.000742)[0m   [0;1mSELECT * FROM clients [0m
+  [4;35;1mCategory Load (0.000489)[0m   [0mSELECT * FROM categories [0m
+Rendered pdfs/_form (0.00398)
+Completed in 0.03368 (29 reqs/sec) | Rendering: 0.00669 (19%) | DB: 0.00840 (24%) | 200 OK [http://localhost/pdfs/create]
+
+
+Processing PdfsController#create (for 127.0.0.1 at 2007-11-21 12:35:28) [POST]
+  Session ID: 960a680d02d6b9d35aa9843023b06506
+  Parameters: {"category"=>"1", "commit"=>"Create", "client"=>"1", "action"=>"create", "controller"=>"pdfs", "pdf"=>{"pdfdate(3i)"=>"21", "pdfname"=>"test21", "filename"=>"/livedata/pdfcat_test_upload/DC070731002030(0001).pdf", "pdfnote"=>"", "pdfdate(1i)"=>"2007", "pdfdate(2i)"=>"11"}}
+  [4;36;1mPdf Columns (0.001936)[0m   [0;1mSHOW FIELDS FROM pdfs[0m
+  [4;35;1mCategory Columns (0.001607)[0m   [0mSHOW FIELDS FROM categories[0m
+  [4;36;1mCategory Load (0.001582)[0m   [0;1mSELECT * FROM categories WHERE (categories.`id` = 1) [0m
+  [4;35;1mClient Columns (0.003926)[0m   [0mSHOW FIELDS FROM clients[0m
+  [4;36;1mClient Load (0.005266)[0m   [0;1mSELECT * FROM clients WHERE (clients.`id` = 1) [0m
+  [4;35;1mSQL (0.001681)[0m   [0mBEGIN[0m
+  [4;36;1mPdf Load (0.001163)[0m   [0;1mSELECT * FROM pdfs WHERE (pdfs.pdfname = 'test21' AND pdfs.pdfdate = '2007-11-21' AND pdfs.category_id = 1 AND pdfs.client_id = 1) LIMIT 1[0m
+  [4;35;1mSQL (0.000506)[0m   [0mCOMMIT[0m
+Rendering layoutfalseactionnew within layouts/application
+Rendering pdfs/new
+  [4;36;1mClient Load (0.000834)[0m   [0;1mSELECT * FROM clients [0m
+  [4;35;1mCategory Load (0.001549)[0m   [0mSELECT * FROM categories [0m
+Rendered pdfs/_form (0.00527)
+Completed in 0.04704 (21 reqs/sec) | Rendering: 0.00702 (14%) | DB: 0.02005 (42%) | 200 OK [http://localhost/pdfs/create]

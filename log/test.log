@@ -1,0 +1,1605 @@
+  [4;36;1mSQL (0.000166)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000086)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000089)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000293)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000162)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000086)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000085)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.000223)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000091)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000085)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000305)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000095)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.000162)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000085)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000094)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000086)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000085)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000083)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000085)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.000242)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000098)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000092)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000081)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000085)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.000162)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000088)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000091)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000082)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000085)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000083)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000085)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.000163)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000090)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000086)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000092)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000092)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000146)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000173)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.000163)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000087)[0m   [0mBEGIN[0m
+  [4;36;1mCategory Columns (0.001096)[0m   [0;1mSHOW FIELDS FROM categories[0m
+  [4;35;1mSQL (0.000278)[0m   [0mINSERT INTO categories (`name`, `description`) VALUES('Test Category', 'This is a unit test')[0m
+  [4;36;1mSQL (0.022332)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000121)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000090)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000081)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000082)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000082)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000178)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.000161)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000088)[0m   [0mBEGIN[0m
+  [4;36;1mCategory Columns (0.012789)[0m   [0;1mSHOW FIELDS FROM categories[0m
+  [4;35;1mSQL (0.000405)[0m   [0mINSERT INTO categories (`name`, `description`) VALUES('Test Category', 'This is a unit test')[0m
+  [4;36;1mSQL (0.000629)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000095)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000089)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.000163)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000090)[0m   [0mBEGIN[0m
+  [4;36;1mCategory Columns (0.001452)[0m   [0;1mSHOW FIELDS FROM categories[0m
+  [4;35;1mSQL (0.000278)[0m   [0mINSERT INTO categories (`name`, `description`) VALUES('Test Category', 'This is a unit test')[0m
+  [4;36;1mSQL (0.000625)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.000162)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000086)[0m   [0mBEGIN[0m
+  [4;36;1mCategory Columns (0.001129)[0m   [0;1mSHOW FIELDS FROM categories[0m
+  [4;35;1mSQL (0.000255)[0m   [0mINSERT INTO categories (`name`, `description`) VALUES('Test Category', 'This is a unit test')[0m
+  [4;36;1mSQL (0.000616)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000093)[0m   [0mBEGIN[0m
+  [4;36;1mCategory Load (0.000492)[0m   [0;1mSELECT * FROM categories WHERE (categories.`id` = 1) [0m
+  [4;35;1mCategory Load (0.000570)[0m   [0mSELECT * FROM categories WHERE (categories.`id` = 1) [0m
+  [4;36;1mSQL (0.000117)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.000162)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000220)[0m   [0mBEGIN[0m
+  [4;36;1mCategory Columns (0.001340)[0m   [0;1mSHOW FIELDS FROM categories[0m
+  [4;35;1mSQL (0.000314)[0m   [0mINSERT INTO categories (`name`, `description`) VALUES('Test Category', 'This is a unit test')[0m
+  [4;36;1mSQL (0.000611)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000093)[0m   [0mBEGIN[0m
+  [4;36;1mCategory Load (0.000493)[0m   [0;1mSELECT * FROM categories WHERE (categories.`id` = 1) [0m
+  [4;35;1mCategory Load (0.000413)[0m   [0mSELECT * FROM categories WHERE (categories.`id` = 1) [0m
+  [4;36;1mSQL (0.000112)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000093)[0m   [0mBEGIN[0m
+  [4;36;1mCategory Load (0.000400)[0m   [0;1mSELECT * FROM categories WHERE (categories.`id` = 1) [0m
+  [4;35;1mCategory Update (0.000268)[0m   [0mUPDATE categories SET `description` = 'New description', `name` = 'BAS' WHERE `id` = 1[0m
+  [4;36;1mSQL (0.000620)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.000168)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000092)[0m   [0mBEGIN[0m
+  [4;36;1mCategory Columns (0.001303)[0m   [0;1mSHOW FIELDS FROM categories[0m
+  [4;35;1mSQL (0.000269)[0m   [0mINSERT INTO categories (`name`, `description`) VALUES('Test Category', 'This is a unit test')[0m
+  [4;36;1mSQL (0.000618)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000094)[0m   [0mBEGIN[0m
+  [4;36;1mCategory Load (0.000489)[0m   [0;1mSELECT * FROM categories WHERE (categories.`id` = 1) [0m
+  [4;35;1mCategory Load (0.000388)[0m   [0mSELECT * FROM categories WHERE (categories.`id` = 1) [0m
+  [4;36;1mSQL (0.000109)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000090)[0m   [0mBEGIN[0m
+  [4;36;1mCategory Load (0.000389)[0m   [0;1mSELECT * FROM categories WHERE (categories.`id` = 1) [0m
+  [4;35;1mCategory Update (0.000271)[0m   [0mUPDATE categories SET `description` = 'New description', `name` = 'BAS' WHERE `id` = 1[0m
+  [4;36;1mSQL (0.000629)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.000204)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000103)[0m   [0mBEGIN[0m
+  [4;36;1mCategory Columns (0.001378)[0m   [0;1mSHOW FIELDS FROM categories[0m
+  [4;35;1mSQL (0.000270)[0m   [0mINSERT INTO categories (`name`, `description`) VALUES('Test Category', 'This is a unit test')[0m
+  [4;36;1mSQL (0.000612)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000092)[0m   [0mBEGIN[0m
+  [4;36;1mCategory Load (0.000492)[0m   [0;1mSELECT * FROM categories WHERE (categories.`id` = 1) [0m
+  [4;35;1mCategory Load (0.000406)[0m   [0mSELECT * FROM categories WHERE (categories.`id` = 1) [0m
+  [4;36;1mSQL (0.000108)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000090)[0m   [0mBEGIN[0m
+  [4;36;1mCategory Load (0.000427)[0m   [0;1mSELECT * FROM categories WHERE (categories.`id` = 1) [0m
+  [4;35;1mCategory Update (0.000279)[0m   [0mUPDATE categories SET `description` = 'New description', `name` = 'BAS' WHERE `id` = 1[0m
+  [4;36;1mSQL (0.000624)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000082)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000083)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000082)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000084)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.000162)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000090)[0m   [0mBEGIN[0m
+  [4;36;1mCategory Columns (0.001121)[0m   [0;1mSHOW FIELDS FROM categories[0m
+  [4;35;1mSQL (0.000263)[0m   [0mINSERT INTO categories (`name`, `description`) VALUES('Test Category', 'This is a unit test')[0m
+  [4;36;1mSQL (0.000619)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000150)[0m   [0mBEGIN[0m
+  [4;36;1mCategory Load (0.000494)[0m   [0;1mSELECT * FROM categories WHERE (categories.`id` = 1) [0m
+  [4;35;1mCategory Load (0.000384)[0m   [0mSELECT * FROM categories WHERE (categories.`id` = 1) [0m
+  [4;36;1mSQL (0.000109)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000133)[0m   [0mBEGIN[0m
+  [4;36;1mCategory Load (0.000477)[0m   [0;1mSELECT * FROM categories WHERE (categories.`id` = 1) [0m
+  [4;35;1mCategory Update (0.000596)[0m   [0mUPDATE categories SET `description` = 'New description', `name` = 'BAS' WHERE `id` = 1[0m
+  [4;36;1mSQL (0.000801)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.000163)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000103)[0m   [0mBEGIN[0m
+  [4;36;1mCategory Columns (0.001244)[0m   [0;1mSHOW FIELDS FROM categories[0m
+  [4;35;1mSQL (0.000265)[0m   [0mINSERT INTO categories (`name`, `description`) VALUES('Test Category', 'This is a unit test')[0m
+  [4;36;1mSQL (0.000628)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000095)[0m   [0mBEGIN[0m
+  [4;36;1mCategory Load (0.000490)[0m   [0;1mSELECT * FROM categories WHERE (categories.`id` = 1) [0m
+  [4;35;1mCategory Destroy (0.000199)[0m   [0m DELETE FROM categories
+ WHERE `id` = 1
+[0m
+  [4;36;1mCategory Load (0.000375)[0m   [0;1mSELECT * FROM categories WHERE (categories.`id` = 1) [0m
+  [4;35;1mSQL (0.000602)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000093)[0m   [0;1mBEGIN[0m
+  [4;35;1mCategory Load (0.000453)[0m   [0mSELECT * FROM categories WHERE (categories.`id` = 1) [0m
+  [4;36;1mCategory Load (0.000404)[0m   [0;1mSELECT * FROM categories WHERE (categories.`id` = 1) [0m
+  [4;35;1mSQL (0.000109)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000090)[0m   [0;1mBEGIN[0m
+  [4;35;1mCategory Load (0.000433)[0m   [0mSELECT * FROM categories WHERE (categories.`id` = 1) [0m
+  [4;36;1mCategory Update (0.000277)[0m   [0;1mUPDATE categories SET `description` = 'New description', `name` = 'BAS' WHERE `id` = 1[0m
+  [4;35;1mSQL (0.006141)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000163)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000097)[0m   [0mBEGIN[0m
+  [4;36;1mCategory Columns (0.001285)[0m   [0;1mSHOW FIELDS FROM categories[0m
+  [4;35;1mSQL (0.000270)[0m   [0mINSERT INTO categories (`name`, `description`) VALUES('Test Category', 'This is a unit test')[0m
+  [4;36;1mSQL (0.000668)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000094)[0m   [0mBEGIN[0m
+  [4;36;1mCategory Load (0.000548)[0m   [0;1mSELECT * FROM categories WHERE (categories.`id` = 1) [0m
+  [4;35;1mCategory Destroy (0.000214)[0m   [0m DELETE FROM categories
+ WHERE `id` = 1
+[0m
+  [4;36;1mCategory Load (0.000377)[0m   [0;1mSELECT * FROM categories WHERE (categories.`id` = 1) [0m
+  [4;35;1mSQL (0.000600)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000095)[0m   [0;1mBEGIN[0m
+  [4;35;1mCategory Load (0.000440)[0m   [0mSELECT * FROM categories WHERE (categories.`id` = 1) [0m
+  [4;36;1mCategory Load (0.000377)[0m   [0;1mSELECT * FROM categories WHERE (categories.`id` = 1) [0m
+  [4;35;1mSQL (0.000108)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000092)[0m   [0;1mBEGIN[0m
+  [4;35;1mCategory Load (0.000391)[0m   [0mSELECT * FROM categories WHERE (categories.`id` = 1) [0m
+  [4;36;1mCategory Update (0.000272)[0m   [0;1mUPDATE categories SET `description` = 'New description', `name` = 'BAS' WHERE `id` = 1[0m
+  [4;35;1mSQL (0.000634)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000157)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000093)[0m   [0mBEGIN[0m
+  [4;36;1mCategory Columns (0.001127)[0m   [0;1mSHOW FIELDS FROM categories[0m
+  [4;35;1mSQL (0.000520)[0m   [0mINSERT INTO categories (`name`, `description`) VALUES('Test Category', 'This is a unit test')[0m
+  [4;36;1mSQL (0.000633)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000098)[0m   [0mBEGIN[0m
+  [4;36;1mCategory Load (0.000490)[0m   [0;1mSELECT * FROM categories WHERE (categories.`id` = 1) [0m
+  [4;35;1mCategory Destroy (0.000197)[0m   [0m DELETE FROM categories
+ WHERE `id` = 1
+[0m
+  [4;36;1mCategory Load (0.000371)[0m   [0;1mSELECT * FROM categories WHERE (categories.`id` = 1) [0m
+  [4;35;1mSQL (0.000607)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000096)[0m   [0;1mBEGIN[0m
+  [4;35;1mCategory Load (0.000559)[0m   [0mSELECT * FROM categories WHERE (categories.`id` = 1) [0m
+  [4;36;1mCategory Load (0.000406)[0m   [0;1mSELECT * FROM categories WHERE (categories.`id` = 1) [0m
+  [4;35;1mSQL (0.000111)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000092)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000093)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000092)[0m   [0;1mBEGIN[0m
+  [4;35;1mCategory Load (0.000420)[0m   [0mSELECT * FROM categories WHERE (categories.`id` = 1) [0m
+  [4;36;1mCategory Update (0.000337)[0m   [0;1mUPDATE categories SET `description` = 'New description', `name` = 'BAS' WHERE `id` = 1[0m
+  [4;35;1mSQL (0.000628)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000164)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000088)[0m   [0mBEGIN[0m
+  [4;36;1mCategory Columns (0.001230)[0m   [0;1mSHOW FIELDS FROM categories[0m
+  [4;35;1mSQL (0.000308)[0m   [0mINSERT INTO categories (`name`, `description`) VALUES('Test Category', 'This is a unit test')[0m
+  [4;36;1mSQL (0.000621)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000095)[0m   [0mBEGIN[0m
+  [4;36;1mCategory Load (0.000492)[0m   [0;1mSELECT * FROM categories WHERE (categories.`id` = 1) [0m
+  [4;35;1mCategory Destroy (0.000244)[0m   [0m DELETE FROM categories
+ WHERE `id` = 1
+[0m
+  [4;36;1mCategory Load (0.000379)[0m   [0;1mSELECT * FROM categories WHERE (categories.`id` = 1) [0m
+  [4;35;1mSQL (0.000615)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000094)[0m   [0;1mBEGIN[0m
+  [4;35;1mCategory Load (0.000496)[0m   [0mSELECT * FROM categories WHERE (categories.`id` = 1) [0m
+  [4;36;1mCategory Load (0.000380)[0m   [0;1mSELECT * FROM categories WHERE (categories.`id` = 1) [0m
+  [4;35;1mSQL (0.000109)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000092)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000148)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000089)[0m   [0;1mBEGIN[0m
+  [4;35;1mCategory Load (0.000426)[0m   [0mSELECT * FROM categories WHERE (categories.`id` = 1) [0m
+  [4;36;1mCategory Update (0.000264)[0m   [0;1mUPDATE categories SET `description` = 'New description', `name` = 'BAS' WHERE `id` = 1[0m
+  [4;35;1mSQL (0.000638)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000169)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000091)[0m   [0mBEGIN[0m
+  [4;36;1mClient Columns (0.001376)[0m   [0;1mSHOW FIELDS FROM clients[0m
+  [4;35;1mSQL (0.000265)[0m   [0mINSERT INTO clients (`name`, `email`) VALUES('Test client', 'map7@iinet.com.au')[0m
+  [4;36;1mSQL (0.000619)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000094)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000095)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000090)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000091)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000090)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.019637)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000154)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000093)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.000152)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000090)[0m   [0mBEGIN[0m
+  [4;36;1mClient Columns (0.001312)[0m   [0;1mSHOW FIELDS FROM clients[0m
+  [4;35;1mSQL (0.000295)[0m   [0mINSERT INTO clients (`name`, `email`) VALUES('Test client', 'map7@iinet.com.au')[0m
+  [4;36;1mSQL (0.000621)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000094)[0m   [0mBEGIN[0m
+  [4;36;1mClient Load (0.000536)[0m   [0;1mSELECT * FROM clients WHERE (clients.`id` = 1) [0m
+  [4;35;1mClient Destroy (0.000200)[0m   [0m DELETE FROM clients
+ WHERE `id` = 1
+[0m
+  [4;36;1mClient Load (0.000381)[0m   [0;1mSELECT * FROM clients WHERE (clients.`id` = 1) [0m
+  [4;35;1mSQL (0.000632)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000095)[0m   [0;1mBEGIN[0m
+  [4;35;1mClient Load (0.000473)[0m   [0mSELECT * FROM clients WHERE (clients.`id` = 1) [0m
+  [4;36;1mClient Load (0.000414)[0m   [0;1mSELECT * FROM clients WHERE (clients.`id` = 1) [0m
+  [4;35;1mSQL (0.000108)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000089)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000168)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000093)[0m   [0;1mBEGIN[0m
+  [4;35;1mClient Load (0.000525)[0m   [0mSELECT * FROM clients WHERE (clients.`id` = 1) [0m
+  [4;36;1mClient Update (0.000424)[0m   [0;1mUPDATE clients SET `email` = 'map7@iinet.com.au', `name` = 'Digitech Corporation' WHERE `id` = 1[0m
+  [4;35;1mSQL (0.009366)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000162)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000092)[0m   [0mBEGIN[0m
+  [4;36;1mClient Columns (0.001310)[0m   [0;1mSHOW FIELDS FROM clients[0m
+  [4;35;1mSQL (0.000271)[0m   [0mINSERT INTO clients (`name`, `email`) VALUES('Test client', 'map7@iinet.com.au')[0m
+  [4;36;1mSQL (0.000617)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000092)[0m   [0mBEGIN[0m
+  [4;36;1mClient Load (0.000544)[0m   [0;1mSELECT * FROM clients WHERE (clients.`id` = 1) [0m
+  [4;35;1mClient Destroy (0.000203)[0m   [0m DELETE FROM clients
+ WHERE `id` = 1
+[0m
+  [4;36;1mClient Load (0.000391)[0m   [0;1mSELECT * FROM clients WHERE (clients.`id` = 1) [0m
+  [4;35;1mSQL (0.000610)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000095)[0m   [0;1mBEGIN[0m
+  [4;35;1mClient Load (0.000458)[0m   [0mSELECT * FROM clients WHERE (clients.`id` = 1) [0m
+  [4;36;1mClient Load (0.000379)[0m   [0;1mSELECT * FROM clients WHERE (clients.`id` = 1) [0m
+  [4;35;1mSQL (0.000162)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000090)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000092)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000163)[0m   [0;1mBEGIN[0m
+  [4;35;1mClient Load (0.000424)[0m   [0mSELECT * FROM clients WHERE (clients.`id` = 1) [0m
+  [4;36;1mClient Update (0.000284)[0m   [0;1mUPDATE clients SET `email` = 'map7@iinet.com.au', `name` = 'Digitech Corporation' WHERE `id` = 1[0m
+  [4;35;1mSQL (0.000709)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000162)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000091)[0m   [0mBEGIN[0m
+  [4;36;1mCategory Columns (0.001504)[0m   [0;1mSHOW FIELDS FROM categories[0m
+  [4;35;1mCategory Load (0.000506)[0m   [0mSELECT * FROM categories WHERE (categories.name = 'Test Category') LIMIT 1[0m
+  [4;36;1mSQL (0.000226)[0m   [0;1mINSERT INTO categories (`name`, `description`) VALUES('Test Category', 'This is a unit test')[0m
+  [4;35;1mSQL (0.000693)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000098)[0m   [0;1mBEGIN[0m
+  [4;35;1mCategory Load (0.000507)[0m   [0mSELECT * FROM categories WHERE (categories.`id` = 1) [0m
+  [4;36;1mCategory Destroy (0.000202)[0m   [0;1m DELETE FROM categories
+ WHERE `id` = 1
+[0m
+  [4;35;1mCategory Load (0.000378)[0m   [0mSELECT * FROM categories WHERE (categories.`id` = 1) [0m
+  [4;36;1mSQL (0.000607)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000094)[0m   [0mBEGIN[0m
+  [4;36;1mCategory Load (0.000505)[0m   [0;1mSELECT * FROM categories WHERE (categories.`id` = 1) [0m
+  [4;35;1mCategory Load (0.000385)[0m   [0mSELECT * FROM categories WHERE (categories.`id` = 1) [0m
+  [4;36;1mSQL (0.000111)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000091)[0m   [0mBEGIN[0m
+  [4;36;1mCategory Load (0.000460)[0m   [0;1mSELECT * FROM categories WHERE (categories.name = 'tax') LIMIT 1[0m
+  [4;35;1mCategory Load (0.000432)[0m   [0mSELECT * FROM categories WHERE (categories.name = 'tax') LIMIT 1[0m
+  [4;36;1mSQL (0.000115)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000092)[0m   [0mBEGIN[0m
+  [4;36;1mCategory Load (0.000383)[0m   [0;1mSELECT * FROM categories WHERE (categories.name IS NULL) LIMIT 1[0m
+  [4;35;1mCategory Load (0.000361)[0m   [0mSELECT * FROM categories WHERE (categories.name IS NULL) LIMIT 1[0m
+  [4;36;1mSQL (0.000111)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000091)[0m   [0mBEGIN[0m
+  [4;36;1mCategory Load (0.000416)[0m   [0;1mSELECT * FROM categories WHERE (categories.`id` = 1) [0m
+  [4;35;1mCategory Load (0.000488)[0m   [0mSELECT * FROM categories WHERE (categories.name = 'BAS' AND categories.id <> 1) LIMIT 1[0m
+  [4;36;1mCategory Update (0.000268)[0m   [0;1mUPDATE categories SET `description` = 'New description', `name` = 'BAS' WHERE `id` = 1[0m
+  [4;35;1mSQL (0.001321)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000159)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000090)[0m   [0mBEGIN[0m
+  [4;36;1mClient Columns (0.001306)[0m   [0;1mSHOW FIELDS FROM clients[0m
+  [4;35;1mClient Load (0.000498)[0m   [0mSELECT * FROM clients WHERE (clients.name = 'Test client') LIMIT 1[0m
+  [4;36;1mSQL (0.000208)[0m   [0;1mINSERT INTO clients (`name`, `email`) VALUES('Test client', 'map7@iinet.com.au')[0m
+  [4;35;1mSQL (0.000692)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000097)[0m   [0;1mBEGIN[0m
+  [4;35;1mClient Load (0.000480)[0m   [0mSELECT * FROM clients WHERE (clients.`id` = 1) [0m
+  [4;36;1mClient Destroy (0.000201)[0m   [0;1m DELETE FROM clients
+ WHERE `id` = 1
+[0m
+  [4;35;1mClient Load (0.000412)[0m   [0mSELECT * FROM clients WHERE (clients.`id` = 1) [0m
+  [4;36;1mSQL (0.000613)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000094)[0m   [0mBEGIN[0m
+  [4;36;1mClient Load (0.000460)[0m   [0;1mSELECT * FROM clients WHERE (clients.`id` = 1) [0m
+  [4;35;1mClient Load (0.000458)[0m   [0mSELECT * FROM clients WHERE (clients.`id` = 1) [0m
+  [4;36;1mSQL (0.000110)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000139)[0m   [0mBEGIN[0m
+  [4;36;1mClient Load (0.000503)[0m   [0;1mSELECT * FROM clients WHERE (clients.name = 'tax') LIMIT 1[0m
+  [4;35;1mSQL (0.000206)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000094)[0m   [0;1mBEGIN[0m
+  [4;35;1mClient Load (0.001420)[0m   [0mSELECT * FROM clients WHERE (clients.name IS NULL) LIMIT 1[0m
+  [4;36;1mClient Load (0.001266)[0m   [0;1mSELECT * FROM clients WHERE (clients.name IS NULL) LIMIT 1[0m
+  [4;35;1mSQL (0.000141)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000090)[0m   [0;1mBEGIN[0m
+  [4;35;1mClient Load (0.000551)[0m   [0mSELECT * FROM clients WHERE (clients.`id` = 1) [0m
+  [4;36;1mClient Load (0.000643)[0m   [0;1mSELECT * FROM clients WHERE (clients.name = 'Digitech Corporation' AND clients.id <> 1) LIMIT 1[0m
+  [4;35;1mClient Update (0.000277)[0m   [0mUPDATE clients SET `email` = 'map7@iinet.com.au', `name` = 'Digitech Corporation' WHERE `id` = 1[0m
+  [4;36;1mSQL (0.000639)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.000165)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000090)[0m   [0mBEGIN[0m
+  [4;36;1mClient Columns (0.001317)[0m   [0;1mSHOW FIELDS FROM clients[0m
+  [4;35;1mClient Load (0.000565)[0m   [0mSELECT * FROM clients WHERE (clients.name = 'Test client') LIMIT 1[0m
+  [4;36;1mSQL (0.000219)[0m   [0;1mINSERT INTO clients (`name`, `email`) VALUES('Test client', 'map7@iinet.com.au')[0m
+  [4;35;1mSQL (0.000632)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000096)[0m   [0;1mBEGIN[0m
+  [4;35;1mClient Load (0.000488)[0m   [0mSELECT * FROM clients WHERE (clients.`id` = 1) [0m
+  [4;36;1mClient Destroy (0.000197)[0m   [0;1m DELETE FROM clients
+ WHERE `id` = 1
+[0m
+  [4;35;1mClient Load (0.000376)[0m   [0mSELECT * FROM clients WHERE (clients.`id` = 1) [0m
+  [4;36;1mSQL (0.000607)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000097)[0m   [0mBEGIN[0m
+  [4;36;1mClient Load (0.000584)[0m   [0;1mSELECT * FROM clients WHERE (clients.`id` = 1) [0m
+  [4;35;1mClient Load (0.000406)[0m   [0mSELECT * FROM clients WHERE (clients.`id` = 1) [0m
+  [4;36;1mSQL (0.000111)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000092)[0m   [0mBEGIN[0m
+  [4;36;1mClient Load (0.000408)[0m   [0;1mSELECT * FROM clients WHERE (clients.name = 'digitech') LIMIT 1[0m
+  [4;35;1mSQL (0.000268)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000093)[0m   [0;1mBEGIN[0m
+  [4;35;1mClient Load (0.000488)[0m   [0mSELECT * FROM clients WHERE (clients.name IS NULL) LIMIT 1[0m
+  [4;36;1mClient Load (0.000382)[0m   [0;1mSELECT * FROM clients WHERE (clients.name IS NULL) LIMIT 1[0m
+  [4;35;1mSQL (0.000119)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000089)[0m   [0;1mBEGIN[0m
+  [4;35;1mClient Load (0.000420)[0m   [0mSELECT * FROM clients WHERE (clients.`id` = 1) [0m
+  [4;36;1mClient Load (0.000756)[0m   [0;1mSELECT * FROM clients WHERE (clients.name = 'Digitech Corporation' AND clients.id <> 1) LIMIT 1[0m
+  [4;35;1mClient Update (0.000338)[0m   [0mUPDATE clients SET `email` = 'map7@iinet.com.au', `name` = 'Digitech Corporation' WHERE `id` = 1[0m
+  [4;36;1mSQL (0.000643)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.000162)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000104)[0m   [0mBEGIN[0m
+  [4;36;1mClient Columns (0.001255)[0m   [0;1mSHOW FIELDS FROM clients[0m
+  [4;35;1mClient Load (0.000499)[0m   [0mSELECT * FROM clients WHERE (clients.name = 'Test client') LIMIT 1[0m
+  [4;36;1mSQL (0.000290)[0m   [0;1mINSERT INTO clients (`name`, `email`) VALUES('Test client', 'map7@iinet.com.au')[0m
+  [4;35;1mSQL (0.000625)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000158)[0m   [0;1mBEGIN[0m
+  [4;35;1mClient Load (0.000482)[0m   [0mSELECT * FROM clients WHERE (clients.`id` = 1) [0m
+  [4;36;1mClient Destroy (0.000202)[0m   [0;1m DELETE FROM clients
+ WHERE `id` = 1
+[0m
+  [4;35;1mClient Load (0.000370)[0m   [0mSELECT * FROM clients WHERE (clients.`id` = 1) [0m
+  [4;36;1mSQL (0.000595)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000093)[0m   [0mBEGIN[0m
+  [4;36;1mClient Load (0.000427)[0m   [0;1mSELECT * FROM clients WHERE (clients.`id` = 1) [0m
+  [4;35;1mClient Load (0.000375)[0m   [0mSELECT * FROM clients WHERE (clients.`id` = 1) [0m
+  [4;36;1mSQL (0.000105)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000128)[0m   [0mBEGIN[0m
+  [4;36;1mClient Load (0.000419)[0m   [0;1mSELECT * FROM clients WHERE (clients.name = 'Digitech Corporation') LIMIT 1[0m
+  [4;35;1mClient Load (0.000389)[0m   [0mSELECT * FROM clients WHERE (clients.name = 'Digitech Corporation') LIMIT 1[0m
+  [4;36;1mSQL (0.000150)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000089)[0m   [0mBEGIN[0m
+  [4;36;1mClient Load (0.000381)[0m   [0;1mSELECT * FROM clients WHERE (clients.name IS NULL) LIMIT 1[0m
+  [4;35;1mClient Load (0.000355)[0m   [0mSELECT * FROM clients WHERE (clients.name IS NULL) LIMIT 1[0m
+  [4;36;1mSQL (0.000109)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000090)[0m   [0mBEGIN[0m
+  [4;36;1mClient Load (0.000420)[0m   [0;1mSELECT * FROM clients WHERE (clients.`id` = 1) [0m
+  [4;35;1mClient Load (0.000579)[0m   [0mSELECT * FROM clients WHERE (clients.name = 'Digitech Corporation' AND clients.id <> 1) LIMIT 1[0m
+  [4;36;1mClient Update (0.000262)[0m   [0;1mUPDATE clients SET `email` = 'map7@iinet.com.au', `name` = 'Digitech Corporation' WHERE `id` = 1[0m
+  [4;35;1mSQL (0.000624)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000162)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000099)[0m   [0mBEGIN[0m
+  [4;36;1mClient Columns (0.001616)[0m   [0;1mSHOW FIELDS FROM clients[0m
+  [4;35;1mClient Load (0.000533)[0m   [0mSELECT * FROM clients WHERE (clients.name = 'Test client') LIMIT 1[0m
+  [4;36;1mSQL (0.000219)[0m   [0;1mINSERT INTO clients (`name`, `email`) VALUES('Test client', 'map7@iinet.com.au')[0m
+  [4;35;1mSQL (0.000614)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000095)[0m   [0;1mBEGIN[0m
+  [4;35;1mClient Load (0.000484)[0m   [0mSELECT * FROM clients WHERE (clients.`id` = 1) [0m
+  [4;36;1mClient Destroy (0.000201)[0m   [0;1m DELETE FROM clients
+ WHERE `id` = 1
+[0m
+  [4;35;1mClient Load (0.000434)[0m   [0mSELECT * FROM clients WHERE (clients.`id` = 1) [0m
+  [4;36;1mSQL (0.000614)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000091)[0m   [0mBEGIN[0m
+  [4;36;1mClient Load (0.000450)[0m   [0;1mSELECT * FROM clients WHERE (clients.`id` = 1) [0m
+  [4;35;1mClient Load (0.000381)[0m   [0mSELECT * FROM clients WHERE (clients.`id` = 1) [0m
+  [4;36;1mSQL (0.000108)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000091)[0m   [0mBEGIN[0m
+  [4;36;1mClient Load (0.000541)[0m   [0;1mSELECT * FROM clients WHERE (clients.name = 'Digitech Corporation') LIMIT 1[0m
+  [4;35;1mClient Load (0.000401)[0m   [0mSELECT * FROM clients WHERE (clients.name = 'Digitech Corporation') LIMIT 1[0m
+  [4;36;1mSQL (0.000114)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000090)[0m   [0mBEGIN[0m
+  [4;36;1mClient Load (0.000439)[0m   [0;1mSELECT * FROM clients WHERE (clients.name IS NULL) LIMIT 1[0m
+  [4;35;1mClient Load (0.000390)[0m   [0mSELECT * FROM clients WHERE (clients.name IS NULL) LIMIT 1[0m
+  [4;36;1mSQL (0.000114)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000091)[0m   [0mBEGIN[0m
+  [4;36;1mClient Load (0.000407)[0m   [0;1mSELECT * FROM clients WHERE (clients.name IS NULL) LIMIT 1[0m
+  [4;35;1mClient Load (0.000367)[0m   [0mSELECT * FROM clients WHERE (clients.name IS NULL) LIMIT 1[0m
+  [4;36;1mSQL (0.000113)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000131)[0m   [0mBEGIN[0m
+  [4;36;1mClient Load (0.000500)[0m   [0;1mSELECT * FROM clients WHERE (clients.`id` = 1) [0m
+  [4;35;1mClient Load (0.000508)[0m   [0mSELECT * FROM clients WHERE (clients.name = 'Digitech Corporation' AND clients.id <> 1) LIMIT 1[0m
+  [4;36;1mClient Update (0.000253)[0m   [0;1mUPDATE clients SET `email` = 'map7@iinet.com.au', `name` = 'Digitech Corporation' WHERE `id` = 1[0m
+  [4;35;1mSQL (0.002059)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000161)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000092)[0m   [0mBEGIN[0m
+  [4;36;1mClient Columns (0.001298)[0m   [0;1mSHOW FIELDS FROM clients[0m
+  [4;35;1mClient Load (0.000550)[0m   [0mSELECT * FROM clients WHERE (clients.name = 'Test client') LIMIT 1[0m
+  [4;36;1mSQL (0.000211)[0m   [0;1mINSERT INTO clients (`name`, `email`) VALUES('Test client', 'map7@iinet.com.au')[0m
+  [4;35;1mSQL (0.000619)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000096)[0m   [0;1mBEGIN[0m
+  [4;35;1mClient Load (0.000479)[0m   [0mSELECT * FROM clients WHERE (clients.`id` = 1) [0m
+  [4;36;1mClient Destroy (0.000202)[0m   [0;1m DELETE FROM clients
+ WHERE `id` = 1
+[0m
+  [4;35;1mClient Load (0.000412)[0m   [0mSELECT * FROM clients WHERE (clients.`id` = 1) [0m
+  [4;36;1mSQL (0.000610)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000097)[0m   [0mBEGIN[0m
+  [4;36;1mClient Load (0.000526)[0m   [0;1mSELECT * FROM clients WHERE (clients.`id` = 1) [0m
+  [4;35;1mClient Load (0.000384)[0m   [0mSELECT * FROM clients WHERE (clients.`id` = 1) [0m
+  [4;36;1mSQL (0.000111)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000091)[0m   [0mBEGIN[0m
+  [4;36;1mClient Load (0.000462)[0m   [0;1mSELECT * FROM clients WHERE (clients.name = 'Digitech Corporation') LIMIT 1[0m
+  [4;35;1mClient Load (0.000396)[0m   [0mSELECT * FROM clients WHERE (clients.name = 'Digitech Corporation') LIMIT 1[0m
+  [4;36;1mSQL (0.000112)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000090)[0m   [0mBEGIN[0m
+  [4;36;1mClient Load (0.000420)[0m   [0;1mSELECT * FROM clients WHERE (clients.name IS NULL) LIMIT 1[0m
+  [4;35;1mClient Load (0.000456)[0m   [0mSELECT * FROM clients WHERE (clients.name IS NULL) LIMIT 1[0m
+  [4;36;1mSQL (0.000111)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000090)[0m   [0mBEGIN[0m
+  [4;36;1mClient Load (0.000375)[0m   [0;1mSELECT * FROM clients WHERE (clients.name IS NULL) LIMIT 1[0m
+  [4;35;1mClient Load (0.000382)[0m   [0mSELECT * FROM clients WHERE (clients.name IS NULL) LIMIT 1[0m
+  [4;36;1mSQL (0.000107)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000090)[0m   [0mBEGIN[0m
+  [4;36;1mClient Load (0.000418)[0m   [0;1mSELECT * FROM clients WHERE (clients.`id` = 1) [0m
+  [4;35;1mClient Load (0.000594)[0m   [0mSELECT * FROM clients WHERE (clients.name = 'Digitech Corporation' AND clients.id <> 1) LIMIT 1[0m
+  [4;36;1mClient Update (0.000265)[0m   [0;1mUPDATE clients SET `email` = 'map7@iinet.com.au', `name` = 'Digitech Corporation' WHERE `id` = 1[0m
+  [4;35;1mSQL (0.000643)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000162)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000185)[0m   [0mBEGIN[0m
+  [4;36;1mClient Columns (0.001250)[0m   [0;1mSHOW FIELDS FROM clients[0m
+  [4;35;1mClient Load (0.000618)[0m   [0mSELECT * FROM clients WHERE (clients.name = 'Test client') LIMIT 1[0m
+  [4;36;1mSQL (0.000222)[0m   [0;1mINSERT INTO clients (`name`, `email`) VALUES('Test client', 'map7@iinet.com.au')[0m
+  [4;35;1mSQL (0.000623)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000095)[0m   [0;1mBEGIN[0m
+  [4;35;1mClient Load (0.000480)[0m   [0mSELECT * FROM clients WHERE (clients.`id` = 1) [0m
+  [4;36;1mClient Destroy (0.000292)[0m   [0;1m DELETE FROM clients
+ WHERE `id` = 1
+[0m
+  [4;35;1mClient Load (0.000380)[0m   [0mSELECT * FROM clients WHERE (clients.`id` = 1) [0m
+  [4;36;1mSQL (0.000598)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000091)[0m   [0mBEGIN[0m
+  [4;36;1mClient Load (0.000428)[0m   [0;1mSELECT * FROM clients WHERE (clients.`id` = 1) [0m
+  [4;35;1mClient Load (0.000475)[0m   [0mSELECT * FROM clients WHERE (clients.`id` = 1) [0m
+  [4;36;1mSQL (0.000110)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000090)[0m   [0mBEGIN[0m
+  [4;36;1mClient Load (0.000430)[0m   [0;1mSELECT * FROM clients WHERE (clients.name = 'Digitech Corporation') LIMIT 1[0m
+  [4;35;1mClient Load (0.000409)[0m   [0mSELECT * FROM clients WHERE (clients.name = 'Digitech Corporation') LIMIT 1[0m
+  [4;36;1mSQL (0.000156)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000091)[0m   [0mBEGIN[0m
+  [4;36;1mClient Load (0.000394)[0m   [0;1mSELECT * FROM clients WHERE (clients.name IS NULL) LIMIT 1[0m
+  [4;35;1mClient Load (0.000437)[0m   [0mSELECT * FROM clients WHERE (clients.name IS NULL) LIMIT 1[0m
+  [4;36;1mSQL (0.000118)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000089)[0m   [0mBEGIN[0m
+  [4;36;1mClient Load (0.000410)[0m   [0;1mSELECT * FROM clients WHERE (clients.name IS NULL) LIMIT 1[0m
+  [4;35;1mClient Load (0.000419)[0m   [0mSELECT * FROM clients WHERE (clients.name IS NULL) LIMIT 1[0m
+  [4;36;1mSQL (0.000112)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000091)[0m   [0mBEGIN[0m
+  [4;36;1mClient Load (0.000420)[0m   [0;1mSELECT * FROM clients WHERE (clients.`id` = 1) [0m
+  [4;35;1mClient Load (0.000557)[0m   [0mSELECT * FROM clients WHERE (clients.name = 'Digitech Corporation' AND clients.id <> 1) LIMIT 1[0m
+  [4;36;1mClient Update (0.000260)[0m   [0;1mUPDATE clients SET `email` = 'map7@iinet.com.au', `name` = 'Digitech Corporation' WHERE `id` = 1[0m
+  [4;35;1mSQL (0.000641)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000163)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000174)[0m   [0mBEGIN[0m
+  [4;36;1mClient Columns (0.001404)[0m   [0;1mSHOW FIELDS FROM clients[0m
+  [4;35;1mClient Load (0.000499)[0m   [0mSELECT * FROM clients WHERE (clients.name = 'Test client') LIMIT 1[0m
+  [4;36;1mSQL (0.000214)[0m   [0;1mINSERT INTO clients (`name`, `email`) VALUES('Test client', 'map7@iinet.com.au')[0m
+  [4;35;1mSQL (0.000619)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000091)[0m   [0;1mBEGIN[0m
+  [4;35;1mClient Load (0.000460)[0m   [0mSELECT * FROM clients WHERE (clients.`id` = 1) [0m
+  [4;36;1mClient Destroy (0.000220)[0m   [0;1m DELETE FROM clients
+ WHERE `id` = 1
+[0m
+  [4;35;1mClient Load (0.000365)[0m   [0mSELECT * FROM clients WHERE (clients.`id` = 1) [0m
+  [4;36;1mSQL (0.000738)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000101)[0m   [0mBEGIN[0m
+  [4;36;1mClient Load (0.000458)[0m   [0;1mSELECT * FROM clients WHERE (clients.`id` = 1) [0m
+  [4;35;1mClient Load (0.000444)[0m   [0mSELECT * FROM clients WHERE (clients.`id` = 1) [0m
+  [4;36;1mSQL (0.000107)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000090)[0m   [0mBEGIN[0m
+  [4;36;1mClient Load (0.000412)[0m   [0;1mSELECT * FROM clients WHERE (clients.name = 'Digitech Corporation') LIMIT 1[0m
+  [4;35;1mClient Load (0.000400)[0m   [0mSELECT * FROM clients WHERE (clients.name = 'Digitech Corporation') LIMIT 1[0m
+  [4;36;1mSQL (0.000112)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000088)[0m   [0mBEGIN[0m
+  [4;36;1mClient Load (0.000374)[0m   [0;1mSELECT * FROM clients WHERE (clients.name IS NULL) LIMIT 1[0m
+  [4;35;1mSQL (0.000198)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000095)[0m   [0;1mBEGIN[0m
+  [4;35;1mClient Load (0.000558)[0m   [0mSELECT * FROM clients WHERE (clients.name IS NULL) LIMIT 1[0m
+  [4;36;1mClient Load (0.000374)[0m   [0;1mSELECT * FROM clients WHERE (clients.name IS NULL) LIMIT 1[0m
+  [4;35;1mSQL (0.000111)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000090)[0m   [0;1mBEGIN[0m
+  [4;35;1mClient Load (0.000526)[0m   [0mSELECT * FROM clients WHERE (clients.`id` = 1) [0m
+  [4;36;1mClient Load (0.000617)[0m   [0;1mSELECT * FROM clients WHERE (clients.name = 'Digitech Corporation' AND clients.id <> 1) LIMIT 1[0m
+  [4;35;1mClient Update (0.000272)[0m   [0mUPDATE clients SET `email` = 'map7@iinet.com.au', `name` = 'Digitech Corporation' WHERE `id` = 1[0m
+  [4;36;1mSQL (0.000637)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.000162)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000088)[0m   [0mBEGIN[0m
+  [4;36;1mPdf Columns (0.001377)[0m   [0;1mSHOW FIELDS FROM pdfs[0m
+  [4;35;1mPdf Load (0.001037)[0m   [0mSELECT * FROM pdfs WHERE (pdfs.pdfname = 'Test pdf' AND pdfs.pdfdate = '2007-11-21 11:44:55' AND pdfs.category_id = 1 AND pdfs.client_id = 1) LIMIT 1[0m
+  [4;36;1mSQL (0.000276)[0m   [0;1mINSERT INTO pdfs (`pdfname`, `client_id`, `pdfdate`, `category_id`, `filename`, `pdfnote`) VALUES('Test pdf', 1, '2007-11-21 11:44:55', 1, '/livedata/pdfcat_test_upload/DOC070731002030(0001).pdf', 'Testing')[0m
+  [4;35;1mSQL (0.000690)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000095)[0m   [0;1mBEGIN[0m
+  [4;35;1mPdf Load (0.000742)[0m   [0mSELECT * FROM pdfs WHERE (pdfs.`id` = 2) [0m
+  [4;36;1mPdf Destroy (0.000208)[0m   [0;1m DELETE FROM pdfs
+ WHERE `id` = 2
+[0m
+  [4;35;1mSQL (0.000732)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000092)[0m   [0;1mBEGIN[0m
+  [4;35;1mPdf Load (0.000778)[0m   [0mSELECT * FROM pdfs WHERE (pdfs.`id` = 2) [0m
+  [4;36;1mSQL (0.000130)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000092)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000092)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000089)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000091)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000092)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000092)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000092)[0m   [0mBEGIN[0m
+  [4;36;1mPdf Load (0.000845)[0m   [0;1mSELECT * FROM pdfs WHERE (pdfs.`id` = 2) [0m
+  [4;35;1mPdf Load (0.000970)[0m   [0mSELECT * FROM pdfs WHERE (pdfs.pdfname = '2007 Tax Assessment-adrian' AND pdfs.pdfdate = '2007-11-16' AND pdfs.category_id = 1 AND pdfs.client_id = 1 AND pdfs.id <> 2) LIMIT 1[0m
+  [4;36;1mSQL (0.000146)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.000164)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000093)[0m   [0mBEGIN[0m
+  [4;36;1mPdf Columns (0.001461)[0m   [0;1mSHOW FIELDS FROM pdfs[0m
+  [4;35;1mPdf Load (0.001014)[0m   [0mSELECT * FROM pdfs WHERE (pdfs.pdfname = 'Test pdf' AND pdfs.pdfdate = '2007-11-21 11:45:25' AND pdfs.category_id = 1 AND pdfs.client_id = 1) LIMIT 1[0m
+  [4;36;1mSQL (0.000245)[0m   [0;1mINSERT INTO pdfs (`pdfname`, `client_id`, `pdfdate`, `category_id`, `filename`, `pdfnote`) VALUES('Test pdf', 1, '2007-11-21 11:45:25', 1, '/livedata/pdfcat_test_upload/DOC070731002030(0001).pdf', 'Testing')[0m
+  [4;35;1mSQL (0.000628)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000094)[0m   [0;1mBEGIN[0m
+  [4;35;1mPdf Load (0.000739)[0m   [0mSELECT * FROM pdfs WHERE (pdfs.`id` = 2) [0m
+  [4;36;1mPdf Destroy (0.000201)[0m   [0;1m DELETE FROM pdfs
+ WHERE `id` = 2
+[0m
+  [4;35;1mSQL (0.000744)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000091)[0m   [0;1mBEGIN[0m
+  [4;35;1mPdf Load (0.000765)[0m   [0mSELECT * FROM pdfs WHERE (pdfs.`id` = 2) [0m
+  [4;36;1mSQL (0.000298)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000093)[0m   [0mBEGIN[0m
+  [4;36;1mPdf Load (0.000697)[0m   [0;1mSELECT * FROM pdfs WHERE (pdfs.`id` = 2) [0m
+  [4;35;1mPdf Load (0.000844)[0m   [0mSELECT * FROM pdfs WHERE (pdfs.pdfname = '2007 Tax Assessment-adrian' AND pdfs.pdfdate = '2007-11-16' AND pdfs.category_id = 1 AND pdfs.client_id = 1 AND pdfs.id <> 2) LIMIT 1[0m
+  [4;36;1mSQL (0.000142)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.000161)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000087)[0m   [0mBEGIN[0m
+  [4;36;1mPdf Columns (0.001385)[0m   [0;1mSHOW FIELDS FROM pdfs[0m
+  [4;35;1mPdf Load (0.001006)[0m   [0mSELECT * FROM pdfs WHERE (pdfs.pdfname = 'Test pdf' AND pdfs.pdfdate = '2007-11-21 11:46:18' AND pdfs.category_id = 1 AND pdfs.client_id = 1) LIMIT 1[0m
+  [4;36;1mSQL (0.000261)[0m   [0;1mINSERT INTO pdfs (`pdfname`, `client_id`, `pdfdate`, `category_id`, `filename`, `pdfnote`) VALUES('Test pdf', 1, '2007-11-21 11:46:18', 1, '/livedata/pdfcat_test_upload/DOC070731002030(0001).pdf', 'Testing')[0m
+  [4;35;1mSQL (0.000610)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000092)[0m   [0;1mBEGIN[0m
+  [4;35;1mPdf Load (0.000722)[0m   [0mSELECT * FROM pdfs WHERE (pdfs.`id` = 2) [0m
+  [4;36;1mPdf Destroy (0.000201)[0m   [0;1m DELETE FROM pdfs
+ WHERE `id` = 2
+[0m
+  [4;35;1mPdf Load (0.000654)[0m   [0mSELECT * FROM pdfs WHERE (pdfs.`id` = 2) [0m
+  [4;36;1mSQL (0.000607)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000095)[0m   [0mBEGIN[0m
+  [4;36;1mPdf Load (0.000788)[0m   [0;1mSELECT * FROM pdfs WHERE (pdfs.`id` = 2) [0m
+  [4;35;1mPdf Load (0.000663)[0m   [0mSELECT * FROM pdfs WHERE (pdfs.`id` = 2) [0m
+  [4;36;1mSQL (0.000112)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000304)[0m   [0mBEGIN[0m
+  [4;36;1mPdf Load (0.000704)[0m   [0;1mSELECT * FROM pdfs WHERE (pdfs.`id` = 2) [0m
+  [4;35;1mSQL (0.000108)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000158)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000172)[0m   [0mBEGIN[0m
+  [4;36;1mPdf Columns (0.001592)[0m   [0;1mSHOW FIELDS FROM pdfs[0m
+  [4;35;1mPdf Load (0.000816)[0m   [0mSELECT * FROM pdfs WHERE (pdfs.pdfname = 'Test pdf' AND pdfs.pdfdate = '2007-11-21 11:46:50' AND pdfs.category_id = 1 AND pdfs.client_id = 1) LIMIT 1[0m
+  [4;36;1mSQL (0.000247)[0m   [0;1mINSERT INTO pdfs (`pdfname`, `client_id`, `pdfdate`, `category_id`, `filename`, `pdfnote`) VALUES('Test pdf', 1, '2007-11-21 11:46:50', 1, '/livedata/pdfcat_test_upload/DOC070731002030(0001).pdf', 'Testing')[0m
+  [4;35;1mSQL (0.000619)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000143)[0m   [0;1mBEGIN[0m
+  [4;35;1mPdf Load (0.000758)[0m   [0mSELECT * FROM pdfs WHERE (pdfs.`id` = 2) [0m
+  [4;36;1mPdf Destroy (0.000201)[0m   [0;1m DELETE FROM pdfs
+ WHERE `id` = 2
+[0m
+  [4;35;1mPdf Load (0.000658)[0m   [0mSELECT * FROM pdfs WHERE (pdfs.`id` = 2) [0m
+  [4;36;1mSQL (0.000608)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000094)[0m   [0mBEGIN[0m
+  [4;36;1mPdf Load (0.000755)[0m   [0;1mSELECT * FROM pdfs WHERE (pdfs.`id` = 2) [0m
+  [4;35;1mPdf Load (0.000736)[0m   [0mSELECT * FROM pdfs WHERE (pdfs.`id` = 2) [0m
+  [4;36;1mSQL (0.000110)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000091)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000092)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000090)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000092)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000087)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000092)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000090)[0m   [0mBEGIN[0m
+  [4;36;1mPdf Load (0.000688)[0m   [0;1mSELECT * FROM pdfs WHERE (pdfs.`id` = 2) [0m
+  [4;35;1mPdf Load (0.000875)[0m   [0mSELECT * FROM pdfs WHERE (pdfs.pdfname = '2007 Tax Assessment-adrian' AND pdfs.pdfdate = '2007-11-16' AND pdfs.category_id = 1 AND pdfs.client_id = 1 AND pdfs.id <> 2) LIMIT 1[0m
+  [4;36;1mSQL (0.000203)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.000163)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000093)[0m   [0mBEGIN[0m
+  [4;36;1mPdf Columns (0.001523)[0m   [0;1mSHOW FIELDS FROM pdfs[0m
+  [4;35;1mPdf Load (0.002122)[0m   [0mSELECT * FROM pdfs WHERE (pdfs.pdfname = 'Test pdf' AND pdfs.pdfdate = '2007-11-21 11:47:13' AND pdfs.category_id = 1 AND pdfs.client_id = 1) LIMIT 1[0m
+  [4;36;1mSQL (0.000253)[0m   [0;1mINSERT INTO pdfs (`pdfname`, `client_id`, `pdfdate`, `category_id`, `filename`, `pdfnote`) VALUES('Test pdf', 1, '2007-11-21 11:47:13', 1, '/livedata/pdfcat_test_upload/DOC070731002030(0001).pdf', 'Testing')[0m
+  [4;35;1mSQL (0.000627)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000094)[0m   [0;1mBEGIN[0m
+  [4;35;1mPdf Load (0.000738)[0m   [0mSELECT * FROM pdfs WHERE (pdfs.`id` = 2) [0m
+  [4;36;1mPdf Destroy (0.000216)[0m   [0;1m DELETE FROM pdfs
+ WHERE `id` = 2
+[0m
+  [4;35;1mPdf Load (0.000624)[0m   [0mSELECT * FROM pdfs WHERE (pdfs.`id` = 2) [0m
+  [4;36;1mSQL (0.006338)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000116)[0m   [0mBEGIN[0m
+  [4;36;1mPdf Load (0.000773)[0m   [0;1mSELECT * FROM pdfs WHERE (pdfs.`id` = 2) [0m
+  [4;35;1mPdf Load (0.000696)[0m   [0mSELECT * FROM pdfs WHERE (pdfs.`id` = 2) [0m
+  [4;36;1mSQL (0.000113)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000092)[0m   [0mBEGIN[0m
+  [4;36;1mPdf Load (0.000645)[0m   [0;1mSELECT * FROM pdfs WHERE (pdfs.`id` = 2) [0m
+  [4;35;1mPdf Load (0.000835)[0m   [0mSELECT * FROM pdfs WHERE (pdfs.pdfname = '2007 Tax Assessment-adrian' AND pdfs.pdfdate = '2007-11-16' AND pdfs.category_id = 1 AND pdfs.client_id = 1 AND pdfs.id <> 2) LIMIT 1[0m
+  [4;36;1mSQL (0.000212)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.000244)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000088)[0m   [0mBEGIN[0m
+  [4;36;1mPdf Columns (0.001562)[0m   [0;1mSHOW FIELDS FROM pdfs[0m
+  [4;35;1mPdf Load (0.000816)[0m   [0mSELECT * FROM pdfs WHERE (pdfs.pdfname = 'Test pdf' AND pdfs.pdfdate = '2007-11-21 11:48:25' AND pdfs.category_id = 1 AND pdfs.client_id = 1) LIMIT 1[0m
+  [4;36;1mSQL (0.000257)[0m   [0;1mINSERT INTO pdfs (`pdfname`, `client_id`, `pdfdate`, `category_id`, `filename`, `pdfnote`) VALUES('Test pdf', 1, '2007-11-21 11:48:25', 1, '/livedata/pdfcat_test_upload/DOC070731002030(0001).pdf', 'Testing')[0m
+  [4;35;1mSQL (0.000607)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000140)[0m   [0;1mBEGIN[0m
+  [4;35;1mPdf Load (0.000749)[0m   [0mSELECT * FROM pdfs WHERE (pdfs.`id` = 2) [0m
+  [4;36;1mPdf Destroy (0.000200)[0m   [0;1m DELETE FROM pdfs
+ WHERE `id` = 2
+[0m
+  [4;35;1mPdf Load (0.000730)[0m   [0mSELECT * FROM pdfs WHERE (pdfs.`id` = 2) [0m
+  [4;36;1mSQL (0.001326)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000241)[0m   [0mBEGIN[0m
+  [4;36;1mPdf Load (0.000918)[0m   [0;1mSELECT * FROM pdfs WHERE (pdfs.`id` = 2) [0m
+  [4;35;1mPdf Load (0.000662)[0m   [0mSELECT * FROM pdfs WHERE (pdfs.`id` = 2) [0m
+  [4;36;1mSQL (0.000116)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000089)[0m   [0mBEGIN[0m
+  [4;36;1mPdf Load (0.000694)[0m   [0;1mSELECT * FROM pdfs WHERE (pdfs.`id` = 2) [0m
+  [4;35;1mPdf Load (0.000883)[0m   [0mSELECT * FROM pdfs WHERE (pdfs.pdfname = 'Test2' AND pdfs.pdfdate = '2007-11-16' AND pdfs.category_id = 1 AND pdfs.client_id = 1 AND pdfs.id <> 2) LIMIT 1[0m
+  [4;36;1mSQL (0.000203)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.000162)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000097)[0m   [0mBEGIN[0m
+  [4;36;1mPdf Columns (0.001671)[0m   [0;1mSHOW FIELDS FROM pdfs[0m
+  [4;35;1mPdf Load (0.000819)[0m   [0mSELECT * FROM pdfs WHERE (pdfs.pdfname = 'Test pdf' AND pdfs.pdfdate = '2007-11-21 11:51:55' AND pdfs.category_id = 1 AND pdfs.client_id = 1) LIMIT 1[0m
+  [4;36;1mSQL (0.000249)[0m   [0;1mINSERT INTO pdfs (`pdfname`, `client_id`, `pdfdate`, `category_id`, `filename`, `pdfnote`) VALUES('Test pdf', 1, '2007-11-21 11:51:55', 1, '/livedata/pdfcat_test_upload/DOC070731002030(0001).pdf', 'Testing')[0m
+  [4;35;1mSQL (0.000626)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000095)[0m   [0;1mBEGIN[0m
+  [4;35;1mPdf Load (0.000802)[0m   [0mSELECT * FROM pdfs WHERE (pdfs.`id` = 2) [0m
+  [4;36;1mPdf Destroy (0.000204)[0m   [0;1m DELETE FROM pdfs
+ WHERE `id` = 2
+[0m
+  [4;35;1mPdf Load (0.000652)[0m   [0mSELECT * FROM pdfs WHERE (pdfs.`id` = 2) [0m
+  [4;36;1mSQL (0.000614)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000096)[0m   [0mBEGIN[0m
+  [4;36;1mPdf Load (0.000766)[0m   [0;1mSELECT * FROM pdfs WHERE (pdfs.`id` = 2) [0m
+  [4;35;1mPdf Load (0.000656)[0m   [0mSELECT * FROM pdfs WHERE (pdfs.`id` = 2) [0m
+  [4;36;1mSQL (0.000109)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000090)[0m   [0mBEGIN[0m
+  [4;36;1mPdf Load (0.000715)[0m   [0;1mSELECT * FROM pdfs WHERE (pdfs.`id` = 2) [0m
+  [4;35;1mSQL (0.000105)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000157)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000092)[0m   [0mBEGIN[0m
+  [4;36;1mPdf Columns (0.001465)[0m   [0;1mSHOW FIELDS FROM pdfs[0m
+  [4;35;1mPdf Load (0.001149)[0m   [0mSELECT * FROM pdfs WHERE (pdfs.pdfname = 'Test pdf' AND pdfs.pdfdate = '2007-11-21 11:52:01' AND pdfs.category_id = 1 AND pdfs.client_id = 1) LIMIT 1[0m
+  [4;36;1mSQL (0.000303)[0m   [0;1mINSERT INTO pdfs (`pdfname`, `client_id`, `pdfdate`, `category_id`, `filename`, `pdfnote`) VALUES('Test pdf', 1, '2007-11-21 11:52:01', 1, '/livedata/pdfcat_test_upload/DOC070731002030(0001).pdf', 'Testing')[0m
+  [4;35;1mSQL (0.000646)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000095)[0m   [0;1mBEGIN[0m
+  [4;35;1mPdf Load (0.000775)[0m   [0mSELECT * FROM pdfs WHERE (pdfs.`id` = 2) [0m
+  [4;36;1mPdf Destroy (0.000220)[0m   [0;1m DELETE FROM pdfs
+ WHERE `id` = 2
+[0m
+  [4;35;1mPdf Load (0.000674)[0m   [0mSELECT * FROM pdfs WHERE (pdfs.`id` = 2) [0m
+  [4;36;1mSQL (0.000637)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000094)[0m   [0mBEGIN[0m
+  [4;36;1mPdf Load (0.000713)[0m   [0;1mSELECT * FROM pdfs WHERE (pdfs.`id` = 2) [0m
+  [4;35;1mPdf Load (0.000677)[0m   [0mSELECT * FROM pdfs WHERE (pdfs.`id` = 2) [0m
+  [4;36;1mSQL (0.000124)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000117)[0m   [0mBEGIN[0m
+  [4;36;1mPdf Load (0.000653)[0m   [0;1mSELECT * FROM pdfs WHERE (pdfs.`id` = 2) [0m
+  [4;35;1mPdf Load (0.000858)[0m   [0mSELECT * FROM pdfs WHERE (pdfs.pdfname = 'Test2' AND pdfs.pdfdate = '2007-11-16' AND pdfs.category_id = 1 AND pdfs.client_id = 1 AND pdfs.id <> 2) LIMIT 1[0m
+  [4;36;1mSQL (0.000196)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.000167)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000096)[0m   [0mBEGIN[0m
+  [4;36;1mPdf Columns (0.001583)[0m   [0;1mSHOW FIELDS FROM pdfs[0m
+  [4;35;1mPdf Load (0.000812)[0m   [0mSELECT * FROM pdfs WHERE (pdfs.pdfname = 'Test pdf' AND pdfs.pdfdate = '2007-11-21 11:52:38' AND pdfs.category_id = 1 AND pdfs.client_id = 1) LIMIT 1[0m
+  [4;36;1mSQL (0.000273)[0m   [0;1mINSERT INTO pdfs (`pdfname`, `client_id`, `pdfdate`, `category_id`, `filename`, `pdfnote`) VALUES('Test pdf', 1, '2007-11-21 11:52:38', 1, '/livedata/pdfcat_test_upload/DOC070731002030(0001).pdf', 'Testing')[0m
+  [4;35;1mSQL (0.000848)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000095)[0m   [0;1mBEGIN[0m
+  [4;35;1mPdf Load (0.000814)[0m   [0mSELECT * FROM pdfs WHERE (pdfs.`id` = 2) [0m
+  [4;36;1mPdf Destroy (0.000271)[0m   [0;1m DELETE FROM pdfs
+ WHERE `id` = 2
+[0m
+  [4;35;1mPdf Load (0.000615)[0m   [0mSELECT * FROM pdfs WHERE (pdfs.`id` = 2) [0m
+  [4;36;1mSQL (0.000614)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000095)[0m   [0mBEGIN[0m
+  [4;36;1mPdf Load (0.000709)[0m   [0;1mSELECT * FROM pdfs WHERE (pdfs.`id` = 2) [0m
+  [4;35;1mPdf Load (0.000691)[0m   [0mSELECT * FROM pdfs WHERE (pdfs.`id` = 2) [0m
+  [4;36;1mSQL (0.000113)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000089)[0m   [0mBEGIN[0m
+  [4;36;1mPdf Load (0.001689)[0m   [0;1mSELECT * FROM pdfs WHERE (pdfs.`id` = 2) [0m
+  [4;35;1mPdf Load (0.001031)[0m   [0mSELECT * FROM pdfs WHERE (pdfs.pdfname = 'test3' AND pdfs.pdfdate = '2007-11-16' AND pdfs.category_id = 1 AND pdfs.client_id = 1 AND pdfs.id <> 2) LIMIT 1[0m
+  [4;36;1mSQL (0.000125)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.000222)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000091)[0m   [0mBEGIN[0m
+  [4;36;1mPdf Columns (0.001570)[0m   [0;1mSHOW FIELDS FROM pdfs[0m
+  [4;35;1mPdf Load (0.000860)[0m   [0mSELECT * FROM pdfs WHERE (pdfs.pdfname = 'Test pdf' AND pdfs.pdfdate = '2007-11-21 11:52:53' AND pdfs.category_id = 1 AND pdfs.client_id = 1) LIMIT 1[0m
+  [4;36;1mSQL (0.000249)[0m   [0;1mINSERT INTO pdfs (`pdfname`, `client_id`, `pdfdate`, `category_id`, `filename`, `pdfnote`) VALUES('Test pdf', 1, '2007-11-21 11:52:53', 1, '/livedata/pdfcat_test_upload/DOC070731002030(0001).pdf', 'Testing')[0m
+  [4;35;1mSQL (0.000618)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000092)[0m   [0;1mBEGIN[0m
+  [4;35;1mPdf Load (0.000801)[0m   [0mSELECT * FROM pdfs WHERE (pdfs.`id` = 2) [0m
+  [4;36;1mPdf Destroy (0.000219)[0m   [0;1m DELETE FROM pdfs
+ WHERE `id` = 2
+[0m
+  [4;35;1mPdf Load (0.000698)[0m   [0mSELECT * FROM pdfs WHERE (pdfs.`id` = 2) [0m
+  [4;36;1mSQL (0.000603)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000093)[0m   [0mBEGIN[0m
+  [4;36;1mPdf Load (0.000694)[0m   [0;1mSELECT * FROM pdfs WHERE (pdfs.`id` = 2) [0m
+  [4;35;1mPdf Load (0.000688)[0m   [0mSELECT * FROM pdfs WHERE (pdfs.`id` = 2) [0m
+  [4;36;1mSQL (0.000108)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000091)[0m   [0mBEGIN[0m
+  [4;36;1mPdf Load (0.000641)[0m   [0;1mSELECT * FROM pdfs WHERE (pdfs.`id` = 2) [0m
+  [4;35;1mPdf Load (0.000831)[0m   [0mSELECT * FROM pdfs WHERE (pdfs.pdfname = 'test3' AND pdfs.pdfdate = '2007-11-16' AND pdfs.category_id = 1 AND pdfs.client_id = 1 AND pdfs.id <> 2) LIMIT 1[0m
+  [4;36;1mSQL (0.000201)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.000160)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000091)[0m   [0mBEGIN[0m
+  [4;36;1mPdf Columns (0.001742)[0m   [0;1mSHOW FIELDS FROM pdfs[0m
+  [4;35;1mPdf Load (0.000820)[0m   [0mSELECT * FROM pdfs WHERE (pdfs.pdfname = 'Test pdf' AND pdfs.pdfdate = '2007-11-21 11:54:23' AND pdfs.category_id = 1 AND pdfs.client_id = 1) LIMIT 1[0m
+  [4;36;1mSQL (0.000244)[0m   [0;1mINSERT INTO pdfs (`pdfname`, `client_id`, `pdfdate`, `category_id`, `filename`, `pdfnote`) VALUES('Test pdf', 1, '2007-11-21 11:54:23', 1, '/livedata/pdfcat_test_upload/DOC070731002030(0001).pdf', 'Testing')[0m
+  [4;35;1mSQL (0.000621)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000093)[0m   [0;1mBEGIN[0m
+  [4;35;1mPdf Load (0.000950)[0m   [0mSELECT * FROM pdfs WHERE (pdfs.`id` = 2) [0m
+  [4;36;1mPdf Destroy (0.000215)[0m   [0;1m DELETE FROM pdfs
+ WHERE `id` = 2
+[0m
+  [4;35;1mPdf Load (0.000708)[0m   [0mSELECT * FROM pdfs WHERE (pdfs.`id` = 2) [0m
+  [4;36;1mSQL (0.000636)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000093)[0m   [0mBEGIN[0m
+  [4;36;1mPdf Load (0.000744)[0m   [0;1mSELECT * FROM pdfs WHERE (pdfs.`id` = 2) [0m
+  [4;35;1mPdf Load (0.000679)[0m   [0mSELECT * FROM pdfs WHERE (pdfs.`id` = 2) [0m
+  [4;36;1mSQL (0.000110)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000089)[0m   [0mBEGIN[0m
+  [4;36;1mPdf Load (0.000658)[0m   [0;1mSELECT * FROM pdfs WHERE (pdfs.`id` = 1) [0m
+  [4;35;1mPdf Load (0.000910)[0m   [0mSELECT * FROM pdfs WHERE (pdfs.pdfname = 'test3' AND pdfs.pdfdate = '2007-11-21' AND pdfs.category_id = 2 AND pdfs.client_id = 3 AND pdfs.id <> 1) LIMIT 1[0m
+  [4;36;1mSQL (0.000204)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.000162)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000124)[0m   [0mBEGIN[0m
+  [4;36;1mCategory Columns (0.001093)[0m   [0;1mSHOW FIELDS FROM categories[0m
+  [4;35;1mCategory Load (0.000524)[0m   [0mSELECT * FROM categories WHERE (categories.name = 'Test Category') LIMIT 1[0m
+  [4;36;1mSQL (0.000214)[0m   [0;1mINSERT INTO categories (`name`, `description`) VALUES('Test Category', 'This is a unit test')[0m
+  [4;35;1mSQL (0.000611)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000094)[0m   [0;1mBEGIN[0m
+  [4;35;1mCategory Load (0.000760)[0m   [0mSELECT * FROM categories WHERE (categories.`id` = 1) [0m
+  [4;36;1mCategory Destroy (0.000245)[0m   [0;1m DELETE FROM categories
+ WHERE `id` = 1
+[0m
+  [4;35;1mCategory Load (0.000383)[0m   [0mSELECT * FROM categories WHERE (categories.`id` = 1) [0m
+  [4;36;1mSQL (0.000688)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000095)[0m   [0mBEGIN[0m
+  [4;36;1mCategory Load (0.000448)[0m   [0;1mSELECT * FROM categories WHERE (categories.`id` = 1) [0m
+  [4;35;1mCategory Load (0.000386)[0m   [0mSELECT * FROM categories WHERE (categories.`id` = 1) [0m
+  [4;36;1mSQL (0.000108)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000090)[0m   [0mBEGIN[0m
+  [4;36;1mCategory Load (0.000416)[0m   [0;1mSELECT * FROM categories WHERE (categories.name = 'tax') LIMIT 1[0m
+  [4;35;1mCategory Load (0.000408)[0m   [0mSELECT * FROM categories WHERE (categories.name = 'tax') LIMIT 1[0m
+  [4;36;1mSQL (0.000114)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000091)[0m   [0mBEGIN[0m
+  [4;36;1mCategory Load (0.000430)[0m   [0;1mSELECT * FROM categories WHERE (categories.name IS NULL) LIMIT 1[0m
+  [4;35;1mCategory Load (0.000382)[0m   [0mSELECT * FROM categories WHERE (categories.name IS NULL) LIMIT 1[0m
+  [4;36;1mSQL (0.000107)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000090)[0m   [0mBEGIN[0m
+  [4;36;1mCategory Load (0.000454)[0m   [0;1mSELECT * FROM categories WHERE (categories.`id` = 1) [0m
+  [4;35;1mCategory Load (0.000588)[0m   [0mSELECT * FROM categories WHERE (categories.name = 'BAS' AND categories.id <> 1) LIMIT 1[0m
+  [4;36;1mCategory Update (0.000387)[0m   [0;1mUPDATE categories SET `description` = 'New description', `name` = 'BAS' WHERE `id` = 1[0m
+  [4;35;1mSQL (0.000629)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000083)[0m   [0;1mBEGIN[0m
+  [4;35;1mClient Columns (0.001112)[0m   [0mSHOW FIELDS FROM clients[0m
+  [4;36;1mClient Load (0.000577)[0m   [0;1mSELECT * FROM clients WHERE (clients.name = 'Test client') LIMIT 1[0m
+  [4;35;1mSQL (0.000374)[0m   [0mINSERT INTO clients (`name`, `email`) VALUES('Test client', 'map7@iinet.com.au')[0m
+  [4;36;1mSQL (0.000610)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000091)[0m   [0mBEGIN[0m
+  [4;36;1mClient Load (0.000531)[0m   [0;1mSELECT * FROM clients WHERE (clients.`id` = 1) [0m
+  [4;35;1mClient Destroy (0.000201)[0m   [0m DELETE FROM clients
+ WHERE `id` = 1
+[0m
+  [4;36;1mClient Load (0.000392)[0m   [0;1mSELECT * FROM clients WHERE (clients.`id` = 1) [0m
+  [4;35;1mSQL (0.000590)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000093)[0m   [0;1mBEGIN[0m
+  [4;35;1mClient Load (0.000440)[0m   [0mSELECT * FROM clients WHERE (clients.`id` = 1) [0m
+  [4;36;1mClient Load (0.000376)[0m   [0;1mSELECT * FROM clients WHERE (clients.`id` = 1) [0m
+  [4;35;1mSQL (0.000165)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000090)[0m   [0;1mBEGIN[0m
+  [4;35;1mClient Load (0.000434)[0m   [0mSELECT * FROM clients WHERE (clients.name = 'Digitech Corporation') LIMIT 1[0m
+  [4;36;1mClient Load (0.000461)[0m   [0;1mSELECT * FROM clients WHERE (clients.name = 'Digitech Corporation') LIMIT 1[0m
+  [4;35;1mSQL (0.000117)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000090)[0m   [0;1mBEGIN[0m
+  [4;35;1mClient Load (0.000392)[0m   [0mSELECT * FROM clients WHERE (clients.name IS NULL) LIMIT 1[0m
+  [4;36;1mClient Load (0.000420)[0m   [0;1mSELECT * FROM clients WHERE (clients.name IS NULL) LIMIT 1[0m
+  [4;35;1mSQL (0.000112)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000176)[0m   [0;1mBEGIN[0m
+  [4;35;1mClient Load (0.000392)[0m   [0mSELECT * FROM clients WHERE (clients.name IS NULL) LIMIT 1[0m
+  [4;36;1mClient Load (0.000365)[0m   [0;1mSELECT * FROM clients WHERE (clients.name IS NULL) LIMIT 1[0m
+  [4;35;1mSQL (0.000112)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000090)[0m   [0;1mBEGIN[0m
+  [4;35;1mClient Load (0.000414)[0m   [0mSELECT * FROM clients WHERE (clients.`id` = 1) [0m
+  [4;36;1mClient Load (0.000508)[0m   [0;1mSELECT * FROM clients WHERE (clients.name = 'Digitech Corporation' AND clients.id <> 1) LIMIT 1[0m
+  [4;35;1mClient Update (0.000252)[0m   [0mUPDATE clients SET `email` = 'map7@iinet.com.au', `name` = 'Digitech Corporation' WHERE `id` = 1[0m
+  [4;36;1mSQL (0.000633)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000083)[0m   [0mBEGIN[0m
+  [4;36;1mPdf Columns (0.002928)[0m   [0;1mSHOW FIELDS FROM pdfs[0m
+  [4;35;1mPdf Load (0.000894)[0m   [0mSELECT * FROM pdfs WHERE (pdfs.pdfname = 'Test pdf' AND pdfs.pdfdate = '2007-11-21 11:54:43' AND pdfs.category_id = 1 AND pdfs.client_id = 1) LIMIT 1[0m
+  [4;36;1mSQL (0.000246)[0m   [0;1mINSERT INTO pdfs (`pdfname`, `client_id`, `pdfdate`, `category_id`, `filename`, `pdfnote`) VALUES('Test pdf', 1, '2007-11-21 11:54:43', 1, '/livedata/pdfcat_test_upload/DOC070731002030(0001).pdf', 'Testing')[0m
+  [4;35;1mSQL (0.000606)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000092)[0m   [0;1mBEGIN[0m
+  [4;35;1mPdf Load (0.000853)[0m   [0mSELECT * FROM pdfs WHERE (pdfs.`id` = 2) [0m
+  [4;36;1mPdf Destroy (0.000229)[0m   [0;1m DELETE FROM pdfs
+ WHERE `id` = 2
+[0m
+  [4;35;1mPdf Load (0.000616)[0m   [0mSELECT * FROM pdfs WHERE (pdfs.`id` = 2) [0m
+  [4;36;1mSQL (0.000589)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000094)[0m   [0mBEGIN[0m
+  [4;36;1mPdf Load (0.000826)[0m   [0;1mSELECT * FROM pdfs WHERE (pdfs.`id` = 2) [0m
+  [4;35;1mPdf Load (0.000677)[0m   [0mSELECT * FROM pdfs WHERE (pdfs.`id` = 2) [0m
+  [4;36;1mSQL (0.000112)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000091)[0m   [0mBEGIN[0m
+  [4;36;1mPdf Load (0.000657)[0m   [0;1mSELECT * FROM pdfs WHERE (pdfs.`id` = 1) [0m
+  [4;35;1mPdf Load (0.001279)[0m   [0mSELECT * FROM pdfs WHERE (pdfs.pdfname = 'test3' AND pdfs.pdfdate = '2007-11-21' AND pdfs.category_id = 2 AND pdfs.client_id = 3 AND pdfs.id <> 1) LIMIT 1[0m
+  [4;36;1mSQL (0.000201)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.000159)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000087)[0m   [0mBEGIN[0m
+  [4;36;1mPdf Columns (0.001561)[0m   [0;1mSHOW FIELDS FROM pdfs[0m
+  [4;35;1mPdf Load (0.000810)[0m   [0mSELECT * FROM pdfs WHERE (pdfs.pdfname = 'Test pdf' AND pdfs.pdfdate = '2007-11-21 11:54:54' AND pdfs.category_id = 1 AND pdfs.client_id = 1) LIMIT 1[0m
+  [4;36;1mSQL (0.000257)[0m   [0;1mINSERT INTO pdfs (`pdfname`, `client_id`, `pdfdate`, `category_id`, `filename`, `pdfnote`) VALUES('Test pdf', 1, '2007-11-21 11:54:54', 1, '/livedata/pdfcat_test_upload/DOC070731002030(0001).pdf', 'Testing')[0m
+  [4;35;1mSQL (0.000612)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000091)[0m   [0;1mBEGIN[0m
+  [4;35;1mPdf Load (0.001742)[0m   [0mSELECT * FROM pdfs WHERE (pdfs.`id` = 2) [0m
+  [4;36;1mPdf Destroy (0.000307)[0m   [0;1m DELETE FROM pdfs
+ WHERE `id` = 2
+[0m
+  [4;35;1mPdf Load (0.000645)[0m   [0mSELECT * FROM pdfs WHERE (pdfs.`id` = 2) [0m
+  [4;36;1mSQL (0.000615)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000121)[0m   [0mBEGIN[0m
+  [4;36;1mPdf Load (0.000756)[0m   [0;1mSELECT * FROM pdfs WHERE (pdfs.`id` = 2) [0m
+  [4;35;1mPdf Load (0.000644)[0m   [0mSELECT * FROM pdfs WHERE (pdfs.`id` = 2) [0m
+  [4;36;1mSQL (0.000105)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000090)[0m   [0mBEGIN[0m
+  [4;36;1mPdf Load (0.000689)[0m   [0;1mSELECT * FROM pdfs WHERE (pdfs.`id` = 1) [0m
+  [4;35;1mPdf Load (0.000870)[0m   [0mSELECT * FROM pdfs WHERE (pdfs.pdfname = 'test3' AND pdfs.pdfdate = '2007-11-21' AND pdfs.category_id = 2 AND pdfs.client_id = 3 AND pdfs.id <> 1) LIMIT 1[0m
+  [4;36;1mSQL (0.000202)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.000159)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000093)[0m   [0mBEGIN[0m
+  [4;36;1mPdf Columns (0.001577)[0m   [0;1mSHOW FIELDS FROM pdfs[0m
+  [4;35;1mPdf Load (0.000817)[0m   [0mSELECT * FROM pdfs WHERE (pdfs.pdfname = 'Test pdf' AND pdfs.pdfdate = '2007-11-21 11:56:52' AND pdfs.category_id = 1 AND pdfs.client_id = 1) LIMIT 1[0m
+  [4;36;1mSQL (0.000330)[0m   [0;1mINSERT INTO pdfs (`pdfname`, `client_id`, `pdfdate`, `category_id`, `filename`, `pdfnote`) VALUES('Test pdf', 1, '2007-11-21 11:56:52', 1, '/livedata/pdfcat_test_upload/DOC070731002030(0001).pdf', 'Testing')[0m
+  [4;35;1mSQL (0.000623)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000095)[0m   [0;1mBEGIN[0m
+  [4;35;1mPdf Load (0.000747)[0m   [0mSELECT * FROM pdfs WHERE (pdfs.`id` = 2) [0m
+  [4;36;1mPdf Destroy (0.000200)[0m   [0;1m DELETE FROM pdfs
+ WHERE `id` = 2
+[0m
+  [4;35;1mPdf Load (0.000617)[0m   [0mSELECT * FROM pdfs WHERE (pdfs.`id` = 2) [0m
+  [4;36;1mSQL (0.000609)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000094)[0m   [0mBEGIN[0m
+  [4;36;1mPdf Load (0.000716)[0m   [0;1mSELECT * FROM pdfs WHERE (pdfs.`id` = 2) [0m
+  [4;35;1mPdf Load (0.000637)[0m   [0mSELECT * FROM pdfs WHERE (pdfs.`id` = 2) [0m
+  [4;36;1mSQL (0.000113)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000091)[0m   [0mBEGIN[0m
+  [4;36;1mPdf Load (0.000650)[0m   [0;1mSELECT * FROM pdfs LIMIT 1[0m
+  [4;35;1mPdf Load (0.000837)[0m   [0mSELECT * FROM pdfs WHERE (pdfs.pdfname = 'test3' AND pdfs.pdfdate = '2007-11-21' AND pdfs.category_id = 2 AND pdfs.client_id = 3 AND pdfs.id <> 1) LIMIT 1[0m
+  [4;36;1mSQL (0.000198)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.000159)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000091)[0m   [0mBEGIN[0m
+  [4;36;1mPdf Columns (0.001646)[0m   [0;1mSHOW FIELDS FROM pdfs[0m
+  [4;35;1mPdf Load (0.000911)[0m   [0mSELECT * FROM pdfs WHERE (pdfs.pdfname = 'Test pdf' AND pdfs.pdfdate = '2007-11-21 11:57:20' AND pdfs.category_id = 1 AND pdfs.client_id = 1) LIMIT 1[0m
+  [4;36;1mSQL (0.000250)[0m   [0;1mINSERT INTO pdfs (`pdfname`, `client_id`, `pdfdate`, `category_id`, `filename`, `pdfnote`) VALUES('Test pdf', 1, '2007-11-21 11:57:20', 1, '/livedata/pdfcat_test_upload/DOC070731002030(0001).pdf', 'Testing')[0m
+  [4;35;1mSQL (0.000627)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000091)[0m   [0;1mBEGIN[0m
+  [4;35;1mPdf Load (0.000789)[0m   [0mSELECT * FROM pdfs WHERE (pdfs.`id` = 2) [0m
+  [4;36;1mPdf Destroy (0.000394)[0m   [0;1m DELETE FROM pdfs
+ WHERE `id` = 2
+[0m
+  [4;35;1mPdf Load (0.000675)[0m   [0mSELECT * FROM pdfs WHERE (pdfs.`id` = 2) [0m
+  [4;36;1mSQL (0.000619)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000092)[0m   [0mBEGIN[0m
+  [4;36;1mPdf Load (0.000761)[0m   [0;1mSELECT * FROM pdfs WHERE (pdfs.`id` = 2) [0m
+  [4;35;1mPdf Load (0.000667)[0m   [0mSELECT * FROM pdfs WHERE (pdfs.`id` = 2) [0m
+  [4;36;1mSQL (0.000112)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000091)[0m   [0mBEGIN[0m
+  [4;36;1mPdf Load (0.000653)[0m   [0;1mSELECT * FROM pdfs LIMIT 1[0m
+  [4;35;1mPdf Load (0.000943)[0m   [0mSELECT * FROM pdfs WHERE (pdfs.pdfname = 'test3' AND pdfs.pdfdate = '2007-11-21' AND pdfs.category_id = 2 AND pdfs.client_id = 3 AND pdfs.id <> 1) LIMIT 1[0m
+  [4;36;1mSQL (0.000206)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.000162)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000467)[0m   [0mBEGIN[0m
+  [4;36;1mPdf Columns (0.001717)[0m   [0;1mSHOW FIELDS FROM pdfs[0m
+  [4;35;1mPdf Load (0.000822)[0m   [0mSELECT * FROM pdfs WHERE (pdfs.pdfname = 'Test pdf' AND pdfs.pdfdate = '2007-11-21 11:57:36' AND pdfs.category_id = 1 AND pdfs.client_id = 1) LIMIT 1[0m
+  [4;36;1mSQL (0.000250)[0m   [0;1mINSERT INTO pdfs (`pdfname`, `client_id`, `pdfdate`, `category_id`, `filename`, `pdfnote`) VALUES('Test pdf', 1, '2007-11-21 11:57:36', 1, '/livedata/pdfcat_test_upload/DOC070731002030(0001).pdf', 'Testing')[0m
+  [4;35;1mSQL (0.000624)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000147)[0m   [0;1mBEGIN[0m
+  [4;35;1mPdf Load (0.000761)[0m   [0mSELECT * FROM pdfs WHERE (pdfs.`id` = 2) [0m
+  [4;36;1mPdf Destroy (0.000203)[0m   [0;1m DELETE FROM pdfs
+ WHERE `id` = 2
+[0m
+  [4;35;1mPdf Load (0.000693)[0m   [0mSELECT * FROM pdfs WHERE (pdfs.`id` = 2) [0m
+  [4;36;1mSQL (0.000608)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000094)[0m   [0mBEGIN[0m
+  [4;36;1mPdf Load (0.000927)[0m   [0;1mSELECT * FROM pdfs WHERE (pdfs.`id` = 2) [0m
+  [4;35;1mPdf Load (0.000653)[0m   [0mSELECT * FROM pdfs WHERE (pdfs.`id` = 2) [0m
+  [4;36;1mSQL (0.000146)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000091)[0m   [0mBEGIN[0m
+  [4;36;1mPdf Load (0.000646)[0m   [0;1mSELECT * FROM pdfs LIMIT 1[0m
+  [4;35;1mPdf Load (0.000899)[0m   [0mSELECT * FROM pdfs WHERE (pdfs.pdfname = 'test1000' AND pdfs.pdfdate = '2007-11-21' AND pdfs.category_id = 2 AND pdfs.client_id = 3 AND pdfs.id <> 1) LIMIT 1[0m
+  [4;36;1mSQL (0.000203)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.000161)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000215)[0m   [0mBEGIN[0m
+  [4;36;1mPdf Columns (0.001572)[0m   [0;1mSHOW FIELDS FROM pdfs[0m
+  [4;35;1mPdf Load (0.000861)[0m   [0mSELECT * FROM pdfs WHERE (pdfs.pdfname = 'Test pdf' AND pdfs.pdfdate = '2007-11-21 11:58:01' AND pdfs.category_id = 1 AND pdfs.client_id = 1) LIMIT 1[0m
+  [4;36;1mSQL (0.000251)[0m   [0;1mINSERT INTO pdfs (`pdfname`, `client_id`, `pdfdate`, `category_id`, `filename`, `pdfnote`) VALUES('Test pdf', 1, '2007-11-21 11:58:01', 1, '/livedata/pdfcat_test_upload/DOC070731002030(0001).pdf', 'Testing')[0m
+  [4;35;1mSQL (0.000621)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000095)[0m   [0;1mBEGIN[0m
+  [4;35;1mPdf Load (0.000787)[0m   [0mSELECT * FROM pdfs WHERE (pdfs.`id` = 2) [0m
+  [4;36;1mPdf Destroy (0.000225)[0m   [0;1m DELETE FROM pdfs
+ WHERE `id` = 2
+[0m
+  [4;35;1mPdf Load (0.000651)[0m   [0mSELECT * FROM pdfs WHERE (pdfs.`id` = 2) [0m
+  [4;36;1mSQL (0.000613)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000093)[0m   [0mBEGIN[0m
+  [4;36;1mPdf Load (0.000764)[0m   [0;1mSELECT * FROM pdfs WHERE (pdfs.`id` = 2) [0m
+  [4;35;1mPdf Load (0.000663)[0m   [0mSELECT * FROM pdfs WHERE (pdfs.`id` = 2) [0m
+  [4;36;1mSQL (0.000110)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000091)[0m   [0mBEGIN[0m
+  [4;36;1mPdf Load (0.000682)[0m   [0;1mSELECT * FROM pdfs WHERE (pdfs.`id` = 1) [0m
+  [4;35;1mPdf Load (0.000867)[0m   [0mSELECT * FROM pdfs WHERE (pdfs.pdfname = 'test1000' AND pdfs.pdfdate = '2007-11-21' AND pdfs.category_id = 2 AND pdfs.client_id = 3 AND pdfs.id <> 1) LIMIT 1[0m
+  [4;36;1mSQL (0.000199)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.000163)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000091)[0m   [0mBEGIN[0m
+  [4;36;1mPdf Columns (0.001526)[0m   [0;1mSHOW FIELDS FROM pdfs[0m
+  [4;35;1mPdf Load (0.000944)[0m   [0mSELECT * FROM pdfs WHERE (pdfs.pdfname = 'Test pdf' AND pdfs.pdfdate = '2007-11-21 11:58:32' AND pdfs.category_id = 1 AND pdfs.client_id = 1) LIMIT 1[0m
+  [4;36;1mSQL (0.000255)[0m   [0;1mINSERT INTO pdfs (`pdfname`, `client_id`, `pdfdate`, `category_id`, `filename`, `pdfnote`) VALUES('Test pdf', 1, '2007-11-21 11:58:32', 1, '/livedata/pdfcat_test_upload/DOC070731002030(0001).pdf', 'Testing')[0m
+  [4;35;1mSQL (0.000622)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000094)[0m   [0;1mBEGIN[0m
+  [4;35;1mPdf Load (0.000790)[0m   [0mSELECT * FROM pdfs WHERE (pdfs.`id` = 2) [0m
+  [4;36;1mPdf Destroy (0.000252)[0m   [0;1m DELETE FROM pdfs
+ WHERE `id` = 2
+[0m
+  [4;35;1mPdf Load (0.000631)[0m   [0mSELECT * FROM pdfs WHERE (pdfs.`id` = 2) [0m
+  [4;36;1mSQL (0.000613)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000093)[0m   [0mBEGIN[0m
+  [4;36;1mPdf Load (0.000712)[0m   [0;1mSELECT * FROM pdfs WHERE (pdfs.`id` = 2) [0m
+  [4;35;1mPdf Load (0.000642)[0m   [0mSELECT * FROM pdfs WHERE (pdfs.`id` = 2) [0m
+  [4;36;1mSQL (0.000111)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000090)[0m   [0mBEGIN[0m
+  [4;36;1mPdf Load (0.000691)[0m   [0;1mSELECT * FROM pdfs WHERE (pdfs.`id` = 1) [0m
+  [4;35;1mSQL (0.000105)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000161)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000087)[0m   [0mBEGIN[0m
+  [4;36;1mPdf Columns (0.001557)[0m   [0;1mSHOW FIELDS FROM pdfs[0m
+  [4;35;1mPdf Load (0.000817)[0m   [0mSELECT * FROM pdfs WHERE (pdfs.pdfname = 'Test pdf' AND pdfs.pdfdate = '2007-11-21 11:59:20' AND pdfs.category_id = 1 AND pdfs.client_id = 1) LIMIT 1[0m
+  [4;36;1mSQL (0.001562)[0m   [0;1mINSERT INTO pdfs (`pdfname`, `client_id`, `pdfdate`, `category_id`, `filename`, `pdfnote`) VALUES('Test pdf', 1, '2007-11-21 11:59:20', 1, '/livedata/pdfcat_test_upload/DOC070731002030(0001).pdf', 'Testing')[0m
+  [4;35;1mSQL (0.000671)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000098)[0m   [0;1mBEGIN[0m
+  [4;35;1mPdf Load (0.000768)[0m   [0mSELECT * FROM pdfs WHERE (pdfs.`id` = 2) [0m
+  [4;36;1mPdf Destroy (0.000264)[0m   [0;1m DELETE FROM pdfs
+ WHERE `id` = 2
+[0m
+  [4;35;1mPdf Load (0.000644)[0m   [0mSELECT * FROM pdfs WHERE (pdfs.`id` = 2) [0m
+  [4;36;1mSQL (0.000724)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000157)[0m   [0mBEGIN[0m
+  [4;36;1mPdf Load (0.000806)[0m   [0;1mSELECT * FROM pdfs WHERE (pdfs.`id` = 2) [0m
+  [4;35;1mPdf Load (0.000642)[0m   [0mSELECT * FROM pdfs WHERE (pdfs.`id` = 2) [0m
+  [4;36;1mSQL (0.000109)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000092)[0m   [0mBEGIN[0m
+  [4;36;1mPdf Load (0.000685)[0m   [0;1mSELECT * FROM pdfs WHERE (pdfs.`id` = 1) [0m
+  [4;35;1mSQL (0.000146)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000161)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000140)[0m   [0mBEGIN[0m
+  [4;36;1mPdf Columns (0.001657)[0m   [0;1mSHOW FIELDS FROM pdfs[0m
+  [4;35;1mSQL (0.000308)[0m   [0mINSERT INTO pdfs (`pdfname`, `client_id`, `pdfdate`, `category_id`, `filename`, `pdfnote`) VALUES('Test pdf', 1, '2007-11-21 12:02:17', 1, '/livedata/pdfcat_test_upload/DOC070731002030(0001).pdf', 'Testing')[0m
+  [4;36;1mSQL (0.000625)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000092)[0m   [0mBEGIN[0m
+  [4;36;1mPdf Load (0.000743)[0m   [0;1mSELECT * FROM pdfs WHERE (pdfs.`id` = 2) [0m
+  [4;35;1mPdf Destroy (0.000200)[0m   [0m DELETE FROM pdfs
+ WHERE `id` = 2
+[0m
+  [4;36;1mPdf Load (0.000654)[0m   [0;1mSELECT * FROM pdfs WHERE (pdfs.`id` = 2) [0m
+  [4;35;1mSQL (0.000608)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000092)[0m   [0;1mBEGIN[0m
+  [4;35;1mPdf Load (0.000827)[0m   [0mSELECT * FROM pdfs WHERE (pdfs.`id` = 2) [0m
+  [4;36;1mPdf Load (0.000660)[0m   [0;1mSELECT * FROM pdfs WHERE (pdfs.`id` = 2) [0m
+  [4;35;1mSQL (0.000109)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000134)[0m   [0;1mBEGIN[0m
+  [4;35;1mPdf Load (0.000654)[0m   [0mSELECT * FROM pdfs WHERE (pdfs.`id` = 2) [0m
+  [4;36;1mPdf Update (0.000529)[0m   [0;1mUPDATE pdfs SET `pdfdate` = '2007-11-16', `pdfname` = 'Test2', `category_id` = 1, `client_id` = 1, `filename` = '20071107-2007 Tax Assessment - adrian.pdf', `pdfnote` = NULL WHERE `id` = 2[0m
+  [4;35;1mSQL (0.000639)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000162)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000086)[0m   [0mBEGIN[0m
+  [4;36;1mPdf Columns (0.001576)[0m   [0;1mSHOW FIELDS FROM pdfs[0m
+  [4;35;1mSQL (0.000317)[0m   [0mINSERT INTO pdfs (`pdfname`, `client_id`, `pdfdate`, `category_id`, `filename`, `pdfnote`) VALUES('Test pdf', 1, '2007-11-21 12:02:25', 1, '/livedata/pdfcat_test_upload/DOC070731002030(0001).pdf', 'Testing')[0m
+  [4;36;1mSQL (0.000622)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000092)[0m   [0mBEGIN[0m
+  [4;36;1mPdf Load (0.000734)[0m   [0;1mSELECT * FROM pdfs WHERE (pdfs.`id` = 2) [0m
+  [4;35;1mPdf Destroy (0.000227)[0m   [0m DELETE FROM pdfs
+ WHERE `id` = 2
+[0m
+  [4;36;1mPdf Load (0.000630)[0m   [0;1mSELECT * FROM pdfs WHERE (pdfs.`id` = 2) [0m
+  [4;35;1mSQL (0.000694)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000092)[0m   [0;1mBEGIN[0m
+  [4;35;1mPdf Load (0.000756)[0m   [0mSELECT * FROM pdfs WHERE (pdfs.`id` = 2) [0m
+  [4;36;1mPdf Load (0.000645)[0m   [0;1mSELECT * FROM pdfs WHERE (pdfs.`id` = 2) [0m
+  [4;35;1mSQL (0.000110)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000090)[0m   [0;1mBEGIN[0m
+  [4;35;1mPdf Load (0.000683)[0m   [0mSELECT * FROM pdfs WHERE (pdfs.`id` = 2) [0m
+  [4;36;1mPdf Update (0.000371)[0m   [0;1mUPDATE pdfs SET `pdfdate` = '2007-11-16', `pdfname` = 'Test2', `category_id` = 1, `client_id` = 1, `filename` = '20071107-2007 Tax Assessment - adrian.pdf', `pdfnote` = NULL WHERE `id` = 2[0m
+  [4;35;1mSQL (0.000642)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000159)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000092)[0m   [0mBEGIN[0m
+  [4;36;1mPdf Columns (0.001513)[0m   [0;1mSHOW FIELDS FROM pdfs[0m
+  [4;35;1mPdf Load (0.000855)[0m   [0mSELECT * FROM pdfs WHERE (pdfs.pdfname = 'Test pdf' AND pdfs.pdfdate = '2007-11-21 12:02:33' AND pdfs.category_id = 1 AND pdfs.client_id = 1) LIMIT 1[0m
+  [4;36;1mSQL (0.000291)[0m   [0;1mINSERT INTO pdfs (`pdfname`, `client_id`, `pdfdate`, `category_id`, `filename`, `pdfnote`) VALUES('Test pdf', 1, '2007-11-21 12:02:33', 1, '/livedata/pdfcat_test_upload/DOC070731002030(0001).pdf', 'Testing')[0m
+  [4;35;1mSQL (0.000624)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000095)[0m   [0;1mBEGIN[0m
+  [4;35;1mPdf Load (0.000792)[0m   [0mSELECT * FROM pdfs WHERE (pdfs.`id` = 2) [0m
+  [4;36;1mPdf Destroy (0.000204)[0m   [0;1m DELETE FROM pdfs
+ WHERE `id` = 2
+[0m
+  [4;35;1mPdf Load (0.000606)[0m   [0mSELECT * FROM pdfs WHERE (pdfs.`id` = 2) [0m
+  [4;36;1mSQL (0.000633)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000094)[0m   [0mBEGIN[0m
+  [4;36;1mPdf Load (0.000780)[0m   [0;1mSELECT * FROM pdfs WHERE (pdfs.`id` = 2) [0m
+  [4;35;1mPdf Load (0.000660)[0m   [0mSELECT * FROM pdfs WHERE (pdfs.`id` = 2) [0m
+  [4;36;1mSQL (0.000109)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000091)[0m   [0mBEGIN[0m
+  [4;36;1mPdf Load (0.000647)[0m   [0;1mSELECT * FROM pdfs WHERE (pdfs.`id` = 2) [0m
+  [4;35;1mPdf Load (0.000925)[0m   [0mSELECT * FROM pdfs WHERE (pdfs.pdfname = 'Test2' AND pdfs.pdfdate = '2007-11-16' AND pdfs.category_id = 1 AND pdfs.client_id = 1 AND pdfs.id <> 2) LIMIT 1[0m
+  [4;36;1mPdf Update (0.000338)[0m   [0;1mUPDATE pdfs SET `pdfdate` = '2007-11-16', `pdfname` = 'Test2', `category_id` = 1, `client_id` = 1, `filename` = '20071107-2007 Tax Assessment - adrian.pdf', `pdfnote` = NULL WHERE `id` = 2[0m
+  [4;35;1mSQL (0.000646)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000160)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000096)[0m   [0mBEGIN[0m
+  [4;36;1mPdf Columns (0.001559)[0m   [0;1mSHOW FIELDS FROM pdfs[0m
+  [4;35;1mPdf Load (0.000815)[0m   [0mSELECT * FROM pdfs WHERE (pdfs.pdfname = 'Test pdf' AND pdfs.pdfdate = '2007-11-21 12:02:39' AND pdfs.category_id = 1 AND pdfs.client_id = 1) LIMIT 1[0m
+  [4;36;1mSQL (0.000290)[0m   [0;1mINSERT INTO pdfs (`pdfname`, `client_id`, `pdfdate`, `category_id`, `filename`, `pdfnote`) VALUES('Test pdf', 1, '2007-11-21 12:02:39', 1, '/livedata/pdfcat_test_upload/DOC070731002030(0001).pdf', 'Testing')[0m
+  [4;35;1mSQL (0.000622)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000094)[0m   [0;1mBEGIN[0m
+  [4;35;1mPdf Load (0.000790)[0m   [0mSELECT * FROM pdfs WHERE (pdfs.`id` = 2) [0m
+  [4;36;1mPdf Destroy (0.000301)[0m   [0;1m DELETE FROM pdfs
+ WHERE `id` = 2
+[0m
+  [4;35;1mPdf Load (0.000658)[0m   [0mSELECT * FROM pdfs WHERE (pdfs.`id` = 2) [0m
+  [4;36;1mSQL (0.000671)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000094)[0m   [0mBEGIN[0m
+  [4;36;1mPdf Load (0.000768)[0m   [0;1mSELECT * FROM pdfs WHERE (pdfs.`id` = 2) [0m
+  [4;35;1mPdf Load (0.000660)[0m   [0mSELECT * FROM pdfs WHERE (pdfs.`id` = 2) [0m
+  [4;36;1mSQL (0.000109)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000089)[0m   [0mBEGIN[0m
+  [4;36;1mPdf Load (0.000649)[0m   [0;1mSELECT * FROM pdfs WHERE (pdfs.`id` = 2) [0m
+  [4;35;1mPdf Load (0.000866)[0m   [0mSELECT * FROM pdfs WHERE (pdfs.pdfname = 'Test2' AND pdfs.pdfdate = '2007-11-16' AND pdfs.category_id = 1 AND pdfs.client_id = 1 AND pdfs.id <> 2) LIMIT 1[0m
+  [4;36;1mSQL (0.000201)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.000162)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000090)[0m   [0mBEGIN[0m
+  [4;36;1mPdf Columns (0.001644)[0m   [0;1mSHOW FIELDS FROM pdfs[0m
+  [4;35;1mPdf Load (0.000818)[0m   [0mSELECT * FROM pdfs WHERE (pdfs.pdfname = 'Test pdf' AND pdfs.pdfdate = '2007-11-21 12:03:24' AND pdfs.category_id = 1 AND pdfs.client_id = 1) LIMIT 1[0m
+  [4;36;1mSQL (0.000247)[0m   [0;1mINSERT INTO pdfs (`pdfname`, `client_id`, `pdfdate`, `category_id`, `filename`, `pdfnote`) VALUES('Test pdf', 1, '2007-11-21 12:03:24', 1, '/livedata/pdfcat_test_upload/DOC070731002030(0001).pdf', 'Testing')[0m
+  [4;35;1mSQL (0.000612)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000095)[0m   [0;1mBEGIN[0m
+  [4;35;1mPdf Load (0.000747)[0m   [0mSELECT * FROM pdfs WHERE (pdfs.`id` = 2) [0m
+  [4;36;1mPdf Destroy (0.000197)[0m   [0;1m DELETE FROM pdfs
+ WHERE `id` = 2
+[0m
+  [4;35;1mPdf Load (0.000656)[0m   [0mSELECT * FROM pdfs WHERE (pdfs.`id` = 2) [0m
+  [4;36;1mSQL (0.000672)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000092)[0m   [0mBEGIN[0m
+  [4;36;1mPdf Load (0.000736)[0m   [0;1mSELECT * FROM pdfs WHERE (pdfs.`id` = 2) [0m
+  [4;35;1mPdf Load (0.000655)[0m   [0mSELECT * FROM pdfs WHERE (pdfs.`id` = 2) [0m
+  [4;36;1mSQL (0.000107)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000090)[0m   [0mBEGIN[0m
+  [4;36;1mPdf Load (0.000668)[0m   [0;1mSELECT * FROM pdfs WHERE (pdfs.`id` = 2) [0m
+  [4;35;1mPdf Load (0.000839)[0m   [0mSELECT * FROM pdfs WHERE (pdfs.pdfname = 'Test2' AND pdfs.pdfdate = '2007-11-16' AND pdfs.category_id = 1 AND pdfs.client_id = 1 AND pdfs.id <> 2) LIMIT 1[0m
+  [4;36;1mPdf Update (0.000322)[0m   [0;1mUPDATE pdfs SET `pdfdate` = '2007-11-16', `pdfname` = 'Test2', `category_id` = 1, `client_id` = 1, `filename` = '/livedata/pdfcat_test_upload/DOC070731002030(0001).pdf', `pdfnote` = NULL WHERE `id` = 2[0m
+  [4;35;1mSQL (0.001243)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000160)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000089)[0m   [0mBEGIN[0m
+  [4;36;1mPdf Columns (0.001506)[0m   [0;1mSHOW FIELDS FROM pdfs[0m
+  [4;35;1mPdf Load (0.000858)[0m   [0mSELECT * FROM pdfs WHERE (pdfs.pdfname = 'Test pdf' AND pdfs.pdfdate = '2007-11-21 12:05:30' AND pdfs.category_id = 1 AND pdfs.client_id = 1) LIMIT 1[0m
+  [4;36;1mSQL (0.000247)[0m   [0;1mINSERT INTO pdfs (`pdfname`, `client_id`, `pdfdate`, `category_id`, `filename`, `pdfnote`) VALUES('Test pdf', 1, '2007-11-21 12:05:30', 1, '/livedata/pdfcat_test_upload/DOC070731002030(0001).pdf', 'Testing')[0m
+  [4;35;1mSQL (0.000663)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000093)[0m   [0;1mBEGIN[0m
+  [4;35;1mPdf Load (0.000789)[0m   [0mSELECT * FROM pdfs WHERE (pdfs.`id` = 2) [0m
+  [4;36;1mPdf Destroy (0.000280)[0m   [0;1m DELETE FROM pdfs
+ WHERE `id` = 2
+[0m
+  [4;35;1mPdf Load (0.000628)[0m   [0mSELECT * FROM pdfs WHERE (pdfs.`id` = 2) [0m
+  [4;36;1mSQL (0.000615)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000162)[0m   [0mBEGIN[0m
+  [4;36;1mPdf Load (0.000779)[0m   [0;1mSELECT * FROM pdfs WHERE (pdfs.`id` = 2) [0m
+  [4;35;1mPdf Load (0.000641)[0m   [0mSELECT * FROM pdfs WHERE (pdfs.`id` = 2) [0m
+  [4;36;1mSQL (0.000107)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000090)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000091)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000091)[0m   [0mBEGIN[0m
+  [4;36;1mPdf Load (0.000717)[0m   [0;1mSELECT * FROM pdfs WHERE (pdfs.`id` = 2) [0m
+  [4;35;1mPdf Load (0.000832)[0m   [0mSELECT * FROM pdfs WHERE (pdfs.pdfname = 'Test2' AND pdfs.pdfdate = '2007-11-16' AND pdfs.category_id = 1 AND pdfs.client_id = 1 AND pdfs.id <> 2) LIMIT 1[0m
+  [4;36;1mPdf Update (0.000311)[0m   [0;1mUPDATE pdfs SET `pdfdate` = '2007-11-16', `pdfname` = 'Test2', `category_id` = 1, `client_id` = 1, `filename` = '/livedata/pdfcat_test_upload/DOC070731002030(0001).pdf', `pdfnote` = NULL WHERE `id` = 2[0m
+  [4;35;1mSQL (0.000648)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000161)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000146)[0m   [0mBEGIN[0m
+  [4;36;1mPdf Columns (0.001381)[0m   [0;1mSHOW FIELDS FROM pdfs[0m
+  [4;35;1mPdf Load (0.001013)[0m   [0mSELECT * FROM pdfs WHERE (pdfs.pdfname = 'Test pdf' AND pdfs.pdfdate = '2007-11-21 12:06:39' AND pdfs.category_id = 1 AND pdfs.client_id = 1) LIMIT 1[0m
+  [4;36;1mSQL (0.000255)[0m   [0;1mINSERT INTO pdfs (`pdfname`, `client_id`, `pdfdate`, `category_id`, `filename`, `pdfnote`) VALUES('Test pdf', 1, '2007-11-21 12:06:39', 1, '/livedata/pdfcat_test_upload/DOC070731002030(0001).pdf', 'Testing')[0m
+  [4;35;1mSQL (0.000624)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000095)[0m   [0;1mBEGIN[0m
+  [4;35;1mPdf Load (0.000739)[0m   [0mSELECT * FROM pdfs WHERE (pdfs.`id` = 2) [0m
+  [4;36;1mPdf Destroy (0.000266)[0m   [0;1m DELETE FROM pdfs
+ WHERE `id` = 2
+[0m
+  [4;35;1mPdf Load (0.000625)[0m   [0mSELECT * FROM pdfs WHERE (pdfs.`id` = 2) [0m
+  [4;36;1mSQL (0.000610)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000095)[0m   [0mBEGIN[0m
+  [4;36;1mPdf Load (0.000728)[0m   [0;1mSELECT * FROM pdfs WHERE (pdfs.`id` = 2) [0m
+  [4;35;1mPdf Load (0.000837)[0m   [0mSELECT * FROM pdfs WHERE (pdfs.`id` = 2) [0m
+  [4;36;1mSQL (0.000114)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000092)[0m   [0mBEGIN[0m
+  [4;36;1mPdf Load (0.000679)[0m   [0;1mSELECT * FROM pdfs WHERE (pdfs.pdfname IS NULL AND pdfs.pdfdate IS NULL AND pdfs.category_id IS NULL AND pdfs.client_id IS NULL) LIMIT 1[0m
+  [4;35;1mPdf Load (0.000621)[0m   [0mSELECT * FROM pdfs WHERE (pdfs.pdfname IS NULL AND pdfs.pdfdate IS NULL AND pdfs.category_id IS NULL AND pdfs.client_id IS NULL) LIMIT 1[0m
+  [4;36;1mPdf Load (0.000715)[0m   [0;1mSELECT * FROM pdfs WHERE (pdfs.pdfname IS NULL AND pdfs.pdfdate IS NULL AND pdfs.category_id IS NULL AND pdfs.client_id IS NULL) LIMIT 1[0m
+  [4;35;1mPdf Load (0.000633)[0m   [0mSELECT * FROM pdfs WHERE (pdfs.pdfname IS NULL AND pdfs.pdfdate IS NULL AND pdfs.category_id IS NULL AND pdfs.client_id IS NULL) LIMIT 1[0m
+  [4;36;1mSQL (0.000112)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000092)[0m   [0mBEGIN[0m
+  [4;36;1mPdf Load (0.000703)[0m   [0;1mSELECT * FROM pdfs WHERE (pdfs.`id` = 2) [0m
+  [4;35;1mPdf Load (0.000809)[0m   [0mSELECT * FROM pdfs WHERE (pdfs.pdfname = 'Test2' AND pdfs.pdfdate = '2007-11-16' AND pdfs.category_id = 1 AND pdfs.client_id = 1 AND pdfs.id <> 2) LIMIT 1[0m
+  [4;36;1mPdf Update (0.000333)[0m   [0;1mUPDATE pdfs SET `pdfdate` = '2007-11-16', `pdfname` = 'Test2', `category_id` = 1, `client_id` = 1, `filename` = '/livedata/pdfcat_test_upload/DOC070731002030(0001).pdf', `pdfnote` = NULL WHERE `id` = 2[0m
+  [4;35;1mSQL (0.000653)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000162)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000086)[0m   [0mBEGIN[0m
+  [4;36;1mPdf Columns (0.001733)[0m   [0;1mSHOW FIELDS FROM pdfs[0m
+  [4;35;1mPdf Load (0.004809)[0m   [0mSELECT * FROM pdfs WHERE (pdfs.pdfname = 'Test pdf' AND pdfs.pdfdate = '2007-11-21 12:08:14' AND pdfs.category_id = 1 AND pdfs.client_id = 1) LIMIT 1[0m
+  [4;36;1mSQL (0.000504)[0m   [0;1mINSERT INTO pdfs (`pdfname`, `client_id`, `pdfdate`, `category_id`, `filename`, `pdfnote`) VALUES('Test pdf', 1, '2007-11-21 12:08:14', 1, '/livedata/pdfcat_test_upload/DOC070731002030(0001).pdf', 'Testing')[0m
+  [4;35;1mSQL (0.000628)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000093)[0m   [0;1mBEGIN[0m
+  [4;35;1mPdf Load (0.000747)[0m   [0mSELECT * FROM pdfs WHERE (pdfs.`id` = 2) [0m
+  [4;36;1mPdf Destroy (0.000201)[0m   [0;1m DELETE FROM pdfs
+ WHERE `id` = 2
+[0m
+  [4;35;1mPdf Load (0.000613)[0m   [0mSELECT * FROM pdfs WHERE (pdfs.`id` = 2) [0m
+  [4;36;1mSQL (0.000597)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000132)[0m   [0mBEGIN[0m
+  [4;36;1mPdf Load (0.000773)[0m   [0;1mSELECT * FROM pdfs WHERE (pdfs.`id` = 2) [0m
+  [4;35;1mPdf Load (0.000631)[0m   [0mSELECT * FROM pdfs WHERE (pdfs.`id` = 2) [0m
+  [4;36;1mSQL (0.000104)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000091)[0m   [0mBEGIN[0m
+  [4;36;1mPdf Load (0.001794)[0m   [0;1mSELECT * FROM pdfs WHERE (pdfs.pdfname IS NULL AND pdfs.pdfdate IS NULL AND pdfs.category_id IS NULL AND pdfs.client_id IS NULL) LIMIT 1[0m
+  [4;35;1mPdf Load (0.000797)[0m   [0mSELECT * FROM pdfs WHERE (pdfs.pdfname IS NULL AND pdfs.pdfdate IS NULL AND pdfs.category_id IS NULL AND pdfs.client_id IS NULL) LIMIT 1[0m
+  [4;36;1mPdf Load (0.000608)[0m   [0;1mSELECT * FROM pdfs WHERE (pdfs.pdfname IS NULL AND pdfs.pdfdate IS NULL AND pdfs.category_id IS NULL AND pdfs.client_id IS NULL) LIMIT 1[0m
+  [4;35;1mPdf Load (0.000654)[0m   [0mSELECT * FROM pdfs WHERE (pdfs.pdfname IS NULL AND pdfs.pdfdate IS NULL AND pdfs.category_id IS NULL AND pdfs.client_id IS NULL) LIMIT 1[0m
+  [4;36;1mSQL (0.000117)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000090)[0m   [0mBEGIN[0m
+  [4;36;1mPdf Load (0.000677)[0m   [0;1mSELECT * FROM pdfs WHERE (pdfs.`id` = 2) [0m
+  [4;35;1mPdf Load (0.000819)[0m   [0mSELECT * FROM pdfs WHERE (pdfs.pdfname = 'Test2' AND pdfs.pdfdate = '2007-11-16' AND pdfs.category_id = 1 AND pdfs.client_id = 1 AND pdfs.id <> 2) LIMIT 1[0m
+  [4;36;1mPdf Update (0.000383)[0m   [0;1mUPDATE pdfs SET `pdfdate` = '2007-11-16', `pdfname` = 'Test2', `category_id` = 1, `client_id` = 1, `filename` = '/livedata/pdfcat_test_upload/DOC070731002030(0001).pdf', `pdfnote` = NULL WHERE `id` = 2[0m
+  [4;35;1mSQL (0.000641)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000162)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000143)[0m   [0mBEGIN[0m
+  [4;36;1mPdf Columns (0.001371)[0m   [0;1mSHOW FIELDS FROM pdfs[0m
+  [4;35;1mPdf Load (0.000894)[0m   [0mSELECT * FROM pdfs WHERE (pdfs.pdfname = 'Test pdf' AND pdfs.pdfdate = '2007-11-21 12:08:24' AND pdfs.category_id = 1 AND pdfs.client_id = 1) LIMIT 1[0m
+  [4;36;1mSQL (0.000257)[0m   [0;1mINSERT INTO pdfs (`pdfname`, `client_id`, `pdfdate`, `category_id`, `filename`, `pdfnote`) VALUES('Test pdf', 1, '2007-11-21 12:08:24', 1, '/livedata/pdfcat_test_upload/DOC070731002030(0001).pdf', 'Testing')[0m
+  [4;35;1mSQL (0.000629)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000094)[0m   [0;1mBEGIN[0m
+  [4;35;1mPdf Load (0.000733)[0m   [0mSELECT * FROM pdfs WHERE (pdfs.`id` = 2) [0m
+  [4;36;1mPdf Destroy (0.000208)[0m   [0;1m DELETE FROM pdfs
+ WHERE `id` = 2
+[0m
+  [4;35;1mPdf Load (0.000694)[0m   [0mSELECT * FROM pdfs WHERE (pdfs.`id` = 2) [0m
+  [4;36;1mSQL (0.000613)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000095)[0m   [0mBEGIN[0m
+  [4;36;1mPdf Load (0.000713)[0m   [0;1mSELECT * FROM pdfs WHERE (pdfs.`id` = 2) [0m
+  [4;35;1mPdf Load (0.000695)[0m   [0mSELECT * FROM pdfs WHERE (pdfs.`id` = 2) [0m
+  [4;36;1mSQL (0.000108)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000091)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000091)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000090)[0m   [0mBEGIN[0m
+  [4;36;1mPdf Load (0.000708)[0m   [0;1mSELECT * FROM pdfs WHERE (pdfs.`id` = 2) [0m
+  [4;35;1mPdf Load (0.000871)[0m   [0mSELECT * FROM pdfs WHERE (pdfs.pdfname = 'Test2' AND pdfs.pdfdate = '2007-11-16' AND pdfs.category_id = 1 AND pdfs.client_id = 1 AND pdfs.id <> 2) LIMIT 1[0m
+  [4;36;1mPdf Update (0.000389)[0m   [0;1mUPDATE pdfs SET `pdfdate` = '2007-11-16', `pdfname` = 'Test2', `category_id` = 1, `client_id` = 1, `filename` = '/livedata/pdfcat_test_upload/DOC070731002030(0001).pdf', `pdfnote` = NULL WHERE `id` = 2[0m
+  [4;35;1mSQL (0.000641)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000163)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000088)[0m   [0mBEGIN[0m
+  [4;36;1mPdf Columns (0.001555)[0m   [0;1mSHOW FIELDS FROM pdfs[0m
+  [4;35;1mPdf Load (0.000808)[0m   [0mSELECT * FROM pdfs WHERE (pdfs.pdfname = 'Test pdf' AND pdfs.pdfdate = '2007-11-21 12:08:35' AND pdfs.category_id = 1 AND pdfs.client_id = 1) LIMIT 1[0m
+  [4;36;1mSQL (0.000245)[0m   [0;1mINSERT INTO pdfs (`pdfname`, `client_id`, `pdfdate`, `category_id`, `filename`, `pdfnote`) VALUES('Test pdf', 1, '2007-11-21 12:08:35', 1, '/livedata/pdfcat_test_upload/DOC070731002030(0001).pdf', 'Testing')[0m
+  [4;35;1mSQL (0.000614)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000092)[0m   [0;1mBEGIN[0m
+  [4;35;1mPdf Load (0.000776)[0m   [0mSELECT * FROM pdfs WHERE (pdfs.`id` = 2) [0m
+  [4;36;1mPdf Destroy (0.000281)[0m   [0;1m DELETE FROM pdfs
+ WHERE `id` = 2
+[0m
+  [4;35;1mPdf Load (0.000651)[0m   [0mSELECT * FROM pdfs WHERE (pdfs.`id` = 2) [0m
+  [4;36;1mSQL (0.000692)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000093)[0m   [0mBEGIN[0m
+  [4;36;1mPdf Load (0.000714)[0m   [0;1mSELECT * FROM pdfs WHERE (pdfs.`id` = 2) [0m
+  [4;35;1mPdf Load (0.000674)[0m   [0mSELECT * FROM pdfs WHERE (pdfs.`id` = 2) [0m
+  [4;36;1mSQL (0.000108)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000091)[0m   [0mBEGIN[0m
+  [4;36;1mPdf Load (0.000722)[0m   [0;1mSELECT * FROM pdfs WHERE (pdfs.pdfname IS NULL AND pdfs.pdfdate IS NULL AND pdfs.category_id IS NULL AND pdfs.client_id IS NULL) LIMIT 1[0m
+  [4;35;1mPdf Load (0.000621)[0m   [0mSELECT * FROM pdfs WHERE (pdfs.pdfname IS NULL AND pdfs.pdfdate IS NULL AND pdfs.category_id IS NULL AND pdfs.client_id IS NULL) LIMIT 1[0m
+  [4;36;1mPdf Load (0.000605)[0m   [0;1mSELECT * FROM pdfs WHERE (pdfs.pdfname IS NULL AND pdfs.pdfdate IS NULL AND pdfs.category_id IS NULL AND pdfs.client_id IS NULL) LIMIT 1[0m
+  [4;35;1mPdf Load (0.000627)[0m   [0mSELECT * FROM pdfs WHERE (pdfs.pdfname IS NULL AND pdfs.pdfdate IS NULL AND pdfs.category_id IS NULL AND pdfs.client_id IS NULL) LIMIT 1[0m
+  [4;36;1mSQL (0.000111)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000092)[0m   [0mBEGIN[0m
+  [4;36;1mPdf Load (0.000750)[0m   [0;1mSELECT * FROM pdfs WHERE (pdfs.`id` = 2) [0m
+  [4;35;1mPdf Load (0.017398)[0m   [0mSELECT * FROM pdfs WHERE (pdfs.pdfname = 'Test2' AND pdfs.pdfdate = '2007-11-16' AND pdfs.category_id = 1 AND pdfs.client_id = 1 AND pdfs.id <> 2) LIMIT 1[0m
+  [4;36;1mPdf Update (0.000421)[0m   [0;1mUPDATE pdfs SET `pdfdate` = '2007-11-16', `pdfname` = 'Test2', `category_id` = 1, `client_id` = 1, `filename` = '/livedata/pdfcat_test_upload/DOC070731002030(0001).pdf', `pdfnote` = NULL WHERE `id` = 2[0m
+  [4;35;1mSQL (0.000625)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000162)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000089)[0m   [0mBEGIN[0m
+  [4;36;1mPdf Columns (0.001610)[0m   [0;1mSHOW FIELDS FROM pdfs[0m
+  [4;35;1mPdf Load (0.000830)[0m   [0mSELECT * FROM pdfs WHERE (pdfs.pdfname = 'Test pdf' AND pdfs.pdfdate = '2007-11-21 12:10:29' AND pdfs.category_id = 1 AND pdfs.client_id = 1) LIMIT 1[0m
+  [4;36;1mSQL (0.000375)[0m   [0;1mINSERT INTO pdfs (`pdfname`, `client_id`, `pdfdate`, `category_id`, `filename`, `pdfnote`) VALUES('Test pdf', 1, '2007-11-21 12:10:29', 1, '/livedata/pdfcat_test_upload/DOC070731002030(0001).pdf', 'Testing')[0m
+  [4;35;1mSQL (0.000620)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000095)[0m   [0;1mBEGIN[0m
+  [4;35;1mPdf Load (0.000735)[0m   [0mSELECT * FROM pdfs WHERE (pdfs.`id` = 2) [0m
+  [4;36;1mPdf Destroy (0.000201)[0m   [0;1m DELETE FROM pdfs
+ WHERE `id` = 2
+[0m
+  [4;35;1mPdf Load (0.000612)[0m   [0mSELECT * FROM pdfs WHERE (pdfs.`id` = 2) [0m
+  [4;36;1mSQL (0.009654)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000123)[0m   [0mBEGIN[0m
+  [4;36;1mPdf Load (0.000884)[0m   [0;1mSELECT * FROM pdfs WHERE (pdfs.`id` = 2) [0m
+  [4;35;1mPdf Load (0.000947)[0m   [0mSELECT * FROM pdfs WHERE (pdfs.`id` = 2) [0m
+  [4;36;1mSQL (0.000122)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000092)[0m   [0mBEGIN[0m
+  [4;36;1mPdf Load (0.000727)[0m   [0;1mSELECT * FROM pdfs WHERE (pdfs.pdfname = 'Notice Of Assessment' AND pdfs.pdfdate IS NULL AND pdfs.category_id IS NULL AND pdfs.client_id IS NULL) LIMIT 1[0m
+  [4;35;1mSQL (0.000197)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000093)[0m   [0;1mBEGIN[0m
+  [4;35;1mPdf Load (0.000825)[0m   [0mSELECT * FROM pdfs WHERE (pdfs.pdfname IS NULL AND pdfs.pdfdate IS NULL AND pdfs.category_id IS NULL AND pdfs.client_id IS NULL) LIMIT 1[0m
+  [4;36;1mPdf Load (0.000619)[0m   [0;1mSELECT * FROM pdfs WHERE (pdfs.pdfname IS NULL AND pdfs.pdfdate IS NULL AND pdfs.category_id IS NULL AND pdfs.client_id IS NULL) LIMIT 1[0m
+  [4;35;1mPdf Load (0.000640)[0m   [0mSELECT * FROM pdfs WHERE (pdfs.pdfname IS NULL AND pdfs.pdfdate IS NULL AND pdfs.category_id IS NULL AND pdfs.client_id IS NULL) LIMIT 1[0m
+  [4;36;1mPdf Load (0.000673)[0m   [0;1mSELECT * FROM pdfs WHERE (pdfs.pdfname IS NULL AND pdfs.pdfdate IS NULL AND pdfs.category_id IS NULL AND pdfs.client_id IS NULL) LIMIT 1[0m
+  [4;35;1mSQL (0.000116)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000155)[0m   [0;1mBEGIN[0m
+  [4;35;1mPdf Load (0.000749)[0m   [0mSELECT * FROM pdfs WHERE (pdfs.`id` = 2) [0m
+  [4;36;1mPdf Load (0.000871)[0m   [0;1mSELECT * FROM pdfs WHERE (pdfs.pdfname = 'Test2' AND pdfs.pdfdate = '2007-11-16' AND pdfs.category_id = 1 AND pdfs.client_id = 1 AND pdfs.id <> 2) LIMIT 1[0m
+  [4;35;1mPdf Update (0.000402)[0m   [0mUPDATE pdfs SET `pdfdate` = '2007-11-16', `pdfname` = 'Test2', `category_id` = 1, `client_id` = 1, `filename` = '/livedata/pdfcat_test_upload/DOC070731002030(0001).pdf', `pdfnote` = NULL WHERE `id` = 2[0m
+  [4;36;1mSQL (0.000726)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.000180)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000090)[0m   [0mBEGIN[0m
+  [4;36;1mPdf Columns (0.001651)[0m   [0;1mSHOW FIELDS FROM pdfs[0m
+  [4;35;1mPdf Load (0.000814)[0m   [0mSELECT * FROM pdfs WHERE (pdfs.pdfname = 'Test pdf' AND pdfs.pdfdate = '2007-11-21 12:11:45' AND pdfs.category_id = 1 AND pdfs.client_id = 1) LIMIT 1[0m
+  [4;36;1mSQL (0.000261)[0m   [0;1mINSERT INTO pdfs (`pdfname`, `client_id`, `pdfdate`, `category_id`, `filename`, `pdfnote`) VALUES('Test pdf', 1, '2007-11-21 12:11:45', 1, '/livedata/pdfcat_test_upload/DOC070731002030(0001).pdf', 'Testing')[0m
+  [4;35;1mSQL (0.000623)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000096)[0m   [0;1mBEGIN[0m
+  [4;35;1mPdf Load (0.000734)[0m   [0mSELECT * FROM pdfs WHERE (pdfs.`id` = 2) [0m
+  [4;36;1mPdf Destroy (0.000204)[0m   [0;1m DELETE FROM pdfs
+ WHERE `id` = 2
+[0m
+  [4;35;1mPdf Load (0.000616)[0m   [0mSELECT * FROM pdfs WHERE (pdfs.`id` = 2) [0m
+  [4;36;1mSQL (0.000605)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000093)[0m   [0mBEGIN[0m
+  [4;36;1mPdf Load (0.000689)[0m   [0;1mSELECT * FROM pdfs WHERE (pdfs.`id` = 2) [0m
+  [4;35;1mPdf Load (0.000635)[0m   [0mSELECT * FROM pdfs WHERE (pdfs.`id` = 2) [0m
+  [4;36;1mSQL (0.000143)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000092)[0m   [0mBEGIN[0m
+  [4;36;1mPdf Load (0.000673)[0m   [0;1mSELECT * FROM pdfs WHERE (pdfs.pdfname = 'Notice Of Assessment' AND pdfs.pdfdate IS NULL AND pdfs.category_id IS NULL AND pdfs.client_id IS NULL) LIMIT 1[0m
+  [4;35;1mSQL (0.000235)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000093)[0m   [0;1mBEGIN[0m
+  [4;35;1mPdf Load (0.000782)[0m   [0mSELECT * FROM pdfs WHERE (pdfs.pdfname IS NULL AND pdfs.pdfdate IS NULL AND pdfs.category_id IS NULL AND pdfs.client_id IS NULL) LIMIT 1[0m
+  [4;36;1mPdf Load (0.000622)[0m   [0;1mSELECT * FROM pdfs WHERE (pdfs.pdfname IS NULL AND pdfs.pdfdate IS NULL AND pdfs.category_id IS NULL AND pdfs.client_id IS NULL) LIMIT 1[0m
+  [4;35;1mPdf Load (0.000728)[0m   [0mSELECT * FROM pdfs WHERE (pdfs.pdfname IS NULL AND pdfs.pdfdate IS NULL AND pdfs.category_id IS NULL AND pdfs.client_id IS NULL) LIMIT 1[0m
+  [4;36;1mPdf Load (0.000696)[0m   [0;1mSELECT * FROM pdfs WHERE (pdfs.pdfname IS NULL AND pdfs.pdfdate IS NULL AND pdfs.category_id IS NULL AND pdfs.client_id IS NULL) LIMIT 1[0m
+  [4;35;1mSQL (0.000197)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000138)[0m   [0;1mBEGIN[0m
+  [4;35;1mPdf Load (0.000727)[0m   [0mSELECT * FROM pdfs WHERE (pdfs.`id` = 2) [0m
+  [4;36;1mPdf Load (0.002260)[0m   [0;1mSELECT * FROM pdfs WHERE (pdfs.pdfname = 'Test2' AND pdfs.pdfdate = '2007-11-16' AND pdfs.category_id = 1 AND pdfs.client_id = 1 AND pdfs.id <> 2) LIMIT 1[0m
+  [4;35;1mPdf Update (0.000411)[0m   [0mUPDATE pdfs SET `pdfdate` = '2007-11-16', `pdfname` = 'Test2', `category_id` = 1, `client_id` = 1, `filename` = '/livedata/pdfcat_test_upload/DOC070731002030(0001).pdf', `pdfnote` = NULL WHERE `id` = 2[0m
+  [4;36;1mSQL (0.001083)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.000203)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000087)[0m   [0mBEGIN[0m
+  [4;36;1mPdf Columns (0.001568)[0m   [0;1mSHOW FIELDS FROM pdfs[0m
+  [4;35;1mPdf Load (0.000806)[0m   [0mSELECT * FROM pdfs WHERE (pdfs.pdfname = 'Test pdf' AND pdfs.pdfdate = '2007-11-21 12:12:53' AND pdfs.category_id = 1 AND pdfs.client_id = 1) LIMIT 1[0m
+  [4;36;1mSQL (0.000243)[0m   [0;1mINSERT INTO pdfs (`pdfname`, `client_id`, `pdfdate`, `category_id`, `filename`, `pdfnote`) VALUES('Test pdf', 1, '2007-11-21 12:12:53', 1, '/livedata/pdfcat_test_upload/DOC070731002030(0001).pdf', 'Testing')[0m
+  [4;35;1mSQL (0.000610)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000091)[0m   [0;1mBEGIN[0m
+  [4;35;1mPdf Load (0.000843)[0m   [0mSELECT * FROM pdfs WHERE (pdfs.`id` = 2) [0m
+  [4;36;1mPdf Destroy (0.000285)[0m   [0;1m DELETE FROM pdfs
+ WHERE `id` = 2
+[0m
+  [4;35;1mPdf Load (0.001889)[0m   [0mSELECT * FROM pdfs WHERE (pdfs.`id` = 2) [0m
+  [4;36;1mSQL (0.000691)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000092)[0m   [0mBEGIN[0m
+  [4;36;1mPdf Load (0.000752)[0m   [0;1mSELECT * FROM pdfs WHERE (pdfs.`id` = 2) [0m
+  [4;35;1mPdf Load (0.000663)[0m   [0mSELECT * FROM pdfs WHERE (pdfs.`id` = 2) [0m
+  [4;36;1mSQL (0.000111)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000091)[0m   [0mBEGIN[0m
+  [4;36;1mPdf Load (0.000755)[0m   [0;1mSELECT * FROM pdfs WHERE (pdfs.pdfname = 'Notice Of Assessment' AND pdfs.pdfdate IS NULL AND pdfs.category_id IS NULL AND pdfs.client_id IS NULL) LIMIT 1[0m
+  [4;35;1mSQL (0.000111)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000089)[0m   [0;1mBEGIN[0m
+  [4;35;1mPdf Load (0.000758)[0m   [0mSELECT * FROM pdfs WHERE (pdfs.pdfname IS NULL AND pdfs.pdfdate IS NULL AND pdfs.category_id IS NULL AND pdfs.client_id IS NULL) LIMIT 1[0m
+  [4;36;1mPdf Load (0.000688)[0m   [0;1mSELECT * FROM pdfs WHERE (pdfs.pdfname IS NULL AND pdfs.pdfdate IS NULL AND pdfs.category_id IS NULL AND pdfs.client_id IS NULL) LIMIT 1[0m
+  [4;35;1mPdf Load (0.000690)[0m   [0mSELECT * FROM pdfs WHERE (pdfs.pdfname IS NULL AND pdfs.pdfdate IS NULL AND pdfs.category_id IS NULL AND pdfs.client_id IS NULL) LIMIT 1[0m
+  [4;36;1mPdf Load (0.000694)[0m   [0;1mSELECT * FROM pdfs WHERE (pdfs.pdfname IS NULL AND pdfs.pdfdate IS NULL AND pdfs.category_id IS NULL AND pdfs.client_id IS NULL) LIMIT 1[0m
+  [4;35;1mSQL (0.000192)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000092)[0m   [0;1mBEGIN[0m
+  [4;35;1mPdf Load (0.000726)[0m   [0mSELECT * FROM pdfs WHERE (pdfs.`id` = 2) [0m
+  [4;36;1mPdf Load (0.000892)[0m   [0;1mSELECT * FROM pdfs WHERE (pdfs.pdfname = 'Test2' AND pdfs.pdfdate = '2007-11-16' AND pdfs.category_id = 1 AND pdfs.client_id = 1 AND pdfs.id <> 2) LIMIT 1[0m
+  [4;35;1mPdf Update (0.000356)[0m   [0mUPDATE pdfs SET `pdfdate` = '2007-11-16', `pdfname` = 'Test2', `category_id` = 1, `client_id` = 1, `filename` = '/livedata/pdfcat_test_upload/DOC070731002030(0001).pdf', `pdfnote` = NULL WHERE `id` = 2[0m
+  [4;36;1mSQL (0.000632)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.000161)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000149)[0m   [0mBEGIN[0m
+  [4;36;1mPdf Columns (0.001553)[0m   [0;1mSHOW FIELDS FROM pdfs[0m
+  [4;35;1mPdf Load (0.000939)[0m   [0mSELECT * FROM pdfs WHERE (pdfs.pdfname = 'Test pdf' AND pdfs.pdfdate = '2007-11-21 12:13:00' AND pdfs.category_id = 1 AND pdfs.client_id = 1) LIMIT 1[0m
+  [4;36;1mSQL (0.000251)[0m   [0;1mINSERT INTO pdfs (`pdfname`, `client_id`, `pdfdate`, `category_id`, `filename`, `pdfnote`) VALUES('Test pdf', 1, '2007-11-21 12:13:00', 1, '/livedata/pdfcat_test_upload/DOC070731002030(0001).pdf', 'Testing')[0m
+  [4;35;1mSQL (0.000626)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000093)[0m   [0;1mBEGIN[0m
+  [4;35;1mPdf Load (0.000769)[0m   [0mSELECT * FROM pdfs WHERE (pdfs.`id` = 2) [0m
+  [4;36;1mPdf Destroy (0.000265)[0m   [0;1m DELETE FROM pdfs
+ WHERE `id` = 2
+[0m
+  [4;35;1mPdf Load (0.000658)[0m   [0mSELECT * FROM pdfs WHERE (pdfs.`id` = 2) [0m
+  [4;36;1mSQL (0.000832)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000306)[0m   [0mBEGIN[0m
+  [4;36;1mPdf Load (0.000932)[0m   [0;1mSELECT * FROM pdfs WHERE (pdfs.`id` = 2) [0m
+  [4;35;1mPdf Load (0.000689)[0m   [0mSELECT * FROM pdfs WHERE (pdfs.`id` = 2) [0m
+  [4;36;1mSQL (0.000117)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000093)[0m   [0mBEGIN[0m
+  [4;36;1mPdf Load (0.000724)[0m   [0;1mSELECT * FROM pdfs WHERE (pdfs.pdfname = 'Notice Of Assessment' AND pdfs.pdfdate IS NULL AND pdfs.category_id IS NULL AND pdfs.client_id IS NULL) LIMIT 1[0m
+  [4;35;1mSQL (0.000200)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000094)[0m   [0;1mBEGIN[0m
+  [4;35;1mPdf Load (0.000841)[0m   [0mSELECT * FROM pdfs WHERE (pdfs.pdfname IS NULL AND pdfs.pdfdate IS NULL AND pdfs.category_id IS NULL AND pdfs.client_id IS NULL) LIMIT 1[0m
+  [4;36;1mPdf Load (0.000653)[0m   [0;1mSELECT * FROM pdfs WHERE (pdfs.pdfname IS NULL AND pdfs.pdfdate IS NULL AND pdfs.category_id IS NULL AND pdfs.client_id IS NULL) LIMIT 1[0m
+  [4;35;1mPdf Load (0.000641)[0m   [0mSELECT * FROM pdfs WHERE (pdfs.pdfname IS NULL AND pdfs.pdfdate IS NULL AND pdfs.category_id IS NULL AND pdfs.client_id IS NULL) LIMIT 1[0m
+  [4;36;1mPdf Load (0.000664)[0m   [0;1mSELECT * FROM pdfs WHERE (pdfs.pdfname IS NULL AND pdfs.pdfdate IS NULL AND pdfs.category_id IS NULL AND pdfs.client_id IS NULL) LIMIT 1[0m
+  [4;35;1mSQL (0.000118)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000092)[0m   [0;1mBEGIN[0m
+  [4;35;1mPdf Load (0.000733)[0m   [0mSELECT * FROM pdfs WHERE (pdfs.`id` = 2) [0m
+  [4;36;1mPdf Load (0.000872)[0m   [0;1mSELECT * FROM pdfs WHERE (pdfs.pdfname = 'Test2' AND pdfs.pdfdate = '2007-11-16' AND pdfs.category_id = 1 AND pdfs.client_id = 1 AND pdfs.id <> 2) LIMIT 1[0m
+  [4;35;1mPdf Update (0.000438)[0m   [0mUPDATE pdfs SET `pdfdate` = '2007-11-16', `pdfname` = 'Test2', `category_id` = 1, `client_id` = 1, `filename` = '/livedata/pdfcat_test_upload/DOC070731002030(0001).pdf', `pdfnote` = NULL WHERE `id` = 2[0m
+  [4;36;1mSQL (0.000633)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.000160)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000095)[0m   [0mBEGIN[0m
+  [4;36;1mPdf Columns (0.001389)[0m   [0;1mSHOW FIELDS FROM pdfs[0m
+  [4;35;1mPdf Load (0.000861)[0m   [0mSELECT * FROM pdfs WHERE (pdfs.pdfname = 'Test pdf' AND pdfs.pdfdate = '2007-11-21 12:18:39' AND pdfs.category_id = 1 AND pdfs.client_id = 1) LIMIT 1[0m
+  [4;36;1mSQL (0.000252)[0m   [0;1mINSERT INTO pdfs (`pdfname`, `client_id`, `pdfdate`, `category_id`, `filename`, `pdfnote`) VALUES('Test pdf', 1, '2007-11-21 12:18:39', 1, '/livedata/pdfcat_test_upload/DOC070731002030(0001).pdf', 'Testing')[0m
+  [4;35;1mSQL (0.000624)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000093)[0m   [0;1mBEGIN[0m
+  [4;35;1mPdf Load (0.000799)[0m   [0mSELECT * FROM pdfs WHERE (pdfs.`id` = 2) [0m
+  [4;36;1mPdf Destroy (0.000205)[0m   [0;1m DELETE FROM pdfs
+ WHERE `id` = 2
+[0m
+  [4;35;1mPdf Load (0.000617)[0m   [0mSELECT * FROM pdfs WHERE (pdfs.`id` = 2) [0m
+  [4;36;1mSQL (0.000616)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000098)[0m   [0mBEGIN[0m
+  [4;36;1mPdf Load (0.000716)[0m   [0;1mSELECT * FROM pdfs WHERE (pdfs.`id` = 2) [0m
+  [4;35;1mPdf Load (0.000694)[0m   [0mSELECT * FROM pdfs WHERE (pdfs.`id` = 2) [0m
+  [4;36;1mSQL (0.000111)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000091)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000105)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000092)[0m   [0mBEGIN[0m
+  [4;36;1mPdf Load (0.000789)[0m   [0;1mSELECT * FROM pdfs WHERE (pdfs.pdfname IS NULL AND pdfs.pdfdate IS NULL AND pdfs.category_id IS NULL AND pdfs.client_id IS NULL) LIMIT 1[0m
+  [4;35;1mPdf Load (0.000629)[0m   [0mSELECT * FROM pdfs WHERE (pdfs.pdfname IS NULL AND pdfs.pdfdate IS NULL AND pdfs.category_id IS NULL AND pdfs.client_id IS NULL) LIMIT 1[0m
+  [4;36;1mPdf Load (0.000608)[0m   [0;1mSELECT * FROM pdfs WHERE (pdfs.pdfname IS NULL AND pdfs.pdfdate IS NULL AND pdfs.category_id IS NULL AND pdfs.client_id IS NULL) LIMIT 1[0m
+  [4;35;1mPdf Load (0.000620)[0m   [0mSELECT * FROM pdfs WHERE (pdfs.pdfname IS NULL AND pdfs.pdfdate IS NULL AND pdfs.category_id IS NULL AND pdfs.client_id IS NULL) LIMIT 1[0m
+  [4;36;1mSQL (0.000119)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000092)[0m   [0mBEGIN[0m
+  [4;36;1mPdf Load (0.000689)[0m   [0;1mSELECT * FROM pdfs WHERE (pdfs.`id` = 2) [0m
+  [4;35;1mPdf Load (0.000826)[0m   [0mSELECT * FROM pdfs WHERE (pdfs.pdfname = 'Test2' AND pdfs.pdfdate = '2007-11-16' AND pdfs.category_id = 1 AND pdfs.client_id = 1 AND pdfs.id <> 2) LIMIT 1[0m
+  [4;36;1mPdf Update (0.000306)[0m   [0;1mUPDATE pdfs SET `pdfdate` = '2007-11-16', `pdfname` = 'Test2', `category_id` = 1, `client_id` = 1, `filename` = '/livedata/pdfcat_test_upload/DOC070731002030(0001).pdf', `pdfnote` = NULL WHERE `id` = 2[0m
+  [4;35;1mSQL (0.000650)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000201)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000128)[0m   [0mBEGIN[0m
+  [4;36;1mPdf Columns (0.001576)[0m   [0;1mSHOW FIELDS FROM pdfs[0m
+  [4;35;1mPdf Load (0.000835)[0m   [0mSELECT * FROM pdfs WHERE (pdfs.pdfname = 'Test pdf' AND pdfs.pdfdate = '2007-11-21 12:19:02' AND pdfs.category_id = 1 AND pdfs.client_id = 1) LIMIT 1[0m
+  [4;36;1mSQL (0.000253)[0m   [0;1mINSERT INTO pdfs (`pdfname`, `client_id`, `pdfdate`, `category_id`, `filename`, `pdfnote`) VALUES('Test pdf', 1, '2007-11-21 12:19:02', 1, '/livedata/pdfcat_test_upload/DOC070731002030(0001).pdf', 'Testing')[0m
+  [4;35;1mSQL (0.000615)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000093)[0m   [0;1mBEGIN[0m
+  [4;35;1mPdf Load (0.000736)[0m   [0mSELECT * FROM pdfs WHERE (pdfs.`id` = 2) [0m
+  [4;36;1mPdf Destroy (0.000200)[0m   [0;1m DELETE FROM pdfs
+ WHERE `id` = 2
+[0m
+  [4;35;1mPdf Load (0.000670)[0m   [0mSELECT * FROM pdfs WHERE (pdfs.`id` = 2) [0m
+  [4;36;1mSQL (0.000610)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000093)[0m   [0mBEGIN[0m
+  [4;36;1mPdf Load (0.000759)[0m   [0;1mSELECT * FROM pdfs WHERE (pdfs.`id` = 2) [0m
+  [4;35;1mPdf Load (0.000637)[0m   [0mSELECT * FROM pdfs WHERE (pdfs.`id` = 2) [0m
+  [4;36;1mSQL (0.000111)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000093)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000099)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000093)[0m   [0mBEGIN[0m
+  [4;36;1mPdf Load (0.000747)[0m   [0;1mSELECT * FROM pdfs WHERE (pdfs.pdfname IS NULL AND pdfs.pdfdate IS NULL AND pdfs.category_id IS NULL AND pdfs.client_id IS NULL) LIMIT 1[0m
+  [4;35;1mPdf Load (0.000655)[0m   [0mSELECT * FROM pdfs WHERE (pdfs.pdfname IS NULL AND pdfs.pdfdate IS NULL AND pdfs.category_id IS NULL AND pdfs.client_id IS NULL) LIMIT 1[0m
+  [4;36;1mPdf Load (0.000613)[0m   [0;1mSELECT * FROM pdfs WHERE (pdfs.pdfname IS NULL AND pdfs.pdfdate IS NULL AND pdfs.category_id IS NULL AND pdfs.client_id IS NULL) LIMIT 1[0m
+  [4;35;1mPdf Load (0.000689)[0m   [0mSELECT * FROM pdfs WHERE (pdfs.pdfname IS NULL AND pdfs.pdfdate IS NULL AND pdfs.category_id IS NULL AND pdfs.client_id IS NULL) LIMIT 1[0m
+  [4;36;1mSQL (0.000116)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000093)[0m   [0mBEGIN[0m
+  [4;36;1mPdf Load (0.000746)[0m   [0;1mSELECT * FROM pdfs WHERE (pdfs.`id` = 2) [0m
+  [4;35;1mPdf Load (0.000868)[0m   [0mSELECT * FROM pdfs WHERE (pdfs.pdfname = 'Test2' AND pdfs.pdfdate = '2007-11-16' AND pdfs.category_id = 1 AND pdfs.client_id = 1 AND pdfs.id <> 2) LIMIT 1[0m
+  [4;36;1mPdf Update (0.000310)[0m   [0;1mUPDATE pdfs SET `pdfdate` = '2007-11-16', `pdfname` = 'Test2', `category_id` = 1, `client_id` = 1, `filename` = '/livedata/pdfcat_test_upload/DOC070731002030(0001).pdf', `pdfnote` = NULL WHERE `id` = 2[0m
+  [4;35;1mSQL (0.000646)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000163)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000091)[0m   [0mBEGIN[0m
+  [4;36;1mPdf Columns (0.001505)[0m   [0;1mSHOW FIELDS FROM pdfs[0m
+  [4;35;1mPdf Load (0.000870)[0m   [0mSELECT * FROM pdfs WHERE (pdfs.pdfname = 'Test pdf' AND pdfs.pdfdate = '2007-11-21 12:20:28' AND pdfs.category_id = 1 AND pdfs.client_id = 1) LIMIT 1[0m
+  [4;36;1mSQL (0.000300)[0m   [0;1mINSERT INTO pdfs (`pdfname`, `client_id`, `pdfdate`, `category_id`, `filename`, `pdfnote`) VALUES('Test pdf', 1, '2007-11-21 12:20:28', 1, '/livedata/pdfcat_test_upload/DOC070731002030(0001).pdf', 'Testing')[0m
+  [4;35;1mSQL (0.000627)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000095)[0m   [0;1mBEGIN[0m
+  [4;35;1mPdf Load (0.000790)[0m   [0mSELECT * FROM pdfs WHERE (pdfs.`id` = 2) [0m
+  [4;36;1mPdf Destroy (0.000203)[0m   [0;1m DELETE FROM pdfs
+ WHERE `id` = 2
+[0m
+  [4;35;1mPdf Load (0.000688)[0m   [0mSELECT * FROM pdfs WHERE (pdfs.`id` = 2) [0m
+  [4;36;1mSQL (0.000621)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000095)[0m   [0mBEGIN[0m
+  [4;36;1mPdf Load (0.000776)[0m   [0;1mSELECT * FROM pdfs WHERE (pdfs.`id` = 2) [0m
+  [4;35;1mPdf Load (0.000643)[0m   [0mSELECT * FROM pdfs WHERE (pdfs.`id` = 2) [0m
+  [4;36;1mSQL (0.000110)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000091)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000108)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000090)[0m   [0mBEGIN[0m
+  [4;36;1mPdf Load (0.000728)[0m   [0;1mSELECT * FROM pdfs WHERE (pdfs.pdfname IS NULL AND pdfs.pdfdate IS NULL AND pdfs.category_id IS NULL AND pdfs.client_id IS NULL) LIMIT 1[0m
+  [4;35;1mPdf Load (0.000738)[0m   [0mSELECT * FROM pdfs WHERE (pdfs.pdfname IS NULL AND pdfs.pdfdate IS NULL AND pdfs.category_id IS NULL AND pdfs.client_id IS NULL) LIMIT 1[0m
+  [4;36;1mPdf Load (0.000625)[0m   [0;1mSELECT * FROM pdfs WHERE (pdfs.pdfname IS NULL AND pdfs.pdfdate IS NULL AND pdfs.category_id IS NULL AND pdfs.client_id IS NULL) LIMIT 1[0m
+  [4;35;1mPdf Load (0.000664)[0m   [0mSELECT * FROM pdfs WHERE (pdfs.pdfname IS NULL AND pdfs.pdfdate IS NULL AND pdfs.category_id IS NULL AND pdfs.client_id IS NULL) LIMIT 1[0m
+  [4;36;1mSQL (0.000118)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000301)[0m   [0mBEGIN[0m
+  [4;36;1mPdf Load (0.000772)[0m   [0;1mSELECT * FROM pdfs WHERE (pdfs.`id` = 2) [0m
+  [4;35;1mPdf Load (0.001033)[0m   [0mSELECT * FROM pdfs WHERE (pdfs.pdfname = 'Test2' AND pdfs.pdfdate = '2007-11-16' AND pdfs.category_id = 1 AND pdfs.client_id = 1 AND pdfs.id <> 2) LIMIT 1[0m
+  [4;36;1mPdf Update (0.000417)[0m   [0;1mUPDATE pdfs SET `pdfdate` = '2007-11-16', `pdfname` = 'Test2', `category_id` = 1, `client_id` = 1, `filename` = '/livedata/pdfcat_test_upload/DOC070731002030(0001).pdf', `pdfnote` = NULL WHERE `id` = 2[0m
+  [4;35;1mSQL (0.000646)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000204)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000087)[0m   [0mBEGIN[0m
+  [4;36;1mPdf Columns (0.001644)[0m   [0;1mSHOW FIELDS FROM pdfs[0m
+  [4;35;1mPdf Load (0.000819)[0m   [0mSELECT * FROM pdfs WHERE (pdfs.pdfname = 'Test pdf' AND pdfs.pdfdate = '2007-11-21 12:21:23' AND pdfs.category_id = 1 AND pdfs.client_id = 1) LIMIT 1[0m
+  [4;36;1mSQL (0.000249)[0m   [0;1mINSERT INTO pdfs (`pdfname`, `client_id`, `pdfdate`, `category_id`, `filename`, `pdfnote`) VALUES('Test pdf', 1, '2007-11-21 12:21:23', 1, '/livedata/pdfcat_test_upload/DOC070731002030(0001).pdf', 'Testing')[0m
+  [4;35;1mSQL (0.000614)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000092)[0m   [0;1mBEGIN[0m
+  [4;35;1mPdf Load (0.000770)[0m   [0mSELECT * FROM pdfs WHERE (pdfs.`id` = 2) [0m
+  [4;36;1mPdf Destroy (0.000232)[0m   [0;1m DELETE FROM pdfs
+ WHERE `id` = 2
+[0m
+  [4;35;1mPdf Load (0.000654)[0m   [0mSELECT * FROM pdfs WHERE (pdfs.`id` = 2) [0m
+  [4;36;1mSQL (0.000600)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000095)[0m   [0mBEGIN[0m
+  [4;36;1mPdf Load (0.000761)[0m   [0;1mSELECT * FROM pdfs WHERE (pdfs.`id` = 2) [0m
+  [4;35;1mPdf Load (0.000664)[0m   [0mSELECT * FROM pdfs WHERE (pdfs.`id` = 2) [0m
+  [4;36;1mSQL (0.000111)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000091)[0m   [0mBEGIN[0m
+  [4;36;1mPdf Load (0.000793)[0m   [0;1mSELECT * FROM pdfs WHERE (pdfs.pdfname = 'Notice Of Assessment' AND pdfs.pdfdate = '2007-11-20' AND pdfs.category_id = 2 AND pdfs.client_id = 3) LIMIT 1[0m
+  [4;35;1mSQL (0.000126)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000092)[0m   [0;1mBEGIN[0m
+  [4;35;1mPdf Load (0.000672)[0m   [0mSELECT * FROM pdfs WHERE (pdfs.pdfname IS NULL AND pdfs.pdfdate IS NULL AND pdfs.category_id IS NULL AND pdfs.client_id IS NULL) LIMIT 1[0m
+  [4;36;1mPdf Load (0.000629)[0m   [0;1mSELECT * FROM pdfs WHERE (pdfs.pdfname IS NULL AND pdfs.pdfdate IS NULL AND pdfs.category_id IS NULL AND pdfs.client_id IS NULL) LIMIT 1[0m
+  [4;35;1mPdf Load (0.000650)[0m   [0mSELECT * FROM pdfs WHERE (pdfs.pdfname IS NULL AND pdfs.pdfdate IS NULL AND pdfs.category_id IS NULL AND pdfs.client_id IS NULL) LIMIT 1[0m
+  [4;36;1mPdf Load (0.000634)[0m   [0;1mSELECT * FROM pdfs WHERE (pdfs.pdfname IS NULL AND pdfs.pdfdate IS NULL AND pdfs.category_id IS NULL AND pdfs.client_id IS NULL) LIMIT 1[0m
+  [4;35;1mSQL (0.000113)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000214)[0m   [0;1mBEGIN[0m
+  [4;35;1mPdf Load (0.000723)[0m   [0mSELECT * FROM pdfs WHERE (pdfs.`id` = 2) [0m
+  [4;36;1mPdf Load (0.000847)[0m   [0;1mSELECT * FROM pdfs WHERE (pdfs.pdfname = 'Test2' AND pdfs.pdfdate = '2007-11-16' AND pdfs.category_id = 1 AND pdfs.client_id = 1 AND pdfs.id <> 2) LIMIT 1[0m
+  [4;35;1mPdf Update (0.000340)[0m   [0mUPDATE pdfs SET `pdfdate` = '2007-11-16', `pdfname` = 'Test2', `category_id` = 1, `client_id` = 1, `filename` = '/livedata/pdfcat_test_upload/DOC070731002030(0001).pdf', `pdfnote` = NULL WHERE `id` = 2[0m
+  [4;36;1mSQL (0.000654)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.000158)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000095)[0m   [0mBEGIN[0m
+  [4;36;1mPdf Columns (0.001394)[0m   [0;1mSHOW FIELDS FROM pdfs[0m
+  [4;35;1mPdf Load (0.000811)[0m   [0mSELECT * FROM pdfs WHERE (pdfs.pdfname = 'Test pdf' AND pdfs.pdfdate = '2007-11-21 12:21:32' AND pdfs.category_id = 1 AND pdfs.client_id = 1) LIMIT 1[0m
+  [4;36;1mSQL (0.000259)[0m   [0;1mINSERT INTO pdfs (`pdfname`, `client_id`, `pdfdate`, `category_id`, `filename`, `pdfnote`) VALUES('Test pdf', 1, '2007-11-21 12:21:32', 1, '/livedata/pdfcat_test_upload/DOC070731002030(0001).pdf', 'Testing')[0m
+  [4;35;1mSQL (0.000702)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000096)[0m   [0;1mBEGIN[0m
+  [4;35;1mPdf Load (0.000739)[0m   [0mSELECT * FROM pdfs WHERE (pdfs.`id` = 2) [0m
+  [4;36;1mPdf Destroy (0.000205)[0m   [0;1m DELETE FROM pdfs
+ WHERE `id` = 2
+[0m
+  [4;35;1mPdf Load (0.000614)[0m   [0mSELECT * FROM pdfs WHERE (pdfs.`id` = 2) [0m
+  [4;36;1mSQL (0.000678)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000096)[0m   [0mBEGIN[0m
+  [4;36;1mPdf Load (0.001075)[0m   [0;1mSELECT * FROM pdfs WHERE (pdfs.`id` = 2) [0m
+  [4;35;1mPdf Load (0.000782)[0m   [0mSELECT * FROM pdfs WHERE (pdfs.`id` = 2) [0m
+  [4;36;1mSQL (0.000119)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000131)[0m   [0mBEGIN[0m
+  [4;36;1mPdf Load (0.000779)[0m   [0;1mSELECT * FROM pdfs WHERE (pdfs.pdfname = 'Notice Of Assessment' AND pdfs.pdfdate = '2007-11-20' AND pdfs.category_id = 2 AND pdfs.client_id = 3) LIMIT 1[0m
+  [4;35;1mPdf Load (0.000730)[0m   [0mSELECT * FROM pdfs WHERE (pdfs.pdfname = 'Notice Of Assessment' AND pdfs.pdfdate = '2007-11-20' AND pdfs.category_id = 2 AND pdfs.client_id = 3) LIMIT 1[0m
+  [4;36;1mSQL (0.000132)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000091)[0m   [0mBEGIN[0m
+  [4;36;1mPdf Load (0.000738)[0m   [0;1mSELECT * FROM pdfs WHERE (pdfs.pdfname IS NULL AND pdfs.pdfdate IS NULL AND pdfs.category_id IS NULL AND pdfs.client_id IS NULL) LIMIT 1[0m
+  [4;35;1mPdf Load (0.000646)[0m   [0mSELECT * FROM pdfs WHERE (pdfs.pdfname IS NULL AND pdfs.pdfdate IS NULL AND pdfs.category_id IS NULL AND pdfs.client_id IS NULL) LIMIT 1[0m
+  [4;36;1mPdf Load (0.000652)[0m   [0;1mSELECT * FROM pdfs WHERE (pdfs.pdfname IS NULL AND pdfs.pdfdate IS NULL AND pdfs.category_id IS NULL AND pdfs.client_id IS NULL) LIMIT 1[0m
+  [4;35;1mPdf Load (0.000643)[0m   [0mSELECT * FROM pdfs WHERE (pdfs.pdfname IS NULL AND pdfs.pdfdate IS NULL AND pdfs.category_id IS NULL AND pdfs.client_id IS NULL) LIMIT 1[0m
+  [4;36;1mSQL (0.000122)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000093)[0m   [0mBEGIN[0m
+  [4;36;1mPdf Load (0.000705)[0m   [0;1mSELECT * FROM pdfs WHERE (pdfs.`id` = 2) [0m
+  [4;35;1mPdf Load (0.000824)[0m   [0mSELECT * FROM pdfs WHERE (pdfs.pdfname = 'Test2' AND pdfs.pdfdate = '2007-11-16' AND pdfs.category_id = 1 AND pdfs.client_id = 1 AND pdfs.id <> 2) LIMIT 1[0m
+  [4;36;1mPdf Update (0.000309)[0m   [0;1mUPDATE pdfs SET `pdfdate` = '2007-11-16', `pdfname` = 'Test2', `category_id` = 1, `client_id` = 1, `filename` = '/livedata/pdfcat_test_upload/DOC070731002030(0001).pdf', `pdfnote` = NULL WHERE `id` = 2[0m
+  [4;35;1mSQL (0.000645)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000165)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000090)[0m   [0mBEGIN[0m
+  [4;36;1mPdf Columns (0.001572)[0m   [0;1mSHOW FIELDS FROM pdfs[0m
+  [4;35;1mPdf Load (0.000900)[0m   [0mSELECT * FROM pdfs WHERE (pdfs.pdfname = 'Notice Of Assessment2' AND pdfs.pdfdate = '2007-11-20' AND pdfs.category_id = 2 AND pdfs.client_id = 3) LIMIT 1[0m
+  [4;36;1mSQL (0.000206)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000094)[0m   [0mBEGIN[0m
+  [4;36;1mPdf Load (0.000847)[0m   [0;1mSELECT * FROM pdfs WHERE (pdfs.pdfname = 'Test pdf' AND pdfs.pdfdate = '2007-11-21 12:23:37' AND pdfs.category_id = 1 AND pdfs.client_id = 1) LIMIT 1[0m
+  [4;35;1mSQL (0.000327)[0m   [0mINSERT INTO pdfs (`pdfname`, `client_id`, `pdfdate`, `category_id`, `filename`, `pdfnote`) VALUES('Test pdf', 1, '2007-11-21 12:23:37', 1, '/livedata/pdfcat_test_upload/DOC070731002030(0001).pdf', 'Testing')[0m
+  [4;36;1mSQL (0.000615)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000095)[0m   [0mBEGIN[0m
+  [4;36;1mPdf Load (0.000739)[0m   [0;1mSELECT * FROM pdfs WHERE (pdfs.`id` = 2) [0m
+  [4;35;1mPdf Destroy (0.000247)[0m   [0m DELETE FROM pdfs
+ WHERE `id` = 2
+[0m
+  [4;36;1mPdf Load (0.000616)[0m   [0;1mSELECT * FROM pdfs WHERE (pdfs.`id` = 2) [0m
+  [4;35;1mSQL (0.000615)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000095)[0m   [0;1mBEGIN[0m
+  [4;35;1mPdf Load (0.000716)[0m   [0mSELECT * FROM pdfs WHERE (pdfs.`id` = 2) [0m
+  [4;36;1mPdf Load (0.000699)[0m   [0;1mSELECT * FROM pdfs WHERE (pdfs.`id` = 2) [0m
+  [4;35;1mSQL (0.000111)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000307)[0m   [0;1mBEGIN[0m
+  [4;35;1mPdf Load (0.000802)[0m   [0mSELECT * FROM pdfs WHERE (pdfs.pdfname = 'Notice Of Assessment' AND pdfs.pdfdate = '2007-11-20' AND pdfs.category_id = 2 AND pdfs.client_id = 3) LIMIT 1[0m
+  [4;36;1mPdf Load (0.000771)[0m   [0;1mSELECT * FROM pdfs WHERE (pdfs.pdfname = 'Notice Of Assessment' AND pdfs.pdfdate = '2007-11-20' AND pdfs.category_id = 2 AND pdfs.client_id = 3) LIMIT 1[0m
+  [4;35;1mSQL (0.000182)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000093)[0m   [0;1mBEGIN[0m
+  [4;35;1mPdf Load (0.000671)[0m   [0mSELECT * FROM pdfs WHERE (pdfs.pdfname IS NULL AND pdfs.pdfdate IS NULL AND pdfs.category_id IS NULL AND pdfs.client_id IS NULL) LIMIT 1[0m
+  [4;36;1mPdf Load (0.000631)[0m   [0;1mSELECT * FROM pdfs WHERE (pdfs.pdfname IS NULL AND pdfs.pdfdate IS NULL AND pdfs.category_id IS NULL AND pdfs.client_id IS NULL) LIMIT 1[0m
+  [4;35;1mPdf Load (0.000612)[0m   [0mSELECT * FROM pdfs WHERE (pdfs.pdfname IS NULL AND pdfs.pdfdate IS NULL AND pdfs.category_id IS NULL AND pdfs.client_id IS NULL) LIMIT 1[0m
+  [4;36;1mPdf Load (0.000620)[0m   [0;1mSELECT * FROM pdfs WHERE (pdfs.pdfname IS NULL AND pdfs.pdfdate IS NULL AND pdfs.category_id IS NULL AND pdfs.client_id IS NULL) LIMIT 1[0m
+  [4;35;1mSQL (0.000118)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000091)[0m   [0;1mBEGIN[0m
+  [4;35;1mPdf Load (0.000740)[0m   [0mSELECT * FROM pdfs WHERE (pdfs.`id` = 2) [0m
+  [4;36;1mPdf Load (0.000858)[0m   [0;1mSELECT * FROM pdfs WHERE (pdfs.pdfname = 'Test2' AND pdfs.pdfdate = '2007-11-16' AND pdfs.category_id = 1 AND pdfs.client_id = 1 AND pdfs.id <> 2) LIMIT 1[0m
+  [4;35;1mPdf Update (0.000309)[0m   [0mUPDATE pdfs SET `pdfdate` = '2007-11-16', `pdfname` = 'Test2', `category_id` = 1, `client_id` = 1, `filename` = '/livedata/pdfcat_test_upload/DOC070731002030(0001).pdf', `pdfnote` = NULL WHERE `id` = 2[0m
+  [4;36;1mSQL (0.000644)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.000156)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000095)[0m   [0mBEGIN[0m
+  [4;36;1mPdf Columns (0.001718)[0m   [0;1mSHOW FIELDS FROM pdfs[0m
+  [4;35;1mPdf Load (0.000866)[0m   [0mSELECT * FROM pdfs WHERE (pdfs.pdfname = 'Notice Of Assessment2' AND pdfs.pdfdate = '2007-11-10' AND pdfs.category_id = 1 AND pdfs.client_id = 3) LIMIT 1[0m
+  [4;36;1mPdf Load (0.001033)[0m   [0;1mSELECT * FROM pdfs WHERE (pdfs.pdfname = 'Notice Of Assessment2' AND pdfs.pdfdate = '2007-11-10' AND pdfs.category_id = 1 AND pdfs.client_id = 3) LIMIT 1[0m
+  [4;35;1mSQL (0.000126)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000090)[0m   [0;1mBEGIN[0m
+  [4;35;1mPdf Load (0.000725)[0m   [0mSELECT * FROM pdfs WHERE (pdfs.pdfname = 'Test pdf' AND pdfs.pdfdate = '2007-11-21 12:24:11' AND pdfs.category_id = 1 AND pdfs.client_id = 1) LIMIT 1[0m
+  [4;36;1mSQL (0.000337)[0m   [0;1mINSERT INTO pdfs (`pdfname`, `client_id`, `pdfdate`, `category_id`, `filename`, `pdfnote`) VALUES('Test pdf', 1, '2007-11-21 12:24:11', 1, '/livedata/pdfcat_test_upload/DOC070731002030(0001).pdf', 'Testing')[0m
+  [4;35;1mSQL (0.000619)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000100)[0m   [0;1mBEGIN[0m
+  [4;35;1mPdf Load (0.000780)[0m   [0mSELECT * FROM pdfs WHERE (pdfs.`id` = 2) [0m
+  [4;36;1mPdf Destroy (0.000219)[0m   [0;1m DELETE FROM pdfs
+ WHERE `id` = 2
+[0m
+  [4;35;1mPdf Load (0.000622)[0m   [0mSELECT * FROM pdfs WHERE (pdfs.`id` = 2) [0m
+  [4;36;1mSQL (0.000601)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000092)[0m   [0mBEGIN[0m
+  [4;36;1mPdf Load (0.000698)[0m   [0;1mSELECT * FROM pdfs WHERE (pdfs.`id` = 2) [0m
+  [4;35;1mPdf Load (0.000675)[0m   [0mSELECT * FROM pdfs WHERE (pdfs.`id` = 2) [0m
+  [4;36;1mSQL (0.000121)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000115)[0m   [0mBEGIN[0m
+  [4;36;1mPdf Load (0.000789)[0m   [0;1mSELECT * FROM pdfs WHERE (pdfs.pdfname = 'Notice Of Assessment' AND pdfs.pdfdate = '2007-11-20' AND pdfs.category_id = 2 AND pdfs.client_id = 3) LIMIT 1[0m
+  [4;35;1mPdf Load (0.000757)[0m   [0mSELECT * FROM pdfs WHERE (pdfs.pdfname = 'Notice Of Assessment' AND pdfs.pdfdate = '2007-11-20' AND pdfs.category_id = 2 AND pdfs.client_id = 3) LIMIT 1[0m
+  [4;36;1mSQL (0.000280)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000093)[0m   [0mBEGIN[0m
+  [4;36;1mPdf Load (0.000714)[0m   [0;1mSELECT * FROM pdfs WHERE (pdfs.pdfname IS NULL AND pdfs.pdfdate IS NULL AND pdfs.category_id IS NULL AND pdfs.client_id IS NULL) LIMIT 1[0m
+  [4;35;1mPdf Load (0.000697)[0m   [0mSELECT * FROM pdfs WHERE (pdfs.pdfname IS NULL AND pdfs.pdfdate IS NULL AND pdfs.category_id IS NULL AND pdfs.client_id IS NULL) LIMIT 1[0m
+  [4;36;1mPdf Load (0.000698)[0m   [0;1mSELECT * FROM pdfs WHERE (pdfs.pdfname IS NULL AND pdfs.pdfdate IS NULL AND pdfs.category_id IS NULL AND pdfs.client_id IS NULL) LIMIT 1[0m
+  [4;35;1mPdf Load (0.000815)[0m   [0mSELECT * FROM pdfs WHERE (pdfs.pdfname IS NULL AND pdfs.pdfdate IS NULL AND pdfs.category_id IS NULL AND pdfs.client_id IS NULL) LIMIT 1[0m
+  [4;36;1mSQL (0.000121)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000093)[0m   [0mBEGIN[0m
+  [4;36;1mPdf Load (0.000729)[0m   [0;1mSELECT * FROM pdfs WHERE (pdfs.`id` = 2) [0m
+  [4;35;1mPdf Load (0.000816)[0m   [0mSELECT * FROM pdfs WHERE (pdfs.pdfname = 'Test2' AND pdfs.pdfdate = '2007-11-16' AND pdfs.category_id = 1 AND pdfs.client_id = 1 AND pdfs.id <> 2) LIMIT 1[0m
+  [4;36;1mPdf Update (0.000448)[0m   [0;1mUPDATE pdfs SET `pdfdate` = '2007-11-16', `pdfname` = 'Test2', `category_id` = 1, `client_id` = 1, `filename` = '/livedata/pdfcat_test_upload/DOC070731002030(0001).pdf', `pdfnote` = NULL WHERE `id` = 2[0m
+  [4;35;1mSQL (0.000650)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000165)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000107)[0m   [0mBEGIN[0m
+  [4;36;1mPdf Columns (0.001663)[0m   [0;1mSHOW FIELDS FROM pdfs[0m
+  [4;35;1mPdf Load (0.000821)[0m   [0mSELECT * FROM pdfs WHERE (pdfs.pdfname = 'Notice Of Assessment2' AND pdfs.pdfdate = '2007-11-10' AND pdfs.category_id = 1 AND pdfs.client_id = 3) LIMIT 1[0m
+  [4;36;1mSQL (0.000206)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000094)[0m   [0mBEGIN[0m
+  [4;36;1mPdf Load (0.000797)[0m   [0;1mSELECT * FROM pdfs WHERE (pdfs.pdfname = 'Test pdf' AND pdfs.pdfdate = '2007-11-21 12:24:20' AND pdfs.category_id = 1 AND pdfs.client_id = 1) LIMIT 1[0m
+  [4;35;1mSQL (0.000273)[0m   [0mINSERT INTO pdfs (`pdfname`, `client_id`, `pdfdate`, `category_id`, `filename`, `pdfnote`) VALUES('Test pdf', 1, '2007-11-21 12:24:20', 1, '/livedata/pdfcat_test_upload/DOC070731002030(0001).pdf', 'Testing')[0m
+  [4;36;1mSQL (0.000622)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000095)[0m   [0mBEGIN[0m
+  [4;36;1mPdf Load (0.000741)[0m   [0;1mSELECT * FROM pdfs WHERE (pdfs.`id` = 2) [0m
+  [4;35;1mPdf Destroy (0.000203)[0m   [0m DELETE FROM pdfs
+ WHERE `id` = 2
+[0m
+  [4;36;1mPdf Load (0.000700)[0m   [0;1mSELECT * FROM pdfs WHERE (pdfs.`id` = 2) [0m
+  [4;35;1mSQL (0.000605)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000094)[0m   [0;1mBEGIN[0m
+  [4;35;1mPdf Load (0.000693)[0m   [0mSELECT * FROM pdfs WHERE (pdfs.`id` = 2) [0m
+  [4;36;1mPdf Load (0.000692)[0m   [0;1mSELECT * FROM pdfs WHERE (pdfs.`id` = 2) [0m
+  [4;35;1mSQL (0.000108)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000089)[0m   [0;1mBEGIN[0m
+  [4;35;1mPdf Load (0.000824)[0m   [0mSELECT * FROM pdfs WHERE (pdfs.pdfname = 'Notice Of Assessment' AND pdfs.pdfdate = '2007-11-20' AND pdfs.category_id = 2 AND pdfs.client_id = 3) LIMIT 1[0m
+  [4;36;1mPdf Load (0.000760)[0m   [0;1mSELECT * FROM pdfs WHERE (pdfs.pdfname = 'Notice Of Assessment' AND pdfs.pdfdate = '2007-11-20' AND pdfs.category_id = 2 AND pdfs.client_id = 3) LIMIT 1[0m
+  [4;35;1mSQL (0.000124)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000092)[0m   [0;1mBEGIN[0m
+  [4;35;1mPdf Load (0.000671)[0m   [0mSELECT * FROM pdfs WHERE (pdfs.pdfname IS NULL AND pdfs.pdfdate IS NULL AND pdfs.category_id IS NULL AND pdfs.client_id IS NULL) LIMIT 1[0m
+  [4;36;1mPdf Load (0.000655)[0m   [0;1mSELECT * FROM pdfs WHERE (pdfs.pdfname IS NULL AND pdfs.pdfdate IS NULL AND pdfs.category_id IS NULL AND pdfs.client_id IS NULL) LIMIT 1[0m
+  [4;35;1mPdf Load (0.000695)[0m   [0mSELECT * FROM pdfs WHERE (pdfs.pdfname IS NULL AND pdfs.pdfdate IS NULL AND pdfs.category_id IS NULL AND pdfs.client_id IS NULL) LIMIT 1[0m
+  [4;36;1mPdf Load (0.000689)[0m   [0;1mSELECT * FROM pdfs WHERE (pdfs.pdfname IS NULL AND pdfs.pdfdate IS NULL AND pdfs.category_id IS NULL AND pdfs.client_id IS NULL) LIMIT 1[0m
+  [4;35;1mSQL (0.000117)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000092)[0m   [0;1mBEGIN[0m
+  [4;35;1mPdf Load (0.000814)[0m   [0mSELECT * FROM pdfs WHERE (pdfs.`id` = 2) [0m
+  [4;36;1mPdf Load (0.000916)[0m   [0;1mSELECT * FROM pdfs WHERE (pdfs.pdfname = 'Test2' AND pdfs.pdfdate = '2007-11-16' AND pdfs.category_id = 1 AND pdfs.client_id = 1 AND pdfs.id <> 2) LIMIT 1[0m
+  [4;35;1mPdf Update (0.000367)[0m   [0mUPDATE pdfs SET `pdfdate` = '2007-11-16', `pdfname` = 'Test2', `category_id` = 1, `client_id` = 1, `filename` = '/livedata/pdfcat_test_upload/DOC070731002030(0001).pdf', `pdfnote` = NULL WHERE `id` = 2[0m
+  [4;36;1mSQL (0.000631)[0m   [0;1mROLLBACK[0m

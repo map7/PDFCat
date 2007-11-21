@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE abiword PUBLIC "-//ABISOURCE//DTD AWML 1.0 Strict//EN" "http://www.abisource.com/awml.dtd">
-<abiword template="false" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:math="http://www.w3.org/1998/Math/MathML" xid-max="557" xmlns:dc="http://purl.org/dc/elements/1.1/" fileformat="1.1" xmlns:svg="http://www.w3.org/2000/svg" xmlns:awml="http://www.abisource.com/awml.dtd" xmlns="http://www.abisource.com/awml.dtd" xmlns:xlink="http://www.w3.org/1999/xlink" version="2.4.6" xml:space="preserve" props="dom-dir:ltr; document-footnote-restart-section:0; document-endnote-type:numeric; document-endnote-place-enddoc:1; document-endnote-initial:1; lang:en-US; document-endnote-restart-section:0; document-footnote-restart-page:0; document-footnote-type:numeric; document-footnote-initial:1; document-endnote-place-endsection:0">
+<abiword template="false" version="2.4.6" xmlns:svg="http://www.w3.org/2000/svg" xid-max="569" xmlns:dc="http://purl.org/dc/elements/1.1/" fileformat="1.1" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:math="http://www.w3.org/1998/Math/MathML" xmlns:awml="http://www.abisource.com/awml.dtd" xmlns="http://www.abisource.com/awml.dtd" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" props="dom-dir:ltr; document-footnote-restart-section:0; document-endnote-type:numeric; document-endnote-place-enddoc:1; document-endnote-initial:1; lang:en-US; document-endnote-restart-section:0; document-footnote-restart-page:0; document-footnote-type:numeric; document-footnote-initial:1; document-endnote-place-endsection:0">
 <!-- ======================================================================== -->
 <!-- This file is an AbiWord document.                                        -->
 <!-- AbiWord is a free, Open Source word processor.                           -->
@@ -12,14 +12,14 @@
 <m key="dc.format">application/x-abiword</m>
 <m key="abiword.generator">AbiWord</m>
 </metadata>
-<history version="132" edit-time="929782" last-saved="1195435042" uid="2830ce94-837e-11dc-9146-e1a7d6fa0c3f">
+<history version="139" edit-time="1105070" last-saved="1195610330" uid="2830ce94-837e-11dc-9146-e1a7d6fa0c3f">
 <version id="3" started="1170122149" uid="d86456a2-b005-11db-8510-f48956ad5861" auto="0" top-xid="0"/>
 <version id="9" started="1170122989" uid="dc4497e4-b007-11db-8638-8589fdbb7ca2" auto="0" top-xid="73"/>
 <version id="10" started="1170714294" uid="b3e1f3fe-b567-11db-9a13-8de544bfd49c" auto="0" top-xid="92"/>
 <version id="11" started="1170714720" uid="b1efa310-b568-11db-9a13-8de544bfd49c" auto="0" top-xid="92"/>
 <version id="24" started="1193373944" uid="88211d24-8679-11dc-9146-e1a7d6fa0c3f" auto="0" top-xid="101"/>
 <version id="100" started="1194584945" uid="32f19c06-9183-11dc-9cd9-f7019202bf7b" auto="0" top-xid="184"/>
-<version id="132" started="1195166619" uid="2e31f8dc-963d-11dc-950f-c295c1542af3" auto="0" top-xid="490"/>
+<version id="139" started="1195166619" uid="4e08df92-97d5-11dc-950f-c295c1542af3" auto="0" top-xid="490"/>
 </history>
 <styles>
 <s followedby="Normal" name="Heading 1" basedon="Normal" type="P" props="margin-top:0.1667in; color:000000; font-size:16pt; margin-bottom:0.0417in; lang:en-US; bgcolor:transparent; font-weight:bold; keep-with-next:1; font-family:Arial"/>
@@ -392,22 +392,30 @@
 <p style="Normal" xid="549" props="tabstops:0.000000in/L0; dom-dir:ltr">Now we want to move the new file into:</p>
 <p style="Normal" xid="550" props="tabstops:0.000000in/L0; dom-dir:ltr">STORE_DIR/client/category</p>
 <p style="Normal" xid="552" props="tabstops:0.000000in/L0; dom-dir:ltr"></p>
-<p style="Normal" xid="553" props="tabstops:0.000000in/L0; dom-dir:ltr"></p>
+<p style="Normal" xid="559" props="tabstops:0.000000in/L0; dom-dir:ltr">Added a function to app/model/pdf.rb called move_file</p>
+<p style="Normal" xid="560" props="tabstops:0.000000in/L0; dom-dir:ltr">Did some work in the pdf_controller.rb file for new and update methods.</p>
 <p style="Normal" xid="551" props="tabstops:0.000000in/L0; dom-dir:ltr"></p>
 <p style="Heading 1" xid="524" props="tabstops:0.000000in/L0; dom-dir:ltr">Storing config data in a yaml file</p>
 <p style="Normal" xid="525" props="text-align:left; tabstops:0.000000in/L0; dom-dir:ltr">http://wiki.rubyonrails.org/rails/pages/HowtoAddYourOwnConfigInfo</p>
 <p style="Normal" xid="526" props="text-align:left; tabstops:0.000000in/L0; dom-dir:ltr"></p>
 <p style="Normal" xid="523" props="tabstops:0.000000in/L0; dom-dir:ltr"></p>
-<p style="Heading 1" xid="519" props="tabstops:0.000000in/L0; dom-dir:ltr">Todo</p>
+<p style="Heading 1" xid="519" props="tabstops:0.000000in/L0; dom-dir:ltr"></p>
+<p style="Heading 1" xid="561" props="tabstops:0.000000in/L0; dom-dir:ltr">Testing Notes</p>
+<p style="Normal" xid="566" props="tabstops:0.000000in/L0; dom-dir:ltr">Cannot fail validation on pdf.filename, ie: file doesn't exist.  This is a custom validator and maybe difficult to test.</p>
+<p style="Normal" xid="568" props="tabstops:0.000000in/L0; dom-dir:ltr"></p>
+<p style="Normal" xid="569" props="tabstops:0.000000in/L0; dom-dir:ltr"></p>
+<p style="Normal" xid="567" props="tabstops:0.000000in/L0; dom-dir:ltr"></p>
+<p style="Heading 1" xid="565" props="tabstops:0.000000in/L0; dom-dir:ltr">Todo</p>
 <p style="Normal" xid="282" props="font-family:Arial; dom-dir:ltr; font-style:normal; font-weight:normal; lang:en-US; text-position:normal; color:000000; tabstops:0.000000in/L0; text-decoration:none; font-size:12pt; text-align:left"><c props="font-family:Arial; font-size:12pt; color:000000; text-decoration:line-through; text-position:normal; font-weight:normal; font-style:normal; lang:en-US">- add 'category' to the pdf listing</c></p>
 <p style="Normal" xid="290" props="font-family:Arial; dom-dir:ltr; font-style:normal; font-weight:normal; lang:en-US; text-align:justify; color:000000; tabstops:0.000000in/L0; text-decoration:none; font-size:12pt; text-position:normal"><c props="font-family:Arial; font-size:12pt; color:000000; text-decoration:line-through; text-position:normal; font-weight:normal; font-style:normal; lang:en-US">- file listing (either list the files/ insert a browse button/ use a plugin to list files)</c></p>
 <p style="Normal" xid="283" props="font-family:Arial; dom-dir:ltr; font-style:normal; font-weight:normal; lang:en-US; text-position:normal; color:000000; tabstops:0.000000in/L0; text-decoration:none; font-size:12pt; text-align:left"><c props="font-family:Arial; font-size:12pt; color:000000; text-decoration:line-through; text-position:normal; font-weight:normal; font-style:normal; lang:en-US">- enter files into pdfs</c></p>
 <p style="Normal" xid="515" props="font-family:Arial; dom-dir:ltr; font-style:normal; font-weight:normal; lang:en-US; text-position:normal; color:000000; tabstops:0.000000in/L0; text-decoration:none; font-size:12pt; text-align:left"><c props="font-family:Arial; font-size:12pt; color:000000; text-decoration:line-through; text-position:normal; font-weight:normal; font-style:normal; lang:en-US">- put the attachment method into pdf and call it in the new area to view a pdf</c></p>
 <p style="Normal" xid="518" props="font-family:Arial; dom-dir:ltr; font-style:normal; font-weight:normal; lang:en-US; text-position:normal; color:000000; tabstops:0.000000in/L0; text-decoration:none; font-size:12pt; text-align:left"><c props="font-family:Arial; font-size:12pt; color:000000; text-decoration:line-through; text-position:normal; font-weight:normal; font-style:normal; lang:en-US">- check if files exists before adding it, use a validator on the pdf form.</c></p>
-<p style="Normal" xid="516" props="font-family:Arial; dom-dir:ltr; font-style:normal; font-weight:normal; lang:en-US; text-position:normal; color:000000; tabstops:0.000000in/L0; text-decoration:none; font-size:12pt; text-align:left"><c props="font-family:Arial; text-decoration:none; color:000000; font-size:12pt; text-position:normal; font-weight:normal; font-style:normal; lang:en-US">- move the file around to directory and change filename.</c></p>
+<p style="Normal" xid="516" props="font-family:Arial; dom-dir:ltr; font-style:normal; font-weight:normal; lang:en-US; text-position:normal; color:000000; tabstops:0.000000in/L0; text-decoration:none; font-size:12pt; text-align:left"><c props="font-family:Arial; font-size:12pt; color:000000; text-decoration:line-through; text-position:normal; font-weight:normal; font-style:normal; lang:en-US">- move the file around to directory and change filename.</c></p>
 <p style="Normal" xid="284" props="font-family:Arial; dom-dir:ltr; font-style:normal; font-weight:normal; lang:en-US; text-position:normal; color:000000; tabstops:0.000000in/L0; text-decoration:none; font-size:12pt; text-align:left"><c props="font-family:Arial; font-size:12pt; color:000000; text-decoration:line-through; text-position:normal; font-weight:normal; font-style:normal; lang:en-US">- client table</c></p>
 <p style="Normal" xid="292" props="font-family:Arial; dom-dir:ltr; font-style:normal; font-weight:normal; lang:en-US; text-position:normal; color:000000; tabstops:0.000000in/L0; text-decoration:none; font-size:12pt; text-align:left"><c props="font-family:Arial; font-size:12pt; color:000000; text-decoration:line-through; text-position:normal; font-weight:normal; font-style:normal; lang:en-US">- add 'client' to the pdf listing</c></p>
-<p style="Normal" xid="291" props="font-family:Arial; dom-dir:ltr; font-style:normal; font-weight:normal; lang:en-US; text-position:normal; color:000000; tabstops:0.000000in/L0; text-decoration:none; font-size:12pt; text-align:left"><c props="font-family:Arial; text-decoration:none; color:000000; font-size:12pt; text-position:normal; font-weight:normal; font-style:normal; lang:en-US">- AJAX for data entry, </c></p>
+<p style="Normal" xid="291" props="font-family:Arial; dom-dir:ltr; font-style:normal; font-weight:normal; lang:en-US; text-position:normal; color:000000; tabstops:0.000000in/L0; text-decoration:none; font-size:12pt; text-align:left"><c props="font-family:Arial; text-decoration:none; color:000000; font-size:12pt; text-position:normal; font-weight:normal; font-style:normal; lang:en-US">- Test everything so far.</c></p>
+<p style="Normal" xid="558" props="font-family:Arial; dom-dir:ltr; font-style:normal; font-weight:normal; lang:en-US; text-position:normal; color:000000; tabstops:0.000000in/L0; text-decoration:none; font-size:12pt; text-align:left"><c props="font-family:Arial; text-decoration:none; color:000000; font-size:12pt; text-position:normal; font-weight:normal; font-style:normal; lang:en-US">- AJAX for data entry, </c></p>
 <p style="Normal" xid="294" props="font-family:Arial; dom-dir:ltr; font-style:normal; font-weight:normal; lang:en-US; text-position:normal; color:000000; tabstops:0.000000in/L0; text-decoration:none; font-size:12pt; text-align:left"><c props="font-family:Arial; text-decoration:none; color:000000; font-size:12pt; text-position:normal; font-weight:normal; font-style:normal; lang:en-US">	-adding a new client and category in the New pdf section without leaving.</c></p>
 <p style="Normal" xid="293" props="font-family:Arial; dom-dir:ltr; font-style:normal; font-weight:normal; lang:en-US; text-position:normal; color:000000; tabstops:0.000000in/L0; text-decoration:none; font-size:12pt; text-align:left"></p>
 <p style="Normal" xid="285" props="font-family:Arial; dom-dir:ltr; font-style:normal; font-weight:normal; lang:en-US; text-position:normal; color:000000; tabstops:0.000000in/L0; text-decoration:none; font-size:12pt; text-align:left"><c props="font-family:Arial; text-decoration:none; color:000000; font-size:12pt; text-position:normal; font-weight:normal; font-style:normal; lang:en-US">- shortcuts plugin and configuration</c></p>
@@ -484,9 +492,6 @@
 <p style="Normal" xid="479" props="text-align:left; tabstops:0.000000in/L0; dom-dir:ltr"></p>
 <p style="Normal" xid="480" props="text-align:left; tabstops:0.000000in/L0; dom-dir:ltr"><c props="font-family:Andale Mono; font-size:10pt">&lt;/table&gt;</c></p>
 <p style="Normal" xid="481" props="text-align:left; tabstops:0.000000in/L0; dom-dir:ltr"></p>
-<p style="Normal" xid="450" props="tabstops:0.000000in/L0; dom-dir:ltr"></p>
-<p style="Normal" xid="451" props="tabstops:0.000000in/L0; dom-dir:ltr"></p>
-<p style="Normal" xid="452" props="tabstops:0.000000in/L0; dom-dir:ltr"></p>
 </section>
 <section id="1" listid="0" parentid="0" type="header" xid="91">
 <p xid="92" props="text-align:right"><c props="font-family:Arial; font-size:8pt; color:0000ff; text-decoration:none; text-position:normal; font-weight:bold; font-style:normal; lang:en-US">Digitech Corporation</c><c props="font-family:Arial; font-size:8pt; color:0000ff; text-decoration:none; text-position:normal; font-weight:normal; font-style:normal; lang:en-US"> Pty Ltd</c></p>

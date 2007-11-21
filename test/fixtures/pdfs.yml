@@ -1,5 +1,18 @@
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
-one:
+notice:
   id: 1
-two:
+  pdfdate: "2007-11-20"
+  pdfname: 'Notice Of Assessment'
+  filename: '20071121-Notice Of Assessment.pdf'
+  pdfnote: "Linda's Assessment"
+  category_id: 2
+  client_id: 3 
+
+bas:
   id: 2
+  pdfdate: <%= 5.days.ago.to_s(:db) %>
+  pdfname: '2007 Tax Assessment-adrian'
+  filename: '20071107-2007 Tax Assessment - adrian.pdf'
+  pdfnote: 
+  category_id: 1
+  client_id: 1

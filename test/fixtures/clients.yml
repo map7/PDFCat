@@ -1,5 +1,15 @@
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
-one:
+digitech:
   id: 1
-two:
+  name: 'Digitech Corporation'
+  email: 'michael@dtcorp.com.au'
+
+tramontana:
   id: 2
+  name: 'Tramontana Accountants'
+  email: 'joseph@tramontana.com.au'
+
+fastline: 
+  id: 3
+  name: 'Fast Line International'
+  email: 'wlay@fastline.com.au'
