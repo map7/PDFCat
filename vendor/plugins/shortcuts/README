@@ -1,0 +1,54 @@
+=Shortcuts
+
+Provides handling for keyboard shortcuts in javascript-enabled browsers.
+
+Tested on Firefox, Safari, IE 6 and IE 7.
+
+
+== Installation
+
+Install with
+
+  script/plugin install svn://rubyforge.org/var/svn/rails-oceania/shortcuts/trunk
+
+To prepare your application, run
+
+  script/generate shortcuts
+  
+This will copy the necessary javscript file to the public/javascripts directory of the application.
+
+Make sure you include either
+
+  javascript_include_tag :defaults
+  
+or
+
+  javascript_include_tag 'shortcuts'
+
+somewhere in your HTML header.
+
+
+==Usage Examples
+
+First, make sure that the shortcuts helper is available to your views and helpers. Include it in application_helper.rb:
+
+  module ApplicationHelper
+    include ShortcutsHelper
+    ...
+  end
+
+You can now use the helper methods in all your views:
+
+To register a navigation shortcut:
+
+  <%= shortcut 'p', projects_url %>
+ 
+To register an ajax shortcut:
+
+  <%= remote_shortcut 'd', delete_project_url(@project) %>
+
+To register an arbitrary javascript function:
+
+  <%= shortcut_function 'a', "alert('hello world');" %>
+
+For details, refer to the inline documentation for ShortcutsHelper.
