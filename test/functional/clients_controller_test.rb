@@ -12,20 +12,13 @@ class ClientsControllerTest < Test::Unit::TestCase
     @request    = ActionController::TestRequest.new
     @response   = ActionController::TestResponse.new
 
-    @first_id = clients(:first).id
+    @first_id = clients(:digitech).id
   end
 
   def test_index
     get :index
     assert_response :success
-    assert_template 'list'
-  end
-
-  def test_list
-    get :list
-
-    assert_response :success
-    assert_template 'list'
+    assert_template 'index'
 
     assert_not_nil assigns(:clients)
   end
@@ -52,10 +45,11 @@ class ClientsControllerTest < Test::Unit::TestCase
   def test_create
     num_clients = Client.count
 
-    post :create, :client => {}
+    post :create, :client => {:name => "johnsmith",
+							  :email => "johnsmith@hotmail.com" }
 
     assert_response :redirect
-    assert_redirected_to :action => 'list'
+    assert_redirected_to :action => 'index'
 
     assert_equal num_clients + 1, Client.count
   end
@@ -83,7 +77,7 @@ class ClientsControllerTest < Test::Unit::TestCase
 
     post :destroy, :id => @first_id
     assert_response :redirect
-    assert_redirected_to :action => 'list'
+    assert_redirected_to :action => 'index'
 
     assert_raise(ActiveRecord::RecordNotFound) {
       Client.find(@first_id)

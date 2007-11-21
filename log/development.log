@@ -18143,3 +18143,937 @@ Rendering pdfs/new
   [4;35;1mCategory Load (0.001549)[0m   [0mSELECT * FROM categories [0m
 Rendered pdfs/_form (0.00527)
 Completed in 0.04704 (21 reqs/sec) | Rendering: 0.00702 (14%) | DB: 0.02005 (42%) | 200 OK [http://localhost/pdfs/create]
+  [4;36;1mSQL (0.000166)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000399)[0m   [0mSELECT * FROM schema_info[0m
+  [4;36;1mSQL (0.000472)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.001167)[0m   [0mSHOW FIELDS FROM categories[0m
+  [4;36;1mSQL (0.001154)[0m   [0;1mSHOW KEYS FROM categories[0m
+  [4;35;1mSQL (0.001128)[0m   [0mSHOW FIELDS FROM clients[0m
+  [4;36;1mSQL (0.001069)[0m   [0;1mSHOW KEYS FROM clients[0m
+  [4;35;1mSQL (0.001583)[0m   [0mSHOW FIELDS FROM pdfs[0m
+  [4;36;1mSQL (0.001258)[0m   [0;1mSHOW KEYS FROM pdfs[0m
+  [4;35;1mSQL (0.000153)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.011524)[0m   [0;1mDROP DATABASE IF EXISTS `pdfcat_test`[0m
+  [4;35;1mSQL (0.001358)[0m   [0mCREATE DATABASE `pdfcat_test`[0m
+  [4;36;1mSQL (0.000160)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: #42S02Unknown table 'categories': DROP TABLE categories[0m
+  [4;36;1mSQL (0.002024)[0m   [0;1mCREATE TABLE categories (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) DEFAULT NULL, `description` varchar(255) DEFAULT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: #42S02Unknown table 'clients': DROP TABLE clients[0m
+  [4;36;1mSQL (0.001937)[0m   [0;1mCREATE TABLE clients (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) DEFAULT NULL, `email` varchar(255) DEFAULT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: #42S02Unknown table 'pdfs': DROP TABLE pdfs[0m
+  [4;36;1mSQL (0.002116)[0m   [0;1mCREATE TABLE pdfs (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `pdfdate` date DEFAULT NULL, `pdfname` varchar(255) DEFAULT NULL, `filename` varchar(255) DEFAULT NULL, `pdfnote` text DEFAULT NULL, `category_id` int(11) DEFAULT NULL, `client_id` int(11) DEFAULT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.001494)[0m   [0mCREATE TABLE schema_info (version int(11))[0m
+  [4;36;1mSQL (0.002150)[0m   [0;1mINSERT INTO schema_info (version) VALUES(0)[0m
+  [4;35;1mSQL (0.013476)[0m   [0mSHOW FIELDS FROM schema_info[0m
+  [4;36;1mSQL (0.001236)[0m   [0;1mUPDATE schema_info SET version = 7[0m
+
+
+Processing ClientsController#index (for 127.0.0.1 at 2007-11-21 13:48:24) [GET]
+  Session ID: 960a680d02d6b9d35aa9843023b06506
+  Parameters: {"action"=>"index", "controller"=>"clients"}
+  [4;36;1mClient Columns (0.002484)[0m   [0;1mSHOW FIELDS FROM clients[0m
+  [4;35;1mSQL (0.000546)[0m   [0mSELECT count(*) AS count_all FROM clients [0m
+  [4;36;1mClient Load (0.000612)[0m   [0;1mSELECT * FROM clients LIMIT 0, 10[0m
+Rendering  within layouts/application
+Rendering clients/index
+Completed in 0.09194 (10 reqs/sec) | Rendering: 0.00725 (7%) | DB: 0.00364 (3%) | 200 OK [http://localhost/clients]
+
+
+Processing ClientsController#new (for 127.0.0.1 at 2007-11-21 13:48:25) [GET]
+  Session ID: 960a680d02d6b9d35aa9843023b06506
+  Parameters: {"action"=>"new", "controller"=>"clients"}
+  [4;35;1mClient Columns (0.001543)[0m   [0mSHOW FIELDS FROM clients[0m
+Rendering  within layouts/application
+Rendering clients/new
+Rendered clients/_form (0.00119)
+Completed in 0.01274 (78 reqs/sec) | Rendering: 0.00564 (44%) | DB: 0.00154 (12%) | 200 OK [http://localhost/clients/new]
+
+
+Processing ClientsController#create (for 127.0.0.1 at 2007-11-21 13:48:31) [POST]
+  Session ID: 960a680d02d6b9d35aa9843023b06506
+  Parameters: {"commit"=>"Create", "client"=>{"name"=>"test", "email"=>""}, "action"=>"create", "controller"=>"clients"}
+  [4;36;1mClient Columns (0.001668)[0m   [0;1mSHOW FIELDS FROM clients[0m
+  [4;35;1mSQL (0.000162)[0m   [0mBEGIN[0m
+  [4;36;1mClient Load (0.000635)[0m   [0;1mSELECT * FROM clients WHERE (clients.name = 'test') LIMIT 1[0m
+  [4;35;1mSQL (0.000409)[0m   [0mCOMMIT[0m
+Rendering layoutfalseactionnew within layouts/application
+Rendering clients/new
+Rendered clients/_form (0.00062)
+Completed in 0.01593 (62 reqs/sec) | Rendering: 0.00556 (34%) | DB: 0.00287 (18%) | 200 OK [http://localhost/clients/create]
+
+
+Processing ClientsController#create (for 127.0.0.1 at 2007-11-21 13:49:17) [POST]
+  Session ID: 960a680d02d6b9d35aa9843023b06506
+  Parameters: {"commit"=>"Create", "client"=>{"name"=>"test", "email"=>"test@hotmail.com"}, "action"=>"create", "controller"=>"clients"}
+  [4;36;1mClient Columns (0.001722)[0m   [0;1mSHOW FIELDS FROM clients[0m
+  [4;35;1mSQL (0.000202)[0m   [0mBEGIN[0m
+  [4;36;1mClient Load (0.000796)[0m   [0;1mSELECT * FROM clients WHERE (clients.name = 'test') LIMIT 1[0m
+  [4;35;1mSQL (0.002151)[0m   [0mINSERT INTO clients (`name`, `email`) VALUES('test', 'test@hotmail.com')[0m
+  [4;36;1mSQL (0.000677)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/clients
+Completed in 0.01523 (65 reqs/sec) | DB: 0.00555 (36%) | 302 Found [http://localhost/clients/create]
+
+
+Processing ClientsController#index (for 127.0.0.1 at 2007-11-21 13:49:17) [GET]
+  Session ID: 960a680d02d6b9d35aa9843023b06506
+  Parameters: {"action"=>"index", "controller"=>"clients"}
+  [4;35;1mClient Columns (0.001652)[0m   [0mSHOW FIELDS FROM clients[0m
+  [4;36;1mSQL (0.000498)[0m   [0;1mSELECT count(*) AS count_all FROM clients [0m
+  [4;35;1mClient Load (0.000637)[0m   [0mSELECT * FROM clients LIMIT 0, 10[0m
+Rendering  within layouts/application
+Rendering clients/index
+Completed in 0.01793 (55 reqs/sec) | Rendering: 0.00936 (52%) | DB: 0.00279 (15%) | 200 OK [http://localhost/clients]
+
+
+Processing ClientsController#show (for 127.0.0.1 at 2007-11-21 13:49:42) [GET]
+  Session ID: 960a680d02d6b9d35aa9843023b06506
+  Parameters: {"action"=>"show", "id"=>"4", "controller"=>"clients"}
+  [4;36;1mClient Columns (0.001825)[0m   [0;1mSHOW FIELDS FROM clients[0m
+  [4;35;1mClient Load (0.003077)[0m   [0mSELECT * FROM clients WHERE (clients.`id` = 4) [0m
+Rendering  within layouts/application
+Rendering clients/show
+Completed in 0.01557 (64 reqs/sec) | Rendering: 0.00461 (29%) | DB: 0.00490 (31%) | 200 OK [http://localhost/clients/show/4]
+
+
+Processing ClientsController#list (for 127.0.0.1 at 2007-11-21 13:49:43) [GET]
+  Session ID: 960a680d02d6b9d35aa9843023b06506
+  Parameters: {"action"=>"list", "controller"=>"clients"}
+
+
+ActionController::UnknownAction (No action responded to list):
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:632:in `call_filter'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:634:in `call_filter'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:619:in `perform_action_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/benchmarking.rb:66:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/benchmarking.rb:66:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/rescue.rb:83:in `perform_action'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:430:in `send'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:430:in `process_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:624:in `process_without_session_management_support'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/session_management.rb:114:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:330:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.2.3/lib/dispatcher.rb:41:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.2.3/lib/webrick_server.rb:113:in `handle_dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.2.3/lib/webrick_server.rb:79:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.2.3/lib/webrick_server.rb:63:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.2.3/lib/commands/servers/webrick.rb:59
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:495:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:495:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.2.3/lib/commands/server.rb:39
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    script/server:3
+
+
+Rendering /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/templates/rescues/layout.rhtml (404 Page Not Found)
+
+
+Processing ClientsController#list (for 127.0.0.1 at 2007-11-21 13:50:13) [GET]
+  Session ID: 960a680d02d6b9d35aa9843023b06506
+  Parameters: {"action"=>"list", "controller"=>"clients"}
+
+
+ActionController::UnknownAction (No action responded to list):
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:632:in `call_filter'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:634:in `call_filter'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:619:in `perform_action_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/benchmarking.rb:66:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/benchmarking.rb:66:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/rescue.rb:83:in `perform_action'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:430:in `send'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:430:in `process_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:624:in `process_without_session_management_support'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/session_management.rb:114:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:330:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.2.3/lib/dispatcher.rb:41:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.2.3/lib/webrick_server.rb:113:in `handle_dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.2.3/lib/webrick_server.rb:79:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.2.3/lib/webrick_server.rb:63:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.2.3/lib/commands/servers/webrick.rb:59
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:495:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:495:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.2.3/lib/commands/server.rb:39
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    script/server:3
+
+
+Rendering /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/templates/rescues/layout.rhtml (404 Page Not Found)
+
+
+Processing ClientsController#show (for 127.0.0.1 at 2007-11-21 13:50:16) [GET]
+  Session ID: 960a680d02d6b9d35aa9843023b06506
+  Parameters: {"action"=>"show", "id"=>"4", "controller"=>"clients"}
+  [4;36;1mClient Columns (0.001593)[0m   [0;1mSHOW FIELDS FROM clients[0m
+  [4;35;1mClient Load (0.000596)[0m   [0mSELECT * FROM clients WHERE (clients.`id` = 4) [0m
+Rendering  within layouts/application
+Rendering clients/show
+Completed in 0.01251 (79 reqs/sec) | Rendering: 0.00431 (34%) | DB: 0.00219 (17%) | 200 OK [http://localhost/clients/show/4]
+
+
+Processing ClientsController#index (for 127.0.0.1 at 2007-11-21 13:50:18) [GET]
+  Session ID: 960a680d02d6b9d35aa9843023b06506
+  Parameters: {"action"=>"index", "controller"=>"clients"}
+  [4;36;1mClient Columns (0.001735)[0m   [0;1mSHOW FIELDS FROM clients[0m
+  [4;35;1mSQL (0.000512)[0m   [0mSELECT count(*) AS count_all FROM clients [0m
+  [4;36;1mClient Load (0.000482)[0m   [0;1mSELECT * FROM clients LIMIT 0, 10[0m
+Rendering  within layouts/application
+Rendering clients/index
+Completed in 0.01539 (64 reqs/sec) | Rendering: 0.00564 (36%) | DB: 0.00273 (17%) | 200 OK [http://localhost/clients]
+  [4;36;1mSQL (0.000170)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000326)[0m   [0mSELECT * FROM schema_info[0m
+  [4;36;1mSQL (0.000418)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.001241)[0m   [0mSHOW FIELDS FROM categories[0m
+  [4;36;1mSQL (0.001236)[0m   [0;1mSHOW KEYS FROM categories[0m
+  [4;35;1mSQL (0.001227)[0m   [0mSHOW FIELDS FROM clients[0m
+  [4;36;1mSQL (0.001478)[0m   [0;1mSHOW KEYS FROM clients[0m
+  [4;35;1mSQL (0.001484)[0m   [0mSHOW FIELDS FROM pdfs[0m
+  [4;36;1mSQL (0.001120)[0m   [0;1mSHOW KEYS FROM pdfs[0m
+  [4;35;1mSQL (0.000155)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.003545)[0m   [0;1mDROP DATABASE IF EXISTS `pdfcat_test`[0m
+  [4;35;1mSQL (0.000269)[0m   [0mCREATE DATABASE `pdfcat_test`[0m
+  [4;36;1mSQL (0.000160)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: #42S02Unknown table 'categories': DROP TABLE categories[0m
+  [4;36;1mSQL (0.002124)[0m   [0;1mCREATE TABLE categories (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) DEFAULT NULL, `description` varchar(255) DEFAULT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: #42S02Unknown table 'clients': DROP TABLE clients[0m
+  [4;36;1mSQL (0.002047)[0m   [0;1mCREATE TABLE clients (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) DEFAULT NULL, `email` varchar(255) DEFAULT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: #42S02Unknown table 'pdfs': DROP TABLE pdfs[0m
+  [4;36;1mSQL (0.002136)[0m   [0;1mCREATE TABLE pdfs (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `pdfdate` date DEFAULT NULL, `pdfname` varchar(255) DEFAULT NULL, `filename` varchar(255) DEFAULT NULL, `pdfnote` text DEFAULT NULL, `category_id` int(11) DEFAULT NULL, `client_id` int(11) DEFAULT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.001371)[0m   [0mCREATE TABLE schema_info (version int(11))[0m
+  [4;36;1mSQL (0.000290)[0m   [0;1mINSERT INTO schema_info (version) VALUES(0)[0m
+  [4;35;1mSQL (0.002475)[0m   [0mSHOW FIELDS FROM schema_info[0m
+  [4;36;1mSQL (0.000263)[0m   [0;1mUPDATE schema_info SET version = 7[0m
+  [4;36;1mSQL (0.000169)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000370)[0m   [0mSELECT * FROM schema_info[0m
+  [4;36;1mSQL (0.000498)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.001218)[0m   [0mSHOW FIELDS FROM categories[0m
+  [4;36;1mSQL (0.001121)[0m   [0;1mSHOW KEYS FROM categories[0m
+  [4;35;1mSQL (0.001096)[0m   [0mSHOW FIELDS FROM clients[0m
+  [4;36;1mSQL (0.001366)[0m   [0;1mSHOW KEYS FROM clients[0m
+  [4;35;1mSQL (0.001426)[0m   [0mSHOW FIELDS FROM pdfs[0m
+  [4;36;1mSQL (0.001088)[0m   [0;1mSHOW KEYS FROM pdfs[0m
+  [4;35;1mSQL (0.000210)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.003317)[0m   [0;1mDROP DATABASE IF EXISTS `pdfcat_test`[0m
+  [4;35;1mSQL (0.000290)[0m   [0mCREATE DATABASE `pdfcat_test`[0m
+  [4;36;1mSQL (0.000159)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: #42S02Unknown table 'categories': DROP TABLE categories[0m
+  [4;36;1mSQL (0.002012)[0m   [0;1mCREATE TABLE categories (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) DEFAULT NULL, `description` varchar(255) DEFAULT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: #42S02Unknown table 'clients': DROP TABLE clients[0m
+  [4;36;1mSQL (0.001928)[0m   [0;1mCREATE TABLE clients (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) DEFAULT NULL, `email` varchar(255) DEFAULT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: #42S02Unknown table 'pdfs': DROP TABLE pdfs[0m
+  [4;36;1mSQL (0.002156)[0m   [0;1mCREATE TABLE pdfs (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `pdfdate` date DEFAULT NULL, `pdfname` varchar(255) DEFAULT NULL, `filename` varchar(255) DEFAULT NULL, `pdfnote` text DEFAULT NULL, `category_id` int(11) DEFAULT NULL, `client_id` int(11) DEFAULT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.001343)[0m   [0mCREATE TABLE schema_info (version int(11))[0m
+  [4;36;1mSQL (0.000285)[0m   [0;1mINSERT INTO schema_info (version) VALUES(0)[0m
+  [4;35;1mSQL (0.000908)[0m   [0mSHOW FIELDS FROM schema_info[0m
+  [4;36;1mSQL (0.000325)[0m   [0;1mUPDATE schema_info SET version = 7[0m
+  [4;36;1mSQL (0.000156)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mPdf Columns (0.001533)[0m   [0mSHOW FIELDS FROM pdfs[0m
+  [4;36;1mSQL (0.000170)[0m   [0;1mBEGIN[0m
+  [4;35;1mPdf Load (0.000766)[0m   [0mSELECT * FROM pdfs WHERE (pdfs.pdfname IS NULL AND pdfs.pdfdate IS NULL AND pdfs.category_id IS NULL AND pdfs.client_id IS NULL) LIMIT 1[0m
+  [4;36;1mSQL (0.000198)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.000937)[0m   [0mBEGIN[0m
+  [4;36;1mPdf Load (0.001756)[0m   [0;1mSELECT * FROM pdfs WHERE (pdfs.pdfname IS NULL AND pdfs.pdfdate = '2007-11-21' AND pdfs.category_id IS NULL AND pdfs.client_id IS NULL) LIMIT 1[0m
+  [4;35;1mSQL (0.000399)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.000217)[0m   [0;1mBEGIN[0m
+  [4;35;1mPdf Load (0.000988)[0m   [0mSELECT * FROM pdfs WHERE (pdfs.pdfname = 'testpdf' AND pdfs.pdfdate = '2007-11-21' AND pdfs.category_id = 1 AND pdfs.client_id = 1) LIMIT 1[0m
+  [4;36;1mSQL (0.000397)[0m   [0;1mINSERT INTO pdfs (`pdfname`, `client_id`, `pdfdate`, `category_id`, `filename`, `pdfnote`) VALUES('testpdf', 1, '2007-11-21', 1, '/livedata/pdfcat_test_upload/DOC070731002030(0001).pdf', NULL)[0m
+  [4;35;1mSQL (0.000568)[0m   [0mCOMMIT[0m
+  [4;36;1mPdf Load (0.001195)[0m   [0;1mSELECT * FROM pdfs [0m
+  [4;36;1mSQL (0.000165)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000323)[0m   [0mSELECT * FROM schema_info[0m
+  [4;36;1mSQL (0.000415)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.001215)[0m   [0mSHOW FIELDS FROM categories[0m
+  [4;36;1mSQL (0.001113)[0m   [0;1mSHOW KEYS FROM categories[0m
+  [4;35;1mSQL (0.001094)[0m   [0mSHOW FIELDS FROM clients[0m
+  [4;36;1mSQL (0.001372)[0m   [0;1mSHOW KEYS FROM clients[0m
+  [4;35;1mSQL (0.001408)[0m   [0mSHOW FIELDS FROM pdfs[0m
+  [4;36;1mSQL (0.001111)[0m   [0;1mSHOW KEYS FROM pdfs[0m
+  [4;35;1mSQL (0.000150)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.003835)[0m   [0;1mDROP DATABASE IF EXISTS `pdfcat_test`[0m
+  [4;35;1mSQL (0.000278)[0m   [0mCREATE DATABASE `pdfcat_test`[0m
+  [4;36;1mSQL (0.000200)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: #42S02Unknown table 'categories': DROP TABLE categories[0m
+  [4;36;1mSQL (0.002754)[0m   [0;1mCREATE TABLE categories (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) DEFAULT NULL, `description` varchar(255) DEFAULT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: #42S02Unknown table 'clients': DROP TABLE clients[0m
+  [4;36;1mSQL (0.002077)[0m   [0;1mCREATE TABLE clients (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) DEFAULT NULL, `email` varchar(255) DEFAULT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: #42S02Unknown table 'pdfs': DROP TABLE pdfs[0m
+  [4;36;1mSQL (0.012624)[0m   [0;1mCREATE TABLE pdfs (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `pdfdate` date DEFAULT NULL, `pdfname` varchar(255) DEFAULT NULL, `filename` varchar(255) DEFAULT NULL, `pdfnote` text DEFAULT NULL, `category_id` int(11) DEFAULT NULL, `client_id` int(11) DEFAULT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.001897)[0m   [0mCREATE TABLE schema_info (version int(11))[0m
+  [4;36;1mSQL (0.000323)[0m   [0;1mINSERT INTO schema_info (version) VALUES(0)[0m
+  [4;35;1mSQL (0.001014)[0m   [0mSHOW FIELDS FROM schema_info[0m
+  [4;36;1mSQL (0.000169)[0m   [0;1mUPDATE schema_info SET version = 7[0m
+  [4;36;1mSQL (0.000170)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000324)[0m   [0mSELECT * FROM schema_info[0m
+  [4;36;1mSQL (0.000472)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.001261)[0m   [0mSHOW FIELDS FROM categories[0m
+  [4;36;1mSQL (0.001127)[0m   [0;1mSHOW KEYS FROM categories[0m
+  [4;35;1mSQL (0.001128)[0m   [0mSHOW FIELDS FROM clients[0m
+  [4;36;1mSQL (0.001334)[0m   [0;1mSHOW KEYS FROM clients[0m
+  [4;35;1mSQL (0.001459)[0m   [0mSHOW FIELDS FROM pdfs[0m
+  [4;36;1mSQL (0.001111)[0m   [0;1mSHOW KEYS FROM pdfs[0m
+  [4;35;1mSQL (0.000150)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.003747)[0m   [0;1mDROP DATABASE IF EXISTS `pdfcat_test`[0m
+  [4;35;1mSQL (0.000355)[0m   [0mCREATE DATABASE `pdfcat_test`[0m
+  [4;36;1mSQL (0.000157)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: #42S02Unknown table 'categories': DROP TABLE categories[0m
+  [4;36;1mSQL (0.002042)[0m   [0;1mCREATE TABLE categories (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) DEFAULT NULL, `description` varchar(255) DEFAULT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: #42S02Unknown table 'clients': DROP TABLE clients[0m
+  [4;36;1mSQL (0.001998)[0m   [0;1mCREATE TABLE clients (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) DEFAULT NULL, `email` varchar(255) DEFAULT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: #42S02Unknown table 'pdfs': DROP TABLE pdfs[0m
+  [4;36;1mSQL (0.013257)[0m   [0;1mCREATE TABLE pdfs (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `pdfdate` date DEFAULT NULL, `pdfname` varchar(255) DEFAULT NULL, `filename` varchar(255) DEFAULT NULL, `pdfnote` text DEFAULT NULL, `category_id` int(11) DEFAULT NULL, `client_id` int(11) DEFAULT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.001507)[0m   [0mCREATE TABLE schema_info (version int(11))[0m
+  [4;36;1mSQL (0.000426)[0m   [0;1mINSERT INTO schema_info (version) VALUES(0)[0m
+  [4;35;1mSQL (0.001298)[0m   [0mSHOW FIELDS FROM schema_info[0m
+  [4;36;1mSQL (0.000190)[0m   [0;1mUPDATE schema_info SET version = 7[0m
+  [4;36;1mSQL (0.000167)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000478)[0m   [0mSELECT * FROM schema_info[0m
+  [4;36;1mSQL (0.000428)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.001218)[0m   [0mSHOW FIELDS FROM categories[0m
+  [4;36;1mSQL (0.001119)[0m   [0;1mSHOW KEYS FROM categories[0m
+  [4;35;1mSQL (0.001160)[0m   [0mSHOW FIELDS FROM clients[0m
+  [4;36;1mSQL (0.001347)[0m   [0;1mSHOW KEYS FROM clients[0m
+  [4;35;1mSQL (0.001396)[0m   [0mSHOW FIELDS FROM pdfs[0m
+  [4;36;1mSQL (0.001086)[0m   [0;1mSHOW KEYS FROM pdfs[0m
+  [4;35;1mSQL (0.000152)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.003733)[0m   [0;1mDROP DATABASE IF EXISTS `pdfcat_test`[0m
+  [4;35;1mSQL (0.000290)[0m   [0mCREATE DATABASE `pdfcat_test`[0m
+  [4;36;1mSQL (0.000160)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: #42S02Unknown table 'categories': DROP TABLE categories[0m
+  [4;36;1mSQL (0.001996)[0m   [0;1mCREATE TABLE categories (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) DEFAULT NULL, `description` varchar(255) DEFAULT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: #42S02Unknown table 'clients': DROP TABLE clients[0m
+  [4;36;1mSQL (0.001906)[0m   [0;1mCREATE TABLE clients (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) DEFAULT NULL, `email` varchar(255) DEFAULT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: #42S02Unknown table 'pdfs': DROP TABLE pdfs[0m
+  [4;36;1mSQL (0.002079)[0m   [0;1mCREATE TABLE pdfs (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `pdfdate` date DEFAULT NULL, `pdfname` varchar(255) DEFAULT NULL, `filename` varchar(255) DEFAULT NULL, `pdfnote` text DEFAULT NULL, `category_id` int(11) DEFAULT NULL, `client_id` int(11) DEFAULT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.001357)[0m   [0mCREATE TABLE schema_info (version int(11))[0m
+  [4;36;1mSQL (0.000286)[0m   [0;1mINSERT INTO schema_info (version) VALUES(0)[0m
+  [4;35;1mSQL (0.001150)[0m   [0mSHOW FIELDS FROM schema_info[0m
+  [4;36;1mSQL (0.000181)[0m   [0;1mUPDATE schema_info SET version = 7[0m
+  [4;36;1mSQL (0.000170)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000336)[0m   [0mSELECT * FROM schema_info[0m
+  [4;36;1mSQL (0.000471)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.001315)[0m   [0mSHOW FIELDS FROM categories[0m
+  [4;36;1mSQL (0.001173)[0m   [0;1mSHOW KEYS FROM categories[0m
+  [4;35;1mSQL (0.001172)[0m   [0mSHOW FIELDS FROM clients[0m
+  [4;36;1mSQL (0.001453)[0m   [0;1mSHOW KEYS FROM clients[0m
+  [4;35;1mSQL (0.001473)[0m   [0mSHOW FIELDS FROM pdfs[0m
+  [4;36;1mSQL (0.001091)[0m   [0;1mSHOW KEYS FROM pdfs[0m
+  [4;35;1mSQL (0.000160)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.011706)[0m   [0;1mDROP DATABASE IF EXISTS `pdfcat_test`[0m
+  [4;35;1mSQL (0.000335)[0m   [0mCREATE DATABASE `pdfcat_test`[0m
+  [4;36;1mSQL (0.000159)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: #42S02Unknown table 'categories': DROP TABLE categories[0m
+  [4;36;1mSQL (0.002097)[0m   [0;1mCREATE TABLE categories (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) DEFAULT NULL, `description` varchar(255) DEFAULT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: #42S02Unknown table 'clients': DROP TABLE clients[0m
+  [4;36;1mSQL (0.001999)[0m   [0;1mCREATE TABLE clients (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) DEFAULT NULL, `email` varchar(255) DEFAULT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: #42S02Unknown table 'pdfs': DROP TABLE pdfs[0m
+  [4;36;1mSQL (0.002034)[0m   [0;1mCREATE TABLE pdfs (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `pdfdate` date DEFAULT NULL, `pdfname` varchar(255) DEFAULT NULL, `filename` varchar(255) DEFAULT NULL, `pdfnote` text DEFAULT NULL, `category_id` int(11) DEFAULT NULL, `client_id` int(11) DEFAULT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.002849)[0m   [0mCREATE TABLE schema_info (version int(11))[0m
+  [4;36;1mSQL (0.000441)[0m   [0;1mINSERT INTO schema_info (version) VALUES(0)[0m
+  [4;35;1mSQL (0.001091)[0m   [0mSHOW FIELDS FROM schema_info[0m
+  [4;36;1mSQL (0.000174)[0m   [0;1mUPDATE schema_info SET version = 7[0m
+  [4;36;1mSQL (0.000168)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000323)[0m   [0mSELECT * FROM schema_info[0m
+  [4;36;1mSQL (0.000416)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.001212)[0m   [0mSHOW FIELDS FROM categories[0m
+  [4;36;1mSQL (0.001114)[0m   [0;1mSHOW KEYS FROM categories[0m
+  [4;35;1mSQL (0.001086)[0m   [0mSHOW FIELDS FROM clients[0m
+  [4;36;1mSQL (0.001410)[0m   [0;1mSHOW KEYS FROM clients[0m
+  [4;35;1mSQL (0.001668)[0m   [0mSHOW FIELDS FROM pdfs[0m
+  [4;36;1mSQL (0.001137)[0m   [0;1mSHOW KEYS FROM pdfs[0m
+  [4;35;1mSQL (0.000149)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.004093)[0m   [0;1mDROP DATABASE IF EXISTS `pdfcat_test`[0m
+  [4;35;1mSQL (0.000437)[0m   [0mCREATE DATABASE `pdfcat_test`[0m
+  [4;36;1mSQL (0.000168)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: #42S02Unknown table 'categories': DROP TABLE categories[0m
+  [4;36;1mSQL (0.002099)[0m   [0;1mCREATE TABLE categories (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) DEFAULT NULL, `description` varchar(255) DEFAULT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: #42S02Unknown table 'clients': DROP TABLE clients[0m
+  [4;36;1mSQL (0.001923)[0m   [0;1mCREATE TABLE clients (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) DEFAULT NULL, `email` varchar(255) DEFAULT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: #42S02Unknown table 'pdfs': DROP TABLE pdfs[0m
+  [4;36;1mSQL (0.016885)[0m   [0;1mCREATE TABLE pdfs (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `pdfdate` date DEFAULT NULL, `pdfname` varchar(255) DEFAULT NULL, `filename` varchar(255) DEFAULT NULL, `pdfnote` text DEFAULT NULL, `category_id` int(11) DEFAULT NULL, `client_id` int(11) DEFAULT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.001467)[0m   [0mCREATE TABLE schema_info (version int(11))[0m
+  [4;36;1mSQL (0.000325)[0m   [0;1mINSERT INTO schema_info (version) VALUES(0)[0m
+  [4;35;1mSQL (0.000902)[0m   [0mSHOW FIELDS FROM schema_info[0m
+  [4;36;1mSQL (0.000173)[0m   [0;1mUPDATE schema_info SET version = 7[0m
+  [4;36;1mSQL (0.000211)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000324)[0m   [0mSELECT * FROM schema_info[0m
+  [4;36;1mSQL (0.000417)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.001219)[0m   [0mSHOW FIELDS FROM categories[0m
+  [4;36;1mSQL (0.001155)[0m   [0;1mSHOW KEYS FROM categories[0m
+  [4;35;1mSQL (0.001183)[0m   [0mSHOW FIELDS FROM clients[0m
+  [4;36;1mSQL (0.001595)[0m   [0;1mSHOW KEYS FROM clients[0m
+  [4;35;1mSQL (0.001557)[0m   [0mSHOW FIELDS FROM pdfs[0m
+  [4;36;1mSQL (0.001215)[0m   [0;1mSHOW KEYS FROM pdfs[0m
+  [4;35;1mSQL (0.000150)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.003619)[0m   [0;1mDROP DATABASE IF EXISTS `pdfcat_test`[0m
+  [4;35;1mSQL (0.000259)[0m   [0mCREATE DATABASE `pdfcat_test`[0m
+  [4;36;1mSQL (0.000163)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: #42S02Unknown table 'categories': DROP TABLE categories[0m
+  [4;36;1mSQL (0.002144)[0m   [0;1mCREATE TABLE categories (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) DEFAULT NULL, `description` varchar(255) DEFAULT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: #42S02Unknown table 'clients': DROP TABLE clients[0m
+  [4;36;1mSQL (0.001953)[0m   [0;1mCREATE TABLE clients (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) DEFAULT NULL, `email` varchar(255) DEFAULT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: #42S02Unknown table 'pdfs': DROP TABLE pdfs[0m
+  [4;36;1mSQL (0.002683)[0m   [0;1mCREATE TABLE pdfs (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `pdfdate` date DEFAULT NULL, `pdfname` varchar(255) DEFAULT NULL, `filename` varchar(255) DEFAULT NULL, `pdfnote` text DEFAULT NULL, `category_id` int(11) DEFAULT NULL, `client_id` int(11) DEFAULT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.001459)[0m   [0mCREATE TABLE schema_info (version int(11))[0m
+  [4;36;1mSQL (0.000286)[0m   [0;1mINSERT INTO schema_info (version) VALUES(0)[0m
+  [4;35;1mSQL (0.000909)[0m   [0mSHOW FIELDS FROM schema_info[0m
+  [4;36;1mSQL (0.000324)[0m   [0;1mUPDATE schema_info SET version = 7[0m
+  [4;36;1mSQL (0.000174)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000325)[0m   [0mSELECT * FROM schema_info[0m
+  [4;36;1mSQL (0.000422)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.001302)[0m   [0mSHOW FIELDS FROM categories[0m
+  [4;36;1mSQL (0.002286)[0m   [0;1mSHOW KEYS FROM categories[0m
+  [4;35;1mSQL (0.001314)[0m   [0mSHOW FIELDS FROM clients[0m
+  [4;36;1mSQL (0.001404)[0m   [0;1mSHOW KEYS FROM clients[0m
+  [4;35;1mSQL (0.001468)[0m   [0mSHOW FIELDS FROM pdfs[0m
+  [4;36;1mSQL (0.001172)[0m   [0;1mSHOW KEYS FROM pdfs[0m
+  [4;35;1mSQL (0.000148)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.003474)[0m   [0;1mDROP DATABASE IF EXISTS `pdfcat_test`[0m
+  [4;35;1mSQL (0.000295)[0m   [0mCREATE DATABASE `pdfcat_test`[0m
+  [4;36;1mSQL (0.000236)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: #42S02Unknown table 'categories': DROP TABLE categories[0m
+  [4;36;1mSQL (0.008417)[0m   [0;1mCREATE TABLE categories (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) DEFAULT NULL, `description` varchar(255) DEFAULT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: #42S02Unknown table 'clients': DROP TABLE clients[0m
+  [4;36;1mSQL (0.002065)[0m   [0;1mCREATE TABLE clients (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) DEFAULT NULL, `email` varchar(255) DEFAULT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: #42S02Unknown table 'pdfs': DROP TABLE pdfs[0m
+  [4;36;1mSQL (0.002113)[0m   [0;1mCREATE TABLE pdfs (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `pdfdate` date DEFAULT NULL, `pdfname` varchar(255) DEFAULT NULL, `filename` varchar(255) DEFAULT NULL, `pdfnote` text DEFAULT NULL, `category_id` int(11) DEFAULT NULL, `client_id` int(11) DEFAULT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.001586)[0m   [0mCREATE TABLE schema_info (version int(11))[0m
+  [4;36;1mSQL (0.000288)[0m   [0;1mINSERT INTO schema_info (version) VALUES(0)[0m
+  [4;35;1mSQL (0.000948)[0m   [0mSHOW FIELDS FROM schema_info[0m
+  [4;36;1mSQL (0.000271)[0m   [0;1mUPDATE schema_info SET version = 7[0m
+  [4;36;1mSQL (0.000168)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000326)[0m   [0mSELECT * FROM schema_info[0m
+  [4;36;1mSQL (0.000422)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.001231)[0m   [0mSHOW FIELDS FROM categories[0m
+  [4;36;1mSQL (0.004081)[0m   [0;1mSHOW KEYS FROM categories[0m
+  [4;35;1mSQL (0.001371)[0m   [0mSHOW FIELDS FROM clients[0m
+  [4;36;1mSQL (0.001313)[0m   [0;1mSHOW KEYS FROM clients[0m
+  [4;35;1mSQL (0.001472)[0m   [0mSHOW FIELDS FROM pdfs[0m
+  [4;36;1mSQL (0.001163)[0m   [0;1mSHOW KEYS FROM pdfs[0m
+  [4;35;1mSQL (0.000151)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.004013)[0m   [0;1mDROP DATABASE IF EXISTS `pdfcat_test`[0m
+  [4;35;1mSQL (0.000276)[0m   [0mCREATE DATABASE `pdfcat_test`[0m
+  [4;36;1mSQL (0.000158)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: #42S02Unknown table 'categories': DROP TABLE categories[0m
+  [4;36;1mSQL (0.002013)[0m   [0;1mCREATE TABLE categories (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) DEFAULT NULL, `description` varchar(255) DEFAULT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: #42S02Unknown table 'clients': DROP TABLE clients[0m
+  [4;36;1mSQL (0.002124)[0m   [0;1mCREATE TABLE clients (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) DEFAULT NULL, `email` varchar(255) DEFAULT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: #42S02Unknown table 'pdfs': DROP TABLE pdfs[0m
+  [4;36;1mSQL (0.002299)[0m   [0;1mCREATE TABLE pdfs (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `pdfdate` date DEFAULT NULL, `pdfname` varchar(255) DEFAULT NULL, `filename` varchar(255) DEFAULT NULL, `pdfnote` text DEFAULT NULL, `category_id` int(11) DEFAULT NULL, `client_id` int(11) DEFAULT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.001393)[0m   [0mCREATE TABLE schema_info (version int(11))[0m
+  [4;36;1mSQL (0.000291)[0m   [0;1mINSERT INTO schema_info (version) VALUES(0)[0m
+  [4;35;1mSQL (0.000943)[0m   [0mSHOW FIELDS FROM schema_info[0m
+  [4;36;1mSQL (0.000269)[0m   [0;1mUPDATE schema_info SET version = 7[0m
+  [4;36;1mSQL (0.000171)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000323)[0m   [0mSELECT * FROM schema_info[0m
+  [4;36;1mSQL (0.000418)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.001933)[0m   [0mSHOW FIELDS FROM categories[0m
+  [4;36;1mSQL (0.001300)[0m   [0;1mSHOW KEYS FROM categories[0m
+  [4;35;1mSQL (0.001221)[0m   [0mSHOW FIELDS FROM clients[0m
+  [4;36;1mSQL (0.001441)[0m   [0;1mSHOW KEYS FROM clients[0m
+  [4;35;1mSQL (0.001493)[0m   [0mSHOW FIELDS FROM pdfs[0m
+  [4;36;1mSQL (0.001087)[0m   [0;1mSHOW KEYS FROM pdfs[0m
+  [4;35;1mSQL (0.000148)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.003664)[0m   [0;1mDROP DATABASE IF EXISTS `pdfcat_test`[0m
+  [4;35;1mSQL (0.000989)[0m   [0mCREATE DATABASE `pdfcat_test`[0m
+  [4;36;1mSQL (0.000160)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: #42S02Unknown table 'categories': DROP TABLE categories[0m
+  [4;36;1mSQL (0.002032)[0m   [0;1mCREATE TABLE categories (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) DEFAULT NULL, `description` varchar(255) DEFAULT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: #42S02Unknown table 'clients': DROP TABLE clients[0m
+  [4;36;1mSQL (0.002023)[0m   [0;1mCREATE TABLE clients (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) DEFAULT NULL, `email` varchar(255) DEFAULT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: #42S02Unknown table 'pdfs': DROP TABLE pdfs[0m
+  [4;36;1mSQL (0.002216)[0m   [0;1mCREATE TABLE pdfs (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `pdfdate` date DEFAULT NULL, `pdfname` varchar(255) DEFAULT NULL, `filename` varchar(255) DEFAULT NULL, `pdfnote` text DEFAULT NULL, `category_id` int(11) DEFAULT NULL, `client_id` int(11) DEFAULT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.001505)[0m   [0mCREATE TABLE schema_info (version int(11))[0m
+  [4;36;1mSQL (0.000291)[0m   [0;1mINSERT INTO schema_info (version) VALUES(0)[0m
+  [4;35;1mSQL (0.000911)[0m   [0mSHOW FIELDS FROM schema_info[0m
+  [4;36;1mSQL (0.000322)[0m   [0;1mUPDATE schema_info SET version = 7[0m
+  [4;36;1mSQL (0.000167)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000401)[0m   [0mSELECT * FROM schema_info[0m
+  [4;36;1mSQL (0.000423)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.001169)[0m   [0mSHOW FIELDS FROM categories[0m
+  [4;36;1mSQL (0.001335)[0m   [0;1mSHOW KEYS FROM categories[0m
+  [4;35;1mSQL (0.001167)[0m   [0mSHOW FIELDS FROM clients[0m
+  [4;36;1mSQL (0.001377)[0m   [0;1mSHOW KEYS FROM clients[0m
+  [4;35;1mSQL (0.001421)[0m   [0mSHOW FIELDS FROM pdfs[0m
+  [4;36;1mSQL (0.001149)[0m   [0;1mSHOW KEYS FROM pdfs[0m
+  [4;35;1mSQL (0.000154)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.003719)[0m   [0;1mDROP DATABASE IF EXISTS `pdfcat_test`[0m
+  [4;35;1mSQL (0.000807)[0m   [0mCREATE DATABASE `pdfcat_test`[0m
+  [4;36;1mSQL (0.000165)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: #42S02Unknown table 'categories': DROP TABLE categories[0m
+  [4;36;1mSQL (0.002029)[0m   [0;1mCREATE TABLE categories (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) DEFAULT NULL, `description` varchar(255) DEFAULT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: #42S02Unknown table 'clients': DROP TABLE clients[0m
+  [4;36;1mSQL (0.010429)[0m   [0;1mCREATE TABLE clients (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) DEFAULT NULL, `email` varchar(255) DEFAULT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: #42S02Unknown table 'pdfs': DROP TABLE pdfs[0m
+  [4;36;1mSQL (0.002511)[0m   [0;1mCREATE TABLE pdfs (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `pdfdate` date DEFAULT NULL, `pdfname` varchar(255) DEFAULT NULL, `filename` varchar(255) DEFAULT NULL, `pdfnote` text DEFAULT NULL, `category_id` int(11) DEFAULT NULL, `client_id` int(11) DEFAULT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.001959)[0m   [0mCREATE TABLE schema_info (version int(11))[0m
+  [4;36;1mSQL (0.000296)[0m   [0;1mINSERT INTO schema_info (version) VALUES(0)[0m
+  [4;35;1mSQL (0.002069)[0m   [0mSHOW FIELDS FROM schema_info[0m
+  [4;36;1mSQL (0.000263)[0m   [0;1mUPDATE schema_info SET version = 7[0m
+  [4;36;1mSQL (0.000169)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000374)[0m   [0mSELECT * FROM schema_info[0m
+  [4;36;1mSQL (0.000423)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.001952)[0m   [0mSHOW FIELDS FROM categories[0m
+  [4;36;1mSQL (0.001272)[0m   [0;1mSHOW KEYS FROM categories[0m
+  [4;35;1mSQL (0.001215)[0m   [0mSHOW FIELDS FROM clients[0m
+  [4;36;1mSQL (0.001396)[0m   [0;1mSHOW KEYS FROM clients[0m
+  [4;35;1mSQL (0.002051)[0m   [0mSHOW FIELDS FROM pdfs[0m
+  [4;36;1mSQL (0.001233)[0m   [0;1mSHOW KEYS FROM pdfs[0m
+  [4;35;1mSQL (0.000149)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.003477)[0m   [0;1mDROP DATABASE IF EXISTS `pdfcat_test`[0m
+  [4;35;1mSQL (0.000262)[0m   [0mCREATE DATABASE `pdfcat_test`[0m
+  [4;36;1mSQL (0.000165)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: #42S02Unknown table 'categories': DROP TABLE categories[0m
+  [4;36;1mSQL (0.002099)[0m   [0;1mCREATE TABLE categories (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) DEFAULT NULL, `description` varchar(255) DEFAULT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: #42S02Unknown table 'clients': DROP TABLE clients[0m
+  [4;36;1mSQL (0.002117)[0m   [0;1mCREATE TABLE clients (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) DEFAULT NULL, `email` varchar(255) DEFAULT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: #42S02Unknown table 'pdfs': DROP TABLE pdfs[0m
+  [4;36;1mSQL (0.002070)[0m   [0;1mCREATE TABLE pdfs (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `pdfdate` date DEFAULT NULL, `pdfname` varchar(255) DEFAULT NULL, `filename` varchar(255) DEFAULT NULL, `pdfnote` text DEFAULT NULL, `category_id` int(11) DEFAULT NULL, `client_id` int(11) DEFAULT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.001536)[0m   [0mCREATE TABLE schema_info (version int(11))[0m
+  [4;36;1mSQL (0.000292)[0m   [0;1mINSERT INTO schema_info (version) VALUES(0)[0m
+  [4;35;1mSQL (0.001079)[0m   [0mSHOW FIELDS FROM schema_info[0m
+  [4;36;1mSQL (0.000170)[0m   [0;1mUPDATE schema_info SET version = 7[0m
+  [4;36;1mSQL (0.000257)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000329)[0m   [0mSELECT * FROM schema_info[0m
+  [4;36;1mSQL (0.000482)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.001271)[0m   [0mSHOW FIELDS FROM categories[0m
+  [4;36;1mSQL (0.001150)[0m   [0;1mSHOW KEYS FROM categories[0m
+  [4;35;1mSQL (0.001157)[0m   [0mSHOW FIELDS FROM clients[0m
+  [4;36;1mSQL (0.001388)[0m   [0;1mSHOW KEYS FROM clients[0m
+  [4;35;1mSQL (0.001486)[0m   [0mSHOW FIELDS FROM pdfs[0m
+  [4;36;1mSQL (0.001127)[0m   [0;1mSHOW KEYS FROM pdfs[0m
+  [4;35;1mSQL (0.000161)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.010404)[0m   [0;1mDROP DATABASE IF EXISTS `pdfcat_test`[0m
+  [4;35;1mSQL (0.000724)[0m   [0mCREATE DATABASE `pdfcat_test`[0m
+  [4;36;1mSQL (0.000158)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: #42S02Unknown table 'categories': DROP TABLE categories[0m
+  [4;36;1mSQL (0.001996)[0m   [0;1mCREATE TABLE categories (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) DEFAULT NULL, `description` varchar(255) DEFAULT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: #42S02Unknown table 'clients': DROP TABLE clients[0m
+  [4;36;1mSQL (0.002247)[0m   [0;1mCREATE TABLE clients (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) DEFAULT NULL, `email` varchar(255) DEFAULT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: #42S02Unknown table 'pdfs': DROP TABLE pdfs[0m
+  [4;36;1mSQL (0.002121)[0m   [0;1mCREATE TABLE pdfs (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `pdfdate` date DEFAULT NULL, `pdfname` varchar(255) DEFAULT NULL, `filename` varchar(255) DEFAULT NULL, `pdfnote` text DEFAULT NULL, `category_id` int(11) DEFAULT NULL, `client_id` int(11) DEFAULT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.001386)[0m   [0mCREATE TABLE schema_info (version int(11))[0m
+  [4;36;1mSQL (0.000294)[0m   [0;1mINSERT INTO schema_info (version) VALUES(0)[0m
+  [4;35;1mSQL (0.001081)[0m   [0mSHOW FIELDS FROM schema_info[0m
+  [4;36;1mSQL (0.000195)[0m   [0;1mUPDATE schema_info SET version = 7[0m
+  [4;36;1mSQL (0.000219)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000323)[0m   [0mSELECT * FROM schema_info[0m
+  [4;36;1mSQL (0.000422)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.001230)[0m   [0mSHOW FIELDS FROM categories[0m
+  [4;36;1mSQL (0.001194)[0m   [0;1mSHOW KEYS FROM categories[0m
+  [4;35;1mSQL (0.001120)[0m   [0mSHOW FIELDS FROM clients[0m
+  [4;36;1mSQL (0.001546)[0m   [0;1mSHOW KEYS FROM clients[0m
+  [4;35;1mSQL (0.001454)[0m   [0mSHOW FIELDS FROM pdfs[0m
+  [4;36;1mSQL (0.001780)[0m   [0;1mSHOW KEYS FROM pdfs[0m
+  [4;35;1mSQL (0.000156)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.004063)[0m   [0;1mDROP DATABASE IF EXISTS `pdfcat_test`[0m
+  [4;35;1mSQL (0.000283)[0m   [0mCREATE DATABASE `pdfcat_test`[0m
+  [4;36;1mSQL (0.000162)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: #42S02Unknown table 'categories': DROP TABLE categories[0m
+  [4;36;1mSQL (0.002074)[0m   [0;1mCREATE TABLE categories (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) DEFAULT NULL, `description` varchar(255) DEFAULT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: #42S02Unknown table 'clients': DROP TABLE clients[0m
+  [4;36;1mSQL (0.002072)[0m   [0;1mCREATE TABLE clients (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) DEFAULT NULL, `email` varchar(255) DEFAULT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: #42S02Unknown table 'pdfs': DROP TABLE pdfs[0m
+  [4;36;1mSQL (0.006349)[0m   [0;1mCREATE TABLE pdfs (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `pdfdate` date DEFAULT NULL, `pdfname` varchar(255) DEFAULT NULL, `filename` varchar(255) DEFAULT NULL, `pdfnote` text DEFAULT NULL, `category_id` int(11) DEFAULT NULL, `client_id` int(11) DEFAULT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.001797)[0m   [0mCREATE TABLE schema_info (version int(11))[0m
+  [4;36;1mSQL (0.000310)[0m   [0;1mINSERT INTO schema_info (version) VALUES(0)[0m
+  [4;35;1mSQL (0.001066)[0m   [0mSHOW FIELDS FROM schema_info[0m
+  [4;36;1mSQL (0.000174)[0m   [0;1mUPDATE schema_info SET version = 7[0m
+  [4;36;1mSQL (0.000177)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000321)[0m   [0mSELECT * FROM schema_info[0m
+  [4;36;1mSQL (0.000469)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.001925)[0m   [0mSHOW FIELDS FROM categories[0m
+  [4;36;1mSQL (0.001408)[0m   [0;1mSHOW KEYS FROM categories[0m
+  [4;35;1mSQL (0.001168)[0m   [0mSHOW FIELDS FROM clients[0m
+  [4;36;1mSQL (0.001310)[0m   [0;1mSHOW KEYS FROM clients[0m
+  [4;35;1mSQL (0.001634)[0m   [0mSHOW FIELDS FROM pdfs[0m
+  [4;36;1mSQL (0.001136)[0m   [0;1mSHOW KEYS FROM pdfs[0m
+  [4;35;1mSQL (0.000150)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.003867)[0m   [0;1mDROP DATABASE IF EXISTS `pdfcat_test`[0m
+  [4;35;1mSQL (0.000417)[0m   [0mCREATE DATABASE `pdfcat_test`[0m
+  [4;36;1mSQL (0.000157)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: #42S02Unknown table 'categories': DROP TABLE categories[0m
+  [4;36;1mSQL (0.002122)[0m   [0;1mCREATE TABLE categories (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) DEFAULT NULL, `description` varchar(255) DEFAULT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: #42S02Unknown table 'clients': DROP TABLE clients[0m
+  [4;36;1mSQL (0.002026)[0m   [0;1mCREATE TABLE clients (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) DEFAULT NULL, `email` varchar(255) DEFAULT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: #42S02Unknown table 'pdfs': DROP TABLE pdfs[0m
+  [4;36;1mSQL (0.002279)[0m   [0;1mCREATE TABLE pdfs (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `pdfdate` date DEFAULT NULL, `pdfname` varchar(255) DEFAULT NULL, `filename` varchar(255) DEFAULT NULL, `pdfnote` text DEFAULT NULL, `category_id` int(11) DEFAULT NULL, `client_id` int(11) DEFAULT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.001433)[0m   [0mCREATE TABLE schema_info (version int(11))[0m
+  [4;36;1mSQL (0.000297)[0m   [0;1mINSERT INTO schema_info (version) VALUES(0)[0m
+  [4;35;1mSQL (0.001092)[0m   [0mSHOW FIELDS FROM schema_info[0m
+  [4;36;1mSQL (0.000181)[0m   [0;1mUPDATE schema_info SET version = 7[0m
+  [4;36;1mSQL (0.000167)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000320)[0m   [0mSELECT * FROM schema_info[0m
+  [4;36;1mSQL (0.000471)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.001200)[0m   [0mSHOW FIELDS FROM categories[0m
+  [4;36;1mSQL (0.001123)[0m   [0;1mSHOW KEYS FROM categories[0m
+  [4;35;1mSQL (0.001140)[0m   [0mSHOW FIELDS FROM clients[0m
+  [4;36;1mSQL (0.001991)[0m   [0;1mSHOW KEYS FROM clients[0m
+  [4;35;1mSQL (0.001557)[0m   [0mSHOW FIELDS FROM pdfs[0m
+  [4;36;1mSQL (0.001102)[0m   [0;1mSHOW KEYS FROM pdfs[0m
+  [4;35;1mSQL (0.000150)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.003551)[0m   [0;1mDROP DATABASE IF EXISTS `pdfcat_test`[0m
+  [4;35;1mSQL (0.000349)[0m   [0mCREATE DATABASE `pdfcat_test`[0m
+  [4;36;1mSQL (0.000166)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: #42S02Unknown table 'categories': DROP TABLE categories[0m
+  [4;36;1mSQL (0.014756)[0m   [0;1mCREATE TABLE categories (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) DEFAULT NULL, `description` varchar(255) DEFAULT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: #42S02Unknown table 'clients': DROP TABLE clients[0m
+  [4;36;1mSQL (0.002521)[0m   [0;1mCREATE TABLE clients (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) DEFAULT NULL, `email` varchar(255) DEFAULT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: #42S02Unknown table 'pdfs': DROP TABLE pdfs[0m
+  [4;36;1mSQL (0.002279)[0m   [0;1mCREATE TABLE pdfs (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `pdfdate` date DEFAULT NULL, `pdfname` varchar(255) DEFAULT NULL, `filename` varchar(255) DEFAULT NULL, `pdfnote` text DEFAULT NULL, `category_id` int(11) DEFAULT NULL, `client_id` int(11) DEFAULT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.001338)[0m   [0mCREATE TABLE schema_info (version int(11))[0m
+  [4;36;1mSQL (0.000351)[0m   [0;1mINSERT INTO schema_info (version) VALUES(0)[0m
+  [4;35;1mSQL (0.001016)[0m   [0mSHOW FIELDS FROM schema_info[0m
+  [4;36;1mSQL (0.000388)[0m   [0;1mUPDATE schema_info SET version = 7[0m
+  [4;36;1mSQL (0.000168)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000370)[0m   [0mSELECT * FROM schema_info[0m
+  [4;36;1mSQL (0.000417)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.001933)[0m   [0mSHOW FIELDS FROM categories[0m
+  [4;36;1mSQL (0.001245)[0m   [0;1mSHOW KEYS FROM categories[0m
+  [4;35;1mSQL (0.001122)[0m   [0mSHOW FIELDS FROM clients[0m
+  [4;36;1mSQL (0.001330)[0m   [0;1mSHOW KEYS FROM clients[0m
+  [4;35;1mSQL (0.001542)[0m   [0mSHOW FIELDS FROM pdfs[0m
+  [4;36;1mSQL (0.001789)[0m   [0;1mSHOW KEYS FROM pdfs[0m
+  [4;35;1mSQL (0.000153)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.003619)[0m   [0;1mDROP DATABASE IF EXISTS `pdfcat_test`[0m
+  [4;35;1mSQL (0.000297)[0m   [0mCREATE DATABASE `pdfcat_test`[0m
+  [4;36;1mSQL (0.000156)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: #42S02Unknown table 'categories': DROP TABLE categories[0m
+  [4;36;1mSQL (0.002036)[0m   [0;1mCREATE TABLE categories (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) DEFAULT NULL, `description` varchar(255) DEFAULT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: #42S02Unknown table 'clients': DROP TABLE clients[0m
+  [4;36;1mSQL (0.002043)[0m   [0;1mCREATE TABLE clients (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) DEFAULT NULL, `email` varchar(255) DEFAULT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: #42S02Unknown table 'pdfs': DROP TABLE pdfs[0m
+  [4;36;1mSQL (0.006759)[0m   [0;1mCREATE TABLE pdfs (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `pdfdate` date DEFAULT NULL, `pdfname` varchar(255) DEFAULT NULL, `filename` varchar(255) DEFAULT NULL, `pdfnote` text DEFAULT NULL, `category_id` int(11) DEFAULT NULL, `client_id` int(11) DEFAULT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.001555)[0m   [0mCREATE TABLE schema_info (version int(11))[0m
+  [4;36;1mSQL (0.000288)[0m   [0;1mINSERT INTO schema_info (version) VALUES(0)[0m
+  [4;35;1mSQL (0.001152)[0m   [0mSHOW FIELDS FROM schema_info[0m
+  [4;36;1mSQL (0.000179)[0m   [0;1mUPDATE schema_info SET version = 7[0m
+  [4;36;1mSQL (0.000774)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000394)[0m   [0mSELECT * FROM schema_info[0m
+  [4;36;1mSQL (0.000429)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.001229)[0m   [0mSHOW FIELDS FROM categories[0m
+  [4;36;1mSQL (0.001140)[0m   [0;1mSHOW KEYS FROM categories[0m
+  [4;35;1mSQL (0.001111)[0m   [0mSHOW FIELDS FROM clients[0m
+  [4;36;1mSQL (0.001326)[0m   [0;1mSHOW KEYS FROM clients[0m
+  [4;35;1mSQL (0.001490)[0m   [0mSHOW FIELDS FROM pdfs[0m
+  [4;36;1mSQL (0.001866)[0m   [0;1mSHOW KEYS FROM pdfs[0m
+  [4;35;1mSQL (0.001517)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.003574)[0m   [0;1mDROP DATABASE IF EXISTS `pdfcat_test`[0m
+  [4;35;1mSQL (0.000288)[0m   [0mCREATE DATABASE `pdfcat_test`[0m
+  [4;36;1mSQL (0.000157)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: #42S02Unknown table 'categories': DROP TABLE categories[0m
+  [4;36;1mSQL (0.002082)[0m   [0;1mCREATE TABLE categories (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) DEFAULT NULL, `description` varchar(255) DEFAULT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: #42S02Unknown table 'clients': DROP TABLE clients[0m
+  [4;36;1mSQL (0.002080)[0m   [0;1mCREATE TABLE clients (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) DEFAULT NULL, `email` varchar(255) DEFAULT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: #42S02Unknown table 'pdfs': DROP TABLE pdfs[0m
+  [4;36;1mSQL (0.002082)[0m   [0;1mCREATE TABLE pdfs (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `pdfdate` date DEFAULT NULL, `pdfname` varchar(255) DEFAULT NULL, `filename` varchar(255) DEFAULT NULL, `pdfnote` text DEFAULT NULL, `category_id` int(11) DEFAULT NULL, `client_id` int(11) DEFAULT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.001339)[0m   [0mCREATE TABLE schema_info (version int(11))[0m
+  [4;36;1mSQL (0.000286)[0m   [0;1mINSERT INTO schema_info (version) VALUES(0)[0m
+  [4;35;1mSQL (0.000909)[0m   [0mSHOW FIELDS FROM schema_info[0m
+  [4;36;1mSQL (0.000325)[0m   [0;1mUPDATE schema_info SET version = 7[0m
+
+
+Processing PdfsController#index (for 127.0.0.1 at 2007-11-21 14:55:42) [GET]
+  Session ID: 960a680d02d6b9d35aa9843023b06506
+  Parameters: {"action"=>"index", "controller"=>"pdfs"}
+  [4;35;1mPdf Columns (0.001743)[0m   [0mSHOW FIELDS FROM pdfs[0m
+  [4;36;1mSQL (0.000449)[0m   [0;1mSELECT count(*) AS count_all FROM pdfs [0m
+  [4;35;1mPdf Load (0.000964)[0m   [0mSELECT * FROM pdfs LIMIT 0, 10[0m
+Rendering  within layouts/application
+Rendering pdfs/index
+  [4;36;1mCategory Columns (0.001455)[0m   [0;1mSHOW FIELDS FROM categories[0m
+  [4;35;1mCategory Load (0.000541)[0m   [0mSELECT * FROM categories WHERE (categories.`id` = 1) [0m
+  [4;36;1mClient Columns (0.001493)[0m   [0;1mSHOW FIELDS FROM clients[0m
+  [4;35;1mClient Load (0.000538)[0m   [0mSELECT * FROM clients WHERE (clients.`id` = 1) [0m
+  [4;36;1mCategory Load (0.000613)[0m   [0;1mSELECT * FROM categories WHERE (categories.`id` = 1) [0m
+  [4;35;1mClient Load (0.000455)[0m   [0mSELECT * FROM clients WHERE (clients.`id` = 1) [0m
+  [4;36;1mCategory Load (0.000532)[0m   [0;1mSELECT * FROM categories WHERE (categories.`id` = 1) [0m
+  [4;35;1mClient Load (0.000522)[0m   [0mSELECT * FROM clients WHERE (clients.`id` = 1) [0m
+  [4;36;1mCategory Load (0.000536)[0m   [0;1mSELECT * FROM categories WHERE (categories.`id` = 1) [0m
+  [4;35;1mClient Load (0.000454)[0m   [0mSELECT * FROM clients WHERE (clients.`id` = 1) [0m
+  [4;36;1mCategory Load (0.000543)[0m   [0;1mSELECT * FROM categories WHERE (categories.`id` = 1) [0m
+  [4;35;1mClient Load (0.000435)[0m   [0mSELECT * FROM clients WHERE (clients.`id` = 1) [0m
+  [4;36;1mCategory Load (0.000607)[0m   [0;1mSELECT * FROM categories WHERE (categories.`id` = 1) [0m
+  [4;35;1mClient Load (0.000444)[0m   [0mSELECT * FROM clients WHERE (clients.`id` = 1) [0m
+  [4;36;1mCategory Load (0.000935)[0m   [0;1mSELECT * FROM categories WHERE (categories.`id` = 1) [0m
+  [4;35;1mClient Load (0.000651)[0m   [0mSELECT * FROM clients WHERE (clients.`id` = 1) [0m
+Completed in 0.04524 (22 reqs/sec) | Rendering: 0.02559 (56%) | DB: 0.01391 (30%) | 200 OK [http://localhost/pdfs]
+
+
+Processing PdfsController#show (for 127.0.0.1 at 2007-11-21 14:55:45) [GET]
+  Session ID: 960a680d02d6b9d35aa9843023b06506
+  Parameters: {"action"=>"show", "id"=>"32", "controller"=>"pdfs"}
+  [4;36;1mPdf Columns (0.001642)[0m   [0;1mSHOW FIELDS FROM pdfs[0m
+  [4;35;1mPdf Load (0.000824)[0m   [0mSELECT * FROM pdfs WHERE (pdfs.`id` = 32) [0m
+Rendering  within layouts/application
+Rendering pdfs/show
+Completed in 0.01351 (74 reqs/sec) | Rendering: 0.00463 (34%) | DB: 0.00247 (18%) | 200 OK [http://localhost/pdfs/show/32]
+
+
+Processing PdfsController#index (for 127.0.0.1 at 2007-11-21 14:55:47) [GET]
+  Session ID: 960a680d02d6b9d35aa9843023b06506
+  Parameters: {"action"=>"index", "controller"=>"pdfs"}
+  [4;36;1mPdf Columns (0.001800)[0m   [0;1mSHOW FIELDS FROM pdfs[0m
+  [4;35;1mSQL (0.000404)[0m   [0mSELECT count(*) AS count_all FROM pdfs [0m
+  [4;36;1mPdf Load (0.000994)[0m   [0;1mSELECT * FROM pdfs LIMIT 0, 10[0m
+Rendering  within layouts/application
+Rendering pdfs/index
+  [4;35;1mCategory Columns (0.001503)[0m   [0mSHOW FIELDS FROM categories[0m
+  [4;36;1mCategory Load (0.000679)[0m   [0;1mSELECT * FROM categories WHERE (categories.`id` = 1) [0m
+  [4;35;1mClient Columns (0.001587)[0m   [0mSHOW FIELDS FROM clients[0m
+  [4;36;1mClient Load (0.000548)[0m   [0;1mSELECT * FROM clients WHERE (clients.`id` = 1) [0m
+  [4;35;1mCategory Load (0.000619)[0m   [0mSELECT * FROM categories WHERE (categories.`id` = 1) [0m
+  [4;36;1mClient Load (0.000441)[0m   [0;1mSELECT * FROM clients WHERE (clients.`id` = 1) [0m
+  [4;35;1mCategory Load (0.000481)[0m   [0mSELECT * FROM categories WHERE (categories.`id` = 1) [0m
+  [4;36;1mClient Load (0.000433)[0m   [0;1mSELECT * FROM clients WHERE (clients.`id` = 1) [0m
+  [4;35;1mCategory Load (0.000550)[0m   [0mSELECT * FROM categories WHERE (categories.`id` = 1) [0m
+  [4;36;1mClient Load (0.000442)[0m   [0;1mSELECT * FROM clients WHERE (clients.`id` = 1) [0m
+  [4;35;1mCategory Load (0.000519)[0m   [0mSELECT * FROM categories WHERE (categories.`id` = 1) [0m
+  [4;36;1mClient Load (0.000431)[0m   [0;1mSELECT * FROM clients WHERE (clients.`id` = 1) [0m
+  [4;35;1mCategory Load (0.000602)[0m   [0mSELECT * FROM categories WHERE (categories.`id` = 1) [0m
+  [4;36;1mClient Load (0.000434)[0m   [0;1mSELECT * FROM clients WHERE (clients.`id` = 1) [0m
+  [4;35;1mCategory Load (0.000553)[0m   [0mSELECT * FROM categories WHERE (categories.`id` = 1) [0m
+  [4;36;1mClient Load (0.000432)[0m   [0;1mSELECT * FROM clients WHERE (clients.`id` = 1) [0m
+Completed in 0.05188 (19 reqs/sec) | Rendering: 0.03172 (61%) | DB: 0.01345 (25%) | 200 OK [http://localhost/pdfs]
+  [4;36;1mSQL (0.000168)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000324)[0m   [0mSELECT * FROM schema_info[0m
+  [4;36;1mSQL (0.000420)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.001229)[0m   [0mSHOW FIELDS FROM categories[0m
+  [4;36;1mSQL (0.001245)[0m   [0;1mSHOW KEYS FROM categories[0m
+  [4;35;1mSQL (0.012950)[0m   [0mSHOW FIELDS FROM clients[0m
+  [4;36;1mSQL (0.001435)[0m   [0;1mSHOW KEYS FROM clients[0m
+  [4;35;1mSQL (0.001580)[0m   [0mSHOW FIELDS FROM pdfs[0m
+  [4;36;1mSQL (0.001095)[0m   [0;1mSHOW KEYS FROM pdfs[0m
+  [4;35;1mSQL (0.000148)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.003689)[0m   [0;1mDROP DATABASE IF EXISTS `pdfcat_test`[0m
+  [4;35;1mSQL (0.000297)[0m   [0mCREATE DATABASE `pdfcat_test`[0m
+  [4;36;1mSQL (0.000158)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: #42S02Unknown table 'categories': DROP TABLE categories[0m
+  [4;36;1mSQL (0.007548)[0m   [0;1mCREATE TABLE categories (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) DEFAULT NULL, `description` varchar(255) DEFAULT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: #42S02Unknown table 'clients': DROP TABLE clients[0m
+  [4;36;1mSQL (0.002128)[0m   [0;1mCREATE TABLE clients (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) DEFAULT NULL, `email` varchar(255) DEFAULT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: #42S02Unknown table 'pdfs': DROP TABLE pdfs[0m
+  [4;36;1mSQL (0.002122)[0m   [0;1mCREATE TABLE pdfs (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `pdfdate` date DEFAULT NULL, `pdfname` varchar(255) DEFAULT NULL, `filename` varchar(255) DEFAULT NULL, `pdfnote` text DEFAULT NULL, `category_id` int(11) DEFAULT NULL, `client_id` int(11) DEFAULT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.001619)[0m   [0mCREATE TABLE schema_info (version int(11))[0m
+  [4;36;1mSQL (0.000284)[0m   [0;1mINSERT INTO schema_info (version) VALUES(0)[0m
+  [4;35;1mSQL (0.000910)[0m   [0mSHOW FIELDS FROM schema_info[0m
+  [4;36;1mSQL (0.000322)[0m   [0;1mUPDATE schema_info SET version = 7[0m
+  [4;36;1mSQL (0.000170)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000322)[0m   [0mSELECT * FROM schema_info[0m
+  [4;36;1mSQL (0.000423)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.001182)[0m   [0mSHOW FIELDS FROM categories[0m
+  [4;36;1mSQL (0.001522)[0m   [0;1mSHOW KEYS FROM categories[0m
+  [4;35;1mSQL (0.001270)[0m   [0mSHOW FIELDS FROM clients[0m
+  [4;36;1mSQL (0.001391)[0m   [0;1mSHOW KEYS FROM clients[0m
+  [4;35;1mSQL (0.001685)[0m   [0mSHOW FIELDS FROM pdfs[0m
+  [4;36;1mSQL (0.002192)[0m   [0;1mSHOW KEYS FROM pdfs[0m
+  [4;35;1mSQL (0.000167)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.003503)[0m   [0;1mDROP DATABASE IF EXISTS `pdfcat_test`[0m
+  [4;35;1mSQL (0.000307)[0m   [0mCREATE DATABASE `pdfcat_test`[0m
+  [4;36;1mSQL (0.000181)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: #42S02Unknown table 'categories': DROP TABLE categories[0m
+  [4;36;1mSQL (0.002021)[0m   [0;1mCREATE TABLE categories (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) DEFAULT NULL, `description` varchar(255) DEFAULT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: #42S02Unknown table 'clients': DROP TABLE clients[0m
+  [4;36;1mSQL (0.003587)[0m   [0;1mCREATE TABLE clients (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) DEFAULT NULL, `email` varchar(255) DEFAULT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: #42S02Unknown table 'pdfs': DROP TABLE pdfs[0m
+  [4;36;1mSQL (0.002157)[0m   [0;1mCREATE TABLE pdfs (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `pdfdate` date DEFAULT NULL, `pdfname` varchar(255) DEFAULT NULL, `filename` varchar(255) DEFAULT NULL, `pdfnote` text DEFAULT NULL, `category_id` int(11) DEFAULT NULL, `client_id` int(11) DEFAULT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.001436)[0m   [0mCREATE TABLE schema_info (version int(11))[0m
+  [4;36;1mSQL (0.000326)[0m   [0;1mINSERT INTO schema_info (version) VALUES(0)[0m
+  [4;35;1mSQL (0.000901)[0m   [0mSHOW FIELDS FROM schema_info[0m
+  [4;36;1mSQL (0.000274)[0m   [0;1mUPDATE schema_info SET version = 7[0m
+  [4;36;1mSQL (0.000171)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000321)[0m   [0mSELECT * FROM schema_info[0m
+  [4;36;1mSQL (0.000418)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.001228)[0m   [0mSHOW FIELDS FROM categories[0m
+  [4;36;1mSQL (0.001160)[0m   [0;1mSHOW KEYS FROM categories[0m
+  [4;35;1mSQL (0.001103)[0m   [0mSHOW FIELDS FROM clients[0m
+  [4;36;1mSQL (0.001469)[0m   [0;1mSHOW KEYS FROM clients[0m
+  [4;35;1mSQL (0.001597)[0m   [0mSHOW FIELDS FROM pdfs[0m
+  [4;36;1mSQL (0.001139)[0m   [0;1mSHOW KEYS FROM pdfs[0m
+  [4;35;1mSQL (0.000151)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.003766)[0m   [0;1mDROP DATABASE IF EXISTS `pdfcat_test`[0m
+  [4;35;1mSQL (0.000259)[0m   [0mCREATE DATABASE `pdfcat_test`[0m
+  [4;36;1mSQL (0.000165)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: #42S02Unknown table 'categories': DROP TABLE categories[0m
+  [4;36;1mSQL (0.002116)[0m   [0;1mCREATE TABLE categories (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) DEFAULT NULL, `description` varchar(255) DEFAULT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: #42S02Unknown table 'clients': DROP TABLE clients[0m
+  [4;36;1mSQL (0.002266)[0m   [0;1mCREATE TABLE clients (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) DEFAULT NULL, `email` varchar(255) DEFAULT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: #42S02Unknown table 'pdfs': DROP TABLE pdfs[0m
+  [4;36;1mSQL (0.002066)[0m   [0;1mCREATE TABLE pdfs (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `pdfdate` date DEFAULT NULL, `pdfname` varchar(255) DEFAULT NULL, `filename` varchar(255) DEFAULT NULL, `pdfnote` text DEFAULT NULL, `category_id` int(11) DEFAULT NULL, `client_id` int(11) DEFAULT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.001350)[0m   [0mCREATE TABLE schema_info (version int(11))[0m
+  [4;36;1mSQL (0.000287)[0m   [0;1mINSERT INTO schema_info (version) VALUES(0)[0m
+  [4;35;1mSQL (0.000903)[0m   [0mSHOW FIELDS FROM schema_info[0m
+  [4;36;1mSQL (0.000325)[0m   [0;1mUPDATE schema_info SET version = 7[0m
+  [4;36;1mSQL (0.000171)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000319)[0m   [0mSELECT * FROM schema_info[0m
+  [4;36;1mSQL (0.000477)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.002189)[0m   [0mSHOW FIELDS FROM categories[0m
+  [4;36;1mSQL (0.001444)[0m   [0;1mSHOW KEYS FROM categories[0m
+  [4;35;1mSQL (0.001191)[0m   [0mSHOW FIELDS FROM clients[0m
+  [4;36;1mSQL (0.001412)[0m   [0;1mSHOW KEYS FROM clients[0m
+  [4;35;1mSQL (0.001553)[0m   [0mSHOW FIELDS FROM pdfs[0m
+  [4;36;1mSQL (0.001102)[0m   [0;1mSHOW KEYS FROM pdfs[0m
+  [4;35;1mSQL (0.000150)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.003544)[0m   [0;1mDROP DATABASE IF EXISTS `pdfcat_test`[0m
+  [4;35;1mSQL (0.000343)[0m   [0mCREATE DATABASE `pdfcat_test`[0m
+  [4;36;1mSQL (0.000160)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: #42S02Unknown table 'categories': DROP TABLE categories[0m
+  [4;36;1mSQL (0.002116)[0m   [0;1mCREATE TABLE categories (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) DEFAULT NULL, `description` varchar(255) DEFAULT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: #42S02Unknown table 'clients': DROP TABLE clients[0m
+  [4;36;1mSQL (0.015716)[0m   [0;1mCREATE TABLE clients (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) DEFAULT NULL, `email` varchar(255) DEFAULT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: #42S02Unknown table 'pdfs': DROP TABLE pdfs[0m
+  [4;36;1mSQL (0.002461)[0m   [0;1mCREATE TABLE pdfs (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `pdfdate` date DEFAULT NULL, `pdfname` varchar(255) DEFAULT NULL, `filename` varchar(255) DEFAULT NULL, `pdfnote` text DEFAULT NULL, `category_id` int(11) DEFAULT NULL, `client_id` int(11) DEFAULT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.001349)[0m   [0mCREATE TABLE schema_info (version int(11))[0m
+  [4;36;1mSQL (0.000295)[0m   [0;1mINSERT INTO schema_info (version) VALUES(0)[0m
+  [4;35;1mSQL (0.001080)[0m   [0mSHOW FIELDS FROM schema_info[0m
+  [4;36;1mSQL (0.000179)[0m   [0;1mUPDATE schema_info SET version = 7[0m
+
+
+Processing NewController#index (for 127.0.0.1 at 2007-11-21 15:46:34) [GET]
+  Session ID: 960a680d02d6b9d35aa9843023b06506
+  Parameters: {"action"=>"index", "controller"=>"new"}
+  [4;35;1mPdf Columns (0.002142)[0m   [0mSHOW FIELDS FROM pdfs[0m
+Rendering  within layouts/application
+Rendering new/index
+Completed in 0.02572 (38 reqs/sec) | Rendering: 0.01781 (69%) | DB: 0.00214 (8%) | 200 OK [http://localhost/new]
+
+
+Processing PdfsController#index (for 127.0.0.1 at 2007-11-21 15:46:35) [GET]
+  Session ID: 960a680d02d6b9d35aa9843023b06506
+  Parameters: {"action"=>"index", "controller"=>"pdfs"}
+  [4;36;1mPdf Columns (0.001936)[0m   [0;1mSHOW FIELDS FROM pdfs[0m
+  [4;35;1mSQL (0.002308)[0m   [0mSELECT count(*) AS count_all FROM pdfs [0m
+  [4;36;1mPdf Load (0.003120)[0m   [0;1mSELECT * FROM pdfs LIMIT 0, 10[0m
+Rendering  within layouts/application
+Rendering pdfs/index
+  [4;35;1mCategory Columns (0.001638)[0m   [0mSHOW FIELDS FROM categories[0m
+  [4;36;1mCategory Load (0.001124)[0m   [0;1mSELECT * FROM categories WHERE (categories.`id` = 1) [0m
+  [4;35;1mClient Columns (0.003026)[0m   [0mSHOW FIELDS FROM clients[0m
+  [4;36;1mClient Load (0.000673)[0m   [0;1mSELECT * FROM clients WHERE (clients.`id` = 1) [0m
+  [4;35;1mCategory Load (0.001549)[0m   [0mSELECT * FROM categories WHERE (categories.`id` = 1) [0m
+  [4;36;1mClient Load (0.000538)[0m   [0;1mSELECT * FROM clients WHERE (clients.`id` = 1) [0m
+  [4;35;1mCategory Load (0.000616)[0m   [0mSELECT * FROM categories WHERE (categories.`id` = 1) [0m
+  [4;36;1mClient Load (0.000538)[0m   [0;1mSELECT * FROM clients WHERE (clients.`id` = 1) [0m
+  [4;35;1mCategory Load (0.002258)[0m   [0mSELECT * FROM categories WHERE (categories.`id` = 1) [0m
+  [4;36;1mClient Load (0.001801)[0m   [0;1mSELECT * FROM clients WHERE (clients.`id` = 1) [0m
+  [4;35;1mCategory Load (0.001802)[0m   [0mSELECT * FROM categories WHERE (categories.`id` = 1) [0m
+  [4;36;1mClient Load (0.002587)[0m   [0;1mSELECT * FROM clients WHERE (clients.`id` = 1) [0m
+  [4;35;1mCategory Load (0.002935)[0m   [0mSELECT * FROM categories WHERE (categories.`id` = 1) [0m
+  [4;36;1mClient Load (0.000969)[0m   [0;1mSELECT * FROM clients WHERE (clients.`id` = 1) [0m
+  [4;35;1mCategory Load (0.001067)[0m   [0mSELECT * FROM categories WHERE (categories.`id` = 1) [0m
+  [4;36;1mClient Load (0.000656)[0m   [0;1mSELECT * FROM clients WHERE (clients.`id` = 1) [0m
+Completed in 0.06947 (14 reqs/sec) | Rendering: 0.03152 (45%) | DB: 0.03114 (44%) | 200 OK [http://localhost/pdfs]
+
+
+Processing PdfsController#index (for 127.0.0.1 at 2007-11-21 15:46:38) [GET]
+  Session ID: 960a680d02d6b9d35aa9843023b06506
+  Parameters: {"action"=>"index", "controller"=>"pdfs"}
+  [4;35;1mPdf Columns (0.001921)[0m   [0mSHOW FIELDS FROM pdfs[0m
+  [4;36;1mSQL (0.000436)[0m   [0;1mSELECT count(*) AS count_all FROM pdfs [0m
+  [4;35;1mPdf Load (0.000971)[0m   [0mSELECT * FROM pdfs LIMIT 0, 10[0m
+Rendering  within layouts/application
+Rendering pdfs/index
+  [4;36;1mCategory Columns (0.001469)[0m   [0;1mSHOW FIELDS FROM categories[0m
+  [4;35;1mCategory Load (0.000557)[0m   [0mSELECT * FROM categories WHERE (categories.`id` = 1) [0m
+  [4;36;1mClient Columns (0.001451)[0m   [0;1mSHOW FIELDS FROM clients[0m
+  [4;35;1mClient Load (0.000522)[0m   [0mSELECT * FROM clients WHERE (clients.`id` = 1) [0m
+  [4;36;1mCategory Load (0.000609)[0m   [0;1mSELECT * FROM categories WHERE (categories.`id` = 1) [0m
+  [4;35;1mClient Load (0.000462)[0m   [0mSELECT * FROM clients WHERE (clients.`id` = 1) [0m
+  [4;36;1mCategory Load (0.000645)[0m   [0;1mSELECT * FROM categories WHERE (categories.`id` = 1) [0m
+  [4;35;1mClient Load (0.000445)[0m   [0mSELECT * FROM clients WHERE (clients.`id` = 1) [0m
+  [4;36;1mCategory Load (0.000528)[0m   [0;1mSELECT * FROM categories WHERE (categories.`id` = 1) [0m
+  [4;35;1mClient Load (0.000433)[0m   [0mSELECT * FROM clients WHERE (clients.`id` = 1) [0m
+  [4;36;1mCategory Load (0.000488)[0m   [0;1mSELECT * FROM categories WHERE (categories.`id` = 1) [0m
+  [4;35;1mClient Load (0.000434)[0m   [0mSELECT * FROM clients WHERE (clients.`id` = 1) [0m
+  [4;36;1mCategory Load (0.000585)[0m   [0;1mSELECT * FROM categories WHERE (categories.`id` = 1) [0m
+  [4;35;1mClient Load (0.000454)[0m   [0mSELECT * FROM clients WHERE (clients.`id` = 1) [0m
+  [4;36;1mCategory Load (0.000536)[0m   [0;1mSELECT * FROM categories WHERE (categories.`id` = 1) [0m
+  [4;35;1mClient Load (0.000434)[0m   [0mSELECT * FROM clients WHERE (clients.`id` = 1) [0m
+Completed in 0.04528 (22 reqs/sec) | Rendering: 0.02607 (57%) | DB: 0.01338 (29%) | 200 OK [http://localhost/pdfs]
+
+
+Processing ClientsController#index (for 127.0.0.1 at 2007-11-21 15:46:40) [GET]
+  Session ID: 960a680d02d6b9d35aa9843023b06506
+  Parameters: {"action"=>"index", "controller"=>"clients"}
+  [4;36;1mClient Columns (0.001489)[0m   [0;1mSHOW FIELDS FROM clients[0m
+  [4;35;1mSQL (0.000402)[0m   [0mSELECT count(*) AS count_all FROM clients [0m
+  [4;36;1mClient Load (0.000526)[0m   [0;1mSELECT * FROM clients LIMIT 0, 10[0m
+Rendering  within layouts/application
+Rendering clients/index
+Completed in 0.01379 (72 reqs/sec) | Rendering: 0.00555 (40%) | DB: 0.00242 (17%) | 200 OK [http://localhost/clients]
+
+
+Processing CategoriesController#index (for 127.0.0.1 at 2007-11-21 15:46:41) [GET]
+  Session ID: 960a680d02d6b9d35aa9843023b06506
+  Parameters: {"action"=>"index", "controller"=>"categories"}
+  [4;35;1mCategory Columns (0.001532)[0m   [0mSHOW FIELDS FROM categories[0m
+  [4;36;1mSQL (0.000415)[0m   [0;1mSELECT count(*) AS count_all FROM categories [0m
+  [4;35;1mCategory Load (0.000471)[0m   [0mSELECT * FROM categories LIMIT 0, 10[0m
+Rendering  within layouts/application
+Rendering categories/index
+Completed in 0.01467 (68 reqs/sec) | Rendering: 0.00693 (47%) | DB: 0.00242 (16%) | 200 OK [http://localhost/categories]
+
+
+Processing ClientsController#index (for 127.0.0.1 at 2007-11-21 15:46:44) [GET]
+  Session ID: 960a680d02d6b9d35aa9843023b06506
+  Parameters: {"action"=>"index", "controller"=>"clients"}
+  [4;36;1mClient Columns (0.001431)[0m   [0;1mSHOW FIELDS FROM clients[0m
+  [4;35;1mSQL (0.000413)[0m   [0mSELECT count(*) AS count_all FROM clients [0m
+  [4;36;1mClient Load (0.000499)[0m   [0;1mSELECT * FROM clients LIMIT 0, 10[0m
+Rendering  within layouts/application
+Rendering clients/index
+Completed in 0.01345 (74 reqs/sec) | Rendering: 0.00557 (41%) | DB: 0.00234 (17%) | 200 OK [http://localhost/clients]
+
+
+Processing PdfsController#index (for 127.0.0.1 at 2007-11-21 15:46:45) [GET]
+  Session ID: 960a680d02d6b9d35aa9843023b06506
+  Parameters: {"action"=>"index", "controller"=>"pdfs"}
+  [4;35;1mPdf Columns (0.001836)[0m   [0mSHOW FIELDS FROM pdfs[0m
+  [4;36;1mSQL (0.000492)[0m   [0;1mSELECT count(*) AS count_all FROM pdfs [0m
+  [4;35;1mPdf Load (0.000965)[0m   [0mSELECT * FROM pdfs LIMIT 0, 10[0m
+Rendering  within layouts/application
+Rendering pdfs/index
+  [4;36;1mCategory Columns (0.001493)[0m   [0;1mSHOW FIELDS FROM categories[0m
+  [4;35;1mCategory Load (0.000527)[0m   [0mSELECT * FROM categories WHERE (categories.`id` = 1) [0m
+  [4;36;1mClient Columns (0.001472)[0m   [0;1mSHOW FIELDS FROM clients[0m
+  [4;35;1mClient Load (0.000560)[0m   [0mSELECT * FROM clients WHERE (clients.`id` = 1) [0m
+  [4;36;1mCategory Load (0.000561)[0m   [0;1mSELECT * FROM categories WHERE (categories.`id` = 1) [0m
+  [4;35;1mClient Load (0.000438)[0m   [0mSELECT * FROM clients WHERE (clients.`id` = 1) [0m
+  [4;36;1mCategory Load (0.000535)[0m   [0;1mSELECT * FROM categories WHERE (categories.`id` = 1) [0m
+  [4;35;1mClient Load (0.000445)[0m   [0mSELECT * FROM clients WHERE (clients.`id` = 1) [0m
+  [4;36;1mCategory Load (0.001412)[0m   [0;1mSELECT * FROM categories WHERE (categories.`id` = 1) [0m
+  [4;35;1mClient Load (0.000582)[0m   [0mSELECT * FROM clients WHERE (clients.`id` = 1) [0m
+  [4;36;1mCategory Load (0.000554)[0m   [0;1mSELECT * FROM categories WHERE (categories.`id` = 1) [0m
+  [4;35;1mClient Load (0.000449)[0m   [0mSELECT * FROM clients WHERE (clients.`id` = 1) [0m
+  [4;36;1mCategory Load (0.000734)[0m   [0;1mSELECT * FROM categories WHERE (categories.`id` = 1) [0m
+  [4;35;1mClient Load (0.000467)[0m   [0mSELECT * FROM clients WHERE (clients.`id` = 1) [0m
+  [4;36;1mCategory Load (0.000538)[0m   [0;1mSELECT * FROM categories WHERE (categories.`id` = 1) [0m
+  [4;35;1mClient Load (0.000429)[0m   [0mSELECT * FROM clients WHERE (clients.`id` = 1) [0m
+Completed in 0.09844 (10 reqs/sec) | Rendering: 0.07838 (79%) | DB: 0.01449 (14%) | 200 OK [http://localhost/pdfs]

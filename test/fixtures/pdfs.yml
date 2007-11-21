@@ -3,7 +3,7 @@ notice:
   id: 1
   pdfdate: "2007-11-20"
   pdfname: 'Notice Of Assessment'
-  filename: '20071121-Notice Of Assessment.pdf'
+  filename: '/livedata/pdfcat_test_clt/fastline/tax/20071121-Notice Of Assessment.pdf'
   pdfnote: "Linda's Assessment"
   category_id: 2
   client_id: 3 

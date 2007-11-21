@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE abiword PUBLIC "-//ABISOURCE//DTD AWML 1.0 Strict//EN" "http://www.abisource.com/awml.dtd">
-<abiword template="false" version="2.4.6" xmlns:svg="http://www.w3.org/2000/svg" xid-max="569" xmlns:dc="http://purl.org/dc/elements/1.1/" fileformat="1.1" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:math="http://www.w3.org/1998/Math/MathML" xmlns:awml="http://www.abisource.com/awml.dtd" xmlns="http://www.abisource.com/awml.dtd" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" props="dom-dir:ltr; document-footnote-restart-section:0; document-endnote-type:numeric; document-endnote-place-enddoc:1; document-endnote-initial:1; lang:en-US; document-endnote-restart-section:0; document-footnote-restart-page:0; document-footnote-type:numeric; document-footnote-initial:1; document-endnote-place-endsection:0">
+<abiword template="false" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:math="http://www.w3.org/1998/Math/MathML" xid-max="574" xmlns:dc="http://purl.org/dc/elements/1.1/" fileformat="1.1" xmlns:svg="http://www.w3.org/2000/svg" xmlns:awml="http://www.abisource.com/awml.dtd" xmlns="http://www.abisource.com/awml.dtd" xmlns:xlink="http://www.w3.org/1999/xlink" version="2.4.6" xml:space="preserve" props="dom-dir:ltr; document-footnote-restart-section:0; document-endnote-type:numeric; document-endnote-place-enddoc:1; document-endnote-initial:1; lang:en-US; document-endnote-restart-section:0; document-footnote-restart-page:0; document-footnote-type:numeric; document-footnote-initial:1; document-endnote-place-endsection:0">
 <!-- ======================================================================== -->
 <!-- This file is an AbiWord document.                                        -->
 <!-- AbiWord is a free, Open Source word processor.                           -->
@@ -12,14 +12,14 @@
 <m key="dc.format">application/x-abiword</m>
 <m key="abiword.generator">AbiWord</m>
 </metadata>
-<history version="139" edit-time="1105070" last-saved="1195610330" uid="2830ce94-837e-11dc-9146-e1a7d6fa0c3f">
+<history version="141" edit-time="1113923" last-saved="1195619183" uid="2830ce94-837e-11dc-9146-e1a7d6fa0c3f">
 <version id="3" started="1170122149" uid="d86456a2-b005-11db-8510-f48956ad5861" auto="0" top-xid="0"/>
 <version id="9" started="1170122989" uid="dc4497e4-b007-11db-8638-8589fdbb7ca2" auto="0" top-xid="73"/>
 <version id="10" started="1170714294" uid="b3e1f3fe-b567-11db-9a13-8de544bfd49c" auto="0" top-xid="92"/>
 <version id="11" started="1170714720" uid="b1efa310-b568-11db-9a13-8de544bfd49c" auto="0" top-xid="92"/>
 <version id="24" started="1193373944" uid="88211d24-8679-11dc-9146-e1a7d6fa0c3f" auto="0" top-xid="101"/>
 <version id="100" started="1194584945" uid="32f19c06-9183-11dc-9cd9-f7019202bf7b" auto="0" top-xid="184"/>
-<version id="139" started="1195166619" uid="4e08df92-97d5-11dc-950f-c295c1542af3" auto="0" top-xid="490"/>
+<version id="141" started="1195166619" uid="ead77874-97e9-11dc-950f-c295c1542af3" auto="0" top-xid="490"/>
 </history>
 <styles>
 <s followedby="Normal" name="Heading 1" basedon="Normal" type="P" props="margin-top:0.1667in; color:000000; font-size:16pt; margin-bottom:0.0417in; lang:en-US; bgcolor:transparent; font-weight:bold; keep-with-next:1; font-family:Arial"/>
@@ -401,9 +401,13 @@
 <p style="Normal" xid="523" props="tabstops:0.000000in/L0; dom-dir:ltr"></p>
 <p style="Heading 1" xid="519" props="tabstops:0.000000in/L0; dom-dir:ltr"></p>
 <p style="Heading 1" xid="561" props="tabstops:0.000000in/L0; dom-dir:ltr">Testing Notes</p>
-<p style="Normal" xid="566" props="tabstops:0.000000in/L0; dom-dir:ltr">Cannot fail validation on pdf.filename, ie: file doesn't exist.  This is a custom validator and maybe difficult to test.</p>
+<p style="Heading 3" xid="566" props="tabstops:0.000000in/L0; dom-dir:ltr">Unit Testing</p>
+<p style="Normal" xid="570" props="tabstops:0.000000in/L0; dom-dir:ltr">Cannot fail validation on pdf.filename, ie: file doesn't exist.  This is a custom validator and maybe difficult to test.</p>
 <p style="Normal" xid="568" props="tabstops:0.000000in/L0; dom-dir:ltr"></p>
-<p style="Normal" xid="569" props="tabstops:0.000000in/L0; dom-dir:ltr"></p>
+<p style="Heading 3" xid="571" props="tabstops:0.000000in/L0; dom-dir:ltr">Functional Testing</p>
+<p style="Normal" xid="569" props="tabstops:0.000000in/L0; dom-dir:ltr">There are 3 errors in the pdf functional testing</p>
+<p style="Normal" xid="572" props="tabstops:0.000000in/L0; dom-dir:ltr">	- test_edit &amp; test_show = "&lt;false&gt; is not true"</p>
+<p style="Normal" xid="574" props="tabstops:0.000000in/L0; dom-dir:ltr">	- test_update = "Expected response to be a &lt;:redirect&gt;, but was &lt;200&gt;"</p>
 <p style="Normal" xid="567" props="tabstops:0.000000in/L0; dom-dir:ltr"></p>
 <p style="Heading 1" xid="565" props="tabstops:0.000000in/L0; dom-dir:ltr">Todo</p>
 <p style="Normal" xid="282" props="font-family:Arial; dom-dir:ltr; font-style:normal; font-weight:normal; lang:en-US; text-position:normal; color:000000; tabstops:0.000000in/L0; text-decoration:none; font-size:12pt; text-align:left"><c props="font-family:Arial; font-size:12pt; color:000000; text-decoration:line-through; text-position:normal; font-weight:normal; font-style:normal; lang:en-US">- add 'category' to the pdf listing</c></p>

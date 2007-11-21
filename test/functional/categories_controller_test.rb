@@ -12,21 +12,13 @@ class CategoriesControllerTest < Test::Unit::TestCase
     @request    = ActionController::TestRequest.new
     @response   = ActionController::TestResponse.new
 
-    @first_id = categories(:first).id
+    @first_id = categories(:bas).id
   end
 
   def test_index
     get :index
     assert_response :success
-    assert_template 'list'
-  end
-
-  def test_list
-    get :list
-
-    assert_response :success
-    assert_template 'list'
-
+    assert_template 'index'
     assert_not_nil assigns(:categories)
   end
 
@@ -52,10 +44,12 @@ class CategoriesControllerTest < Test::Unit::TestCase
   def test_create
     num_categories = Category.count
 
-    post :create, :category => {}
+	# had to edit this
+    post :create, :category => {:name => "ASIC",
+								:description => "Australia Securities and Investments Commission"}
 
     assert_response :redirect
-    assert_redirected_to :action => 'list'
+    assert_redirected_to :action => 'index'
 
     assert_equal num_categories + 1, Category.count
   end
@@ -83,7 +77,7 @@ class CategoriesControllerTest < Test::Unit::TestCase
 
     post :destroy, :id => @first_id
     assert_response :redirect
-    assert_redirected_to :action => 'list'
+    assert_redirected_to :action => 'index'
 
     assert_raise(ActiveRecord::RecordNotFound) {
       Category.find(@first_id)
