@@ -6,9 +6,18 @@
   <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
   <title><%= SITE_NAME %> :<%= controller.action_name %></title>
   <%= stylesheet_link_tag 'application' %>
-  <%= javascript_include_tag :defaults %>		<!-- Used for AJAX -->
+  <%= javascript_include_tag :defaults %>		<!-- Used for AJAX and shortcuts plugin -->
+
 </head>
 <body>
+	<!-- Nav keys -->
+	<%= shortcut '0', "/new" %>
+	<%= shortcut '1', "/pdfs" %>
+	<%= shortcut '2', "/clients" %>
+	<%= shortcut '3', "/categories" %>
+
+	<!-- General shortcuts -->
+	<%= shortcut 'a', "/" + controller.controller_name + "/new" %>
 
 	<div id="headingback">
 		<div id="heading"><%=h controller.controller_name.singularize %></div>
