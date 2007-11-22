@@ -2,6 +2,7 @@
 
 <table>
   <tr>
+	  <th>No.</th>
   <% for column in Category.content_columns %>
     <th><%= column.human_name %></th>
   <% end %>
@@ -9,9 +10,13 @@
   
 <% for category in @categories %>
   <tr>
+	  <td><%= @no = @no + 1 %></td>
   <% for column in Category.content_columns %>
     <td><%=h category.send(column.name) %></td>
   <% end %>
+
+	<%= shortcut @no, "/" + controller.controller_name + "/show/" + category.id.to_s %>
+
     <td><%= link_to 'Show', :action => 'show', :id => category %></td>
     <td><%= link_to 'Edit', :action => 'edit', :id => category %></td>
     <td><%= link_to 'Destroy', { :action => 'destroy', :id => category }, :confirm => 'Are you sure?', :method => :post %></td>

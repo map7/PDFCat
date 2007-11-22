@@ -6,10 +6,12 @@ class PdfsController < ApplicationController
 
   def index
     @pdf_pages, @pdfs = paginate :pdfs, :per_page => 10
+	@no = -1	# Used for shorcuts
   end
 
   def show
     @pdf = Pdf.find(params[:id])
+	@id = params[:id]	# Used for shortcuts
   end
 
   def new

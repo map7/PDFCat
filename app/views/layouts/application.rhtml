@@ -11,13 +11,14 @@
 </head>
 <body>
 	<!-- Nav keys -->
-	<%= shortcut '0', "/new" %>
-	<%= shortcut '1', "/pdfs" %>
-	<%= shortcut '2', "/clients" %>
-	<%= shortcut '3', "/categories" %>
+	<%= shortcut ')', "/new" %>
+	<%= shortcut '!', "/pdfs" %>
+	<%= shortcut '@', "/clients" %>
+	<%= shortcut '#', "/categories" %>
 
 	<!-- General shortcuts -->
-	<%= shortcut 'a', "/" + controller.controller_name + "/new" %>
+	<%= shortcut 'a', "/" + controller.controller_name + "/new" %>	<!-- Add New -->
+	<%= shortcut 'b', "/" + controller.controller_name  %>			<!-- Back --> 
 
 	<div id="headingback">
 		<div id="heading"><%=h controller.controller_name.singularize %></div>

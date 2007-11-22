@@ -6,11 +6,14 @@ class ClientsController < ApplicationController
 
   def index
     @client_pages, @clients = paginate :clients, :per_page => 10
+
+	@no = -1	# Used for shorcuts
   end
 
 
   def show
     @client = Client.find(params[:id])
+	@id = params[:id]	# Used for shortcuts
   end
 
   def new

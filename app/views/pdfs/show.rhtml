@@ -1,3 +1,7 @@
+
+<!-- Edit -->
+<%= shortcut 'e', "/" + controller.controller_name + "/edit/" +  @id  %> 
+
 <% for column in Pdf.content_columns %>
 <p>
   <b><%= column.human_name %>:</b> <%=h @pdf.send(column.name) %>

@@ -2,6 +2,7 @@
 
 <table>
   <tr>
+	  <th>No.</th>
 	  <th>Date</th>
 	  <th>Name</th>
 	  <th>Category</th>
@@ -10,12 +11,15 @@
   
 <% for pdf in @pdfs %>
   <tr>
+	  <td><%= @no = @no + 1 %></td>
 
 	<td><%= pdf.pdfdate %></td>
 	<td><%= link_to pdf.pdfname, :action => "attachment", :filename => pdf.filename %></td>
 	<td><%= pdf.category.name %></td>
 	<td><%= pdf.client.name %></td>
   
+	<%= shortcut @no, "/" + controller.controller_name + "/show/" + pdf.id.to_s %>
+
     <td><%= link_to 'Show', :action => 'show', :id => pdf %></td>
     <td><%= link_to 'Edit', :action => 'edit', :id => pdf %></td>
     <td><%= link_to 'Destroy', { :action => 'destroy', :id => pdf }, :confirm => 'Are you sure?', :method => :post %></td>

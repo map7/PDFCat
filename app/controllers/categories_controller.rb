@@ -6,10 +6,12 @@ class CategoriesController < ApplicationController
 
   def index
     @category_pages, @categories = paginate :categories, :per_page => 10
+	@no = -1	# Used for shorcuts
   end
 
   def show
     @category = Category.find(params[:id])
+	@id = params[:id]	# Used for shortcuts
   end
 
   def new

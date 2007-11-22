@@ -1,3 +1,6 @@
+<!-- Edit -->
+<%= shortcut 'e', "/" + controller.controller_name + "/edit/" +  @id  %> 
+
 <% for column in Category.content_columns %>
 <p>
   <b><%= column.human_name %>:</b> <%=h @category.send(column.name) %>
