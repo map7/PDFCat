@@ -10,7 +10,7 @@
   
 <% for client in @clients %>
   <tr>
-	  <td><%= @no = @no + 1 %></td>
+	  <td><b><%= @no = @no + 1 %></b></td>
   <% for column in Client.content_columns %>
     <td><%=h client.send(column.name) %></td>
   <% end %>
@@ -24,9 +24,11 @@
 <% end %>
 </table>
 
-<%= link_to 'Previous page', { :page => @client_pages.current.previous } if @client_pages.current.previous %>
-<%= link_to 'Next page', { :page => @client_pages.current.next } if @client_pages.current.next %> 
+<%= shortcut_next_or_prev @client_pages %>
+
+<%= link_to '<b>P</b>revious page', { :page => @client_pages.current.previous } if @client_pages.current.previous %>
+<%= link_to '<b>N</b>ext page', { :page => @client_pages.current.next } if @client_pages.current.next %> 
 
 <br />
 
-<%= link_to 'New client', :action => 'new' %>
+<%= link_to '<b>A</b>dd New client', :action => 'new' %>

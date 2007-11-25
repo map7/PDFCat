@@ -10,7 +10,7 @@
   
 <% for category in @categories %>
   <tr>
-	  <td><%= @no = @no + 1 %></td>
+	  <td><b><%= @no = @no + 1 %></b></td>
   <% for column in Category.content_columns %>
     <td><%=h category.send(column.name) %></td>
   <% end %>
@@ -24,8 +24,10 @@
 <% end %>
 </table>
 
-<%= link_to 'Previous page', { :page => @category_pages.current.previous } if @category_pages.current.previous %>
-<%= link_to 'Next page', { :page => @category_pages.current.next } if @category_pages.current.next %> 
+<%= shortcut_next_or_prev @category_pages %>
+
+<%= link_to '<b>P</b>revious page', { :page => @category_pages.current.previous } if @category_pages.current.previous %>
+<%= link_to '<b>N</b>ext page', { :page => @category_pages.current.next } if @category_pages.current.next %> 
 
 <br />
 
