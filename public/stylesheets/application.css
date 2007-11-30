@@ -279,3 +279,23 @@ div#tbl_nav_bar{
 .tbl_nav_link{
     color: white;
 }
+
+
+/********************* Popups *********************/
+
+div#item{
+    position: absolute; 
+    margin: 0; 
+    display: block; 
+	top: 20%;
+	left: 25%;
+    width: 50%; 
+    height: 200px; 
+    background: #FFE887;
+    color: #000; 
+    text-align: left; 
+    font-size: 12; 
+    z-index: 4; 
+
+    /*visibility: hidden;*/
+}

@@ -17,6 +17,18 @@
 
 	<%= shortcut @no, "/" + controller.controller_name + "/show/" + category.id.to_s %>
 
+	<td>
+		<!-- TODO improve this AJAX to have links and shortcuts to replace the show page -->
+		<!--
+		<%= link_to_remote("ajax",
+						:update => "item",
+						:loading => "$('item').show()",
+						:url => { :action => :show_item, :id => category }) %>
+
+		<div id=item style='display:none'></div>
+		-->
+	</td>
+
     <td><%= link_to 'Show', :action => 'show', :id => category %></td>
     <td><%= link_to 'Edit', :action => 'edit', :id => category %></td>
     <td><%= link_to 'Destroy', { :action => 'destroy', :id => category }, :confirm => 'Are you sure?', :method => :post %></td>

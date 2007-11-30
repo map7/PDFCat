@@ -46,4 +46,14 @@ class CategoriesController < ApplicationController
     Category.find(params[:id]).destroy
     redirect_to :action => 'index'
   end
+
+  def show_item
+	@category = Category.find(params[:id])
+	#@id = params[:id]
+	#render_text "test from controller " + @id
+	#
+	render_text "id: " + @category.id.to_s + "<br />" + "name: " + @category.name.to_s
+
+  end
+  
 end
