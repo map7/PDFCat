@@ -14,7 +14,7 @@
 	  <td><b><%= @no = @no + 1 %></b></td>
 
 	<td><%= pdf.pdfdate %></td>
-	<td><%= link_to pdf.pdfname, :action => "attachment", :filename => pdf.filename %></td>
+	<td><%= link_to pdf.pdfname, :action => "attachment", :id => pdf.id %></td>
 	<td><%= pdf.category.name %></td>
 	<td><%= pdf.client.name %></td>
   

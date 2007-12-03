@@ -522,3 +522,817 @@ Processing PdfsController#index (for ::1 at 2007-12-03 12:15:17) [GET]
 Rendering  within layouts/application
 Rendering pdfs/index
 Completed in 0.06171 (16 reqs/sec) | Rendering: 0.02920 (47%) | DB: 0.03097 (50%) | 200 OK [http://localhost/pdfs]
+
+
+Processing NewController#index (for ::1 at 2007-12-03 12:20:34) [GET]
+  Session ID: 4bc464232e3fe571c9c88be54be86025
+  Parameters: {"action"=>"index", "controller"=>"new"}
+Rendering  within layouts/application
+Rendering new/index
+Completed in 0.03157 (31 reqs/sec) | Rendering: 0.03057 (96%) | DB: 0.00000 (0%) | 200 OK [http://localhost/new]
+
+
+Processing PdfsController#index (for ::1 at 2007-12-03 12:20:36) [GET]
+  Session ID: 4bc464232e3fe571c9c88be54be86025
+  Parameters: {"action"=>"index", "controller"=>"pdfs"}
+Rendering  within layouts/application
+Rendering pdfs/index
+Completed in 0.05796 (17 reqs/sec) | Rendering: 0.02395 (41%) | DB: 0.03098 (53%) | 200 OK [http://localhost/pdfs]
+
+
+Processing PdfsController#attachment (for ::1 at 2007-12-03 12:24:18) [GET]
+  Session ID: 4bc464232e3fe571c9c88be54be86025
+  Parameters: {"action"=>"attachment", "controller"=>"pdfs", "filename"=>"20071129-Trust Deed.pdf"}
+
+
+ActionController::MissingFile (Cannot read file 20071129-Trust Deed.pdf):
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/streaming.rb:59:in `send_file'
+    /app/controllers/pdfs_controller.rb:87:in `attachment'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:1095:in `send'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:1095:in `perform_action_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:632:in `call_filter'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:634:in `call_filter'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:619:in `perform_action_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/benchmarking.rb:66:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/benchmarking.rb:66:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/rescue.rb:83:in `perform_action'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:430:in `send'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:430:in `process_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:624:in `process_without_session_management_support'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/session_management.rb:114:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:330:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.2.3/lib/dispatcher.rb:41:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:78:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:76:in `synchronize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:76:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:618:in `process_client'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:617:in `each'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:617:in `process_client'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `initialize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `new'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `initialize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `new'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:271:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:270:in `each'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:270:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/bin/mongrel_rails:127:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/command.rb:211:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/bin/mongrel_rails:243
+    /usr/local/bin/mongrel_rails:16:in `load'
+    /usr/local/bin/mongrel_rails:16
+
+
+
+
+Processing PdfsController#index (for ::1 at 2007-12-03 12:24:24) [GET]
+  Session ID: 4bc464232e3fe571c9c88be54be86025
+  Parameters: {"action"=>"index", "controller"=>"pdfs"}
+Rendering  within layouts/application
+Rendering pdfs/index
+Completed in 0.13000 (7 reqs/sec) | Rendering: 0.10192 (78%) | DB: 0.02673 (20%) | 200 OK [http://localhost/pdfs]
+
+
+Processing PdfsController#attachment (for ::1 at 2007-12-03 12:24:27) [GET]
+  Session ID: 4bc464232e3fe571c9c88be54be86025
+  Parameters: {"action"=>"attachment", "controller"=>"pdfs", "filename"=>"20071129-Trust Deed.pdf"}
+
+
+ActionController::MissingFile (Cannot read file 20071129-Trust Deed.pdf):
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/streaming.rb:59:in `send_file'
+    /app/controllers/pdfs_controller.rb:87:in `attachment'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:1095:in `send'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:1095:in `perform_action_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:632:in `call_filter'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:634:in `call_filter'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:619:in `perform_action_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/benchmarking.rb:66:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/benchmarking.rb:66:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/rescue.rb:83:in `perform_action'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:430:in `send'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:430:in `process_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:624:in `process_without_session_management_support'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/session_management.rb:114:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:330:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.2.3/lib/dispatcher.rb:41:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:78:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:76:in `synchronize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:76:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:618:in `process_client'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:617:in `each'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:617:in `process_client'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `initialize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `new'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `initialize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `new'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:271:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:270:in `each'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:270:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/bin/mongrel_rails:127:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/command.rb:211:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/bin/mongrel_rails:243
+    /usr/local/bin/mongrel_rails:16:in `load'
+    /usr/local/bin/mongrel_rails:16
+
+
+
+
+Processing PdfsController#index (for ::1 at 2007-12-03 14:27:14) [GET]
+  Session ID: 4bc464232e3fe571c9c88be54be86025
+  Parameters: {"action"=>"index", "controller"=>"pdfs"}
+Rendering  within layouts/application
+Rendering pdfs/index
+Completed in 0.06513 (15 reqs/sec) | Rendering: 0.03545 (54%) | DB: 0.02840 (43%) | 200 OK [http://localhost/pdfs]
+
+
+Processing PdfsController#attachment (for ::1 at 2007-12-03 14:27:16) [GET]
+  Session ID: 4bc464232e3fe571c9c88be54be86025
+  Parameters: {"action"=>"attachment", "id"=>"155", "controller"=>"pdfs"}
+
+
+TypeError (can't convert nil into String):
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/streaming.rb:59:in `file?'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/streaming.rb:59:in `send_file'
+    /app/controllers/pdfs_controller.rb:87:in `attachment'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:1095:in `send'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:1095:in `perform_action_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:632:in `call_filter'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:634:in `call_filter'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:619:in `perform_action_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/benchmarking.rb:66:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/benchmarking.rb:66:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/rescue.rb:83:in `perform_action'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:430:in `send'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:430:in `process_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:624:in `process_without_session_management_support'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/session_management.rb:114:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:330:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.2.3/lib/dispatcher.rb:41:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:78:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:76:in `synchronize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:76:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:618:in `process_client'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:617:in `each'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:617:in `process_client'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `initialize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `new'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `initialize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `new'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:271:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:270:in `each'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:270:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/bin/mongrel_rails:127:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/command.rb:211:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/bin/mongrel_rails:243
+    /usr/local/bin/mongrel_rails:16:in `load'
+    /usr/local/bin/mongrel_rails:16
+
+
+
+
+Processing PdfsController#index (for ::1 at 2007-12-03 14:27:45) [GET]
+  Session ID: 4bc464232e3fe571c9c88be54be86025
+  Parameters: {"action"=>"index", "controller"=>"pdfs"}
+Rendering  within layouts/application
+Rendering pdfs/index
+Completed in 0.14229 (7 reqs/sec) | Rendering: 0.03943 (27%) | DB: 0.02659 (18%) | 200 OK [http://localhost/pdfs]
+
+
+Processing PdfsController#attachment (for ::1 at 2007-12-03 14:27:47) [GET]
+  Session ID: 4bc464232e3fe571c9c88be54be86025
+  Parameters: {"action"=>"attachment", "id"=>"154", "controller"=>"pdfs"}
+Completed in 0.00457 (219 reqs/sec) | Rendering: 0.00006 (1%) | DB: 0.00316 (69%) | 200 OK [http://localhost/pdfs/attachment/154]
+Streaming file /livedata/pdfcat_clt/novembre family trust/company/20071129-Trust Deed.pdf
+
+
+Processing PdfsController#index (for ::1 at 2007-12-03 14:28:02) [GET]
+  Session ID: 4bc464232e3fe571c9c88be54be86025
+  Parameters: {"action"=>"index", "controller"=>"pdfs"}
+Rendering  within layouts/application
+Rendering pdfs/index
+Completed in 0.03710 (26 reqs/sec) | Rendering: 0.01942 (52%) | DB: 0.01654 (44%) | 200 OK [http://localhost/pdfs]
+
+
+Processing PdfsController#index (for ::1 at 2007-12-03 14:28:05) [GET]
+  Session ID: 4bc464232e3fe571c9c88be54be86025
+  Parameters: {"action"=>"index", "controller"=>"pdfs"}
+Rendering  within layouts/application
+Rendering pdfs/index
+Completed in 0.03747 (26 reqs/sec) | Rendering: 0.01968 (52%) | DB: 0.01667 (44%) | 200 OK [http://localhost/pdfs]
+
+
+Processing PdfsController#attachment (for ::1 at 2007-12-03 14:28:08) [GET]
+  Session ID: 4bc464232e3fe571c9c88be54be86025
+  Parameters: {"action"=>"attachment", "id"=>"155", "controller"=>"pdfs"}
+Completed in 0.01326 (75 reqs/sec) | Rendering: 0.00006 (0%) | DB: 0.00239 (18%) | 200 OK [http://localhost/pdfs/attachment/155]
+Streaming file /livedata/pdfcat_clt/superior paving unit trust/general/20071129-Final Warning Notice Coinvest.pdf
+
+
+Processing ClientsController#index (for ::1 at 2007-12-03 14:28:20) [GET]
+  Session ID: 4bc464232e3fe571c9c88be54be86025
+  Parameters: {"action"=>"index", "controller"=>"clients"}
+Rendering  within layouts/application
+Rendering clients/index
+Completed in 0.02610 (38 reqs/sec) | Rendering: 0.02095 (80%) | DB: 0.00319 (12%) | 200 OK [http://localhost/clients]
+
+
+Processing CategoriesController#index (for ::1 at 2007-12-03 14:28:22) [GET]
+  Session ID: 4bc464232e3fe571c9c88be54be86025
+  Parameters: {"action"=>"index", "controller"=>"categories"}
+Rendering  within layouts/application
+Rendering categories/index
+Completed in 0.02450 (40 reqs/sec) | Rendering: 0.02067 (84%) | DB: 0.00217 (8%) | 200 OK [http://localhost/categories]
+
+
+Processing PdfsController#index (for ::1 at 2007-12-03 14:28:26) [GET]
+  Session ID: 4bc464232e3fe571c9c88be54be86025
+  Parameters: {"action"=>"index", "controller"=>"pdfs"}
+Rendering  within layouts/application
+Rendering pdfs/index
+Completed in 0.04066 (24 reqs/sec) | Rendering: 0.01995 (49%) | DB: 0.01956 (48%) | 200 OK [http://localhost/pdfs]
+
+
+Processing ClientsController#index (for ::1 at 2007-12-03 14:28:27) [GET]
+  Session ID: 4bc464232e3fe571c9c88be54be86025
+  Parameters: {"action"=>"index", "controller"=>"clients"}
+Rendering  within layouts/application
+Rendering clients/index
+Completed in 0.01272 (78 reqs/sec) | Rendering: 0.00940 (73%) | DB: 0.00236 (18%) | 200 OK [http://localhost/clients]
+
+
+Processing CategoriesController#index (for ::1 at 2007-12-03 14:28:30) [GET]
+  Session ID: 4bc464232e3fe571c9c88be54be86025
+  Parameters: {"action"=>"index", "controller"=>"categories"}
+Rendering  within layouts/application
+Rendering categories/index
+Completed in 0.01283 (77 reqs/sec) | Rendering: 0.00960 (74%) | DB: 0.00214 (16%) | 200 OK [http://localhost/categories]
+
+
+Processing PdfsController#index (for ::1 at 2007-12-03 14:28:32) [GET]
+  Session ID: 4bc464232e3fe571c9c88be54be86025
+  Parameters: {"action"=>"index", "controller"=>"pdfs"}
+Rendering  within layouts/application
+Rendering pdfs/index
+Completed in 0.03943 (25 reqs/sec) | Rendering: 0.02033 (51%) | DB: 0.01797 (45%) | 200 OK [http://localhost/pdfs]
+
+
+Processing PdfsController#index (for ::1 at 2007-12-03 14:28:39) [GET]
+  Session ID: 4bc464232e3fe571c9c88be54be86025
+  Parameters: {"action"=>"index", "controller"=>"pdfs"}
+Rendering  within layouts/application
+Rendering pdfs/index
+Completed in 0.05550 (18 reqs/sec) | Rendering: 0.02689 (48%) | DB: 0.02721 (49%) | 200 OK [http://localhost/pdfs]
+
+
+Processing PdfsController#index (for ::1 at 2007-12-03 14:28:42) [GET]
+  Session ID: 4bc464232e3fe571c9c88be54be86025
+  Parameters: {"action"=>"index", "controller"=>"pdfs"}
+Rendering  within layouts/application
+Rendering pdfs/index
+Completed in 0.03672 (27 reqs/sec) | Rendering: 0.01925 (52%) | DB: 0.01626 (44%) | 200 OK [http://localhost/pdfs]
+
+
+Processing PdfsController#index (for ::1 at 2007-12-03 14:28:44) [GET]
+  Session ID: 4bc464232e3fe571c9c88be54be86025
+  Parameters: {"action"=>"index", "controller"=>"pdfs"}
+Rendering  within layouts/application
+Rendering pdfs/index
+Completed in 0.03821 (26 reqs/sec) | Rendering: 0.01932 (50%) | DB: 0.01667 (43%) | 200 OK [http://localhost/pdfs]
+
+
+Processing PdfsController#index (for ::1 at 2007-12-03 14:28:46) [GET]
+  Session ID: 4bc464232e3fe571c9c88be54be86025
+  Parameters: {"action"=>"index", "controller"=>"pdfs"}
+Rendering  within layouts/application
+Rendering pdfs/index
+Completed in 0.03840 (26 reqs/sec) | Rendering: 0.01953 (50%) | DB: 0.01769 (46%) | 200 OK [http://localhost/pdfs]
+
+
+Processing ClientsController#index (for ::1 at 2007-12-03 14:28:49) [GET]
+  Session ID: 4bc464232e3fe571c9c88be54be86025
+  Parameters: {"action"=>"index", "controller"=>"clients"}
+Rendering  within layouts/application
+Rendering clients/index
+Completed in 0.01140 (87 reqs/sec) | Rendering: 0.00812 (71%) | DB: 0.00225 (19%) | 200 OK [http://localhost/clients]
+
+
+Processing PdfsController#index (for ::1 at 2007-12-03 14:28:52) [GET]
+  Session ID: 4bc464232e3fe571c9c88be54be86025
+  Parameters: {"action"=>"index", "controller"=>"pdfs"}
+Rendering  within layouts/application
+Rendering pdfs/index
+Completed in 0.03675 (27 reqs/sec) | Rendering: 0.01928 (52%) | DB: 0.01636 (44%) | 200 OK [http://localhost/pdfs]
+
+
+Processing ClientsController#index (for ::1 at 2007-12-03 14:28:55) [GET]
+  Session ID: 4bc464232e3fe571c9c88be54be86025
+  Parameters: {"action"=>"index", "controller"=>"clients"}
+Rendering  within layouts/application
+Rendering clients/index
+Completed in 0.01146 (87 reqs/sec) | Rendering: 0.00827 (72%) | DB: 0.00224 (19%) | 200 OK [http://localhost/clients]
+
+
+Processing PdfsController#index (for ::1 at 2007-12-03 14:28:56) [GET]
+  Session ID: 4bc464232e3fe571c9c88be54be86025
+  Parameters: {"action"=>"index", "controller"=>"pdfs"}
+Rendering  within layouts/application
+Rendering pdfs/index
+Completed in 0.03826 (26 reqs/sec) | Rendering: 0.01942 (50%) | DB: 0.01678 (43%) | 200 OK [http://localhost/pdfs]
+
+
+Processing PdfsController#index (for ::1 at 2007-12-03 14:31:31) [GET]
+  Session ID: 4bc464232e3fe571c9c88be54be86025
+  Parameters: {"action"=>"index", "controller"=>"pdfs"}
+Rendering  within layouts/application
+Rendering pdfs/index
+Completed in 0.00553 (180 reqs/sec) | Rendering: 0.00255 (46%) | DB: 0.00222 (40%) | 200 OK [http://localhost/pdfs]
+
+
+Processing ClientsController#index (for ::1 at 2007-12-03 14:31:34) [GET]
+  Session ID: 4bc464232e3fe571c9c88be54be86025
+  Parameters: {"action"=>"index", "controller"=>"clients"}
+Rendering  within layouts/application
+Rendering clients/index
+Completed in 0.00487 (205 reqs/sec) | Rendering: 0.00253 (51%) | DB: 0.00159 (32%) | 200 OK [http://localhost/clients]
+
+
+Processing ClientsController#new (for ::1 at 2007-12-03 14:31:37) [GET]
+  Session ID: 4bc464232e3fe571c9c88be54be86025
+  Parameters: {"action"=>"new", "controller"=>"clients"}
+Rendering  within layouts/application
+Rendering clients/new
+Completed in 0.02490 (40 reqs/sec) | Rendering: 0.02467 (99%) | DB: 0.00000 (0%) | 200 OK [http://localhost/clients/new]
+
+
+Processing ClientsController#create (for ::1 at 2007-12-03 14:31:57) [POST]
+  Session ID: 4bc464232e3fe571c9c88be54be86025
+  Parameters: {"commit"=>"Create", "client"=>{"name"=>"Digitech", "email"=>"michael@dtcorp.com.au"}, "action"=>"create", "controller"=>"clients"}
+Redirected to http://localhost/clients
+Completed in 0.01246 (80 reqs/sec) | DB: 0.01007 (80%) | 302 Found [http://localhost/clients/create]
+
+
+Processing ClientsController#index (for ::1 at 2007-12-03 14:31:57) [GET]
+  Session ID: 4bc464232e3fe571c9c88be54be86025
+  Parameters: {"action"=>"index", "controller"=>"clients"}
+Rendering  within layouts/application
+Rendering clients/index
+Completed in 0.00626 (159 reqs/sec) | Rendering: 0.00342 (54%) | DB: 0.00201 (32%) | 200 OK [http://localhost/clients]
+
+
+Processing ClientsController#index (for ::1 at 2007-12-03 14:32:01) [GET]
+  Session ID: 4bc464232e3fe571c9c88be54be86025
+  Parameters: {"action"=>"index", "controller"=>"clients"}
+Rendering  within layouts/application
+Rendering clients/index
+Completed in 0.00593 (168 reqs/sec) | Rendering: 0.00323 (54%) | DB: 0.00188 (31%) | 200 OK [http://localhost/clients]
+
+
+Processing CategoriesController#index (for ::1 at 2007-12-03 14:32:04) [GET]
+  Session ID: 4bc464232e3fe571c9c88be54be86025
+  Parameters: {"action"=>"index", "controller"=>"categories"}
+Rendering  within layouts/application
+Rendering categories/index
+Completed in 0.00467 (214 reqs/sec) | Rendering: 0.00253 (54%) | DB: 0.00140 (30%) | 200 OK [http://localhost/categories]
+
+
+Processing CategoriesController#new (for ::1 at 2007-12-03 14:32:08) [GET]
+  Session ID: 4bc464232e3fe571c9c88be54be86025
+  Parameters: {"action"=>"new", "controller"=>"categories"}
+Rendering  within layouts/application
+Rendering categories/new
+Completed in 0.00597 (167 reqs/sec) | Rendering: 0.00558 (93%) | DB: 0.00000 (0%) | 200 OK [http://localhost/categories/new]
+
+
+Processing CategoriesController#create (for ::1 at 2007-12-03 14:32:10) [POST]
+  Session ID: 4bc464232e3fe571c9c88be54be86025
+  Parameters: {"commit"=>"Create", "category"=>{"name"=>"test", "description"=>""}, "action"=>"create", "controller"=>"categories"}
+Redirected to http://localhost/categories
+Completed in 0.00775 (129 reqs/sec) | DB: 0.00562 (72%) | 302 Found [http://localhost/categories/create]
+
+
+Processing CategoriesController#index (for ::1 at 2007-12-03 14:32:10) [GET]
+  Session ID: 4bc464232e3fe571c9c88be54be86025
+  Parameters: {"action"=>"index", "controller"=>"categories"}
+Rendering  within layouts/application
+Rendering categories/index
+Completed in 0.00579 (172 reqs/sec) | Rendering: 0.00344 (59%) | DB: 0.00155 (26%) | 200 OK [http://localhost/categories]
+
+
+Processing NewController#index (for ::1 at 2007-12-03 14:32:13) [GET]
+  Session ID: 4bc464232e3fe571c9c88be54be86025
+  Parameters: {"action"=>"index", "controller"=>"new"}
+Rendering  within layouts/application
+Rendering new/index
+Completed in 0.01741 (57 reqs/sec) | Rendering: 0.01652 (94%) | DB: 0.00000 (0%) | 200 OK [http://localhost/new]
+
+
+Processing NewController#index (for ::1 at 2007-12-03 14:42:07) [GET]
+  Session ID: 4bc464232e3fe571c9c88be54be86025
+  Parameters: {"action"=>"index", "controller"=>"new"}
+Rendering  within layouts/application
+Rendering new/index
+Completed in 0.00458 (218 reqs/sec) | Rendering: 0.00441 (96%) | DB: 0.00000 (0%) | 200 OK [http://localhost/new]
+
+
+Processing PdfsController#index (for ::1 at 2007-12-03 14:42:11) [GET]
+  Session ID: 4bc464232e3fe571c9c88be54be86025
+  Parameters: {"action"=>"index", "controller"=>"pdfs"}
+Rendering  within layouts/application
+Rendering pdfs/index
+Completed in 0.00538 (185 reqs/sec) | Rendering: 0.00275 (51%) | DB: 0.00178 (33%) | 200 OK [http://localhost/pdfs]
+
+
+Processing ClientsController#index (for ::1 at 2007-12-03 14:42:12) [GET]
+  Session ID: 4bc464232e3fe571c9c88be54be86025
+  Parameters: {"action"=>"index", "controller"=>"clients"}
+Rendering  within layouts/application
+Rendering clients/index
+Completed in 0.00641 (156 reqs/sec) | Rendering: 0.00348 (54%) | DB: 0.00176 (27%) | 200 OK [http://localhost/clients]
+
+
+Processing CategoriesController#index (for ::1 at 2007-12-03 14:42:14) [GET]
+  Session ID: 4bc464232e3fe571c9c88be54be86025
+  Parameters: {"action"=>"index", "controller"=>"categories"}
+Rendering  within layouts/application
+Rendering categories/index
+Completed in 0.00568 (176 reqs/sec) | Rendering: 0.00335 (58%) | DB: 0.00141 (24%) | 200 OK [http://localhost/categories]
+
+
+Processing ClientsController#index (for ::1 at 2007-12-03 14:42:15) [GET]
+  Session ID: 4bc464232e3fe571c9c88be54be86025
+  Parameters: {"action"=>"index", "controller"=>"clients"}
+Rendering  within layouts/application
+Rendering clients/index
+Completed in 0.00559 (178 reqs/sec) | Rendering: 0.00310 (55%) | DB: 0.00170 (30%) | 200 OK [http://localhost/clients]
+
+
+Processing ClientsController#index (for ::1 at 2007-12-03 14:42:26) [GET]
+  Session ID: 4bc464232e3fe571c9c88be54be86025
+  Parameters: {"action"=>"index", "controller"=>"clients"}
+
+
+RuntimeError (FATAL	C3D000	Mdatabase "pdfcat_production" does not exist	Fpostinit.c	L318	RInitPostgres):
+    /usr/local/lib/ruby/gems/1.8/gems/postgres-pr-0.4.0/lib/postgres-pr/connection.rb:55:in `initialize'
+    /usr/local/lib/ruby/gems/1.8/gems/postgres-pr-0.4.0/lib/postgres-pr/connection.rb:29:in `loop'
+    /usr/local/lib/ruby/gems/1.8/gems/postgres-pr-0.4.0/lib/postgres-pr/connection.rb:29:in `initialize'
+    /usr/local/lib/ruby/gems/1.8/gems/postgres-pr-0.4.0/lib/postgres-pr/postgres-compat.rb:23:in `new'
+    /usr/local/lib/ruby/gems/1.8/gems/postgres-pr-0.4.0/lib/postgres-pr/postgres-compat.rb:23:in `initialize'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-1.15.3/lib/active_record/connection_adapters/postgresql_adapter.rb:24:in `connect'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-1.15.3/lib/active_record/connection_adapters/postgresql_adapter.rb:24:in `postgresql_connection'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-1.15.3/lib/active_record/connection_adapters/abstract/connection_specification.rb:262:in `send'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-1.15.3/lib/active_record/connection_adapters/abstract/connection_specification.rb:262:in `connection_without_query_cache='
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-1.15.3/lib/active_record/query_cache.rb:54:in `connection='
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-1.15.3/lib/active_record/connection_adapters/abstract/connection_specification.rb:230:in `retrieve_connection'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-1.15.3/lib/active_record/connection_adapters/abstract/connection_specification.rb:78:in `connection'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-1.15.3/lib/active_record/base.rb:763:in `columns'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-1.15.3/lib/active_record/calculations.rb:257:in `column_for'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-1.15.3/lib/active_record/calculations.rb:116:in `calculate'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-1.15.3/lib/active_record/calculations.rb:45:in `count'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/pagination.rb:173:in `count_collection_for_pagination'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/pagination.rb:197:in `paginator_and_collection_for'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/pagination.rb:130:in `paginate'
+    /app/controllers/clients_controller.rb:8:in `index'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:1095:in `send'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:1095:in `perform_action_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:632:in `call_filter'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:634:in `call_filter'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:619:in `perform_action_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/benchmarking.rb:66:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/benchmarking.rb:66:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/rescue.rb:83:in `perform_action'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:430:in `send'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:430:in `process_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:624:in `process_without_session_management_support'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/session_management.rb:114:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:330:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.2.3/lib/dispatcher.rb:41:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:78:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:76:in `synchronize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:76:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:618:in `process_client'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:617:in `each'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:617:in `process_client'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `initialize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `new'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `initialize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `new'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:271:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:270:in `each'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:270:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/bin/mongrel_rails:127:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/command.rb:211:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/bin/mongrel_rails:243
+    /usr/local/bin/mongrel_rails:16:in `load'
+    /usr/local/bin/mongrel_rails:16
+
+
+
+
+Processing ClientsController#index (for ::1 at 2007-12-03 14:43:31) [GET]
+  Session ID: 4bc464232e3fe571c9c88be54be86025
+  Parameters: {"action"=>"index", "controller"=>"clients"}
+
+
+ActiveRecord::StatementInvalid (RuntimeError: ERROR	C42P01	Mrelation "clients" does not exist	Fnamespace.c	L221	RRangeVarGetRelid:             SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+              FROM pg_attribute a LEFT JOIN pg_attrdef d
+                ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+             WHERE a.attrelid = 'clients'::regclass
+               AND a.attnum > 0 AND NOT a.attisdropped
+             ORDER BY a.attnum
+):
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-1.15.3/lib/active_record/connection_adapters/abstract_adapter.rb:128:in `log'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-1.15.3/lib/active_record/connection_adapters/postgresql_adapter.rb:142:in `query'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-1.15.3/lib/active_record/connection_adapters/postgresql_adapter.rb:528:in `column_definitions'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-1.15.3/lib/active_record/connection_adapters/postgresql_adapter.rb:223:in `columns'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-1.15.3/lib/active_record/base.rb:763:in `columns'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-1.15.3/lib/active_record/calculations.rb:257:in `column_for'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-1.15.3/lib/active_record/calculations.rb:116:in `calculate'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-1.15.3/lib/active_record/calculations.rb:45:in `count'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/pagination.rb:173:in `count_collection_for_pagination'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/pagination.rb:197:in `paginator_and_collection_for'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/pagination.rb:130:in `paginate'
+    /app/controllers/clients_controller.rb:8:in `index'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:1095:in `send'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:1095:in `perform_action_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:632:in `call_filter'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:634:in `call_filter'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:619:in `perform_action_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/benchmarking.rb:66:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/benchmarking.rb:66:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/rescue.rb:83:in `perform_action'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:430:in `send'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:430:in `process_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:624:in `process_without_session_management_support'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/session_management.rb:114:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:330:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.2.3/lib/dispatcher.rb:41:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:78:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:76:in `synchronize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:76:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:618:in `process_client'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:617:in `each'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:617:in `process_client'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `initialize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `new'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `initialize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `new'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:271:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:270:in `each'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:270:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/bin/mongrel_rails:127:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/command.rb:211:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/bin/mongrel_rails:243
+    /usr/local/bin/mongrel_rails:16:in `load'
+    /usr/local/bin/mongrel_rails:16
+
+
+
+
+Processing ClientsController#index (for ::1 at 2007-12-03 14:43:32) [GET]
+  Session ID: 4bc464232e3fe571c9c88be54be86025
+  Parameters: {"action"=>"index", "controller"=>"clients"}
+
+
+ActiveRecord::StatementInvalid (RuntimeError: ERROR	C42P01	Mrelation "clients" does not exist	Fnamespace.c	L221	RRangeVarGetRelid:             SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+              FROM pg_attribute a LEFT JOIN pg_attrdef d
+                ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+             WHERE a.attrelid = 'clients'::regclass
+               AND a.attnum > 0 AND NOT a.attisdropped
+             ORDER BY a.attnum
+):
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-1.15.3/lib/active_record/connection_adapters/abstract_adapter.rb:128:in `log'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-1.15.3/lib/active_record/connection_adapters/postgresql_adapter.rb:142:in `query'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-1.15.3/lib/active_record/connection_adapters/postgresql_adapter.rb:528:in `column_definitions'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-1.15.3/lib/active_record/connection_adapters/postgresql_adapter.rb:223:in `columns'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-1.15.3/lib/active_record/base.rb:763:in `columns'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-1.15.3/lib/active_record/calculations.rb:257:in `column_for'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-1.15.3/lib/active_record/calculations.rb:116:in `calculate'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-1.15.3/lib/active_record/calculations.rb:45:in `count'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/pagination.rb:173:in `count_collection_for_pagination'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/pagination.rb:197:in `paginator_and_collection_for'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/pagination.rb:130:in `paginate'
+    /app/controllers/clients_controller.rb:8:in `index'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:1095:in `send'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:1095:in `perform_action_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:632:in `call_filter'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:634:in `call_filter'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:619:in `perform_action_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/benchmarking.rb:66:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/benchmarking.rb:66:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/rescue.rb:83:in `perform_action'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:430:in `send'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:430:in `process_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:624:in `process_without_session_management_support'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/session_management.rb:114:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:330:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.2.3/lib/dispatcher.rb:41:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:78:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:76:in `synchronize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:76:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:618:in `process_client'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:617:in `each'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:617:in `process_client'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `initialize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `new'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `initialize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `new'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:271:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:270:in `each'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:270:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/bin/mongrel_rails:127:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/command.rb:211:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/bin/mongrel_rails:243
+    /usr/local/bin/mongrel_rails:16:in `load'
+    /usr/local/bin/mongrel_rails:16
+
+
+
+
+Processing ClientsController#index (for ::1 at 2007-12-03 14:43:49) [GET]
+  Session ID: 4bc464232e3fe571c9c88be54be86025
+  Parameters: {"action"=>"index", "controller"=>"clients"}
+
+
+ActiveRecord::StatementInvalid (RuntimeError: ERROR	C42P01	Mrelation "clients" does not exist	Fnamespace.c	L221	RRangeVarGetRelid:             SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+              FROM pg_attribute a LEFT JOIN pg_attrdef d
+                ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+             WHERE a.attrelid = 'clients'::regclass
+               AND a.attnum > 0 AND NOT a.attisdropped
+             ORDER BY a.attnum
+):
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-1.15.3/lib/active_record/connection_adapters/abstract_adapter.rb:128:in `log'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-1.15.3/lib/active_record/connection_adapters/postgresql_adapter.rb:142:in `query'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-1.15.3/lib/active_record/connection_adapters/postgresql_adapter.rb:528:in `column_definitions'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-1.15.3/lib/active_record/connection_adapters/postgresql_adapter.rb:223:in `columns'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-1.15.3/lib/active_record/base.rb:763:in `columns'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-1.15.3/lib/active_record/calculations.rb:257:in `column_for'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-1.15.3/lib/active_record/calculations.rb:116:in `calculate'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-1.15.3/lib/active_record/calculations.rb:45:in `count'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/pagination.rb:173:in `count_collection_for_pagination'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/pagination.rb:197:in `paginator_and_collection_for'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/pagination.rb:130:in `paginate'
+    /app/controllers/clients_controller.rb:8:in `index'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:1095:in `send'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:1095:in `perform_action_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:632:in `call_filter'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:634:in `call_filter'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:619:in `perform_action_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/benchmarking.rb:66:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/benchmarking.rb:66:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/rescue.rb:83:in `perform_action'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:430:in `send'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:430:in `process_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:624:in `process_without_session_management_support'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/session_management.rb:114:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:330:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.2.3/lib/dispatcher.rb:41:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:78:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:76:in `synchronize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:76:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:618:in `process_client'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:617:in `each'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:617:in `process_client'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `initialize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `new'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `initialize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `new'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:271:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:270:in `each'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:270:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/bin/mongrel_rails:127:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/command.rb:211:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/bin/mongrel_rails:243
+    /usr/local/bin/mongrel_rails:16:in `load'
+    /usr/local/bin/mongrel_rails:16
+
+
+
+
+Processing ClientsController#index (for ::1 at 2007-12-03 14:43:50) [GET]
+  Session ID: 4bc464232e3fe571c9c88be54be86025
+  Parameters: {"action"=>"index", "controller"=>"clients"}
+
+
+ActiveRecord::StatementInvalid (RuntimeError: ERROR	C42P01	Mrelation "clients" does not exist	Fnamespace.c	L221	RRangeVarGetRelid:             SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+              FROM pg_attribute a LEFT JOIN pg_attrdef d
+                ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+             WHERE a.attrelid = 'clients'::regclass
+               AND a.attnum > 0 AND NOT a.attisdropped
+             ORDER BY a.attnum
+):
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-1.15.3/lib/active_record/connection_adapters/abstract_adapter.rb:128:in `log'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-1.15.3/lib/active_record/connection_adapters/postgresql_adapter.rb:142:in `query'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-1.15.3/lib/active_record/connection_adapters/postgresql_adapter.rb:528:in `column_definitions'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-1.15.3/lib/active_record/connection_adapters/postgresql_adapter.rb:223:in `columns'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-1.15.3/lib/active_record/base.rb:763:in `columns'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-1.15.3/lib/active_record/calculations.rb:257:in `column_for'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-1.15.3/lib/active_record/calculations.rb:116:in `calculate'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-1.15.3/lib/active_record/calculations.rb:45:in `count'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/pagination.rb:173:in `count_collection_for_pagination'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/pagination.rb:197:in `paginator_and_collection_for'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/pagination.rb:130:in `paginate'
+    /app/controllers/clients_controller.rb:8:in `index'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:1095:in `send'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:1095:in `perform_action_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:632:in `call_filter'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:634:in `call_filter'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:619:in `perform_action_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/benchmarking.rb:66:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/benchmarking.rb:66:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/rescue.rb:83:in `perform_action'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:430:in `send'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:430:in `process_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:624:in `process_without_session_management_support'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/session_management.rb:114:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:330:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.2.3/lib/dispatcher.rb:41:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:78:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:76:in `synchronize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:76:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:618:in `process_client'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:617:in `each'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:617:in `process_client'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `initialize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `new'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `initialize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `new'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:271:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:270:in `each'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:270:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/bin/mongrel_rails:127:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/command.rb:211:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/bin/mongrel_rails:243
+    /usr/local/bin/mongrel_rails:16:in `load'
+    /usr/local/bin/mongrel_rails:16
+
+
+Migrating to CreatePdfs (1)
+Migrating to CreateCategories (2)
+Migrating to AddColumnCategoryDescription (3)
+Migrating to AddColumnPdfsCategoryId (4)
+Migrating to RemoveColumnPdfsCatId (5)
+Migrating to CreateClients (6)
+Migrating to AddColumnPdfsClientId (7)
+
+
+Processing ClientsController#index (for ::1 at 2007-12-03 14:48:42) [GET]
+  Session ID: 4bc464232e3fe571c9c88be54be86025
+  Parameters: {"action"=>"index", "controller"=>"clients"}
+Rendering  within layouts/application
+Rendering clients/index
+Completed in 0.01570 (63 reqs/sec) | Rendering: 0.00916 (58%) | DB: 0.00515 (32%) | 200 OK [http://localhost/clients]
+
+
+Processing ClientsController#index (for ::1 at 2007-12-03 14:48:45) [GET]
+  Session ID: 4bc464232e3fe571c9c88be54be86025
+  Parameters: {"action"=>"index", "controller"=>"clients"}
+Rendering  within layouts/application
+Rendering clients/index
+Completed in 0.00525 (190 reqs/sec) | Rendering: 0.00265 (50%) | DB: 0.00172 (32%) | 200 OK [http://localhost/clients]
+
+
+Processing PdfsController#index (for ::1 at 2007-12-03 14:48:47) [GET]
+  Session ID: 4bc464232e3fe571c9c88be54be86025
+  Parameters: {"action"=>"index", "controller"=>"pdfs"}
+Rendering  within layouts/application
+Rendering pdfs/index
+Completed in 0.01619 (61 reqs/sec) | Rendering: 0.00532 (32%) | DB: 0.00399 (24%) | 200 OK [http://localhost/pdfs]
+
+
+Processing ClientsController#index (for ::1 at 2007-12-03 14:55:46) [GET]
+  Session ID: 4bc464232e3fe571c9c88be54be86025
+  Parameters: {"action"=>"index", "controller"=>"clients"}
+Rendering  within layouts/application
+Rendering clients/index
+Completed in 0.00579 (172 reqs/sec) | Rendering: 0.00377 (65%) | DB: 0.00126 (21%) | 200 OK [http://localhost/clients]

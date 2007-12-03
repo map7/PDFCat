@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE abiword PUBLIC "-//ABISOURCE//DTD AWML 1.0 Strict//EN" "http://www.abisource.com/awml.dtd">
-<abiword template="false" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:math="http://www.w3.org/1998/Math/MathML" xid-max="601" xmlns:dc="http://purl.org/dc/elements/1.1/" fileformat="1.1" xmlns:svg="http://www.w3.org/2000/svg" xmlns:awml="http://www.abisource.com/awml.dtd" xmlns="http://www.abisource.com/awml.dtd" xmlns:xlink="http://www.w3.org/1999/xlink" version="2.4.6" xml:space="preserve" props="dom-dir:ltr; document-footnote-restart-section:0; document-endnote-type:numeric; document-endnote-place-enddoc:1; document-endnote-initial:1; lang:en-US; document-endnote-restart-section:0; document-footnote-restart-page:0; document-footnote-type:numeric; document-footnote-initial:1; document-endnote-place-endsection:0">
+<abiword template="false" version="2.4.6" xmlns:svg="http://www.w3.org/2000/svg" xid-max="603" xmlns:dc="http://purl.org/dc/elements/1.1/" fileformat="1.1" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:math="http://www.w3.org/1998/Math/MathML" xmlns:awml="http://www.abisource.com/awml.dtd" xmlns="http://www.abisource.com/awml.dtd" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" props="dom-dir:ltr; document-footnote-restart-section:0; document-endnote-type:numeric; document-endnote-place-enddoc:1; document-endnote-initial:1; lang:en-US; document-endnote-restart-section:0; document-footnote-restart-page:0; document-footnote-type:numeric; document-footnote-initial:1; document-endnote-place-endsection:0">
 <!-- ======================================================================== -->
 <!-- This file is an AbiWord document.                                        -->
 <!-- AbiWord is a free, Open Source word processor.                           -->
@@ -12,14 +12,14 @@
 <m key="dc.format">application/x-abiword</m>
 <m key="abiword.generator">AbiWord</m>
 </metadata>
-<history version="155" edit-time="2138305" last-saved="1196643565" uid="2830ce94-837e-11dc-9146-e1a7d6fa0c3f">
+<history version="156" edit-time="2148425" last-saved="1196653685" uid="2830ce94-837e-11dc-9146-e1a7d6fa0c3f">
 <version id="3" started="1170122149" uid="d86456a2-b005-11db-8510-f48956ad5861" auto="0" top-xid="0"/>
 <version id="9" started="1170122989" uid="dc4497e4-b007-11db-8638-8589fdbb7ca2" auto="0" top-xid="73"/>
 <version id="10" started="1170714294" uid="b3e1f3fe-b567-11db-9a13-8de544bfd49c" auto="0" top-xid="92"/>
 <version id="11" started="1170714720" uid="b1efa310-b568-11db-9a13-8de544bfd49c" auto="0" top-xid="92"/>
 <version id="24" started="1193373944" uid="88211d24-8679-11dc-9146-e1a7d6fa0c3f" auto="0" top-xid="101"/>
 <version id="100" started="1194584945" uid="32f19c06-9183-11dc-9cd9-f7019202bf7b" auto="0" top-xid="184"/>
-<version id="155" started="1195166619" uid="fdf4ad8c-a13a-11dc-950f-c295c1542af3" auto="0" top-xid="490"/>
+<version id="156" started="1195166619" uid="8e23c2be-a152-11dc-950f-c295c1542af3" auto="0" top-xid="490"/>
 </history>
 <styles>
 <s followedby="Normal" name="Heading 1" basedon="Normal" type="P" props="margin-top:0.1667in; color:000000; font-size:16pt; margin-bottom:0.0417in; lang:en-US; bgcolor:transparent; font-weight:bold; keep-with-next:1; font-family:Arial"/>
@@ -447,7 +447,9 @@
 <p style="Normal" xid="589" props="margin-top:0.0000in; margin-left:0.0000in; tabstops:0.000000in/L0; dom-dir:ltr; margin-bottom:0.0000in; text-indent:0.0000in; line-height:1.000000; text-align:left; margin-right:0.0000in"><c props="font-family:Arial; text-decoration:line-through; lang:en-US; text-position:normal; font-weight:normal; font-style:normal; font-size:12pt">- modify the dump data to be compatible with the new structure.</c></p>
 <p style="Normal" xid="590" props="margin-top:0.0000in; margin-left:0.0000in; tabstops:0.000000in/L0; dom-dir:ltr; margin-bottom:0.0000in; text-indent:0.0000in; line-height:1.000000; text-align:left; margin-right:0.0000in"><c props="font-family:Arial; text-decoration:line-through; lang:en-US; text-position:normal; font-weight:normal; font-style:normal; font-size:12pt">- import data into new system.</c></p>
 <p style="Normal" xid="591" props="margin-top:0.0000in; margin-left:0.0000in; tabstops:0.000000in/L0; dom-dir:ltr; margin-bottom:0.0000in; text-indent:0.0000in; line-height:1.000000; text-align:left; margin-right:0.0000in"></p>
-<p style="Heading 1" xid="582" props="font-family:Arial; font-size:12pt; tabstops:0.000000in/L0; dom-dir:ltr; color:000000; lang:en-US; text-position:normal; font-weight:normal; font-style:normal; text-decoration:none">Handy Mysql Commands</p>
+<p style="Heading 1" xid="582" props="font-family:Arial; font-size:12pt; tabstops:0.000000in/L0; dom-dir:ltr; color:000000; lang:en-US; text-position:normal; font-weight:normal; font-style:normal; text-decoration:none">Migrate production db</p>
+<p style="Normal" xid="603" props="tabstops:0.000000in/L0; dom-dir:ltr">$ rake db:migrate RAILS_ENV="production"</p>
+<p style="Heading 1" xid="602" props="tabstops:0.000000in/L0; dom-dir:ltr">Handy Mysql Commands</p>
 <p style="Normal" xid="172" props="font-family:Arial; dom-dir:ltr; font-style:normal; font-weight:normal; lang:en-US; text-position:normal; color:000000; tabstops:0.000000in/L0; text-decoration:none; font-size:12pt; text-align:left"></p>
 <p style="Normal" xid="177" props="font-family:Arial; dom-dir:ltr; font-style:normal; font-weight:normal; lang:en-US; text-position:normal; color:000000; tabstops:0.000000in/L0; text-decoration:none; font-size:12pt; text-align:left">Delete NULL entries on foreign keys</p>
 <p style="Normal" xid="178" props="font-family:Arial; dom-dir:ltr; color:000000; font-weight:normal; lang:en-US; font-style:normal; text-position:normal; tabstops:0.000000in/L0; text-decoration:none; font-size:12pt; text-align:left">mysql&gt; delete from pdfs where client_id IS NULL;</p>

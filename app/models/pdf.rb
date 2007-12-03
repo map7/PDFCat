@@ -4,7 +4,7 @@ class Pdf < ActiveRecord::Base
 
 	validates_presence_of :pdfdate, :pdfname, :filename, :category_id, :client_id
 	validates_uniqueness_of :pdfname, :scope => [:pdfdate, :category_id, :client_id]
-	validate :does_file_exist
+	#validate :does_file_exist
 
 
 	# List uploaded files
@@ -33,13 +33,16 @@ class Pdf < ActiveRecord::Base
 		File.delete(filename)
 	end
 
-	def move_file
+	def move_file(original)
 		# Make directories
 		Dir.mkdir(STORE_DIR + "/" + client.name.downcase) unless File.exists?(STORE_DIR + "/" + client.name.downcase)
 		Dir.mkdir(STORE_DIR + "/" + client.name.downcase + "/" + category.name.downcase) unless File.exists?(STORE_DIR + "/" + client.name.downcase + "/" + category.name.downcase)
 
 		# Format date
 		@filedate = pdfdate.year.to_s + pdfdate.month.to_s + pdfdate.day.to_s
+
+		
+		filename = original
 		
 		# Format the new filename.
 		#@new_filename =  STORE_DIR + "/" + client.name.downcase + "/" + category.name.downcase + "/" + File.basename(filename)	
@@ -56,7 +59,7 @@ class Pdf < ActiveRecord::Base
 			File.rename(filename, @new_filename)
 			
 			# Return the new filename
-			@new_filename
+			File.basename(@new_filename)
 		end
 
 	end

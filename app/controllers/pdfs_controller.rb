@@ -17,7 +17,7 @@ class PdfsController < ApplicationController
 
   def new
     @pdf = Pdf.new
-    @pdf.filename = params[:filename]
+    @pdf.filename = File.basename(params[:filename])
   end
 
   def create
@@ -30,7 +30,7 @@ class PdfsController < ApplicationController
 	@pdf.client = Client.find(params[:client]) unless params[:client].blank?
 
 	# Move the file and set the new filename to be saved
-	@pdf.filename = @pdf.move_file	if @pdf.file_exist
+	@pdf.filename = @pdf.move_file(UPLOAD_DIR + "/" + @pdf.filename) #if @pdf.file_exist
 
 	# Check for any errors before the save
 	if @pdf.errors.size == 0 and @pdf.save
@@ -61,7 +61,7 @@ class PdfsController < ApplicationController
 		redirect_to :action => 'show', :id => @pdf
 
 		# Move the actual file
-		@filename = @pdf.move_file
+		@filename = @pdf.move_file(STORE_DIR + "/" + @pdf.client.name.downcase + "/" + @pdf.category.name.downcase + "/" + @pdf.filename)
 
 		# Write changes of the filename back to the pdf object.
 		@pdf.update_attribute(:filename, @filename)
@@ -84,7 +84,9 @@ class PdfsController < ApplicationController
 
 	# Allow user to open up new files
     def attachment
-    	send_file(params['filename'],
+		@pdf = Pdf.find(params[:id])
+
+    	send_file(STORE_DIR + "/" + @pdf.client.name.downcase + "/" + @pdf.category.name.downcase + "/" + @pdf.filename,
 			:type         =>  'application/pdf',
 			:disposition  =>  'attachment'
 		)
