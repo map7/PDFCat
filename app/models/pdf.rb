@@ -7,6 +7,7 @@ class Pdf < ActiveRecord::Base
 	validate :does_file_exist
 
 
+	# List uploaded files
     def list_files
         require 'find'
 
@@ -27,6 +28,7 @@ class Pdf < ActiveRecord::Base
         files
     end
 
+	# Delete the physical file from the upload dir.
 	def delete_file(filename)
 		File.delete(filename)
 	end

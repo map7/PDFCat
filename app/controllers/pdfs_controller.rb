@@ -5,7 +5,8 @@ class PdfsController < ApplicationController
          :redirect_to => { :action => :index }
 
   def index
-    @pdf_pages, @pdfs = paginate :pdfs, :per_page => 10
+	# list all, sort by date (most recent at the top), 10 items per page.
+    @pdf_pages, @pdfs = paginate (:pdfs, :order => 'pdfdate DESC', :per_page => 10)
 	@no = -1	# Used for shorcuts
   end
 

@@ -5,7 +5,7 @@ class ClientsController < ApplicationController
          :redirect_to => { :action => :index }
 
   def index
-    @client_pages, @clients = paginate :clients, :per_page => 10
+    @client_pages, @clients = paginate (:clients, :order => 'upper(name)', :per_page => 10)
 	@no = -1	# Used for shorcuts
   end
 
