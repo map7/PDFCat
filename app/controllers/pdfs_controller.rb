@@ -10,6 +10,19 @@ class PdfsController < ApplicationController
 	@no = -1	# Used for shorcuts
   end
 
+  def search
+
+	# Add search functionality to the pdfs page.
+	conditions = ["pdfname LIKE ?", "%#{@params[:pdfname]}%"] unless @params[:pdfname].nil?
+	  
+	# Query the database
+    @pdf_pages, @pdfs = paginate (:pdfs, :conditions => conditions, :order => 'pdfdate DESC', :per_page => 10)
+	@no = -1	# Used for shorcuts
+
+	# Render the index with the search criteria
+	render :action => 'index'
+  end
+
   def show
     @pdf = Pdf.find(params[:id])
 	@id = params[:id]	# Used for shortcuts
@@ -17,7 +30,7 @@ class PdfsController < ApplicationController
 
   def new
     @pdf = Pdf.new
-    @pdf.filename = File.basename(params[:filename])
+    @pdf.filename = File.basename(params[:filename]) if params[:filename]
   end
 
   def create

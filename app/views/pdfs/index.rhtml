@@ -1,4 +1,10 @@
+
+<%= render :partial => "search" %>
+
 <h1>Listing pdfs</h1>
+
+<%= shortcut 'a', "/" + controller.controller_name %>  <!-- Disable Add New -->
+
 
 <table>
   <tr>
@@ -34,4 +40,3 @@
 
 <br />
 
-<%= link_to '<b>A</b>dd New pdf', :action => 'new' %>

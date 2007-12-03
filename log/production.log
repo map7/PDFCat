@@ -1336,3 +1336,221 @@ Processing ClientsController#index (for ::1 at 2007-12-03 14:55:46) [GET]
 Rendering  within layouts/application
 Rendering clients/index
 Completed in 0.00579 (172 reqs/sec) | Rendering: 0.00377 (65%) | DB: 0.00126 (21%) | 200 OK [http://localhost/clients]
+
+
+Processing ApplicationController#index (for 192.168.200.65 at 2007-12-03 15:51:02) [GET]
+  Session ID: 6c3bcdf1783baefcacacd204c1b9e1ca
+  Parameters: {}
+
+
+ActionController::RoutingError (no route found to match "/" with {:method=>:get}):
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/routing.rb:1292:in `recognize_path'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/routing.rb:1282:in `recognize'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.2.3/lib/dispatcher.rb:40:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:78:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:76:in `synchronize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:76:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:618:in `process_client'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:617:in `each'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:617:in `process_client'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `initialize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `new'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `initialize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `new'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:271:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:270:in `each'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:270:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/bin/mongrel_rails:127:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/command.rb:211:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/bin/mongrel_rails:243
+    /usr/local/bin/mongrel_rails:16:in `load'
+    /usr/local/bin/mongrel_rails:16
+
+
+
+
+Processing ApplicationController#index (for 192.168.200.65 at 2007-12-03 15:51:08) [GET]
+  Session ID: 6c3bcdf1783baefcacacd204c1b9e1ca
+  Parameters: {}
+
+
+ActionController::RoutingError (no route found to match "/pdfcat" with {:method=>:get}):
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/routing.rb:1292:in `recognize_path'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/routing.rb:1282:in `recognize'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.2.3/lib/dispatcher.rb:40:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:78:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:76:in `synchronize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:76:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:618:in `process_client'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:617:in `each'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:617:in `process_client'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `initialize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `new'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `initialize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `new'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:271:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:270:in `each'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:270:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/bin/mongrel_rails:127:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/command.rb:211:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/bin/mongrel_rails:243
+    /usr/local/bin/mongrel_rails:16:in `load'
+    /usr/local/bin/mongrel_rails:16
+
+
+
+
+Processing PdfsController#index (for 192.168.200.65 at 2007-12-03 15:51:12) [GET]
+  Session ID: 6c3bcdf1783baefcacacd204c1b9e1ca
+  Parameters: {"action"=>"index", "controller"=>"pdfs"}
+Rendering  within layouts/application
+Rendering pdfs/index
+Completed in 0.00772 (129 reqs/sec) | Rendering: 0.00543 (70%) | DB: 0.00152 (19%) | 200 OK [http://ws10/pdfs]
+
+
+Processing ClientsController#index (for 192.168.200.65 at 2007-12-03 15:51:15) [GET]
+  Session ID: 6c3bcdf1783baefcacacd204c1b9e1ca
+  Parameters: {"action"=>"index", "controller"=>"clients"}
+Rendering  within layouts/application
+Rendering clients/index
+Completed in 0.00468 (213 reqs/sec) | Rendering: 0.00261 (55%) | DB: 0.00131 (28%) | 200 OK [http://ws10/clients]
+
+
+Processing CategoriesController#index (for 192.168.200.65 at 2007-12-03 15:51:16) [GET]
+  Session ID: 6c3bcdf1783baefcacacd204c1b9e1ca
+  Parameters: {"action"=>"index", "controller"=>"categories"}
+Rendering  within layouts/application
+Rendering categories/index
+Completed in 0.01699 (58 reqs/sec) | Rendering: 0.00602 (35%) | DB: 0.00355 (20%) | 200 OK [http://ws10/categories]
+
+
+Processing CategoriesController#index (for 192.168.200.65 at 2007-12-03 15:51:19) [GET]
+  Session ID: 6c3bcdf1783baefcacacd204c1b9e1ca
+  Parameters: {"action"=>"index", "controller"=>"categories"}
+Rendering  within layouts/application
+Rendering categories/index
+Completed in 0.00477 (209 reqs/sec) | Rendering: 0.00269 (56%) | DB: 0.00133 (27%) | 200 OK [http://ws10/categories]
+
+
+Processing ClientsController#index (for 192.168.200.65 at 2007-12-03 15:51:19) [GET]
+  Session ID: 6c3bcdf1783baefcacacd204c1b9e1ca
+  Parameters: {"action"=>"index", "controller"=>"clients"}
+Rendering  within layouts/application
+Rendering clients/index
+Completed in 0.00463 (215 reqs/sec) | Rendering: 0.00259 (55%) | DB: 0.00129 (27%) | 200 OK [http://ws10/clients]
+
+
+Processing CategoriesController#index (for 192.168.200.65 at 2007-12-03 15:51:20) [GET]
+  Session ID: 6c3bcdf1783baefcacacd204c1b9e1ca
+  Parameters: {"action"=>"index", "controller"=>"categories"}
+Rendering  within layouts/application
+Rendering categories/index
+Completed in 0.00480 (208 reqs/sec) | Rendering: 0.00269 (55%) | DB: 0.00137 (28%) | 200 OK [http://ws10/categories]
+
+
+Processing ClientsController#index (for 192.168.200.65 at 2007-12-03 15:51:20) [GET]
+  Session ID: 6c3bcdf1783baefcacacd204c1b9e1ca
+  Parameters: {"action"=>"index", "controller"=>"clients"}
+Rendering  within layouts/application
+Rendering clients/index
+Completed in 0.00472 (212 reqs/sec) | Rendering: 0.00260 (55%) | DB: 0.00129 (27%) | 200 OK [http://ws10/clients]
+
+
+Processing CategoriesController#index (for 192.168.200.65 at 2007-12-03 15:51:21) [GET]
+  Session ID: 6c3bcdf1783baefcacacd204c1b9e1ca
+  Parameters: {"action"=>"index", "controller"=>"categories"}
+Rendering  within layouts/application
+Rendering categories/index
+Completed in 0.00481 (208 reqs/sec) | Rendering: 0.00260 (54%) | DB: 0.00144 (30%) | 200 OK [http://ws10/categories]
+
+
+Processing ClientsController#index (for 192.168.200.65 at 2007-12-03 15:51:22) [GET]
+  Session ID: 6c3bcdf1783baefcacacd204c1b9e1ca
+  Parameters: {"action"=>"index", "controller"=>"clients"}
+Rendering  within layouts/application
+Rendering clients/index
+Completed in 0.01233 (81 reqs/sec) | Rendering: 0.00265 (21%) | DB: 0.00617 (49%) | 200 OK [http://ws10/clients]
+
+
+Processing ClientsController#new (for 192.168.200.65 at 2007-12-03 15:51:23) [GET]
+  Session ID: 6c3bcdf1783baefcacacd204c1b9e1ca
+  Parameters: {"action"=>"new", "controller"=>"clients"}
+Rendering  within layouts/application
+Rendering clients/new
+Completed in 0.00540 (185 reqs/sec) | Rendering: 0.00516 (95%) | DB: 0.00000 (0%) | 200 OK [http://ws10/clients/new]
+
+
+Processing ClientsController#create (for 192.168.200.65 at 2007-12-03 15:51:29) [POST]
+  Session ID: 6c3bcdf1783baefcacacd204c1b9e1ca
+  Parameters: {"commit"=>"Create", "client"=>{"name"=>"Digitech", "email"=>"michael@dtcorp.com.au"}, "action"=>"create", "controller"=>"clients"}
+Redirected to http://ws10/clients
+Completed in 0.01797 (55 reqs/sec) | DB: 0.01514 (84%) | 302 Found [http://ws10/clients/create]
+
+
+Processing ClientsController#index (for 192.168.200.65 at 2007-12-03 15:51:29) [GET]
+  Session ID: 6c3bcdf1783baefcacacd204c1b9e1ca
+  Parameters: {"action"=>"index", "controller"=>"clients"}
+Rendering  within layouts/application
+Rendering clients/index
+Completed in 0.00620 (161 reqs/sec) | Rendering: 0.00339 (54%) | DB: 0.00187 (30%) | 200 OK [http://ws10/clients]
+
+
+Processing CategoriesController#index (for 192.168.200.65 at 2007-12-03 15:51:31) [GET]
+  Session ID: 6c3bcdf1783baefcacacd204c1b9e1ca
+  Parameters: {"action"=>"index", "controller"=>"categories"}
+Rendering  within layouts/application
+Rendering categories/index
+Completed in 0.00461 (216 reqs/sec) | Rendering: 0.00264 (57%) | DB: 0.00123 (26%) | 200 OK [http://ws10/categories]
+
+
+Processing CategoriesController#new (for 192.168.200.65 at 2007-12-03 15:51:32) [GET]
+  Session ID: 6c3bcdf1783baefcacacd204c1b9e1ca
+  Parameters: {"action"=>"new", "controller"=>"categories"}
+Rendering  within layouts/application
+Rendering categories/new
+Completed in 0.00573 (174 reqs/sec) | Rendering: 0.00550 (96%) | DB: 0.00000 (0%) | 200 OK [http://ws10/categories/new]
+
+
+Processing CategoriesController#create (for 192.168.200.65 at 2007-12-03 15:51:34) [POST]
+  Session ID: 6c3bcdf1783baefcacacd204c1b9e1ca
+  Parameters: {"commit"=>"Create", "category"=>{"name"=>"Tax", "description"=>""}, "action"=>"create", "controller"=>"categories"}
+Redirected to http://ws10/categories
+Completed in 0.01163 (85 reqs/sec) | DB: 0.00909 (78%) | 302 Found [http://ws10/categories/create]
+
+
+Processing CategoriesController#index (for 192.168.200.65 at 2007-12-03 15:51:34) [GET]
+  Session ID: 6c3bcdf1783baefcacacd204c1b9e1ca
+  Parameters: {"action"=>"index", "controller"=>"categories"}
+Rendering  within layouts/application
+Rendering categories/index
+Completed in 0.00613 (163 reqs/sec) | Rendering: 0.00362 (59%) | DB: 0.00170 (27%) | 200 OK [http://ws10/categories]
+
+
+Processing PdfsController#index (for 192.168.200.65 at 2007-12-03 15:51:35) [GET]
+  Session ID: 6c3bcdf1783baefcacacd204c1b9e1ca
+  Parameters: {"action"=>"index", "controller"=>"pdfs"}
+Rendering  within layouts/application
+Rendering pdfs/index
+Completed in 0.00499 (200 reqs/sec) | Rendering: 0.00258 (51%) | DB: 0.00167 (33%) | 200 OK [http://ws10/pdfs]
+
+
+Processing NewController#index (for 192.168.200.65 at 2007-12-03 15:51:38) [GET]
+  Session ID: 6c3bcdf1783baefcacacd204c1b9e1ca
+  Parameters: {"action"=>"index", "controller"=>"new"}
+Rendering  within layouts/application
+Rendering new/index
+Completed in 0.01811 (55 reqs/sec) | Rendering: 0.01722 (95%) | DB: 0.00000 (0%) | 200 OK [http://ws10/new]
+
+
+Processing PdfsController#index (for 192.168.200.65 at 2007-12-03 15:51:39) [GET]
+  Session ID: 6c3bcdf1783baefcacacd204c1b9e1ca
+  Parameters: {"action"=>"index", "controller"=>"pdfs"}
+Rendering  within layouts/application
+Rendering pdfs/index
+Completed in 0.00508 (196 reqs/sec) | Rendering: 0.00273 (53%) | DB: 0.00161 (31%) | 200 OK [http://ws10/pdfs]

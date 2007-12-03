@@ -108,10 +108,9 @@ div#heading{
     width: 400px;
 }
 div#search{
-    float: right;
-    width: 250px;
-    padding-top: 10px;
-    padding-left: 20px;
+	position:absolute;
+    padding-top: 20px;
+	right:60px;
 
     font-family: Tahoma;
     font-size: 80%;
