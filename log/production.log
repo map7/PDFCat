@@ -1,0 +1,420 @@
+
+
+Processing ApplicationController#index (for ::1 at 2007-11-30 17:03:29) [GET]
+  Session ID: 4bc464232e3fe571c9c88be54be86025
+  Parameters: {}
+
+
+ActionController::RoutingError (no route found to match "/pdfcat" with {:method=>:get}):
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/routing.rb:1292:in `recognize_path'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/routing.rb:1282:in `recognize'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.2.3/lib/dispatcher.rb:40:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:78:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:76:in `synchronize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:76:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:618:in `process_client'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:617:in `each'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:617:in `process_client'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `initialize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `new'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `initialize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `new'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:271:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:270:in `each'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:270:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/bin/mongrel_rails:127:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/command.rb:211:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/bin/mongrel_rails:243
+    /usr/local/bin/mongrel_rails:16:in `load'
+    /usr/local/bin/mongrel_rails:16
+
+
+
+
+Processing ApplicationController#index (for ::1 at 2007-11-30 17:03:33) [GET]
+  Session ID: 4bc464232e3fe571c9c88be54be86025
+  Parameters: {}
+
+
+ActionController::RoutingError (no route found to match "/pdfcat/pdfs" with {:method=>:get}):
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/routing.rb:1292:in `recognize_path'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/routing.rb:1282:in `recognize'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.2.3/lib/dispatcher.rb:40:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:78:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:76:in `synchronize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:76:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:618:in `process_client'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:617:in `each'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:617:in `process_client'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `initialize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `new'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `initialize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `new'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:271:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:270:in `each'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:270:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/bin/mongrel_rails:127:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/command.rb:211:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/bin/mongrel_rails:243
+    /usr/local/bin/mongrel_rails:16:in `load'
+    /usr/local/bin/mongrel_rails:16
+
+
+
+
+Processing PdfsController#index (for ::1 at 2007-11-30 17:03:39) [GET]
+  Session ID: 4bc464232e3fe571c9c88be54be86025
+  Parameters: {"action"=>"index", "controller"=>"pdfs"}
+Rendering  within layouts/application
+Rendering pdfs/index
+Completed in 0.36360 (2 reqs/sec) | Rendering: 0.06729 (18%) | DB: 0.04990 (13%) | 200 OK [http://localhost/pdfs]
+
+
+Processing PdfsController#index (for ::1 at 2007-11-30 17:03:43) [GET]
+  Session ID: 4bc464232e3fe571c9c88be54be86025
+  Parameters: {"action"=>"index", "controller"=>"pdfs"}
+Rendering  within layouts/application
+Rendering pdfs/index
+Completed in 0.05690 (17 reqs/sec) | Rendering: 0.02518 (44%) | DB: 0.03048 (53%) | 200 OK [http://localhost/pdfs]
+
+
+Processing ClientsController#index (for ::1 at 2007-11-30 17:03:44) [GET]
+  Session ID: 4bc464232e3fe571c9c88be54be86025
+  Parameters: {"action"=>"index", "controller"=>"clients"}
+Rendering  within layouts/application
+Rendering clients/index
+Completed in 0.02146 (46 reqs/sec) | Rendering: 0.01748 (81%) | DB: 0.00221 (10%) | 200 OK [http://localhost/clients]
+
+
+Processing CategoriesController#index (for ::1 at 2007-11-30 17:03:47) [GET]
+  Session ID: 4bc464232e3fe571c9c88be54be86025
+  Parameters: {"action"=>"index", "controller"=>"categories"}
+Rendering  within layouts/application
+Rendering categories/index
+Completed in 0.03173 (31 reqs/sec) | Rendering: 0.02758 (86%) | DB: 0.00239 (7%) | 200 OK [http://localhost/categories]
+
+
+Processing NewController#index (for ::1 at 2007-11-30 17:03:49) [GET]
+  Session ID: 4bc464232e3fe571c9c88be54be86025
+  Parameters: {"action"=>"index", "controller"=>"new"}
+Rendering  within layouts/application
+Rendering new/index
+Completed in 0.06035 (16 reqs/sec) | Rendering: 0.05938 (98%) | DB: 0.00000 (0%) | 200 OK [http://localhost/new]
+
+
+Processing PdfsController#index (for ::1 at 2007-11-30 17:03:56) [GET]
+  Session ID: 4bc464232e3fe571c9c88be54be86025
+  Parameters: {"action"=>"index", "controller"=>"pdfs"}
+Rendering  within layouts/application
+Rendering pdfs/index
+Completed in 0.05860 (17 reqs/sec) | Rendering: 0.02469 (42%) | DB: 0.03247 (55%) | 200 OK [http://localhost/pdfs]
+
+
+Processing PdfsController#attachment (for ::1 at 2007-11-30 17:03:57) [GET]
+  Session ID: 4bc464232e3fe571c9c88be54be86025
+  Parameters: {"action"=>"attachment", "controller"=>"pdfs", "filename"=>"20070806-Notice Of Refund.pdf"}
+
+
+ActionController::MissingFile (Cannot read file 20070806-Notice Of Refund.pdf):
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/streaming.rb:59:in `send_file'
+    /app/controllers/pdfs_controller.rb:86:in `attachment'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:1095:in `send'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:1095:in `perform_action_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:632:in `call_filter'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:634:in `call_filter'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:619:in `perform_action_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/benchmarking.rb:66:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/benchmarking.rb:66:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/rescue.rb:83:in `perform_action'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:430:in `send'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:430:in `process_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:624:in `process_without_session_management_support'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/session_management.rb:114:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:330:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.2.3/lib/dispatcher.rb:41:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:78:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:76:in `synchronize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:76:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:618:in `process_client'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:617:in `each'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:617:in `process_client'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `initialize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `new'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `initialize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `new'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:271:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:270:in `each'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:270:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/bin/mongrel_rails:127:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/command.rb:211:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/bin/mongrel_rails:243
+    /usr/local/bin/mongrel_rails:16:in `load'
+    /usr/local/bin/mongrel_rails:16
+
+
+
+
+Processing NewController#index (for ::1 at 2007-11-30 17:04:01) [GET]
+  Session ID: 4bc464232e3fe571c9c88be54be86025
+  Parameters: {"action"=>"index", "controller"=>"new"}
+Rendering  within layouts/application
+Rendering new/index
+Completed in 0.00441 (226 reqs/sec) | Rendering: 0.00424 (96%) | DB: 0.00000 (0%) | 200 OK [http://localhost/new]
+
+
+Processing PdfsController#index (for ::1 at 2007-11-30 17:04:02) [GET]
+  Session ID: 4bc464232e3fe571c9c88be54be86025
+  Parameters: {"action"=>"index", "controller"=>"pdfs"}
+Rendering  within layouts/application
+Rendering pdfs/index
+Completed in 0.03907 (25 reqs/sec) | Rendering: 0.02036 (52%) | DB: 0.01759 (45%) | 200 OK [http://localhost/pdfs]
+
+
+Processing ClientsController#index (for ::1 at 2007-11-30 17:04:44) [GET]
+  Session ID: 4bc464232e3fe571c9c88be54be86025
+  Parameters: {"action"=>"index", "controller"=>"clients"}
+Rendering  within layouts/application
+Rendering clients/index
+Completed in 0.01411 (70 reqs/sec) | Rendering: 0.01064 (75%) | DB: 0.00247 (17%) | 200 OK [http://localhost/clients]
+
+
+Processing CategoriesController#index (for ::1 at 2007-11-30 17:04:45) [GET]
+  Session ID: 4bc464232e3fe571c9c88be54be86025
+  Parameters: {"action"=>"index", "controller"=>"categories"}
+Rendering  within layouts/application
+Rendering categories/index
+Completed in 0.01271 (78 reqs/sec) | Rendering: 0.00974 (76%) | DB: 0.00193 (15%) | 200 OK [http://localhost/categories]
+
+
+Processing ClientsController#index (for ::1 at 2007-11-30 17:04:49) [GET]
+  Session ID: 4bc464232e3fe571c9c88be54be86025
+  Parameters: {"action"=>"index", "controller"=>"clients"}
+Rendering  within layouts/application
+Rendering clients/index
+Completed in 0.01487 (67 reqs/sec) | Rendering: 0.01137 (76%) | DB: 0.00242 (16%) | 200 OK [http://localhost/clients]
+
+
+Processing ClientsController#index (for ::1 at 2007-11-30 17:04:51) [GET]
+  Session ID: 4bc464232e3fe571c9c88be54be86025
+  Parameters: {"action"=>"index", "controller"=>"clients", "page"=>"2"}
+Rendering  within layouts/application
+Rendering clients/index
+Completed in 0.01143 (87 reqs/sec) | Rendering: 0.00846 (73%) | DB: 0.00204 (17%) | 200 OK [http://localhost/clients?page=2]
+
+
+Processing ClientsController#index (for ::1 at 2007-11-30 17:04:52) [GET]
+  Session ID: 4bc464232e3fe571c9c88be54be86025
+  Parameters: {"action"=>"index", "controller"=>"clients", "page"=>"1"}
+Rendering  within layouts/application
+Rendering clients/index
+Completed in 0.01135 (88 reqs/sec) | Rendering: 0.00836 (73%) | DB: 0.00205 (18%) | 200 OK [http://localhost/clients?page=1]
+
+
+Processing PdfsController#index (for ::1 at 2007-11-30 17:04:54) [GET]
+  Session ID: 4bc464232e3fe571c9c88be54be86025
+  Parameters: {"action"=>"index", "controller"=>"pdfs"}
+Rendering  within layouts/application
+Rendering pdfs/index
+Completed in 0.03922 (25 reqs/sec) | Rendering: 0.02028 (51%) | DB: 0.01781 (45%) | 200 OK [http://localhost/pdfs]
+
+
+Processing ClientsController#index (for ::1 at 2007-12-03 11:43:38) [GET]
+  Session ID: 4bc464232e3fe571c9c88be54be86025
+  Parameters: {"action"=>"index", "controller"=>"clients"}
+Rendering  within layouts/application
+Rendering clients/index
+Completed in 0.10389 (9 reqs/sec) | Rendering: 0.03783 (36%) | DB: 0.06495 (62%) | 200 OK [http://localhost/clients]
+
+
+Processing PdfsController#index (for ::1 at 2007-12-03 11:43:54) [GET]
+  Session ID: 4bc464232e3fe571c9c88be54be86025
+  Parameters: {"action"=>"index", "controller"=>"pdfs"}
+Rendering  within layouts/application
+Rendering pdfs/index
+Completed in 0.03845 (26 reqs/sec) | Rendering: 0.02008 (52%) | DB: 0.01717 (44%) | 200 OK [http://localhost/pdfs]
+
+
+Processing PdfsController#index (for ::1 at 2007-12-03 11:43:58) [GET]
+  Session ID: 4bc464232e3fe571c9c88be54be86025
+  Parameters: {"action"=>"index", "controller"=>"pdfs", "page"=>"2"}
+Rendering  within layouts/application
+Rendering pdfs/index
+Completed in 0.04184 (23 reqs/sec) | Rendering: 0.02102 (50%) | DB: 0.01951 (46%) | 200 OK [http://localhost/pdfs?page=2]
+
+
+Processing PdfsController#index (for ::1 at 2007-12-03 11:43:59) [GET]
+  Session ID: 4bc464232e3fe571c9c88be54be86025
+  Parameters: {"action"=>"index", "controller"=>"pdfs", "page"=>"1"}
+Rendering  within layouts/application
+Rendering pdfs/index
+Completed in 0.04256 (23 reqs/sec) | Rendering: 0.02050 (48%) | DB: 0.02094 (49%) | 200 OK [http://localhost/pdfs?page=1]
+
+
+Processing PdfsController#index (for ::1 at 2007-12-03 11:44:00) [GET]
+  Session ID: 4bc464232e3fe571c9c88be54be86025
+  Parameters: {"action"=>"index", "controller"=>"pdfs", "page"=>"2"}
+Rendering  within layouts/application
+Rendering pdfs/index
+Completed in 0.04036 (24 reqs/sec) | Rendering: 0.02087 (51%) | DB: 0.01828 (45%) | 200 OK [http://localhost/pdfs?page=2]
+
+
+Processing PdfsController#index (for ::1 at 2007-12-03 11:44:02) [GET]
+  Session ID: 4bc464232e3fe571c9c88be54be86025
+  Parameters: {"action"=>"index", "controller"=>"pdfs", "page"=>"3"}
+Rendering  within layouts/application
+Rendering pdfs/index
+Completed in 0.10150 (9 reqs/sec) | Rendering: 0.02127 (20%) | DB: 0.07900 (77%) | 200 OK [http://localhost/pdfs?page=3]
+
+
+Processing PdfsController#index (for ::1 at 2007-12-03 11:44:03) [GET]
+  Session ID: 4bc464232e3fe571c9c88be54be86025
+  Parameters: {"action"=>"index", "controller"=>"pdfs", "page"=>"4"}
+Rendering  within layouts/application
+Rendering pdfs/index
+Completed in 0.03788 (26 reqs/sec) | Rendering: 0.01994 (52%) | DB: 0.01679 (44%) | 200 OK [http://localhost/pdfs?page=4]
+
+
+Processing PdfsController#index (for ::1 at 2007-12-03 11:44:04) [GET]
+  Session ID: 4bc464232e3fe571c9c88be54be86025
+  Parameters: {"action"=>"index", "controller"=>"pdfs", "page"=>"5"}
+Rendering  within layouts/application
+Rendering pdfs/index
+Completed in 0.04304 (23 reqs/sec) | Rendering: 0.02097 (48%) | DB: 0.02096 (48%) | 200 OK [http://localhost/pdfs?page=5]
+
+
+Processing PdfsController#index (for ::1 at 2007-12-03 11:44:05) [GET]
+  Session ID: 4bc464232e3fe571c9c88be54be86025
+  Parameters: {"action"=>"index", "controller"=>"pdfs", "page"=>"6"}
+Rendering  within layouts/application
+Rendering pdfs/index
+Completed in 0.03780 (26 reqs/sec) | Rendering: 0.01992 (52%) | DB: 0.01673 (44%) | 200 OK [http://localhost/pdfs?page=6]
+
+
+Processing PdfsController#index (for ::1 at 2007-12-03 11:44:07) [GET]
+  Session ID: 4bc464232e3fe571c9c88be54be86025
+  Parameters: {"action"=>"index", "controller"=>"pdfs", "page"=>"7"}
+Rendering  within layouts/application
+Rendering pdfs/index
+Completed in 0.04071 (24 reqs/sec) | Rendering: 0.02114 (51%) | DB: 0.01846 (45%) | 200 OK [http://localhost/pdfs?page=7]
+
+
+Processing PdfsController#index (for ::1 at 2007-12-03 11:44:08) [GET]
+  Session ID: 4bc464232e3fe571c9c88be54be86025
+  Parameters: {"action"=>"index", "controller"=>"pdfs", "page"=>"8"}
+Rendering  within layouts/application
+Rendering pdfs/index
+Completed in 0.03894 (25 reqs/sec) | Rendering: 0.02052 (52%) | DB: 0.01713 (43%) | 200 OK [http://localhost/pdfs?page=8]
+
+
+Processing PdfsController#index (for ::1 at 2007-12-03 11:44:09) [GET]
+  Session ID: 4bc464232e3fe571c9c88be54be86025
+  Parameters: {"action"=>"index", "controller"=>"pdfs", "page"=>"9"}
+Rendering  within layouts/application
+Rendering pdfs/index
+Completed in 0.03982 (25 reqs/sec) | Rendering: 0.02031 (51%) | DB: 0.01833 (46%) | 200 OK [http://localhost/pdfs?page=9]
+
+
+Processing PdfsController#index (for ::1 at 2007-12-03 11:44:10) [GET]
+  Session ID: 4bc464232e3fe571c9c88be54be86025
+  Parameters: {"action"=>"index", "controller"=>"pdfs", "page"=>"8"}
+Rendering  within layouts/application
+Rendering pdfs/index
+Completed in 0.03718 (26 reqs/sec) | Rendering: 0.01968 (52%) | DB: 0.01640 (44%) | 200 OK [http://localhost/pdfs?page=8]
+
+
+Processing PdfsController#index (for ::1 at 2007-12-03 11:44:11) [GET]
+  Session ID: 4bc464232e3fe571c9c88be54be86025
+  Parameters: {"action"=>"index", "controller"=>"pdfs", "page"=>"7"}
+Rendering  within layouts/application
+Rendering pdfs/index
+Completed in 0.03900 (25 reqs/sec) | Rendering: 0.01993 (51%) | DB: 0.01790 (45%) | 200 OK [http://localhost/pdfs?page=7]
+
+
+Processing PdfsController#index (for ::1 at 2007-12-03 11:44:14) [GET]
+  Session ID: 4bc464232e3fe571c9c88be54be86025
+  Parameters: {"action"=>"index", "controller"=>"pdfs", "page"=>"8"}
+Rendering  within layouts/application
+Rendering pdfs/index
+Completed in 0.04025 (24 reqs/sec) | Rendering: 0.02089 (51%) | DB: 0.01826 (45%) | 200 OK [http://localhost/pdfs?page=8]
+
+
+Processing PdfsController#index (for ::1 at 2007-12-03 11:44:15) [GET]
+  Session ID: 4bc464232e3fe571c9c88be54be86025
+  Parameters: {"action"=>"index", "controller"=>"pdfs", "page"=>"9"}
+Rendering  within layouts/application
+Rendering pdfs/index
+Completed in 0.03837 (26 reqs/sec) | Rendering: 0.02022 (52%) | DB: 0.01701 (44%) | 200 OK [http://localhost/pdfs?page=9]
+
+
+Processing PdfsController#index (for ::1 at 2007-12-03 11:44:17) [GET]
+  Session ID: 4bc464232e3fe571c9c88be54be86025
+  Parameters: {"action"=>"index", "controller"=>"pdfs", "page"=>"10"}
+Rendering  within layouts/application
+Rendering pdfs/index
+Completed in 0.03928 (25 reqs/sec) | Rendering: 0.02027 (51%) | DB: 0.01783 (45%) | 200 OK [http://localhost/pdfs?page=10]
+
+
+Processing PdfsController#index (for ::1 at 2007-12-03 11:44:19) [GET]
+  Session ID: 4bc464232e3fe571c9c88be54be86025
+  Parameters: {"action"=>"index", "controller"=>"pdfs", "page"=>"11"}
+Rendering  within layouts/application
+Rendering pdfs/index
+Completed in 0.04064 (24 reqs/sec) | Rendering: 0.02108 (51%) | DB: 0.01841 (45%) | 200 OK [http://localhost/pdfs?page=11]
+
+
+Processing PdfsController#index (for ::1 at 2007-12-03 11:44:21) [GET]
+  Session ID: 4bc464232e3fe571c9c88be54be86025
+  Parameters: {"action"=>"index", "controller"=>"pdfs", "page"=>"12"}
+Rendering  within layouts/application
+Rendering pdfs/index
+Completed in 0.04302 (23 reqs/sec) | Rendering: 0.02018 (46%) | DB: 0.02051 (47%) | 200 OK [http://localhost/pdfs?page=12]
+
+
+Processing PdfsController#index (for ::1 at 2007-12-03 11:44:23) [GET]
+  Session ID: 4bc464232e3fe571c9c88be54be86025
+  Parameters: {"action"=>"index", "controller"=>"pdfs", "page"=>"13"}
+Rendering  within layouts/application
+Rendering pdfs/index
+Completed in 0.04321 (23 reqs/sec) | Rendering: 0.02144 (49%) | DB: 0.02065 (47%) | 200 OK [http://localhost/pdfs?page=13]
+
+
+Processing PdfsController#index (for ::1 at 2007-12-03 11:44:25) [GET]
+  Session ID: 4bc464232e3fe571c9c88be54be86025
+  Parameters: {"action"=>"index", "controller"=>"pdfs", "page"=>"14"}
+Rendering  within layouts/application
+Rendering pdfs/index
+Completed in 0.01829 (54 reqs/sec) | Rendering: 0.00966 (52%) | DB: 0.00773 (42%) | 200 OK [http://localhost/pdfs?page=14]
+
+
+Processing PdfsController#index (for ::1 at 2007-12-03 11:44:31) [GET]
+  Session ID: 4bc464232e3fe571c9c88be54be86025
+  Parameters: {"action"=>"index", "controller"=>"pdfs"}
+Rendering  within layouts/application
+Rendering pdfs/index
+Completed in 0.05280 (18 reqs/sec) | Rendering: 0.02235 (42%) | DB: 0.02928 (55%) | 200 OK [http://localhost/pdfs]
+
+
+Processing PdfsController#index (for ::1 at 2007-12-03 11:52:08) [GET]
+  Session ID: 4bc464232e3fe571c9c88be54be86025
+  Parameters: {"action"=>"index", "controller"=>"pdfs"}
+Rendering  within layouts/application
+Rendering pdfs/index
+Completed in 0.05198 (19 reqs/sec) | Rendering: 0.02329 (44%) | DB: 0.02756 (53%) | 200 OK [http://localhost/pdfs]
+
+
+Processing PdfsController#index (for ::1 at 2007-12-03 11:52:12) [GET]
+  Session ID: 4bc464232e3fe571c9c88be54be86025
+  Parameters: {"action"=>"index", "controller"=>"pdfs"}
+Rendering  within layouts/application
+Rendering pdfs/index
+Completed in 0.03731 (26 reqs/sec) | Rendering: 0.01981 (53%) | DB: 0.01636 (43%) | 200 OK [http://localhost/pdfs]
