@@ -38602,3 +38602,300 @@ Rendering pdfs/index
   [4;36;1mCategory Load (0.000811)[0m   [0;1mSELECT * FROM categories WHERE (categories."id" = 8) [0m
   [4;35;1mClient Load (0.000645)[0m   [0mSELECT * FROM clients WHERE (clients."id" = 19) [0m
 Completed in 0.11643 (8 reqs/sec) | Rendering: 0.08836 (75%) | DB: 0.02199 (18%) | 200 OK [http://localhost/pdfs]
+
+
+Processing PdfsController#index (for 127.0.0.1 at 2007-12-03 12:15:21) [GET]
+  Session ID: 4bc464232e3fe571c9c88be54be86025
+  Parameters: {"action"=>"index", "controller"=>"pdfs"}
+  [4;36;1mSQL (0.005955)[0m   [0;1m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = 'pdfs'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [4;35;1mSQL (0.000783)[0m   [0mSELECT count(*) AS count_all FROM pdfs [0m
+  [4;36;1mPdf Load (0.002858)[0m   [0;1mSELECT * FROM pdfs ORDER BY pdfdate DESC LIMIT 10 OFFSET 0[0m
+Rendering  within layouts/application
+Rendering pdfs/index
+  [4;35;1mSQL (0.002069)[0m   [0m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = 'categories'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [4;36;1mCategory Load (0.000745)[0m   [0;1mSELECT * FROM categories WHERE (categories."id" = 16) [0m
+  [4;35;1mSQL (0.001875)[0m   [0m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = 'clients'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [4;36;1mClient Load (0.000701)[0m   [0;1mSELECT * FROM clients WHERE (clients."id" = 58) [0m
+  [4;35;1mCategory Load (0.001157)[0m   [0mSELECT * FROM categories WHERE (categories."id" = 14) [0m
+  [4;36;1mClient Load (0.000651)[0m   [0;1mSELECT * FROM clients WHERE (clients."id" = 98) [0m
+  [4;35;1mCategory Load (0.000705)[0m   [0mSELECT * FROM categories WHERE (categories."id" = 2) [0m
+  [4;36;1mClient Load (0.000706)[0m   [0;1mSELECT * FROM clients WHERE (clients."id" = 97) [0m
+  [4;35;1mCategory Load (0.000849)[0m   [0mSELECT * FROM categories WHERE (categories."id" = 14) [0m
+  [4;36;1mClient Load (0.000644)[0m   [0;1mSELECT * FROM clients WHERE (clients."id" = 70) [0m
+  [4;35;1mCategory Load (0.000695)[0m   [0mSELECT * FROM categories WHERE (categories."id" = 16) [0m
+  [4;36;1mClient Load (0.000622)[0m   [0;1mSELECT * FROM clients WHERE (clients."id" = 96) [0m
+  [4;35;1mCategory Load (0.000828)[0m   [0mSELECT * FROM categories WHERE (categories."id" = 16) [0m
+  [4;36;1mClient Load (0.000660)[0m   [0;1mSELECT * FROM clients WHERE (clients."id" = 95) [0m
+  [4;35;1mCategory Load (0.000755)[0m   [0mSELECT * FROM categories WHERE (categories."id" = 2) [0m
+  [4;36;1mClient Load (0.000637)[0m   [0;1mSELECT * FROM clients WHERE (clients."id" = 93) [0m
+  [4;35;1mCategory Load (0.000712)[0m   [0mSELECT * FROM categories WHERE (categories."id" = 2) [0m
+  [4;36;1mClient Load (0.000631)[0m   [0;1mSELECT * FROM clients WHERE (clients."id" = 94) [0m
+  [4;35;1mCategory Load (0.000705)[0m   [0mSELECT * FROM categories WHERE (categories."id" = 16) [0m
+  [4;36;1mClient Load (0.000624)[0m   [0;1mSELECT * FROM clients WHERE (clients."id" = 26) [0m
+  [4;35;1mCategory Load (0.000688)[0m   [0mSELECT * FROM categories WHERE (categories."id" = 8) [0m
+  [4;36;1mClient Load (0.000626)[0m   [0;1mSELECT * FROM clients WHERE (clients."id" = 19) [0m
+Completed in 0.07159 (13 reqs/sec) | Rendering: 0.03544 (49%) | DB: 0.02788 (38%) | 200 OK [http://localhost/pdfs]
+
+
+Processing PdfsController#show (for 127.0.0.1 at 2007-12-03 12:15:24) [GET]
+  Session ID: 4bc464232e3fe571c9c88be54be86025
+  Parameters: {"action"=>"show", "id"=>"154", "controller"=>"pdfs"}
+  [4;35;1mSQL (0.002456)[0m   [0m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = 'pdfs'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [4;36;1mPdf Load (0.001518)[0m   [0;1mSELECT * FROM pdfs WHERE (pdfs."id" = 154) [0m
+Rendering  within layouts/application
+Rendering pdfs/show
+
+
+ActionView::TemplateError (undefined local variable or method `pdf' for #<#<Class:0x9a1cb20>:0x9a1caf8>) on line #11 of app/views/pdfs/show.rhtml:
+8: </p>
+9: <% end %>
+10: 
+11: <td><%= link_to pdf.pdfname, :action => "attachment", :filename => pdf.filename %></td>
+12: 
+13: 
+14: <%= link_to 'Edit', :action => 'edit', :id => @pdf %> |
+
+    #{RAILS_ROOT}/app/views/pdfs/show.rhtml:11:in `_run_rhtml_47app47views47pdfs47show46rhtml'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_view/base.rb:326:in `send'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_view/base.rb:326:in `compile_and_render_template'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_view/base.rb:301:in `render_template'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_view/base.rb:260:in `render_file'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:806:in `render_file'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:711:in `render_with_no_layout'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/layout.rb:247:in `render_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/benchmarking.rb:50:in `render'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/benchmarking.rb:50:in `render'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:1096:in `perform_action_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:632:in `call_filter'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:634:in `call_filter'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:619:in `perform_action_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/benchmarking.rb:66:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/benchmarking.rb:66:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/rescue.rb:83:in `perform_action'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:430:in `send'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:430:in `process_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:624:in `process_without_session_management_support'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/session_management.rb:114:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:330:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.2.3/lib/dispatcher.rb:41:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.2.3/lib/webrick_server.rb:113:in `handle_dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.2.3/lib/webrick_server.rb:79:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.2.3/lib/webrick_server.rb:63:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.2.3/lib/commands/servers/webrick.rb:59
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:495:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:495:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.2.3/lib/commands/server.rb:39
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    script/server:3
+
+
+Rendering /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/templates/rescues/layout.rhtml (500 Internal Error)
+
+
+Processing PdfsController#show (for 127.0.0.1 at 2007-12-03 12:16:00) [GET]
+  Session ID: 4bc464232e3fe571c9c88be54be86025
+  Parameters: {"action"=>"show", "id"=>"154", "controller"=>"pdfs"}
+  [4;35;1mSQL (0.002443)[0m   [0m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = 'pdfs'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [4;36;1mPdf Load (0.001531)[0m   [0;1mSELECT * FROM pdfs WHERE (pdfs."id" = 154) [0m
+Rendering  within layouts/application
+Rendering pdfs/show
+Completed in 0.01999 (50 reqs/sec) | Rendering: 0.00812 (40%) | DB: 0.00397 (19%) | 200 OK [http://localhost/pdfs/show/154]
+
+
+Processing PdfsController#attachment (for 127.0.0.1 at 2007-12-03 12:16:06) [GET]
+  Session ID: 4bc464232e3fe571c9c88be54be86025
+  Parameters: {"action"=>"attachment", "controller"=>"pdfs", "filename"=>"20071129-Trust Deed.pdf"}
+
+
+ActionController::MissingFile (Cannot read file 20071129-Trust Deed.pdf):
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/streaming.rb:59:in `send_file'
+    .//app/controllers/pdfs_controller.rb:87:in `attachment'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:1095:in `send'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:1095:in `perform_action_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:632:in `call_filter'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:634:in `call_filter'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:619:in `perform_action_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/benchmarking.rb:66:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/benchmarking.rb:66:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/rescue.rb:83:in `perform_action'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:430:in `send'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:430:in `process_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:624:in `process_without_session_management_support'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/session_management.rb:114:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:330:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.2.3/lib/dispatcher.rb:41:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.2.3/lib/webrick_server.rb:113:in `handle_dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.2.3/lib/webrick_server.rb:79:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.2.3/lib/webrick_server.rb:63:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.2.3/lib/commands/servers/webrick.rb:59
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:495:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:495:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.2.3/lib/commands/server.rb:39
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    script/server:3
+
+
+Rendering /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/templates/rescues/layout.rhtml (500 Internal Error)
+
+
+Processing PdfsController#index (for 127.0.0.1 at 2007-12-03 12:16:33) [GET]
+  Session ID: 4bc464232e3fe571c9c88be54be86025
+  Parameters: {"action"=>"index", "controller"=>"pdfs"}
+  [4;35;1mSQL (0.002337)[0m   [0m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = 'pdfs'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [4;36;1mSQL (0.000918)[0m   [0;1mSELECT count(*) AS count_all FROM pdfs [0m
+  [4;35;1mPdf Load (0.004443)[0m   [0mSELECT * FROM pdfs ORDER BY pdfdate DESC LIMIT 10 OFFSET 0[0m
+Rendering  within layouts/application
+Rendering pdfs/index
+  [4;36;1mSQL (0.003283)[0m   [0;1m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = 'categories'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [4;35;1mCategory Load (0.001032)[0m   [0mSELECT * FROM categories WHERE (categories."id" = 16) [0m
+  [4;36;1mSQL (0.001973)[0m   [0;1m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = 'clients'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [4;35;1mClient Load (0.001154)[0m   [0mSELECT * FROM clients WHERE (clients."id" = 58) [0m
+  [4;36;1mCategory Load (0.001670)[0m   [0;1mSELECT * FROM categories WHERE (categories."id" = 14) [0m
+  [4;35;1mClient Load (0.001204)[0m   [0mSELECT * FROM clients WHERE (clients."id" = 98) [0m
+  [4;36;1mCategory Load (0.001697)[0m   [0;1mSELECT * FROM categories WHERE (categories."id" = 2) [0m
+  [4;35;1mClient Load (0.001633)[0m   [0mSELECT * FROM clients WHERE (clients."id" = 97) [0m
+  [4;36;1mCategory Load (0.002309)[0m   [0;1mSELECT * FROM categories WHERE (categories."id" = 14) [0m
+  [4;35;1mClient Load (0.001186)[0m   [0mSELECT * FROM clients WHERE (clients."id" = 70) [0m
+  [4;36;1mCategory Load (0.001439)[0m   [0;1mSELECT * FROM categories WHERE (categories."id" = 16) [0m
+  [4;35;1mClient Load (0.001032)[0m   [0mSELECT * FROM clients WHERE (clients."id" = 96) [0m
+  [4;36;1mCategory Load (0.002383)[0m   [0;1mSELECT * FROM categories WHERE (categories."id" = 16) [0m
+  [4;35;1mClient Load (0.001265)[0m   [0mSELECT * FROM clients WHERE (clients."id" = 95) [0m
+  [4;36;1mCategory Load (0.000854)[0m   [0;1mSELECT * FROM categories WHERE (categories."id" = 2) [0m
+  [4;35;1mClient Load (0.000700)[0m   [0mSELECT * FROM clients WHERE (clients."id" = 93) [0m
+  [4;36;1mCategory Load (0.000814)[0m   [0;1mSELECT * FROM categories WHERE (categories."id" = 2) [0m
+  [4;35;1mClient Load (0.001067)[0m   [0mSELECT * FROM clients WHERE (clients."id" = 94) [0m
+  [4;36;1mCategory Load (0.000828)[0m   [0;1mSELECT * FROM categories WHERE (categories."id" = 16) [0m
+  [4;35;1mClient Load (0.000690)[0m   [0mSELECT * FROM clients WHERE (clients."id" = 26) [0m
+  [4;36;1mCategory Load (0.000777)[0m   [0;1mSELECT * FROM categories WHERE (categories."id" = 8) [0m
+  [4;35;1mClient Load (0.000674)[0m   [0mSELECT * FROM clients WHERE (clients."id" = 19) [0m
+Completed in 0.09029 (11 reqs/sec) | Rendering: 0.04596 (50%) | DB: 0.03736 (41%) | 200 OK [http://localhost/pdfs]
+
+
+Processing PdfsController#attachment (for 127.0.0.1 at 2007-12-03 12:16:37) [GET]
+  Session ID: 4bc464232e3fe571c9c88be54be86025
+  Parameters: {"action"=>"attachment", "controller"=>"pdfs", "filename"=>"20071129-Trust Deed.pdf"}
+
+
+ActionController::MissingFile (Cannot read file 20071129-Trust Deed.pdf):
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/streaming.rb:59:in `send_file'
+    .//app/controllers/pdfs_controller.rb:87:in `attachment'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:1095:in `send'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:1095:in `perform_action_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:632:in `call_filter'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:634:in `call_filter'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:619:in `perform_action_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/benchmarking.rb:66:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/benchmarking.rb:66:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/rescue.rb:83:in `perform_action'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:430:in `send'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:430:in `process_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:624:in `process_without_session_management_support'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/session_management.rb:114:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:330:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.2.3/lib/dispatcher.rb:41:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.2.3/lib/webrick_server.rb:113:in `handle_dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.2.3/lib/webrick_server.rb:79:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.2.3/lib/webrick_server.rb:63:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.2.3/lib/commands/servers/webrick.rb:59
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:495:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:495:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.2.3/lib/commands/server.rb:39
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    script/server:3
+
+
+Rendering /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/templates/rescues/layout.rhtml (500 Internal Error)

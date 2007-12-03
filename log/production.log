@@ -418,3 +418,107 @@ Processing PdfsController#index (for ::1 at 2007-12-03 11:52:12) [GET]
 Rendering  within layouts/application
 Rendering pdfs/index
 Completed in 0.03731 (26 reqs/sec) | Rendering: 0.01981 (53%) | DB: 0.01636 (43%) | 200 OK [http://localhost/pdfs]
+
+
+Processing PdfsController#index (for ::1 at 2007-12-03 12:09:52) [GET]
+  Session ID: 4bc464232e3fe571c9c88be54be86025
+  Parameters: {"action"=>"index", "controller"=>"pdfs"}
+Rendering  within layouts/application
+Rendering pdfs/index
+Completed in 0.09937 (10 reqs/sec) | Rendering: 0.08181 (82%) | DB: 0.01644 (16%) | 200 OK [http://localhost/pdfs]
+
+
+Processing PdfsController#index (for ::1 at 2007-12-03 12:10:44) [GET]
+  Session ID: 4bc464232e3fe571c9c88be54be86025
+  Parameters: {"action"=>"index", "controller"=>"pdfs"}
+Rendering  within layouts/application
+Rendering pdfs/index
+Completed in 0.06044 (16 reqs/sec) | Rendering: 0.02314 (38%) | DB: 0.03610 (59%) | 200 OK [http://localhost/pdfs]
+
+
+Processing PdfsController#index (for ::1 at 2007-12-03 12:10:45) [GET]
+  Session ID: 4bc464232e3fe571c9c88be54be86025
+  Parameters: {"action"=>"index", "controller"=>"pdfs"}
+Rendering  within layouts/application
+Rendering pdfs/index
+Completed in 0.03794 (26 reqs/sec) | Rendering: 0.02022 (53%) | DB: 0.01662 (43%) | 200 OK [http://localhost/pdfs]
+
+
+Processing PdfsController#index (for ::1 at 2007-12-03 12:11:01) [GET]
+  Session ID: 4bc464232e3fe571c9c88be54be86025
+  Parameters: {"action"=>"index", "controller"=>"pdfs"}
+Rendering  within layouts/application
+Rendering pdfs/index
+Completed in 0.05482 (18 reqs/sec) | Rendering: 0.02718 (49%) | DB: 0.02616 (47%) | 200 OK [http://localhost/pdfs]
+
+
+Processing ClientsController#index (for ::1 at 2007-12-03 12:11:04) [GET]
+  Session ID: 4bc464232e3fe571c9c88be54be86025
+  Parameters: {"action"=>"index", "controller"=>"clients"}
+Rendering  within layouts/application
+Rendering clients/index
+Completed in 0.01138 (87 reqs/sec) | Rendering: 0.00814 (71%) | DB: 0.00227 (19%) | 200 OK [http://localhost/clients]
+
+
+Processing PdfsController#index (for ::1 at 2007-12-03 12:11:07) [GET]
+  Session ID: 4bc464232e3fe571c9c88be54be86025
+  Parameters: {"action"=>"index", "controller"=>"pdfs"}
+Rendering  within layouts/application
+Rendering pdfs/index
+Completed in 0.04063 (24 reqs/sec) | Rendering: 0.02117 (52%) | DB: 0.01815 (44%) | 200 OK [http://localhost/pdfs]
+
+
+Processing ClientsController#index (for ::1 at 2007-12-03 12:11:10) [GET]
+  Session ID: 4bc464232e3fe571c9c88be54be86025
+  Parameters: {"action"=>"index", "controller"=>"clients"}
+Rendering  within layouts/application
+Rendering clients/index
+Completed in 0.01106 (90 reqs/sec) | Rendering: 0.00808 (73%) | DB: 0.00204 (18%) | 200 OK [http://localhost/clients]
+
+
+Processing ClientsController#index (for ::1 at 2007-12-03 12:11:17) [GET]
+  Session ID: 4bc464232e3fe571c9c88be54be86025
+  Parameters: {"action"=>"index", "controller"=>"clients"}
+Rendering  within layouts/application
+Rendering clients/index
+Completed in 0.01126 (88 reqs/sec) | Rendering: 0.00820 (72%) | DB: 0.00212 (18%) | 200 OK [http://localhost/clients]
+
+
+Processing ClientsController#index (for ::1 at 2007-12-03 12:13:32) [GET]
+  Session ID: 4bc464232e3fe571c9c88be54be86025
+  Parameters: {"action"=>"index", "controller"=>"clients"}
+Rendering  within layouts/application
+Rendering clients/index
+Completed in 0.20852 (4 reqs/sec) | Rendering: 0.02362 (11%) | DB: 0.02473 (11%) | 200 OK [http://localhost/clients]
+
+
+Processing PdfsController#index (for ::1 at 2007-12-03 12:13:33) [GET]
+  Session ID: 4bc464232e3fe571c9c88be54be86025
+  Parameters: {"action"=>"index", "controller"=>"pdfs"}
+Rendering  within layouts/application
+Rendering pdfs/index
+Completed in 0.08073 (12 reqs/sec) | Rendering: 0.03373 (41%) | DB: 0.03805 (47%) | 200 OK [http://localhost/pdfs]
+
+
+Processing PdfsController#show (for ::1 at 2007-12-03 12:13:40) [GET]
+  Session ID: 4bc464232e3fe571c9c88be54be86025
+  Parameters: {"action"=>"show", "id"=>"154", "controller"=>"pdfs"}
+Rendering  within layouts/application
+Rendering pdfs/show
+Completed in 0.00838 (119 reqs/sec) | Rendering: 0.00599 (71%) | DB: 0.00176 (20%) | 200 OK [http://localhost/pdfs/show/154]
+
+
+Processing PdfsController#index (for ::1 at 2007-12-03 12:13:43) [GET]
+  Session ID: 4bc464232e3fe571c9c88be54be86025
+  Parameters: {"action"=>"index", "controller"=>"pdfs"}
+Rendering  within layouts/application
+Rendering pdfs/index
+Completed in 0.05840 (17 reqs/sec) | Rendering: 0.02762 (47%) | DB: 0.02937 (50%) | 200 OK [http://localhost/pdfs]
+
+
+Processing PdfsController#index (for ::1 at 2007-12-03 12:15:17) [GET]
+  Session ID: 4bc464232e3fe571c9c88be54be86025
+  Parameters: {"action"=>"index", "controller"=>"pdfs"}
+Rendering  within layouts/application
+Rendering pdfs/index
+Completed in 0.06171 (16 reqs/sec) | Rendering: 0.02920 (47%) | DB: 0.03097 (50%) | 200 OK [http://localhost/pdfs]
