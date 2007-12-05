@@ -39,7 +39,7 @@ class Pdf < ActiveRecord::Base
 		Dir.mkdir(STORE_DIR + "/" + client.name.downcase + "/" + category.name.downcase) unless File.exists?(STORE_DIR + "/" + client.name.downcase + "/" + category.name.downcase)
 
 		# Format date
-		@filedate = pdfdate.year.to_s + pdfdate.month.to_s + pdfdate.day.to_s
+		@filedate = pdfdate.to_formatted_s(:file_format)
 
 		
 		filename = original

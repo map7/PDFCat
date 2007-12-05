@@ -58,3 +58,10 @@ end
 # Mime::Type.register "application/x-mobile", :mobile
 
 # Include your application configuration below
+#
+my_formats = {
+	:file_format => '%Y%m%d'
+}
+
+ActiveSupport::CoreExtensions::Time::Conversions::DATE_FORMATS.merge!(my_formats)
+ActiveSupport::CoreExtensions::Date::Conversions::DATE_FORMATS.merge!(my_formats)
