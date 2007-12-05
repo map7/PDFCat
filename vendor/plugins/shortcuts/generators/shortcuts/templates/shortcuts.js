@@ -28,7 +28,7 @@ Object.extend(Shortcuts, {
 				if (target.nodeType == 3) // defeat Safari bug
 					target = target.parentNode;
 		
-				if (target.tagName.toLowerCase()!='input' && target.tagName.toLowerCase()!='textarea') {
+				if (target.tagName.toLowerCase()!='input' && target.tagName.toLowerCase()!='textarea' && target.tagName.toLowerCase()!='select') {
 					var code;
 					if (e.keyCode) code = e.keyCode;
 					else if (e.which) code = e.which;
