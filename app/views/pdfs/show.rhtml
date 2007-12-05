@@ -18,7 +18,7 @@
 <div id="email_client" style="display:none">
 	<% form_tag :action => 'email_client', :id => @pdf.id do %>
 		<p>Client's Email:<br />
-			<%= text_field_tag 'email' %></p>
+		<%= text_field_tag 'email', @pdf.client.email %></p>
 
 		<p><%= submit_tag 'Send email' %> <%= link_to_function "Cancel", "Element.toggle('email_client')" %></p>
 	<% end %>
