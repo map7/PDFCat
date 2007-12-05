@@ -48080,3 +48080,2552 @@ Rendered pdfs/_search (0.00170)
   [4;36;1mCategory Load (0.000834)[0m   [0;1mSELECT * FROM categories WHERE (categories."id" = 1) [0m
   [4;35;1mClient Load (0.000629)[0m   [0mSELECT * FROM clients WHERE (clients."id" = 1) [0m
 Completed in 0.03488 (28 reqs/sec) | Rendering: 0.01867 (53%) | DB: 0.01029 (29%) | 200 OK [http://localhost/pdfs]
+file script/../config/../tmp/sessions//ruby_sess.2131a34f8f0d1fd6 not readable
+/usr/local/lib/ruby/1.8/pstore.rb:100:in `initialize'
+/usr/local/lib/ruby/1.8/cgi/session/pstore.rb:61:in `new'
+/usr/local/lib/ruby/1.8/cgi/session/pstore.rb:61:in `initialize'
+/usr/local/lib/ruby/1.8/cgi/session.rb:273:in `new'
+/usr/local/lib/ruby/1.8/cgi/session.rb:273:in `initialize'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/cgi_process.rb:123:in `new'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/cgi_process.rb:123:in `session'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/cgi_process.rb:155:in `stale_session_check!'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/cgi_process.rb:110:in `session'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:1052:in `assign_shortcuts_without_flash'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/flash.rb:140:in `assign_shortcuts'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:424:in `process_without_filters'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:624:in `process_without_session_management_support'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/session_management.rb:114:in `process'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:330:in `process'
+/usr/local/lib/ruby/gems/1.8/gems/rails-1.2.3/lib/dispatcher.rb:41:in `dispatch'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:78:in `process'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:76:in `synchronize'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:76:in `process'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:618:in `process_client'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:617:in `each'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:617:in `process_client'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `run'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `initialize'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `new'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `run'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `initialize'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `new'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `run'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:271:in `run'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:270:in `each'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:270:in `run'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/bin/mongrel_rails:127:in `run'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/command.rb:211:in `run'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/bin/mongrel_rails:243
+/usr/local/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:488:in `load'
+/usr/local/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:488:in `load'
+/usr/local/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+/usr/local/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:488:in `load'
+/usr/local/lib/ruby/gems/1.8/gems/rails-1.2.3/lib/commands/servers/mongrel.rb:60
+/usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+/usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+/usr/local/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:495:in `require'
+/usr/local/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+/usr/local/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:495:in `require'
+/usr/local/lib/ruby/gems/1.8/gems/rails-1.2.3/lib/commands/server.rb:39
+/usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+/usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+script/server:3
+no route found to match "/" with {:method=>:get}
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/routing.rb:1292:in `recognize_path'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/routing.rb:1282:in `recognize'
+/usr/local/lib/ruby/gems/1.8/gems/rails-1.2.3/lib/dispatcher.rb:40:in `dispatch'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:78:in `process'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:76:in `synchronize'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:76:in `process'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:618:in `process_client'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:617:in `each'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:617:in `process_client'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `run'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `initialize'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `new'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `run'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `initialize'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `new'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `run'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:271:in `run'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:270:in `each'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:270:in `run'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/bin/mongrel_rails:127:in `run'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/command.rb:211:in `run'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/bin/mongrel_rails:243
+/usr/local/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:488:in `load'
+/usr/local/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:488:in `load'
+/usr/local/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+/usr/local/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:488:in `load'
+/usr/local/lib/ruby/gems/1.8/gems/rails-1.2.3/lib/commands/servers/mongrel.rb:60
+/usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+/usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+/usr/local/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:495:in `require'
+/usr/local/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+/usr/local/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:495:in `require'
+/usr/local/lib/ruby/gems/1.8/gems/rails-1.2.3/lib/commands/server.rb:39
+/usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+/usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+script/server:3
+file script/../config/../tmp/sessions//ruby_sess.2131a34f8f0d1fd6 not readable
+/usr/local/lib/ruby/1.8/pstore.rb:100:in `initialize'
+/usr/local/lib/ruby/1.8/cgi/session/pstore.rb:61:in `new'
+/usr/local/lib/ruby/1.8/cgi/session/pstore.rb:61:in `initialize'
+/usr/local/lib/ruby/1.8/cgi/session.rb:273:in `new'
+/usr/local/lib/ruby/1.8/cgi/session.rb:273:in `initialize'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/cgi_process.rb:123:in `new'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/cgi_process.rb:123:in `session'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/cgi_process.rb:155:in `stale_session_check!'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/cgi_process.rb:110:in `session'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:1052:in `assign_shortcuts_without_flash'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/flash.rb:140:in `assign_shortcuts'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:424:in `process_without_filters'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:624:in `process_without_session_management_support'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/session_management.rb:114:in `process'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:330:in `process'
+/usr/local/lib/ruby/gems/1.8/gems/rails-1.2.3/lib/dispatcher.rb:41:in `dispatch'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:78:in `process'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:76:in `synchronize'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:76:in `process'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:618:in `process_client'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:617:in `each'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:617:in `process_client'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `run'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `initialize'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `new'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `run'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `initialize'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `new'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `run'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:271:in `run'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:270:in `each'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:270:in `run'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/bin/mongrel_rails:127:in `run'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/command.rb:211:in `run'
+/usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/bin/mongrel_rails:243
+/usr/local/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:488:in `load'
+/usr/local/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:488:in `load'
+/usr/local/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+/usr/local/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:488:in `load'
+/usr/local/lib/ruby/gems/1.8/gems/rails-1.2.3/lib/commands/servers/mongrel.rb:60
+/usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+/usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+/usr/local/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:495:in `require'
+/usr/local/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+/usr/local/lib/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:495:in `require'
+/usr/local/lib/ruby/gems/1.8/gems/rails-1.2.3/lib/commands/server.rb:39
+/usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+/usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+script/server:3
+
+
+Processing PdfsController#index (for 127.0.0.1 at 2007-12-05 11:38:22) [GET]
+  Session ID: 4bc464232e3fe571c9c88be54be86025
+  Parameters: {"action"=>"index", "controller"=>"pdfs"}
+DEPRECATION WARNING: paginate is deprecated and will be removed from Rails 2.0 (Pagination is moving to a plugin in Rails 2.0: script/plugin install svn://errtheblog.com/svn/plugins/classic_pagination)  See http://www.rubyonrails.org/deprecation for details. (called from index at /storage/livedata/programming/rails/pdfcat/app/controllers/pdfs_controller.rb:9)
+  [4;36;1mSQL (0.007351)[0m   [0;1m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = 'pdfs'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [4;35;1mSQL (0.012559)[0m   [0mSELECT count(*) AS count_all FROM pdfs [0m
+  [4;36;1mPdf Load (0.000817)[0m   [0;1mSELECT * FROM pdfs ORDER BY pdfdate DESC LIMIT 10 OFFSET 0[0m
+Rendering  within layouts/application
+Rendering pdfs/index
+Rendered pdfs/_search (0.00245)
+  [4;35;1mSQL (0.000885)[0m   [0m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = 'categories'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [4;36;1mCategory Load (0.000386)[0m   [0;1mSELECT * FROM categories WHERE (categories."id" = 1) [0m
+  [4;35;1mSQL (0.000871)[0m   [0m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = 'clients'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [4;36;1mClient Load (0.000615)[0m   [0;1mSELECT * FROM clients WHERE (clients."id" = 1) [0m
+  [4;35;1mCategory Load (0.001957)[0m   [0mSELECT * FROM categories WHERE (categories."id" = 1) [0m
+  [4;36;1mClient Load (0.000825)[0m   [0;1mSELECT * FROM clients WHERE (clients."id" = 1) [0m
+Completed in 0.23382 (4 reqs/sec) | Rendering: 0.03623 (15%) | DB: 0.02627 (11%) | 200 OK [http://localhost/pdfs]
+
+
+Processing NewController#index (for 127.0.0.1 at 2007-12-05 11:38:28) [GET]
+  Session ID: 4bc464232e3fe571c9c88be54be86025
+  Parameters: {"action"=>"index", "controller"=>"new"}
+  [4;35;1mSQL (0.001278)[0m   [0m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = 'pdfs'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+Rendering  within layouts/application
+Rendering new/index
+Completed in 0.13007 (7 reqs/sec) | Rendering: 0.06051 (46%) | DB: 0.00128 (0%) | 200 OK [http://localhost/new]
+
+
+Processing PdfsController#new (for 127.0.0.1 at 2007-12-05 11:38:36) [GET]
+  Session ID: 4bc464232e3fe571c9c88be54be86025
+  Parameters: {"action"=>"new", "controller"=>"pdfs", "filename"=>"/livedata/pdfcat_test_upload/DOC070731004342(0001).pdf"}
+  [4;36;1mSQL (0.001194)[0m   [0;1m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = 'pdfs'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+Rendering  within layouts/application
+Rendering pdfs/new
+  [4;35;1mClient Load (0.000319)[0m   [0mSELECT * FROM clients [0m
+  [4;36;1mSQL (0.000972)[0m   [0;1m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = 'clients'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [4;35;1mCategory Load (0.000305)[0m   [0mSELECT * FROM categories [0m
+  [4;36;1mSQL (0.000665)[0m   [0;1m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = 'categories'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+Rendered pdfs/_form (0.02436)
+Completed in 0.03699 (27 reqs/sec) | Rendering: 0.02762 (74%) | DB: 0.00345 (9%) | 200 OK [http://localhost/pdfs/new?filename=%2Flivedata%2Fpdfcat_test_upload%2FDOC070731004342%280001%29.pdf]
+
+
+Processing ClientsController#index (for 127.0.0.1 at 2007-12-05 11:38:50) [GET]
+  Session ID: 4bc464232e3fe571c9c88be54be86025
+  Parameters: {"action"=>"index", "controller"=>"clients"}
+DEPRECATION WARNING: paginate is deprecated and will be removed from Rails 2.0 (Pagination is moving to a plugin in Rails 2.0: script/plugin install svn://errtheblog.com/svn/plugins/classic_pagination)  See http://www.rubyonrails.org/deprecation for details. (called from index at /storage/livedata/programming/rails/pdfcat/app/controllers/clients_controller.rb:8)
+  [4;35;1mSQL (0.001581)[0m   [0m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = 'clients'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [4;36;1mSQL (0.000254)[0m   [0;1mSELECT count(*) AS count_all FROM clients [0m
+  [4;35;1mClient Load (0.015749)[0m   [0mSELECT * FROM clients ORDER BY upper(name) LIMIT 10 OFFSET 0[0m
+Rendering  within layouts/application
+Rendering clients/index
+Completed in 0.04458 (22 reqs/sec) | Rendering: 0.02036 (45%) | DB: 0.01758 (39%) | 200 OK [http://localhost/clients]
+
+
+Processing ClientsController#new (for 127.0.0.1 at 2007-12-05 11:38:53) [GET]
+  Session ID: 4bc464232e3fe571c9c88be54be86025
+  Parameters: {"action"=>"new", "controller"=>"clients"}
+  [4;36;1mSQL (0.001372)[0m   [0;1m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = 'clients'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+Rendering  within layouts/application
+Rendering clients/new
+Rendered clients/_form (0.00159)
+Completed in 0.02315 (43 reqs/sec) | Rendering: 0.01588 (68%) | DB: 0.00137 (5%) | 200 OK [http://localhost/clients/new]
+
+
+Processing ClientsController#create (for 127.0.0.1 at 2007-12-05 11:39:23) [POST]
+  Session ID: 4bc464232e3fe571c9c88be54be86025
+  Parameters: {"commit"=>"Create", "client"=>{"name"=>"Tramontana", "email"=>"joseph@tramontana.com.au"}, "action"=>"create", "controller"=>"clients"}
+  [4;35;1mSQL (0.001274)[0m   [0m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = 'clients'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [4;36;1mSQL (0.000220)[0m   [0;1mBEGIN[0m
+  [4;35;1mClient Load (0.000578)[0m   [0mSELECT * FROM clients WHERE (clients.name = 'Tramontana') LIMIT 1[0m
+  [4;36;1mPK and serial sequence (0.003599)[0m   [0;1m SELECT attr.attname, name.nspname, seq.relname
+ FROM pg_class seq,
+ pg_attribute attr,
+ pg_depend dep,
+ pg_namespace name,
+ pg_constraint cons
+ WHERE seq.oid = dep.objid
+ AND seq.relnamespace = name.oid
+ AND seq.relkind = 'S'
+ AND attr.attrelid = dep.refobjid
+ AND attr.attnum = dep.refobjsubid
+ AND attr.attrelid = cons.conrelid
+ AND attr.attnum = cons.conkey[1]
+ AND cons.contype = 'p'
+ AND dep.refobjid = 'clients'::regclass
+[0m
+  [4;35;1mClient Create (0.022276)[0m   [0mINSERT INTO clients ("name", "email") VALUES('Tramontana', 'joseph@tramontana.com.au')[0m
+  [4;36;1mSQL (0.000252)[0m   [0;1mSELECT currval('clients_id_seq')[0m
+  [4;35;1mSQL (0.017511)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/clients
+Completed in 0.05553 (18 reqs/sec) | DB: 0.04571 (82%) | 302 Found [http://localhost/clients/create]
+
+
+Processing ClientsController#index (for 127.0.0.1 at 2007-12-05 11:39:23) [GET]
+  Session ID: 4bc464232e3fe571c9c88be54be86025
+  Parameters: {"action"=>"index", "controller"=>"clients"}
+DEPRECATION WARNING: paginate is deprecated and will be removed from Rails 2.0 (Pagination is moving to a plugin in Rails 2.0: script/plugin install svn://errtheblog.com/svn/plugins/classic_pagination)  See http://www.rubyonrails.org/deprecation for details. (called from index at /storage/livedata/programming/rails/pdfcat/app/controllers/clients_controller.rb:8)
+  [4;36;1mSQL (0.001641)[0m   [0;1m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = 'clients'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [4;35;1mSQL (0.000437)[0m   [0mSELECT count(*) AS count_all FROM clients [0m
+  [4;36;1mClient Load (0.000207)[0m   [0;1mSELECT * FROM clients ORDER BY upper(name) LIMIT 10 OFFSET 0[0m
+Rendering  within layouts/application
+Rendering clients/index
+Completed in 0.01351 (74 reqs/sec) | Rendering: 0.00519 (38%) | DB: 0.00228 (16%) | 200 OK [http://localhost/clients]
+
+
+Processing CategoriesController#index (for 127.0.0.1 at 2007-12-05 11:39:28) [GET]
+  Session ID: 4bc464232e3fe571c9c88be54be86025
+  Parameters: {"action"=>"index", "controller"=>"categories"}
+DEPRECATION WARNING: paginate is deprecated and will be removed from Rails 2.0 (Pagination is moving to a plugin in Rails 2.0: script/plugin install svn://errtheblog.com/svn/plugins/classic_pagination)  See http://www.rubyonrails.org/deprecation for details. (called from index at /storage/livedata/programming/rails/pdfcat/app/controllers/categories_controller.rb:8)
+  [4;35;1mSQL (0.001381)[0m   [0m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = 'categories'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [4;36;1mSQL (0.000527)[0m   [0;1mSELECT count(*) AS count_all FROM categories [0m
+  [4;35;1mCategory Load (0.000257)[0m   [0mSELECT * FROM categories ORDER BY upper(name) LIMIT 10 OFFSET 0[0m
+Rendering  within layouts/application
+Rendering categories/index
+Completed in 0.02675 (37 reqs/sec) | Rendering: 0.01882 (70%) | DB: 0.00216 (8%) | 200 OK [http://localhost/categories]
+
+
+Processing CategoriesController#new (for 127.0.0.1 at 2007-12-05 11:39:29) [GET]
+  Session ID: 4bc464232e3fe571c9c88be54be86025
+  Parameters: {"action"=>"new", "controller"=>"categories"}
+  [4;36;1mSQL (0.001305)[0m   [0;1m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = 'categories'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+Rendering  within layouts/application
+Rendering categories/new
+Rendered categories/_form (0.00279)
+Completed in 0.01506 (66 reqs/sec) | Rendering: 0.00818 (54%) | DB: 0.00130 (8%) | 200 OK [http://localhost/categories/new]
+
+
+Processing CategoriesController#create (for 127.0.0.1 at 2007-12-05 11:39:41) [POST]
+  Session ID: 4bc464232e3fe571c9c88be54be86025
+  Parameters: {"commit"=>"Create", "category"=>{"name"=>"BAS", "description"=>"Business Activity Statements"}, "action"=>"create", "controller"=>"categories"}
+  [4;35;1mSQL (0.000940)[0m   [0m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = 'categories'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [4;36;1mSQL (0.000088)[0m   [0;1mBEGIN[0m
+  [4;35;1mCategory Load (0.000280)[0m   [0mSELECT * FROM categories WHERE (categories.name = 'BAS') LIMIT 1[0m
+  [4;36;1mPK and serial sequence (0.002665)[0m   [0;1m SELECT attr.attname, name.nspname, seq.relname
+ FROM pg_class seq,
+ pg_attribute attr,
+ pg_depend dep,
+ pg_namespace name,
+ pg_constraint cons
+ WHERE seq.oid = dep.objid
+ AND seq.relnamespace = name.oid
+ AND seq.relkind = 'S'
+ AND attr.attrelid = dep.refobjid
+ AND attr.attnum = dep.refobjsubid
+ AND attr.attrelid = cons.conrelid
+ AND attr.attnum = cons.conkey[1]
+ AND cons.contype = 'p'
+ AND dep.refobjid = 'categories'::regclass
+[0m
+  [4;35;1mCategory Create (0.011416)[0m   [0mINSERT INTO categories ("name", "description") VALUES('BAS', 'Business Activity Statements')[0m
+  [4;36;1mSQL (0.000198)[0m   [0;1mSELECT currval('categories_id_seq')[0m
+  [4;35;1mSQL (0.000527)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/categories
+Completed in 0.02552 (39 reqs/sec) | DB: 0.01611 (63%) | 302 Found [http://localhost/categories/create]
+
+
+Processing CategoriesController#index (for 127.0.0.1 at 2007-12-05 11:39:42) [GET]
+  Session ID: 4bc464232e3fe571c9c88be54be86025
+  Parameters: {"action"=>"index", "controller"=>"categories"}
+DEPRECATION WARNING: paginate is deprecated and will be removed from Rails 2.0 (Pagination is moving to a plugin in Rails 2.0: script/plugin install svn://errtheblog.com/svn/plugins/classic_pagination)  See http://www.rubyonrails.org/deprecation for details. (called from index at /storage/livedata/programming/rails/pdfcat/app/controllers/categories_controller.rb:8)
+  [4;36;1mSQL (0.001239)[0m   [0;1m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = 'categories'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [4;35;1mSQL (0.000439)[0m   [0mSELECT count(*) AS count_all FROM categories [0m
+  [4;36;1mCategory Load (0.000212)[0m   [0;1mSELECT * FROM categories ORDER BY upper(name) LIMIT 10 OFFSET 0[0m
+Rendering  within layouts/application
+Rendering categories/index
+Completed in 0.01458 (68 reqs/sec) | Rendering: 0.00594 (40%) | DB: 0.00189 (12%) | 200 OK [http://localhost/categories]
+
+
+Processing NewController#index (for 127.0.0.1 at 2007-12-05 11:39:46) [GET]
+  Session ID: 4bc464232e3fe571c9c88be54be86025
+  Parameters: {"action"=>"index", "controller"=>"new"}
+  [4;35;1mSQL (0.005917)[0m   [0m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = 'pdfs'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+Rendering  within layouts/application
+Rendering new/index
+Completed in 0.02683 (37 reqs/sec) | Rendering: 0.01541 (57%) | DB: 0.00592 (22%) | 200 OK [http://localhost/new]
+
+
+Processing PdfsController#new (for 127.0.0.1 at 2007-12-05 11:39:52) [GET]
+  Session ID: 4bc464232e3fe571c9c88be54be86025
+  Parameters: {"action"=>"new", "controller"=>"pdfs", "filename"=>"/livedata/pdfcat_test_upload/DOC070731004342(0001).pdf"}
+  [4;36;1mSQL (0.000959)[0m   [0;1m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = 'pdfs'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+Rendering  within layouts/application
+Rendering pdfs/new
+  [4;35;1mClient Load (0.000374)[0m   [0mSELECT * FROM clients [0m
+  [4;36;1mSQL (0.000861)[0m   [0;1m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = 'clients'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [4;35;1mCategory Load (0.000311)[0m   [0mSELECT * FROM categories [0m
+  [4;36;1mSQL (0.000676)[0m   [0;1m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = 'categories'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+Rendered pdfs/_form (0.01929)
+Completed in 0.03063 (32 reqs/sec) | Rendering: 0.02146 (70%) | DB: 0.00318 (10%) | 200 OK [http://localhost/pdfs/new?filename=%2Flivedata%2Fpdfcat_test_upload%2FDOC070731004342%280001%29.pdf]
+
+
+Processing PdfsController#create (for 127.0.0.1 at 2007-12-05 11:39:57) [POST]
+  Session ID: 4bc464232e3fe571c9c88be54be86025
+  Parameters: {"category"=>"1", "commit"=>"Create", "client"=>"1", "action"=>"create", "controller"=>"pdfs", "pdf"=>{"pdfdate(3i)"=>"5", "pdfname"=>"test", "filename"=>"DOC070731004342(0001).pdf", "pdfnote"=>"", "pdfdate(1i)"=>"2007", "pdfdate(2i)"=>"12"}}
+  [4;35;1mSQL (0.000975)[0m   [0m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = 'pdfs'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [4;36;1mSQL (0.001375)[0m   [0;1m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = 'categories'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [4;35;1mCategory Load (0.000488)[0m   [0mSELECT * FROM categories WHERE (categories."id" = 1) [0m
+  [4;36;1mSQL (0.000965)[0m   [0;1m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = 'clients'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [4;35;1mClient Load (0.000169)[0m   [0mSELECT * FROM clients WHERE (clients."id" = 1) [0m
+  [4;36;1mSQL (0.000198)[0m   [0;1mBEGIN[0m
+  [4;35;1mPdf Load (0.000688)[0m   [0mSELECT * FROM pdfs WHERE (pdfs.pdfname = 'test' AND pdfs.pdfdate = '2007-12-05' AND pdfs.category_id = 1 AND pdfs.client_id = 1) LIMIT 1[0m
+  [4;36;1mPK and serial sequence (0.002297)[0m   [0;1m SELECT attr.attname, name.nspname, seq.relname
+ FROM pg_class seq,
+ pg_attribute attr,
+ pg_depend dep,
+ pg_namespace name,
+ pg_constraint cons
+ WHERE seq.oid = dep.objid
+ AND seq.relnamespace = name.oid
+ AND seq.relkind = 'S'
+ AND attr.attrelid = dep.refobjid
+ AND attr.attnum = dep.refobjsubid
+ AND attr.attrelid = cons.conrelid
+ AND attr.attnum = cons.conkey[1]
+ AND cons.contype = 'p'
+ AND dep.refobjid = 'pdfs'::regclass
+[0m
+  [4;35;1mPdf Create (0.000525)[0m   [0mINSERT INTO pdfs ("pdfname", "client_id", "pdfdate", "category_id", "filename", "pdfnote") VALUES('test', 1, '2007-12-05', 1, '2007125-test.pdf', '')[0m
+  [4;36;1mSQL (0.000123)[0m   [0;1mSELECT currval('pdfs_id_seq')[0m
+  [4;35;1mSQL (0.000524)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/pdfs
+Completed in 0.06260 (15 reqs/sec) | DB: 0.00833 (13%) | 302 Found [http://localhost/pdfs/create]
+
+
+Processing PdfsController#index (for 127.0.0.1 at 2007-12-05 11:39:57) [GET]
+  Session ID: 4bc464232e3fe571c9c88be54be86025
+  Parameters: {"action"=>"index", "controller"=>"pdfs"}
+DEPRECATION WARNING: paginate is deprecated and will be removed from Rails 2.0 (Pagination is moving to a plugin in Rails 2.0: script/plugin install svn://errtheblog.com/svn/plugins/classic_pagination)  See http://www.rubyonrails.org/deprecation for details. (called from index at /storage/livedata/programming/rails/pdfcat/app/controllers/pdfs_controller.rb:9)
+  [4;36;1mSQL (0.001140)[0m   [0;1m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = 'pdfs'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [4;35;1mSQL (0.000599)[0m   [0mSELECT count(*) AS count_all FROM pdfs [0m
+  [4;36;1mPdf Load (0.000542)[0m   [0;1mSELECT * FROM pdfs ORDER BY pdfdate DESC LIMIT 10 OFFSET 0[0m
+Rendering  within layouts/application
+Rendering pdfs/index
+Rendered pdfs/_search (0.00155)
+  [4;35;1mSQL (0.000973)[0m   [0m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = 'categories'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [4;36;1mCategory Load (0.000184)[0m   [0;1mSELECT * FROM categories WHERE (categories."id" = 1) [0m
+  [4;35;1mSQL (0.000843)[0m   [0m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = 'clients'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [4;36;1mClient Load (0.000159)[0m   [0;1mSELECT * FROM clients WHERE (clients."id" = 1) [0m
+  [4;35;1mCategory Load (0.000289)[0m   [0mSELECT * FROM categories WHERE (categories."id" = 1) [0m
+  [4;36;1mClient Load (0.000151)[0m   [0;1mSELECT * FROM clients WHERE (clients."id" = 1) [0m
+  [4;35;1mCategory Load (0.000207)[0m   [0mSELECT * FROM categories WHERE (categories."id" = 1) [0m
+  [4;36;1mClient Load (0.000194)[0m   [0;1mSELECT * FROM clients WHERE (clients."id" = 1) [0m
+Completed in 0.08643 (11 reqs/sec) | Rendering: 0.07314 (84%) | DB: 0.00528 (6%) | 200 OK [http://localhost/pdfs]
+
+
+Processing PdfsController#show (for 127.0.0.1 at 2007-12-05 11:40:15) [GET]
+  Session ID: 4bc464232e3fe571c9c88be54be86025
+  Parameters: {"action"=>"show", "id"=>"3", "controller"=>"pdfs"}
+  [4;35;1mSQL (0.001188)[0m   [0m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = 'pdfs'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [4;36;1mPdf Load (0.002278)[0m   [0;1mSELECT * FROM pdfs WHERE (pdfs."id" = 3) [0m
+Rendering  within layouts/application
+Rendering pdfs/show
+Completed in 0.01924 (51 reqs/sec) | Rendering: 0.00881 (45%) | DB: 0.00347 (18%) | 200 OK [http://localhost/pdfs/show/3]
+
+
+Processing PdfsController#edit (for 127.0.0.1 at 2007-12-05 11:40:17) [GET]
+  Session ID: 4bc464232e3fe571c9c88be54be86025
+  Parameters: {"action"=>"edit", "id"=>"3", "controller"=>"pdfs"}
+  [4;35;1mSQL (0.000974)[0m   [0m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = 'pdfs'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [4;36;1mPdf Load (0.000188)[0m   [0;1mSELECT * FROM pdfs WHERE (pdfs."id" = 3) [0m
+Rendering  within layouts/application
+Rendering pdfs/edit
+  [4;35;1mClient Load (0.000439)[0m   [0mSELECT * FROM clients [0m
+  [4;36;1mSQL (0.000688)[0m   [0;1m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = 'clients'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [4;35;1mCategory Load (0.000319)[0m   [0mSELECT * FROM categories [0m
+  [4;36;1mSQL (0.000773)[0m   [0;1m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = 'categories'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+Rendered pdfs/_form (0.01870)
+Completed in 0.03856 (25 reqs/sec) | Rendering: 0.02726 (70%) | DB: 0.00338 (8%) | 200 OK [http://localhost/pdfs/edit/3]
+
+
+Processing PdfsController#index (for 127.0.0.1 at 2007-12-05 11:40:27) [GET]
+  Session ID: 4bc464232e3fe571c9c88be54be86025
+  Parameters: {"action"=>"index", "controller"=>"pdfs"}
+DEPRECATION WARNING: paginate is deprecated and will be removed from Rails 2.0 (Pagination is moving to a plugin in Rails 2.0: script/plugin install svn://errtheblog.com/svn/plugins/classic_pagination)  See http://www.rubyonrails.org/deprecation for details. (called from index at /storage/livedata/programming/rails/pdfcat/app/controllers/pdfs_controller.rb:9)
+  [4;35;1mSQL (0.000905)[0m   [0m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = 'pdfs'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [4;36;1mSQL (0.000165)[0m   [0;1mSELECT count(*) AS count_all FROM pdfs [0m
+  [4;35;1mPdf Load (0.000197)[0m   [0mSELECT * FROM pdfs ORDER BY pdfdate DESC LIMIT 10 OFFSET 0[0m
+Rendering  within layouts/application
+Rendering pdfs/index
+Rendered pdfs/_search (0.00154)
+  [4;36;1mSQL (0.000986)[0m   [0;1m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = 'categories'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [4;35;1mCategory Load (0.000179)[0m   [0mSELECT * FROM categories WHERE (categories."id" = 1) [0m
+  [4;36;1mSQL (0.000963)[0m   [0;1m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = 'clients'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [4;35;1mClient Load (0.000176)[0m   [0mSELECT * FROM clients WHERE (clients."id" = 1) [0m
+  [4;36;1mCategory Load (0.000259)[0m   [0;1mSELECT * FROM categories WHERE (categories."id" = 1) [0m
+  [4;35;1mClient Load (0.000143)[0m   [0mSELECT * FROM clients WHERE (clients."id" = 1) [0m
+  [4;36;1mCategory Load (0.000254)[0m   [0;1mSELECT * FROM categories WHERE (categories."id" = 1) [0m
+  [4;35;1mClient Load (0.000137)[0m   [0mSELECT * FROM clients WHERE (clients."id" = 1) [0m
+Completed in 0.03160 (31 reqs/sec) | Rendering: 0.02097 (66%) | DB: 0.00436 (13%) | 200 OK [http://localhost/pdfs]
+
+
+Processing PdfsController#show (for 127.0.0.1 at 2007-12-05 11:40:42) [GET]
+  Session ID: 4bc464232e3fe571c9c88be54be86025
+  Parameters: {"action"=>"show", "id"=>"3", "controller"=>"pdfs"}
+  [4;36;1mSQL (0.002117)[0m   [0;1m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = 'pdfs'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [4;35;1mPdf Load (0.000443)[0m   [0mSELECT * FROM pdfs WHERE (pdfs."id" = 3) [0m
+Rendering  within layouts/application
+Rendering pdfs/show
+Completed in 0.07552 (13 reqs/sec) | Rendering: 0.06635 (87%) | DB: 0.00256 (3%) | 200 OK [http://localhost/pdfs/show/3]
+
+
+Processing PdfsController#edit (for 127.0.0.1 at 2007-12-05 11:40:46) [GET]
+  Session ID: 4bc464232e3fe571c9c88be54be86025
+  Parameters: {"action"=>"edit", "id"=>"3", "controller"=>"pdfs"}
+  [4;36;1mSQL (0.001064)[0m   [0;1m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = 'pdfs'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [4;35;1mPdf Load (0.000197)[0m   [0mSELECT * FROM pdfs WHERE (pdfs."id" = 3) [0m
+Rendering  within layouts/application
+Rendering pdfs/edit
+  [4;36;1mClient Load (0.000893)[0m   [0;1mSELECT * FROM clients [0m
+  [4;35;1mSQL (0.000974)[0m   [0m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = 'clients'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [4;36;1mCategory Load (0.000314)[0m   [0;1mSELECT * FROM categories [0m
+  [4;35;1mSQL (0.000675)[0m   [0m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = 'categories'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+Rendered pdfs/_form (0.02046)
+Completed in 0.03285 (30 reqs/sec) | Rendering: 0.02283 (69%) | DB: 0.00412 (12%) | 200 OK [http://localhost/pdfs/edit/3]
+
+
+Processing PdfsController#index (for 127.0.0.1 at 2007-12-05 11:40:56) [GET]
+  Session ID: 4bc464232e3fe571c9c88be54be86025
+  Parameters: {"action"=>"index", "controller"=>"pdfs"}
+DEPRECATION WARNING: paginate is deprecated and will be removed from Rails 2.0 (Pagination is moving to a plugin in Rails 2.0: script/plugin install svn://errtheblog.com/svn/plugins/classic_pagination)  See http://www.rubyonrails.org/deprecation for details. (called from index at /storage/livedata/programming/rails/pdfcat/app/controllers/pdfs_controller.rb:9)
+  [4;36;1mSQL (0.001026)[0m   [0;1m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = 'pdfs'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [4;35;1mSQL (0.000182)[0m   [0mSELECT count(*) AS count_all FROM pdfs [0m
+  [4;36;1mPdf Load (0.000202)[0m   [0;1mSELECT * FROM pdfs ORDER BY pdfdate DESC LIMIT 10 OFFSET 0[0m
+Rendering  within layouts/application
+Rendering pdfs/index
+Rendered pdfs/_search (0.00153)
+  [4;35;1mSQL (0.000940)[0m   [0m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = 'categories'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [4;36;1mCategory Load (0.000165)[0m   [0;1mSELECT * FROM categories WHERE (categories."id" = 1) [0m
+  [4;35;1mSQL (0.001007)[0m   [0m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = 'clients'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [4;36;1mClient Load (0.000245)[0m   [0;1mSELECT * FROM clients WHERE (clients."id" = 1) [0m
+  [4;35;1mCategory Load (0.000275)[0m   [0mSELECT * FROM categories WHERE (categories."id" = 1) [0m
+  [4;36;1mClient Load (0.000136)[0m   [0;1mSELECT * FROM clients WHERE (clients."id" = 1) [0m
+  [4;35;1mCategory Load (0.000172)[0m   [0mSELECT * FROM categories WHERE (categories."id" = 1) [0m
+  [4;36;1mClient Load (0.000131)[0m   [0;1mSELECT * FROM clients WHERE (clients."id" = 1) [0m
+Completed in 0.03291 (30 reqs/sec) | Rendering: 0.02237 (67%) | DB: 0.00448 (13%) | 200 OK [http://localhost/pdfs]
+
+
+Processing PdfsController#edit (for 127.0.0.1 at 2007-12-05 11:42:33) [GET]
+  Session ID: 4bc464232e3fe571c9c88be54be86025
+  Parameters: {"action"=>"edit", "id"=>"3", "controller"=>"pdfs"}
+  [4;35;1mSQL (0.001127)[0m   [0m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = 'pdfs'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [4;36;1mPdf Load (0.000290)[0m   [0;1mSELECT * FROM pdfs WHERE (pdfs."id" = 3) [0m
+Rendering  within layouts/application
+Rendering pdfs/edit
+  [4;35;1mClient Load (0.000586)[0m   [0mSELECT * FROM clients [0m
+  [4;36;1mSQL (0.001067)[0m   [0;1m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = 'clients'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [4;35;1mCategory Load (0.001996)[0m   [0mSELECT * FROM categories [0m
+  [4;36;1mSQL (0.000858)[0m   [0;1m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = 'categories'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+Rendered pdfs/_form (0.02229)
+Completed in 0.03446 (29 reqs/sec) | Rendering: 0.02260 (65%) | DB: 0.00592 (17%) | 200 OK [http://localhost/pdfs/edit/3]
+
+
+Processing PdfsController#update (for 127.0.0.1 at 2007-12-05 11:42:48) [POST]
+  Session ID: 4bc464232e3fe571c9c88be54be86025
+  Parameters: {"category"=>"2", "commit"=>"Edit", "client"=>"2", "action"=>"update", "id"=>"3", "controller"=>"pdfs", "pdf"=>{"pdfdate(3i)"=>"5", "pdfname"=>"test", "filename"=>"2007125-test.pdf", "pdfnote"=>"", "pdfdate(1i)"=>"2007", "pdfdate(2i)"=>"12"}}
+  [4;35;1mSQL (0.000898)[0m   [0m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = 'pdfs'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [4;36;1mPdf Load (0.000179)[0m   [0;1mSELECT * FROM pdfs WHERE (pdfs."id" = 3) [0m
+  [4;35;1mSQL (0.000859)[0m   [0m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = 'categories'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [4;36;1mCategory Load (0.000156)[0m   [0;1mSELECT * FROM categories WHERE (categories."id" = 2) [0m
+  [4;35;1mSQL (0.001684)[0m   [0m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = 'clients'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [4;36;1mClient Load (0.000465)[0m   [0;1mSELECT * FROM clients WHERE (clients."id" = 2) [0m
+  [4;35;1mSQL (0.000188)[0m   [0mBEGIN[0m
+  [4;36;1mPdf Load (0.000633)[0m   [0;1mSELECT * FROM pdfs WHERE (pdfs.pdfname = 'test' AND pdfs.pdfdate = '2007-12-05' AND pdfs.category_id = 2 AND pdfs.client_id = 2 AND pdfs.id <> 3) LIMIT 1[0m
+  [4;35;1mPdf Update (0.028446)[0m   [0mUPDATE pdfs SET "pdfnote" = '', "pdfname" = 'test', "category_id" = 2, "pdfdate" = '2007-12-05', "filename" = '2007125-test.pdf', "client_id" = 2 WHERE "id" = 3[0m
+  [4;36;1mSQL (0.000553)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/pdfs/show/3
+
+
+Errno::ENOENT (No such file or directory - /livedata/pdfcat_test_clt/tramontana/bas/2007125-test.pdf or /livedata/pdfcat_test_clt/tramontana/bas/2007125-test.pdf):
+    /storage/livedata/programming/rails/pdfcat/app/models/pdf.rb:59:in `rename'
+    /storage/livedata/programming/rails/pdfcat/app/models/pdf.rb:59:in `move_file'
+    /storage/livedata/programming/rails/pdfcat/app/controllers/pdfs_controller.rb:77:in `update'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/base.rb:1101:in `send'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/base.rb:1101:in `perform_action_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/filters.rb:696:in `call_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/filters.rb:688:in `perform_action_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/benchmarking.rb:66:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/benchmarking.rb:66:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/rescue.rb:83:in `perform_action'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/base.rb:435:in `send'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/base.rb:435:in `process_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/filters.rb:684:in `process_without_session_management_support'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/session_management.rb:114:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/base.rb:334:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.2.6/lib/dispatcher.rb:41:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:78:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:76:in `synchronize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:76:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:618:in `process_client'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:617:in `each'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:617:in `process_client'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `initialize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `new'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `initialize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `new'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:271:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:270:in `each'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:270:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/bin/mongrel_rails:127:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/command.rb:211:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/bin/mongrel_rails:243
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.4.4/lib/active_support/dependencies.rb:488:in `load'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.4.4/lib/active_support/dependencies.rb:488:in `load'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.4.4/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.4.4/lib/active_support/dependencies.rb:488:in `load'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.2.6/lib/commands/servers/mongrel.rb:60
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.4.4/lib/active_support/dependencies.rb:495:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.4.4/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.4.4/lib/active_support/dependencies.rb:495:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.2.6/lib/commands/server.rb:39
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    script/server:3
+
+
+Rendering /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/templates/rescues/layout.rhtml (500 Internal Error)
+
+
+Processing PdfsController#index (for 127.0.0.1 at 2007-12-05 11:46:17) [GET]
+  Session ID: 4bc464232e3fe571c9c88be54be86025
+  Parameters: {"action"=>"index", "controller"=>"pdfs"}
+DEPRECATION WARNING: paginate is deprecated and will be removed from Rails 2.0 (Pagination is moving to a plugin in Rails 2.0: script/plugin install svn://errtheblog.com/svn/plugins/classic_pagination)  See http://www.rubyonrails.org/deprecation for details. (called from index at /storage/livedata/programming/rails/pdfcat/app/controllers/pdfs_controller.rb:9)
+  [4;35;1mSQL (0.000902)[0m   [0m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = 'pdfs'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [4;36;1mSQL (0.000187)[0m   [0;1mSELECT count(*) AS count_all FROM pdfs [0m
+  [4;35;1mPdf Load (0.000199)[0m   [0mSELECT * FROM pdfs ORDER BY pdfdate DESC LIMIT 10 OFFSET 0[0m
+Rendering  within layouts/application
+Rendering pdfs/index
+Rendered pdfs/_search (0.00167)
+  [4;36;1mSQL (0.000863)[0m   [0;1m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = 'categories'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [4;35;1mCategory Load (0.000220)[0m   [0mSELECT * FROM categories WHERE (categories."id" = 2) [0m
+  [4;36;1mSQL (0.000844)[0m   [0;1m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = 'clients'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [4;35;1mClient Load (0.000157)[0m   [0mSELECT * FROM clients WHERE (clients."id" = 2) [0m
+  [4;36;1mCategory Load (0.000272)[0m   [0;1mSELECT * FROM categories WHERE (categories."id" = 1) [0m
+  [4;35;1mClient Load (0.000136)[0m   [0mSELECT * FROM clients WHERE (clients."id" = 1) [0m
+  [4;36;1mCategory Load (0.000175)[0m   [0;1mSELECT * FROM categories WHERE (categories."id" = 1) [0m
+  [4;35;1mClient Load (0.000240)[0m   [0mSELECT * FROM clients WHERE (clients."id" = 1) [0m
+Completed in 0.03093 (32 reqs/sec) | Rendering: 0.02045 (66%) | DB: 0.03826 (123%) | 200 OK [http://localhost/pdfs]
+
+
+Processing PdfsController#edit (for 127.0.0.1 at 2007-12-05 11:46:52) [GET]
+  Session ID: 4bc464232e3fe571c9c88be54be86025
+  Parameters: {"action"=>"edit", "id"=>"3", "controller"=>"pdfs"}
+  [4;36;1mSQL (0.000903)[0m   [0;1m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = 'pdfs'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [4;35;1mPdf Load (0.000181)[0m   [0mSELECT * FROM pdfs WHERE (pdfs."id" = 3) [0m
+Rendering  within layouts/application
+Rendering pdfs/edit
+  [4;36;1mClient Load (0.000381)[0m   [0;1mSELECT * FROM clients [0m
+  [4;35;1mSQL (0.000870)[0m   [0m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = 'clients'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [4;36;1mCategory Load (0.000800)[0m   [0;1mSELECT * FROM categories [0m
+  [4;35;1mSQL (0.000695)[0m   [0m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = 'categories'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+Rendered pdfs/_form (0.07705)
+Completed in 0.08853 (11 reqs/sec) | Rendering: 0.07902 (89%) | DB: 0.00383 (4%) | 200 OK [http://localhost/pdfs/edit/3]
+
+
+Processing PdfsController#update (for 127.0.0.1 at 2007-12-05 11:47:01) [POST]
+  Session ID: 4bc464232e3fe571c9c88be54be86025
+  Parameters: {"category"=>"2", "commit"=>"Edit", "client"=>"1", "action"=>"update", "id"=>"3", "controller"=>"pdfs", "pdf"=>{"pdfdate(3i)"=>"5", "pdfname"=>"test", "filename"=>"2007125-test.pdf", "pdfnote"=>"", "pdfdate(1i)"=>"2007", "pdfdate(2i)"=>"12"}}
+  [4;36;1mSQL (0.000924)[0m   [0;1m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = 'pdfs'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [4;35;1mPdf Load (0.000181)[0m   [0mSELECT * FROM pdfs WHERE (pdfs."id" = 3) [0m
+  [4;36;1mSQL (0.001612)[0m   [0;1m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = 'categories'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [4;35;1mCategory Load (0.000258)[0m   [0mSELECT * FROM categories WHERE (categories."id" = 2) [0m
+  [4;36;1mSQL (0.000952)[0m   [0;1m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = 'clients'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [4;35;1mClient Load (0.000265)[0m   [0mSELECT * FROM clients WHERE (clients."id" = 1) [0m
+  [4;36;1mSQL (0.000133)[0m   [0;1mBEGIN[0m
+  [4;35;1mPdf Load (0.000555)[0m   [0mSELECT * FROM pdfs WHERE (pdfs.pdfname = 'test' AND pdfs.pdfdate = '2007-12-05' AND pdfs.category_id = 2 AND pdfs.client_id = 1 AND pdfs.id <> 3) LIMIT 1[0m
+  [4;36;1mPdf Update (0.000510)[0m   [0;1mUPDATE pdfs SET "pdfnote" = '', "pdfname" = 'test', "category_id" = 2, "pdfdate" = '2007-12-05', "filename" = '2007125-test.pdf', "client_id" = 1 WHERE "id" = 3[0m
+  [4;35;1mSQL (0.000763)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/pdfs/show/3
+
+
+Errno::ENOENT (No such file or directory - /livedata/pdfcat_test_clt/digitech/bas/2007125-test.pdf or /livedata/pdfcat_test_clt/digitech/bas/2007125-test.pdf):
+    /storage/livedata/programming/rails/pdfcat/app/models/pdf.rb:59:in `rename'
+    /storage/livedata/programming/rails/pdfcat/app/models/pdf.rb:59:in `move_file'
+    /storage/livedata/programming/rails/pdfcat/app/controllers/pdfs_controller.rb:77:in `update'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/base.rb:1101:in `send'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/base.rb:1101:in `perform_action_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/filters.rb:696:in `call_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/filters.rb:688:in `perform_action_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/benchmarking.rb:66:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/benchmarking.rb:66:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/rescue.rb:83:in `perform_action'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/base.rb:435:in `send'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/base.rb:435:in `process_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/filters.rb:684:in `process_without_session_management_support'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/session_management.rb:114:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/base.rb:334:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.2.6/lib/dispatcher.rb:41:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:78:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:76:in `synchronize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:76:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:618:in `process_client'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:617:in `each'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:617:in `process_client'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `initialize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `new'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `initialize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `new'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:271:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:270:in `each'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:270:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/bin/mongrel_rails:127:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/command.rb:211:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/bin/mongrel_rails:243
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.4.4/lib/active_support/dependencies.rb:488:in `load'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.4.4/lib/active_support/dependencies.rb:488:in `load'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.4.4/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.4.4/lib/active_support/dependencies.rb:488:in `load'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.2.6/lib/commands/servers/mongrel.rb:60
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.4.4/lib/active_support/dependencies.rb:495:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.4.4/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.4.4/lib/active_support/dependencies.rb:495:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.2.6/lib/commands/server.rb:39
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    script/server:3
+
+
+Rendering /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/templates/rescues/layout.rhtml (500 Internal Error)
+
+
+Processing PdfsController#show (for 127.0.0.1 at 2007-12-05 11:52:16) [GET]
+  Session ID: 4bc464232e3fe571c9c88be54be86025
+  Parameters: {"action"=>"show", "id"=>"3", "controller"=>"pdfs"}
+  [4;36;1mSQL (0.001022)[0m   [0;1m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = 'pdfs'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [4;35;1mPdf Load (0.000193)[0m   [0mSELECT * FROM pdfs WHERE (pdfs."id" = 3) [0m
+Rendering  within layouts/application
+Rendering pdfs/show
+Completed in 0.01202 (83 reqs/sec) | Rendering: 0.00510 (42%) | DB: 0.00737 (61%) | 200 OK [http://localhost/pdfs/show/3]
+
+
+Processing PdfsController#index (for 127.0.0.1 at 2007-12-05 11:52:22) [GET]
+  Session ID: 4bc464232e3fe571c9c88be54be86025
+  Parameters: {"action"=>"index", "controller"=>"pdfs"}
+DEPRECATION WARNING: paginate is deprecated and will be removed from Rails 2.0 (Pagination is moving to a plugin in Rails 2.0: script/plugin install svn://errtheblog.com/svn/plugins/classic_pagination)  See http://www.rubyonrails.org/deprecation for details. (called from index at /storage/livedata/programming/rails/pdfcat/app/controllers/pdfs_controller.rb:9)
+  [4;36;1mSQL (0.000899)[0m   [0;1m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = 'pdfs'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [4;35;1mSQL (0.000168)[0m   [0mSELECT count(*) AS count_all FROM pdfs [0m
+  [4;36;1mPdf Load (0.000198)[0m   [0;1mSELECT * FROM pdfs ORDER BY pdfdate DESC LIMIT 10 OFFSET 0[0m
+Rendering  within layouts/application
+Rendering pdfs/index
+Rendered pdfs/_search (0.00154)
+  [4;35;1mSQL (0.001131)[0m   [0m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = 'categories'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [4;36;1mCategory Load (0.000197)[0m   [0;1mSELECT * FROM categories WHERE (categories."id" = 2) [0m
+  [4;35;1mSQL (0.000962)[0m   [0m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = 'clients'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [4;36;1mClient Load (0.000177)[0m   [0;1mSELECT * FROM clients WHERE (clients."id" = 1) [0m
+  [4;35;1mCategory Load (0.000262)[0m   [0mSELECT * FROM categories WHERE (categories."id" = 1) [0m
+  [4;36;1mClient Load (0.000137)[0m   [0;1mSELECT * FROM clients WHERE (clients."id" = 1) [0m
+  [4;35;1mCategory Load (0.000185)[0m   [0mSELECT * FROM categories WHERE (categories."id" = 1) [0m
+  [4;36;1mClient Load (0.000133)[0m   [0;1mSELECT * FROM clients WHERE (clients."id" = 1) [0m
+Completed in 0.03104 (32 reqs/sec) | Rendering: 0.02036 (65%) | DB: 0.00445 (14%) | 200 OK [http://localhost/pdfs]
+
+
+Processing PdfsController#index (for 127.0.0.1 at 2007-12-05 11:52:28) [GET]
+  Session ID: 4bc464232e3fe571c9c88be54be86025
+  Parameters: {"action"=>"index", "controller"=>"pdfs"}
+DEPRECATION WARNING: paginate is deprecated and will be removed from Rails 2.0 (Pagination is moving to a plugin in Rails 2.0: script/plugin install svn://errtheblog.com/svn/plugins/classic_pagination)  See http://www.rubyonrails.org/deprecation for details. (called from index at /storage/livedata/programming/rails/pdfcat/app/controllers/pdfs_controller.rb:9)
+  [4;35;1mSQL (0.001860)[0m   [0m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = 'pdfs'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [4;36;1mSQL (0.000259)[0m   [0;1mSELECT count(*) AS count_all FROM pdfs [0m
+  [4;35;1mPdf Load (0.000207)[0m   [0mSELECT * FROM pdfs ORDER BY pdfdate DESC LIMIT 10 OFFSET 0[0m
+Rendering  within layouts/application
+Rendering pdfs/index
+Rendered pdfs/_search (0.00165)
+  [4;36;1mSQL (0.000870)[0m   [0;1m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = 'categories'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [4;35;1mCategory Load (0.000162)[0m   [0mSELECT * FROM categories WHERE (categories."id" = 2) [0m
+  [4;36;1mSQL (0.000847)[0m   [0;1m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = 'clients'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [4;35;1mClient Load (0.000158)[0m   [0mSELECT * FROM clients WHERE (clients."id" = 1) [0m
+  [4;36;1mCategory Load (0.000370)[0m   [0;1mSELECT * FROM categories WHERE (categories."id" = 1) [0m
+  [4;35;1mClient Load (0.000148)[0m   [0mSELECT * FROM clients WHERE (clients."id" = 1) [0m
+  [4;36;1mCategory Load (0.000204)[0m   [0;1mSELECT * FROM categories WHERE (categories."id" = 1) [0m
+  [4;35;1mClient Load (0.000136)[0m   [0mSELECT * FROM clients WHERE (clients."id" = 1) [0m
+Completed in 0.03197 (31 reqs/sec) | Rendering: 0.02064 (64%) | DB: 0.00522 (16%) | 200 OK [http://localhost/pdfs]
+
+
+Processing PdfsController#index (for 127.0.0.1 at 2007-12-05 11:53:10) [GET]
+  Session ID: 4bc464232e3fe571c9c88be54be86025
+  Parameters: {"action"=>"index", "controller"=>"pdfs"}
+DEPRECATION WARNING: paginate is deprecated and will be removed from Rails 2.0 (Pagination is moving to a plugin in Rails 2.0: script/plugin install svn://errtheblog.com/svn/plugins/classic_pagination)  See http://www.rubyonrails.org/deprecation for details. (called from index at /storage/livedata/programming/rails/pdfcat/app/controllers/pdfs_controller.rb:9)
+  [4;36;1mSQL (0.001259)[0m   [0;1m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = 'pdfs'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [4;35;1mSQL (0.000378)[0m   [0mSELECT count(*) AS count_all FROM pdfs [0m
+  [4;36;1mPdf Load (0.000369)[0m   [0;1mSELECT * FROM pdfs ORDER BY pdfdate DESC LIMIT 10 OFFSET 0[0m
+Rendering  within layouts/application
+Rendering pdfs/index
+Rendered pdfs/_search (0.00154)
+  [4;35;1mSQL (0.001368)[0m   [0m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = 'categories'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [4;36;1mCategory Load (0.000389)[0m   [0;1mSELECT * FROM categories WHERE (categories."id" = 2) [0m
+  [4;35;1mSQL (0.001210)[0m   [0m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = 'clients'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [4;36;1mClient Load (0.000376)[0m   [0;1mSELECT * FROM clients WHERE (clients."id" = 1) [0m
+  [4;35;1mCategory Load (0.000489)[0m   [0mSELECT * FROM categories WHERE (categories."id" = 1) [0m
+  [4;36;1mClient Load (0.000340)[0m   [0;1mSELECT * FROM clients WHERE (clients."id" = 1) [0m
+  [4;35;1mCategory Load (0.000934)[0m   [0mSELECT * FROM categories WHERE (categories."id" = 1) [0m
+  [4;36;1mClient Load (0.000620)[0m   [0;1mSELECT * FROM clients WHERE (clients."id" = 1) [0m
+Completed in 0.03915 (25 reqs/sec) | Rendering: 0.02532 (64%) | DB: 0.00773 (19%) | 200 OK [http://localhost/pdfs]
+
+
+Processing PdfsController#attachment (for 127.0.0.1 at 2007-12-05 11:53:16) [GET]
+  Session ID: 4bc464232e3fe571c9c88be54be86025
+  Parameters: {"action"=>"attachment", "id"=>"3", "controller"=>"pdfs"}
+  [4;35;1mSQL (0.001043)[0m   [0m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = 'pdfs'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [4;36;1mPdf Load (0.000198)[0m   [0;1mSELECT * FROM pdfs WHERE (pdfs."id" = 3) [0m
+  [4;35;1mSQL (0.000835)[0m   [0m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = 'clients'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [4;36;1mClient Load (0.000157)[0m   [0;1mSELECT * FROM clients WHERE (clients."id" = 1) [0m
+  [4;35;1mSQL (0.000834)[0m   [0m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = 'categories'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [4;36;1mCategory Load (0.000155)[0m   [0;1mSELECT * FROM categories WHERE (categories."id" = 2) [0m
+Completed in 0.01931 (51 reqs/sec) | Rendering: 0.00006 (0%) | DB: 0.00322 (16%) | 200 OK [http://localhost/pdfs/attachment/3]
+Streaming file /livedata/pdfcat_test_clt/digitech/bas/2007125-test.pdf
+
+
+Processing PdfsController#edit (for 127.0.0.1 at 2007-12-05 11:53:27) [GET]
+  Session ID: 4bc464232e3fe571c9c88be54be86025
+  Parameters: {"action"=>"edit", "id"=>"3", "controller"=>"pdfs"}
+  [4;35;1mSQL (0.001019)[0m   [0m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = 'pdfs'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [4;36;1mPdf Load (0.000192)[0m   [0;1mSELECT * FROM pdfs WHERE (pdfs."id" = 3) [0m
+Rendering  within layouts/application
+Rendering pdfs/edit
+  [4;35;1mClient Load (0.000383)[0m   [0mSELECT * FROM clients [0m
+  [4;36;1mSQL (0.000677)[0m   [0;1m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = 'clients'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [4;35;1mCategory Load (0.000293)[0m   [0mSELECT * FROM categories [0m
+  [4;36;1mSQL (0.000670)[0m   [0;1m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = 'categories'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+Rendered pdfs/_form (0.01955)
+Completed in 0.03148 (31 reqs/sec) | Rendering: 0.02216 (70%) | DB: 0.00323 (10%) | 200 OK [http://localhost/pdfs/edit/3]
+
+
+Processing PdfsController#update (for 127.0.0.1 at 2007-12-05 11:53:33) [POST]
+  Session ID: 4bc464232e3fe571c9c88be54be86025
+  Parameters: {"category"=>"2", "commit"=>"Edit", "client"=>"1", "action"=>"update", "id"=>"3", "controller"=>"pdfs", "pdf"=>{"pdfdate(3i)"=>"5", "pdfname"=>"test2", "filename"=>"2007125-test.pdf", "pdfnote"=>"", "pdfdate(1i)"=>"2007", "pdfdate(2i)"=>"12"}}
+  [4;35;1mSQL (0.000915)[0m   [0m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = 'pdfs'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [4;36;1mPdf Load (0.000181)[0m   [0;1mSELECT * FROM pdfs WHERE (pdfs."id" = 3) [0m
+  [4;35;1mSQL (0.000843)[0m   [0m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = 'categories'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [4;36;1mCategory Load (0.000329)[0m   [0;1mSELECT * FROM categories WHERE (categories."id" = 2) [0m
+  [4;35;1mSQL (0.000867)[0m   [0m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = 'clients'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [4;36;1mClient Load (0.000158)[0m   [0;1mSELECT * FROM clients WHERE (clients."id" = 1) [0m
+  [4;35;1mSQL (0.000182)[0m   [0mBEGIN[0m
+  [4;36;1mPdf Load (0.000404)[0m   [0;1mSELECT * FROM pdfs WHERE (pdfs.pdfname = 'test2' AND pdfs.pdfdate = '2007-12-05' AND pdfs.category_id = 2 AND pdfs.client_id = 1 AND pdfs.id <> 3) LIMIT 1[0m
+  [4;35;1mPdf Update (0.000382)[0m   [0mUPDATE pdfs SET "pdfnote" = '', "pdfname" = 'test2', "category_id" = 2, "pdfdate" = '2007-12-05', "filename" = '2007125-test.pdf', "client_id" = 1 WHERE "id" = 3[0m
+  [4;36;1mSQL (0.000541)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/pdfs/show/3
+  [4;35;1mSQL (0.006984)[0m   [0mBEGIN[0m
+  [4;36;1mPdf Update (0.000536)[0m   [0;1mUPDATE pdfs SET "pdfnote" = '', "pdfname" = 'test2', "category_id" = 2, "pdfdate" = '2007-12-05', "filename" = '2007125-test2.pdf', "client_id" = 1 WHERE "id" = 3[0m
+  [4;35;1mSQL (0.000603)[0m   [0mCOMMIT[0m
+Completed in 0.05373 (18 reqs/sec) | DB: 0.01293 (24%) | 302 Found [http://localhost/pdfs/update/3]
+
+
+Processing PdfsController#show (for 127.0.0.1 at 2007-12-05 11:53:33) [GET]
+  Session ID: 4bc464232e3fe571c9c88be54be86025
+  Parameters: {"action"=>"show", "id"=>"3", "controller"=>"pdfs"}
+  [4;36;1mSQL (0.000898)[0m   [0;1m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = 'pdfs'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [4;35;1mPdf Load (0.000275)[0m   [0mSELECT * FROM pdfs WHERE (pdfs."id" = 3) [0m
+Rendering  within layouts/application
+Rendering pdfs/show
+Completed in 0.01243 (80 reqs/sec) | Rendering: 0.00505 (40%) | DB: 0.00117 (9%) | 200 OK [http://localhost/pdfs/show/3]
+
+
+Processing PdfsController#edit (for 127.0.0.1 at 2007-12-05 11:53:48) [GET]
+  Session ID: 4bc464232e3fe571c9c88be54be86025
+  Parameters: {"action"=>"edit", "id"=>"3", "controller"=>"pdfs"}
+  [4;36;1mSQL (0.000925)[0m   [0;1m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = 'pdfs'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [4;35;1mPdf Load (0.000180)[0m   [0mSELECT * FROM pdfs WHERE (pdfs."id" = 3) [0m
+Rendering  within layouts/application
+Rendering pdfs/edit
+  [4;36;1mClient Load (0.000365)[0m   [0;1mSELECT * FROM clients [0m
+  [4;35;1mSQL (0.000683)[0m   [0m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = 'clients'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [4;36;1mCategory Load (0.000465)[0m   [0;1mSELECT * FROM categories [0m
+  [4;35;1mSQL (0.000871)[0m   [0m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = 'categories'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+Rendered pdfs/_form (0.07523)
+Completed in 0.08678 (11 reqs/sec) | Rendering: 0.07763 (89%) | DB: 0.00349 (4%) | 200 OK [http://localhost/pdfs/edit/3]
+
+
+Processing PdfsController#update (for 127.0.0.1 at 2007-12-05 11:53:58) [POST]
+  Session ID: 4bc464232e3fe571c9c88be54be86025
+  Parameters: {"category"=>"2", "commit"=>"Edit", "client"=>"2", "action"=>"update", "id"=>"3", "controller"=>"pdfs", "pdf"=>{"pdfdate(3i)"=>"5", "pdfname"=>"test2", "filename"=>"2007125-test2.pdf", "pdfnote"=>"", "pdfdate(1i)"=>"2007", "pdfdate(2i)"=>"12"}}
+  [4;36;1mSQL (0.001069)[0m   [0;1m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = 'pdfs'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [4;35;1mPdf Load (0.000198)[0m   [0mSELECT * FROM pdfs WHERE (pdfs."id" = 3) [0m
+  [4;36;1mSQL (0.000836)[0m   [0;1m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = 'categories'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [4;35;1mCategory Load (0.000158)[0m   [0mSELECT * FROM categories WHERE (categories."id" = 2) [0m
+  [4;36;1mSQL (0.000840)[0m   [0;1m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = 'clients'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [4;35;1mClient Load (0.000272)[0m   [0mSELECT * FROM clients WHERE (clients."id" = 2) [0m
+  [4;36;1mSQL (0.000132)[0m   [0;1mBEGIN[0m
+  [4;35;1mPdf Load (0.000418)[0m   [0mSELECT * FROM pdfs WHERE (pdfs.pdfname = 'test2' AND pdfs.pdfdate = '2007-12-05' AND pdfs.category_id = 2 AND pdfs.client_id = 2 AND pdfs.id <> 3) LIMIT 1[0m
+  [4;36;1mPdf Update (0.000252)[0m   [0;1mUPDATE pdfs SET "pdfnote" = '', "pdfname" = 'test2', "category_id" = 2, "pdfdate" = '2007-12-05', "filename" = '2007125-test2.pdf', "client_id" = 2 WHERE "id" = 3[0m
+  [4;35;1mSQL (0.000541)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/pdfs/show/3
+
+
+Errno::ENOENT (No such file or directory - /livedata/pdfcat_test_clt/tramontana/bas/2007125-test2.pdf or /livedata/pdfcat_test_clt/tramontana/bas/2007125-test2.pdf):
+    /storage/livedata/programming/rails/pdfcat/app/models/pdf.rb:59:in `rename'
+    /storage/livedata/programming/rails/pdfcat/app/models/pdf.rb:59:in `move_file'
+    /storage/livedata/programming/rails/pdfcat/app/controllers/pdfs_controller.rb:77:in `update'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/base.rb:1101:in `send'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/base.rb:1101:in `perform_action_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/filters.rb:696:in `call_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/filters.rb:688:in `perform_action_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/benchmarking.rb:66:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/benchmarking.rb:66:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/rescue.rb:83:in `perform_action'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/base.rb:435:in `send'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/base.rb:435:in `process_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/filters.rb:684:in `process_without_session_management_support'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/session_management.rb:114:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/base.rb:334:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.2.6/lib/dispatcher.rb:41:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:78:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:76:in `synchronize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:76:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:618:in `process_client'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:617:in `each'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:617:in `process_client'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `initialize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `new'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `initialize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `new'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:271:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:270:in `each'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:270:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/bin/mongrel_rails:127:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/command.rb:211:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/bin/mongrel_rails:243
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.4.4/lib/active_support/dependencies.rb:488:in `load'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.4.4/lib/active_support/dependencies.rb:488:in `load'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.4.4/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.4.4/lib/active_support/dependencies.rb:488:in `load'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.2.6/lib/commands/servers/mongrel.rb:60
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.4.4/lib/active_support/dependencies.rb:495:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.4.4/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.4.4/lib/active_support/dependencies.rb:495:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.2.6/lib/commands/server.rb:39
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    script/server:3
+
+
+Rendering /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/templates/rescues/layout.rhtml (500 Internal Error)
+
+
+Processing PdfsController#index (for 127.0.0.1 at 2007-12-05 11:55:07) [GET]
+  Session ID: 4bc464232e3fe571c9c88be54be86025
+  Parameters: {"action"=>"index", "controller"=>"pdfs"}
+DEPRECATION WARNING: paginate is deprecated and will be removed from Rails 2.0 (Pagination is moving to a plugin in Rails 2.0: script/plugin install svn://errtheblog.com/svn/plugins/classic_pagination)  See http://www.rubyonrails.org/deprecation for details. (called from index at /storage/livedata/programming/rails/pdfcat/app/controllers/pdfs_controller.rb:9)
+  [4;36;1mSQL (0.000903)[0m   [0;1m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = 'pdfs'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [4;35;1mSQL (0.000172)[0m   [0mSELECT count(*) AS count_all FROM pdfs [0m
+  [4;36;1mPdf Load (0.000198)[0m   [0;1mSELECT * FROM pdfs ORDER BY pdfdate DESC LIMIT 10 OFFSET 0[0m
+Rendering  within layouts/application
+Rendering pdfs/index
+Rendered pdfs/_search (0.00153)
+  [4;35;1mSQL (0.000991)[0m   [0m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = 'categories'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [4;36;1mCategory Load (0.000182)[0m   [0;1mSELECT * FROM categories WHERE (categories."id" = 2) [0m
+  [4;35;1mSQL (0.000916)[0m   [0m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = 'clients'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [4;36;1mClient Load (0.000165)[0m   [0;1mSELECT * FROM clients WHERE (clients."id" = 2) [0m
+  [4;35;1mCategory Load (0.000255)[0m   [0mSELECT * FROM categories WHERE (categories."id" = 1) [0m
+  [4;36;1mClient Load (0.000136)[0m   [0;1mSELECT * FROM clients WHERE (clients."id" = 1) [0m
+  [4;35;1mCategory Load (0.000179)[0m   [0mSELECT * FROM categories WHERE (categories."id" = 1) [0m
+  [4;36;1mClient Load (0.000134)[0m   [0;1mSELECT * FROM clients WHERE (clients."id" = 1) [0m
+Completed in 0.03028 (33 reqs/sec) | Rendering: 0.02000 (66%) | DB: 0.00895 (29%) | 200 OK [http://localhost/pdfs]
+
+
+Processing PdfsController#index (for 127.0.0.1 at 2007-12-05 12:00:14) [GET]
+  Session ID: a25b7ad31ed1781f7374be36e1f0dd2e
+  Parameters: {"action"=>"index", "controller"=>"pdfs"}
+DEPRECATION WARNING: paginate is deprecated and will be removed from Rails 2.0 (Pagination is moving to a plugin in Rails 2.0: script/plugin install svn://errtheblog.com/svn/plugins/classic_pagination)  See http://www.rubyonrails.org/deprecation for details. (called from index at /storage/livedata/programming/rails/pdfcat/app/controllers/pdfs_controller.rb:9)
+  [4;35;1mSQL (0.001131)[0m   [0m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = 'pdfs'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [4;36;1mSQL (0.003283)[0m   [0;1mSELECT count(*) AS count_all FROM pdfs [0m
+  [4;35;1mPdf Load (0.005859)[0m   [0mSELECT * FROM pdfs ORDER BY pdfdate DESC LIMIT 10 OFFSET 0[0m
+Rendering  within layouts/application
+Rendering pdfs/index
+Rendered pdfs/_search (0.00155)
+  [4;36;1mSQL (0.001200)[0m   [0;1m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = 'categories'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [4;35;1mCategory Load (0.001492)[0m   [0mSELECT * FROM categories WHERE (categories."id" = 2) [0m
+  [4;36;1mSQL (0.001238)[0m   [0;1m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = 'clients'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [4;35;1mClient Load (0.000346)[0m   [0mSELECT * FROM clients WHERE (clients."id" = 2) [0m
+  [4;36;1mCategory Load (0.000489)[0m   [0;1mSELECT * FROM categories WHERE (categories."id" = 1) [0m
+  [4;35;1mClient Load (0.000622)[0m   [0mSELECT * FROM clients WHERE (clients."id" = 1) [0m
+  [4;36;1mCategory Load (0.000622)[0m   [0;1mSELECT * FROM categories WHERE (categories."id" = 1) [0m
+  [4;35;1mClient Load (0.000366)[0m   [0mSELECT * FROM clients WHERE (clients."id" = 1) [0m
+Completed in 0.11568 (8 reqs/sec) | Rendering: 0.09291 (80%) | DB: 0.01665 (14%) | 200 OK [http://localhost/pdfs]
+
+
+Processing ClientsController#index (for 127.0.0.1 at 2007-12-05 12:00:17) [GET]
+  Session ID: a25b7ad31ed1781f7374be36e1f0dd2e
+  Parameters: {"action"=>"index", "controller"=>"clients"}
+DEPRECATION WARNING: paginate is deprecated and will be removed from Rails 2.0 (Pagination is moving to a plugin in Rails 2.0: script/plugin install svn://errtheblog.com/svn/plugins/classic_pagination)  See http://www.rubyonrails.org/deprecation for details. (called from index at /storage/livedata/programming/rails/pdfcat/app/controllers/clients_controller.rb:8)
+  [4;36;1mSQL (0.001087)[0m   [0;1m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = 'clients'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [4;35;1mSQL (0.000260)[0m   [0mSELECT count(*) AS count_all FROM clients [0m
+  [4;36;1mClient Load (0.000336)[0m   [0;1mSELECT * FROM clients ORDER BY upper(name) LIMIT 10 OFFSET 0[0m
+Rendering  within layouts/application
+Rendering clients/index
+Completed in 0.01343 (74 reqs/sec) | Rendering: 0.00575 (42%) | DB: 0.00168 (12%) | 200 OK [http://localhost/clients]
+
+
+Processing CategoriesController#index (for 127.0.0.1 at 2007-12-05 12:00:18) [GET]
+  Session ID: a25b7ad31ed1781f7374be36e1f0dd2e
+  Parameters: {"action"=>"index", "controller"=>"categories"}
+DEPRECATION WARNING: paginate is deprecated and will be removed from Rails 2.0 (Pagination is moving to a plugin in Rails 2.0: script/plugin install svn://errtheblog.com/svn/plugins/classic_pagination)  See http://www.rubyonrails.org/deprecation for details. (called from index at /storage/livedata/programming/rails/pdfcat/app/controllers/categories_controller.rb:8)
+  [4;35;1mSQL (0.001605)[0m   [0m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = 'categories'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [4;36;1mSQL (0.000347)[0m   [0;1mSELECT count(*) AS count_all FROM categories [0m
+  [4;35;1mCategory Load (0.002259)[0m   [0mSELECT * FROM categories ORDER BY upper(name) LIMIT 10 OFFSET 0[0m
+Rendering  within layouts/application
+Rendering categories/index
+Completed in 0.01796 (55 reqs/sec) | Rendering: 0.00708 (39%) | DB: 0.00421 (23%) | 200 OK [http://localhost/categories]
+
+
+Processing PdfsController#index (for 127.0.0.1 at 2007-12-05 12:00:19) [GET]
+  Session ID: a25b7ad31ed1781f7374be36e1f0dd2e
+  Parameters: {"action"=>"index", "controller"=>"pdfs"}
+DEPRECATION WARNING: paginate is deprecated and will be removed from Rails 2.0 (Pagination is moving to a plugin in Rails 2.0: script/plugin install svn://errtheblog.com/svn/plugins/classic_pagination)  See http://www.rubyonrails.org/deprecation for details. (called from index at /storage/livedata/programming/rails/pdfcat/app/controllers/pdfs_controller.rb:9)
+  [4;36;1mSQL (0.000928)[0m   [0;1m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = 'pdfs'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [4;35;1mSQL (0.000169)[0m   [0mSELECT count(*) AS count_all FROM pdfs [0m
+  [4;36;1mPdf Load (0.000197)[0m   [0;1mSELECT * FROM pdfs ORDER BY pdfdate DESC LIMIT 10 OFFSET 0[0m
+Rendering  within layouts/application
+Rendering pdfs/index
+Rendered pdfs/_search (0.00163)
+  [4;35;1mSQL (0.001194)[0m   [0m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = 'categories'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [4;36;1mCategory Load (0.000186)[0m   [0;1mSELECT * FROM categories WHERE (categories."id" = 2) [0m
+  [4;35;1mSQL (0.000876)[0m   [0m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = 'clients'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [4;36;1mClient Load (0.000295)[0m   [0;1mSELECT * FROM clients WHERE (clients."id" = 2) [0m
+  [4;35;1mCategory Load (0.000272)[0m   [0mSELECT * FROM categories WHERE (categories."id" = 1) [0m
+  [4;36;1mClient Load (0.000134)[0m   [0;1mSELECT * FROM clients WHERE (clients."id" = 1) [0m
+  [4;35;1mCategory Load (0.000182)[0m   [0mSELECT * FROM categories WHERE (categories."id" = 1) [0m
+  [4;36;1mClient Load (0.000184)[0m   [0;1mSELECT * FROM clients WHERE (clients."id" = 1) [0m
+Completed in 0.03269 (30 reqs/sec) | Rendering: 0.02064 (63%) | DB: 0.00462 (14%) | 200 OK [http://localhost/pdfs]
+
+
+Processing PdfsController#edit (for 127.0.0.1 at 2007-12-05 12:01:20) [GET]
+  Session ID: a25b7ad31ed1781f7374be36e1f0dd2e
+  Parameters: {"action"=>"edit", "id"=>"3", "controller"=>"pdfs"}
+  [4;35;1mSQL (0.001147)[0m   [0m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = 'pdfs'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [4;36;1mPdf Load (0.000290)[0m   [0;1mSELECT * FROM pdfs WHERE (pdfs."id" = 3) [0m
+Rendering  within layouts/application
+Rendering pdfs/edit
+  [4;35;1mClient Load (0.000346)[0m   [0mSELECT * FROM clients [0m
+  [4;36;1mSQL (0.000853)[0m   [0;1m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = 'clients'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [4;35;1mCategory Load (0.004238)[0m   [0mSELECT * FROM categories [0m
+  [4;36;1mSQL (0.000885)[0m   [0;1m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = 'categories'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+Rendered pdfs/_form (0.02601)
+Completed in 0.09627 (10 reqs/sec) | Rendering: 0.08219 (85%) | DB: 0.00776 (8%) | 200 OK [http://localhost/pdfs/edit/3]
+
+
+Processing PdfsController#update (for 127.0.0.1 at 2007-12-05 12:01:24) [POST]
+  Session ID: a25b7ad31ed1781f7374be36e1f0dd2e
+  Parameters: {"category"=>"2", "commit"=>"Edit", "client"=>"1", "action"=>"update", "id"=>"3", "controller"=>"pdfs", "pdf"=>{"pdfdate(3i)"=>"5", "pdfname"=>"test2", "filename"=>"2007125-test2.pdf", "pdfnote"=>"", "pdfdate(1i)"=>"2007", "pdfdate(2i)"=>"12"}}
+  [4;35;1mSQL (0.000922)[0m   [0m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = 'pdfs'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [4;36;1mPdf Load (0.000184)[0m   [0;1mSELECT * FROM pdfs WHERE (pdfs."id" = 3) [0m
+  [4;35;1mSQL (0.000832)[0m   [0m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = 'categories'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [4;36;1mCategory Load (0.000155)[0m   [0;1mSELECT * FROM categories WHERE (categories."id" = 2) [0m
+  [4;35;1mSQL (0.000869)[0m   [0m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = 'clients'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [4;36;1mClient Load (0.000154)[0m   [0;1mSELECT * FROM clients WHERE (clients."id" = 1) [0m
+  [4;35;1mSQL (0.000075)[0m   [0mBEGIN[0m
+  [4;36;1mPdf Load (0.000640)[0m   [0;1mSELECT * FROM pdfs WHERE (pdfs.pdfname = 'test2' AND pdfs.pdfdate = '2007-12-05' AND pdfs.category_id = 2 AND pdfs.client_id = 1 AND pdfs.id <> 3) LIMIT 1[0m
+  [4;35;1mPdf Update (0.000546)[0m   [0mUPDATE pdfs SET "pdfnote" = '', "pdfname" = 'test2', "category_id" = 2, "pdfdate" = '2007-12-05', "filename" = '2007125-test2.pdf', "client_id" = 1 WHERE "id" = 3[0m
+  [4;36;1mSQL (0.000673)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/pdfs/show/3
+  [4;35;1mSQL (0.000110)[0m   [0mBEGIN[0m
+  [4;36;1mPdf Update (0.000335)[0m   [0;1mUPDATE pdfs SET "pdfnote" = '', "pdfname" = 'test2', "category_id" = 2, "pdfdate" = '2007-12-05', "filename" = '/livedata/pdfcat_test_clt/digitech/bas/2007125-test2.pdf', "client_id" = 1 WHERE "id" = 3[0m
+  [4;35;1mSQL (0.000520)[0m   [0mCOMMIT[0m
+Completed in 0.02832 (35 reqs/sec) | DB: 0.00601 (21%) | 302 Found [http://localhost/pdfs/update/3]
+
+
+Processing PdfsController#show (for 127.0.0.1 at 2007-12-05 12:01:24) [GET]
+  Session ID: a25b7ad31ed1781f7374be36e1f0dd2e
+  Parameters: {"action"=>"show", "id"=>"3", "controller"=>"pdfs"}
+  [4;36;1mSQL (0.001959)[0m   [0;1m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = 'pdfs'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [4;35;1mPdf Load (0.000368)[0m   [0mSELECT * FROM pdfs WHERE (pdfs."id" = 3) [0m
+Rendering  within layouts/application
+Rendering pdfs/show
+Completed in 0.01540 (64 reqs/sec) | Rendering: 0.00693 (45%) | DB: 0.00233 (15%) | 200 OK [http://localhost/pdfs/show/3]
+
+
+Processing PdfsController#edit (for 127.0.0.1 at 2007-12-05 12:01:53) [GET]
+  Session ID: a25b7ad31ed1781f7374be36e1f0dd2e
+  Parameters: {"action"=>"edit", "id"=>"3", "controller"=>"pdfs"}
+  [4;36;1mSQL (0.001150)[0m   [0;1m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = 'pdfs'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [4;35;1mPdf Load (0.000392)[0m   [0mSELECT * FROM pdfs WHERE (pdfs."id" = 3) [0m
+Rendering  within layouts/application
+Rendering pdfs/edit
+  [4;36;1mClient Load (0.000473)[0m   [0;1mSELECT * FROM clients [0m
+  [4;35;1mSQL (0.000883)[0m   [0m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = 'clients'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [4;36;1mCategory Load (0.002081)[0m   [0;1mSELECT * FROM categories [0m
+  [4;35;1mSQL (0.000983)[0m   [0m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = 'categories'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+Rendered pdfs/_form (0.02110)
+Completed in 0.03488 (28 reqs/sec) | Rendering: 0.02156 (61%) | DB: 0.00596 (17%) | 200 OK [http://localhost/pdfs/edit/3]
+
+
+Processing PdfsController#update (for 127.0.0.1 at 2007-12-05 12:02:08) [POST]
+  Session ID: a25b7ad31ed1781f7374be36e1f0dd2e
+  Parameters: {"category"=>"2", "commit"=>"Edit", "client"=>"2", "action"=>"update", "id"=>"3", "controller"=>"pdfs", "pdf"=>{"pdfdate(3i)"=>"5", "pdfname"=>"test2", "filename"=>"2007125-test2.pdf", "pdfnote"=>"", "pdfdate(1i)"=>"2007", "pdfdate(2i)"=>"12"}}
+  [4;36;1mSQL (0.001108)[0m   [0;1m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = 'pdfs'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [4;35;1mPdf Load (0.000199)[0m   [0mSELECT * FROM pdfs WHERE (pdfs."id" = 3) [0m
+  [4;36;1mSQL (0.000948)[0m   [0;1m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = 'categories'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [4;35;1mCategory Load (0.000214)[0m   [0mSELECT * FROM categories WHERE (categories."id" = 2) [0m
+  [4;36;1mSQL (0.000841)[0m   [0;1m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = 'clients'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [4;35;1mClient Load (0.000155)[0m   [0mSELECT * FROM clients WHERE (clients."id" = 2) [0m
+  [4;36;1mSQL (0.000074)[0m   [0;1mBEGIN[0m
+  [4;35;1mPdf Load (0.000394)[0m   [0mSELECT * FROM pdfs WHERE (pdfs.pdfname = 'test2' AND pdfs.pdfdate = '2007-12-05' AND pdfs.category_id = 2 AND pdfs.client_id = 2 AND pdfs.id <> 3) LIMIT 1[0m
+  [4;36;1mPdf Update (0.000245)[0m   [0;1mUPDATE pdfs SET "pdfnote" = '', "pdfname" = 'test2', "category_id" = 2, "pdfdate" = '2007-12-05', "filename" = '2007125-test2.pdf', "client_id" = 2 WHERE "id" = 3[0m
+  [4;35;1mSQL (0.001091)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/pdfs/show/3
+  [4;36;1mSQL (0.000115)[0m   [0;1mBEGIN[0m
+  [4;35;1mPdf Update (0.000303)[0m   [0mUPDATE pdfs SET "pdfnote" = '', "pdfname" = 'test2', "category_id" = 2, "pdfdate" = '2007-12-05', "filename" = '2007125-test2.pdf', "client_id" = 2 WHERE "id" = 3[0m
+  [4;36;1mSQL (0.000524)[0m   [0;1mCOMMIT[0m
+Completed in 0.02823 (35 reqs/sec) | DB: 0.00621 (22%) | 302 Found [http://localhost/pdfs/update/3]
+
+
+Processing PdfsController#show (for 127.0.0.1 at 2007-12-05 12:02:08) [GET]
+  Session ID: a25b7ad31ed1781f7374be36e1f0dd2e
+  Parameters: {"action"=>"show", "id"=>"3", "controller"=>"pdfs"}
+  [4;35;1mSQL (0.001258)[0m   [0m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = 'pdfs'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [4;36;1mPdf Load (0.000245)[0m   [0;1mSELECT * FROM pdfs WHERE (pdfs."id" = 3) [0m
+Rendering  within layouts/application
+Rendering pdfs/show
+Completed in 0.01397 (71 reqs/sec) | Rendering: 0.00618 (44%) | DB: 0.00150 (10%) | 200 OK [http://localhost/pdfs/show/3]
+
+
+Processing PdfsController#edit (for 127.0.0.1 at 2007-12-05 12:03:13) [GET]
+  Session ID: a25b7ad31ed1781f7374be36e1f0dd2e
+  Parameters: {"action"=>"edit", "id"=>"3", "controller"=>"pdfs"}
+  [4;35;1mSQL (0.001120)[0m   [0m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = 'pdfs'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [4;36;1mPdf Load (0.000279)[0m   [0;1mSELECT * FROM pdfs WHERE (pdfs."id" = 3) [0m
+Rendering  within layouts/application
+Rendering pdfs/edit
+  [4;35;1mClient Load (0.000503)[0m   [0mSELECT * FROM clients [0m
+  [4;36;1mSQL (0.000758)[0m   [0;1m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = 'clients'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [4;35;1mCategory Load (0.000601)[0m   [0mSELECT * FROM categories [0m
+  [4;36;1mSQL (0.000828)[0m   [0;1m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = 'categories'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+Rendered pdfs/_form (0.01942)
+Completed in 0.03405 (29 reqs/sec) | Rendering: 0.02377 (69%) | DB: 0.00409 (12%) | 200 OK [http://localhost/pdfs/edit/3]
+
+
+Processing PdfsController#update (for 127.0.0.1 at 2007-12-05 12:03:17) [POST]
+  Session ID: a25b7ad31ed1781f7374be36e1f0dd2e
+  Parameters: {"category"=>"2", "commit"=>"Edit", "client"=>"1", "action"=>"update", "id"=>"3", "controller"=>"pdfs", "pdf"=>{"pdfdate(3i)"=>"5", "pdfname"=>"test2", "filename"=>"2007125-test2.pdf", "pdfnote"=>"", "pdfdate(1i)"=>"2007", "pdfdate(2i)"=>"12"}}
+  [4;35;1mSQL (0.000966)[0m   [0m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = 'pdfs'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [4;36;1mPdf Load (0.000188)[0m   [0;1mSELECT * FROM pdfs WHERE (pdfs."id" = 3) [0m
+  [4;35;1mSQL (0.000950)[0m   [0m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = 'categories'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [4;36;1mCategory Load (0.000166)[0m   [0;1mSELECT * FROM categories WHERE (categories."id" = 2) [0m
+  [4;35;1mSQL (0.000858)[0m   [0m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = 'clients'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [4;36;1mClient Load (0.000156)[0m   [0;1mSELECT * FROM clients WHERE (clients."id" = 1) [0m
+  [4;35;1mSQL (0.000079)[0m   [0mBEGIN[0m
+  [4;36;1mPdf Load (0.000393)[0m   [0;1mSELECT * FROM pdfs WHERE (pdfs.pdfname = 'test2' AND pdfs.pdfdate = '2007-12-05' AND pdfs.category_id = 2 AND pdfs.client_id = 1 AND pdfs.id <> 3) LIMIT 1[0m
+  [4;35;1mPdf Update (0.000246)[0m   [0mUPDATE pdfs SET "pdfnote" = '', "pdfname" = 'test2', "category_id" = 2, "pdfdate" = '2007-12-05', "filename" = '2007125-test2.pdf', "client_id" = 1 WHERE "id" = 3[0m
+  [4;36;1mSQL (0.000536)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/pdfs/show/3
+  [4;35;1mSQL (0.000095)[0m   [0mBEGIN[0m
+  [4;36;1mPdf Update (0.000296)[0m   [0;1mUPDATE pdfs SET "pdfnote" = '', "pdfname" = 'test2', "category_id" = 2, "pdfdate" = '2007-12-05', "filename" = '/livedata/pdfcat_test_clt/digitech/bas/2007125-test2.pdf', "client_id" = 1 WHERE "id" = 3[0m
+  [4;35;1mSQL (0.000515)[0m   [0mCOMMIT[0m
+Completed in 0.02730 (36 reqs/sec) | DB: 0.00544 (19%) | 302 Found [http://localhost/pdfs/update/3]
+
+
+Processing PdfsController#show (for 127.0.0.1 at 2007-12-05 12:03:18) [GET]
+  Session ID: a25b7ad31ed1781f7374be36e1f0dd2e
+  Parameters: {"action"=>"show", "id"=>"3", "controller"=>"pdfs"}
+  [4;36;1mSQL (0.001115)[0m   [0;1m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = 'pdfs'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [4;35;1mPdf Load (0.000281)[0m   [0mSELECT * FROM pdfs WHERE (pdfs."id" = 3) [0m
+Rendering  within layouts/application
+Rendering pdfs/show
+Completed in 0.01327 (75 reqs/sec) | Rendering: 0.00558 (42%) | DB: 0.00140 (10%) | 200 OK [http://localhost/pdfs/show/3]
+
+
+Processing PdfsController#edit (for 127.0.0.1 at 2007-12-05 12:03:25) [GET]
+  Session ID: a25b7ad31ed1781f7374be36e1f0dd2e
+  Parameters: {"action"=>"edit", "id"=>"3", "controller"=>"pdfs"}
+  [4;36;1mSQL (0.000998)[0m   [0;1m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = 'pdfs'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [4;35;1mPdf Load (0.000365)[0m   [0mSELECT * FROM pdfs WHERE (pdfs."id" = 3) [0m
+Rendering  within layouts/application
+Rendering pdfs/edit
+  [4;36;1mClient Load (0.000365)[0m   [0;1mSELECT * FROM clients [0m
+  [4;35;1mSQL (0.001013)[0m   [0m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = 'clients'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [4;36;1mCategory Load (0.000567)[0m   [0;1mSELECT * FROM categories [0m
+  [4;35;1mSQL (0.001465)[0m   [0m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = 'categories'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+Rendered pdfs/_form (0.02147)
+Completed in 0.09181 (10 reqs/sec) | Rendering: 0.02299 (25%) | DB: 0.00477 (5%) | 200 OK [http://localhost/pdfs/edit/3]
+
+
+Processing PdfsController#update (for 127.0.0.1 at 2007-12-05 12:03:31) [POST]
+  Session ID: a25b7ad31ed1781f7374be36e1f0dd2e
+  Parameters: {"category"=>"2", "commit"=>"Edit", "client"=>"1", "action"=>"update", "id"=>"3", "controller"=>"pdfs", "pdf"=>{"pdfdate(3i)"=>"5", "pdfname"=>"test2", "filename"=>"2007125-test2.pdf", "pdfnote"=>"", "pdfdate(1i)"=>"2007", "pdfdate(2i)"=>"12"}}
+  [4;36;1mSQL (0.001051)[0m   [0;1m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = 'pdfs'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [4;35;1mPdf Load (0.000457)[0m   [0mSELECT * FROM pdfs WHERE (pdfs."id" = 3) [0m
+  [4;36;1mSQL (0.000964)[0m   [0;1m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = 'categories'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [4;35;1mCategory Load (0.000213)[0m   [0mSELECT * FROM categories WHERE (categories."id" = 2) [0m
+  [4;36;1mSQL (0.001116)[0m   [0;1m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = 'clients'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [4;35;1mClient Load (0.000244)[0m   [0mSELECT * FROM clients WHERE (clients."id" = 1) [0m
+  [4;36;1mSQL (0.000080)[0m   [0;1mBEGIN[0m
+  [4;35;1mPdf Load (0.000467)[0m   [0mSELECT * FROM pdfs WHERE (pdfs.pdfname = 'test2' AND pdfs.pdfdate = '2007-12-05' AND pdfs.category_id = 2 AND pdfs.client_id = 1 AND pdfs.id <> 3) LIMIT 1[0m
+  [4;36;1mPdf Update (0.000280)[0m   [0;1mUPDATE pdfs SET "pdfnote" = '', "pdfname" = 'test2', "category_id" = 2, "pdfdate" = '2007-12-05', "filename" = '2007125-test2.pdf', "client_id" = 1 WHERE "id" = 3[0m
+  [4;35;1mSQL (0.011565)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/pdfs/show/3
+  [4;36;1mSQL (0.000181)[0m   [0;1mBEGIN[0m
+  [4;35;1mPdf Update (0.000325)[0m   [0mUPDATE pdfs SET "pdfnote" = '', "pdfname" = 'test2', "category_id" = 2, "pdfdate" = '2007-12-05', "filename" = '/livedata/pdfcat_test_clt/digitech/bas/2007125-test2.pdf', "client_id" = 1 WHERE "id" = 3[0m
+  [4;36;1mSQL (0.000545)[0m   [0;1mCOMMIT[0m
+Completed in 0.04077 (24 reqs/sec) | DB: 0.01749 (42%) | 302 Found [http://localhost/pdfs/update/3]
+
+
+Processing PdfsController#show (for 127.0.0.1 at 2007-12-05 12:03:31) [GET]
+  Session ID: a25b7ad31ed1781f7374be36e1f0dd2e
+  Parameters: {"action"=>"show", "id"=>"3", "controller"=>"pdfs"}
+  [4;35;1mSQL (0.001490)[0m   [0m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = 'pdfs'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [4;36;1mPdf Load (0.000398)[0m   [0;1mSELECT * FROM pdfs WHERE (pdfs."id" = 3) [0m
+Rendering  within layouts/application
+Rendering pdfs/show
+Completed in 0.01448 (69 reqs/sec) | Rendering: 0.00537 (37%) | DB: 0.00189 (13%) | 200 OK [http://localhost/pdfs/show/3]
+
+
+Processing PdfsController#edit (for 127.0.0.1 at 2007-12-05 12:03:52) [GET]
+  Session ID: a25b7ad31ed1781f7374be36e1f0dd2e
+  Parameters: {"action"=>"edit", "id"=>"3", "controller"=>"pdfs"}
+  [4;35;1mSQL (0.001153)[0m   [0m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = 'pdfs'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [4;36;1mPdf Load (0.000302)[0m   [0;1mSELECT * FROM pdfs WHERE (pdfs."id" = 3) [0m
+Rendering  within layouts/application
+Rendering pdfs/edit
+  [4;35;1mClient Load (0.000566)[0m   [0mSELECT * FROM clients [0m
+  [4;36;1mSQL (0.000762)[0m   [0;1m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = 'clients'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [4;35;1mCategory Load (0.002034)[0m   [0mSELECT * FROM categories [0m
+  [4;36;1mSQL (0.001139)[0m   [0;1m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = 'categories'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+Rendered pdfs/_form (0.02327)
+Completed in 0.03569 (28 reqs/sec) | Rendering: 0.02354 (65%) | DB: 0.00596 (16%) | 200 OK [http://localhost/pdfs/edit/3]
+
+
+Processing PdfsController#update (for 127.0.0.1 at 2007-12-05 12:03:57) [POST]
+  Session ID: a25b7ad31ed1781f7374be36e1f0dd2e
+  Parameters: {"category"=>"2", "commit"=>"Edit", "client"=>"1", "action"=>"update", "id"=>"3", "controller"=>"pdfs", "pdf"=>{"pdfdate(3i)"=>"5", "pdfname"=>"test2", "filename"=>"2007125-test2.pdf", "pdfnote"=>"", "pdfdate(1i)"=>"2007", "pdfdate(2i)"=>"12"}}
+  [4;35;1mSQL (0.001562)[0m   [0m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = 'pdfs'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [4;36;1mPdf Load (0.000471)[0m   [0;1mSELECT * FROM pdfs WHERE (pdfs."id" = 3) [0m
+  [4;35;1mSQL (0.001131)[0m   [0m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = 'categories'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [4;36;1mCategory Load (0.000353)[0m   [0;1mSELECT * FROM categories WHERE (categories."id" = 2) [0m
+  [4;35;1mSQL (0.001024)[0m   [0m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = 'clients'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [4;36;1mClient Load (0.000176)[0m   [0;1mSELECT * FROM clients WHERE (clients."id" = 1) [0m
+  [4;35;1mSQL (0.000075)[0m   [0mBEGIN[0m
+  [4;36;1mPdf Load (0.000388)[0m   [0;1mSELECT * FROM pdfs WHERE (pdfs.pdfname = 'test2' AND pdfs.pdfdate = '2007-12-05' AND pdfs.category_id = 2 AND pdfs.client_id = 1 AND pdfs.id <> 3) LIMIT 1[0m
+  [4;35;1mPdf Update (0.000338)[0m   [0mUPDATE pdfs SET "pdfnote" = '', "pdfname" = 'test2', "category_id" = 2, "pdfdate" = '2007-12-05', "filename" = '2007125-test2.pdf', "client_id" = 1 WHERE "id" = 3[0m
+  [4;36;1mSQL (0.000525)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/pdfs/show/3
+  [4;35;1mSQL (0.000092)[0m   [0mBEGIN[0m
+  [4;36;1mPdf Update (0.000449)[0m   [0;1mUPDATE pdfs SET "pdfnote" = '', "pdfname" = 'test2', "category_id" = 2, "pdfdate" = '2007-12-05', "filename" = '2007125-test2.pdf', "client_id" = 1 WHERE "id" = 3[0m
+  [4;35;1mSQL (0.000552)[0m   [0mCOMMIT[0m
+Completed in 0.03209 (31 reqs/sec) | DB: 0.00714 (22%) | 302 Found [http://localhost/pdfs/update/3]
+
+
+Processing PdfsController#show (for 127.0.0.1 at 2007-12-05 12:03:58) [GET]
+  Session ID: a25b7ad31ed1781f7374be36e1f0dd2e
+  Parameters: {"action"=>"show", "id"=>"3", "controller"=>"pdfs"}
+  [4;36;1mSQL (0.004565)[0m   [0;1m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = 'pdfs'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [4;35;1mPdf Load (0.000278)[0m   [0mSELECT * FROM pdfs WHERE (pdfs."id" = 3) [0m
+Rendering  within layouts/application
+Rendering pdfs/show
+Completed in 0.01736 (57 reqs/sec) | Rendering: 0.00573 (32%) | DB: 0.00484 (27%) | 200 OK [http://localhost/pdfs/show/3]
+
+
+Processing PdfsController#edit (for 127.0.0.1 at 2007-12-05 12:04:05) [GET]
+  Session ID: a25b7ad31ed1781f7374be36e1f0dd2e
+  Parameters: {"action"=>"edit", "id"=>"3", "controller"=>"pdfs"}
+  [4;36;1mSQL (0.000974)[0m   [0;1m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = 'pdfs'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [4;35;1mPdf Load (0.000378)[0m   [0mSELECT * FROM pdfs WHERE (pdfs."id" = 3) [0m
+Rendering  within layouts/application
+Rendering pdfs/edit
+  [4;36;1mClient Load (0.000525)[0m   [0;1mSELECT * FROM clients [0m
+  [4;35;1mSQL (0.000937)[0m   [0m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = 'clients'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [4;36;1mCategory Load (0.000522)[0m   [0;1mSELECT * FROM categories [0m
+  [4;35;1mSQL (0.001015)[0m   [0m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = 'categories'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+Rendered pdfs/_form (0.01977)
+Completed in 0.03404 (29 reqs/sec) | Rendering: 0.02322 (68%) | DB: 0.00435 (12%) | 200 OK [http://localhost/pdfs/edit/3]
+
+
+Processing PdfsController#update (for 127.0.0.1 at 2007-12-05 12:04:26) [POST]
+  Session ID: a25b7ad31ed1781f7374be36e1f0dd2e
+  Parameters: {"category"=>"2", "commit"=>"Edit", "client"=>"2", "action"=>"update", "id"=>"3", "controller"=>"pdfs", "pdf"=>{"pdfdate(3i)"=>"5", "pdfname"=>"test2", "filename"=>"2007125-test2.pdf", "pdfnote"=>"", "pdfdate(1i)"=>"2007", "pdfdate(2i)"=>"12"}}
+  [4;36;1mSQL (0.001010)[0m   [0;1m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = 'pdfs'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [4;35;1mPdf Load (0.000195)[0m   [0mSELECT * FROM pdfs WHERE (pdfs."id" = 3) [0m
+  [4;36;1mSQL (0.000831)[0m   [0;1m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = 'categories'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [4;35;1mCategory Load (0.000153)[0m   [0mSELECT * FROM categories WHERE (categories."id" = 2) [0m
+  [4;36;1mSQL (0.000835)[0m   [0;1m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = 'clients'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [4;35;1mClient Load (0.000172)[0m   [0mSELECT * FROM clients WHERE (clients."id" = 2) [0m
+  [4;36;1mSQL (0.000075)[0m   [0;1mBEGIN[0m
+  [4;35;1mPdf Load (0.000472)[0m   [0mSELECT * FROM pdfs WHERE (pdfs.pdfname = 'test2' AND pdfs.pdfdate = '2007-12-05' AND pdfs.category_id = 2 AND pdfs.client_id = 2 AND pdfs.id <> 3) LIMIT 1[0m
+  [4;36;1mPdf Update (0.000258)[0m   [0;1mUPDATE pdfs SET "pdfnote" = '', "pdfname" = 'test2', "category_id" = 2, "pdfdate" = '2007-12-05', "filename" = '2007125-test2.pdf', "client_id" = 2 WHERE "id" = 3[0m
+  [4;35;1mSQL (0.000527)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/pdfs/show/3
+  [4;36;1mSQL (0.000213)[0m   [0;1mBEGIN[0m
+  [4;35;1mPdf Update (0.000304)[0m   [0mUPDATE pdfs SET "pdfnote" = '', "pdfname" = 'test2', "category_id" = 2, "pdfdate" = '2007-12-05', "filename" = '2007125-test2.pdf', "client_id" = 2 WHERE "id" = 3[0m
+  [4;36;1mSQL (0.000517)[0m   [0;1mCOMMIT[0m
+Completed in 0.02735 (36 reqs/sec) | DB: 0.00556 (20%) | 302 Found [http://localhost/pdfs/update/3]
+
+
+Processing PdfsController#show (for 127.0.0.1 at 2007-12-05 12:04:27) [GET]
+  Session ID: a25b7ad31ed1781f7374be36e1f0dd2e
+  Parameters: {"action"=>"show", "id"=>"3", "controller"=>"pdfs"}
+  [4;35;1mSQL (0.001659)[0m   [0m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = 'pdfs'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [4;36;1mPdf Load (0.000516)[0m   [0;1mSELECT * FROM pdfs WHERE (pdfs."id" = 3) [0m
+Rendering  within layouts/application
+Rendering pdfs/show
+Completed in 0.07828 (12 reqs/sec) | Rendering: 0.00571 (7%) | DB: 0.00217 (2%) | 200 OK [http://localhost/pdfs/show/3]
+  [4;36;1mSQL (0.002814)[0m   [0;1m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = 'pdfs'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [4;35;1mPdf Load (0.000619)[0m   [0mSELECT * FROM pdfs WHERE (pdfs."id" = 1) [0m
+  [4;36;1mSQL (0.000966)[0m   [0;1m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = 'categories'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [4;35;1mCategory Load (0.000320)[0m   [0mSELECT * FROM categories WHERE (categories."id" = 1) [0m
+  [4;36;1mSQL (0.000883)[0m   [0;1m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = 'clients'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [4;35;1mClient Load (0.000385)[0m   [0mSELECT * FROM clients WHERE (clients."id" = 1) [0m
+
+
+Processing PdfsController#edit (for 127.0.0.1 at 2007-12-05 12:09:32) [GET]
+  Session ID: a25b7ad31ed1781f7374be36e1f0dd2e
+  Parameters: {"action"=>"edit", "id"=>"3", "controller"=>"pdfs"}
+  [4;35;1mSQL (0.001058)[0m   [0m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = 'pdfs'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [4;36;1mPdf Load (0.000305)[0m   [0;1mSELECT * FROM pdfs WHERE (pdfs."id" = 3) [0m
+Rendering  within layouts/application
+Rendering pdfs/edit
+  [4;35;1mClient Load (0.000448)[0m   [0mSELECT * FROM clients [0m
+  [4;36;1mSQL (0.000899)[0m   [0;1m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = 'clients'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [4;35;1mCategory Load (0.000578)[0m   [0mSELECT * FROM categories [0m
+  [4;36;1mSQL (0.000925)[0m   [0;1m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = 'categories'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+Rendered pdfs/_form (0.01978)
+Completed in 0.03193 (31 reqs/sec) | Rendering: 0.02161 (67%) | DB: 0.00421 (13%) | 200 OK [http://localhost/pdfs/edit/3]
+
+
+Processing PdfsController#update (for 127.0.0.1 at 2007-12-05 12:09:53) [POST]
+  Session ID: a25b7ad31ed1781f7374be36e1f0dd2e
+  Parameters: {"category"=>"1", "commit"=>"Edit", "client"=>"1", "action"=>"update", "id"=>"3", "controller"=>"pdfs", "pdf"=>{"pdfdate(3i)"=>"5", "pdfname"=>"test2", "filename"=>"2007125-test2.pdf", "pdfnote"=>"", "pdfdate(1i)"=>"2007", "pdfdate(2i)"=>"12"}}
+  [4;35;1mSQL (0.002155)[0m   [0m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = 'pdfs'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [4;36;1mPdf Load (0.000420)[0m   [0;1mSELECT * FROM pdfs WHERE (pdfs."id" = 3) [0m
+  [4;35;1mSQL (0.000875)[0m   [0m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = 'categories'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [4;36;1mCategory Load (0.000292)[0m   [0;1mSELECT * FROM categories WHERE (categories."id" = 2) [0m
+  [4;35;1mCategory Load (0.000161)[0m   [0mSELECT * FROM categories WHERE (categories."id" = 1) [0m
+  [4;36;1mSQL (0.001103)[0m   [0;1m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = 'clients'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [4;35;1mClient Load (0.000634)[0m   [0mSELECT * FROM clients WHERE (clients."id" = 1) [0m
+  [4;36;1mSQL (0.000113)[0m   [0;1mBEGIN[0m
+  [4;35;1mPdf Load (0.000539)[0m   [0mSELECT * FROM pdfs WHERE (pdfs.pdfname = 'test2' AND pdfs.pdfdate = '2007-12-05' AND pdfs.category_id = 1 AND pdfs.client_id = 1 AND pdfs.id <> 3) LIMIT 1[0m
+  [4;36;1mPdf Update (0.000294)[0m   [0;1mUPDATE pdfs SET "pdfnote" = '', "pdfname" = 'test2', "category_id" = 1, "pdfdate" = '2007-12-05', "filename" = '2007125-test2.pdf', "client_id" = 1 WHERE "id" = 3[0m
+  [4;35;1mSQL (0.000531)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/pdfs/show/3
+
+
+Errno::ENOENT (No such file or directory - /livedata/pdfcat_test_clt/bas/bas/2007125-test2.pdf or /livedata/pdfcat_test_clt/digitech/test/2007125-test2.pdf):
+    /storage/livedata/programming/rails/pdfcat/app/models/pdf.rb:62:in `rename'
+    /storage/livedata/programming/rails/pdfcat/app/models/pdf.rb:62:in `move_file'
+    /storage/livedata/programming/rails/pdfcat/app/controllers/pdfs_controller.rb:81:in `update'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/base.rb:1101:in `send'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/base.rb:1101:in `perform_action_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/filters.rb:696:in `call_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/filters.rb:688:in `perform_action_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/benchmarking.rb:66:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/benchmarking.rb:66:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/rescue.rb:83:in `perform_action'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/base.rb:435:in `send'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/base.rb:435:in `process_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/filters.rb:684:in `process_without_session_management_support'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/session_management.rb:114:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/base.rb:334:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.2.6/lib/dispatcher.rb:41:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:78:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:76:in `synchronize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:76:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:618:in `process_client'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:617:in `each'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:617:in `process_client'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `initialize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `new'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `initialize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `new'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:271:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:270:in `each'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:270:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/bin/mongrel_rails:127:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/command.rb:211:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/bin/mongrel_rails:243
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.4.4/lib/active_support/dependencies.rb:488:in `load'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.4.4/lib/active_support/dependencies.rb:488:in `load'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.4.4/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.4.4/lib/active_support/dependencies.rb:488:in `load'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.2.6/lib/commands/servers/mongrel.rb:60
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.4.4/lib/active_support/dependencies.rb:495:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.4.4/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.4.4/lib/active_support/dependencies.rb:495:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.2.6/lib/commands/server.rb:39
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    script/server:3
+
+
+Rendering /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/templates/rescues/layout.rhtml (500 Internal Error)
+
+
+Processing PdfsController#index (for 127.0.0.1 at 2007-12-05 12:10:28) [GET]
+  Session ID: a25b7ad31ed1781f7374be36e1f0dd2e
+  Parameters: {"action"=>"index", "controller"=>"pdfs"}
+DEPRECATION WARNING: paginate is deprecated and will be removed from Rails 2.0 (Pagination is moving to a plugin in Rails 2.0: script/plugin install svn://errtheblog.com/svn/plugins/classic_pagination)  See http://www.rubyonrails.org/deprecation for details. (called from index at /storage/livedata/programming/rails/pdfcat/app/controllers/pdfs_controller.rb:9)
+  [4;36;1mSQL (0.001087)[0m   [0;1m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = 'pdfs'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [4;35;1mSQL (0.000267)[0m   [0mSELECT count(*) AS count_all FROM pdfs [0m
+  [4;36;1mPdf Load (0.000411)[0m   [0;1mSELECT * FROM pdfs ORDER BY pdfdate DESC LIMIT 10 OFFSET 0[0m
+Rendering  within layouts/application
+Rendering pdfs/index
+Rendered pdfs/_search (0.00184)
+  [4;35;1mSQL (0.001131)[0m   [0m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = 'categories'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [4;36;1mCategory Load (0.000313)[0m   [0;1mSELECT * FROM categories WHERE (categories."id" = 1) [0m
+  [4;35;1mSQL (0.001036)[0m   [0m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = 'clients'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [4;36;1mClient Load (0.000261)[0m   [0;1mSELECT * FROM clients WHERE (clients."id" = 1) [0m
+  [4;35;1mCategory Load (0.000646)[0m   [0mSELECT * FROM categories WHERE (categories."id" = 1) [0m
+  [4;36;1mClient Load (0.000507)[0m   [0;1mSELECT * FROM clients WHERE (clients."id" = 1) [0m
+  [4;35;1mCategory Load (0.000761)[0m   [0mSELECT * FROM categories WHERE (categories."id" = 1) [0m
+  [4;36;1mClient Load (0.000598)[0m   [0;1mSELECT * FROM clients WHERE (clients."id" = 1) [0m
+Completed in 0.10089 (9 reqs/sec) | Rendering: 0.08734 (86%) | DB: 0.01414 (14%) | 200 OK [http://localhost/pdfs]
+
+
+Processing PdfsController#edit (for 127.0.0.1 at 2007-12-05 12:10:32) [GET]
+  Session ID: a25b7ad31ed1781f7374be36e1f0dd2e
+  Parameters: {"action"=>"edit", "id"=>"3", "controller"=>"pdfs"}
+  [4;35;1mSQL (0.001216)[0m   [0m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = 'pdfs'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [4;36;1mPdf Load (0.000364)[0m   [0;1mSELECT * FROM pdfs WHERE (pdfs."id" = 3) [0m
+Rendering  within layouts/application
+Rendering pdfs/edit
+  [4;35;1mClient Load (0.000578)[0m   [0mSELECT * FROM clients [0m
+  [4;36;1mSQL (0.000890)[0m   [0;1m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = 'clients'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [4;35;1mCategory Load (0.000490)[0m   [0mSELECT * FROM categories [0m
+  [4;36;1mSQL (0.000752)[0m   [0;1m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = 'categories'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+Rendered pdfs/_form (0.02156)
+Completed in 0.03549 (28 reqs/sec) | Rendering: 0.02395 (67%) | DB: 0.00429 (12%) | 200 OK [http://localhost/pdfs/edit/3]
+
+
+Processing PdfsController#update (for 127.0.0.1 at 2007-12-05 12:10:50) [POST]
+  Session ID: a25b7ad31ed1781f7374be36e1f0dd2e
+  Parameters: {"category"=>"1", "commit"=>"Edit", "client"=>"2", "action"=>"update", "id"=>"3", "controller"=>"pdfs", "pdf"=>{"pdfdate(3i)"=>"5", "pdfname"=>"test2", "filename"=>"2007125-test2.pdf", "pdfnote"=>"", "pdfdate(1i)"=>"2007", "pdfdate(2i)"=>"12"}}
+  [4;35;1mSQL (0.001274)[0m   [0m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = 'pdfs'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [4;36;1mPdf Load (0.000349)[0m   [0;1mSELECT * FROM pdfs WHERE (pdfs."id" = 3) [0m
+  [4;35;1mSQL (0.001010)[0m   [0m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = 'categories'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [4;36;1mCategory Load (0.000171)[0m   [0;1mSELECT * FROM categories WHERE (categories."id" = 1) [0m
+  [4;35;1mSQL (0.001646)[0m   [0m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = 'clients'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [4;36;1mClient Load (0.001053)[0m   [0;1mSELECT * FROM clients WHERE (clients."id" = 1) [0m
+  [4;35;1mCategory Load (0.000934)[0m   [0mSELECT * FROM categories WHERE (categories."id" = 1) [0m
+  [4;36;1mClient Load (0.000229)[0m   [0;1mSELECT * FROM clients WHERE (clients."id" = 2) [0m
+  [4;35;1mSQL (0.000154)[0m   [0mBEGIN[0m
+  [4;36;1mPdf Load (0.000420)[0m   [0;1mSELECT * FROM pdfs WHERE (pdfs.pdfname = 'test2' AND pdfs.pdfdate = '2007-12-05' AND pdfs.category_id = 1 AND pdfs.client_id = 2 AND pdfs.id <> 3) LIMIT 1[0m
+  [4;35;1mPdf Update (0.000308)[0m   [0mUPDATE pdfs SET "pdfnote" = '', "pdfname" = 'test2', "category_id" = 1, "pdfdate" = '2007-12-05', "filename" = '2007125-test2.pdf', "client_id" = 2 WHERE "id" = 3[0m
+  [4;36;1mSQL (0.000533)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/pdfs/show/3
+  [4;35;1mSQL (0.000121)[0m   [0mBEGIN[0m
+  [4;36;1mPdf Update (0.000313)[0m   [0;1mUPDATE pdfs SET "pdfnote" = '', "pdfname" = 'test2', "category_id" = 1, "pdfdate" = '2007-12-05', "filename" = '2007125-test2.pdf', "client_id" = 2 WHERE "id" = 3[0m
+  [4;35;1mSQL (0.000517)[0m   [0mCOMMIT[0m
+Completed in 0.03322 (30 reqs/sec) | DB: 0.00903 (27%) | 302 Found [http://localhost/pdfs/update/3]
+
+
+Processing PdfsController#show (for 127.0.0.1 at 2007-12-05 12:10:50) [GET]
+  Session ID: a25b7ad31ed1781f7374be36e1f0dd2e
+  Parameters: {"action"=>"show", "id"=>"3", "controller"=>"pdfs"}
+  [4;36;1mSQL (0.001190)[0m   [0;1m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = 'pdfs'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [4;35;1mPdf Load (0.000389)[0m   [0mSELECT * FROM pdfs WHERE (pdfs."id" = 3) [0m
+Rendering  within layouts/application
+Rendering pdfs/show
+Completed in 0.01442 (69 reqs/sec) | Rendering: 0.00530 (36%) | DB: 0.00158 (10%) | 200 OK [http://localhost/pdfs/show/3]
+
+
+Processing PdfsController#edit (for 127.0.0.1 at 2007-12-05 12:10:58) [GET]
+  Session ID: a25b7ad31ed1781f7374be36e1f0dd2e
+  Parameters: {"action"=>"edit", "id"=>"3", "controller"=>"pdfs"}
+  [4;36;1mSQL (0.000979)[0m   [0;1m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = 'pdfs'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [4;35;1mPdf Load (0.000282)[0m   [0mSELECT * FROM pdfs WHERE (pdfs."id" = 3) [0m
+Rendering  within layouts/application
+Rendering pdfs/edit
+  [4;36;1mClient Load (0.000498)[0m   [0;1mSELECT * FROM clients [0m
+  [4;35;1mSQL (0.000744)[0m   [0m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = 'clients'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [4;36;1mCategory Load (0.000622)[0m   [0;1mSELECT * FROM categories [0m
+  [4;35;1mSQL (0.000771)[0m   [0m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = 'categories'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+Rendered pdfs/_form (0.08637)
+Completed in 0.09845 (10 reqs/sec) | Rendering: 0.08862 (90%) | DB: 0.00390 (3%) | 200 OK [http://localhost/pdfs/edit/3]
+
+
+Processing PdfsController#index (for 127.0.0.1 at 2007-12-05 12:11:00) [GET]
+  Session ID: a25b7ad31ed1781f7374be36e1f0dd2e
+  Parameters: {"action"=>"index", "controller"=>"pdfs"}
+DEPRECATION WARNING: paginate is deprecated and will be removed from Rails 2.0 (Pagination is moving to a plugin in Rails 2.0: script/plugin install svn://errtheblog.com/svn/plugins/classic_pagination)  See http://www.rubyonrails.org/deprecation for details. (called from index at /storage/livedata/programming/rails/pdfcat/app/controllers/pdfs_controller.rb:9)
+  [4;36;1mSQL (0.001139)[0m   [0;1m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = 'pdfs'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [4;35;1mSQL (0.000488)[0m   [0mSELECT count(*) AS count_all FROM pdfs [0m
+  [4;36;1mPdf Load (0.000310)[0m   [0;1mSELECT * FROM pdfs ORDER BY pdfdate DESC LIMIT 10 OFFSET 0[0m
+Rendering  within layouts/application
+Rendering pdfs/index
+Rendered pdfs/_search (0.00156)
+  [4;35;1mSQL (0.001034)[0m   [0m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = 'categories'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [4;36;1mCategory Load (0.000258)[0m   [0;1mSELECT * FROM categories WHERE (categories."id" = 1) [0m
+  [4;35;1mSQL (0.001085)[0m   [0m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = 'clients'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [4;36;1mClient Load (0.000253)[0m   [0;1mSELECT * FROM clients WHERE (clients."id" = 2) [0m
+  [4;35;1mCategory Load (0.000433)[0m   [0mSELECT * FROM categories WHERE (categories."id" = 1) [0m
+  [4;36;1mClient Load (0.000316)[0m   [0;1mSELECT * FROM clients WHERE (clients."id" = 1) [0m
+  [4;35;1mCategory Load (0.000395)[0m   [0mSELECT * FROM categories WHERE (categories."id" = 1) [0m
+  [4;36;1mClient Load (0.000734)[0m   [0;1mSELECT * FROM clients WHERE (clients."id" = 1) [0m
+Completed in 0.03912 (25 reqs/sec) | Rendering: 0.02542 (64%) | DB: 0.00644 (16%) | 200 OK [http://localhost/pdfs]
+
+
+Processing PdfsController#index (for 127.0.0.1 at 2007-12-05 12:11:04) [GET]
+  Session ID: a25b7ad31ed1781f7374be36e1f0dd2e
+  Parameters: {"action"=>"index", "controller"=>"pdfs"}
+DEPRECATION WARNING: paginate is deprecated and will be removed from Rails 2.0 (Pagination is moving to a plugin in Rails 2.0: script/plugin install svn://errtheblog.com/svn/plugins/classic_pagination)  See http://www.rubyonrails.org/deprecation for details. (called from index at /storage/livedata/programming/rails/pdfcat/app/controllers/pdfs_controller.rb:9)
+  [4;35;1mSQL (0.002014)[0m   [0m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = 'pdfs'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [4;36;1mSQL (0.000284)[0m   [0;1mSELECT count(*) AS count_all FROM pdfs [0m
+  [4;35;1mPdf Load (0.000346)[0m   [0mSELECT * FROM pdfs ORDER BY pdfdate DESC LIMIT 10 OFFSET 0[0m
+Rendering  within layouts/application
+Rendering pdfs/index
+Rendered pdfs/_search (0.00168)
+  [4;36;1mSQL (0.001160)[0m   [0;1m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = 'categories'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [4;35;1mCategory Load (0.000283)[0m   [0mSELECT * FROM categories WHERE (categories."id" = 1) [0m
+  [4;36;1mSQL (0.002187)[0m   [0;1m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = 'clients'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [4;35;1mClient Load (0.000393)[0m   [0mSELECT * FROM clients WHERE (clients."id" = 2) [0m
+  [4;36;1mCategory Load (0.000604)[0m   [0;1mSELECT * FROM categories WHERE (categories."id" = 1) [0m
+  [4;35;1mClient Load (0.000240)[0m   [0mSELECT * FROM clients WHERE (clients."id" = 1) [0m
+  [4;36;1mCategory Load (0.000361)[0m   [0;1mSELECT * FROM categories WHERE (categories."id" = 1) [0m
+  [4;35;1mClient Load (0.000357)[0m   [0mSELECT * FROM clients WHERE (clients."id" = 1) [0m
+Completed in 0.03759 (26 reqs/sec) | Rendering: 0.02315 (61%) | DB: 0.00823 (21%) | 200 OK [http://localhost/pdfs]
+
+
+Processing PdfsController#edit (for 127.0.0.1 at 2007-12-05 12:11:11) [GET]
+  Session ID: a25b7ad31ed1781f7374be36e1f0dd2e
+  Parameters: {"action"=>"edit", "id"=>"3", "controller"=>"pdfs"}
+  [4;36;1mSQL (0.001094)[0m   [0;1m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = 'pdfs'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [4;35;1mPdf Load (0.000281)[0m   [0mSELECT * FROM pdfs WHERE (pdfs."id" = 3) [0m
+Rendering  within layouts/application
+Rendering pdfs/edit
+  [4;36;1mClient Load (0.000481)[0m   [0;1mSELECT * FROM clients [0m
+  [4;35;1mSQL (0.000759)[0m   [0m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = 'clients'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [4;36;1mCategory Load (0.001364)[0m   [0;1mSELECT * FROM categories [0m
+  [4;35;1mSQL (0.001606)[0m   [0m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = 'categories'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+Rendered pdfs/_form (0.02162)
+Completed in 0.03390 (29 reqs/sec) | Rendering: 0.02227 (65%) | DB: 0.00558 (16%) | 200 OK [http://localhost/pdfs/edit/3]
+
+
+Processing PdfsController#update (for 127.0.0.1 at 2007-12-05 12:11:16) [POST]
+  Session ID: a25b7ad31ed1781f7374be36e1f0dd2e
+  Parameters: {"category"=>"2", "commit"=>"Edit", "client"=>"2", "action"=>"update", "id"=>"3", "controller"=>"pdfs", "pdf"=>{"pdfdate(3i)"=>"5", "pdfname"=>"test2", "filename"=>"2007125-test2.pdf", "pdfnote"=>"", "pdfdate(1i)"=>"2007", "pdfdate(2i)"=>"12"}}
+  [4;36;1mSQL (0.000927)[0m   [0;1m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = 'pdfs'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [4;35;1mPdf Load (0.000180)[0m   [0mSELECT * FROM pdfs WHERE (pdfs."id" = 3) [0m
+  [4;36;1mSQL (0.000842)[0m   [0;1m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = 'categories'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [4;35;1mCategory Load (0.000158)[0m   [0mSELECT * FROM categories WHERE (categories."id" = 1) [0m
+  [4;36;1mSQL (0.001326)[0m   [0;1m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = 'clients'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [4;35;1mClient Load (0.000497)[0m   [0mSELECT * FROM clients WHERE (clients."id" = 2) [0m
+  [4;36;1mCategory Load (0.000178)[0m   [0;1mSELECT * FROM categories WHERE (categories."id" = 2) [0m
+  [4;35;1mClient Load (0.000142)[0m   [0mSELECT * FROM clients WHERE (clients."id" = 2) [0m
+  [4;36;1mSQL (0.000072)[0m   [0;1mBEGIN[0m
+  [4;35;1mPdf Load (0.000407)[0m   [0mSELECT * FROM pdfs WHERE (pdfs.pdfname = 'test2' AND pdfs.pdfdate = '2007-12-05' AND pdfs.category_id = 2 AND pdfs.client_id = 2 AND pdfs.id <> 3) LIMIT 1[0m
+  [4;36;1mPdf Update (0.000620)[0m   [0;1mUPDATE pdfs SET "pdfnote" = '', "pdfname" = 'test2', "category_id" = 2, "pdfdate" = '2007-12-05', "filename" = '2007125-test2.pdf', "client_id" = 2 WHERE "id" = 3[0m
+  [4;35;1mSQL (0.000540)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/pdfs/show/3
+  [4;36;1mSQL (0.000204)[0m   [0;1mBEGIN[0m
+  [4;35;1mPdf Update (0.000387)[0m   [0mUPDATE pdfs SET "pdfnote" = '', "pdfname" = 'test2', "category_id" = 2, "pdfdate" = '2007-12-05', "filename" = '2007125-test2.pdf', "client_id" = 2 WHERE "id" = 3[0m
+  [4;36;1mSQL (0.000525)[0m   [0;1mCOMMIT[0m
+Completed in 0.03063 (32 reqs/sec) | DB: 0.00701 (22%) | 302 Found [http://localhost/pdfs/update/3]
+
+
+Processing PdfsController#show (for 127.0.0.1 at 2007-12-05 12:11:16) [GET]
+  Session ID: a25b7ad31ed1781f7374be36e1f0dd2e
+  Parameters: {"action"=>"show", "id"=>"3", "controller"=>"pdfs"}
+  [4;35;1mSQL (0.001066)[0m   [0m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = 'pdfs'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [4;36;1mPdf Load (0.001543)[0m   [0;1mSELECT * FROM pdfs WHERE (pdfs."id" = 3) [0m
+Rendering  within layouts/application
+Rendering pdfs/show
+Completed in 0.01429 (69 reqs/sec) | Rendering: 0.00521 (36%) | DB: 0.00261 (18%) | 200 OK [http://localhost/pdfs/show/3]
+
+
+Processing PdfsController#attachment (for 127.0.0.1 at 2007-12-05 12:11:27) [GET]
+  Session ID: a25b7ad31ed1781f7374be36e1f0dd2e
+  Parameters: {"action"=>"attachment", "id"=>"3", "controller"=>"pdfs"}
+  [4;35;1mSQL (0.001183)[0m   [0m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = 'pdfs'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [4;36;1mPdf Load (0.000288)[0m   [0;1mSELECT * FROM pdfs WHERE (pdfs."id" = 3) [0m
+  [4;35;1mSQL (0.001135)[0m   [0m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = 'clients'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [4;36;1mClient Load (0.000349)[0m   [0;1mSELECT * FROM clients WHERE (clients."id" = 2) [0m
+  [4;35;1mSQL (0.001162)[0m   [0m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = 'categories'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [4;36;1mCategory Load (0.000247)[0m   [0;1mSELECT * FROM categories WHERE (categories."id" = 2) [0m
+Completed in 0.02095 (47 reqs/sec) | Rendering: 0.00006 (0%) | DB: 0.00436 (20%) | 200 OK [http://localhost/pdfs/attachment/3]
+Streaming file /livedata/pdfcat_test_clt/tramontana/bas/2007125-test2.pdf

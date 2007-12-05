@@ -6,7 +6,7 @@ class PdfsController < ApplicationController
 
   def index
 	# list all, sort by date (most recent at the top), 10 items per page.
-    @pdf_pages, @pdfs = paginate (:pdfs, :order => 'pdfdate DESC', :per_page => 10)
+    @pdf_pages, @pdfs = paginate(:pdfs, :order => 'pdfdate DESC', :per_page => 10)
 	@no = -1	# Used for shorcuts
   end
 
@@ -16,7 +16,7 @@ class PdfsController < ApplicationController
 	conditions = ["pdfname LIKE ?", "%#{@params[:pdfname]}%"] unless @params[:pdfname].nil?
 	  
 	# Query the database
-    @pdf_pages, @pdfs = paginate (:pdfs, :conditions => conditions, :order => 'pdfdate DESC', :per_page => 10)
+    @pdf_pages, @pdfs = paginate(:pdfs, :conditions => conditions, :order => 'pdfdate DESC', :per_page => 10)
 	@no = -1	# Used for shorcuts
 
 	# Render the index with the search criteria
@@ -61,6 +61,10 @@ class PdfsController < ApplicationController
 
   def update
     @pdf = Pdf.find(params[:id])
+	
+	# Store the old category and client
+	@oldcategory = @pdf.category.name.downcase
+	@oldclient = @pdf.client.name.downcase
 
 	# Get the category selected from the drop down box and assign this to the foriegn key in pdf table.
 	@pdf.category = Category.find(params[:category]) unless params[:category].blank?
@@ -74,7 +78,7 @@ class PdfsController < ApplicationController
 		redirect_to :action => 'show', :id => @pdf
 
 		# Move the actual file
-		@filename = @pdf.move_file(STORE_DIR + "/" + @pdf.client.name.downcase + "/" + @pdf.category.name.downcase + "/" + @pdf.filename)
+		@filename = @pdf.move_file(STORE_DIR + "/" + @oldclient + "/" + @oldcategory + "/" + @pdf.filename)
 
 		# Write changes of the filename back to the pdf object.
 		@pdf.update_attribute(:filename, @filename)

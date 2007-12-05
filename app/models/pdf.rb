@@ -53,9 +53,12 @@ class Pdf < ActiveRecord::Base
 			errors.add(filename,"New file already exists, please change the title")
 
 			# Return the original filename
-			filename
+			File.basename(filename)
 		else
 			# Move the file.
+			#puts "filename:    '" + filename + "'"
+			#puts "new_filename '" + @new_filename + "'"
+			
 			File.rename(filename, @new_filename)
 			
 			# Return the new filename
