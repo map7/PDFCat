@@ -103,9 +103,21 @@ class PdfsController < ApplicationController
     def attachment
 		@pdf = Pdf.find(params[:id])
 
-    	send_file(STORE_DIR + "/" + @pdf.client.name.downcase + "/" + @pdf.category.name.downcase + "/" + @pdf.filename,
+    	send_file(@pdf.fullpath,
 			:type         =>  'application/pdf',
 			:disposition  =>  'attachment'
 		)
     end
+
+
+	# Email pdfs to clients
+	def email_client
+		pdf = Pdf.find(params[:id])
+
+		PdfMailer.deliver_email_client(params[:email], pdf)
+
+		flash[:notice] = 'Your client has been sent this Pdf'
+
+		redirect_to :action => 'show', :id => params[:id]
+	end
 end

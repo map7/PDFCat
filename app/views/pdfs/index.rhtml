@@ -30,8 +30,10 @@
     <td><%= link_to 'Edit', :action => 'edit', :id => pdf %></td>
     <td><%= link_to 'Destroy', { :action => 'destroy', :id => pdf }, :confirm => 'Are you sure?', :method => :post %></td>
   </tr>
+
 <% end %>
 </table>
+
 
 <%= shortcut_next_or_prev @pdf_pages %>
 

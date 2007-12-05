@@ -1938,3 +1938,11 @@ Processing PdfsController#index (for 192.168.200.31 at 2007-12-04 16:44:52) [GET
 Rendering  within layouts/application
 Rendering pdfs/index
 Completed in 0.00565 (176 reqs/sec) | Rendering: 0.00320 (56%) | DB: 0.00167 (29%) | 200 OK [http://ws10/pdfcat/pdfs]
+
+
+Processing PdfsController#index (for 192.168.200.31 at 2007-12-05 13:58:41) [GET]
+  Session ID: a1e4b7c399e8364553a7199b1baa36d6
+  Parameters: {"action"=>"index", "controller"=>"pdfs"}
+Rendering  within layouts/application
+Rendering pdfs/index
+Completed in 0.01083 (92 reqs/sec) | Rendering: 0.00330 (30%) | DB: 0.00663 (61%) | 200 OK [http://ws10/pdfcat/pdfs]

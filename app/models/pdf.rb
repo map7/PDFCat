@@ -33,6 +33,11 @@ class Pdf < ActiveRecord::Base
 		File.delete(filename)
 	end
 
+	# Return the full path of the final filename.
+	def fullpath
+		STORE_DIR+ "/" + client.name.downcase + "/" + category.name.downcase + "/" + filename
+	end
+
 	def move_file(original)
 		# Make directories
 		Dir.mkdir(STORE_DIR + "/" + client.name.downcase) unless File.exists?(STORE_DIR + "/" + client.name.downcase)

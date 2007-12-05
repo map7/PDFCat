@@ -1,5 +1,7 @@
 
 <!-- Edit -->
+<%= shortcut_function 'm', "Element.toggle('email_client'); document.getElementById('email').focus();"  %> 
+<%= shortcut 'v', "/" + controller.controller_name + "/attachment/" +  @id  %> 
 <%= shortcut 'e', "/" + controller.controller_name + "/edit/" +  @id  %> 
 
 <% for column in Pdf.content_columns %>
@@ -8,6 +10,17 @@
 </p>
 <% end %>
 
-<%= link_to 'View', :action => "attachment", :id => @pdf.id %> | 
-<%= link_to 'Edit', :action => 'edit', :id => @pdf %> |
-<%= link_to 'Back', :action => 'index' %>
+<%= link_to_function "E<b>m</b>ail", "Element.toggle('email_client')" %> |
+<%= link_to '<b>V</b>iew', :action => "attachment", :id => @pdf.id %> | 
+<%= link_to '<b>E</b>dit', :action => 'edit', :id => @pdf %> |
+<%= link_to '<b>B</b>ack', :action => 'index' %>
+
+<div id="email_client" style="display:none">
+	<% form_tag :action => 'email_client', :id => @pdf.id do %>
+		<p>Client's Email:<br />
+			<%= text_field_tag 'email' %></p>
+
+		<p><%= submit_tag 'Send email' %> <%= link_to_function "Cancel", "Element.toggle('email_client')" %></p>
+	<% end %>
+</div>  
+
