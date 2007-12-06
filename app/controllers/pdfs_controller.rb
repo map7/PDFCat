@@ -90,7 +90,7 @@ class PdfsController < ApplicationController
 
   def destroy
 	# delete the physical file.
-	File.delete(Pdf.find(params[:id]).filename)
+	File.delete(Pdf.find(params[:id]).fullpath)
 	
 	# delete the database record
     Pdf.find(params[:id]).destroy
