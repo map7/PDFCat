@@ -100,6 +100,14 @@ class PdfsController < ApplicationController
 
 
 	# Allow user to open up new files
+    def attachment_new
+    	send_file(params[:filename],
+			:type         =>  'application/pdf',
+			:disposition  =>  'attachment'
+		)
+    end
+
+	# Allow user to open up files already stored in the database
     def attachment
 		@pdf = Pdf.find(params[:id])
 

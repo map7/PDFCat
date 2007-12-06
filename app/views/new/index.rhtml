@@ -6,7 +6,7 @@
 	</tr>
     <% for list_file in @upload.list_files %> <!-- call the list_files method in the model -->
     <tr>
-		<td><%= link_to list_file,	:controller => 'pdfs', :action => "attachment", :filename => list_file %> </td>
+		<td><%= link_to list_file,	:controller => 'pdfs', :action => "attachment_new", :filename => list_file %> </td>
         <td><%= link_to 'Enter',	:controller => 'pdfs', :action => 'new', 		:filename => list_file %></td>
 		<td><%= link_to 'Del',		:action => 'destroy',:filename => list_file %></td>
     </tr>
