@@ -197,17 +197,7 @@ tr{
 }
 
 
-.list-row-even{
-    background-color: #F8F8F8;
-}
-.list-row-even:hover{
-    background-color: #FFE887;
-}
-
-.list-row-odd{
-    background-color: #EEEEEE;
-}
-.list-row-odd:hover{
+tr#listitem:hover{
     background-color: #FFE887;
 }
 
@@ -298,3 +288,6 @@ div#item{
 
     /*visibility: hidden;*/
 }
+
+
+

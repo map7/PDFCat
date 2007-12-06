@@ -9,7 +9,7 @@
   </tr>
   
 <% for client in @clients %>
-  <tr>
+	<tr id=listitem>
 	  <td><b><%= @no = @no + 1 %></b></td>
   <% for column in Client.content_columns %>
     <td><%=h client.send(column.name) %></td>

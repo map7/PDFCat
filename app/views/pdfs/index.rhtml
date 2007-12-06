@@ -4,6 +4,7 @@
 <h1>Listing pdfs</h1>
 
 <%= shortcut 'a', "/" + controller.controller_name %>  <!-- Disable Add New -->
+<%= shortcut_function 's', "$('pdfname').focus();$('pdfname').style.backgroundColor='#FFE887';" %>  <!-- Disable Add New -->
 
 
 <table>
@@ -16,20 +17,20 @@
   </tr>
   
 <% for pdf in @pdfs %>
-  <tr>
-	  <td><b><%= @no = @no + 1 %></b></td>
+	<tr id=listitem>
+		<td><b><%= @no = @no + 1 %></b></td>
 
-	<td><%= pdf.pdfdate %></td>
-	<td><%= link_to pdf.pdfname, :action => "attachment", :id => pdf.id %></td>
-	<td><%= pdf.category.name %></td>
-	<td><%= pdf.client.name %></td>
-  
-	<%= shortcut @no, "/" + controller.controller_name + "/show/" + pdf.id.to_s %>
+		<td><%= pdf.pdfdate %></td>
+		<td><%= link_to pdf.pdfname, :action => "attachment", :id => pdf.id %></td>
+		<td><%= pdf.category.name %></td>
+		<td><%= pdf.client.name %></td>
 
-    <td><%= link_to 'Show', :action => 'show', :id => pdf %></td>
-    <td><%= link_to 'Edit', :action => 'edit', :id => pdf %></td>
-    <td><%= link_to 'Destroy', { :action => 'destroy', :id => pdf }, :confirm => 'Are you sure?', :method => :post %></td>
-  </tr>
+		<%= shortcut @no, "/" + controller.controller_name + "/show/" + pdf.id.to_s %>
+
+		<td><%= link_to 'Show', :action => 'show', :id => pdf %></td>
+		<td><%= link_to 'Edit', :action => 'edit', :id => pdf %></td>
+		<td><%= link_to 'Destroy', { :action => 'destroy', :id => pdf }, :confirm => 'Are you sure?', :method => :post %></td>
+	</tr>
 
 <% end %>
 </table>

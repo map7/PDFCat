@@ -9,7 +9,7 @@
   </tr>
   
 <% for category in @categories %>
-  <tr>
+	<tr id=listitem>
 	  <td><b><%= @no = @no + 1 %></b></td>
   <% for column in Category.content_columns %>
     <td><%=h category.send(column.name) %></td>
