@@ -18,5 +18,5 @@ config.action_controller.perform_caching             = true
 # config.action_mailer.raise_delivery_errors = false
 
 SITE_NAME= "Pdfcat"
-UPLOAD_DIR = "/livedata/pdfcat_upload"
-STORE_DIR = "/livedata/pdfcat_clt"
+UPLOAD_DIR = "/usr/pdfcat_upload"
+STORE_DIR = "/usr/pdfcat_clt"
