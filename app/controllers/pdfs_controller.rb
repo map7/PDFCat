@@ -114,7 +114,7 @@ class PdfsController < ApplicationController
 	def email_client
 		pdf = Pdf.find(params[:id])
 
-		PdfMailer.deliver_email_client(params[:email], pdf)
+		PdfMailer.deliver_email_client(params[:email], params[:subject], params[:body],pdf)
 
 		flash[:notice] = 'Your client has been sent this Pdf'
 

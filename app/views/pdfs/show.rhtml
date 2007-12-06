@@ -1,6 +1,6 @@
 
 <!-- Edit -->
-<%= shortcut_function 'm', "Element.toggle('email_client'); document.getElementById('email').focus();"  %> 
+<%= shortcut_function 'm', "Element.toggle('email_client'); document.getElementById('body').focus();"  %> 
 <%= shortcut 'v', "/" + controller.controller_name + "/attachment/" +  @id  %> 
 <%= shortcut 'e', "/" + controller.controller_name + "/edit/" +  @id  %> 
 
@@ -17,8 +17,23 @@
 
 <div id="email_client" style="display:none">
 	<% form_tag :action => 'email_client', :id => @pdf.id do %>
-		<p>Client's Email:<br />
-		<%= text_field_tag 'email', @pdf.client.email %></p>
+
+		<table>
+			<tr>
+				<td width=120px>To:</td>
+				<td><%= text_field_tag 'email', @pdf.client.email, :size => '35' %></td>
+			</tr>
+
+			<tr>
+				<td>Subject:</td>
+				<td><%= text_field_tag 'subject', @pdf.client.name.upcase + ' - ' + @pdf.pdfname + ' ' + @pdf.pdfdate.to_s, :size => '35' %></td>
+			</tr>
+
+			<tr>
+				<td>Body:</td>
+				<td><%= text_area_tag 'body', '', :cols => '50', :rows => '10' %></td>
+			</tr>
+		</table>
 
 		<p><%= submit_tag 'Send email' %> <%= link_to_function "Cancel", "Element.toggle('email_client')" %></p>
 	<% end %>
