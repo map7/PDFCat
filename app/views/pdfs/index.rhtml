@@ -42,5 +42,12 @@
 <%= link_to '<b>P</b>revious page', { :page => @pdf_pages.current.previous } if @pdf_pages.current.previous %>
 <%= link_to '<b>N</b>ext page', { :page => @pdf_pages.current.next } if @pdf_pages.current.next %> 
 
+<!-- Page jump navigation -->
+Pages:
+<% for page in @pdf_pages -%>
+  <%= link_to_unless((params[:page].to_i == page.number),
+        page.number, :page => page) %>&nbsp;
+<% end -%>
+
 <br />
 
