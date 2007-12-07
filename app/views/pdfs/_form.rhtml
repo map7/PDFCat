@@ -1,13 +1,13 @@
 <%= error_messages_for 'pdf' %>
 
 <!--[form:pdf]-->
-<p><label for="pdf_pdfdate">Pdfdate</label><br/>
+<p><label for="pdf_pdfdate">Date</label><br/>
 <%= date_select 'pdf', 'pdfdate'  %></p>
 
 <p><label for="pdf_filename">Current Filename</label><br/>
 <%= text_field 'pdf','filename' %></p>
 
-<p><label for="pdf_pdfname">Pdfname</label><br/>
+<p><label for="pdf_pdfname">Name</label><br/>
 <%= text_field 'pdf', 'pdfname'  %></p>
 
 <p><label for="clients">Clients</label><br />
@@ -30,7 +30,7 @@
 	%>
 </p>
 
-<p><label for="pdf_pdfnote">Pdfnote</label><br/>
+<p><label for="pdf_pdfnote">Notes</label><br/>
 <%= text_area 'pdf', 'pdfnote', 'rows' => 2  %></p>
 
 <!-- Add your focus after all the text fields have been made -->
