@@ -11,12 +11,28 @@ class PdfsController < ApplicationController
   end
 
   def search
+	
+	  # Search for the client first
+	  # ILIKE is just for postgres insensitive searches, in mysql LIKE will do this
+	#conditions = ["name LIKE ?", "%#{@params[:client]}%"] unless @params[:client].nil?
+	conditions = ["name ILIKE ?", "%#{@params[:client]}%"] unless @params[:client].nil?
 
-	# Add search functionality to the pdfs page.
-	conditions = ["pdfname LIKE ?", "%#{@params[:pdfname]}%"] unless @params[:pdfname].nil?
-	  
-	# Query the database
-    @pdf_pages, @pdfs = paginate(:pdfs, :conditions => conditions, :order => 'pdfdate DESC', :per_page => 10)
+	@client = Client.find(:all, :conditions => conditions)
+	
+	if @client[0].nil? then
+		@pdf_pages, @pdfs = paginate(:pdfs, :order => 'pdfdate DESC', :per_page => 10)
+		flash[:notice] = 'No client found by the name "' + @params[:client] + '"'
+
+	else
+
+		# Add search functionality to the pdfs page.
+		conditions = ["client_id = ?", "#{@client[0].id}"] 
+		  
+		# Query the database
+		@pdf_pages, @pdfs = paginate(:pdfs, :conditions => conditions, :order => 'pdfdate DESC', :per_page => 10)
+
+	end if
+	
 	@no = -1	# Used for shorcuts
 
 	# Render the index with the search criteria
