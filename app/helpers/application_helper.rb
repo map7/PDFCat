@@ -25,8 +25,8 @@ module ApplicationHelper
 		end
 				
 		# Return these lines back to the view
-		"#{shortcut 'p', '#{BASE_URL}/' + controller.controller_name + '?page=' + @prevpage.to_s }
-		#{shortcut 'n', '#{BASE_URL}/' + controller.controller_name + '?page=' + @nextpage.to_s }"
+		"#{shortcut 'p', BASE_URL + '/' + controller.controller_name + '?page=' + @prevpage.to_s }
+		#{shortcut 'n', BASE_URL + '/' + controller.controller_name + '?page=' + @nextpage.to_s }"
 				
 	end
 end
