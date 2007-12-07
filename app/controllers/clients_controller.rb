@@ -9,6 +9,16 @@ class ClientsController < ApplicationController
 	@no = -1	# Used for shorcuts
   end
 
+  def search
+	conditions = ["name ILIKE ?", "%#{@params[:client]}%"] unless @params[:client].nil?
+
+    @client_pages, @clients = paginate (:clients, :conditions => conditions, :order => 'upper(name)', :per_page => 10)
+	@no = -1	# Used for shorcuts
+
+	render :action => 'index'
+
+  end
+
   def show
     @client = Client.find(params[:id])
 	@id = params[:id]	# Used for shortcuts
