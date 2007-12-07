@@ -23,3 +23,5 @@ config.action_mailer.raise_delivery_errors = false
 SITE_NAME= "Pdfcat-development"
 UPLOAD_DIR = "/livedata/pdfcat_test_upload"
 STORE_DIR = "/livedata/pdfcat_test_clt"
+
+BASE_URL=""
