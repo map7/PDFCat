@@ -20,13 +20,28 @@ class PdfsController < ApplicationController
 	@client = Client.find(:all, :conditions => conditions)
 	
 	if @client[0].nil? then
+
+		# If there are no results from the search, then display all and an error message.
 		@pdf_pages, @pdfs = paginate(:pdfs, :order => 'pdfdate DESC', :per_page => 10)
 		flash[:notice] = 'No client found by the name "' + @params[:client] + '"'
 
 	else
 
+		# Initialise string
+		conditionstr = ''
+		
+		# Go through a loop of results from client and build our conditions for the pdf search
+		@client.each do|clt|
+			if conditionstr.blank? then
+				conditionstr = "client_id = " + clt.id.to_s
+			else
+				conditionstr = conditionstr + " or client_id = " + clt.id.to_s
+			end
+		end
+
 		# Add search functionality to the pdfs page.
-		conditions = ["client_id = ?", "#{@client[0].id}"] 
+		#conditions = ["client_id = ?", "#{@client[0].id}"] 
+		conditions = [conditionstr] 
 		  
 		# Query the database
 		@pdf_pages, @pdfs = paginate(:pdfs, :conditions => conditions, :order => 'pdfdate DESC', :per_page => 10)
