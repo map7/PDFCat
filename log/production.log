@@ -8254,3 +8254,2309 @@ Processing PdfsController#attachment (for 192.168.200.24 at 2007-12-07 09:44:04)
   Parameters: {"action"=>"attachment", "id"=>"152", "controller"=>"pdfs"}
 Completed in 0.00248 (403 reqs/sec) | Rendering: 0.00006 (2%) | DB: 0.00098 (39%) | 200 OK [http://paistram/pdfcat/pdfs/attachment/152]
 Streaming file /usr/pdfcat_clt/tramontana sam/general/20071127-Letter.pdf
+
+
+Processing PdfsController#index (for 192.168.200.31 at 2007-12-07 12:13:49) [GET]
+  Session ID: d4e3908841b887a58049253cc3926a7d
+  Parameters: {"action"=>"index", "controller"=>"pdfs"}
+Rendering  within layouts/application
+Rendering pdfs/index
+Completed in 0.03652 (27 reqs/sec) | Rendering: 0.02782 (76%) | DB: 0.00720 (19%) | 200 OK [http://paistram/pdfcat/pdfs]
+
+
+Processing PdfsController#search (for 192.168.200.31 at 2007-12-07 12:13:53) [POST]
+  Session ID: d4e3908841b887a58049253cc3926a7d
+  Parameters: {"client"=>"camp", "action"=>"search", "controller"=>"pdfs"}
+Rendering layoutfalseactionindex within layouts/application
+Rendering pdfs/index
+Completed in 0.03329 (30 reqs/sec) | Rendering: 0.02464 (74%) | DB: 0.00717 (21%) | 200 OK [http://paistram/pdfcat/pdfs/search]
+
+
+Processing PdfsController#search (for 192.168.200.31 at 2007-12-07 12:14:02) [POST]
+  Session ID: d4e3908841b887a58049253cc3926a7d
+  Parameters: {"client"=>"Camp", "action"=>"search", "controller"=>"pdfs"}
+Rendering layoutfalseactionindex within layouts/application
+Rendering pdfs/index
+Completed in 0.03603 (27 reqs/sec) | Rendering: 0.02732 (75%) | DB: 0.00723 (20%) | 200 OK [http://paistram/pdfcat/pdfs/search]
+
+
+Processing PdfsController#search (for 192.168.200.31 at 2007-12-07 12:14:07) [POST]
+  Session ID: d4e3908841b887a58049253cc3926a7d
+  Parameters: {"client"=>"tram", "action"=>"search", "controller"=>"pdfs"}
+Rendering layoutfalseactionindex within layouts/application
+Rendering pdfs/index
+Completed in 0.03339 (29 reqs/sec) | Rendering: 0.02464 (73%) | DB: 0.00719 (21%) | 200 OK [http://paistram/pdfcat/pdfs/search]
+
+
+Processing PdfsController#search (for 192.168.200.31 at 2007-12-07 12:14:23) [POST]
+  Session ID: d4e3908841b887a58049253cc3926a7d
+  Parameters: {"client"=>"cgu", "action"=>"search", "controller"=>"pdfs"}
+Rendering layoutfalseactionindex within layouts/application
+Rendering pdfs/index
+Completed in 0.03334 (29 reqs/sec) | Rendering: 0.02468 (74%) | DB: 0.00719 (21%) | 200 OK [http://paistram/pdfcat/pdfs/search]
+
+
+Processing PdfsController#search (for 192.168.200.31 at 2007-12-07 12:14:28) [POST]
+  Session ID: d4e3908841b887a58049253cc3926a7d
+  Parameters: {"client"=>"CGU", "action"=>"search", "controller"=>"pdfs"}
+Rendering layoutfalseactionindex within layouts/application
+Rendering pdfs/index
+Completed in 0.03335 (29 reqs/sec) | Rendering: 0.02460 (73%) | DB: 0.00726 (21%) | 200 OK [http://paistram/pdfcat/pdfs/search]
+
+
+Processing PdfsController#search (for 192.168.200.31 at 2007-12-07 12:14:55) [POST]
+  Session ID: d4e3908841b887a58049253cc3926a7d
+  Parameters: {"client"=>"CGU", "action"=>"search", "controller"=>"pdfs"}
+Rendering layoutfalseactionindex within layouts/application
+Rendering pdfs/index
+Completed in 0.26248 (3 reqs/sec) | Rendering: 0.04225 (16%) | DB: 0.02620 (9%) | 200 OK [http://paistram/pdfcat/pdfs/search]
+
+
+Processing PdfsController#search (for 192.168.200.31 at 2007-12-07 12:15:01) [POST]
+  Session ID: d4e3908841b887a58049253cc3926a7d
+  Parameters: {"client"=>"camp", "action"=>"search", "controller"=>"pdfs"}
+Rendering layoutfalseactionindex within layouts/application
+Rendering pdfs/index
+Completed in 0.02982 (33 reqs/sec) | Rendering: 0.02101 (70%) | DB: 0.00660 (22%) | 200 OK [http://paistram/pdfcat/pdfs/search]
+
+
+Processing PdfsController#search (for 192.168.200.31 at 2007-12-07 12:15:05) [POST]
+  Session ID: d4e3908841b887a58049253cc3926a7d
+  Parameters: {"client"=>"", "action"=>"search", "controller"=>"pdfs"}
+Rendering layoutfalseactionindex within layouts/application
+Rendering pdfs/index
+Completed in 0.01177 (84 reqs/sec) | Rendering: 0.00611 (51%) | DB: 0.00217 (18%) | 200 OK [http://paistram/pdfcat/pdfs/search]
+
+
+Processing PdfsController#index (for 192.168.200.31 at 2007-12-07 12:15:17) [GET]
+  Session ID: d4e3908841b887a58049253cc3926a7d
+  Parameters: {"action"=>"index", "controller"=>"pdfs"}
+Rendering  within layouts/application
+Rendering pdfs/index
+Completed in 0.03396 (29 reqs/sec) | Rendering: 0.02527 (74%) | DB: 0.00724 (21%) | 200 OK [http://paistram/pdfcat/pdfs]
+
+
+Processing PdfsController#search (for 192.168.200.31 at 2007-12-07 12:15:21) [POST]
+  Session ID: d4e3908841b887a58049253cc3926a7d
+  Parameters: {"client"=>"tram", "action"=>"search", "controller"=>"pdfs"}
+Rendering layoutfalseactionindex within layouts/application
+Rendering pdfs/index
+Completed in 0.01278 (78 reqs/sec) | Rendering: 0.00825 (64%) | DB: 0.00259 (20%) | 200 OK [http://paistram/pdfcat/pdfs/search]
+
+
+Processing PdfsController#index (for 192.168.200.31 at 2007-12-07 12:15:25) [GET]
+  Session ID: d4e3908841b887a58049253cc3926a7d
+  Parameters: {"action"=>"index", "controller"=>"pdfs"}
+Rendering  within layouts/application
+Rendering pdfs/index
+Completed in 0.03385 (29 reqs/sec) | Rendering: 0.02524 (74%) | DB: 0.00717 (21%) | 200 OK [http://paistram/pdfcat/pdfs]
+
+
+Processing PdfsController#search (for 192.168.200.31 at 2007-12-07 12:15:43) [POST]
+  Session ID: d4e3908841b887a58049253cc3926a7d
+  Parameters: {"client"=>"crick", "action"=>"search", "controller"=>"pdfs"}
+Rendering layoutfalseactionindex within layouts/application
+Rendering pdfs/index
+Completed in 0.00976 (102 reqs/sec) | Rendering: 0.00598 (61%) | DB: 0.00194 (19%) | 200 OK [http://paistram/pdfcat/pdfs/search]
+
+
+Processing PdfsController#index (for 192.168.200.31 at 2007-12-07 12:15:48) [GET]
+  Session ID: d4e3908841b887a58049253cc3926a7d
+  Parameters: {"action"=>"index", "controller"=>"pdfs"}
+Rendering  within layouts/application
+Rendering pdfs/index
+Completed in 0.03399 (29 reqs/sec) | Rendering: 0.02515 (73%) | DB: 0.00741 (21%) | 200 OK [http://paistram/pdfcat/pdfs]
+
+
+Processing PdfsController#index (for 192.168.200.31 at 2007-12-07 12:39:45) [GET]
+  Session ID: d4e3908841b887a58049253cc3926a7d
+  Parameters: {"action"=>"index", "controller"=>"pdfs"}
+Rendering  within layouts/application
+Rendering pdfs/index
+Completed in 0.03414 (29 reqs/sec) | Rendering: 0.02531 (74%) | DB: 0.00739 (21%) | 200 OK [http://paistram/pdfcat/pdfs]
+
+
+Processing PdfsController#search (for 192.168.200.31 at 2007-12-07 12:39:50) [POST]
+  Session ID: d4e3908841b887a58049253cc3926a7d
+  Parameters: {"client"=>"cam", "action"=>"search", "controller"=>"pdfs"}
+Rendering layoutfalseactionindex within layouts/application
+Rendering pdfs/index
+Completed in 0.03000 (33 reqs/sec) | Rendering: 0.02120 (70%) | DB: 0.00669 (22%) | 200 OK [http://paistram/pdfcat/pdfs/search]
+
+
+Processing PdfsController#search (for 192.168.200.31 at 2007-12-07 12:39:55) [POST]
+  Session ID: d4e3908841b887a58049253cc3926a7d
+  Parameters: {"client"=>"tram", "action"=>"search", "controller"=>"pdfs"}
+Rendering layoutfalseactionindex within layouts/application
+Rendering pdfs/index
+Completed in 0.01291 (77 reqs/sec) | Rendering: 0.00828 (64%) | DB: 0.00269 (20%) | 200 OK [http://paistram/pdfcat/pdfs/search]
+
+
+Processing PdfsController#search (for 192.168.200.31 at 2007-12-07 12:40:27) [POST]
+  Session ID: d4e3908841b887a58049253cc3926a7d
+  Parameters: {"client"=>"tram", "action"=>"search", "controller"=>"pdfs"}
+Rendering layoutfalseactionindex within layouts/application
+Rendering pdfs/index
+Completed in 0.29780 (3 reqs/sec) | Rendering: 0.05765 (19%) | DB: 0.01301 (4%) | 200 OK [http://paistram/pdfcat/pdfs/search]
+
+
+Processing PdfsController#search (for 192.168.200.31 at 2007-12-07 12:40:36) [POST]
+  Session ID: d4e3908841b887a58049253cc3926a7d
+  Parameters: {"client"=>"camp", "action"=>"search", "controller"=>"pdfs"}
+Rendering layoutfalseactionindex within layouts/application
+Rendering pdfs/index
+Completed in 0.03268 (30 reqs/sec) | Rendering: 0.02317 (70%) | DB: 0.00735 (22%) | 200 OK [http://paistram/pdfcat/pdfs/search]
+
+
+Processing PdfsController#index (for 192.168.200.31 at 2007-12-07 12:40:42) [GET]
+  Session ID: d4e3908841b887a58049253cc3926a7d
+  Parameters: {"action"=>"index", "controller"=>"pdfs"}
+Rendering  within layouts/application
+Rendering pdfs/index
+Completed in 0.03387 (29 reqs/sec) | Rendering: 0.02513 (74%) | DB: 0.00728 (21%) | 200 OK [http://paistram/pdfcat/pdfs]
+
+
+Processing PdfsController#search (for 192.168.200.31 at 2007-12-07 12:40:46) [POST]
+  Session ID: d4e3908841b887a58049253cc3926a7d
+  Parameters: {"client"=>"crick", "action"=>"search", "controller"=>"pdfs"}
+Rendering layoutfalseactionindex within layouts/application
+Rendering pdfs/index
+Completed in 0.01255 (79 reqs/sec) | Rendering: 0.00812 (64%) | DB: 0.00262 (20%) | 200 OK [http://paistram/pdfcat/pdfs/search]
+
+
+Processing PdfsController#index (for 192.168.200.31 at 2007-12-07 12:40:50) [GET]
+  Session ID: d4e3908841b887a58049253cc3926a7d
+  Parameters: {"action"=>"index", "controller"=>"pdfs"}
+Rendering  within layouts/application
+Rendering pdfs/index
+Completed in 0.03689 (27 reqs/sec) | Rendering: 0.02784 (75%) | DB: 0.00760 (20%) | 200 OK [http://paistram/pdfcat/pdfs]
+
+
+Processing PdfsController#index (for 192.168.200.30 at 2007-12-07 13:26:35) [GET]
+  Session ID: bc39002c65417abd7345a645bf4376ee
+  Parameters: {"action"=>"index", "controller"=>"pdfs"}
+Rendering  within layouts/application
+Rendering pdfs/index
+Completed in 0.03372 (29 reqs/sec) | Rendering: 0.02498 (74%) | DB: 0.00723 (21%) | 200 OK [http://paistram/pdfcat/pdfs]
+
+
+Processing PdfsController#search (for 192.168.200.30 at 2007-12-07 13:26:42) [POST]
+  Session ID: bc39002c65417abd7345a645bf4376ee
+  Parameters: {"client"=>"tram", "action"=>"search", "controller"=>"pdfs"}
+Rendering layoutfalseactionindex within layouts/application
+Rendering pdfs/index
+Completed in 0.02947 (33 reqs/sec) | Rendering: 0.02084 (70%) | DB: 0.00658 (22%) | 200 OK [http://paistram/pdfcat/pdfs/search]
+
+
+Processing PdfsController#index (for 192.168.200.30 at 2007-12-07 13:26:47) [GET]
+  Session ID: bc39002c65417abd7345a645bf4376ee
+  Parameters: {"action"=>"index", "controller"=>"pdfs"}
+Rendering  within layouts/application
+Rendering pdfs/index
+Completed in 0.03403 (29 reqs/sec) | Rendering: 0.02524 (74%) | DB: 0.00735 (21%) | 200 OK [http://paistram/pdfcat/pdfs]
+
+
+Processing PdfsController#index (for 192.168.200.30 at 2007-12-07 13:27:11) [GET]
+  Session ID: bc39002c65417abd7345a645bf4376ee
+  Parameters: {"action"=>"index", "controller"=>"pdfs"}
+Rendering  within layouts/application
+Rendering pdfs/index
+Completed in 0.03401 (29 reqs/sec) | Rendering: 0.02521 (74%) | DB: 0.00734 (21%) | 200 OK [http://paistram/pdfcat/pdfs]
+
+
+Processing PdfsController#search (for 192.168.200.30 at 2007-12-07 13:27:19) [POST]
+  Session ID: bc39002c65417abd7345a645bf4376ee
+  Parameters: {"client"=>"tram", "action"=>"search", "controller"=>"pdfs"}
+Rendering layoutfalseactionindex within layouts/application
+Rendering pdfs/index
+Completed in 0.09185 (10 reqs/sec) | Rendering: 0.08279 (90%) | DB: 0.00687 (7%) | 200 OK [http://paistram/pdfcat/pdfs/search]
+
+
+Processing PdfsController#search (for 192.168.200.30 at 2007-12-07 13:27:33) [POST]
+  Session ID: bc39002c65417abd7345a645bf4376ee
+  Parameters: {"client"=>"cri", "action"=>"search", "controller"=>"pdfs"}
+Rendering layoutfalseactionindex within layouts/application
+Rendering pdfs/index
+Completed in 0.01802 (55 reqs/sec) | Rendering: 0.01215 (67%) | DB: 0.00394 (21%) | 200 OK [http://paistram/pdfcat/pdfs/search]
+
+
+Processing PdfsController#index (for 192.168.200.31 at 2007-12-07 13:51:37) [GET]
+  Session ID: d4e3908841b887a58049253cc3926a7d
+  Parameters: {"action"=>"index", "controller"=>"pdfs"}
+Rendering  within layouts/application
+Rendering pdfs/index
+
+
+ActionView::TemplateError (No rhtml, rxml, rjs or delegate template found for clients/_search in /usr/pdfcat/app/views) on line #5 of app/views/pdfs/index.rhtml:
+2: <%= shortcut 'a', "/" + controller.controller_name %>  <!-- Disable Add New -->
+3: <%= shortcut_function 's', "$('client').focus();$('client').style.backgroundColor='#FFE887';" %>  <!-- Disable Add New -->
+4: 
+5: <%= render :partial => "clients/search" %>
+6: 
+7: <h1>Listing pdfs</h1>
+8: 
+
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_view/base.rb:401:in `find_template_extension_for'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_view/base.rb:332:in `pick_template_extension'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_view/base.rb:249:in `render_file'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_view/base.rb:275:in `render'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_view/partials.rb:59:in `render_partial'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/benchmarking.rb:30:in `benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_view/partials.rb:58:in `render_partial'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_view/base.rb:287:in `render'
+    /usr/pdfcat/app/views/pdfs/index.rhtml:5:in `_run_rhtml_47app47views47pdfs47index46rhtml'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_view/base.rb:325:in `send'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_view/base.rb:325:in `compile_and_render_template'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_view/base.rb:301:in `render_template'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_view/base.rb:260:in `render_file'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/base.rb:812:in `render_file'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/base.rb:717:in `render_with_no_layout'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/layout.rb:247:in `render_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/benchmarking.rb:50:in `render'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/benchmarking.rb:50:in `render'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/base.rb:1102:in `perform_action_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/filters.rb:696:in `call_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/filters.rb:688:in `perform_action_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/benchmarking.rb:66:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/benchmarking.rb:66:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/rescue.rb:83:in `perform_action'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/base.rb:435:in `send'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/base.rb:435:in `process_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/filters.rb:684:in `process_without_session_management_support'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/session_management.rb:114:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/base.rb:334:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.2.6/lib/dispatcher.rb:41:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:78:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:76:in `synchronize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:76:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:618:in `process_client'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:617:in `each'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:617:in `process_client'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `initialize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `new'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `initialize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `new'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:271:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:270:in `each'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:270:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/bin/mongrel_rails:127:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/command.rb:211:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/bin/mongrel_rails:243
+    /usr/local/bin/mongrel_rails:16:in `load'
+    /usr/local/bin/mongrel_rails:16
+
+
+
+
+Processing PdfsController#index (for 192.168.200.31 at 2007-12-07 13:51:44) [GET]
+  Session ID: d4e3908841b887a58049253cc3926a7d
+  Parameters: {"action"=>"index", "controller"=>"pdfs"}
+Rendering  within layouts/application
+Rendering pdfs/index
+
+
+ActionView::TemplateError (No rhtml, rxml, rjs or delegate template found for clients/_search in /usr/pdfcat/app/views) on line #5 of app/views/pdfs/index.rhtml:
+2: <%= shortcut 'a', "/" + controller.controller_name %>  <!-- Disable Add New -->
+3: <%= shortcut_function 's', "$('client').focus();$('client').style.backgroundColor='#FFE887';" %>  <!-- Disable Add New -->
+4: 
+5: <%= render :partial => "clients/search" %>
+6: 
+7: <h1>Listing pdfs</h1>
+8: 
+
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_view/base.rb:401:in `find_template_extension_for'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_view/base.rb:332:in `pick_template_extension'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_view/base.rb:249:in `render_file'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_view/base.rb:275:in `render'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_view/partials.rb:59:in `render_partial'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/benchmarking.rb:30:in `benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_view/partials.rb:58:in `render_partial'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_view/base.rb:287:in `render'
+    /usr/pdfcat/app/views/pdfs/index.rhtml:5:in `_run_rhtml_47app47views47pdfs47index46rhtml'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_view/base.rb:325:in `send'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_view/base.rb:325:in `compile_and_render_template'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_view/base.rb:301:in `render_template'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_view/base.rb:260:in `render_file'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/base.rb:812:in `render_file'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/base.rb:717:in `render_with_no_layout'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/layout.rb:247:in `render_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/benchmarking.rb:50:in `render'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/benchmarking.rb:50:in `render'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/base.rb:1102:in `perform_action_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/filters.rb:696:in `call_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/filters.rb:688:in `perform_action_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/benchmarking.rb:66:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/benchmarking.rb:66:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/rescue.rb:83:in `perform_action'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/base.rb:435:in `send'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/base.rb:435:in `process_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/filters.rb:684:in `process_without_session_management_support'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/session_management.rb:114:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/base.rb:334:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.2.6/lib/dispatcher.rb:41:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:78:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:76:in `synchronize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:76:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:618:in `process_client'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:617:in `each'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:617:in `process_client'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `initialize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `new'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `initialize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `new'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:271:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:270:in `each'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:270:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/bin/mongrel_rails:127:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/command.rb:211:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/bin/mongrel_rails:243
+    /usr/local/bin/mongrel_rails:16:in `load'
+    /usr/local/bin/mongrel_rails:16
+
+
+
+
+Processing PdfsController#index (for 192.168.200.31 at 2007-12-07 13:51:54) [GET]
+  Session ID: d4e3908841b887a58049253cc3926a7d
+  Parameters: {"action"=>"index", "controller"=>"pdfs"}
+Rendering  within layouts/application
+Rendering pdfs/index
+
+
+ActionView::TemplateError (No rhtml, rxml, rjs or delegate template found for clients/_search in /usr/pdfcat/app/views) on line #5 of app/views/pdfs/index.rhtml:
+2: <%= shortcut 'a', "/" + controller.controller_name %>  <!-- Disable Add New -->
+3: <%= shortcut_function 's', "$('client').focus();$('client').style.backgroundColor='#FFE887';" %>  <!-- Disable Add New -->
+4: 
+5: <%= render :partial => "clients/search" %>
+6: 
+7: <h1>Listing pdfs</h1>
+8: 
+
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_view/base.rb:401:in `find_template_extension_for'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_view/base.rb:332:in `pick_template_extension'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_view/base.rb:249:in `render_file'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_view/base.rb:275:in `render'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_view/partials.rb:59:in `render_partial'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/benchmarking.rb:30:in `benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_view/partials.rb:58:in `render_partial'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_view/base.rb:287:in `render'
+    /usr/pdfcat/app/views/pdfs/index.rhtml:5:in `_run_rhtml_47app47views47pdfs47index46rhtml'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_view/base.rb:325:in `send'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_view/base.rb:325:in `compile_and_render_template'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_view/base.rb:301:in `render_template'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_view/base.rb:260:in `render_file'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/base.rb:812:in `render_file'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/base.rb:717:in `render_with_no_layout'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/layout.rb:247:in `render_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/benchmarking.rb:50:in `render'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/benchmarking.rb:50:in `render'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/base.rb:1102:in `perform_action_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/filters.rb:696:in `call_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/filters.rb:688:in `perform_action_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/benchmarking.rb:66:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/benchmarking.rb:66:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/rescue.rb:83:in `perform_action'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/base.rb:435:in `send'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/base.rb:435:in `process_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/filters.rb:684:in `process_without_session_management_support'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/session_management.rb:114:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/base.rb:334:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.2.6/lib/dispatcher.rb:41:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:78:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:76:in `synchronize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:76:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:618:in `process_client'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:617:in `each'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:617:in `process_client'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `initialize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `new'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `initialize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `new'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:271:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:270:in `each'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:270:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/bin/mongrel_rails:127:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/command.rb:211:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/bin/mongrel_rails:243
+    /usr/local/bin/mongrel_rails:16:in `load'
+    /usr/local/bin/mongrel_rails:16
+
+
+
+
+Processing PdfsController#index (for 192.168.200.31 at 2007-12-07 13:51:54) [GET]
+  Session ID: d4e3908841b887a58049253cc3926a7d
+  Parameters: {"action"=>"index", "controller"=>"pdfs"}
+Rendering  within layouts/application
+Rendering pdfs/index
+
+
+ActionView::TemplateError (No rhtml, rxml, rjs or delegate template found for clients/_search in /usr/pdfcat/app/views) on line #5 of app/views/pdfs/index.rhtml:
+2: <%= shortcut 'a', "/" + controller.controller_name %>  <!-- Disable Add New -->
+3: <%= shortcut_function 's', "$('client').focus();$('client').style.backgroundColor='#FFE887';" %>  <!-- Disable Add New -->
+4: 
+5: <%= render :partial => "clients/search" %>
+6: 
+7: <h1>Listing pdfs</h1>
+8: 
+
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_view/base.rb:401:in `find_template_extension_for'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_view/base.rb:332:in `pick_template_extension'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_view/base.rb:249:in `render_file'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_view/base.rb:275:in `render'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_view/partials.rb:59:in `render_partial'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/benchmarking.rb:30:in `benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_view/partials.rb:58:in `render_partial'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_view/base.rb:287:in `render'
+    /usr/pdfcat/app/views/pdfs/index.rhtml:5:in `_run_rhtml_47app47views47pdfs47index46rhtml'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_view/base.rb:325:in `send'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_view/base.rb:325:in `compile_and_render_template'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_view/base.rb:301:in `render_template'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_view/base.rb:260:in `render_file'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/base.rb:812:in `render_file'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/base.rb:717:in `render_with_no_layout'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/layout.rb:247:in `render_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/benchmarking.rb:50:in `render'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/benchmarking.rb:50:in `render'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/base.rb:1102:in `perform_action_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/filters.rb:696:in `call_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/filters.rb:688:in `perform_action_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/benchmarking.rb:66:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/benchmarking.rb:66:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/rescue.rb:83:in `perform_action'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/base.rb:435:in `send'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/base.rb:435:in `process_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/filters.rb:684:in `process_without_session_management_support'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/session_management.rb:114:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/base.rb:334:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.2.6/lib/dispatcher.rb:41:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:78:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:76:in `synchronize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:76:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:618:in `process_client'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:617:in `each'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:617:in `process_client'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `initialize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `new'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `initialize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `new'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:271:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:270:in `each'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:270:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/bin/mongrel_rails:127:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/command.rb:211:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/bin/mongrel_rails:243
+    /usr/local/bin/mongrel_rails:16:in `load'
+    /usr/local/bin/mongrel_rails:16
+
+
+
+
+Processing PdfsController#index (for 192.168.200.31 at 2007-12-07 13:51:55) [GET]
+  Session ID: d4e3908841b887a58049253cc3926a7d
+  Parameters: {"action"=>"index", "controller"=>"pdfs"}
+Rendering  within layouts/application
+Rendering pdfs/index
+
+
+ActionView::TemplateError (No rhtml, rxml, rjs or delegate template found for clients/_search in /usr/pdfcat/app/views) on line #5 of app/views/pdfs/index.rhtml:
+2: <%= shortcut 'a', "/" + controller.controller_name %>  <!-- Disable Add New -->
+3: <%= shortcut_function 's', "$('client').focus();$('client').style.backgroundColor='#FFE887';" %>  <!-- Disable Add New -->
+4: 
+5: <%= render :partial => "clients/search" %>
+6: 
+7: <h1>Listing pdfs</h1>
+8: 
+
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_view/base.rb:401:in `find_template_extension_for'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_view/base.rb:332:in `pick_template_extension'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_view/base.rb:249:in `render_file'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_view/base.rb:275:in `render'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_view/partials.rb:59:in `render_partial'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/benchmarking.rb:30:in `benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_view/partials.rb:58:in `render_partial'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_view/base.rb:287:in `render'
+    /usr/pdfcat/app/views/pdfs/index.rhtml:5:in `_run_rhtml_47app47views47pdfs47index46rhtml'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_view/base.rb:325:in `send'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_view/base.rb:325:in `compile_and_render_template'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_view/base.rb:301:in `render_template'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_view/base.rb:260:in `render_file'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/base.rb:812:in `render_file'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/base.rb:717:in `render_with_no_layout'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/layout.rb:247:in `render_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/benchmarking.rb:50:in `render'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/benchmarking.rb:50:in `render'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/base.rb:1102:in `perform_action_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/filters.rb:696:in `call_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/filters.rb:688:in `perform_action_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/benchmarking.rb:66:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/benchmarking.rb:66:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/rescue.rb:83:in `perform_action'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/base.rb:435:in `send'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/base.rb:435:in `process_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/filters.rb:684:in `process_without_session_management_support'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/session_management.rb:114:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/base.rb:334:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.2.6/lib/dispatcher.rb:41:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:78:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:76:in `synchronize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:76:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:618:in `process_client'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:617:in `each'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:617:in `process_client'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `initialize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `new'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `initialize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `new'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:271:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:270:in `each'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:270:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/bin/mongrel_rails:127:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/command.rb:211:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/bin/mongrel_rails:243
+    /usr/local/bin/mongrel_rails:16:in `load'
+    /usr/local/bin/mongrel_rails:16
+
+
+
+
+Processing PdfsController#index (for 192.168.200.31 at 2007-12-07 13:51:55) [GET]
+  Session ID: d4e3908841b887a58049253cc3926a7d
+  Parameters: {"action"=>"index", "controller"=>"pdfs"}
+Rendering  within layouts/application
+Rendering pdfs/index
+
+
+ActionView::TemplateError (No rhtml, rxml, rjs or delegate template found for clients/_search in /usr/pdfcat/app/views) on line #5 of app/views/pdfs/index.rhtml:
+2: <%= shortcut 'a', "/" + controller.controller_name %>  <!-- Disable Add New -->
+3: <%= shortcut_function 's', "$('client').focus();$('client').style.backgroundColor='#FFE887';" %>  <!-- Disable Add New -->
+4: 
+5: <%= render :partial => "clients/search" %>
+6: 
+7: <h1>Listing pdfs</h1>
+8: 
+
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_view/base.rb:401:in `find_template_extension_for'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_view/base.rb:332:in `pick_template_extension'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_view/base.rb:249:in `render_file'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_view/base.rb:275:in `render'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_view/partials.rb:59:in `render_partial'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/benchmarking.rb:30:in `benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_view/partials.rb:58:in `render_partial'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_view/base.rb:287:in `render'
+    /usr/pdfcat/app/views/pdfs/index.rhtml:5:in `_run_rhtml_47app47views47pdfs47index46rhtml'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_view/base.rb:325:in `send'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_view/base.rb:325:in `compile_and_render_template'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_view/base.rb:301:in `render_template'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_view/base.rb:260:in `render_file'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/base.rb:812:in `render_file'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/base.rb:717:in `render_with_no_layout'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/layout.rb:247:in `render_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/benchmarking.rb:50:in `render'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/benchmarking.rb:50:in `render'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/base.rb:1102:in `perform_action_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/filters.rb:696:in `call_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/filters.rb:688:in `perform_action_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/benchmarking.rb:66:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/benchmarking.rb:66:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/rescue.rb:83:in `perform_action'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/base.rb:435:in `send'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/base.rb:435:in `process_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/filters.rb:684:in `process_without_session_management_support'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/session_management.rb:114:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/base.rb:334:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.2.6/lib/dispatcher.rb:41:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:78:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:76:in `synchronize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:76:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:618:in `process_client'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:617:in `each'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:617:in `process_client'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `initialize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `new'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `initialize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `new'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:271:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:270:in `each'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:270:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/bin/mongrel_rails:127:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/command.rb:211:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/bin/mongrel_rails:243
+    /usr/local/bin/mongrel_rails:16:in `load'
+    /usr/local/bin/mongrel_rails:16
+
+
+
+
+Processing PdfsController#index (for 192.168.200.31 at 2007-12-07 13:51:56) [GET]
+  Session ID: d4e3908841b887a58049253cc3926a7d
+  Parameters: {"action"=>"index", "controller"=>"pdfs"}
+Rendering  within layouts/application
+Rendering pdfs/index
+
+
+ActionView::TemplateError (No rhtml, rxml, rjs or delegate template found for clients/_search in /usr/pdfcat/app/views) on line #5 of app/views/pdfs/index.rhtml:
+2: <%= shortcut 'a', "/" + controller.controller_name %>  <!-- Disable Add New -->
+3: <%= shortcut_function 's', "$('client').focus();$('client').style.backgroundColor='#FFE887';" %>  <!-- Disable Add New -->
+4: 
+5: <%= render :partial => "clients/search" %>
+6: 
+7: <h1>Listing pdfs</h1>
+8: 
+
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_view/base.rb:401:in `find_template_extension_for'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_view/base.rb:332:in `pick_template_extension'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_view/base.rb:249:in `render_file'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_view/base.rb:275:in `render'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_view/partials.rb:59:in `render_partial'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/benchmarking.rb:30:in `benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_view/partials.rb:58:in `render_partial'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_view/base.rb:287:in `render'
+    /usr/pdfcat/app/views/pdfs/index.rhtml:5:in `_run_rhtml_47app47views47pdfs47index46rhtml'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_view/base.rb:325:in `send'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_view/base.rb:325:in `compile_and_render_template'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_view/base.rb:301:in `render_template'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_view/base.rb:260:in `render_file'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/base.rb:812:in `render_file'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/base.rb:717:in `render_with_no_layout'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/layout.rb:247:in `render_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/benchmarking.rb:50:in `render'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/benchmarking.rb:50:in `render'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/base.rb:1102:in `perform_action_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/filters.rb:696:in `call_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/filters.rb:688:in `perform_action_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/benchmarking.rb:66:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/benchmarking.rb:66:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/rescue.rb:83:in `perform_action'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/base.rb:435:in `send'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/base.rb:435:in `process_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/filters.rb:684:in `process_without_session_management_support'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/session_management.rb:114:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/base.rb:334:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.2.6/lib/dispatcher.rb:41:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:78:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:76:in `synchronize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:76:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:618:in `process_client'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:617:in `each'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:617:in `process_client'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `initialize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `new'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `initialize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `new'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:271:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:270:in `each'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:270:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/bin/mongrel_rails:127:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/command.rb:211:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/bin/mongrel_rails:243
+    /usr/local/bin/mongrel_rails:16:in `load'
+    /usr/local/bin/mongrel_rails:16
+
+
+
+
+Processing PdfsController#index (for 192.168.200.31 at 2007-12-07 13:51:57) [GET]
+  Session ID: d4e3908841b887a58049253cc3926a7d
+  Parameters: {"action"=>"index", "controller"=>"pdfs"}
+Rendering  within layouts/application
+Rendering pdfs/index
+
+
+ActionView::TemplateError (No rhtml, rxml, rjs or delegate template found for clients/_search in /usr/pdfcat/app/views) on line #5 of app/views/pdfs/index.rhtml:
+2: <%= shortcut 'a', "/" + controller.controller_name %>  <!-- Disable Add New -->
+3: <%= shortcut_function 's', "$('client').focus();$('client').style.backgroundColor='#FFE887';" %>  <!-- Disable Add New -->
+4: 
+5: <%= render :partial => "clients/search" %>
+6: 
+7: <h1>Listing pdfs</h1>
+8: 
+
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_view/base.rb:401:in `find_template_extension_for'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_view/base.rb:332:in `pick_template_extension'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_view/base.rb:249:in `render_file'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_view/base.rb:275:in `render'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_view/partials.rb:59:in `render_partial'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/benchmarking.rb:30:in `benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_view/partials.rb:58:in `render_partial'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_view/base.rb:287:in `render'
+    /usr/pdfcat/app/views/pdfs/index.rhtml:5:in `_run_rhtml_47app47views47pdfs47index46rhtml'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_view/base.rb:325:in `send'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_view/base.rb:325:in `compile_and_render_template'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_view/base.rb:301:in `render_template'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_view/base.rb:260:in `render_file'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/base.rb:812:in `render_file'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/base.rb:717:in `render_with_no_layout'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/layout.rb:247:in `render_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/benchmarking.rb:50:in `render'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/benchmarking.rb:50:in `render'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/base.rb:1102:in `perform_action_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/filters.rb:696:in `call_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/filters.rb:688:in `perform_action_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/benchmarking.rb:66:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/benchmarking.rb:66:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/rescue.rb:83:in `perform_action'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/base.rb:435:in `send'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/base.rb:435:in `process_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/filters.rb:684:in `process_without_session_management_support'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/session_management.rb:114:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/base.rb:334:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.2.6/lib/dispatcher.rb:41:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:78:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:76:in `synchronize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:76:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:618:in `process_client'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:617:in `each'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:617:in `process_client'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `initialize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `new'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `initialize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `new'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:271:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:270:in `each'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:270:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/bin/mongrel_rails:127:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/command.rb:211:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/bin/mongrel_rails:243
+    /usr/local/bin/mongrel_rails:16:in `load'
+    /usr/local/bin/mongrel_rails:16
+
+
+
+
+Processing ClientsController#index (for 192.168.200.31 at 2007-12-07 13:52:00) [GET]
+  Session ID: d4e3908841b887a58049253cc3926a7d
+  Parameters: {"action"=>"index", "controller"=>"clients"}
+Rendering  within layouts/application
+Rendering clients/index
+
+
+ActionView::TemplateError (No rhtml, rxml, rjs or delegate template found for clients/_search in /usr/pdfcat/app/views) on line #4 of app/views/clients/index.rhtml:
+1: 
+2: <%= shortcut_function 's', "$('client').focus();$('client').style.backgroundColor='#FFE887';" %>  <!-- Disable Add New -->
+3: 
+4: <%= render :partial => "clients/search" %>
+5: 
+6: <h1>Listing clients</h1>
+7: 
+
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_view/base.rb:401:in `find_template_extension_for'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_view/base.rb:332:in `pick_template_extension'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_view/base.rb:249:in `render_file'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_view/base.rb:275:in `render'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_view/partials.rb:59:in `render_partial'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/benchmarking.rb:30:in `benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_view/partials.rb:58:in `render_partial'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_view/base.rb:287:in `render'
+    /usr/pdfcat/app/views/clients/index.rhtml:4:in `_run_rhtml_47app47views47clients47index46rhtml'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_view/base.rb:325:in `send'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_view/base.rb:325:in `compile_and_render_template'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_view/base.rb:301:in `render_template'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_view/base.rb:260:in `render_file'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/base.rb:812:in `render_file'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/base.rb:717:in `render_with_no_layout'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/layout.rb:247:in `render_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/benchmarking.rb:50:in `render'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/benchmarking.rb:50:in `render'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/base.rb:1102:in `perform_action_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/filters.rb:696:in `call_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/filters.rb:688:in `perform_action_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/benchmarking.rb:66:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/benchmarking.rb:66:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/rescue.rb:83:in `perform_action'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/base.rb:435:in `send'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/base.rb:435:in `process_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/filters.rb:684:in `process_without_session_management_support'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/session_management.rb:114:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/base.rb:334:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.2.6/lib/dispatcher.rb:41:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:78:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:76:in `synchronize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:76:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:618:in `process_client'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:617:in `each'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:617:in `process_client'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `initialize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `new'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `initialize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `new'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:271:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:270:in `each'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:270:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/bin/mongrel_rails:127:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/command.rb:211:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/bin/mongrel_rails:243
+    /usr/local/bin/mongrel_rails:16:in `load'
+    /usr/local/bin/mongrel_rails:16
+
+
+
+
+Processing ApplicationController#index (for 192.168.200.31 at 2007-12-07 13:52:21) [GET]
+  Session ID: d4e3908841b887a58049253cc3926a7d
+  Parameters: {}
+
+
+ActionController::RoutingError (no route found to match "" with {:method=>:get}):
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/routing.rb:1325:in `recognize_path'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/routing.rb:1315:in `recognize'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.2.6/lib/dispatcher.rb:40:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:78:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:76:in `synchronize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:76:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:618:in `process_client'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:617:in `each'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:617:in `process_client'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `initialize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `new'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `initialize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `new'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:271:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:270:in `each'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:270:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/bin/mongrel_rails:127:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/command.rb:211:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/bin/mongrel_rails:243
+    /usr/local/bin/mongrel_rails:16:in `load'
+    /usr/local/bin/mongrel_rails:16
+
+
+
+
+Processing PdfsController#index (for 192.168.200.31 at 2007-12-07 13:52:36) [GET]
+  Session ID: d4e3908841b887a58049253cc3926a7d
+  Parameters: {"action"=>"index", "controller"=>"pdfs"}
+Rendering  within layouts/application
+Rendering pdfs/index
+
+
+ActionView::TemplateError (No rhtml, rxml, rjs or delegate template found for clients/_search in /usr/pdfcat/app/views) on line #5 of app/views/pdfs/index.rhtml:
+2: <%= shortcut 'a', "/" + controller.controller_name %>  <!-- Disable Add New -->
+3: <%= shortcut_function 's', "$('client').focus();$('client').style.backgroundColor='#FFE887';" %>  <!-- Disable Add New -->
+4: 
+5: <%= render :partial => "clients/search" %>
+6: 
+7: <h1>Listing pdfs</h1>
+8: 
+
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_view/base.rb:401:in `find_template_extension_for'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_view/base.rb:332:in `pick_template_extension'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_view/base.rb:249:in `render_file'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_view/base.rb:275:in `render'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_view/partials.rb:59:in `render_partial'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/benchmarking.rb:30:in `benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_view/partials.rb:58:in `render_partial'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_view/base.rb:287:in `render'
+    /usr/pdfcat/app/views/pdfs/index.rhtml:5:in `_run_rhtml_47app47views47pdfs47index46rhtml'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_view/base.rb:325:in `send'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_view/base.rb:325:in `compile_and_render_template'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_view/base.rb:301:in `render_template'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_view/base.rb:260:in `render_file'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/base.rb:812:in `render_file'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/base.rb:717:in `render_with_no_layout'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/layout.rb:247:in `render_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/benchmarking.rb:50:in `render'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/benchmarking.rb:50:in `render'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/base.rb:1102:in `perform_action_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/filters.rb:696:in `call_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/filters.rb:688:in `perform_action_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/benchmarking.rb:66:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/benchmarking.rb:66:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/rescue.rb:83:in `perform_action'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/base.rb:435:in `send'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/base.rb:435:in `process_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/filters.rb:684:in `process_without_session_management_support'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/session_management.rb:114:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/base.rb:334:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.2.6/lib/dispatcher.rb:41:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:78:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:76:in `synchronize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:76:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:618:in `process_client'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:617:in `each'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:617:in `process_client'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `initialize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `new'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `initialize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `new'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:271:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:270:in `each'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:270:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/bin/mongrel_rails:127:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/command.rb:211:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/bin/mongrel_rails:243
+    /usr/local/bin/mongrel_rails:16:in `load'
+    /usr/local/bin/mongrel_rails:16
+
+
+
+
+Processing ApplicationController#index (for 192.168.200.31 at 2007-12-07 13:54:09) [GET]
+  Session ID: d4e3908841b887a58049253cc3926a7d
+  Parameters: {}
+
+
+ActionController::RoutingError (no route found to match "" with {:method=>:get}):
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/routing.rb:1325:in `recognize_path'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/routing.rb:1315:in `recognize'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.2.6/lib/dispatcher.rb:40:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:78:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:76:in `synchronize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:76:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:618:in `process_client'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:617:in `each'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:617:in `process_client'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `initialize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `new'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `initialize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `new'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:271:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:270:in `each'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:270:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/bin/mongrel_rails:127:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/command.rb:211:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/bin/mongrel_rails:243
+    /usr/local/bin/mongrel_rails:16:in `load'
+    /usr/local/bin/mongrel_rails:16
+
+
+
+
+Processing ApplicationController#index (for 192.168.200.31 at 2007-12-07 13:54:10) [GET]
+  Session ID: d4e3908841b887a58049253cc3926a7d
+  Parameters: {}
+
+
+ActionController::RoutingError (no route found to match "" with {:method=>:get}):
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/routing.rb:1325:in `recognize_path'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/routing.rb:1315:in `recognize'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.2.6/lib/dispatcher.rb:40:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:78:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:76:in `synchronize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:76:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:618:in `process_client'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:617:in `each'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:617:in `process_client'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `initialize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `new'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `initialize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `new'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:271:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:270:in `each'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:270:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/bin/mongrel_rails:127:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/command.rb:211:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/bin/mongrel_rails:243
+    /usr/local/bin/mongrel_rails:16:in `load'
+    /usr/local/bin/mongrel_rails:16
+
+
+
+
+Processing ApplicationController#index (for 192.168.200.31 at 2007-12-07 13:54:10) [GET]
+  Session ID: d4e3908841b887a58049253cc3926a7d
+  Parameters: {}
+
+
+ActionController::RoutingError (no route found to match "" with {:method=>:get}):
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/routing.rb:1325:in `recognize_path'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/routing.rb:1315:in `recognize'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.2.6/lib/dispatcher.rb:40:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:78:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:76:in `synchronize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:76:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:618:in `process_client'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:617:in `each'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:617:in `process_client'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `initialize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `new'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `initialize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `new'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:271:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:270:in `each'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:270:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/bin/mongrel_rails:127:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/command.rb:211:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/bin/mongrel_rails:243
+    /usr/local/bin/mongrel_rails:16:in `load'
+    /usr/local/bin/mongrel_rails:16
+
+
+
+
+Processing ApplicationController#index (for 192.168.200.31 at 2007-12-07 13:54:11) [GET]
+  Session ID: d4e3908841b887a58049253cc3926a7d
+  Parameters: {}
+
+
+ActionController::RoutingError (no route found to match "" with {:method=>:get}):
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/routing.rb:1325:in `recognize_path'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/routing.rb:1315:in `recognize'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.2.6/lib/dispatcher.rb:40:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:78:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:76:in `synchronize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:76:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:618:in `process_client'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:617:in `each'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:617:in `process_client'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `initialize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `new'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `initialize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `new'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:271:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:270:in `each'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:270:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/bin/mongrel_rails:127:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/command.rb:211:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/bin/mongrel_rails:243
+    /usr/local/bin/mongrel_rails:16:in `load'
+    /usr/local/bin/mongrel_rails:16
+
+
+
+
+Processing PdfsController#index (for 192.168.200.31 at 2007-12-07 13:54:13) [GET]
+  Session ID: d4e3908841b887a58049253cc3926a7d
+  Parameters: {"action"=>"index", "controller"=>"pdfs"}
+Rendering  within layouts/application
+Rendering pdfs/index
+Completed in 0.07805 (12 reqs/sec) | Rendering: 0.04500 (57%) | DB: 0.01344 (17%) | 200 OK [http://paistram/pdfcat/pdfs]
+
+
+Processing PdfsController#index (for 192.168.200.31 at 2007-12-07 13:54:23) [GET]
+  Session ID: d4e3908841b887a58049253cc3926a7d
+  Parameters: {"action"=>"index", "controller"=>"pdfs"}
+Rendering  within layouts/application
+Rendering pdfs/index
+
+
+ActionView::TemplateError (No rhtml, rxml, rjs or delegate template found for clients/_search in /usr/pdfcat/app/views) on line #5 of app/views/pdfs/index.rhtml:
+2: <%= shortcut 'a', "/" + controller.controller_name %>  <!-- Disable Add New -->
+3: <%= shortcut_function 's', "$('client').focus();$('client').style.backgroundColor='#FFE887';" %>  <!-- Disable Add New -->
+4: 
+5: <%= render :partial => "clients/search" %>
+6: 
+7: <h1>Listing pdfs</h1>
+8: 
+
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_view/base.rb:401:in `find_template_extension_for'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_view/base.rb:332:in `pick_template_extension'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_view/base.rb:249:in `render_file'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_view/base.rb:275:in `render'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_view/partials.rb:59:in `render_partial'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/benchmarking.rb:30:in `benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_view/partials.rb:58:in `render_partial'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_view/base.rb:287:in `render'
+    /usr/pdfcat/app/views/pdfs/index.rhtml:5:in `_run_rhtml_47app47views47pdfs47index46rhtml'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_view/base.rb:325:in `send'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_view/base.rb:325:in `compile_and_render_template'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_view/base.rb:301:in `render_template'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_view/base.rb:260:in `render_file'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/base.rb:812:in `render_file'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/base.rb:717:in `render_with_no_layout'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/layout.rb:247:in `render_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/benchmarking.rb:50:in `render'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/benchmarking.rb:50:in `render'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/base.rb:1102:in `perform_action_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/filters.rb:696:in `call_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/filters.rb:688:in `perform_action_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/benchmarking.rb:66:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/benchmarking.rb:66:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/rescue.rb:83:in `perform_action'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/base.rb:435:in `send'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/base.rb:435:in `process_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/filters.rb:684:in `process_without_session_management_support'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/session_management.rb:114:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/base.rb:334:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.2.6/lib/dispatcher.rb:41:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:78:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:76:in `synchronize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:76:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:618:in `process_client'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:617:in `each'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:617:in `process_client'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `initialize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `new'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `initialize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `new'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:271:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:270:in `each'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:270:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/bin/mongrel_rails:127:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/command.rb:211:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/bin/mongrel_rails:243
+    /usr/local/bin/mongrel_rails:16:in `load'
+    /usr/local/bin/mongrel_rails:16
+
+
+
+
+Processing PdfsController#index (for 192.168.200.31 at 2007-12-07 13:54:24) [GET]
+  Session ID: d4e3908841b887a58049253cc3926a7d
+  Parameters: {"action"=>"index", "controller"=>"pdfs"}
+Rendering  within layouts/application
+Rendering pdfs/index
+
+
+ActionView::TemplateError (No rhtml, rxml, rjs or delegate template found for clients/_search in /usr/pdfcat/app/views) on line #5 of app/views/pdfs/index.rhtml:
+2: <%= shortcut 'a', "/" + controller.controller_name %>  <!-- Disable Add New -->
+3: <%= shortcut_function 's', "$('client').focus();$('client').style.backgroundColor='#FFE887';" %>  <!-- Disable Add New -->
+4: 
+5: <%= render :partial => "clients/search" %>
+6: 
+7: <h1>Listing pdfs</h1>
+8: 
+
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_view/base.rb:401:in `find_template_extension_for'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_view/base.rb:332:in `pick_template_extension'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_view/base.rb:249:in `render_file'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_view/base.rb:275:in `render'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_view/partials.rb:59:in `render_partial'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/benchmarking.rb:30:in `benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_view/partials.rb:58:in `render_partial'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_view/base.rb:287:in `render'
+    /usr/pdfcat/app/views/pdfs/index.rhtml:5:in `_run_rhtml_47app47views47pdfs47index46rhtml'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_view/base.rb:325:in `send'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_view/base.rb:325:in `compile_and_render_template'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_view/base.rb:301:in `render_template'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_view/base.rb:260:in `render_file'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/base.rb:812:in `render_file'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/base.rb:717:in `render_with_no_layout'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/layout.rb:247:in `render_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/benchmarking.rb:50:in `render'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/benchmarking.rb:50:in `render'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/base.rb:1102:in `perform_action_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/filters.rb:696:in `call_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/filters.rb:688:in `perform_action_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/benchmarking.rb:66:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/benchmarking.rb:66:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/rescue.rb:83:in `perform_action'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/base.rb:435:in `send'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/base.rb:435:in `process_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/filters.rb:684:in `process_without_session_management_support'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/session_management.rb:114:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/base.rb:334:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.2.6/lib/dispatcher.rb:41:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:78:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:76:in `synchronize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:76:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:618:in `process_client'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:617:in `each'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:617:in `process_client'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `initialize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `new'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `initialize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `new'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:271:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:270:in `each'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:270:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/bin/mongrel_rails:127:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/command.rb:211:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/bin/mongrel_rails:243
+    /usr/local/bin/mongrel_rails:16:in `load'
+    /usr/local/bin/mongrel_rails:16
+
+
+
+
+Processing PdfsController#index (for 192.168.200.31 at 2007-12-07 13:54:24) [GET]
+  Session ID: d4e3908841b887a58049253cc3926a7d
+  Parameters: {"action"=>"index", "controller"=>"pdfs"}
+Rendering  within layouts/application
+Rendering pdfs/index
+
+
+ActionView::TemplateError (No rhtml, rxml, rjs or delegate template found for clients/_search in /usr/pdfcat/app/views) on line #5 of app/views/pdfs/index.rhtml:
+2: <%= shortcut 'a', "/" + controller.controller_name %>  <!-- Disable Add New -->
+3: <%= shortcut_function 's', "$('client').focus();$('client').style.backgroundColor='#FFE887';" %>  <!-- Disable Add New -->
+4: 
+5: <%= render :partial => "clients/search" %>
+6: 
+7: <h1>Listing pdfs</h1>
+8: 
+
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_view/base.rb:401:in `find_template_extension_for'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_view/base.rb:332:in `pick_template_extension'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_view/base.rb:249:in `render_file'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_view/base.rb:275:in `render'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_view/partials.rb:59:in `render_partial'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/benchmarking.rb:30:in `benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_view/partials.rb:58:in `render_partial'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_view/base.rb:287:in `render'
+    /usr/pdfcat/app/views/pdfs/index.rhtml:5:in `_run_rhtml_47app47views47pdfs47index46rhtml'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_view/base.rb:325:in `send'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_view/base.rb:325:in `compile_and_render_template'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_view/base.rb:301:in `render_template'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_view/base.rb:260:in `render_file'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/base.rb:812:in `render_file'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/base.rb:717:in `render_with_no_layout'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/layout.rb:247:in `render_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/benchmarking.rb:50:in `render'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/benchmarking.rb:50:in `render'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/base.rb:1102:in `perform_action_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/filters.rb:696:in `call_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/filters.rb:688:in `perform_action_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/benchmarking.rb:66:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/benchmarking.rb:66:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/rescue.rb:83:in `perform_action'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/base.rb:435:in `send'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/base.rb:435:in `process_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/filters.rb:684:in `process_without_session_management_support'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/session_management.rb:114:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/base.rb:334:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.2.6/lib/dispatcher.rb:41:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:78:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:76:in `synchronize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:76:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:618:in `process_client'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:617:in `each'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:617:in `process_client'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `initialize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `new'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `initialize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `new'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:271:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:270:in `each'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:270:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/bin/mongrel_rails:127:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/command.rb:211:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/bin/mongrel_rails:243
+    /usr/local/bin/mongrel_rails:16:in `load'
+    /usr/local/bin/mongrel_rails:16
+
+
+
+
+Processing PdfsController#index (for 192.168.200.31 at 2007-12-07 13:54:32) [GET]
+  Session ID: d4e3908841b887a58049253cc3926a7d
+  Parameters: {"action"=>"index", "controller"=>"pdfs"}
+Rendering  within layouts/application
+Rendering pdfs/index
+
+
+ActionView::TemplateError (No rhtml, rxml, rjs or delegate template found for clients/_search in /usr/pdfcat/app/views) on line #5 of app/views/pdfs/index.rhtml:
+2: <%= shortcut 'a', "/" + controller.controller_name %>  <!-- Disable Add New -->
+3: <%= shortcut_function 's', "$('client').focus();$('client').style.backgroundColor='#FFE887';" %>  <!-- Disable Add New -->
+4: 
+5: <%= render :partial => "clients/search" %>
+6: 
+7: <h1>Listing pdfs</h1>
+8: 
+
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_view/base.rb:401:in `find_template_extension_for'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_view/base.rb:332:in `pick_template_extension'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_view/base.rb:249:in `render_file'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_view/base.rb:275:in `render'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_view/partials.rb:59:in `render_partial'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/benchmarking.rb:30:in `benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_view/partials.rb:58:in `render_partial'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_view/base.rb:287:in `render'
+    /usr/pdfcat/app/views/pdfs/index.rhtml:5:in `_run_rhtml_47app47views47pdfs47index46rhtml'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_view/base.rb:325:in `send'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_view/base.rb:325:in `compile_and_render_template'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_view/base.rb:301:in `render_template'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_view/base.rb:260:in `render_file'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/base.rb:812:in `render_file'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/base.rb:717:in `render_with_no_layout'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/layout.rb:247:in `render_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/benchmarking.rb:50:in `render'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/benchmarking.rb:50:in `render'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/base.rb:1102:in `perform_action_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/filters.rb:696:in `call_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/filters.rb:688:in `perform_action_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/benchmarking.rb:66:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/benchmarking.rb:66:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/rescue.rb:83:in `perform_action'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/base.rb:435:in `send'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/base.rb:435:in `process_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/filters.rb:684:in `process_without_session_management_support'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/session_management.rb:114:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/base.rb:334:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.2.6/lib/dispatcher.rb:41:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:78:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:76:in `synchronize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:76:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:618:in `process_client'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:617:in `each'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:617:in `process_client'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `initialize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `new'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `initialize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `new'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:271:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:270:in `each'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:270:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/bin/mongrel_rails:127:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/command.rb:211:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/bin/mongrel_rails:243
+    /usr/local/bin/mongrel_rails:16:in `load'
+    /usr/local/bin/mongrel_rails:16
+
+
+
+
+Processing PdfsController#index (for 192.168.200.31 at 2007-12-07 13:54:33) [GET]
+  Session ID: d4e3908841b887a58049253cc3926a7d
+  Parameters: {"action"=>"index", "controller"=>"pdfs"}
+Rendering  within layouts/application
+Rendering pdfs/index
+
+
+ActionView::TemplateError (No rhtml, rxml, rjs or delegate template found for clients/_search in /usr/pdfcat/app/views) on line #5 of app/views/pdfs/index.rhtml:
+2: <%= shortcut 'a', "/" + controller.controller_name %>  <!-- Disable Add New -->
+3: <%= shortcut_function 's', "$('client').focus();$('client').style.backgroundColor='#FFE887';" %>  <!-- Disable Add New -->
+4: 
+5: <%= render :partial => "clients/search" %>
+6: 
+7: <h1>Listing pdfs</h1>
+8: 
+
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_view/base.rb:401:in `find_template_extension_for'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_view/base.rb:332:in `pick_template_extension'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_view/base.rb:249:in `render_file'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_view/base.rb:275:in `render'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_view/partials.rb:59:in `render_partial'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/benchmarking.rb:30:in `benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_view/partials.rb:58:in `render_partial'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_view/base.rb:287:in `render'
+    /usr/pdfcat/app/views/pdfs/index.rhtml:5:in `_run_rhtml_47app47views47pdfs47index46rhtml'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_view/base.rb:325:in `send'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_view/base.rb:325:in `compile_and_render_template'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_view/base.rb:301:in `render_template'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_view/base.rb:260:in `render_file'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/base.rb:812:in `render_file'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/base.rb:717:in `render_with_no_layout'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/layout.rb:247:in `render_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/benchmarking.rb:50:in `render'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/benchmarking.rb:50:in `render'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/base.rb:1102:in `perform_action_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/filters.rb:696:in `call_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/filters.rb:688:in `perform_action_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/benchmarking.rb:66:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/benchmarking.rb:66:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/rescue.rb:83:in `perform_action'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/base.rb:435:in `send'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/base.rb:435:in `process_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/filters.rb:684:in `process_without_session_management_support'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/session_management.rb:114:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/base.rb:334:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.2.6/lib/dispatcher.rb:41:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:78:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:76:in `synchronize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:76:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:618:in `process_client'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:617:in `each'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:617:in `process_client'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `initialize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `new'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `initialize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `new'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:271:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:270:in `each'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:270:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/bin/mongrel_rails:127:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/command.rb:211:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/bin/mongrel_rails:243
+    /usr/local/bin/mongrel_rails:16:in `load'
+    /usr/local/bin/mongrel_rails:16
+
+
+
+
+Processing PdfsController#index (for 192.168.200.31 at 2007-12-07 13:54:34) [GET]
+  Session ID: d4e3908841b887a58049253cc3926a7d
+  Parameters: {"action"=>"index", "controller"=>"pdfs"}
+Rendering  within layouts/application
+Rendering pdfs/index
+
+
+ActionView::TemplateError (No rhtml, rxml, rjs or delegate template found for clients/_search in /usr/pdfcat/app/views) on line #5 of app/views/pdfs/index.rhtml:
+2: <%= shortcut 'a', "/" + controller.controller_name %>  <!-- Disable Add New -->
+3: <%= shortcut_function 's', "$('client').focus();$('client').style.backgroundColor='#FFE887';" %>  <!-- Disable Add New -->
+4: 
+5: <%= render :partial => "clients/search" %>
+6: 
+7: <h1>Listing pdfs</h1>
+8: 
+
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_view/base.rb:401:in `find_template_extension_for'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_view/base.rb:332:in `pick_template_extension'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_view/base.rb:249:in `render_file'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_view/base.rb:275:in `render'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_view/partials.rb:59:in `render_partial'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/benchmarking.rb:30:in `benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_view/partials.rb:58:in `render_partial'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_view/base.rb:287:in `render'
+    /usr/pdfcat/app/views/pdfs/index.rhtml:5:in `_run_rhtml_47app47views47pdfs47index46rhtml'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_view/base.rb:325:in `send'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_view/base.rb:325:in `compile_and_render_template'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_view/base.rb:301:in `render_template'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_view/base.rb:260:in `render_file'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/base.rb:812:in `render_file'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/base.rb:717:in `render_with_no_layout'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/layout.rb:247:in `render_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/benchmarking.rb:50:in `render'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/benchmarking.rb:50:in `render'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/base.rb:1102:in `perform_action_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/filters.rb:696:in `call_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/filters.rb:688:in `perform_action_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/benchmarking.rb:66:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/benchmarking.rb:66:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/rescue.rb:83:in `perform_action'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/base.rb:435:in `send'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/base.rb:435:in `process_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/filters.rb:684:in `process_without_session_management_support'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/session_management.rb:114:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/base.rb:334:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.2.6/lib/dispatcher.rb:41:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:78:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:76:in `synchronize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:76:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:618:in `process_client'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:617:in `each'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:617:in `process_client'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `initialize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `new'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `initialize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `new'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:271:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:270:in `each'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:270:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/bin/mongrel_rails:127:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/command.rb:211:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/bin/mongrel_rails:243
+    /usr/local/bin/mongrel_rails:16:in `load'
+    /usr/local/bin/mongrel_rails:16
+
+
+
+
+Processing PdfsController#index (for 192.168.200.31 at 2007-12-07 13:54:55) [GET]
+  Session ID: d4e3908841b887a58049253cc3926a7d
+  Parameters: {"action"=>"index", "controller"=>"pdfs"}
+Rendering  within layouts/application
+Rendering pdfs/index
+Completed in 0.11747 (8 reqs/sec) | Rendering: 0.10645 (90%) | DB: 0.00956 (8%) | 200 OK [http://paistram/pdfcat/pdfs]
+
+
+Processing PdfsController#index (for 192.168.200.31 at 2007-12-07 13:57:49) [GET]
+  Session ID: d4e3908841b887a58049253cc3926a7d
+  Parameters: {"action"=>"index", "controller"=>"pdfs"}
+Rendering  within layouts/application
+Rendering pdfs/index
+Completed in 0.03686 (27 reqs/sec) | Rendering: 0.02825 (76%) | DB: 0.00718 (19%) | 200 OK [http://paistram/pdfcat/pdfs]
+
+
+Processing ClientsController#index (for 192.168.200.31 at 2007-12-07 13:57:53) [GET]
+  Session ID: d4e3908841b887a58049253cc3926a7d
+  Parameters: {"action"=>"index", "controller"=>"clients"}
+Rendering  within layouts/application
+Rendering clients/index
+Completed in 0.01659 (60 reqs/sec) | Rendering: 0.01322 (79%) | DB: 0.00130 (7%) | 200 OK [http://paistram/pdfcat/clients]
+
+
+Processing ClientsController#search (for 192.168.200.31 at 2007-12-07 13:57:56) [POST]
+  Session ID: d4e3908841b887a58049253cc3926a7d
+  Parameters: {"client"=>"tram", "action"=>"search", "controller"=>"clients"}
+Rendering layoutfalseactionindex within layouts/application
+Rendering clients/index
+Completed in 0.00816 (122 reqs/sec) | Rendering: 0.00554 (67%) | DB: 0.00118 (14%) | 200 OK [http://paistram/pdfcat/clients/search]
+
+
+Processing PdfsController#index (for 192.168.200.31 at 2007-12-07 14:01:14) [GET]
+  Session ID: d4e3908841b887a58049253cc3926a7d
+  Parameters: {"action"=>"index", "controller"=>"pdfs"}
+Rendering  within layouts/application
+Rendering pdfs/index
+Completed in 0.03308 (30 reqs/sec) | Rendering: 0.02449 (74%) | DB: 0.00719 (21%) | 200 OK [http://paistram/pdfcat/pdfs]
+
+
+Processing NewController#index (for 192.168.200.31 at 2007-12-07 14:01:17) [GET]
+  Session ID: d4e3908841b887a58049253cc3926a7d
+  Parameters: {"action"=>"index", "controller"=>"new"}
+Rendering  within layouts/application
+Rendering new/index
+Completed in 0.03837 (26 reqs/sec) | Rendering: 0.03732 (97%) | DB: 0.00000 (0%) | 200 OK [http://paistram/pdfcat/new]
+
+
+Processing PdfsController#new (for 192.168.200.31 at 2007-12-07 14:01:19) [GET]
+  Session ID: d4e3908841b887a58049253cc3926a7d
+  Parameters: {"action"=>"new", "controller"=>"pdfs", "filename"=>"/usr/pdfcat_upload/DOC071203035721(0001).pdf"}
+Rendering  within layouts/application
+Rendering pdfs/new
+Completed in 0.01411 (70 reqs/sec) | Rendering: 0.01262 (89%) | DB: 0.00121 (8%) | 200 OK [http://paistram/pdfcat/pdfs/new?filename=%2Fusr%2Fpdfcat_upload%2FDOC071203035721%280001%29.pdf]
+
+
+Processing NewController#index (for 192.168.200.31 at 2007-12-07 14:01:39) [GET]
+  Session ID: d4e3908841b887a58049253cc3926a7d
+  Parameters: {"action"=>"index", "controller"=>"new"}
+Rendering  within layouts/application
+Rendering new/index
+Completed in 0.00568 (176 reqs/sec) | Rendering: 0.00548 (96%) | DB: 0.00000 (0%) | 200 OK [http://paistram/pdfcat/new]
+
+
+Processing PdfsController#index (for 192.168.200.31 at 2007-12-07 14:12:30) [GET]
+  Session ID: d4e3908841b887a58049253cc3926a7d
+  Parameters: {"action"=>"index", "controller"=>"pdfs"}
+Rendering  within layouts/application
+Rendering pdfs/index
+Completed in 0.03858 (25 reqs/sec) | Rendering: 0.03012 (78%) | DB: 0.00707 (18%) | 200 OK [http://paistram/pdfcat/pdfs]
+
+
+Processing PdfsController#index (for 192.168.200.31 at 2007-12-07 14:12:33) [GET]
+  Session ID: d4e3908841b887a58049253cc3926a7d
+  Parameters: {"action"=>"index", "controller"=>"pdfs", "page"=>"2"}
+Rendering  within layouts/application
+Rendering pdfs/index
+Completed in 0.03534 (28 reqs/sec) | Rendering: 0.02687 (76%) | DB: 0.00708 (20%) | 200 OK [http://paistram/pdfcat/pdfs?page=2]
+
+
+Processing PdfsController#index (for 192.168.200.31 at 2007-12-07 14:12:38) [GET]
+  Session ID: d4e3908841b887a58049253cc3926a7d
+  Parameters: {"action"=>"index", "controller"=>"pdfs", "page"=>"3"}
+Rendering  within layouts/application
+Rendering pdfs/index
+Completed in 0.03532 (28 reqs/sec) | Rendering: 0.02683 (75%) | DB: 0.00708 (20%) | 200 OK [http://paistram/pdfcat/pdfs?page=3]
+
+
+Processing PdfsController#index (for 192.168.200.31 at 2007-12-07 14:12:40) [GET]
+  Session ID: d4e3908841b887a58049253cc3926a7d
+  Parameters: {"action"=>"index", "controller"=>"pdfs", "page"=>"14"}
+Rendering  within layouts/application
+Rendering pdfs/index
+Completed in 0.02153 (46 reqs/sec) | Rendering: 0.01640 (76%) | DB: 0.00391 (18%) | 200 OK [http://paistram/pdfcat/pdfs?page=14]
+
+
+Processing PdfsController#index (for 192.168.200.31 at 2007-12-07 14:12:44) [GET]
+  Session ID: d4e3908841b887a58049253cc3926a7d
+  Parameters: {"action"=>"index", "controller"=>"pdfs", "page"=>"13"}
+Rendering  within layouts/application
+Rendering pdfs/index
+Completed in 0.03532 (28 reqs/sec) | Rendering: 0.02682 (75%) | DB: 0.00708 (20%) | 200 OK [http://paistram/pdfcat/pdfs?page=13]
+
+
+Processing PdfsController#index (for 192.168.200.31 at 2007-12-07 14:12:48) [GET]
+  Session ID: d4e3908841b887a58049253cc3926a7d
+  Parameters: {"action"=>"index", "controller"=>"pdfs", "page"=>"12"}
+Rendering  within layouts/application
+Rendering pdfs/index
+Completed in 0.03538 (28 reqs/sec) | Rendering: 0.02679 (75%) | DB: 0.00721 (20%) | 200 OK [http://paistram/pdfcat/pdfs?page=12]
+
+
+Processing PdfsController#index (for 192.168.200.31 at 2007-12-07 14:12:49) [GET]
+  Session ID: d4e3908841b887a58049253cc3926a7d
+  Parameters: {"action"=>"index", "controller"=>"pdfs", "page"=>"11"}
+Rendering  within layouts/application
+Rendering pdfs/index
+Completed in 0.09423 (10 reqs/sec) | Rendering: 0.08568 (90%) | DB: 0.00716 (7%) | 200 OK [http://paistram/pdfcat/pdfs?page=11]
+
+
+Processing PdfsController#index (for 192.168.200.31 at 2007-12-07 14:12:55) [GET]
+  Session ID: d4e3908841b887a58049253cc3926a7d
+  Parameters: {"action"=>"index", "controller"=>"pdfs"}
+Rendering  within layouts/application
+Rendering pdfs/index
+Completed in 0.03554 (28 reqs/sec) | Rendering: 0.02701 (75%) | DB: 0.00711 (20%) | 200 OK [http://paistram/pdfcat/pdfs]
+
+
+Processing PdfsController#index (for 192.168.200.31 at 2007-12-07 14:41:21) [GET]
+  Session ID: d4e3908841b887a58049253cc3926a7d
+  Parameters: {"action"=>"index", "controller"=>"pdfs"}
+Rendering  within layouts/application
+Rendering pdfs/index
+Completed in 0.03891 (25 reqs/sec) | Rendering: 0.03034 (77%) | DB: 0.00716 (18%) | 200 OK [http://paistram/pdfcat/pdfs]
+
+
+Processing PdfsController#index (for 192.168.200.31 at 2007-12-07 14:41:36) [GET]
+  Session ID: d4e3908841b887a58049253cc3926a7d
+  Parameters: {"action"=>"index", "controller"=>"pdfs", "page"=>"2"}
+Rendering  within layouts/application
+Rendering pdfs/index
+Completed in 0.03547 (28 reqs/sec) | Rendering: 0.02702 (76%) | DB: 0.00706 (19%) | 200 OK [http://paistram/pdfcat/pdfs?page=2]
+
+
+Processing PdfsController#index (for 192.168.200.31 at 2007-12-07 14:41:38) [GET]
+  Session ID: d4e3908841b887a58049253cc3926a7d
+  Parameters: {"action"=>"index", "controller"=>"pdfs", "page"=>"1"}
+Rendering  within layouts/application
+Rendering pdfs/index
+Completed in 0.03554 (28 reqs/sec) | Rendering: 0.02692 (75%) | DB: 0.00713 (20%) | 200 OK [http://paistram/pdfcat/pdfs?page=1]
+
+
+Processing PdfsController#index (for 192.168.200.31 at 2007-12-07 14:41:41) [GET]
+  Session ID: d4e3908841b887a58049253cc3926a7d
+  Parameters: {"action"=>"index", "controller"=>"pdfs", "page"=>"2"}
+Rendering  within layouts/application
+Rendering pdfs/index
+Completed in 0.03532 (28 reqs/sec) | Rendering: 0.02688 (76%) | DB: 0.00704 (19%) | 200 OK [http://paistram/pdfcat/pdfs?page=2]
+
+
+Processing ClientsController#index (for 192.168.200.31 at 2007-12-07 14:42:17) [GET]
+  Session ID: d4e3908841b887a58049253cc3926a7d
+  Parameters: {"action"=>"index", "controller"=>"clients"}
+Rendering  within layouts/application
+Rendering clients/index
+Completed in 0.01671 (59 reqs/sec) | Rendering: 0.01464 (87%) | DB: 0.00084 (5%) | 200 OK [http://paistram/pdfcat/clients]
+
+
+Processing ClientsController#index (for 192.168.200.31 at 2007-12-07 14:42:20) [GET]
+  Session ID: d4e3908841b887a58049253cc3926a7d
+  Parameters: {"action"=>"index", "controller"=>"clients", "page"=>"2"}
+Rendering  within layouts/application
+Rendering clients/index
+Completed in 0.01357 (73 reqs/sec) | Rendering: 0.01152 (84%) | DB: 0.00081 (6%) | 200 OK [http://paistram/pdfcat/clients?page=2]
+
+
+Processing CategoriesController#index (for 192.168.200.31 at 2007-12-07 14:42:29) [GET]
+  Session ID: d4e3908841b887a58049253cc3926a7d
+  Parameters: {"action"=>"index", "controller"=>"categories"}
+Rendering  within layouts/application
+Rendering categories/index
+Completed in 0.01763 (56 reqs/sec) | Rendering: 0.01494 (84%) | DB: 0.00070 (3%) | 200 OK [http://paistram/pdfcat/categories]
+
+
+Processing PdfsController#index (for 192.168.200.31 at 2007-12-07 14:42:33) [GET]
+  Session ID: d4e3908841b887a58049253cc3926a7d
+  Parameters: {"action"=>"index", "controller"=>"pdfs"}
+Rendering  within layouts/application
+Rendering pdfs/index
+Completed in 0.03552 (28 reqs/sec) | Rendering: 0.02703 (76%) | DB: 0.00708 (19%) | 200 OK [http://paistram/pdfcat/pdfs]
+
+
+Processing PdfsController#index (for 192.168.200.31 at 2007-12-07 14:44:25) [GET]
+  Session ID: d4e3908841b887a58049253cc3926a7d
+  Parameters: {"action"=>"index", "controller"=>"pdfs"}
+Rendering  within layouts/application
+Rendering pdfs/index
+
+
+ActionView::TemplateError (undefined method `relative_url_root' for #<#<Class:0x9b3aebc>:0x990af84>) on line #9 of app/views/pdfs/index.rhtml:
+6: 
+7: <h1>Listing pdfs</h1>
+8: 
+9: <%=h relative_url_root() %>
+10: 
+11: 
+12: <table>
+
+    /usr/pdfcat/app/views/pdfs/index.rhtml:9:in `_run_rhtml_47app47views47pdfs47index46rhtml'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_view/base.rb:325:in `send'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_view/base.rb:325:in `compile_and_render_template'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_view/base.rb:301:in `render_template'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_view/base.rb:260:in `render_file'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/base.rb:812:in `render_file'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/base.rb:717:in `render_with_no_layout'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/layout.rb:247:in `render_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/benchmarking.rb:50:in `render'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/benchmarking.rb:50:in `render'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/base.rb:1102:in `perform_action_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/filters.rb:696:in `call_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/filters.rb:688:in `perform_action_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/benchmarking.rb:66:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/benchmarking.rb:66:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/rescue.rb:83:in `perform_action'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/base.rb:435:in `send'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/base.rb:435:in `process_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/filters.rb:684:in `process_without_session_management_support'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/session_management.rb:114:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/base.rb:334:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.2.6/lib/dispatcher.rb:41:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:78:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:76:in `synchronize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:76:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:618:in `process_client'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:617:in `each'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:617:in `process_client'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `initialize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `new'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `initialize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `new'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:271:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:270:in `each'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:270:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/bin/mongrel_rails:127:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/command.rb:211:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/bin/mongrel_rails:243
+    /usr/local/bin/mongrel_rails:16:in `load'
+    /usr/local/bin/mongrel_rails:16
+
+
+
+
+Processing PdfsController#index (for 192.168.200.31 at 2007-12-07 14:44:36) [GET]
+  Session ID: d4e3908841b887a58049253cc3926a7d
+  Parameters: {"action"=>"index", "controller"=>"pdfs"}
+Rendering  within layouts/application
+Rendering pdfs/index
+
+
+ActionView::TemplateError (undefined method `host' for #<#<Class:0x9b3aebc>:0x9b2f2d8>) on line #9 of app/views/pdfs/index.rhtml:
+6: 
+7: <h1>Listing pdfs</h1>
+8: 
+9: <%=h host() %>
+10: 
+11: 
+12: <table>
+
+    /usr/pdfcat/app/views/pdfs/index.rhtml:9:in `_run_rhtml_47app47views47pdfs47index46rhtml'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_view/base.rb:325:in `send'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_view/base.rb:325:in `compile_and_render_template'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_view/base.rb:301:in `render_template'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_view/base.rb:260:in `render_file'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/base.rb:812:in `render_file'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/base.rb:717:in `render_with_no_layout'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/layout.rb:247:in `render_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/benchmarking.rb:50:in `render'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/benchmarking.rb:50:in `render'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/base.rb:1102:in `perform_action_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/filters.rb:696:in `call_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/filters.rb:688:in `perform_action_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/benchmarking.rb:66:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/benchmarking.rb:66:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/rescue.rb:83:in `perform_action'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/base.rb:435:in `send'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/base.rb:435:in `process_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/filters.rb:684:in `process_without_session_management_support'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/session_management.rb:114:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/base.rb:334:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.2.6/lib/dispatcher.rb:41:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:78:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:76:in `synchronize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:76:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:618:in `process_client'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:617:in `each'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:617:in `process_client'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `initialize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `new'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `initialize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `new'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:271:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:270:in `each'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:270:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/bin/mongrel_rails:127:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/command.rb:211:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/bin/mongrel_rails:243
+    /usr/local/bin/mongrel_rails:16:in `load'
+    /usr/local/bin/mongrel_rails:16
+
+
+
+
+Processing PdfsController#index (for 192.168.200.31 at 2007-12-07 14:44:37) [GET]
+  Session ID: d4e3908841b887a58049253cc3926a7d
+  Parameters: {"action"=>"index", "controller"=>"pdfs"}
+Rendering  within layouts/application
+Rendering pdfs/index
+
+
+ActionView::TemplateError (undefined method `host' for #<#<Class:0x9b3aebc>:0x9bd3130>) on line #9 of app/views/pdfs/index.rhtml:
+6: 
+7: <h1>Listing pdfs</h1>
+8: 
+9: <%=h host() %>
+10: 
+11: 
+12: <table>
+
+    /usr/pdfcat/app/views/pdfs/index.rhtml:9:in `_run_rhtml_47app47views47pdfs47index46rhtml'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_view/base.rb:325:in `send'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_view/base.rb:325:in `compile_and_render_template'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_view/base.rb:301:in `render_template'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_view/base.rb:260:in `render_file'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/base.rb:812:in `render_file'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/base.rb:717:in `render_with_no_layout'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/layout.rb:247:in `render_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/benchmarking.rb:50:in `render'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/benchmarking.rb:50:in `render'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/base.rb:1102:in `perform_action_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/filters.rb:696:in `call_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/filters.rb:688:in `perform_action_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/benchmarking.rb:66:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/benchmarking.rb:66:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/rescue.rb:83:in `perform_action'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/base.rb:435:in `send'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/base.rb:435:in `process_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/filters.rb:684:in `process_without_session_management_support'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/session_management.rb:114:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/base.rb:334:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.2.6/lib/dispatcher.rb:41:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:78:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:76:in `synchronize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:76:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:618:in `process_client'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:617:in `each'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:617:in `process_client'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `initialize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `new'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `initialize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `new'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:271:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:270:in `each'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:270:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/bin/mongrel_rails:127:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/command.rb:211:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/bin/mongrel_rails:243
+    /usr/local/bin/mongrel_rails:16:in `load'
+    /usr/local/bin/mongrel_rails:16
+
+
+
+
+Processing PdfsController#index (for 192.168.200.31 at 2007-12-07 14:44:42) [GET]
+  Session ID: d4e3908841b887a58049253cc3926a7d
+  Parameters: {"action"=>"index", "controller"=>"pdfs"}
+Rendering  within layouts/application
+Rendering pdfs/index
+
+
+ActionView::TemplateError (wrong number of arguments) on line #9 of app/views/pdfs/index.rhtml:
+6: 
+7: <h1>Listing pdfs</h1>
+8: 
+9: <%=h test %>
+10: 
+11: 
+12: <table>
+
+    /usr/pdfcat/app/views/pdfs/index.rhtml:9:in `test'
+    /usr/pdfcat/app/views/pdfs/index.rhtml:9:in `_run_rhtml_47app47views47pdfs47index46rhtml'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_view/base.rb:325:in `send'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_view/base.rb:325:in `compile_and_render_template'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_view/base.rb:301:in `render_template'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_view/base.rb:260:in `render_file'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/base.rb:812:in `render_file'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/base.rb:717:in `render_with_no_layout'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/layout.rb:247:in `render_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/benchmarking.rb:50:in `render'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/benchmarking.rb:50:in `render'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/base.rb:1102:in `perform_action_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/filters.rb:696:in `call_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/filters.rb:688:in `perform_action_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/benchmarking.rb:66:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/benchmarking.rb:66:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/rescue.rb:83:in `perform_action'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/base.rb:435:in `send'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/base.rb:435:in `process_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/filters.rb:684:in `process_without_session_management_support'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/session_management.rb:114:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/base.rb:334:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.2.6/lib/dispatcher.rb:41:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:78:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:76:in `synchronize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:76:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:618:in `process_client'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:617:in `each'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:617:in `process_client'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `initialize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `new'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `initialize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `new'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:271:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:270:in `each'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:270:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/bin/mongrel_rails:127:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/command.rb:211:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/bin/mongrel_rails:243
+    /usr/local/bin/mongrel_rails:16:in `load'
+    /usr/local/bin/mongrel_rails:16
+
+
+
+
+Processing PdfsController#index (for 192.168.200.31 at 2007-12-07 14:44:50) [GET]
+  Session ID: d4e3908841b887a58049253cc3926a7d
+  Parameters: {"action"=>"index", "controller"=>"pdfs"}
+Rendering  within layouts/application
+Rendering pdfs/index
+Completed in 0.03871 (25 reqs/sec) | Rendering: 0.03019 (77%) | DB: 0.00712 (18%) | 200 OK [http://paistram/pdfcat/pdfs]
+
+
+Processing PdfsController#index (for 192.168.200.31 at 2007-12-07 15:07:32) [GET]
+  Session ID: d4e3908841b887a58049253cc3926a7d
+  Parameters: {"action"=>"index", "controller"=>"pdfs"}
+Rendering  within layouts/application
+Rendering pdfs/index
+
+
+ActionView::TemplateError (uninitialized constant ActionView::Base::CompiledTemplates::BASE_URL) on line #14 of app/views/layouts/application.rhtml:
+11: </head>
+12: <body>
+13: 	<!-- Nav keys -->
+14: 	<%= shortcut ')', "#{BASE_URL}/new" %>
+15: 	<%= shortcut '!', "/pdfs" %>
+16: 	<%= shortcut '@', "/clients" %>
+17: 	<%= shortcut '#', "/categories" %>
+
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.4.4/lib/active_support/dependencies.rb:263:in `load_missing_constant'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.4.4/lib/active_support/dependencies.rb:452:in `const_missing'
+    /usr/pdfcat/app/views/layouts/application.rhtml:14:in `_run_rhtml_47app47views47layouts47application46rhtml'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_view/base.rb:325:in `send'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_view/base.rb:325:in `compile_and_render_template'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_view/base.rb:301:in `render_template'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_view/base.rb:260:in `render_file'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/layout.rb:254:in `render_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/benchmarking.rb:50:in `render'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/benchmarking.rb:50:in `render'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/base.rb:1102:in `perform_action_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/filters.rb:696:in `call_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/filters.rb:688:in `perform_action_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/benchmarking.rb:66:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/benchmarking.rb:66:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/rescue.rb:83:in `perform_action'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/base.rb:435:in `send'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/base.rb:435:in `process_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/filters.rb:684:in `process_without_session_management_support'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/session_management.rb:114:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/base.rb:334:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.2.6/lib/dispatcher.rb:41:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:78:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:76:in `synchronize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:76:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:618:in `process_client'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:617:in `each'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:617:in `process_client'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `initialize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `new'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `initialize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `new'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:271:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:270:in `each'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:270:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/bin/mongrel_rails:127:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/command.rb:211:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/bin/mongrel_rails:243
+    /usr/local/bin/mongrel_rails:16:in `load'
+    /usr/local/bin/mongrel_rails:16
+
+
+
+
+Processing PdfsController#index (for 192.168.200.31 at 2007-12-07 15:07:35) [GET]
+  Session ID: d4e3908841b887a58049253cc3926a7d
+  Parameters: {"action"=>"index", "controller"=>"pdfs"}
+Rendering  within layouts/application
+Rendering pdfs/index
+
+
+ActionView::TemplateError (uninitialized constant ActionView::Base::CompiledTemplates::BASE_URL) on line #14 of app/views/layouts/application.rhtml:
+11: </head>
+12: <body>
+13: 	<!-- Nav keys -->
+14: 	<%= shortcut ')', "#{BASE_URL}/new" %>
+15: 	<%= shortcut '!', "/pdfs" %>
+16: 	<%= shortcut '@', "/clients" %>
+17: 	<%= shortcut '#', "/categories" %>
+
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.4.4/lib/active_support/dependencies.rb:263:in `load_missing_constant'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.4.4/lib/active_support/dependencies.rb:452:in `const_missing'
+    /usr/pdfcat/app/views/layouts/application.rhtml:14:in `_run_rhtml_47app47views47layouts47application46rhtml'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_view/base.rb:325:in `send'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_view/base.rb:325:in `compile_and_render_template'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_view/base.rb:301:in `render_template'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_view/base.rb:260:in `render_file'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/layout.rb:254:in `render_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/benchmarking.rb:50:in `render'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/benchmarking.rb:50:in `render'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/base.rb:1102:in `perform_action_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/filters.rb:696:in `call_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/filters.rb:688:in `perform_action_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/benchmarking.rb:66:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/benchmarking.rb:66:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/rescue.rb:83:in `perform_action'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/base.rb:435:in `send'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/base.rb:435:in `process_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/filters.rb:684:in `process_without_session_management_support'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/session_management.rb:114:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/base.rb:334:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.2.6/lib/dispatcher.rb:41:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:78:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:76:in `synchronize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:76:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:618:in `process_client'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:617:in `each'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:617:in `process_client'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `initialize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `new'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `initialize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `new'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:271:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:270:in `each'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:270:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/bin/mongrel_rails:127:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/command.rb:211:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/bin/mongrel_rails:243
+    /usr/local/bin/mongrel_rails:16:in `load'
+    /usr/local/bin/mongrel_rails:16
+
+
+
+
+Processing PdfsController#index (for 192.168.200.31 at 2007-12-07 15:07:36) [GET]
+  Session ID: d4e3908841b887a58049253cc3926a7d
+  Parameters: {"action"=>"index", "controller"=>"pdfs"}
+Rendering  within layouts/application
+Rendering pdfs/index
+
+
+ActionView::TemplateError (uninitialized constant ActionView::Base::CompiledTemplates::BASE_URL) on line #14 of app/views/layouts/application.rhtml:
+11: </head>
+12: <body>
+13: 	<!-- Nav keys -->
+14: 	<%= shortcut ')', "#{BASE_URL}/new" %>
+15: 	<%= shortcut '!', "/pdfs" %>
+16: 	<%= shortcut '@', "/clients" %>
+17: 	<%= shortcut '#', "/categories" %>
+
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.4.4/lib/active_support/dependencies.rb:263:in `load_missing_constant'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.4.4/lib/active_support/dependencies.rb:452:in `const_missing'
+    /usr/pdfcat/app/views/layouts/application.rhtml:14:in `_run_rhtml_47app47views47layouts47application46rhtml'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_view/base.rb:325:in `send'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_view/base.rb:325:in `compile_and_render_template'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_view/base.rb:301:in `render_template'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_view/base.rb:260:in `render_file'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/layout.rb:254:in `render_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/benchmarking.rb:50:in `render'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/benchmarking.rb:50:in `render'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/base.rb:1102:in `perform_action_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/filters.rb:696:in `call_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/filters.rb:688:in `perform_action_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/benchmarking.rb:66:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/benchmarking.rb:66:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/rescue.rb:83:in `perform_action'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/base.rb:435:in `send'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/base.rb:435:in `process_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/filters.rb:684:in `process_without_session_management_support'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/session_management.rb:114:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/base.rb:334:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.2.6/lib/dispatcher.rb:41:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:78:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:76:in `synchronize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:76:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:618:in `process_client'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:617:in `each'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:617:in `process_client'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `initialize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `new'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `initialize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `new'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:271:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:270:in `each'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:270:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/bin/mongrel_rails:127:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/command.rb:211:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/bin/mongrel_rails:243
+    /usr/local/bin/mongrel_rails:16:in `load'
+    /usr/local/bin/mongrel_rails:16
+
+
+
+
+Processing PdfsController#index (for 192.168.200.31 at 2007-12-07 15:07:51) [GET]
+  Session ID: d4e3908841b887a58049253cc3926a7d
+  Parameters: {"action"=>"index", "controller"=>"pdfs"}
+Rendering  within layouts/application
+Rendering pdfs/index
+Completed in 0.08168 (12 reqs/sec) | Rendering: 0.04836 (59%) | DB: 0.01349 (16%) | 200 OK [http://paistram/pdfcat/pdfs]
+
+
+Processing NewController#index (for 192.168.200.31 at 2007-12-07 15:07:54) [GET]
+  Session ID: d4e3908841b887a58049253cc3926a7d
+  Parameters: {"action"=>"index", "controller"=>"new"}
+Rendering  within layouts/application
+Rendering new/index
+Completed in 0.00922 (108 reqs/sec) | Rendering: 0.00813 (88%) | DB: 0.00000 (0%) | 200 OK [http://paistram/pdfcat/new]
+
+
+Processing NewController#index (for 192.168.200.31 at 2007-12-07 15:13:11) [GET]
+  Session ID: d4e3908841b887a58049253cc3926a7d
+  Parameters: {"action"=>"index", "controller"=>"new"}
+Rendering  within layouts/application
+Rendering new/index
+Completed in 0.00893 (112 reqs/sec) | Rendering: 0.00871 (97%) | DB: 0.00000 (0%) | 200 OK [http://paistram/pdfcat/new]
+
+
+Processing ClientsController#index (for 192.168.200.31 at 2007-12-07 15:13:14) [GET]
+  Session ID: d4e3908841b887a58049253cc3926a7d
+  Parameters: {"action"=>"index", "controller"=>"clients"}
+Rendering  within layouts/application
+Rendering clients/index
+Completed in 0.01894 (52 reqs/sec) | Rendering: 0.01556 (82%) | DB: 0.00128 (6%) | 200 OK [http://paistram/pdfcat/clients]
+
+
+Processing PdfsController#index (for 192.168.200.31 at 2007-12-07 15:13:17) [GET]
+  Session ID: d4e3908841b887a58049253cc3926a7d
+  Parameters: {"action"=>"index", "controller"=>"pdfs"}
+Rendering  within layouts/application
+Rendering pdfs/index
+Completed in 0.03666 (27 reqs/sec) | Rendering: 0.02796 (76%) | DB: 0.00726 (19%) | 200 OK [http://paistram/pdfcat/pdfs]
+
+
+Processing ClientsController#index (for 192.168.200.31 at 2007-12-07 15:13:19) [GET]
+  Session ID: d4e3908841b887a58049253cc3926a7d
+  Parameters: {"action"=>"index", "controller"=>"clients"}
+Rendering  within layouts/application
+Rendering clients/index
+Completed in 0.01388 (72 reqs/sec) | Rendering: 0.01166 (83%) | DB: 0.00093 (6%) | 200 OK [http://paistram/pdfcat/clients]
+
+
+Processing CategoriesController#index (for 192.168.200.31 at 2007-12-07 15:13:22) [GET]
+  Session ID: d4e3908841b887a58049253cc3926a7d
+  Parameters: {"action"=>"index", "controller"=>"categories"}
+Rendering  within layouts/application
+Rendering categories/index
+Completed in 0.01822 (54 reqs/sec) | Rendering: 0.01547 (84%) | DB: 0.00070 (3%) | 200 OK [http://paistram/pdfcat/categories]
+
+
+Processing PdfsController#index (for 192.168.200.31 at 2007-12-07 15:13:25) [GET]
+  Session ID: d4e3908841b887a58049253cc3926a7d
+  Parameters: {"action"=>"index", "controller"=>"pdfs"}
+Rendering  within layouts/application
+Rendering pdfs/index
+Completed in 0.03670 (27 reqs/sec) | Rendering: 0.02803 (76%) | DB: 0.00723 (19%) | 200 OK [http://paistram/pdfcat/pdfs]
+
+
+Processing NewController#index (for 192.168.200.31 at 2007-12-07 15:13:28) [GET]
+  Session ID: d4e3908841b887a58049253cc3926a7d
+  Parameters: {"action"=>"index", "controller"=>"new"}
+Rendering  within layouts/application
+Rendering new/index
+Completed in 0.00601 (166 reqs/sec) | Rendering: 0.00580 (96%) | DB: 0.00000 (0%) | 200 OK [http://paistram/pdfcat/new]
+
+
+Processing PdfsController#index (for 192.168.200.31 at 2007-12-07 15:13:34) [GET]
+  Session ID: d4e3908841b887a58049253cc3926a7d
+  Parameters: {"action"=>"index", "controller"=>"pdfs"}
+Rendering  within layouts/application
+Rendering pdfs/index
+Completed in 0.03694 (27 reqs/sec) | Rendering: 0.02814 (76%) | DB: 0.00735 (19%) | 200 OK [http://paistram/pdfcat/pdfs]

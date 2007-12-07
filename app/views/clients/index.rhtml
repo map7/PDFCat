@@ -22,7 +22,7 @@
     <td><%=h client.send(column.name) %></td>
   <% end %>
 
-	<%= shortcut @no, "/" + controller.controller_name + "/show/" + client.id.to_s %>
+  <%= shortcut @no, "#{BASE_URL}/" + controller.controller_name + "/show/" + client.id.to_s %>
 
     <td><%= link_to 'Show', :action => 'show', :id => client %></td>
     <td><%= link_to 'Edit', :action => 'edit', :id => client %></td>

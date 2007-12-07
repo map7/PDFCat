@@ -17,7 +17,7 @@
     <td><%=h category.send(column.name) %></td>
   <% end %>
 
-	<%= shortcut @no, "/" + controller.controller_name + "/show/" + category.id.to_s %>
+  <%= shortcut @no, "#{BASE_URL}/" + controller.controller_name + "/show/" + category.id.to_s %>
 
 	<td>
 		<!-- TODO improve this AJAX to have links and shortcuts to replace the show page -->
