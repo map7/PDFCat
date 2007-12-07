@@ -39,15 +39,14 @@
 
 <%= shortcut_next_or_prev @pdf_pages %>
 
-<%= link_to '<b>P</b>revious page', { :page => @pdf_pages.current.previous } if @pdf_pages.current.previous %>
-<%= link_to '<b>N</b>ext page', { :page => @pdf_pages.current.next } if @pdf_pages.current.next %> 
+<div class=nav>
+	<%= link_to '<div class="menuitem"><b>P</b>revious page</div>', { :page => @pdf_pages.current.previous } if @pdf_pages.current.previous %>
+	<%= link_to '<div class="menuitem"><b>N</b>ext page</div>', { :page => @pdf_pages.current.next }, :id => 'nav_link' if @pdf_pages.current.next %> 
 
-<!-- Page jump navigation -->
-Pages:
-<% for page in @pdf_pages -%>
-  <%= link_to_unless((params[:page].to_i == page.number),
-        page.number, :page => page) %>&nbsp;
-<% end -%>
-
-<br />
-
+	<!-- Page jump navigation -->
+	<b>Pages:</b>
+	<% for page in @pdf_pages -%>
+	  <%= link_to_unless((params[:page].to_i == page.number),
+			page.number, :page => page) %>&nbsp;
+	<% end -%>
+</div>

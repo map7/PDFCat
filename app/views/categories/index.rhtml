@@ -1,5 +1,7 @@
 <h1>Listing categories</h1>
 
+<%= link_to '<b>A</b>dd New category', :action => 'new' %>
+
 <table>
   <tr>
 	  <th>No.</th>
@@ -38,18 +40,14 @@
 
 <%= shortcut_next_or_prev @category_pages %>
 
-<%= link_to '<b>P</b>revious page', { :page => @category_pages.current.previous } if @category_pages.current.previous %>
-<%= link_to '<b>N</b>ext page', { :page => @category_pages.current.next } if @category_pages.current.next %> 
+<div class=nav>
+	<%= link_to '<div class="menuitem"><b>P</b>revious page</div>', { :page => @category_pages.current.previous } if @category_pages.current.previous %>
+	<%= link_to '<div class="menuitem"><b>N</b>ext page</div>', { :page => @category_pages.current.next }, :id => 'nav_link' if @category_pages.current.next %> 
 
-<br />
-
-<!-- Page jump navigation -->
-Pages:
-<% for page in @category_pages -%>
-  <%= link_to_unless((params[:page].to_i == page.number),
-        page.number, :page => page) %>&nbsp;
-<% end -%>
-
-<br />
-
-<%= link_to '<b>A</b>dd New category', :action => 'new' %>
+	<!-- Page jump navigation -->
+	<b>Pages:</b>
+	<% for page in @category_pages -%>
+	  <%= link_to_unless((params[:page].to_i == page.number),
+			page.number, :page => page) %>&nbsp;
+	<% end -%>
+</div>
