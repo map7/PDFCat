@@ -1,5 +1,5 @@
 <!-- Edit -->
-<%= shortcut 'e', "/" + controller.controller_name + "/edit/" +  @id  %> 
+<%= shortcut 'e', "#{BASE_URL}/" + controller.controller_name + "/edit/" +  @id  %> 
 
 <% for column in Category.content_columns %>
 <p>

@@ -1,8 +1,8 @@
 
 <!-- Edit -->
 <%= shortcut_function 'm', "Element.toggle('email_client'); document.getElementById('body').focus();"  %> 
-<%= shortcut 'v', "/" + controller.controller_name + "/attachment/" +  @id  %> 
-<%= shortcut 'e', "/" + controller.controller_name + "/edit/" +  @id  %> 
+<%= shortcut 'v', "#{BASE_URL}/" + controller.controller_name + "/attachment/" +  @id  %> 
+<%= shortcut 'e', "#{BASE_URL}/" + controller.controller_name + "/edit/" +  @id  %> 
 <%= shortcut_function 'd', "document.getElementById('destroy').onclick();"  %> 
 
 <% for column in Pdf.content_columns %>
