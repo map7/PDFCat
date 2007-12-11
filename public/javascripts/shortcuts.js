@@ -22,11 +22,13 @@ Object.extend(Shortcuts, {
 	start: function() {
 		Event.observe(document, 'keypress', function(e){
 				var target;
+
 				if (!e) var e = window.event;
 				if (e.target) target = e.target;
 				else if (e.srcElement) target = e.srcElement;
 				if (target.nodeType == 3) // defeat Safari bug
 					target = target.parentNode;
+
 		
 				if (target.tagName.toLowerCase()!='input' && target.tagName.toLowerCase()!='textarea' && target.tagName.toLowerCase()!='select') {
 					var code;

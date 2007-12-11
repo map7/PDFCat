@@ -46,7 +46,6 @@
 	<!-- Page jump navigation -->
 	<b>Pages:</b>
 	<% for page in @pdf_pages -%>
-	  <%= link_to_unless((params[:page].to_i == page.number),
-			page.number, :page => page) %>&nbsp;
+	<%= link_to_unless((params[:page].to_i == page.number), page.number, :page => page) %>&nbsp;
 	<% end -%>
 </div>
