@@ -45,12 +45,10 @@ class Pdf < ActiveRecord::Base
 
 		# Format date
 		@filedate = pdfdate.to_formatted_s(:file_format)
-
 		
 		filename = original
 		
 		# Format the new filename.
-		#@new_filename =  STORE_DIR + "/" + client.name.downcase + "/" + category.name.downcase + "/" + File.basename(filename)	
 		@new_filename =  STORE_DIR + "/" + client.name.downcase + "/" + category.name.downcase + "/" + @filedate + "-" + pdfname + File.extname(filename)
 
 		if File.exist?(@new_filename)
@@ -63,8 +61,16 @@ class Pdf < ActiveRecord::Base
 			# Move the file.
 			#puts "filename:    '" + filename + "'"
 			#puts "new_filename '" + @new_filename + "'"
-			
 			File.rename(filename, @new_filename)
+
+			# Check if the old directory is now empty
+			dir = File.dirname(filename) 
+			dircheck = dir + '/*'
+			#puts "Dir = " + dircheck
+			#puts "Dir empty? = " + Dir[dircheck].empty?.to_s
+
+			# Delete the directory if it's empty
+			Dir.rmdir(dir) if Dir[dircheck].empty?
 			
 			# Return the new filename
 			File.basename(@new_filename)
