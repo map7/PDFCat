@@ -1,0 +1,9 @@
+--- 
+prefix: /pdfcat
+cwd: /usr/pdfcat
+log_file: /var/log/mongrel.log
+port: "8000"
+environment: production
+debug: true
+pid_file: /var/run/mongrel-1.pid
+servers: 2
