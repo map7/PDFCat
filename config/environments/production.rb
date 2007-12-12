@@ -19,6 +19,7 @@ config.action_controller.perform_caching             = true
 
 SITE_NAME= "Pdfcat"
 UPLOAD_DIR = "/usr/pdfcat_upload"
-STORE_DIR = "/usr/pdfcat_clt"
+#STORE_DIR = "/usr/pdfcat_clt"
+STORE_DIR = "/usr/tram/work/clt"
 
 BASE_URL= "/pdfcat"

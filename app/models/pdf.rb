@@ -40,7 +40,7 @@ class Pdf < ActiveRecord::Base
 
 	def move_file(original)
 		# Make directories
-		Dir.mkdir(STORE_DIR + "/" + client.name.downcase, 0755) unless File.exists?(STORE_DIR + "/" + client.name.downcase)
+		Dir.mkdir(STORE_DIR + "/" + client.name.downcase, 0775) unless File.exists?(STORE_DIR + "/" + client.name.downcase)
 		Dir.mkdir(STORE_DIR + "/" + client.name.downcase + "/" + category.name.downcase, 0755) unless File.exists?(STORE_DIR + "/" + client.name.downcase + "/" + category.name.downcase)
 
 		# Format date

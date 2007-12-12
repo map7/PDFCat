@@ -17099,3 +17099,126 @@ Processing PdfsController#index (for 192.168.200.31 at 2007-12-12 12:08:41) [GET
 Rendering  within layouts/application
 Rendering pdfs/index
 Completed in 0.09119 (10 reqs/sec) | Rendering: 0.08260 (90%) | DB: 0.00713 (7%) | 200 OK [http://paistram/pdfcat/pdfs]
+
+
+Processing PdfsController#index (for 192.168.200.31 at 2007-12-12 12:11:03) [GET]
+  Session ID: d4e3908841b887a58049253cc3926a7d
+  Parameters: {"action"=>"index", "controller"=>"pdfs"}
+Rendering  within layouts/application
+Rendering pdfs/index
+Completed in 0.03575 (27 reqs/sec) | Rendering: 0.02722 (76%) | DB: 0.00707 (19%) | 200 OK [http://paistram/pdfcat/pdfs]
+
+
+Processing PdfsController#attachment (for 192.168.200.31 at 2007-12-12 12:11:08) [GET]
+  Session ID: d4e3908841b887a58049253cc3926a7d
+  Parameters: {"action"=>"attachment", "id"=>"157", "controller"=>"pdfs"}
+Completed in 0.00251 (397 reqs/sec) | Rendering: 0.00007 (2%) | DB: 0.00100 (39%) | 200 OK [http://paistram/pdfcat/pdfs/attachment/157]
+Streaming file /usr/pdfcat_clt/tramontana joseph/general/20071211-Harley Insurance.pdf
+
+
+Processing PdfsController#index (for 192.168.200.31 at 2007-12-12 12:11:27) [GET]
+  Session ID: d4e3908841b887a58049253cc3926a7d
+  Parameters: {"action"=>"index", "controller"=>"pdfs"}
+Rendering  within layouts/application
+Rendering pdfs/index
+Completed in 0.09445 (10 reqs/sec) | Rendering: 0.06099 (64%) | DB: 0.01374 (14%) | 200 OK [http://paistram/pdfcat/pdfs]
+
+
+Processing PdfsController#attachment (for 192.168.200.31 at 2007-12-12 12:11:31) [GET]
+  Session ID: d4e3908841b887a58049253cc3926a7d
+  Parameters: {"action"=>"attachment", "id"=>"157", "controller"=>"pdfs"}
+
+
+ActionController::MissingFile (Cannot read file /usr/tram/work/clt/tramontana joseph/general/20071211-Harley Insurance.pdf):
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/streaming.rb:59:in `send_file'
+    /usr/pdfcat/app/controllers/pdfs_controller.rb:145:in `attachment'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/base.rb:1101:in `send'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/base.rb:1101:in `perform_action_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/filters.rb:696:in `call_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/filters.rb:688:in `perform_action_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/benchmarking.rb:66:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/benchmarking.rb:66:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/rescue.rb:83:in `perform_action'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/base.rb:435:in `send'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/base.rb:435:in `process_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/filters.rb:684:in `process_without_session_management_support'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/session_management.rb:114:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/base.rb:334:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.2.6/lib/dispatcher.rb:41:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:78:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:76:in `synchronize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:76:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:618:in `process_client'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:617:in `each'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:617:in `process_client'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `initialize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `new'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `initialize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `new'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:271:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:270:in `each'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:270:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/bin/mongrel_rails:127:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/command.rb:211:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/bin/mongrel_rails:243
+    /usr/local/bin/mongrel_rails:16:in `load'
+    /usr/local/bin/mongrel_rails:16
+
+
+
+
+Processing PdfsController#attachment (for 192.168.200.31 at 2007-12-12 12:42:09) [GET]
+  Session ID: d4e3908841b887a58049253cc3926a7d
+  Parameters: {"action"=>"attachment", "id"=>"157", "controller"=>"pdfs"}
+Completed in 0.00255 (392 reqs/sec) | Rendering: 0.00006 (2%) | DB: 0.00196 (76%) | 200 OK [http://paistram/pdfcat/pdfs/attachment/157]
+Streaming file /usr/tram/work/clt/tramontana joseph/general/20071211-Harley Insurance.pdf
+
+
+Processing PdfsController#attachment (for 192.168.200.31 at 2007-12-12 12:42:14) [GET]
+  Session ID: d4e3908841b887a58049253cc3926a7d
+  Parameters: {"action"=>"attachment", "id"=>"156", "controller"=>"pdfs"}
+Completed in 0.00260 (385 reqs/sec) | Rendering: 0.00006 (2%) | DB: 0.00100 (38%) | 200 OK [http://paistram/pdfcat/pdfs/attachment/156]
+Streaming file /usr/tram/work/clt/campione trust/cgu/20071207-CGU.pdf
+
+
+Processing PdfsController#search (for 192.168.200.31 at 2007-12-12 12:42:20) [POST]
+  Session ID: d4e3908841b887a58049253cc3926a7d
+  Parameters: {"client"=>"zzz", "action"=>"search", "controller"=>"pdfs"}
+Rendering layoutfalseactionindex within layouts/application
+Rendering pdfs/index
+Completed in 0.23352 (4 reqs/sec) | Rendering: 0.22948 (98%) | DB: 0.00215 (0%) | 200 OK [http://paistram/pdfcat/pdfs/search]
+
+
+Processing PdfsController#edit (for 192.168.200.31 at 2007-12-12 12:42:25) [GET]
+  Session ID: d4e3908841b887a58049253cc3926a7d
+  Parameters: {"action"=>"edit", "id"=>"12", "controller"=>"pdfs"}
+Rendering  within layouts/application
+Rendering pdfs/edit
+Completed in 0.07018 (14 reqs/sec) | Rendering: 0.06785 (96%) | DB: 0.00176 (2%) | 200 OK [http://paistram/pdfcat/pdfs/edit/12]
+
+
+Processing PdfsController#update (for 192.168.200.31 at 2007-12-12 12:42:35) [POST]
+  Session ID: d4e3908841b887a58049253cc3926a7d
+  Parameters: {"category"=>"7", "commit"=>"Edit", "client"=>"1", "action"=>"update", "id"=>"12", "controller"=>"pdfs", "pdf"=>{"pdfdate(3i)"=>"26", "pdfname"=>"Using the Scanner", "filename"=>"20070726-Using the Scanner.pdf", "pdfnote"=>"How to use the scanner", "pdfdate(1i)"=>"2007", "pdfdate(2i)"=>"7"}}
+Redirected to http://paistram/pdfcat/pdfs/show/12
+Completed in 0.03716 (26 reqs/sec) | DB: 0.03020 (81%) | 302 Found [http://paistram/pdfcat/pdfs/update/12]
+
+
+Processing PdfsController#show (for 192.168.200.31 at 2007-12-12 12:42:35) [GET]
+  Session ID: d4e3908841b887a58049253cc3926a7d
+  Parameters: {"action"=>"show", "id"=>"12", "controller"=>"pdfs"}
+Rendering  within layouts/application
+Rendering pdfs/show
+Completed in 0.02079 (48 reqs/sec) | Rendering: 0.01935 (93%) | DB: 0.00087 (4%) | 200 OK [http://paistram/pdfcat/pdfs/show/12]
+
+
+Processing PdfsController#edit (for 192.168.200.31 at 2007-12-12 12:43:12) [GET]
+  Session ID: d4e3908841b887a58049253cc3926a7d
+  Parameters: {"action"=>"edit", "id"=>"12", "controller"=>"pdfs"}
+Rendering  within layouts/application
+Rendering pdfs/edit
+Completed in 0.01212 (82 reqs/sec) | Rendering: 0.01017 (83%) | DB: 0.00139 (11%) | 200 OK [http://paistram/pdfcat/pdfs/edit/12]
