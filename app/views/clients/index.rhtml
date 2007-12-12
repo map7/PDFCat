@@ -40,7 +40,6 @@
 	<!-- Page jump navigation -->
 	<b>Pages:</b>
 	<% for page in @client_pages -%>
-	  <%= link_to_unless((params[:page].to_i == page.number),
-			page.number, :page => page) %>&nbsp;
+		<%= link_to_unless((params[:page].to_i == page.number), page.number, {:page => page}, {:id => 'test'}) %>&nbsp;
 	<% end -%>
 </div>
