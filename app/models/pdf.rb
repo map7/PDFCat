@@ -63,14 +63,17 @@ class Pdf < ActiveRecord::Base
 			#puts "new_filename '" + @new_filename + "'"
 			File.rename(filename, @new_filename)
 
+			#FIXME - deletes the UPLOAD dir
 			# Check if the old directory is now empty
-			dir = File.dirname(filename) 
-			dircheck = dir + '/*'
+#			dir = File.dirname(filename) 
+#			dircheck = dir + '/*'
+
+			#Debug lines
 			#puts "Dir = " + dircheck
 			#puts "Dir empty? = " + Dir[dircheck].empty?.to_s
 
 			# Delete the directory if it's empty
-			Dir.rmdir(dir) if Dir[dircheck].empty?
+#			Dir.rmdir(dir) if Dir[dircheck].empty?
 			
 			# Return the new filename
 			File.basename(@new_filename)
