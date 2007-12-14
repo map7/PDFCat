@@ -44,7 +44,14 @@ class ClientsController < ApplicationController
 
   def update
     @client = Client.find(params[:id])
-    if @client.update_attributes(params[:client])
+
+	# Move directory, if dir exists
+	@newclient = Client.new(params[:client])
+	@newclient.name = @client.move_dir(@newclient.name)
+
+	
+	# Store the data
+    if @client.errors.size == 0 and @client.update_attributes(params[:client])
       flash[:notice] = 'Client was successfully updated.'
       redirect_to :action => 'show', :id => @client
     else
