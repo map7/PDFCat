@@ -34,7 +34,13 @@ class CategoriesController < ApplicationController
 
   def update
     @category = Category.find(params[:id])
-    if @category.update_attributes(params[:category])
+
+    # Move directory, if dir exists
+    @newcategory = Category.new(params[:category])
+    @newcategory.name = @category.move_dir(@newcategory.name)
+
+    # Store the data
+    if @category.errors.size == 0 and @category.update_attributes(params[:category])
       flash[:notice] = 'Category was successfully updated.'
       redirect_to :action => 'show', :id => @category
     else
