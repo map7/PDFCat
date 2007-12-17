@@ -1,11 +1,11 @@
 <%= error_messages_for 'pdf' %>
 
 <!--[form:pdf]-->
+<p><label for="pdf_filename">Current Filename: </label>
+<%= hidden_field 'pdf','filename' %><%= @pdf.filename %></p>
+
 <p><label for="pdf_pdfdate">Date</label><br/>
 <%= date_select 'pdf', 'pdfdate'  %></p>
-
-<p><label for="pdf_filename">Current Filename</label><br/>
-<%= text_field 'pdf','filename' %></p>
 
 <p><label for="pdf_pdfname">Name</label><br/>
 <%= text_field 'pdf', 'pdfname'  %></p>
