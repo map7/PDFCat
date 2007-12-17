@@ -4,7 +4,8 @@ class Pdf < ActiveRecord::Base
 
 	validates_presence_of :pdfdate, :pdfname, :filename, :category_id, :client_id
 	validates_uniqueness_of :pdfname, :scope => [:pdfdate, :category_id, :client_id]
-	#validate :does_file_exist
+	validates_format_of :pdfname, :with => /^[(|)|A-Z|a-z|0-9][,|&|(|)|'| |.|\-|A-Z|a-z|0-9]+$/
+	validate :does_file_exist?
 
 
 	# List uploaded files
@@ -82,12 +83,8 @@ class Pdf < ActiveRecord::Base
 	end
 
 	# Validators
-	def file_exist
-		File.exist?(filename)
-	end
-	
-	def does_file_exist
-		errors.add("Filename") if filename.blank? or !file_exist
+	def does_file_exist?
+		errors.add(filename, " has gone missing!") if !File.exist?(fullpath)
 	end
 		
 	

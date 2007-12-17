@@ -2,30 +2,20 @@ class Client < ActiveRecord::Base
 	has_many :pdfs
 	validates_presence_of :name
 	validates_uniqueness_of :name
+	validates_format_of :name, :with => /^[(|)|A-Z|a-z|0-9][,|&|(|)|'| |.|\-|A-Z|a-z|0-9]+$/		# Validate correct for filenames
 	validates_format_of :email, :with => /^[^@][\w.-]+@[\w.-]+[.][a-z]{2,4}$|.*/i 
+	validate :new_dir_exists?
 
-	def move_dir(newname)
-		@olddir = STORE_DIR + "/" + name.downcase
-		@newdir = STORE_DIR + "/" + newname.downcase
-
-		puts "Moving '" + @olddir + "' to '" + @newdir + "'..."
-
-		if File.exist?(@newdir)
-            # Throw an error here
-            errors.add(newname," dir already exists, please change the clients name")
-
-            # Return the original name
-            name
-
-		else
-			# Move the directory
-			File.rename(@olddir,@newdir)
-
-			# Return the new client name
-			newname
-
-		end
+	# Move the directory
+	def move_dir(oldname)
+		@olddir = STORE_DIR + "/" + oldname.downcase
+		@newdir = STORE_DIR + "/" + name.downcase
+		File.rename(@olddir,@newdir)
 	end
 
-	
+	# Check if the new client directory already exists
+	def new_dir_exists?
+		errors.add(name," dir already exists, please change the clients name") if File.exist?(STORE_DIR + "/" + name.downcase)
+	end
+
 end

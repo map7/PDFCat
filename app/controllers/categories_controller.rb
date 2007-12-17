@@ -36,15 +36,18 @@ class CategoriesController < ApplicationController
     @category = Category.find(params[:id])
 
     # Move directory, if dir exists
-    @newcategory = Category.new(params[:category])
-    @newcategory.name = @category.move_dir(@newcategory.name)
+    #@newcategory = Category.new(params[:category])
+    #@newcategory.name = @category.move_dir(@newcategory.name)
+	@oldcat = @category.name
 
     # Store the data
-    if @category.errors.size == 0 and @category.update_attributes(params[:category])
-      flash[:notice] = 'Category was successfully updated.'
-      redirect_to :action => 'show', :id => @category
+    #if @category.errors.size == 0 and @category.update_attributes(params[:category])
+    if @category.update_attributes(params[:category])
+		@category.move_dir(@oldcat)
+		flash[:notice] = 'Category was successfully updated.'
+		redirect_to :action => 'show', :id => @category
     else
-      render :action => 'edit'
+		render :action => 'edit'
     end
   end
 
