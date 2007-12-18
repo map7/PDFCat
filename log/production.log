@@ -21373,3 +21373,5 @@ Processing ClientsController#search (for 192.168.200.30 at 2007-12-13 15:43:00) 
 Rendering layoutfalseactionindex within layouts/application
 Rendering clients/index
 Completed in 0.02297 (43 reqs/sec) | Rendering: 0.01288 (56%) | DB: 0.00412 (17%) | 200 OK [http://paistram/pdfcat/clients/search]
+Migrating to CreateDefaultClient (8)
+Migrating to CreateDefaultCategory (9)

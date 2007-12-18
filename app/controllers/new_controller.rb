@@ -2,6 +2,7 @@ class NewController < ApplicationController
 	# Create a upload variable to list files from the upload dir.
     def index
         @upload = Pdf.new
+		@no = -1	# Used for shorcuts
     end
 
 	def destroy
