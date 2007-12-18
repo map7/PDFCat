@@ -1,4 +1,6 @@
 class Pdf < ActiveRecord::Base
+	require 'fileutils'
+	
 	belongs_to :category
 	belongs_to :client
 
@@ -60,7 +62,7 @@ class Pdf < ActiveRecord::Base
 			File.basename(filename)
 		else
 			# Move the file.
-			File.rename(filename, @new_filename)
+			FileUtils.mv(filename, @new_filename)
 
 			# Check if the old directory is now empty
 			dir = File.dirname(filename) 
