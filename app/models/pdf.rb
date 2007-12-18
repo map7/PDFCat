@@ -78,8 +78,13 @@ class Pdf < ActiveRecord::Base
 	end
 
 	# Validators
-	def does_file_exist?
-		errors.add(filename, " has gone missing!") if !File.exist?(fullpath)
+	def does_file_exist?(oldclient, oldcategory)
+		if !File.exist?(STORE_DIR + "/" + oldclient.downcase + "/" + oldcategory.downcase + "/" + filename)
+			errors.add(filename, " has gone missing!") 
+			return false
+		end
+
+		return true
 	end
 		
 	

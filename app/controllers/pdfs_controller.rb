@@ -104,7 +104,8 @@ class PdfsController < ApplicationController
 	@pdf.client = Client.find(params[:client]) unless params[:client].blank?
 
 	# Save the form to the table
-    if @pdf.errors.size == 0 and @pdf.update_attributes(params[:pdf])
+    #if @pdf.errors.size == 0 and @pdf.update_attributes(params[:pdf])
+    if @pdf.does_file_exist?(@oldclient, @oldcategory) and @pdf.update_attributes(params[:pdf])
 		flash[:notice] = 'Pdf was successfully updated.'
 		redirect_to :action => 'show', :id => @pdf
 
