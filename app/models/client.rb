@@ -10,7 +10,7 @@ class Client < ActiveRecord::Base
 	def move_dir(oldname)
 		@olddir = STORE_DIR + "/" + oldname.downcase
 		@newdir = STORE_DIR + "/" + name.downcase
-		File.rename(@olddir,@newdir)
+		File.rename(@olddir,@newdir) if File.exists?(@olddir)
 	end
 
 	# Check if the new client directory already exists

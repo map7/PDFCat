@@ -23,7 +23,7 @@ class Category < ActiveRecord::Base
 				@newdir = STORE_DIR + "/" +  @clientname + "/" + name.downcase
 
 				# Move the category directory to the new one.
-				File.rename(@olddir,@newdir)
+				File.rename(@olddir,@newdir) if File.exists?(@olddir)
 			end
 		end
     end
