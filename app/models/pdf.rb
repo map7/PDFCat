@@ -5,7 +5,7 @@ class Pdf < ActiveRecord::Base
 	validates_presence_of :pdfdate, :pdfname, :filename, :category_id, :client_id
 	validates_uniqueness_of :pdfname, :scope => [:pdfdate, :category_id, :client_id]
 	validates_format_of :pdfname, :with => /^[(|)|A-Z|a-z|0-9][,|&|(|)|'| |.|\-|A-Z|a-z|0-9]+$/
-	validate :does_file_exist?
+#	validate :does_file_exist?	# Must check if the original filename exists not the new one
 
 
 	# List uploaded files
@@ -60,21 +60,16 @@ class Pdf < ActiveRecord::Base
 			File.basename(filename)
 		else
 			# Move the file.
-			#puts "filename:    '" + filename + "'"
-			#puts "new_filename '" + @new_filename + "'"
 			File.rename(filename, @new_filename)
 
-			#FIXME - deletes the UPLOAD dir
 			# Check if the old directory is now empty
-#			dir = File.dirname(filename) 
-#			dircheck = dir + '/*'
+			dir = File.dirname(filename) 
+			dircheck = dir + '/*'
 
-			#Debug lines
-			#puts "Dir = " + dircheck
-			#puts "Dir empty? = " + Dir[dircheck].empty?.to_s
-
-			# Delete the directory if it's empty
-#			Dir.rmdir(dir) if Dir[dircheck].empty?
+			# Delete the directory if it's empty, as long as it's not the same as the upload directory.
+			unless dir == UPLOAD_DIR
+				Dir.rmdir(dir) if Dir[dircheck].empty?
+			end
 			
 			# Return the new filename
 			File.basename(@new_filename)
