@@ -64,6 +64,10 @@ class Pdf < ActiveRecord::Base
 			# Move the file.
 			FileUtils.mv(filename, @new_filename)
 
+			# Set the permissions on the file to 664 (-rw-rw-r--)
+			FileUtils.chmod 0664, @new_filename
+			
+
 			# Check if the old directory is now empty
 			dir = File.dirname(filename) 
 			dircheck = dir + '/*'
