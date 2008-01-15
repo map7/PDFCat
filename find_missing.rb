@@ -30,6 +30,7 @@ def store_dir_files
 				md5=Digest::MD5.hexdigest(File.read(path))
 
 				files[md5] = path
+
 			end
 		end
 	end
@@ -44,6 +45,9 @@ def store_dir_files
 	# Create a hash map md5 -> path
 	
 end
+
+# Initialise hash variable
+files = {}
 
 # Connect to postgres database
 db = PGconn.connect('localhost', 5432, '', '', 'pdfcat_development', 'pdfcat', 'pdfcat')
@@ -78,7 +82,7 @@ res.each do |row|
 
 		# If the hash map of files and md5's available in the STORE_DIR is empty fill it, 
 		# this saves time if we are not missing any files.
-		files = store_dir_files
+		files = store_dir_files if files.empty?
 
 #		files.each do |key, value|
 #			puts "#{key} equals #{value}"
