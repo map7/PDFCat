@@ -114,6 +114,8 @@ class PdfsController < ApplicationController
 
 		# Write changes of the filename back to the pdf object.
 		@pdf.update_attribute(:filename, @filename)
+
+		@pdf.update_attribute(:md5, @pdf.md5calc)
 		
     else
 		render :action => 'edit'

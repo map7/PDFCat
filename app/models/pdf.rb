@@ -1,5 +1,6 @@
 class Pdf < ActiveRecord::Base
 	require 'fileutils'
+	require 'digest/md5'
 	
 	belongs_to :category
 	belongs_to :client
@@ -41,7 +42,14 @@ class Pdf < ActiveRecord::Base
 		STORE_DIR+ "/" + client.name.downcase + "/" + category.name.downcase + "/" + filename
 	end
 
+	def md5calc
+		# Create a md5
+		Digest::MD5.hexdigest(File.read(fullpath))
+
+	end
+
 	def move_file(original)
+
 		# Make directories
 		Dir.mkdir(STORE_DIR + "/" + client.name.downcase, 0775) unless File.exists?(STORE_DIR + "/" + client.name.downcase)
 		Dir.mkdir(STORE_DIR + "/" + client.name.downcase + "/" + category.name.downcase, 0755) unless File.exists?(STORE_DIR + "/" + client.name.downcase + "/" + category.name.downcase)
@@ -67,7 +75,6 @@ class Pdf < ActiveRecord::Base
 			# Set the permissions on the file to 664 (-rw-rw-r--)
 			FileUtils.chmod 0664, @new_filename
 			
-
 			# Check if the old directory is now empty
 			dir = File.dirname(filename) 
 			dircheck = dir + '/*'
