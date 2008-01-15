@@ -27,10 +27,11 @@ def store_dir_files
 		else
 			if File.extname(path) == ".pdf"
 				#files << path
+
+				# calculate md5 and store.
 				md5=Digest::MD5.hexdigest(File.read(path))
 
 				files[md5] = path
-
 			end
 		end
 	end
