@@ -145,10 +145,22 @@ class PdfsController < ApplicationController
     def attachment
 		@pdf = Pdf.find(params[:id])
 
-    	send_file(@pdf.fullpath,
-			:type         =>  'application/pdf',
-			:disposition  =>  'attachment'
-		)
+		if !@pdf.file_exist?
+			if !@pdf.relink_file
+				flash[:notice] = 'File cannot be found, failed relinking!'
+				redirect_to :action => 'index'
+			end
+		end
+
+		if @pdf.file_exist?
+			send_file(@pdf.fullpath,
+				:type         =>  'application/pdf',
+				:disposition  =>  'attachment'
+			)
+		else
+			flash[:notice] = 'File cannot be found!'
+			redirect_to :action => 'index'
+		end
     end
 
 

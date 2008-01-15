@@ -1,5 +1,6 @@
 class Pdf < ActiveRecord::Base
 	require 'fileutils'
+	require 'find'
 	require 'digest/md5'
 	
 	belongs_to :category
@@ -39,13 +40,18 @@ class Pdf < ActiveRecord::Base
 
 	# Return the full path of the final filename.
 	def fullpath
-		STORE_DIR+ "/" + client.name.downcase + "/" + category.name.downcase + "/" + filename
+		if path
+			# If there is a path return this
+			path + "/" + filename		
+		else
+			# Otherwise return our premade one.
+			STORE_DIR+ "/" + client.name.downcase + "/" + category.name.downcase + "/" + filename	
+		end
 	end
 
+	# Create a md5
 	def md5calc
-		# Create a md5
 		Digest::MD5.hexdigest(File.read(fullpath))
-
 	end
 
 	def move_file(original)
@@ -87,12 +93,66 @@ class Pdf < ActiveRecord::Base
 			# Return the new filename
 			File.basename(@new_filename)
 		end
+	end
+
+	# If the file is missing, then find the file and change the path and filename in the database to suit.
+	def relink_file
+		# Get all the pdfs in the STORE_DIR and their md5
+		files = store_dir_files		
+
+		# Match the missing file with it's new path
+        @missing_file = files[md5]	
+
+		if @missing_file
+			# Update database information
+			update_attribute(:path, File.dirname(@missing_file))
+			update_attribute(:filename, File.basename(@missing_file))
+
+			return true  # The file was found and fixed
+		else
+			return false # The file couldn't be found
+		end
 
 	end
 
-	# Validators
+	# Go through each pdf in the STORE_DIR recurisively and store it's md5 and path in a hash
+	def store_dir_files
+		files = {}	# Initialise hash
+
+		# Find all files in the STORE_DIR
+		Find.find(STORE_DIR) do |path|
+			if FileTest.directory?(path)
+				next	# Go to the next file if the current is a dir.
+			else
+				if File.extname(path) == ".pdf"
+					# calculate md5 and store.
+					md5=Digest::MD5.hexdigest(File.read(path))
+				
+					# Add to the hash table.
+					files[md5] = path
+				end
+			end
+		end
+
+		files       # Return the hash of md5 and path.
+	end
+
+
+
+
+# Validators
+	# Validate the the current file exists before moving it.
 	def does_file_exist?(oldclient, oldcategory)
 		if !File.exist?(STORE_DIR + "/" + oldclient.downcase + "/" + oldcategory.downcase + "/" + filename)
+			errors.add(filename, " has gone missing!") 
+			return false
+		end
+
+		return true
+	end
+
+	def file_exist?
+		if !File.exist?(fullpath)
 			errors.add(filename, " has gone missing!") 
 			return false
 		end

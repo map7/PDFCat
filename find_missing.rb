@@ -98,7 +98,7 @@ res.each do |row|
 		(90-@filepath.length).times{print ' '}
 
 		if @missing_file
-			print "= ",@missing_file, "\n"
+			print "= ",File.dirname(@missing_file), "/", File.basename(@missing_file), "\n"
 
 			# Fix up the file
 
