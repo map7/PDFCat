@@ -145,12 +145,12 @@ class PdfsController < ApplicationController
     def attachment
 		@pdf = Pdf.find(params[:id])
 
-		if !@pdf.file_exist?
-			if !@pdf.relink_file
-				flash[:notice] = 'File cannot be found, failed relinking!'
-				redirect_to :action => 'index'
-			end
-		end
+		#if !@pdf.file_exist?
+		#	if !@pdf.relink_file
+		#		flash[:notice] = 'File cannot be found, failed relinking!'
+		#		redirect_to :action => 'index'
+		#	end
+		#end
 
 		if @pdf.file_exist?
 			send_file(@pdf.fullpath,
@@ -158,10 +158,22 @@ class PdfsController < ApplicationController
 				:disposition  =>  'attachment'
 			)
 		else
-			flash[:notice] = 'File cannot be found!'
-			redirect_to :action => 'index'
+			flash[:notice] = 'File cannot be found, Please try relinking'
+			redirect_to :action => 'show', :id => params[:id]
 		end
     end
+
+	def relink
+		@pdf = Pdf.find(params[:id])
+		
+		if @pdf.relink_file
+			render :partial => "showitem"
+			return true
+		else
+			render :partial => "showitem"
+			return false
+		end
+	end
 
 
 	# Email pdfs to clients

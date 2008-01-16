@@ -5,17 +5,21 @@
 <%= shortcut 'e', "#{BASE_URL}/" + controller.controller_name + "/edit/" +  @id  %> 
 <%= shortcut_function 'd', "document.getElementById('destroy').onclick();"  %> 
 
-<% for column in Pdf.content_columns %>
-<p>
-  <b><%= column.human_name %>:</b> <%=h @pdf.send(column.name) %>
-</p>
-<% end %>
+<div id="showitem">
+	<%= render :partial => "showitem" %>
+</div>
 
 <%= link_to_function "E<b>m</b>ail", "Element.toggle('email_client')" %> | 
 <%= link_to '<b>V</b>iew', :action => "attachment", :id => @pdf.id %> | 
 <%= link_to '<b>E</b>dit', :action => 'edit', :id => @pdf %> | 
 <%= link_to '<b>D</b>estroy', { :action => 'destroy', :id => @pdf.id }, {:confirm => 'Are you sure?', :id => 'destroy', :method => :post} %> | 
 <%= link_to '<b>B</b>ack', :action => 'index' %>
+<%= link_to_remote "Relink",:update => "showitem",
+							:loading => "$('info').show()",
+							:complete => "$('info').hide()",
+							:success => "alert('Completed successfully, now you can view the document')", 
+							:failure => "alert('Failed to find the file')", 
+							:url => { :controller => "pdfs", :action => "relink", :id => @pdf.id} %>
 
 <div id="email_client" style="display:none">
 	<% form_tag :action => 'email_client', :id => @pdf.id do %>
@@ -41,3 +45,12 @@
 	<% end %>
 </div>  
 
+
+<div id=info>
+	<table>
+		<tr>
+			<td>Relinking pdf file in database, Please wait...</td>
+			<td><%= image_tag "indicator.gif", :id => 'indicator' %></td>
+		</tr>
+	</table>
+</div>

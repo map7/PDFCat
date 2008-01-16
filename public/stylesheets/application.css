@@ -352,4 +352,27 @@ div#footer{
 }
 
 
+div#info{
+	position: absolute;
+
+    display: none; 
+
+	left: 34%;
+
+    width: 400px; 
+
+	padding: 30px;
+	
+    background: #FFE887;
+    color: #000; 
+
+	border: 2px solid red;
+
+	
+    text-align: left; 
+    font-size: 12; 
+    font-weight: bold;
+
+    z-index: 4; 
+}
 
