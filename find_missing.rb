@@ -10,8 +10,8 @@ require 'digest/md5'
 
 
 # Define constants
-STORE_DIR = "/livedata/pdfcat_test_clt"
-#STORE_DIR = "/usr/tram/work/clt"
+#STORE_DIR = "/livedata/pdfcat_test_clt"
+STORE_DIR = "/usr/tram/work/clt"
 
 def store_dir_files
 	# Go through each file in the STORE_DIR recurisively
@@ -51,8 +51,8 @@ end
 files = {}
 
 # Connect to postgres database
-db = PGconn.connect('localhost', 5432, '', '', 'pdfcat_development', 'pdfcat', 'pdfcat')
-#db = PGconn.connect('localhost', 5432, '', '', 'pdfcat_production', 'pdfcat', 'pdfcat')
+#db = PGconn.connect('localhost', 5432, '', '', 'pdfcat_development', 'pdfcat', 'pdfcat')
+db = PGconn.connect('localhost', 5432, '', '', 'pdfcat_production', 'pdfcat', 'pdfcat')
 
 # Query the database
 res = db.exec('select c.name,cat.name,filename,p.md5 from clients as c,categories as cat,pdfs as p where p.client_id = c.id and p.category_id = cat.id ')
