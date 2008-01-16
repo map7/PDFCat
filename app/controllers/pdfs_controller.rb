@@ -76,6 +76,9 @@ class PdfsController < ApplicationController
 	# Move the file and set the new filename to be saved
 	@pdf.filename = @pdf.move_file(UPLOAD_DIR + "/" + @pdf.filename) #if @pdf.file_exist
 
+	# Create md5
+	@pdf.md5 = @pdf.md5calc
+
 	# Check for any errors before the save
 	if @pdf.errors.size == 0 and @pdf.save
 	  flash[:notice] = 'Pdf was successfully created.'
