@@ -1,4 +1,5 @@
 
+
 <!-- Edit -->
 <%= shortcut_function 'm', "Element.toggle('email_client'); document.getElementById('body').focus();"  %> 
 <%= shortcut 'v', "#{BASE_URL}/" + controller.controller_name + "/attachment/" +  @id  %> 
@@ -15,8 +16,8 @@
 <%= link_to '<b>D</b>estroy', { :action => 'destroy', :id => @pdf.id }, {:confirm => 'Are you sure?', :id => 'destroy', :method => :post} %> | 
 <%= link_to '<b>B</b>ack', :action => 'index' %>
 <%= link_to_remote "Relink",:update => "showitem",
-							:loading => "$('info').show()",
-							:complete => "$('info').hide()",
+							:loading => "$('background_tint').show();$('background_center').show();$('info').show();",
+							:complete => "$('background_tint').hide();$('background_center').hide();$('info').hide()",
 							:success => "alert('Completed successfully, now you can view the document')", 
 							:failure => "alert('Failed to find the file')", 
 							:url => { :controller => "pdfs", :action => "relink", :id => @pdf.id} %>
@@ -45,12 +46,18 @@
 	<% end %>
 </div>  
 
-
-<div id=info style=display:none>
-	<table>
-		<tr>
-			<td>Relinking pdf file in database, Please wait...</td>
-			<td><%= image_tag "indicator.gif", :id => 'indicator' %></td>
-		</tr>
-	</table>
+<!-- Adding fancy tinting, which also disables the background (good thing) and centers the message box -->
+<div id=background_tint style=display:none>
+</div>
+<div id=background_center style=display:none>
+	<table height=100%><tr><td align=center>
+	<div id=info style=display:none>
+		<table>
+			<tr>
+				<td>Relinking pdf file in database, Please wait...</td>
+				<td><%= image_tag "indicator.gif", :id => 'indicator' %></td>
+			</tr>
+		</table>
+	</div>
+	</td></tr></table>
 </div>
