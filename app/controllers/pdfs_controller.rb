@@ -178,12 +178,16 @@ class PdfsController < ApplicationController
 
 	# Email pdfs to clients
 	def email_client
+		render :text => "Sending email, please wait..."
+
 		pdf = Pdf.find(params[:id])
 
 		PdfMailer.deliver_email_client(params[:email], params[:subject], params[:body],pdf)
 
-		flash[:notice] = 'Your client has been sent this Pdf'
+		return true
 
-		redirect_to :action => 'show', :id => params[:id]
+		#flash[:notice] = 'Your client has been sent this Pdf'
+
+		#redirect_to :action => 'show', :id => params[:id]
 	end
 end

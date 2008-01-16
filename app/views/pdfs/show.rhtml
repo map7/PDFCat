@@ -15,15 +15,18 @@
 <%= link_to '<b>E</b>dit', :action => 'edit', :id => @pdf %> | 
 <%= link_to '<b>D</b>estroy', { :action => 'destroy', :id => @pdf.id }, {:confirm => 'Are you sure?', :id => 'destroy', :method => :post} %> | 
 <%= link_to '<b>B</b>ack', :action => 'index' %>
+
 <%= link_to_remote "Relink",:update => "showitem",
-							:loading => "$('background_tint').show();$('background_center').show();$('info').show();",
-							:complete => "$('background_tint').hide();$('background_center').hide();$('info').hide()",
+							:loading => "$('background_tint').show();$('background_center').show();$('info').show();$('inforelink').show();",
+							:complete => "$('background_tint').hide();$('background_center').hide();$('info').hide();$('inforelink').hide();",
 							:success => "alert('Completed successfully, now you can view the document')", 
 							:failure => "alert('Failed to find the file')", 
 							:url => { :controller => "pdfs", :action => "relink", :id => @pdf.id} %>
 
 <div id="email_client" style="display:none">
-	<% form_tag :action => 'email_client', :id => @pdf.id do %>
+	<% form_remote_tag (:loading => "$('background_tint').show();$('background_center').show();$('info').show();$('infoemail').show();",
+						:complete => "$('background_tint').hide();$('background_center').hide();$('info').hide();$('email_client').hide();$('infoemail').hide();",
+					  	:url => {:action => 'email_client', :id => @pdf.id}) do %>
 
 		<table>
 			<tr>
@@ -54,7 +57,11 @@
 	<div id=info style=display:none>
 		<table>
 			<tr>
-				<td>Relinking pdf file in database, Please wait...</td>
+				<td>
+					<span id=inforelink style=display:none>Relinking pdf file in database</span>
+					<span id=infoemail style=display:none>Sending email</span>	
+					, Please wait...
+				</td>
 				<td><%= image_tag "indicator.gif", :id => 'indicator' %></td>
 			</tr>
 		</table>
