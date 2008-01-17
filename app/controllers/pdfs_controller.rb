@@ -178,6 +178,16 @@ class PdfsController < ApplicationController
 		end
 	end
 
+	# Rotate pdf 90 degrees clockwise
+	def rotate
+		@pdf = Pdf.find(params[:id])
+		@status = @pdf.rotate_file
+
+		render :text => "test"
+		return @status
+		
+	end
+
 
 	# Email pdfs to clients
 	def email_client

@@ -115,6 +115,22 @@ class Pdf < ActiveRecord::Base
 
 	end
 
+	def rotate_file
+
+		#x = system("date")
+		#print x,"\n"
+
+		@rotatefile = File.basename(fullpath,'.pdf') + "-rotated.pdf"
+
+		# Rotate anti-clockwise 90 degrees
+		x = system("pdf90 --outfile '" + @rotatefile + "' '" + fullpath + "'")
+
+		# Copy the new file over to the old name.
+		File.delete(fullpath)
+		FileUtils.mv(@rotatefile, fullpath)
+
+	end
+
 	# Go through each pdf in the STORE_DIR recurisively and store it's md5 and path in a hash
 	def store_dir_files
 		files = {}	# Initialise hash

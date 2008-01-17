@@ -14,18 +14,24 @@
 <%= link_to '<b>V</b>iew', :action => "attachment", :id => @pdf.id %> | 
 <%= link_to '<b>E</b>dit', :action => 'edit', :id => @pdf %> | 
 <%= link_to '<b>D</b>estroy', { :action => 'destroy', :id => @pdf.id }, {:confirm => 'Are you sure?', :id => 'destroy', :method => :post} %> | 
-<%= link_to '<b>B</b>ack', :action => 'index' %>
+<%= link_to '<b>B</b>ack', :action => 'index' %> | 
 
 <%= link_to_remote "Relink",:update => "showitem",
 							:loading => "$('background_tint').show();$('background_center').show();$('info').show();$('inforelink').show();",
 							:complete => "$('background_tint').hide();$('background_center').hide();$('info').hide();$('inforelink').hide();",
 							:success => "alert('Completed successfully, now you can view the document')", 
 							:failure => "alert('Failed to find the file')", 
-							:url => { :controller => "pdfs", :action => "relink", :id => @pdf.id} %>
+							:url => { :controller => "pdfs", :action => "relink", :id => @pdf.id} %> | 
+
+<%= link_to_remote "Rotate",:success => "alert('Pdf has successfully been rotated 90 degrees clockwise');",
+							:failure => "alert('Failed to rotate!');",
+							:url => { :controller => "pdfs", :action => "rotate", :id => @pdf.id} %>
 
 <div id="email_client" style="display:none">
 	<% form_remote_tag (:loading => "$('background_tint').show();$('background_center').show();$('info').show();$('infoemail').show();",
 						:complete => "$('background_tint').hide();$('background_center').hide();$('info').hide();$('email_client').hide();$('infoemail').hide();",
+						:success => "alert('Email sent successful')", 
+						:failure => "alert('Failed to send email')", 
 					  	:url => {:action => 'email_client', :id => @pdf.id}) do %>
 
 		<table>
