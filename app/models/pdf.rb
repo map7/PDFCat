@@ -131,6 +131,23 @@ class Pdf < ActiveRecord::Base
 
 	end
 
+	def get_no_pages
+		# Build the command
+		@command = "pdftk " + fullpath + " dump_data | grep NumberOfPages | sed 's/.*: //'"
+
+		# Execute the command and collect the data
+		x = `#{@command}`
+
+		# Return the number of pages
+		x.chomp
+	end
+
+	# Split pdf into two parts 1-25, 25-end
+	def split_pdf
+		system("pdftk " + fullpath + " cat 1-" + SPLIT_NO + " output " + File.dirname(fullpath) + "/" + File.basename(fullpath, '.pdf') + "-part1.pdf")
+		system("pdftk " + fullpath + " cat " + (SPLIT_NO.to_i+1).to_s + "-end output " + File.dirname(fullpath) + "/" + File.basename(fullpath, '.pdf') + "-part2.pdf")
+	end
+
 	# Go through each pdf in the STORE_DIR recurisively and store it's md5 and path in a hash
 	def store_dir_files
 		files = {}	# Initialise hash

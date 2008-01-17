@@ -23,3 +23,4 @@ UPLOAD_DIR = "/usr/pdfcat_upload"
 STORE_DIR = "/usr/tram/work/clt"
 
 BASE_URL= "/pdfcat"
+SPLIT_NO="25"
