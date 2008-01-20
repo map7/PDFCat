@@ -196,7 +196,7 @@ class PdfsController < ApplicationController
 		@pdf = Pdf.find(params[:id])
 
 		# Detect how big the file is and split if over 25pages.
-		if @pdf.get_no_pages.to_i > SPLIT_NO
+		if @pdf.get_no_pages.to_i > SPLIT_NO.to_i
 			# split up into two parts
 			@pdf.split_pdf
 

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE abiword PUBLIC "-//ABISOURCE//DTD AWML 1.0 Strict//EN" "http://www.abisource.com/awml.dtd">
-<abiword template="false" version="2.4.6" xmlns:svg="http://www.w3.org/2000/svg" xid-max="624" xmlns:dc="http://purl.org/dc/elements/1.1/" fileformat="1.1" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:math="http://www.w3.org/1998/Math/MathML" xmlns:awml="http://www.abisource.com/awml.dtd" xmlns="http://www.abisource.com/awml.dtd" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" props="dom-dir:ltr; document-footnote-restart-section:0; document-endnote-type:numeric; document-endnote-place-enddoc:1; document-endnote-initial:1; lang:en-US; document-endnote-restart-section:0; document-footnote-restart-page:0; document-footnote-type:numeric; document-footnote-initial:1; document-endnote-place-endsection:0">
+<abiword template="false" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:math="http://www.w3.org/1998/Math/MathML" xid-max="627" xmlns:dc="http://purl.org/dc/elements/1.1/" fileformat="1.1" xmlns:svg="http://www.w3.org/2000/svg" xmlns:awml="http://www.abisource.com/awml.dtd" xmlns="http://www.abisource.com/awml.dtd" xmlns:xlink="http://www.w3.org/1999/xlink" version="2.4.6" xml:space="preserve" props="dom-dir:ltr; document-footnote-restart-section:0; document-endnote-type:numeric; document-endnote-place-enddoc:1; document-endnote-initial:1; lang:en-US; document-endnote-restart-section:0; document-footnote-restart-page:0; document-footnote-type:numeric; document-footnote-initial:1; document-endnote-place-endsection:0">
 <!-- ======================================================================== -->
 <!-- This file is an AbiWord document.                                        -->
 <!-- AbiWord is a free, Open Source word processor.                           -->
@@ -12,7 +12,7 @@
 <m key="dc.format">application/x-abiword</m>
 <m key="abiword.generator">AbiWord</m>
 </metadata>
-<history version="168" edit-time="2404467" last-saved="1200544887" uid="2830ce94-837e-11dc-9146-e1a7d6fa0c3f">
+<history version="1245" edit-time="2727913" last-saved="1200868333" uid="2830ce94-837e-11dc-9146-e1a7d6fa0c3f">
 <version id="3" started="1170122149" uid="d86456a2-b005-11db-8510-f48956ad5861" auto="0" top-xid="0"/>
 <version id="9" started="1170122989" uid="dc4497e4-b007-11db-8638-8589fdbb7ca2" auto="0" top-xid="73"/>
 <version id="10" started="1170714294" uid="b3e1f3fe-b567-11db-9a13-8de544bfd49c" auto="0" top-xid="92"/>
@@ -20,7 +20,7 @@
 <version id="24" started="1193373944" uid="88211d24-8679-11dc-9146-e1a7d6fa0c3f" auto="0" top-xid="101"/>
 <version id="100" started="1194584945" uid="32f19c06-9183-11dc-9cd9-f7019202bf7b" auto="0" top-xid="184"/>
 <version id="157" started="1195166619" uid="707b6d22-a209-11dc-950f-c295c1542af3" auto="0" top-xid="490"/>
-<version id="168" started="1200541798" uid="76e1100c-c4b6-11dc-9d6d-e3b3481e24cd" auto="0" top-xid="608"/>
+<version id="1245" started="1200541798" uid="8beb3e2a-c7a7-11dc-9d6d-e3b3481e24cd" auto="0" top-xid="608"/>
 </history>
 <styles>
 <s followedby="Normal" name="Heading 1" basedon="Normal" type="P" props="margin-top:0.1667in; color:000000; font-size:16pt; margin-bottom:0.0417in; lang:en-US; bgcolor:transparent; font-weight:bold; font-family:Arial; keep-with-next:1"/>
@@ -534,7 +534,10 @@
 <p style="Normal" xid="620" props="font-family:Arial; dom-dir:ltr; font-style:normal; font-weight:normal; lang:en-US; text-align:left; text-position:normal; text-decoration:none; tabstops:0.000000in/L0; color:000000; font-size:12pt"><c props="font-family:Arial; font-size:12pt; color:000000; text-decoration:none; text-position:normal; font-weight:normal; font-style:normal; lang:en-US">Get the number of pages</c></p>
 <p style="Normal" xid="622" props="font-family:Arial; dom-dir:ltr; font-style:normal; font-weight:normal; lang:en-US; text-align:left; text-position:normal; text-decoration:none; tabstops:0.000000in/L0; color:000000; font-size:12pt"><c props="font-family:Arial; font-size:12pt; color:000000; text-decoration:none; text-position:normal; font-weight:normal; font-style:normal; lang:en-US">$ pdftk small.pdf dump_data | grep NumberOfPages | sed 's/.*: //'</c></p>
 <p style="Normal" xid="623" props="font-family:Arial; dom-dir:ltr; font-style:normal; font-weight:normal; lang:en-US; text-align:left; text-position:normal; text-decoration:none; tabstops:0.000000in/L0; color:000000; font-size:12pt"></p>
-<p style="Normal" xid="624" props="font-family:Arial; dom-dir:ltr; font-style:normal; font-weight:normal; lang:en-US; text-align:left; text-position:normal; text-decoration:none; tabstops:0.000000in/L0; color:000000; font-size:12pt"></p>
+<p style="Heading 2" xid="624" props="tabstops:0.000000in/L0; dom-dir:ltr">Testing emails from console</p>
+<p style="Normal" xid="625" props="text-align:left; tabstops:0.000000in/L0; dom-dir:ltr">&gt;&gt; Dispatcher.reset_application!</p>
+<p style="Normal" xid="627" props="text-align:left; tabstops:0.000000in/L0; dom-dir:ltr">&gt;&gt; @pdf = Pdf.find(1)</p>
+<p style="Normal" xid="626" props="text-align:left; tabstops:0.000000in/L0; dom-dir:ltr">&gt;&gt; PdfMailer.deliver_email_client("michael@dtcorp.com.au","testing from console","blah",@pdf)</p>
 </section>
 <section id="1" listid="0" parentid="0" type="header" xid="91">
 <p xid="92" props="text-align:right"><c props="font-family:Arial; text-decoration:none; color:0000ff; font-size:8pt; text-position:normal; font-weight:bold; font-style:normal; lang:en-US">Digitech Corporation</c><c props="font-family:Arial; text-decoration:none; color:0000ff; font-size:8pt; text-position:normal; font-weight:normal; font-style:normal; lang:en-US"> Pty Ltd</c></p>
