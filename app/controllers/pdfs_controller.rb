@@ -195,26 +195,23 @@ class PdfsController < ApplicationController
 
 		@pdf = Pdf.find(params[:id])
 
-		print "split no = " + SPLIT_NO
-		print "get no   = " + @pdf.get_no_pages
-
 		# Detect how big the file is and split if over 25pages.
-#		if @pdf.get_no_pages.to_i > SPLIT_NO.to_i
+		if @pdf.get_no_pages.to_i > SPLIT_NO.to_i
 			# split up into two parts
-#			@pdf.split_pdf
+			@pdf.split_pdf
 
 			# Send the email twice with a different attachement each time.
-#			@original_filename = @pdf.filename
-#			@pdf.filename = File.basename(@original_filename, '.pdf') + "-part1.pdf"
-#			PdfMailer.deliver_email_client(params[:email], params[:subject], params[:body],@pdf)
+			@original_filename = @pdf.filename
+			@pdf.filename = File.basename(@original_filename, '.pdf') + "-part1.pdf"
+			PdfMailer.deliver_email_client(params[:email], params[:subject], params[:body],@pdf)
 
-#			@pdf.filename = File.basename(@original_filename, '.pdf') + "-part2.pdf"
-#			PdfMailer.deliver_email_client(params[:email], params[:subject], params[:body],@pdf)
+			@pdf.filename = File.basename(@original_filename, '.pdf') + "-part2.pdf"
+			PdfMailer.deliver_email_client(params[:email], params[:subject], params[:body],@pdf)
 
-#		else
+		else
 			# Send one email as normal
-#			PdfMailer.deliver_email_client(params[:email], params[:subject], params[:body],@pdf)
-#		end
+			PdfMailer.deliver_email_client(params[:email], params[:subject], params[:body],@pdf)
+		end
 
 		return true
 	end
