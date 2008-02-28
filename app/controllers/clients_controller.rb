@@ -5,23 +5,23 @@ class ClientsController < ApplicationController
          :redirect_to => { :action => :index }
 
   def index
-    @client_pages, @clients = paginate (:clients, :order => 'upper(name)', :per_page => 10)
-	@no = -1	# Used for shorcuts
+    @client_pages, @clients = paginate(:clients, :order => 'upper(name)', :per_page => 10)
+  @no = -1  # Used for shorcuts
   end
 
   def search
-	conditions = ["name ILIKE ?", "%#{@params[:client]}%"] unless @params[:client].nil?
+  conditions = ["name ILIKE ?", "%#{@params[:client]}%"] unless @params[:client].nil?
 
-    @client_pages, @clients = paginate (:clients, :conditions => conditions, :order => 'upper(name)', :per_page => 10)
-	@no = -1	# Used for shorcuts
+    @client_pages, @clients = paginate(:clients, :conditions => conditions, :order => 'upper(name)', :per_page => 10)
+  @no = -1  # Used for shorcuts
 
-	render :action => 'index'
+  render :action => 'index'
 
   end
 
   def show
     @client = Client.find(params[:id])
-	@id = params[:id]	# Used for shortcuts
+  @id = params[:id] # Used for shortcuts
   end
 
   def new
@@ -45,20 +45,20 @@ class ClientsController < ApplicationController
   def update
     @client = Client.find(params[:id])
 
-	# Move directory, if dir exists
-	#@newclient = Client.new(params[:client])
-	#@newclient.name = @client.move_dir(@newclient.name)
-	@oldname = @client.name
+  # Move directory, if dir exists
+  #@newclient = Client.new(params[:client])
+  #@newclient.name = @client.move_dir(@newclient.name)
+  @oldname = @client.name
 
-	
-	# Store the data
+
+  # Store the data
     #if @client.errors.size == 0 and @client.update_attributes(params[:client])
     if @client.update_attributes(params[:client])
-		@client.move_dir(@oldname)
-		flash[:notice] = 'Client was successfully updated.'
-		redirect_to :action => 'show', :id => @client
+    @client.move_dir(@oldname)
+    flash[:notice] = 'Client was successfully updated.'
+    redirect_to :action => 'show', :id => @client
     else
-		render :action => 'edit'
+    render :action => 'edit'
     end
   end
 

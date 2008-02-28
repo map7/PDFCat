@@ -5,13 +5,13 @@ class CategoriesController < ApplicationController
          :redirect_to => { :action => :index }
 
   def index
-    @category_pages, @categories = paginate (:categories, :order => 'upper(name)', :per_page => 10)
-	@no = -1	# Used for shorcuts
+    @category_pages, @categories = paginate(:categories, :order => 'upper(name)', :per_page => 10)
+  @no = -1  # Used for shorcuts
   end
 
   def show
     @category = Category.find(params[:id])
-	@id = params[:id]	# Used for shortcuts
+  @id = params[:id] # Used for shortcuts
   end
 
   def new
@@ -38,16 +38,16 @@ class CategoriesController < ApplicationController
     # Move directory, if dir exists
     #@newcategory = Category.new(params[:category])
     #@newcategory.name = @category.move_dir(@newcategory.name)
-	@oldcat = @category.name
+  @oldcat = @category.name
 
     # Store the data
     #if @category.errors.size == 0 and @category.update_attributes(params[:category])
     if @category.update_attributes(params[:category])
-		@category.move_dir(@oldcat)
-		flash[:notice] = 'Category was successfully updated.'
-		redirect_to :action => 'show', :id => @category
+    @category.move_dir(@oldcat)
+    flash[:notice] = 'Category was successfully updated.'
+    redirect_to :action => 'show', :id => @category
     else
-		render :action => 'edit'
+    render :action => 'edit'
     end
   end
 
@@ -57,12 +57,12 @@ class CategoriesController < ApplicationController
   end
 
   def show_item
-	@category = Category.find(params[:id])
-	#@id = params[:id]
-	#render_text "test from controller " + @id
-	#
-	render_text "id: " + @category.id.to_s + "<br />" + "name: " + @category.name.to_s
+  @category = Category.find(params[:id])
+  #@id = params[:id]
+  #render_text "test from controller " + @id
+  #
+  render_text "id: " + @category.id.to_s + "<br />" + "name: " + @category.name.to_s
 
   end
-  
+
 end
