@@ -47,7 +47,7 @@ class PdfsController < ApplicationController
 
     end if
 
-      @no = -1  # Used for shorcuts
+      @no == -1  # Used for shorcuts
 
     # Render the index with the search criteria
     render :action => 'index'
