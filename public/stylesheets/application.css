@@ -194,6 +194,22 @@ div#loginform{
 
     min-width: 750px;
 }
+.navpgs{
+    height: 54px;
+    padding-bottom: 0;
+    padding-right: 30px;
+    padding-left: 30px;
+
+    margin-bottom: 20px;
+
+    background-color: #0A4371;
+    color: white;
+
+    font-size: 93%;
+    font-family: Tahoma;
+
+    min-width: 750px;
+}
 
 .menuitem{
     margin-right: 8px;
