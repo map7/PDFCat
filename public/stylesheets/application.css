@@ -261,6 +261,7 @@ tr#listitem:hover{
 /********************* Forms **********************/
 
 input, textarea{
+    font-size: 130%;
     border: 1px solid #888;
 }
 
