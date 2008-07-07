@@ -17,16 +17,16 @@ class PdfsController < ApplicationController
 
     if @searchclient == ""
       # search just the pdfnames
-      @pdf_pages, @pdfs = paginate(:pdfs, :conditions => ["pdfname ilike ?", "%" + @searchpdf + "%"], :order => 'pdfdate DESC', :per_page => 10)
+      @pdf_pages, @pdfs = paginate(:pdfs, :conditions => ["pdfname ILIKE ?", "%" + @searchpdf + "%"], :order => 'pdfdate DESC', :per_page => 10)
     else
       # search pdfnames linked to a client.
 
       @client = Client.find(:all, :conditions => ["name like ?", "%" + @searchclient + "%"])
 
       if @client.size == 0
-        @pdf_pages, @pdfs = paginate(:pdfs, :conditions => ["pdfname ilike ?", "%" + @searchpdf + "%"], :order => 'pdfdate DESC', :per_page => 10)
+        @pdf_pages, @pdfs = paginate(:pdfs, :conditions => ["pdfname ILIKE ?", "%" + @searchpdf + "%"], :order => 'pdfdate DESC', :per_page => 10)
       else
-        @pdf_pages, @pdfs = paginate(:pdfs, :conditions => ["pdfname ilike ? and client_id = ?", "%" + @searchpdf + "%", @client[0].id], :order => 'pdfdate DESC', :per_page => 10)
+        @pdf_pages, @pdfs = paginate(:pdfs, :conditions => ["pdfname ILIKE ? and client_id = ?", "%" + @searchpdf + "%", @client[0].id], :order => 'pdfdate DESC', :per_page => 10)
       end
 
 
