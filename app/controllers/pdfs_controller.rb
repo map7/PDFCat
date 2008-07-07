@@ -21,7 +21,7 @@ class PdfsController < ApplicationController
     else
       # search pdfnames linked to a client.
 
-      @client = Client.find(:all, :conditions => ["name like ?", "%" + @searchclient + "%"])
+      @client = Client.find(:all, :conditions => ["name ILIKE ?", "%" + @searchclient + "%"])
 
       if @client.size == 0
         @pdf_pages, @pdfs = paginate(:pdfs, :conditions => ["pdfname ILIKE ?", "%" + @searchpdf + "%"], :order => 'pdfdate DESC', :per_page => 10)
