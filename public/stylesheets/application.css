@@ -211,6 +211,13 @@ div#loginform{
     min-width: 750px;
 }
 
+
+.pagination a{ 
+  color: white; 
+  font-weight: bold;
+}
+
+
 .menuitem{
     margin-right: 8px;
     

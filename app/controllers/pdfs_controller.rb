@@ -10,42 +10,65 @@ class PdfsController < ApplicationController
   end
 
   def search
+    @no = -1  # Used for shorcuts
+
+    @searchpdf = params[:pdf]
+    @searchclient = params[:client]
+
+    if @searchclient == ""
+      # search just the pdfnames
+      @pdf_pages, @pdfs = paginate(:pdfs, :conditions => ["pdfname like ?", "%" + @searchpdf + "%"], :order => 'pdfdate DESC', :per_page => 10)
+    else
+      # search pdfnames linked to a client.
+
+      @client = Client.find(:all, :conditions => ["name like ?", "%" + @searchclient + "%"])
+
+      if @client.size == 0
+        @pdf_pages, @pdfs = paginate(:pdfs, :conditions => ["pdfname like ?", "%" + @searchpdf + "%"], :order => 'pdfdate DESC', :per_page => 10)
+      else
+        @pdf_pages, @pdfs = paginate(:pdfs, :conditions => ["pdfname like ? and client_id = ?", "%" + @searchpdf + "%", @client[0].id], :order => 'pdfdate DESC', :per_page => 10)
+      end
+
+
+    end
 
     # Search for the client first
     # ILIKE is just for postgres insensitive searches, in mysql LIKE will do this
     #conditions = ["name LIKE ?", "%#{@params[:client]}%"] unless @params[:client].nil?
-    conditions = ["name ILIKE ?", "%#{@params[:client]}%"] unless @params[:client].nil?
+#    conditions = ["name ILIKE ?", "%#{@searchclient}%"]
 
-    @client = Client.find(:all, :conditions => conditions)
 
-    if @client[0].nil? then
+#    @client = Client.find(:all, :conditions => conditions)
+
+#    if @client.nil? then
 
       # If there are no results from the search, then display all and an error message.
-      @pdf_pages, @pdfs = paginate(:pdfs, :order => 'pdfdate DESC', :per_page => 10)
-      flash[:notice] = 'No client found by the name "' + @params[:client] + '"'
+#      @pdf_pages, @pdfs = paginate(:pdfs, :order => 'pdfdate DESC', :per_page => 10)
+#      flash[:notice] = 'No client found by the name "' + @searchclient + '"'
 
-    else
+#    else
 
       # Initialise string
-      conditionstr = ''
+#      conditionstr = ''
 
       # Go through a loop of results from client and build our conditions for the pdf search
-      @client.each do|clt|
-        if conditionstr.blank? then
-          conditionstr = "client_id = " + clt.id.to_s
-        else
-          conditionstr = conditionstr + " or client_id = " + clt.id.to_s
-        end
-      end
+#      @client.each do|clt|
+#        if conditionstr.blank? then
+#          conditionstr = "client_id = " + clt.id.to_s
+#        else
+#          conditionstr = conditionstr + " or client_id = " + clt.id.to_s
+#        end
+#      end
 
       # Add search functionality to the pdfs page.
       #conditions = ["client_id = ?", "#{@client[0].id}"]
-      conditions = [conditionstr]
+#      conditions = [conditionstr]
 
       # Query the database
-      @pdf_pages, @pdfs = paginate(:pdfs, :conditions => conditions, :order => 'pdfdate DESC', :per_page => 10)
+#      @pdf_pages, @pdfs = paginate(:pdfs, :conditions => conditions, :order => 'pdfdate DESC', :per_page => 10)
 
-    end if
+
+#    end if
 
       @no == -1  # Used for shorcuts
 

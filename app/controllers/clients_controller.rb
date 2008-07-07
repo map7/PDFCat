@@ -5,14 +5,19 @@ class ClientsController < ApplicationController
          :redirect_to => { :action => :index }
 
   def index
-    @client_pages, @clients = paginate(:clients, :order => 'upper(name)', :per_page => 10)
+    @clients = Client.paginate(:page => params[:page],:per_page => 10)
+
+#    @client_pages, @clients = paginate(:clients, :order => 'upper(name)', :per_page => 10)
   @no = -1  # Used for shorcuts
   end
 
   def search
-  conditions = ["name ILIKE ?", "%#{@params[:client]}%"] unless @params[:client].nil?
+    @conditions = ["name ILIKE ?", "%#{params[:client]}%"] unless params[:client].nil?
 
-    @client_pages, @clients = paginate(:clients, :conditions => conditions, :order => 'upper(name)', :per_page => 10)
+    logger.warn params[:client]
+
+#    @client_pages, @clients = paginate(:clients, :conditions => conditions, :order => 'upper(name)', :per_page => 10)
+    @clients = Client.paginate(:page => params[:page],:conditions => @conditions, :order => 'upper(name)', :per_page => 10)
   @no = -1  # Used for shorcuts
 
   render :action => 'index'
