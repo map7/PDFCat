@@ -59,7 +59,11 @@ class ClientsController < ApplicationController
     # Store the data
     #if @client.errors.size == 0 and @client.update_attributes(params[:client])
     if @client.update_attributes(params[:client])
+
+      # If successful in changing the client's details then,
+      # Move the directory.
       @client.move_dir(@oldname)
+
       flash[:notice] = 'Client was successfully updated.'
       redirect_to :action => 'show', :id => @client
     else
