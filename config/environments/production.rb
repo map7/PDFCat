@@ -26,4 +26,4 @@ STORE_DIR = "/usr/tram/work/clt"
 #STORE_DIR = "/livedata/pdfcat_clt"
 
 BASE_URL= "/pdfcat"
-SPLIT_NO="25"
+SPLIT_NO="14"

@@ -25,4 +25,4 @@ UPLOAD_DIR = "/livedata/pdfcat_test_upload"
 STORE_DIR = "/livedata/pdfcat_test_clt"
 
 BASE_URL=""
-SPLIT_NO="2"
+SPLIT_NO="14"
