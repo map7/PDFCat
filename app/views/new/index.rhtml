@@ -1,17 +1,18 @@
 <h1>File upload</h1>
 
 <table>
-	<tr>
-		<th>No.</th>
-		<th>File Name</th>
-	</tr>
-    <% for list_file in @upload.list_files %> <!-- call the list_files method in the model -->
-	<tr id=listitem>
-		<td><b><%= @no = @no + 1 %></b></td>
-		<td><%= link_to list_file,	:controller => 'pdfs', :action => "attachment_new", :filename => list_file %> </td>
-        <td><%= link_to 'Enter',	:controller => 'pdfs', :action => 'new', 		:filename => list_file %></td>
-		<td><%= link_to 'Destroy',		:action => 'destroy',:filename => list_file %></td>
-    </tr>
-		<%= shortcut @no, "#{BASE_URL}/pdfs/new?filename=" + list_file  %>
-	<% end %>
+  <tr>
+    <th>No.</th>
+    <th>File Name</th>
+  </tr>
+  <% for list_file in @upload.list_files %> <!-- call the list_files method in the model -->
+  <tr id=listitem>
+    <td><b><%= @no = @no + 1 %></b></td>
+    
+    <td><%= link_to list_file,	:controller => 'pdfs', :action => "attachment_new", :filename => list_file %> </td>
+    <td><%= link_to 'Enter',	:controller => 'pdfs', :action => 'new', 		:filename => list_file %></td>
+    <td><%= link_to 'Destroy',	:action => 'destroy',:filename => list_file %></td>
+  </tr>
+  <%= shortcut @no, "#{BASE_URL}/pdfs/new?filename=" + list_file  %>
+  <% end %>
 </table>
