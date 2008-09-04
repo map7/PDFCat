@@ -137,13 +137,15 @@ div#heading{
     float: left;
     width: 400px;
 }
-div#search{
-	position:absolute;
-    padding-top: 20px;
-	right:60px;
 
-    font-family: Tahoma;
-    font-size: 80%;
+div#search{
+            position:absolute;
+            width: 600px;
+            right:10px;
+}
+div#search input { 
+    font-size: 100%;
+    border: 1px solid #888;
 }
 
 .searchbox{
@@ -153,8 +155,7 @@ div#search{
 }
 
 .searchitem{
-    
-    
+        
     width: 85px;
     height: 18px;
     text-align: center;
@@ -399,22 +400,23 @@ div#background_center{
 }
 
 div#info{
-	position: relative;
+/*
+          position: relative;
 
-    width: 400px; 
+          width: 400px; 
 
-	padding: 30px;
-	
-    background: #FFE887;
-    color: #000; 
+          padding: 30px;
+          
+          background: #FFE887;
+          color: #000; 
 
-	border: 2px solid red;
-	
-    text-align: left; 
-    font-size: 12; 
-    font-weight: bold;
+          border: 2px solid red;
+          
+          text-align: left; 
+          font-size: 12; 
+          font-weight: bold;
 
-    z-index: 4; 
-
+          z-index: 4; 
+*/
 }
 

@@ -2,50 +2,77 @@
 <%= shortcut 'a', "#{BASE_URL}/" + controller.controller_name %>  <!-- Disable Add New -->
 <%= shortcut_function 's', "$('client').focus();$('client').style.backgroundColor='#FFE887';" %>  <!-- Disable Add New -->
 
-<%= render :partial => "search" %>
-
-<h1>Listing pdfs</h1>
+<div id=search><%= render :partial => "search" %></div>
 
 
+<div id=listing>
 
-<table>
-  <tr>
-	  <th>No.</th>
-	  <th>Date</th>
-	  <th>Name</th>
-	  <th>Category</th>
-	  <th>Client</th>
-  </tr>
-  
-<% for pdf in @pdfs %>
-	<tr id=listitem>
-		<td><b><%= @no = @no + 1 %></b></td>
-
-		<td><%= pdf.pdfdate %></td>
-		<td><%= link_to pdf.pdfname, :action => "attachment", :id => pdf.id %></td>
-		<td><%= pdf.category.name %></td>
-		<td><%= pdf.client.name %></td>
-
-		<%= shortcut @no, "#{BASE_URL}/" + controller.controller_name + "/show/" + pdf.id.to_s %>
-
-		<td><%= link_to 'Show', :action => 'show', :id => pdf %></td>
-		<td><%= link_to 'Edit', :action => 'edit', :id => pdf %></td>
-		<td><%= link_to 'Destroy', { :action => 'destroy', :id => pdf }, :confirm => 'Are you sure?', :method => :post %></td>
-	</tr>
-
-<% end %>
-</table>
+  <h1>Listing pdfs</h1>
 
 
-<%= shortcut_next_or_prev @pdf_pages %>
+  <br />
 
-<div class=navpgs>
-	<%= link_to '<div class="menuitem"><b>P</b>revious page</div>', { :page => @pdf_pages.current.previous } if @pdf_pages.current.previous %>
-	<%= link_to '<div class="menuitem"><b>N</b>ext page</div>', { :page => @pdf_pages.current.next }, :id => 'nav_link' if @pdf_pages.current.next %> 
 
-	<!-- Page jump navigation -->
-	<b>Pages:</b>
-	<% for page in @pdf_pages -%>
-	<%= link_to_unless((params[:page].to_i == page.number), page.number, {:page => page}, {:id => 'test'}) %>&nbsp;
-	<% end -%>
+
+
+  <table>
+    <tr id=header>
+      <th id="FKey">FKey<% @no = 0 %></th>
+      <th>Date</th>
+      <th>Name</th>
+      <th>Category</th>
+      <th>Client</th>
+    </tr>
+    
+    <% for pdf in @pdfs %>
+    <tr id=listitem>
+      <td id="FKey"><%= @no = @no +1 %></td>
+
+      <td><%= pdf.pdfdate %></td>
+      <td><%= link_to pdf.pdfname, :action => "attachment", :id => pdf.id %></td>
+      <td><%= pdf.category.name %></td>
+      <td><%= pdf.client.name %></td>
+
+      <!-- 
+	   OLD Way
+	   shortcut @no, "#{BASE_URL}/" + controller.controller_name + "/show/" + pdf.id.to_s 
+
+	-->
+      
+      <td><%= link_to 'Show', 
+	      :action => 'show',
+	      :id => pdf %>
+      </td>
+      <td><%= link_to 'Edit', :action => 'edit', :id => pdf %></td>
+      <td><%= link_to 'Destroy', { :action => 'destroy', :id => pdf }, :confirm => 'Are you sure?', :method => :post %></td>
+
+    </tr>
+
+    <% end %>
+  </table>
+
+<script>
+/*
+// Debug code
+//
+  var thediv = document.getElementById("listing");  
+  var tables = thediv.getElementsByTagName("table");  
+  var rows = tables[0].getElementsByTagName("tr"); 
+
+  for(i = 1; i < rows.length; i++){          
+		 
+		 var links = rows[i].getElementsByTagName("a");
+		 alert(links[0]);
+		 $(links[0]).click();
+		 }
+*/
+</script>
+
+
+
+<div class=nav>
+  <!-- Page jump navigation -->
+  <%= will_paginate @pdfs %>
+</div>
+
 </div>

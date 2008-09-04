@@ -17,7 +17,6 @@
     <td><%=h category.send(column.name) %></td>
   <% end %>
 
-  <%= shortcut @no, "#{BASE_URL}/" + controller.controller_name + "/show/" + category.id.to_s %>
 
 	<td>
 		<!-- TODO improve this AJAX to have links and shortcuts to replace the show page -->
@@ -38,15 +37,7 @@
 <% end %>
 </table>
 
-<%= shortcut_next_or_prev @category_pages %>
-
 <div class=nav>
-	<%= link_to '<div class="menuitem"><b>P</b>revious page</div>', { :page => @category_pages.current.previous } if @category_pages.current.previous %>
-	<%= link_to '<div class="menuitem"><b>N</b>ext page</div>', { :page => @category_pages.current.next }, :id => 'nav_link' if @category_pages.current.next %> 
-
-	<!-- Page jump navigation -->
-	<b>Pages:</b>
-	<% for page in @category_pages -%>
-		<%= link_to_unless((params[:page].to_i == page.number), page.number, {:page => page}, {:id => 'test'}) %>&nbsp;
-	<% end -%>
+  <!-- Page jump navigation -->
+  <%= will_paginate @categories %>
 </div>

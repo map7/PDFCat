@@ -6,31 +6,35 @@
   <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
   <title><%= SITE_NAME %> :<%= controller.action_name %></title>
   <%= stylesheet_link_tag 'application' %>
+
+  <%= javascript_include_tag 'prototype' %>
+
   <%= javascript_include_tag :defaults %>		<!-- Used for AJAX and shortcuts plugin -->
 
-	<!-- Calculate the size of a window -->
-	<script>
-		var winW = 630, winH = 460;
+  <!-- Calculate the size of a window -->
+  <script>
+    var winW = 630, winH = 460;
 
-		if (parseInt(navigator.appVersion)>3) {
-		 if (navigator.appName=="Netscape") {
-		  winW = window.innerWidth;
-		  winH = window.innerHeight;
-		 }
-		 if (navigator.appName.indexOf("Microsoft")!=-1) {
-		  winW = document.body.offsetWidth;
-		  winH = document.body.offsetHeight;
-		 }
-		}
-	</script>
+      if (parseInt(navigator.appVersion)>3) {
+        if (navigator.appName=="Netscape") {
+          winW = window.innerWidth;
+          winH = window.innerHeight;
+        }
+  
+      if (navigator.appName.indexOf("Microsoft")!=-1) {
+        winW = document.body.offsetWidth;
+        winH = document.body.offsetHeight;
+      }
+    }
+  </script>
 
 </head>
 <body>
 	<!-- Nav keys -->
-	<%= shortcut '!', "#{BASE_URL}/new" %>
-	<%= shortcut '@', "#{BASE_URL}/pdfs" %>
-	<%= shortcut '#', "#{BASE_URL}/clients" %>
-	<%= shortcut '$', "#{BASE_URL}/categories" %>
+	<%= shortcut '1', "#{BASE_URL}/new" %>
+	<%= shortcut '2', "#{BASE_URL}/pdfs" %>
+	<%= shortcut '3', "#{BASE_URL}/clients" %>
+	<%= shortcut '4', "#{BASE_URL}/categories" %>
 
 
 	<%= shortcut_function '?', "Element.toggle('help');"  %>
@@ -41,14 +45,14 @@
 	<%= shortcut 'b', "#{BASE_URL}/" + controller.controller_name  %>			<!-- Back --> 
 
 	<div id="headingback">
-		<div id="heading"><%=h controller.controller_name.singularize %></div>
+	  <div id="heading"><%=h controller.controller_name.singularize %></div>
 	</div>
 
 	<div class="nav">
-		<%= link_to '<div class="menuitem">New</div>', :controller => 'new' %>
-		<%= link_to '<div class="menuitem">Pdf</div>', :controller => 'pdfs' %>
-		<%= link_to '<div class="menuitem">Client</div>', :controller => 'clients' %>
-		<%= link_to '<div class="menuitem">Category</div>', :controller => 'categories' %>
+		<%= link_to '<div class="menuitem">1-New</div>', :controller => 'new' %>
+		<%= link_to '<div class="menuitem">2-Pdf</div>', :controller => 'pdfs' %>
+		<%= link_to '<div class="menuitem">3-Client</div>', :controller => 'clients' %>
+		<%= link_to '<div class="menuitem">4-Category</div>', :controller => 'categories' %>
 		<%= link_to_function '<div class="menuitem">Help</div>', "Element.toggle('help');" %>
 	</div>
 	
@@ -78,6 +82,11 @@
 	View pdf      = v<br />
 	Email item	  = m<br />
 </div>
+
+
+<div id=info></div>
+<div id=mode></div>
+<div id=modeKeys></div>
 
 <div id=footer>
 	Hit '?' for help

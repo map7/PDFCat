@@ -13,6 +13,6 @@
     <td><%= link_to 'Enter',	:controller => 'pdfs', :action => 'new', 		:filename => list_file %></td>
     <td><%= link_to 'Destroy',	:action => 'destroy',:filename => list_file %></td>
   </tr>
-  <%= shortcut @no, "#{BASE_URL}/pdfs/new?filename=" + list_file  %>
+
   <% end %>
 </table>

@@ -5,7 +5,10 @@ class PdfsController < ApplicationController
 
   def index
     # list all, sort by date (most recent at the top), 10 items per page.
-    @pdf_pages, @pdfs = paginate(:pdfs, :order => 'pdfdate DESC', :per_page => 10)
+#    @pdf_pages, @pdfs = paginate(:pdfs, :order => 'pdfdate DESC', :per_page => 10)
+
+    @pdfs = Pdf.paginate(:page => params[:page], :per_page => 10, :order => 'pdfdate DESC')
+
     @no = -1  # Used for shorcuts
   end
 
