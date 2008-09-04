@@ -44,9 +44,6 @@
 	<%= shortcut 'a', "#{BASE_URL}/" + controller.controller_name + "/new" %>	<!-- Add New -->
 	<%= shortcut 'b', "#{BASE_URL}/" + controller.controller_name  %>			<!-- Back --> 
 
-	<div id="headingback">
-	  <div id="heading"><%=h controller.controller_name.singularize %></div>
-	</div>
 
 	<div class="nav">
 		<%= link_to '<div class="menuitem">1-New</div>', :controller => 'new' %>

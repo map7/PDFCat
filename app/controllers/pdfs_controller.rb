@@ -20,8 +20,8 @@ class PdfsController < ApplicationController
 
     if @searchclient == ""
       # search just the pdfnames
-      @pdf_pages, @pdfs = paginate(:pdfs, :conditions => ["pdfname ILIKE ?", "%" + @searchpdf + "%"], :order => 'pdfdate DESC', :per_page => 10)
-
+      # @pdf_pages, @pdfs = paginate(:pdfs, :conditions => ["pdfname ILIKE ?", "%" + @searchpdf + "%"], :order => 'pdfdate DESC', :per_page => 10)
+      @pdfs = Pdf.paginate(:page => params[:page], :per_page => 10, :order => 'pdfdate DESC', :conditions => ["pdfname ILIKE ?", "%" + @searchpdf + "%"])
 
     else
       # search pdfnames linked to a client.
@@ -29,9 +29,11 @@ class PdfsController < ApplicationController
       @client = Client.find(:all, :conditions => ["name ILIKE ?", "%" + @searchclient + "%"])
 
       if @client.size == 0
-        @pdf_pages, @pdfs = paginate(:pdfs, :conditions => ["pdfname ILIKE ?", "%" + @searchpdf + "%"], :order => 'pdfdate DESC', :per_page => 10)
+#        @pdf_pages, @pdfs = paginate(:pdfs, :conditions => ["pdfname ILIKE ?", "%" + @searchpdf + "%"], :order => 'pdfdate DESC', :per_page => 10)
+        @pdfs = Pdf.paginate(:page => params[:page], :per_page => 10, :order => 'pdfdate DESC', :conditions => ["pdfname ILIKE ?", "%" + @searchpdf + "%"])
       else
-        @pdf_pages, @pdfs = paginate(:pdfs, :conditions => ["pdfname ILIKE ? and client_id = ?", "%" + @searchpdf + "%", @client[0].id], :order => 'pdfdate DESC', :per_page => 10)
+#        @pdf_pages, @pdfs = paginate(:pdfs, :conditions => ["pdfname ILIKE ? and client_id = ?", "%" + @searchpdf + "%", @client[0].id], :order => 'pdfdate DESC', :per_page => 10)
+        @pdfs = Pdf.paginate(:page => params[:page], :per_page => 10, :order => 'pdfdate DESC', :conditions => ["pdfname ILIKE ? and client_id = ?", "%" + @searchpdf + "%", @client[0].id])
 
       end
 
