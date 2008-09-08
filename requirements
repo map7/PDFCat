@@ -1,0 +1,6 @@
+
+Requires the following packages/ports:
+pdfjam = for rotation.
+
+
+Configure email server for outgoing email.

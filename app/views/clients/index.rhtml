@@ -5,7 +5,7 @@
 
 <h1>Listing clients</h1>
 
-<%= link_to '<b>A</b>dd New client', :action => 'new' %>
+
 	
 <table>
   <tr>
@@ -31,7 +31,7 @@
 
 
 
-<div class=nav>
-  <!-- Page jump navigation -->
-  <%= will_paginate @clients %>
-</div>
+<!-- Page jump navigation -->
+<%= will_paginate @clients %>
+
+<%= link_to '<b>A</b>dd New client', :action => 'new' %>

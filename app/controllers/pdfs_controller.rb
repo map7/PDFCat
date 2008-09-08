@@ -25,14 +25,22 @@ class PdfsController < ApplicationController
 
     else
       # search pdfnames linked to a client.
+      logger.warn("client search:")
+      logger.warn(@searchclient)
 
       @client = Client.find(:all, :conditions => ["name ILIKE ?", "%" + @searchclient + "%"])
 
       if @client.size == 0
-#        @pdf_pages, @pdfs = paginate(:pdfs, :conditions => ["pdfname ILIKE ?", "%" + @searchpdf + "%"], :order => 'pdfdate DESC', :per_page => 10)
+
         @pdfs = Pdf.paginate(:page => params[:page], :per_page => 10, :order => 'pdfdate DESC', :conditions => ["pdfname ILIKE ?", "%" + @searchpdf + "%"])
       else
-#        @pdf_pages, @pdfs = paginate(:pdfs, :conditions => ["pdfname ILIKE ? and client_id = ?", "%" + @searchpdf + "%", @client[0].id], :order => 'pdfdate DESC', :per_page => 10)
+
+        # @pdfs = Pdf.paginate(:page => params[:page], :per_page => 10, :order => 'pdfdate DESC', :conditions => ["pdfname ILIKE ? and client_id = ?", "%" + @searchpdf + "%", @client[0].id])
+
+        @client.each do |client|
+          logger.warn(client.name)
+        end
+
         @pdfs = Pdf.paginate(:page => params[:page], :per_page => 10, :order => 'pdfdate DESC', :conditions => ["pdfname ILIKE ? and client_id = ?", "%" + @searchpdf + "%", @client[0].id])
 
       end
@@ -157,7 +165,8 @@ class PdfsController < ApplicationController
 
   def destroy
     # delete the physical file.
-    File.delete(Pdf.find(params[:id]).fullpath)
+    @pdf = Pdf.find(params[:id])
+    @pdf.delete_file
 
     # delete the database record
     Pdf.find(params[:id]).destroy

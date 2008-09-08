@@ -8,7 +8,11 @@
 
 
 /********************* Main Area *********************/
-body { margin: 0; background-color: #fff; color: #333; }
+body {
+       margin: 0; 
+       color: #333; 
+       background-color: #e7dfcb;
+}
 
 body, p, ol, ul, td {
   font-family: verdana, arial, helvetica, sans-serif;
@@ -22,39 +26,21 @@ pre {
   font-size: 11px;
 }
 
-a { color: #000; }
-a:visited { color: #000; }
-a:hover { color: #000;  }
 
-a#test { 
-	font-size: 12px;
-	font-weight: bold;
+a { color: #6088A8; font-weight: bold; }
+a:visited {  }
+a:hover { color: #fff; background-color:#6088a8; }
 
-	padding-left:5px;
-	padding-right:5px;
-	padding-top:2px;
-	padding-bottom:1px;
+h1{
+    margin-top: 30px;
 
-    text-decoration: none;
-	color: white; 
-	background-color: #1b5472;
+
+    color: #999;
+    
+    font-style: italic;
+    font-size:160%;
 }
-a#test:visited { 
-	font-size: 12px;
-	font-weight: bold;
 
-	padding-left:5px;
-	padding-right:5px;
-	padding-top:2px;
-	padding-bottom:1px;
-
-    text-decoration: none;
-	color: white; 
-	background-color: #1b5472;
-}
-a#test:hover { 
-    background-color: #4e87a5;
-}
 
 .fieldWithErrors {
   padding: 2px;
@@ -112,6 +98,23 @@ div.progressBar div.background {
   width: 0%;
 }
 
+
+
+
+  
+#contentBox{ 
+             padding-bottom: 50px;
+             margin: 20px;
+             border: 1px solid #000;
+             background-color: #fff;
+}
+
+#contentInner{ 
+               /* text-align: center;*/
+               
+               padding-left: 20px;
+               padding-right: 20px;
+}
 
 
 
@@ -180,21 +183,24 @@ div#loginform{
 
 /********************* Menu Section *********************/
 .nav{
-    height: 18px;
-    padding-bottom: 0;
-    padding-right: 30px;
-    padding-left: 30px;
+      position:absolute;
+      display:block;
+      z-index:104;
 
-    margin-bottom: 20px;
+      width: 100%;
+      height: 20px;
 
-    background-color: #0A4371;
-    color: white;
+      margin:0;
+      bottom:20px;
+      left:0px;
 
-    font-size: 93%;
-    font-family: Tahoma;
+      background-color: #bfb086;
+/*      color: white;*/
 
-    min-width: 750px;
+      font-size: 93%;
+      font-family: Tahoma;
 }
+
 .navpgs{
     height: 54px;
     padding-bottom: 0;
@@ -204,7 +210,7 @@ div#loginform{
     margin-bottom: 20px;
 
     background-color: #0A4371;
-    color: white;
+/*    color: white;*/
 
     font-size: 93%;
     font-family: Tahoma;
@@ -213,31 +219,39 @@ div#loginform{
 }
 
 
+.pagination{ 
+             padding-top: 20px;
+
+}
+
 .pagination a{ 
-  color: white; 
-  font-weight: bold;
+/*  color: white; 
+  font-weight: bold;*/
 }
 
 
 .menuitem{
-    margin-right: 8px;
-    
-    position: float;
-    float: left;
-    
-    width: 85px;
-    height: 18px;
-    text-align: center;
+           margin-right: 8px;
+           
+           position: float;
+           float: left;
+           
+           width: 85px;
+           height: 20px;
+           text-align: center;
 
-    background-color: #1b5472;
+           /*    background-color: #1b5472;*/
 
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
+           color: black;
+           text-align:center;
+           font-weight:bold;
+           font-size: 11px;
+           text-decoration: none;
+
 }
 
 .menuitem:hover{
-    background-color: #4e87a5;
+    background-color: #979388;
 }
 
 /********************* Tables *********************/
@@ -369,12 +383,64 @@ div#help{
     /*visibility: hidden;*/
 }
 
+
+/********************* Footer *********************/
+
 div#footer{
 	position: absolute;
 
 	right:0;
 	bottom:0;
 }
+
+
+#foot {
+	position:absolute; 
+	display:block; 
+	z-index:104; 
+
+	width:100%; 
+	height:20px; 
+
+	margin:0; 
+	bottom:0; 
+/*	right:16px; */
+
+	background:#979388;
+	color:#000; 
+
+	text-align:left; 
+	font-size:12; 
+}
+
+
+#footerRight {
+  z-index:111;
+  right:18px;
+  position:absolute;
+  
+  width:500px;
+  height:20px;
+
+  color: #5b5441;
+                 
+  text-align:right;
+
+}
+
+
+#footerAPP{ 
+
+
+/*             font-size: 22;*/
+             font-style: italic;
+             font-weight: bold;
+}
+
+
+
+
+
 
 div#background_tint{
 	position: absolute;
@@ -419,4 +485,25 @@ div#info{
           z-index: 4; 
 */
 }
+
+
+.pad1{ 
+       display:block; 
+       width:16px; 
+       height:5px; 
+       float:left;
+}
+
+
+/* Padding for header */
+.pad2 {
+	display:block; 
+	height:40px;
+}
+
+/* Padding for footer */
+.pad3 { 
+        display:block;
+        height:25px;
+ }
 
