@@ -3,8 +3,9 @@
 
 
 <table>
-  <tr>
-	  <th>No.</th>
+  <tr id=header>
+    <th id="FKey">FKey<% @no = 0 %></th>
+
   <% for column in Category.content_columns %>
     <th><%= column.human_name %></th>
   <% end %>
@@ -12,7 +13,7 @@
   
 <% for category in @categories %>
 	<tr id=listitem>
-	  <td><b><%= @no = @no + 1 %></b></td>
+	  <td id="FKey"><%= @no = @no +1 %></td>
   <% for column in Category.content_columns %>
     <td><%=h category.send(column.name) %></td>
   <% end %>

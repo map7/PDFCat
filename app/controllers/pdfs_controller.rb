@@ -3,18 +3,12 @@ class PdfsController < ApplicationController
   # GETs should be safe (see http://www.w3.org/2001/tag/doc/whenToUseGet.html)
   verify :method => :post, :only => [ :destroy, :create, :update ], :redirect_to => { :action => :index }
 
+  # list all, sort by date (most recent at the top), 10 items per page.
   def index
-    # list all, sort by date (most recent at the top), 10 items per page.
-#    @pdf_pages, @pdfs = paginate(:pdfs, :order => 'pdfdate DESC', :per_page => 10)
-
     @pdfs = Pdf.paginate(:page => params[:page], :per_page => 10, :order => 'pdfdate DESC')
-
-    @no = -1  # Used for shorcuts
   end
 
   def search
-    @no = -1  # Used for shorcuts
-
     @searchpdf = params[:pdf]
     @searchclient = params[:client]
 

@@ -1,18 +1,23 @@
 <h1>File upload</h1>
 
 <table>
-  <tr>
-    <th>No.</th>
+  <tr id=header>
+    <th id="FKey">FKey<% @no = 0 %></th>
     <th>File Name</th>
   </tr>
-  <% for list_file in @upload.list_files %> <!-- call the list_files method in the model -->
+  <!-- for list_file in @upload.list_files --> <!-- call the list_files method in the model -->
+
+  <% for file in @files %>
   <tr id=listitem>
-    <td><b><%= @no = @no + 1 %></b></td>
+    <td id="FKey"><%= @no = @no +1 %></td>
     
-    <td><%= link_to list_file,	:controller => 'pdfs', :action => "attachment_new", :filename => list_file %> </td>
-    <td><%= link_to 'Enter',	:controller => 'pdfs', :action => 'new', 		:filename => list_file %></td>
-    <td><%= link_to 'Destroy',	{ :action => 'destroy', :filename => list_file}, :confirm => 'Are you sure?' %></td>
+    <td><%= link_to file,	:controller => 'pdfs', :action => "attachment_new", :filename => file %> </td>
+    <td><%= link_to 'Enter',	:controller => 'pdfs', :action => 'new', 		:filename => file %></td>
+    <td><%= link_to 'Destroy',	{ :action => 'destroy', :filename => file}, :confirm => 'Are you sure?' %></td>
   </tr>
 
   <% end %>
+
 </table>
+
+<%= will_paginate @files %>
