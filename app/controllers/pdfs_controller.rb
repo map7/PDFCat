@@ -112,19 +112,28 @@ class PdfsController < ApplicationController
     @pdf.client = Client.find(params[:client]) unless params[:client].blank?
 
     # Move the file and set the new filename to be saved
-    @pdf.filename = @pdf.move_file(UPLOAD_DIR + "/" + @pdf.filename) #if @pdf.file_exist
+    if File.exist?(@pdf.get_new_filename(UPLOAD_DIR + "/" + @pdf.filename))
 
-    # Create md5
-    @pdf.md5 = @pdf.md5calc
-
-    # Check for any errors before the save
-    if @pdf.errors.size == 0 and @pdf.save
-      flash[:notice] = 'Pdf was successfully created.'
-      redirect_to :action => 'index'
-    else
+      # Throwing an error, Return with an error (throw error)
+      @pdf.errors.add :name, "'" + @pdf.pdfname + "' already taken for this client, category and date."
       render :action => 'new'
-    end
 
+    else
+      # All is good, continue with cataloging pdf.
+      @pdf.filename = @pdf.move_file(UPLOAD_DIR + "/" + @pdf.filename) #if @pdf.file_exist?
+
+      # Create md5
+      @pdf.md5 = @pdf.md5calc
+
+      # Check for any errors before the save
+      if @pdf.errors.size == 0 and @pdf.save
+        flash[:notice] = 'Pdf was successfully created.'
+        redirect_to :action => 'index'
+      else
+        render :action => 'new'
+      end
+
+    end
   end
 
   def edit
@@ -166,7 +175,7 @@ class PdfsController < ApplicationController
   def destroy
     # delete the physical file.
     @pdf = Pdf.find(params[:id])
-    @pdf.delete_file
+    @pdf.delete_file(@pdf.fullpath)
 
     # delete the database record
     Pdf.find(params[:id]).destroy

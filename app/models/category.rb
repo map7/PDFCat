@@ -1,34 +1,34 @@
 class Category < ActiveRecord::Base
-	has_many :pdfs
-	validates_presence_of :name
-	validates_uniqueness_of :name
-	validates_format_of :name, :with => /^[(|)|A-Z|a-z|0-9][,|&|(|)|'| |.|\-|A-Z|a-z|0-9]+$/
-	validate :new_dir_exists?
+  has_many :pdfs
+  validates_presence_of :name
+  validates_uniqueness_of :name, :case_sensitive => false
+  validates_format_of :name, :with => /^[(|)|A-Z|a-z|0-9][,|&|(|)|'| |.|\-|A-Z|a-z|0-9]+$/
+  validate :new_dir_exists?
 
     def move_dir(oldname)
-		@client = []	# Initialise an array
+    @client = []  # Initialise an array
 
 
-		# Search all pdfs for this id
-		@pdf = Pdf.find(:all, :conditions => {:category_id => id})
+    # Search all pdfs for this id
+    @pdf = Pdf.find(:all, :conditions => {:category_id => id})
 
-		# Build an array of clients which this change will affect making sure each is unique.
-		@pdf.each do|p|
-			@clientname = p.client.name.downcase
+    # Build an array of clients which this change will affect making sure each is unique.
+    @pdf.each do|p|
+      @clientname = p.client.name.downcase
 
-			unless @client.include?(@clientname)	# If this is the first time we have come across this client then...
-				@client << @clientname
-					
-				@olddir = STORE_DIR + "/" + @clientname + "/" + oldname.downcase
-				@newdir = STORE_DIR + "/" +  @clientname + "/" + name.downcase
+      unless @client.include?(@clientname)  # If this is the first time we have come across this client then...
+        @client << @clientname
 
-				# Move the category directory to the new one.
-				File.rename(@olddir,@newdir) if File.exists?(@olddir)
-			end
-		end
+        @olddir = STORE_DIR + "/" + @clientname + "/" + oldname.downcase
+        @newdir = STORE_DIR + "/" +  @clientname + "/" + name.downcase
+
+        # Move the category directory to the new one.
+        File.rename(@olddir,@newdir) if File.exists?(@olddir)
+      end
+    end
     end
 
-	def new_dir_exists?
+  def new_dir_exists?
         @client = []    # Initialise an array
 
         # Search all pdfs for this id
@@ -52,6 +52,6 @@ class Category < ActiveRecord::Base
                 end
             end
         end
-	end	
-	
+  end
+
 end

@@ -7,12 +7,12 @@ class CategoriesController < ApplicationController
   def index
 #    @category_pages, @categories = paginate(:categories, :order => 'upper(name)', :per_page => 10)
     @categories = Category.paginate(:page => params[:page], :per_page => 10, :order => "upper(name)")
-  @no = -1  # Used for shorcuts
+    @no = -1  # Used for shorcuts
   end
 
   def show
     @category = Category.find(params[:id])
-  @id = params[:id] # Used for shortcuts
+    @id = params[:id] # Used for shortcuts
   end
 
   def new
@@ -21,6 +21,7 @@ class CategoriesController < ApplicationController
 
   def create
     @category = Category.new(params[:category])
+
     if @category.save
       flash[:notice] = 'Category was successfully created.'
       redirect_to :action => 'index'

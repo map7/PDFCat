@@ -34,8 +34,9 @@ class Pdf < ActiveRecord::Base
     end
 
   # Delete the physical file from the upload dir.
-  def delete_file
-    File.delete(self.fullpath) if File.exist?(self.fullpath)
+  def delete_file(filename)
+#    File.delete(self.fullpath) if File.exist?(self.fullpath)
+    File.delete(filename) if File.exist?(filename)
   end
 
   # Return the full path of the final filename.
@@ -54,19 +55,35 @@ class Pdf < ActiveRecord::Base
     Digest::MD5.hexdigest(File.read(fullpath))
   end
 
+
+  def get_new_filename(original)
+    # Format date
+    @filedate = pdfdate.to_formatted_s(:file_format)
+
+    # Format the new filename.
+    @new_filename =  STORE_DIR + "/" + client.name.downcase + "/" + category.name.downcase + "/" + @filedate + "-" + pdfname + File.extname(original)
+
+  end
+
   def move_file(original)
 
     # Make directories
     Dir.mkdir(STORE_DIR + "/" + client.name.downcase, 0775) unless File.exists?(STORE_DIR + "/" + client.name.downcase)
     Dir.mkdir(STORE_DIR + "/" + client.name.downcase + "/" + category.name.downcase, 0755) unless File.exists?(STORE_DIR + "/" + client.name.downcase + "/" + category.name.downcase)
 
-    # Format date
+=begin
     @filedate = pdfdate.to_formatted_s(:file_format)
 
     filename = original
 
     # Format the new filename.
     @new_filename =  STORE_DIR + "/" + client.name.downcase + "/" + category.name.downcase + "/" + @filedate + "-" + pdfname + File.extname(filename)
+
+=end
+
+
+    filename = original
+    @new_filename = get_new_filename(filename)
 
     if File.exist?(@new_filename)
       # Throw an error here
