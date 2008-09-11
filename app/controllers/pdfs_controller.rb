@@ -9,10 +9,14 @@ class PdfsController < ApplicationController
   end
 
   def search
-    @searchpdf = params[:pdf]
-    @searchclient = params[:client]
 
-    if @searchclient == ""
+    session[:pdf_search] = params[:pdf] unless params[:pdf].nil?
+    session[:client_search] = params[:client] unless params[:client].nil?
+
+    @searchpdf = session[:pdf_search]
+    @searchclient = session[:client_search]
+
+    if @searchclient == "" or @searchclient.nil?
       # search just the pdfnames
       # @pdf_pages, @pdfs = paginate(:pdfs, :conditions => ["pdfname ILIKE ?", "%" + @searchpdf + "%"], :order => 'pdfdate DESC', :per_page => 10)
       @pdfs = Pdf.paginate(:page => params[:page], :per_page => 10, :order => 'pdfdate DESC', :conditions => ["pdfname ILIKE ?", "%" + @searchpdf + "%"])
