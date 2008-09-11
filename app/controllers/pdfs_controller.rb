@@ -5,7 +5,13 @@ class PdfsController < ApplicationController
 
   # list all, sort by date (most recent at the top), 10 items per page.
   def index
-    @pdfs = Pdf.paginate(:page => params[:page], :per_page => 10, :order => 'pdfdate DESC')
+
+    if session[:pdf_search].nil? and session[:client_search].nil?
+      @pdfs = Pdf.paginate(:page => params[:page], :per_page => 10, :order => 'pdfdate DESC')
+    else
+      search()
+    end
+
   end
 
   def search

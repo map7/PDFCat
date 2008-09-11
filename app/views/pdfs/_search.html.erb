@@ -1,7 +1,7 @@
 <div id='search'>
   <% form_tag :action => 'search' do %>
-    <b>Search PDF: </b><%= text_field_tag 'pdf' %> 
-    <b>Client: </b><%= text_field_tag 'client' %>
+    <b>Search PDF: </b><%= text_field_tag 'pdf', @searchpdf %> 
+    <b>Client: </b><%= text_field_tag 'client', @searchclient %>
     
     <%= submit_tag 'Search' %>
   <% end %>

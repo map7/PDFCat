@@ -5,10 +5,13 @@ class ClientsController < ApplicationController
          :redirect_to => { :action => :index }
 
   def index
-    @clients = Client.paginate(:page => params[:page],:per_page => 10, :order => 'upper(name)')
 
-#    @client_pages, @clients = paginate(:clients, :order => 'upper(name)', :per_page => 10)
-  @no = -1  # Used for shorcuts
+    if session[:client_search].nil?
+      @clients = Client.paginate(:page => params[:page],:per_page => 10, :order => 'upper(name)')
+    else
+      search()
+    end
+
   end
 
   def search
@@ -17,14 +20,13 @@ class ClientsController < ApplicationController
     @conditions = ["name ILIKE ?", "%#{@searchclient}%"]
 
     @clients = Client.paginate(:page => params[:page],:conditions => @conditions, :order => 'upper(name)', :per_page => 10)
-    @no = -1  # Used for shorcuts
 
     render :action => 'index'
   end
 
   def show
     @client = Client.find(params[:id])
-  @id = params[:id] # Used for shortcuts
+    @id = params[:id] # Used for shortcuts
   end
 
   def new
@@ -33,6 +35,7 @@ class ClientsController < ApplicationController
 
   def create
     @client = Client.new(params[:client])
+
     if @client.save
       flash[:notice] = 'Client was successfully created.'
       redirect_to :action => 'index'
