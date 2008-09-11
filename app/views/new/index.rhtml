@@ -4,6 +4,8 @@
   <tr id=header>
     <th id="FKey">FKey<% @no = 0 %></th>
     <th>File Name</th>
+    <th>Size</th>
+    <th>Date</th>
   </tr>
   <!-- for list_file in @upload.list_files --> <!-- call the list_files method in the model -->
 
@@ -11,9 +13,12 @@
   <tr id=listitem>
     <td id="FKey"><%= @no = @no +1 %></td>
     
-    <td><%= link_to file,	:controller => 'pdfs', :action => "attachment_new", :filename => file %> </td>
-    <td><%= link_to 'Enter',	:controller => 'pdfs', :action => 'new', 		:filename => file %></td>
-    <td><%= link_to 'Destroy',	{ :action => 'destroy', :filename => file}, :confirm => 'Are you sure?' %></td>
+    <td><%= link_to file["name"], :controller => 'pdfs', :action => "attachment_new", :filename => file["name"] %> </td>
+    <td><%= file["size"] %> </td>
+    <td><%= file["date"] %> </td>
+    
+    <td><%= link_to 'Enter',	:controller => 'pdfs', :action => 'new', 		:filename => file["name"] %></td>
+    <td><%= link_to 'Destroy',	{ :action => 'destroy', :filename => file["name"]}, :confirm => 'Are you sure?' %></td>
   </tr>
 
   <% end %>

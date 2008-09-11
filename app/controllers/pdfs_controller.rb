@@ -208,6 +208,8 @@ class PdfsController < ApplicationController
     end
   end
 
+  # Search for the file compare the md5 and match.
+  # This is incase a file was moved or renamed.
   def relink
     @pdf = Pdf.find(params[:id])
 

@@ -444,6 +444,8 @@ div#footer{
 
 div#background_tint{
 	position: absolute;
+        z-index: 1000;
+                     
 	left:0;
 	top:0;
 	width: 100%;
@@ -457,6 +459,8 @@ div#background_tint{
 
 div#background_center{
 	position: absolute;
+        z-index: 1001;
+
 	left:0;
 	top:0;
 	width: 100%;
@@ -465,8 +469,8 @@ div#background_center{
 	text-align: center;
 }
 
-div#info{
-/*
+div#wait{
+
           position: relative;
 
           width: 400px; 
@@ -483,7 +487,7 @@ div#info{
           font-weight: bold;
 
           z-index: 4; 
-*/
+
 }
 
 

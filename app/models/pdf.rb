@@ -14,23 +14,54 @@ class Pdf < ActiveRecord::Base
 
   # List uploaded files
     def list_files
-        require 'find'
+      require 'find'
 
-        files = Array.new
+      files = Array.new
 
-    # Get the constant variable from the environment.rb file for each development/testing and production.
-    dir = UPLOAD_DIR
 
-        Find.find(dir) do |path|
-            if FileTest.directory?(path)
-                next
-            else
-                files << path
-            end
+      # Get the constant variable from the environment.rb file for each development/testing and production.
+      dir = UPLOAD_DIR
+
+      # Get a listing of all pdfs in the upload dir.
+      allfiles = Dir.glob(UPLOAD_DIR + "/*.pdf")
+      allfiles = allfiles.sort { | x,y | File.ctime(y) <=> File.ctime(x) }
+
+      # Go through each file and make an array of hashes
+      allfiles.each do |file|
+        filehash = Hash.new
+
+        filehash["name"] = file
+        filehash["size"] = File.size(file)
+
+        # Calculate no of pages for current file
+        # Takes too long.
+#        filehash["pages"] = get_no_pages2(file)
+
+        if File.ctime(file) > Time.now - 1.day and File.ctime(file).day == Time.now.day
+          filehash["date"] = File.ctime(file).strftime '%H:%M'
+        else
+          filehash["date"] = File.ctime(file).strftime '%d/%m/%Y'
         end
 
-    # Return files back to call.
-        files
+
+
+        files << filehash
+      end
+
+=begin
+      Find.find(dir) do |path|
+        if FileTest.directory?(path)
+          next
+        else
+          files << path
+        end
+      end
+=end
+
+
+
+      # Return files back to call.
+      files
     end
 
   # Delete the physical file from the upload dir.
@@ -149,6 +180,10 @@ class Pdf < ActiveRecord::Base
   end
 
   def get_no_pages
+    get_no_pages2(fullpath)
+  end
+
+  def get_no_pages2(fullpath)
     # Build the command
     @command = "pdftk '" + fullpath + "' dump_data | grep NumberOfPages | sed 's/.*: //'"
 
