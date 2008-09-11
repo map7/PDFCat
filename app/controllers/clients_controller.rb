@@ -12,16 +12,14 @@ class ClientsController < ApplicationController
   end
 
   def search
-    @conditions = ["name ILIKE ?", "%#{params[:client]}%"] unless params[:client].nil?
+    session[:client_search] = params[:client] unless params[:client].nil?
+    @searchclient = session[:client_search]
+    @conditions = ["name ILIKE ?", "%#{@searchclient}%"]
 
-    logger.warn params[:client]
-
-#    @client_pages, @clients = paginate(:clients, :conditions => conditions, :order => 'upper(name)', :per_page => 10)
     @clients = Client.paginate(:page => params[:page],:conditions => @conditions, :order => 'upper(name)', :per_page => 10)
-  @no = -1  # Used for shorcuts
+    @no = -1  # Used for shorcuts
 
-  render :action => 'index'
-
+    render :action => 'index'
   end
 
   def show
