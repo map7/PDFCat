@@ -21,8 +21,8 @@
 
 
 <%= link_to_remote "Relink",:update => "showitem",
-  :loading => "$('background_tint').show();$('background_center').show();$('info').show();$('inforelink').show();",
-  :complete => "$('background_tint').hide();$('background_center').hide();$('info').hide();$('inforelink').hide();",
+  :loading => "$('background_tint').show();$('background_center').show();$('wait').show();$('inforelink').show();",
+  :complete => "$('background_tint').hide();$('background_center').hide();$('wait').hide();$('inforelink').hide();",
   :success => "alert('Completed successfully, now you can view the document')", 
   :failure => "alert('Failed to find the file')", 
   :url => { :controller => "pdfs", :action => "relink", :id => @pdf.id} %> | 

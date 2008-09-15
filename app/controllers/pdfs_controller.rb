@@ -9,6 +9,7 @@ class PdfsController < ApplicationController
     if session[:pdf_search].nil? and session[:client_search].nil?
       @pdfs = Pdf.paginate(:page => params[:page], :per_page => 10, :order => 'pdfdate DESC')
     else
+#      @pdfs = Pdf.paginate(:page => params[:page], :per_page => 10, :order => 'pdfdate DESC')
       search()
     end
 
@@ -25,13 +26,13 @@ class PdfsController < ApplicationController
 
     if @searchclient == "" or @searchclient.nil?
 
-      # search just the pdfnames
-      sql = "select * from pdfs as p inner join clients as c on p.client_id = c.id where pdfname ILIKE E'%#{@searchpdf}%' order by pdfdate desc;"
+       # search just the pdfnames
+      sql = "select p.id,p.pdfdate,p.pdfname,p.category_id,p.client_id from pdfs as p inner join clients as c on p.client_id = c.id where pdfname ILIKE E'%#{@searchpdf}%' order by pdfdate desc;"
 
     else
 
       # search pdfnames linked to a client.
-      sql = "select * from pdfs as p inner join clients as c on p.client_id = c.id where pdfname ILIKE E'%#{@searchpdf}%' and c.name ILIKE E'%#{@searchclient}%' order by pdfdate desc;"
+      sql = "select p.id,p.pdfdate,p.pdfname,p.category_id,p.client_id from pdfs as p inner join clients as c on p.client_id = c.id where pdfname ILIKE E'%#{@searchpdf}%' and c.name ILIKE E'%#{@searchclient}%' order by pdfdate desc;"
 
     end
 
@@ -39,6 +40,22 @@ class PdfsController < ApplicationController
 
     # Go through each row and add to the array.
     Pdf.find_by_sql(sql).each do |row|
+
+=begin
+      pdfhash = Hash.new
+
+      pdfhash["pdfdate"]= row["pdfdate"]
+      pdfhash["id"] = row.id
+
+      pdfhash["pdfname"]= row.pdfname
+      pdfhash["category"] = row.category
+      pdfhash["client"] = row.client
+=end
+
+
+      logger.warn("log")
+      logger.warn(row.id)
+
       data << row
     end
 
