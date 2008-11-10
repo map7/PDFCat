@@ -2,7 +2,7 @@
 # Custom FormBuilder
 #
 # Author:  Michael Pope
-# Version: 1.00
+# Version: 1.01
 
 class SuperFormBuilder < ActionView::Helpers::FormBuilder
 
@@ -18,7 +18,7 @@ class SuperFormBuilder < ActionView::Helpers::FormBuilder
     define_method(name) do |field, *args|
 
       # Get the hash option (EG the field involved)
-      options = args.last.is_a?(Hash) ? args.pop : {}
+      options = args.extract_options!
 
       # Create a label for that field
       label = label(field, options[:label], :class => options[:label_class])
