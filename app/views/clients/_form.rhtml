@@ -1,13 +1,12 @@
-<%= error_messages_for 'client' %>
+<% form_for(@client) do |f| %>
 
-<!--[form:client]-->
-<p><label for="client_name">Name</label><br/>
-<%= text_field 'client', 'name'  %></p>
+  <%= f.text_field :name %>
+  <%= f.text_field :email %>
+  <%= f.submit %>
 
-<p><label for="client_email">Email</label><br/>
-<%= text_field 'client', 'email'  %></p>
+<% end %>
+
+<%= link_to 'Back', :action => 'index' %>
 
 <!-- Add your focus after all the text fields have been made -->
 <script>$('client_name').focus();</script>
-<!--[eoform:client]-->
-
