@@ -1,40 +1,13 @@
-
-<%= shortcut_function 's', "$('client').focus();$('client').style.backgroundColor='#FFE887';" %>  <!-- Disable Add New -->
-
+<%= shortcut_function 's', "$('query').focus();$('query').style.backgroundColor='#FFE887';" %>  <!-- Disable Add New -->
 <%= render :partial => "clients/search" %>
 
 <h1>Listing clients</h1>
 
+<div id="listing"><%= render :partial => "listing" %></div>
 
-	
-<table>
+<%= link_to_remote 'New client', 
+    :update => 'ajaxFormInner',
+    :url => {:action => 'new'},
+    :before => "$('ajaxForm').show()",
+    :html => {:id => 'newajax'} %>
 
-  <tr id=header>
-    <th id="FKey">FKey<% @no = 0 %></th>
-
-    <% for column in Client.content_columns %>
-      <th><%= column.human_name %></th>
-    <% end %>
-
-  </tr>
-  
-<% for client in @clients %>
-	<tr id=listitem>
-	  <td id="FKey"><%= @no = @no +1 %></td>
-  <% for column in Client.content_columns %>
-    <td><%=h client.send(column.name) %></td>
-  <% end %>
-
-    <td><%= link_to 'Show', :action => 'show', :id => client %></td>
-    <td><%= link_to 'Edit', :action => 'edit', :id => client %></td>
-    <td><%= link_to 'Destroy', { :action => 'destroy', :id => client }, :confirm => 'Are you sure?', :method => :post %></td>
-  </tr>
-<% end %>
-</table>
-
-
-
-<!-- Page jump navigation -->
-<%= will_paginate @clients %>
-
-<%= link_to '<b>A</b>dd New client', :action => 'new' %>

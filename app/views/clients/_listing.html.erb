@@ -1,0 +1,46 @@
+<table>
+
+  <tr id=header>
+    <th id="FKey">FKey<% @no = 0 %></th>
+
+    <% for column in Client.content_columns %>
+      <th><%= column.human_name %></th>
+    <% end %>
+
+  </tr>
+  
+<% for client in @clients %>
+	<tr id=listitem>
+	  <td id="FKey"><%= @no = @no +1 %></td>
+  <% for column in Client.content_columns %>
+    <td><%=h client.send(column.name) %></td>
+  <% end %>
+
+    <td><%= link_to_remote 'Show',
+	    :update => 'ajaxFormInner',
+            :url => { :action => "show", :id => client },
+            :complete => "$('ajaxForm').show()",
+            :html => {:id => 'showajax'},
+            :method => "get" %></td>
+
+    <td><%= link_to_remote 'Edit',
+	    :update => 'ajaxFormInner',
+            :url => { :action => "edit", :id => client },
+            :complete => "$('ajaxForm').show()",
+            :html => {:id => 'editajax'},
+            :method => "get" %></td>
+
+
+    <td><%= link_to_remote 'Destroy',
+	    :update => "listing",
+            :url => { :action => "destroy", :id => client },
+            :confirm => 'Are you sure?',
+            :method => :delete %></td>
+
+  </tr>
+<% end %>
+</table>
+
+<!-- Page jump navigation -->
+<%= will_paginate @clients %>
+

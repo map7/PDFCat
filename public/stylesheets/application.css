@@ -8,38 +8,96 @@
 
 
 /********************* Main Area *********************/
-body {
+html,body {
+       padding: 0;
        margin: 0; 
-       color: #333; 
-       background-color: #e7dfcb;
+       
+       font-family: verdana, arial, helvetica, sans-serif;
+       overflow: hidden;
 }
 
-body, p, ol, ul, td {
-  font-family: verdana, arial, helvetica, sans-serif;
-  font-size:   13px;
-  line-height: 18px;
+html {
+
+  height:100%; 
+  max-height:100%; 
+  min-width:800px;
+
+  padding:0; 
+  margin:0; 
+
+  border:0; 
+  background:#fff; 
+
+  font-size:80%; 
+  font-family: "trebuchet ms", tahoma, verdana, arial, sans-serif;
+	/* hide overflow:hidden from IE5/Mac */ 
+	/* \*/ 
+  overflow: hidden; 
+} 
+
+body {
+	height:100%; 
+	max-height:100%; 
+
+	padding:0; 
+	margin:0; 
+
+	border:0;
+
+	overflow:hidden; 
 }
 
+
+/********************* Standard Style overrides **********************/
 pre {
-  background-color: #eee;
   padding: 10px;
+
+  background-color: #eee;
+
   font-size: 11px;
 }
 
-
 a { color: #6088A8; font-weight: bold; }
-a:visited {  }
+a:visited { }
 a:hover { color: #fff; background-color:#6088a8; }
 
+p{ margin:0px; }
+
 h1{
-    margin-top: 30px;
-    margin-bottom: 25px;
+    padding-top:15px;
+    margin-top: 0;
 
     color: #999;
     
     font-style: italic;
     font-size:160%;
 }
+
+h2{
+    padding-top:15px;
+    margin-top: 0;
+
+    font-size:140%;
+}
+
+table{
+/*	width: 580px;
+	border-spacing: 0;*/
+
+}
+
+th{
+/*	background:#D3E8FF;*/
+}
+
+td{ 
+    padding-right: 15px;
+}
+
+
+
+
+
 
 
 .fieldWithErrors {
@@ -98,8 +156,81 @@ div.progressBar div.background {
   width: 0%;
 }
 
+/********************* Header **********************/
 
+#headMain {
+	position:absolute; 
+	display:block; 
+	z-index:105; 
+        top:0; 
+	right:16px; 
 
+	width:100%; 
+	height:40px; 
+
+	margin:0; 
+
+	background:#0404CF; 
+	color:#0404CF; 
+
+	font-size:20px; 
+	font-weight:bold;
+	font-style:italic;
+}
+#head{
+	position:absolute; 
+	display:block; 
+	z-index:104; 
+        top:0; 
+
+	width:100%; 
+	height:35px; 
+
+	margin:0; 
+      
+	background:white;
+	color:#0404CF; 
+
+	font-size:20px; 
+	font-weight:bold;
+	font-style:italic;
+}
+/*
+#heading{
+          position:relative;
+          float: right;
+
+          width: 150px;
+
+          padding-right:20px;
+          padding-top:9px;
+          
+          text-align: right;
+
+          color: #0404CF;
+
+          font-size: 22;
+          font-style: italic;
+          font-weight: bold;
+}
+*/
+#content {
+  position: relative;
+  z-index: 3;
+  display: block;
+
+  height: 100%;
+  max-height: 100%;
+
+  padding-right:16px;
+
+  background-color: #e7dfcb;
+
+  overflow: auto;
+  text-align: justify;
+  word-wrap: break-word;
+  font-family: "trebuchet ms", tahoma, verdana, arial, sans-serif;
+}
 
   
 #contentBox{ 
@@ -118,7 +249,15 @@ div.progressBar div.background {
 
 
 
+#listing { padding-top:12px; }
+#listing #FKey { color: #888 }
+#listing tr#header:hover { background-color: #fff; }
+#listing tr:hover { background-color: #f8db8b; /* old yellow highlight #F7EFAA; */ }
+
+
+
 /*** END OF import **/
+
 
 
 div#headingback{
@@ -143,6 +282,7 @@ div#heading{
 
 div#search{
             position:absolute;
+            padding-top: 17px;
             width: 600px;
             right:10px;
 }
@@ -279,6 +419,19 @@ input, textarea{
     font-size: 130%;
     border: 1px solid #888;
 }
+
+
+#ajaxForm{ 
+  width:100%; 
+  background-color: #b3d1b3; /* old yellow color #F7EFAA;*/
+}
+
+#ajaxFormInner{ padding-left: 20px;}
+
+#theForm{ clear: both;}
+
+#theForm p { margin-bottom: 0; }
+
 
 
 
@@ -510,4 +663,93 @@ div#wait{
         display:block;
         height:25px;
  }
+
+/********************* Listing **********************/
+.highlight{ 
+       background-color: #F7EFAA;
+}
+.clear { background-color: white; }
+
+#listing tr#major { color: red; font-weight: bold; }
+
+
+
+/********************* Information Boxes **********************/
+/* Help, Mode, etc boxes */
+
+/* These should be just under the menu system */
+#announcement{ 
+  background-color: #C5FFAC;
+  font-size: medium;
+  font-weight: bold;
+  text-align: center;
+  padding-top: 10px;
+  width: 100%;
+}
+
+#info{ 
+  position:absolute;
+  z-index: 20;
+
+  width:100%;
+  height:100px;
+
+  bottom: 40px;
+  right: 16px;
+
+  background-color: #F7EFAA;
+}
+
+#mode{
+  padding-top: 30px;
+
+  width: 100%;
+
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+}
+#modeKeys{
+  position:absolute;
+  z-index: 40;
+            
+  height: 90px;
+
+  right: 50px;
+  bottom: 40px;
+            
+}
+
+.rightPanel{
+  position: absolute;
+  z-index: 90;
+  top: 0px;
+  right: 16px;
+
+  padding-left: 20px;
+  padding-right: 10px;
+
+  height: 100%;
+  width:50%;
+
+  border-left: 10px solid #bfb086;
+  background-color: #F7EFAA;
+
+  text-align: justify;
+  overflow: auto;
+}
+
+
+
+
+#helpButton{ 
+  float:left;
+  margin-top: -23px;           
+}
+
+
+
+#help p{ 
+  padding-bottom:20px;
+}
 

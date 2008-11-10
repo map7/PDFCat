@@ -5,21 +5,26 @@ class ClientsController < ApplicationController
          :redirect_to => { :action => :index }
 
   def index
-
-    if session[:client_search].nil?
-      @clients = Client.paginate(:page => params[:page],:per_page => 10, :order => 'upper(name)')
-    else
-      search()
-    end
+logger.warn("Index...")
+    @clients = get_listing()
 
   end
 
-  def search
-    session[:client_search] = params[:client] unless params[:client].nil?
-    @searchclient = session[:client_search]
-    @conditions = ["name ILIKE ?", "%#{@searchclient}%"]
+  def get_search
+    logger.warn("get_search")
+    logger.warn(params[:query])
+    session[:client_search] = params[:query] unless params[:query].nil?
 
-    @clients = Client.paginate(:page => params[:page],:conditions => @conditions, :order => 'upper(name)', :per_page => 10)
+    searchclient = session[:client_search]
+    logger.warn(searchclient)
+
+    conditions = ["name ILIKE ?", "%#{searchclient}%"]
+
+    @clients = Client.paginate(:page => params[:page],:conditions => conditions, :per_page => 10, :order => 'upper(name)')
+  end
+
+  def search
+    @clients = get_search()
 
     render :action => 'index'
   end
@@ -37,10 +42,11 @@ class ClientsController < ApplicationController
     @client = Client.new(params[:client])
 
     if @client.save
-      flash[:notice] = 'Client was successfully created.'
-      redirect_to :action => 'index'
+#      flash[:notice] = 'Client was successfully created.'
+      @clients = get_listing()
+      render :partial => "listing"
     else
-      render :action => 'new'
+      render :action => 'new', :layout => false, :status => '444'
     end
   end
 
@@ -65,10 +71,11 @@ class ClientsController < ApplicationController
       # Move the directory.
       @client.move_dir(@oldname)
 
-      flash[:notice] = 'Client was successfully updated.'
-      redirect_to :action => 'show', :id => @client
+#      flash[:notice] = 'Client was successfully updated.'
+      @clients = get_listing()
+      render :partial => "listing"
     else
-      render :action => 'edit'
+      render :action => 'edit', :layout => false, :status => '444'
     end
   end
 
@@ -76,4 +83,14 @@ class ClientsController < ApplicationController
     Client.find(params[:id]).destroy
     redirect_to :action => 'index'
   end
+
+
+  def get_listing
+    if session[:client_search].nil?
+      @clients = Client.paginate(:page => params[:page],:per_page => 10, :order => 'upper(name)')
+    else
+      @clients = get_search()
+    end
+  end
+
 end

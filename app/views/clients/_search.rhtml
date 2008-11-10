@@ -1,5 +1,5 @@
 <div id='search'>
 	<% form_tag :action => 'search' do %>
-	<b>Search: </b><%= text_field_tag 'client',params[:client] %>
+	<b>Search: </b><%= text_field_tag 'query', params[:query] %>
 	<% end %>
 </div>
