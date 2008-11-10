@@ -1,8 +1,4 @@
 <h1>New category</h1>
 
-<% form_tag :action => 'create' do %>
-  <%= render :partial => 'form' %>
-  <%= submit_tag "Create" %>
-<% end %>
+<%= render :partial => 'form' %>
 
-<%= link_to 'Back', :action => 'index' %>
