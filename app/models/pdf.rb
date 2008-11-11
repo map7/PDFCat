@@ -143,6 +143,18 @@ class Pdf < ActiveRecord::Base
     end
   end
 
+  # Go through every pdf in the system and relink
+  # Should be done in a cron job.
+  def relink_all
+    @pdfs = Pdf.find(:all)
+
+    @pdfs.each do|p|
+      logger.warn("Relinking #{p.pdfname}...")
+
+      p.relink_file
+    end
+  end
+
   # If the file is missing, then find the file and change the path and filename in the database to suit.
   def relink_file
     # Get all the pdfs in the STORE_DIR and their md5

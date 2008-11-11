@@ -1,0 +1,19 @@
+#!/usr/bin/env ruby
+#
+# Relink all pdfs
+#
+#
+
+# Load Rails environment
+require 'rubygems'
+require 'active_record'
+
+require 'config/environment'
+
+
+# Create a pdf object
+p = Pdf.new
+
+# Relink all pdfs
+p.relink_all
+
