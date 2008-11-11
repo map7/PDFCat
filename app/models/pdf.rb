@@ -241,8 +241,9 @@ class Pdf < ActiveRecord::Base
       else
         if File.extname(path) == ".pdf"
 
-          # Display some feedback to the relink_all script
-          printf(".")
+          # Display some feedback to the relink_all script & flush the output to the console
+          print(".")
+          STDOUT.flush
 
           # calculate md5 and store.
           md5=Digest::MD5.hexdigest(File.read(path))
