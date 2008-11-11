@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 11) do
+ActiveRecord::Schema.define(:version => 20081111034837) do
 
   create_table "categories", :force => true do |t|
     t.string "name"
@@ -30,6 +30,7 @@ ActiveRecord::Schema.define(:version => 11) do
     t.integer "client_id"
     t.string  "md5"
     t.string  "path"
+    t.boolean "missing_flag"
   end
 
 end
