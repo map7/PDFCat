@@ -148,10 +148,12 @@ class Pdf < ActiveRecord::Base
   def relink_all
     @pdfs = Pdf.find(:all)
 
+    files = store_dir_files
+
     @pdfs.each do|p|
       logger.warn("Relinking #{p.pdfname}...")
 
-      p.relink_file
+      p.relink_one_file(files)
     end
   end
 
@@ -159,6 +161,12 @@ class Pdf < ActiveRecord::Base
   def relink_file
     # Get all the pdfs in the STORE_DIR and their md5
     files = store_dir_files
+
+    relink_one_file(files)
+  end
+
+
+  def relink_one_file(files)
 
     # Match the missing file with it's new path
     @missing_file = files[md5]
@@ -179,7 +187,6 @@ class Pdf < ActiveRecord::Base
 
       return false # The file couldn't be found
     end
-
   end
 
   def rotate_file

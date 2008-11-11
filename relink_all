@@ -5,7 +5,7 @@
 #
 
 # Load Rails environment
-RAILS_ENV = "production"
+#RAILS_ENV = "production"
 
 require 'rubygems'
 require 'active_record'
