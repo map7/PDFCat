@@ -149,6 +149,7 @@ class Pdf < ActiveRecord::Base
     @pdfs = Pdf.find(:all)
 
     files = store_dir_files
+    puts("done!")
 
     @pdfs.each do|p|
       logger.warn("Relinking #{p.pdfname}...")
@@ -239,6 +240,10 @@ class Pdf < ActiveRecord::Base
         next  # Go to the next file if the current is a dir.
       else
         if File.extname(path) == ".pdf"
+
+          # Display some feedback to the relink_all script
+          printf(".")
+
           # calculate md5 and store.
           md5=Digest::MD5.hexdigest(File.read(path))
 
