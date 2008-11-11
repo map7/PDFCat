@@ -6,6 +6,7 @@
   <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
   <title><%= SITE_NAME %> :<%= controller.action_name %></title>
   <%= stylesheet_link_tag 'application' %>
+  <%= stylesheet_link_tag 'pdfcat' %>
 
   <%= javascript_include_tag 'prototype' %>
 
@@ -58,6 +59,7 @@
 
 <div id=help style="display:none">
 	<h2>HELP - Shortcut Keys</h2>
+	<p>If an item is highlighted in red it means the file is missing.  This is shown after a relink has been done so you will either have to rescan this item or find a backup of the file.</p>
 	<b>Page Navigation</b><br />
 	New Page      = !<br />
 	Pdfs Page     = @<br />

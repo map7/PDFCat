@@ -27,12 +27,12 @@ class PdfsController < ApplicationController
     if @searchclient == "" or @searchclient.nil?
 
        # search just the pdfnames
-      sql = "select p.id,p.pdfdate,p.pdfname,p.category_id,p.client_id from pdfs as p inner join clients as c on p.client_id = c.id where pdfname ILIKE E'%#{@searchpdf}%' order by pdfdate desc;"
+      sql = "select p.id,p.pdfdate,p.pdfname,p.category_id,p.client_id, p.missing_flag from pdfs as p inner join clients as c on p.client_id = c.id where pdfname ILIKE E'%#{@searchpdf}%' order by pdfdate desc;"
 
     else
 
       # search pdfnames linked to a client.
-      sql = "select p.id,p.pdfdate,p.pdfname,p.category_id,p.client_id from pdfs as p inner join clients as c on p.client_id = c.id where pdfname ILIKE E'%#{@searchpdf}%' and c.name ILIKE E'%#{@searchclient}%' order by pdfdate desc;"
+      sql = "select p.id,p.pdfdate,p.pdfname,p.category_id,p.client_id, p.missing_flag from pdfs as p inner join clients as c on p.client_id = c.id where pdfname ILIKE E'%#{@searchpdf}%' and c.name ILIKE E'%#{@searchclient}%' order by pdfdate desc;"
 
     end
 

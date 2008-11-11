@@ -1,0 +1,10 @@
+/*
+   pdfcat specific styles
+   
+   Author:         Michael Pope
+   Date:           11/11/2008
+   Description:    Style sheet for pdfcat program written in Ruby on Rails
+   
+*/
+
+.missing{ background-color: red; }

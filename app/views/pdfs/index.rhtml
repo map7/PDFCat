@@ -20,7 +20,7 @@
     </tr>
     
     <% for pdf in @pdfs %>
-    <tr id=listitem>
+    <tr id=listitem <%= 'class=missing' if pdf.missing_flag %>>
       <td id="FKey"><%= @no = @no +1 %></td>
 
       <td><%= pdf.pdfdate %></td>
