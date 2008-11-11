@@ -18,8 +18,18 @@ config.action_controller.perform_caching             = true
 # config.action_mailer.raise_delivery_errors = false
 
 SITE_NAME= "Pdfcat"
-UPLOAD_DIR = "/home/ws10/pdfcat_upload"
-STORE_DIR = "/home/ws10/pdfcat_mick"
+
+# For WS10
+#UPLOAD_DIR = "/home/ws10/pdfcat_upload"
+#STORE_DIR = "/home/ws10/pdfcat_mick"
+
+# For paistram
+UPLOAD_DIR = "/usr/pdfcat_upload"
+STORE_DIR = "/usr/tram/work/clt"
+
+
+
+
 
 #STORE_DIR = "/usr/tram/work/clt"
 #STORE_DIR = "/usr/pdfcat_clt"
@@ -27,6 +37,5 @@ STORE_DIR = "/home/ws10/pdfcat_mick"
 #UPLOAD_DIR = "/livedata/pdfcat_upload"
 #STORE_DIR = "/livedata/pdfcat_clt"
 
-BASE_URL= ""
-#BASE_URL= "/pdfcat"
+BASE_URL= "/pdfcat"
 SPLIT_NO="14"
