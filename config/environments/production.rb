@@ -30,7 +30,6 @@ STORE_DIR = "/usr/tram/work/clt"
 
 
 
-
 #STORE_DIR = "/usr/tram/work/clt"
 #STORE_DIR = "/usr/pdfcat_clt"
 
