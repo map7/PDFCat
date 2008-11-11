@@ -1,30 +1,26 @@
 class ClientsController < ApplicationController
 
+
   # GETs should be safe (see http://www.w3.org/2001/tag/doc/whenToUseGet.html)
   verify :method => :post, :only => [ :destroy, :create, :update ],
          :redirect_to => { :action => :index }
 
   def index
-logger.warn("Index...")
-    @clients = get_listing()
 
-  end
+    if session[:client_search].nil?
+      @clients = Client.paginate(:page => params[:page],:per_page => 10, :order => 'upper(name)')
+    else
+      search()
+    end
 
-  def get_search
-    logger.warn("get_search")
-    logger.warn(params[:query])
-    session[:client_search] = params[:query] unless params[:query].nil?
-
-    searchclient = session[:client_search]
-    logger.warn(searchclient)
-
-    conditions = ["name ILIKE ?", "%#{searchclient}%"]
-
-    @clients = Client.paginate(:page => params[:page],:conditions => conditions, :per_page => 10, :order => 'upper(name)')
   end
 
   def search
-    @clients = get_search()
+    session[:client_search] = params[:client] unless params[:client].nil?
+    @searchclient = session[:client_search]
+    @conditions = ["name ILIKE ?", "%#{@searchclient}%"]
+
+    @clients = Client.paginate(:page => params[:page],:conditions => @conditions, :order => 'upper(name)', :per_page => 10)
 
     render :action => 'index'
   end
@@ -42,11 +38,10 @@ logger.warn("Index...")
     @client = Client.new(params[:client])
 
     if @client.save
-#      flash[:notice] = 'Client was successfully created.'
-      @clients = get_listing()
-      render :partial => "listing"
+      flash[:notice] = 'Client was successfully created.'
+      redirect_to :action => 'index'
     else
-      render :action => 'new', :layout => false, :status => '444'
+      render :action => 'new'
     end
   end
 
@@ -71,11 +66,10 @@ logger.warn("Index...")
       # Move the directory.
       @client.move_dir(@oldname)
 
-#      flash[:notice] = 'Client was successfully updated.'
-      @clients = get_listing()
-      render :partial => "listing"
+      flash[:notice] = 'Client was successfully updated.'
+      redirect_to :action => 'show', :id => @client
     else
-      render :action => 'edit', :layout => false, :status => '444'
+      render :action => 'edit'
     end
   end
 
@@ -83,14 +77,4 @@ logger.warn("Index...")
     Client.find(params[:id]).destroy
     redirect_to :action => 'index'
   end
-
-
-  def get_listing
-    if session[:client_search].nil?
-      @clients = Client.paginate(:page => params[:page],:per_page => 10, :order => 'upper(name)')
-    else
-      @clients = get_search()
-    end
-  end
-
 end

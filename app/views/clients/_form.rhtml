@@ -1,19 +1,12 @@
-<div id="theForm">
-
-  <% remote_form_for(@client, 
-     :update => {:success => "listing", :failure => "ajaxFormInner" },
-  :html => {:id=> 'myform'},
-  :success => "hide_form()") do |f| %>
+<% form_for(@client) do |f| %>
 
   <%= f.text_field :name %>
   <%= f.text_field :email %>
   <%= f.submit %>
 
-  <% end %>
+<% end %>
 
-  <%= link_to_function 'Back', :action => 'hide_form()' %>
+<%= link_to 'Back', :action => 'index' %>
 
-  <!-- Focus the first text box on the screen -->
-  <script>//document.observe('dom:loaded', function(){ $('myform').focusFirstElement() })</script>
-  <script>$('client_name').focus();</script>
-</div>
+<!-- Add your focus after all the text fields have been made -->
+<script>$('client_name').focus();</script>

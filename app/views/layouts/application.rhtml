@@ -6,10 +6,10 @@
   <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
   <title><%= SITE_NAME %> :<%= controller.action_name %></title>
   <%= stylesheet_link_tag 'application' %>
-  <%= stylesheet_link_tag 'scaffold' %>
 
   <%= javascript_include_tag 'prototype' %>
-  <%= javascript_include_tag :defaults %>
+
+  <%= javascript_include_tag :defaults %>		<!-- Used for AJAX and shortcuts plugin -->
 
   <!-- Calculate the size of a window -->
   <script>
@@ -41,70 +41,47 @@
 
 
 	<!-- General shortcuts -->
-	<%= shortcut_function 'a', "$('newajax').onclick( )" %> 
-	<%= shortcut_function '+', "$('newajax').onclick( )" %> 
+	<%= shortcut 'a', "#{BASE_URL}/" + controller.controller_name + "/new" %>	<!-- Add New -->
+	<%= shortcut 'b', "#{BASE_URL}/" + controller.controller_name  %>			<!-- Back --> 
 
 
-	<!-- Back - hide_form & hide_all are in the application.js file.-->
-	<%= shortcut_function 'b', "hide_form()" %>
 	
-	<!-- ESC key done using Hex 
-	     1B(hex base 16) = 27 (decimal base 10)
-	     We do this so that it hits a different area of the shortcut.js, it checks the KeyCode instead of the code.-->
-	<%= shortcut_function '\x1B', "hide_all()" %>               
 
-	<!-- Accept key (F11) -->
-	<%= shortcut_function 'z', "$('apply').click( )" %>         <!-- Click a button called 'apply' -->
+<p style="color: green"><%= flash[:notice] %></p>
 
 
-	<div id="content">
-	  <p style="color: green"><%= flash[:notice] %></p>
-
-	  <div id="contentBox">
-
-	    <!-- Add/Edit/Show Area -->
-	    <div id="ajaxForm" style="display:none">
-	      <div id="ajaxFormInner"></div>
-	    </div>
-
-	    <div id="contentInner">
-	      <%= yield  %>
-	    </div>
-	  </div>
-	</div>
+<div id="contentBox">
+  <div id="contentInner">
+    <%= yield  %>
+  </div>
+</div>
 
 <div id=help style="display:none">
 	<h2>HELP - Shortcut Keys</h2>
 	<b>Page Navigation</b><br />
-	New Page      = 1<br />
-	Pdfs Page     = 2<br />
-	Client Page   = 3<br />
-	Category Page = 4<br />
+	New Page      = !<br />
+	Pdfs Page     = @<br />
+	Client Page   = #<br />
+	Category Page = $<br />
 	<br />
 	<b>Listing Navigation</b><br />
 	Search		  = s<br />
+	Next Page	  = n<br />
+	Previous Page = p<br />
 	<br />
 	<b>Item Management</b><br />
-	Add new item  = a or +<br />
-	Edit item     = e or *<br />
-	Destroy item  = d or -<br />
-	Show item     = s or /<br />
-	Email item    = m<br />
+	Add new item  = a<br />
+	Edit item     = e<br />
+	Destroy item  = d<br />
+	Show item     = 0-9<br />
+	View pdf      = v<br />
+	Email item	  = m<br />
 </div>
 
-<!-- INFO -->
-<div id="modeKeys" style="display:none"></div>
-<div id="info" style="display:none">
-  <div class="pad1"></div>    
-  <div id="mode"></div>
-</div>
 
-<!-- Get keys from /help/general file -->
-<div id="keys" class="rightPanel" style="display:none">
-  <!-- Refer to PAIS 3 to install yamlhelp plugin and fill in this section -->
-
-</div>
-
+<div id=info></div>
+<div id=mode></div>
+<div id=modeKeys></div>
 
 
 <div class="nav">
@@ -120,7 +97,7 @@
   <div class="pad1"></div>
 
   <div id=footerRight>
-      <span id="footerAPP">PDFCat 2.1</span>
+      <span id="footerAPP">PDFCat 2.0</span>
   </div>
 </div>
 
