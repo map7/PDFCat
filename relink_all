@@ -5,10 +5,13 @@
 #
 
 # Load Rails environment
+RAILS_ENV = "production"
+
 require 'rubygems'
 require 'active_record'
 
 require 'config/environment'
+
 
 
 # Create a pdf object
