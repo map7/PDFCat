@@ -169,28 +169,35 @@ class Pdf < ActiveRecord::Base
 
   def relink_one_file(files)
 
-    # Don't bother unless there is a md5 tag.
-    if md5
+    if File.exists?(fullpath)
+      update_attribute(:missing_flag, false)
+    else
 
-      # Match the missing file with it's new path
-      @missing_file = files[md5]
 
-      if @missing_file
-        # Update database information
-        update_attribute(:path, File.dirname(@missing_file))
-        update_attribute(:filename, File.basename(@missing_file))
-        update_attribute(:missing_flag, false)
+      # Don't bother unless there is a md5 tag.
+      if md5
 
-#        puts "Relinking '#{pdfname}' to #{@missing_file} for client #{client.name}"
+        # Match the missing file with it's new path
+        @missing_file = files[md5]
 
-        return true  # The file was found and fixed
-      else
-        update_attribute(:missing_flag, true)
+        if @missing_file
+          # Update database information
+          update_attribute(:path, File.dirname(@missing_file))
+          update_attribute(:filename, File.basename(@missing_file))
+          update_attribute(:missing_flag, false)
 
-        puts "Missing '#{pdfname}' for client ''#{client.name}'"
+          #        puts "Relinking '#{pdfname}' to #{@missing_file} for client #{client.name}"
 
-        return false # The file couldn't be found
+          return true  # The file was found and fixed
+        else
+          update_attribute(:missing_flag, true)
+
+          puts "Missing '#{pdfname}' for client ''#{client.name}'"
+
+          return false # The file couldn't be found
+        end
       end
+
     end
   end
 
