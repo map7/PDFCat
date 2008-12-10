@@ -1,7 +1,7 @@
 class PdfsController < ApplicationController
 
   # GETs should be safe (see http://www.w3.org/2001/tag/doc/whenToUseGet.html)
-  verify :method => :post, :only => [ :destroy, :create, :update ], :redirect_to => { :action => :index }
+#  verify :method => :post, :only => [ :destroy, :create, :update ], :redirect_to => { :action => :index }
 
   # list all, sort by date (most recent at the top), 10 items per page.
   def index
