@@ -6,14 +6,13 @@ class Category < ActiveRecord::Base
   validate :new_dir_exists?
 
     def move_dir(oldname)
-    @client = []  # Initialise an array
+      @client = []  # Initialise an array
 
+      # Search all pdfs for this id
+      @pdf = Pdf.find(:all, :conditions => {:category_id => id})
 
-    # Search all pdfs for this id
-    @pdf = Pdf.find(:all, :conditions => {:category_id => id})
-
-    # Build an array of clients which this change will affect making sure each is unique.
-    @pdf.each do|p|
+      # Build an array of clients which this change will affect making sure each is unique.
+      @pdf.each do|p|
       @clientname = p.client.name.downcase
 
       unless @client.include?(@clientname)  # If this is the first time we have come across this client then...
