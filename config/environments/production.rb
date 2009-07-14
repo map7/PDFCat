@@ -19,13 +19,13 @@ config.action_controller.perform_caching             = true
 
 SITE_NAME= "Pdfcat"
 
-# For WS10
-#UPLOAD_DIR = "/home/ws10/pdfcat_upload"
-#STORE_DIR = "/home/ws10/pdfcat_mick"
+# For D110
+UPLOAD_DIR = "/home/d110/pdfcat_upload"
+STORE_DIR = "/home/d110/pdfcat_mick"
 
 # For paistram
-UPLOAD_DIR = "/usr/pdfcat_upload"
-STORE_DIR = "/usr/tram/work/clt"
+#UPLOAD_DIR = "/usr/pdfcat_upload"
+#STORE_DIR = "/usr/tram/work/clt"
 
 
 
