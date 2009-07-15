@@ -1,13 +1,17 @@
 class UsersController < ApplicationController
   # Be sure to include AuthenticationSystem in Application Controller instead
   include AuthenticatedSystem
-  
+
+
+  def index
+    @users = User.find(:all)
+  end
 
   # render new.rhtml
   def new
     @user = User.new
   end
- 
+
   def create
     logout_keeping_session!
     @user = User.new(params[:user])

@@ -1,0 +1,18 @@
+<p>
+  <b>Name:</b>
+  <%=h @firm.name %>
+</p>
+
+<p>
+  <b>Store dir:</b>
+  <%=h @firm.store_dir %>
+</p>
+
+<p>
+  <b>Upload dir:</b>
+  <%=h @firm.upload_dir %>
+</p>
+
+
+<%= link_to 'Edit', edit_firm_path(@firm) %> |
+<%= link_to 'Back', firms_path %>

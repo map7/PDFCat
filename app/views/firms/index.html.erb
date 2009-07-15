@@ -1,0 +1,24 @@
+<h1>Listing firms</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Store dir</th>
+    <th>Upload dir</th>
+  </tr>
+
+<% for firm in @firms %>
+  <tr>
+    <td><%=h firm.name %></td>
+    <td><%=h firm.store_dir %></td>
+    <td><%=h firm.upload_dir %></td>
+    <td><%= link_to 'Show', firm %></td>
+    <td><%= link_to 'Edit', edit_firm_path(firm) %></td>
+    <td><%= link_to 'Destroy', firm, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New firm', new_firm_path %>

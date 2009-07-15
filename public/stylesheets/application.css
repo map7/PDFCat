@@ -413,6 +413,12 @@ div#footer{
 	font-size:12; 
 }
 
+#footerLeft {
+  z-index:111;
+  left: 18px;
+  position:absolute;
+  color: #5b5441;  
+}
 
 #footerRight {
   z-index:111;
@@ -425,7 +431,6 @@ div#footer{
   color: #5b5441;
                  
   text-align:right;
-
 }
 
 
