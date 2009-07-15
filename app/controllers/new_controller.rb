@@ -1,4 +1,7 @@
 class NewController < ApplicationController
+
+  before_filter :login_required
+
   # Create a upload variable to list files from the upload dir.
   def index
     @upload = Pdf.new

@@ -36,7 +36,7 @@
 	<%= shortcut '2', "#{BASE_URL}/pdfs" %>
 	<%= shortcut '3', "#{BASE_URL}/clients" %>
 	<%= shortcut '4', "#{BASE_URL}/categories" %>
-
+	<%= shortcut '0', "#{BASE_URL}/logout" %>
 
 	<%= shortcut_function '?', "Element.toggle('help');"  %>
 
@@ -88,10 +88,16 @@
 
 <div class="nav">
   <div class="pad1"></div>
+  <% if current_user %>
+  
   <%= link_to '<div class="menuitem">1-New</div>', :controller => 'new' %>
   <%= link_to '<div class="menuitem">2-Pdf</div>', :controller => 'pdfs' %>
   <%= link_to '<div class="menuitem">3-Client</div>', :controller => 'clients' %>
   <%= link_to '<div class="menuitem">4-Category</div>', :controller => 'categories' %>
+  <%= link_to '<div class="menuitem">0-Logout</div>', :controller => 'sessions', :action => 'destroy' %>
+  
+  <% end %>
+
   <%= link_to_function '<div class="menuitem">?-Help</div>', "Element.toggle('help');" %>
 </div>
 

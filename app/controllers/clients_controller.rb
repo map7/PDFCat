@@ -1,5 +1,6 @@
 class ClientsController < ApplicationController
 
+  before_filter :login_required
 
   # GETs should be safe (see http://www.w3.org/2001/tag/doc/whenToUseGet.html)
   # This stuffs up the edit function, why is it here?
