@@ -18,7 +18,7 @@
     <td><%= file["date"] %> </td>
     
     <td><%= link_to 'Enter',	:controller => 'pdfs', :action => 'new', 		:filename => file["name"] %></td>
-    <td><%= link_to 'Destroy',	{ :action => 'destroy', :filename => file["name"]}, :confirm => 'Are you sure?' %></td>
+    <td><%= link_to 'Delete',	{ :action => 'destroy', :filename => file["name"]}, :confirm => 'Are you sure?' %></td>
   </tr>
 
   <% end %>
