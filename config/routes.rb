@@ -18,8 +18,8 @@ ActionController::Routing::Routes.draw do |map|
   map.logout '/logout', :controller => 'sessions', :action => 'destroy'
 
   # RESTful ACL
-  map.error '/error', :controller => 'some_controller', :action => 'error_action'
-  map.denied '/denied', :controller => 'some_controller', :action => 'denied_action'
+  map.error '/error', :controller => 'sessions', :action => 'error'
+  map.denied '/denied', :controller => 'sessions', :action => 'denied'
 
   # The priority is based upon order of creation: first created -> highest priority.
 

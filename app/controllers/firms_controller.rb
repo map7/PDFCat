@@ -1,5 +1,8 @@
 class FirmsController < ApplicationController
 
+  before_filter :login_required
+  before_filter :has_permission?
+
   def index
     @firms = Firm.find(:all)
   end

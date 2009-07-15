@@ -45,6 +45,29 @@ class User < ActiveRecord::Base
     write_attribute :email, (value ? value.downcase : nil)
   end
 
+
+
+  def is_updatable_by(user)
+    user.is_admin?
+  end
+
+  def is_deletable_by(user)
+    user.is_admin?
+  end
+
+  def self.is_readable_by(user, object = nil)
+    user.is_admin?
+  end
+
+  def self.is_creatable_by(user)
+    user.is_admin?
+  end
+
+  def self.is_indexable_by(user, parent = nil)
+    user.is_admin?
+  end
+
+
   protected
 
 

@@ -2,6 +2,8 @@ class UsersController < ApplicationController
   # Be sure to include AuthenticationSystem in Application Controller instead
   include AuthenticatedSystem
 
+  before_filter :login_required
+  before_filter :has_permission?
 
   def index
     @users = User.find(:all)
