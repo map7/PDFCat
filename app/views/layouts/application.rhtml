@@ -112,7 +112,7 @@
   </div>
   
   <div id=footerRight>
-    Logged in as: <%= current_user.login %>
+    Logged in as: <%= current_user.login unless current_user.nil? %>
   </div>
 </div>
 
