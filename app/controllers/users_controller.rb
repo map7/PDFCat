@@ -6,7 +6,7 @@ class UsersController < ApplicationController
   before_filter :has_permission?
 
   def index
-    @users = User.find(:all)
+    @users = User.paginate(:page => params[:page], :per_page => 10, :order => 'upper(login)')
   end
 
   def show

@@ -4,7 +4,7 @@ class FirmsController < ApplicationController
   before_filter :has_permission?
 
   def index
-    @firms = Firm.find(:all)
+    @firms = Firm.paginate(:page => params[:page], :per_page => 10, :order => 'upper(name)')
   end
 
   def show
