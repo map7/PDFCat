@@ -22,10 +22,11 @@ class Pdf < ActiveRecord::Base
 
       # Get the constant variable from the environment.rb file
       # for each development/testing and production.
-      dir = UPLOAD_DIR
+#      dir = UPLOAD_DIR
+      dir = current_firm.upload_dir
 
       # Get a listing of all pdfs in the upload dir.
-      allfiles = Dir.glob(UPLOAD_DIR + "/*.pdf")
+      allfiles = Dir.glob(dir + "/*.pdf")
       allfiles = allfiles.sort { | x,y | File.ctime(y) <=> File.ctime(x) }
 
       # Go through each file and make an array of hashes

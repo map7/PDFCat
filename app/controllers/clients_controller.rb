@@ -38,6 +38,7 @@ class ClientsController < ApplicationController
 
   def create
     @client = Client.new(params[:client])
+    @client.firm_id = current_firm.id
 
     if @client.save
       flash[:notice] = 'Client was successfully created.'

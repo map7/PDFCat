@@ -80,6 +80,7 @@ class PdfsController < ApplicationController
 
   def create
     @pdf = Pdf.new(params[:pdf])
+    @pdf.firm_id = current_firm.id
 
     # Get the category selected from the drop down box and assign this to the foriegn key in pdf table.
     @pdf.category = Category.find(params[:category]) unless params[:category].blank?
@@ -88,7 +89,7 @@ class PdfsController < ApplicationController
     @pdf.client = Client.find(params[:client]) unless params[:client].blank?
 
     # Move the file and set the new filename to be saved
-    if File.exist?(@pdf.get_new_filename(UPLOAD_DIR + "/" + @pdf.filename))
+    if File.exist?(@pdf.get_new_filename(current_firm.upload_dir + "/" + @pdf.filename))
 
       # Throwing an error, Return with an error (throw error)
       @pdf.errors.add :name, "'" + @pdf.pdfname + "' already taken for this client, category and date."
@@ -96,7 +97,7 @@ class PdfsController < ApplicationController
 
     else
       # All is good, continue with cataloging pdf.
-      @pdf.filename = @pdf.move_file(UPLOAD_DIR + "/" + @pdf.filename) #if @pdf.file_exist?
+      @pdf.filename = @pdf.move_file(current_firm.upload_dir + "/" + @pdf.filename) #if @pdf.file_exist?
 
       # Create md5
       @pdf.md5 = @pdf.md5calc

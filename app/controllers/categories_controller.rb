@@ -22,6 +22,7 @@ class CategoriesController < ApplicationController
 
   def create
     @category = Category.new(params[:category])
+    @category.firm_id = current_firm.id
 
     if @category.save
       flash[:notice] = 'Category was successfully created.'
