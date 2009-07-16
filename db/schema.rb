@@ -9,16 +9,18 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20090715045423) do
+ActiveRecord::Schema.define(:version => 20090716040709) do
 
   create_table "categories", :force => true do |t|
-    t.string "name"
-    t.string "description"
+    t.string  "name"
+    t.string  "description"
+    t.integer "firm_id"
   end
 
   create_table "clients", :force => true do |t|
-    t.string "name"
-    t.string "email"
+    t.string  "name"
+    t.string  "email"
+    t.integer "firm_id"
   end
 
   create_table "firms", :force => true do |t|
@@ -39,6 +41,7 @@ ActiveRecord::Schema.define(:version => 20090715045423) do
     t.string  "md5"
     t.string  "path"
     t.boolean "missing_flag"
+    t.integer "firm_id"
   end
 
   create_table "users", :force => true do |t|

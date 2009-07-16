@@ -1,5 +1,8 @@
 class Firm < ActiveRecord::Base
 
+  has_many :categories
+  has_many :clients
+  has_many :pdfs
   has_many :users
 
   validates_presence_of :name

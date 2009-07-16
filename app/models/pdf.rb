@@ -3,6 +3,7 @@ class Pdf < ActiveRecord::Base
   require 'find'
   require 'digest/md5'
 
+  belongs_to :firm
   belongs_to :category
   belongs_to :client
 
@@ -13,13 +14,14 @@ class Pdf < ActiveRecord::Base
 
 
   # List uploaded files
-    def list_files
+    def self.list_files(current_firm)
       require 'find'
 
       files = Array.new
 
 
-      # Get the constant variable from the environment.rb file for each development/testing and production.
+      # Get the constant variable from the environment.rb file
+      # for each development/testing and production.
       dir = UPLOAD_DIR
 
       # Get a listing of all pdfs in the upload dir.
@@ -43,22 +45,8 @@ class Pdf < ActiveRecord::Base
           filehash["date"] = File.ctime(file).strftime '%d/%m/%Y'
         end
 
-
-
         files << filehash
       end
-
-=begin
-      Find.find(dir) do |path|
-        if FileTest.directory?(path)
-          next
-        else
-          files << path
-        end
-      end
-=end
-
-
 
       # Return files back to call.
       files
@@ -66,7 +54,6 @@ class Pdf < ActiveRecord::Base
 
   # Delete the physical file from the upload dir.
   def delete_file(filename)
-#    File.delete(self.fullpath) if File.exist?(self.fullpath)
     File.delete(filename) if File.exist?(filename)
   end
 

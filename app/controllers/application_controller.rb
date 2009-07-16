@@ -8,4 +8,11 @@ class ApplicationController < ActionController::Base
   # RESTful Authentication
   include AuthenticatedSystem
 
+
+  def current_firm
+    current_user.firm unless current_user.firm.nil?
+  end
+
+  helper_method :current_firm
+
 end

@@ -1,5 +1,8 @@
 class Client < ActiveRecord::Base
+
+  belongs_to :firm
   has_many :pdfs
+
   validates_presence_of :name
   validates_uniqueness_of :name, :case_sensitive => false
   validates_format_of :name, :with => /^[(|)|A-Z|a-z|0-9][,|&|(|)|'| |.|\-|A-Z|a-z|0-9]+$/    # Validate correct for filenames

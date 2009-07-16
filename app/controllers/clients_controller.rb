@@ -10,7 +10,7 @@ class ClientsController < ApplicationController
   def index
 
     if session[:client_search].nil?
-      @clients = Client.paginate(:page => params[:page],:per_page => 10, :order => 'upper(name)')
+      @clients = Client.paginate(:page => params[:page],:per_page => 10, :order => 'upper(name)', :conditions => { :firm_id => current_firm.id })
     else
       search()
     end
