@@ -9,18 +9,24 @@ class UsersController < ApplicationController
     @users = User.find(:all)
   end
 
-  # render new.rhtml
+  def show
+    @user = User.find(params[:id])
+  end
+
   def new
     @user = User.new
     @firms = Firm.find(:all)
   end
 
-  def create
-    logout_keeping_session!
-    @user = User.new(params[:user])
+  def edit
+    @user = User.find(params[:id])
+    @firms = Firm.find(:all)
+  end
 
-    firm_id = params[:firm][:firm_id]
-    @user.firm_id = firm_id
+  def create
+    @user = User.new(params[:user])
+    @user.firm_id = params[:user][:firm_id]
+    @user.is_admin = params[:user][:is_admin]
 
     success = @user && @user.save
 
@@ -30,13 +36,26 @@ class UsersController < ApplicationController
       # button. Uncomment if you understand the tradeoffs.
       # reset session
 
-      self.current_user = @user # !! now logged in
       redirect_to(users_url)
       flash[:notice] = "User #{@user.login} added."
     else
       flash[:error]  = "We couldn't set up that account, sorry.  Please try again, or contact an admin (link is above)."
       @firms = Firm.find(:all)
       render :action => 'new'
+    end
+  end
+
+  def update
+    @user = User.find(params[:id])
+    @user.firm_id = params[:user][:firm_id]
+    @user.is_admin = params[:user][:is_admin]
+
+    if @user.update_attributes(params[:user])
+      flash[:notice] = "User was sucessfully updated."
+      redirect_to(users_url)
+    else
+      @firms = Firm.find(:all)
+      render :action => "new"
     end
   end
 
