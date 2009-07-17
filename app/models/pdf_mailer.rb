@@ -1,6 +1,6 @@
 class PdfMailer < ActionMailer::Base
 
-  def email_client(recipient,subject,body,pdf)
+  def email_client(current_firm,recipient,subject,body,pdf)
     @recipients = recipient
     @subject    = pdf.client.name.upcase + ' - ' + pdf.pdfname + ' ' + pdf.pdfdate.to_s
     @from       = 'mary@tramontana.com.au'
@@ -10,7 +10,7 @@ class PdfMailer < ActionMailer::Base
     @headers    = {}
 
     attachment "application/pdf" do |a|
-      a.body = File.read(pdf.fullpath)
+      a.body = File.read(pdf.fullpath(current_firm))
       a.filename = pdf.filename
     end
   end

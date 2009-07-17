@@ -12,7 +12,6 @@ class Pdf < ActiveRecord::Base
   validates_format_of :pdfname, :with => /^[(|)|A-Z|a-z|0-9][,|&|(|)|'| |.|\-|A-Z|a-z|0-9]+$/
 # validate :does_file_exist?  # Must check if the original filename exists not the new one
 
-
   # List uploaded files
     def self.list_files(current_firm)
       require 'find'
@@ -59,36 +58,36 @@ class Pdf < ActiveRecord::Base
   end
 
   # Return the full path of the final filename.
-  def fullpath
+  def fullpath(current_firm)
     if path
       # If there is a path return this
       path + "/" + filename
     else
       # Otherwise return our premade one.
-      STORE_DIR+ "/" + client.name.downcase + "/" + category.name.downcase + "/" + filename
+      current_firm.store_dir + "/" + client.name.downcase + "/" + category.name.downcase + "/" + filename
     end
   end
 
   # Create a md5
-  def md5calc
-    Digest::MD5.hexdigest(File.read(fullpath))
+  def md5calc(current_firm)
+    Digest::MD5.hexdigest(File.read(fullpath(current_firm)))
   end
 
 
-  def get_new_filename(original)
+  def get_new_filename(current_firm,original)
     # Format date
     @filedate = pdfdate.to_formatted_s(:file_format)
 
     # Format the new filename.
-    @new_filename =  STORE_DIR + "/" + client.name.downcase + "/" + category.name.downcase + "/" + @filedate + "-" + pdfname + File.extname(original)
+    @new_filename =  current_firm.store_dir + "/" + client.name.downcase + "/" + category.name.downcase + "/" + @filedate + "-" + pdfname + File.extname(original)
 
   end
 
-  def move_file(original)
+  def move_file(current_firm,original)
 
     # Make directories
-    Dir.mkdir(STORE_DIR + "/" + client.name.downcase, 0775) unless File.exists?(STORE_DIR + "/" + client.name.downcase)
-    Dir.mkdir(STORE_DIR + "/" + client.name.downcase + "/" + category.name.downcase, 0755) unless File.exists?(STORE_DIR + "/" + client.name.downcase + "/" + category.name.downcase)
+    Dir.mkdir(current_firm.store_dir + "/" + client.name.downcase, 0775) unless File.exists?(current_firm.store_dir + "/" + client.name.downcase)
+    Dir.mkdir(current_firm.store_dir + "/" + client.name.downcase + "/" + category.name.downcase, 0755) unless File.exists?(current_firm.store_dir + "/" + client.name.downcase + "/" + category.name.downcase)
 
 =begin
     @filedate = pdfdate.to_formatted_s(:file_format)
@@ -102,7 +101,7 @@ class Pdf < ActiveRecord::Base
 
 
     filename = original
-    @new_filename = get_new_filename(filename)
+    @new_filename = get_new_filename(current_firm,filename)
 
     if File.exist?(@new_filename)
       # Throw an error here
@@ -123,7 +122,7 @@ class Pdf < ActiveRecord::Base
       dircheck = dir + '/*'
 
       # Delete the directory if it's empty, as long as it's not the same as the upload directory.
-      unless dir == UPLOAD_DIR
+      unless dir == current_firm.upload_dir
         Dir.rmdir(dir) if Dir[dircheck].empty?
       end
 
@@ -134,10 +133,10 @@ class Pdf < ActiveRecord::Base
 
   # Go through every pdf in the system and relink
   # Should be done in a cron job.
-  def relink_all
+  def relink_all(current_firm)
     @pdfs = Pdf.find(:all)
 
-    files = store_dir_files
+    files = store_dir_files(current_firm)
     puts("done!")
 
     @pdfs.each do|p|
@@ -148,17 +147,17 @@ class Pdf < ActiveRecord::Base
   end
 
   # If the file is missing, then find the file and change the path and filename in the database to suit.
-  def relink_file
+  def relink_file(current_firm)
     # Get all the pdfs in the STORE_DIR and their md5
-    files = store_dir_files
+    files = store_dir_files(current_firm)
 
-    relink_one_file(files)
+    relink_one_file(current_firm, files)
   end
 
 
-  def relink_one_file(files)
+  def relink_one_file(current_firm, files)
 
-    if File.exists?(fullpath)
+    if File.exists?(fullpath(current_firm))
       update_attribute(:missing_flag, false)
     else
 
@@ -190,29 +189,34 @@ class Pdf < ActiveRecord::Base
     end
   end
 
-  def rotate_file
+  def rotate_file(current_firm)
 
     #x = system("date")
     #print x,"\n"
 
-    @rotatefile = File.basename(fullpath,'.pdf') + "-rotated.pdf"
+    @rotatefile = File.basename(fullpath(current_firm),'.pdf') + "-rotated.pdf"
 
     # Rotate anti-clockwise 90 degrees
-    x = system("pdf90 --outfile '" + @rotatefile + "' '" + fullpath + "'")
+    status = system("pdf90 --outfile '" + @rotatefile + "' '" + fullpath(current_firm) + "'")
 
-    # Copy the new file over to the old name.
-    File.delete(fullpath)
-    FileUtils.mv(@rotatefile, fullpath)
+    if status
+      # Copy the new file over to the old name.
+      File.delete(fullpath(current_firm))
+      FileUtils.mv(@rotatefile, fullpath(current_firm))
+    else
+      logger.warn("Error command 'pdf90' could not run.")
+    end
+
 
   end
 
-  def get_no_pages
-    get_no_pages2(fullpath)
+  def get_no_pages(current_firm)
+    get_no_pages2(fullpath(current_firm))
   end
 
-  def get_no_pages2(fullpath)
+  def get_no_pages2(the_fullpath)
     # Build the command
-    @command = "pdftk '" + fullpath + "' dump_data | grep NumberOfPages | sed 's/.*: //'"
+    @command = "pdftk '" + the_fullpath + "' dump_data | grep NumberOfPages | sed 's/.*: //'"
 
     # Execute the command and collect the data
     x = `#{@command}`
@@ -223,16 +227,16 @@ class Pdf < ActiveRecord::Base
 
   # Split pdf into two parts 1-25, 25-end
   def split_pdf
-    system("pdftk '" + fullpath + "' cat 1-" + SPLIT_NO + " output '" + File.dirname(fullpath) + "/" + File.basename(fullpath, '.pdf') + "-part1.pdf'")
-    system("pdftk '" + fullpath + "' cat " + (SPLIT_NO.to_i+1).to_s + "-end output '" + File.dirname(fullpath) + "/" + File.basename(fullpath, '.pdf') + "-part2.pdf'")
+    system("pdftk '" + fullpath(current_firm) + "' cat 1-" + SPLIT_NO + " output '" + File.dirname(fullpath(current_firm)) + "/" + File.basename(fullpath(current_firm), '.pdf') + "-part1.pdf'")
+    system("pdftk '" + fullpath(current_firm) + "' cat " + (SPLIT_NO.to_i+1).to_s + "-end output '" + File.dirname(fullpath(current_firm)) + "/" + File.basename(fullpath(current_firm), '.pdf') + "-part2.pdf'")
   end
 
   # Go through each pdf in the STORE_DIR recurisively and store it's md5 and path in a hash
-  def store_dir_files
+  def store_dir_files(current_firm)
     files = {}  # Initialise hash
 
     # Find all files in the STORE_DIR
-    Find.find(STORE_DIR) do |path|
+    Find.find(current_firm.store_dir) do |path|
       if FileTest.directory?(path)
         next  # Go to the next file if the current is a dir.
       else
@@ -259,8 +263,8 @@ class Pdf < ActiveRecord::Base
 
 # Validators
   # Validate the the current file exists before moving it.
-  def does_file_exist?(oldclient, oldcategory)
-    if !File.exist?(STORE_DIR + "/" + oldclient.downcase + "/" + oldcategory.downcase + "/" + filename)
+  def does_file_exist?(current_firm, oldclient, oldcategory)
+    if !File.exist?(current_firm.store_dir + "/" + oldclient.downcase + "/" + oldcategory.downcase + "/" + filename)
       errors.add(filename, " has gone missing!")
       return false
     end
@@ -268,8 +272,8 @@ class Pdf < ActiveRecord::Base
     return true
   end
 
-  def file_exist?
-    if !File.exist?(fullpath)
+  def file_exist?(current_firm)
+    if !File.exist?(fullpath(current_firm))
       errors.add(filename, " has gone missing!")
       return false
     end

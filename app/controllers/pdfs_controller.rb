@@ -89,7 +89,7 @@ class PdfsController < ApplicationController
     @pdf.client = Client.find(params[:client]) unless params[:client].blank?
 
     # Move the file and set the new filename to be saved
-    if File.exist?(@pdf.get_new_filename(current_firm.upload_dir + "/" + @pdf.filename))
+    if File.exist?(@pdf.get_new_filename(current_firm,current_firm.upload_dir + "/" + @pdf.filename))
 
       # Throwing an error, Return with an error (throw error)
       @pdf.errors.add :name, "'" + @pdf.pdfname + "' already taken for this client, category and date."
@@ -97,10 +97,10 @@ class PdfsController < ApplicationController
 
     else
       # All is good, continue with cataloging pdf.
-      @pdf.filename = @pdf.move_file(current_firm.upload_dir + "/" + @pdf.filename) #if @pdf.file_exist?
+      @pdf.filename = @pdf.move_file(current_firm,current_firm.upload_dir + "/" + @pdf.filename) #if @pdf.file_exist?
 
       # Create md5
-      @pdf.md5 = @pdf.md5calc
+      @pdf.md5 = @pdf.md5calc(current_firm)
 
       # Check for any errors before the save
       if @pdf.errors.size == 0 and @pdf.save
@@ -132,17 +132,17 @@ class PdfsController < ApplicationController
 
     # Save the form to the table
     #if @pdf.errors.size == 0 and @pdf.update_attributes(params[:pdf])
-    if @pdf.does_file_exist?(@oldclient, @oldcategory) and @pdf.update_attributes(params[:pdf])
+    if @pdf.does_file_exist?(current_firm, @oldclient, @oldcategory) and @pdf.update_attributes(params[:pdf])
       flash[:notice] = 'Pdf was successfully updated.'
       redirect_to :action => 'show', :id => @pdf
 
       # Move the actual file
-      @filename = @pdf.move_file(STORE_DIR + "/" + @oldclient + "/" + @oldcategory + "/" + @pdf.filename)
+      @filename = @pdf.move_file(current_firm, current_firm.store_dir + "/" + @oldclient + "/" + @oldcategory + "/" + @pdf.filename)
 
       # Write changes of the filename back to the pdf object.
       @pdf.update_attribute(:filename, @filename)
 
-      @pdf.update_attribute(:md5, @pdf.md5calc)
+      @pdf.update_attribute(:md5, @pdf.md5calc(current_firm))
 
     else
       render :action => 'edit'
@@ -152,7 +152,7 @@ class PdfsController < ApplicationController
   def destroy
     # delete the physical file.
     @pdf = Pdf.find(params[:id])
-    @pdf.delete_file(@pdf.fullpath)
+    @pdf.delete_file(@pdf.fullpath(current_firm))
 
     # delete the database record
     Pdf.find(params[:id]).destroy
@@ -180,8 +180,8 @@ class PdfsController < ApplicationController
     # end
     #end
 
-    if @pdf.file_exist?
-      send_file(@pdf.fullpath,
+    if @pdf.file_exist?(current_firm)
+      send_file(@pdf.fullpath(current_firm),
                 :type         =>  'application/pdf',
                 :disposition  =>  'attachment'
                 )
@@ -196,7 +196,7 @@ class PdfsController < ApplicationController
   def relink
     @pdf = Pdf.find(params[:id])
 
-    if @pdf.relink_file
+    if @pdf.relink_file(current_firm)
       render :partial => "showitem"
       return true
     else
@@ -208,7 +208,7 @@ class PdfsController < ApplicationController
   # Rotate pdf 90 degrees clockwise
   def rotate
     @pdf = Pdf.find(params[:id])
-    @status = @pdf.rotate_file
+    @status = @pdf.rotate_file(current_firm)
 
     render :text => "test"
     return @status
@@ -223,7 +223,7 @@ class PdfsController < ApplicationController
     @pdf = Pdf.find(params[:id])
 
     # Detect how big the file is and split if over 25pages.
-    if @pdf.get_no_pages.to_i > SPLIT_NO.to_i
+    if @pdf.get_no_pages(current_firm).to_i > SPLIT_NO.to_i
       # split up into two parts
       @pdf.split_pdf
 
@@ -233,11 +233,11 @@ class PdfsController < ApplicationController
       PdfMailer.deliver_email_client(params[:email], params[:subject], params[:body],@pdf)
 
       @pdf.filename = File.basename(@original_filename, '.pdf') + "-part2.pdf"
-      PdfMailer.deliver_email_client(params[:email], params[:subject], params[:body],@pdf)
+      PdfMailer.deliver_email_client(current_firm, params[:email], params[:subject], params[:body],@pdf)
 
     else
       # Send one email as normal
-      PdfMailer.deliver_email_client(params[:email], params[:subject], params[:body],@pdf)
+      PdfMailer.deliver_email_client(current_firm, params[:email], params[:subject], params[:body],@pdf)
     end
 
     return true
