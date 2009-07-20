@@ -18,6 +18,7 @@ Rails::Initializer.run do |config|
 
   # I do care if the mailer can't send
   config.action_mailer.raise_delivery_errors = true
+  config.action_mailer.logger = nil
 
   # Include your app's configuration here:
   config.action_mailer.smtp_settings = {
