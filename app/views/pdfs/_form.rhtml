@@ -13,7 +13,7 @@
 <p><label for="clients">Clients</label><br />
 	<%= select_tag('client',
 			options_for_select(
-				Client.find(:all, :order => 'name').collect {|c| [c.name, c.id] },
+				@clients.collect {|c| [c.name, c.id] },
 				@pdf.client_id
 			)
 		)
@@ -23,7 +23,7 @@
 <p><label for="categories">Categories</label><br />
 	<%= select_tag('category',
 			options_for_select(
-				Category.find(:all, :order => 'name').collect {|c| [c.name, c.id] },
+				@categories.collect {|c| [c.name, c.id] },
 				@pdf.category_id
 			)
 		)

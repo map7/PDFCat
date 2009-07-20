@@ -19,8 +19,9 @@ class ClientsController < ApplicationController
 
   def search
     session[:client_search] = params[:client] unless params[:client].nil?
+
     @searchclient = session[:client_search]
-    @conditions = ["name ILIKE ?", "%#{@searchclient}%"]
+    @conditions = ["name ILIKE ? and firm_id = ?", "%#{@searchclient}%", current_firm.id]
 
     @clients = Client.paginate(:page => params[:page],:conditions => @conditions, :order => 'upper(name)', :per_page => 10)
 

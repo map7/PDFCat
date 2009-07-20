@@ -25,16 +25,15 @@ class PdfsController < ApplicationController
     @searchpdf = session[:pdf_search]
     @searchclient = session[:client_search]
 
-
     if @searchclient == "" or @searchclient.nil?
 
        # search just the pdfnames
-      sql = "select p.id,p.pdfdate,p.pdfname,p.category_id,p.client_id, p.missing_flag from pdfs as p inner join clients as c on p.client_id = c.id where pdfname ILIKE E'%#{@searchpdf}%' order by pdfdate desc;"
+      sql = "select p.id,p.pdfdate,p.pdfname,p.category_id,p.client_id, p.missing_flag from pdfs as p inner join clients as c on p.client_id = c.id where pdfname ILIKE E'%#{@searchpdf}%' and p.firm_id = #{current_firm.id} order by pdfdate desc;"
 
     else
 
       # search pdfnames linked to a client.
-      sql = "select p.id,p.pdfdate,p.pdfname,p.category_id,p.client_id, p.missing_flag from pdfs as p inner join clients as c on p.client_id = c.id where pdfname ILIKE E'%#{@searchpdf}%' and c.name ILIKE E'%#{@searchclient}%' order by pdfdate desc;"
+      sql = "select p.id,p.pdfdate,p.pdfname,p.category_id,p.client_id, p.missing_flag from pdfs as p inner join clients as c on p.client_id = c.id where pdfname ILIKE E'%#{@searchpdf}%' and c.name ILIKE E'%#{@searchclient}%' and p.firm_id = #{current_firm.id} order by pdfdate desc;"
 
     end
 
@@ -76,6 +75,9 @@ class PdfsController < ApplicationController
   def new
     @pdf = Pdf.new
     @pdf.filename = File.basename(params[:filename]) if params[:filename]
+
+    @clients = current_firm.clients.sort{ |a,b| a.name.upcase <=> b.name.upcase}
+    @categories = current_firm.categories.sort{ |a,b| a.name.upcase <=> b.name.upcase}
   end
 
   def create
@@ -115,6 +117,8 @@ class PdfsController < ApplicationController
 
   def edit
     @pdf = Pdf.find(params[:id])
+    @clients = current_firm.clients.sort{ |a,b| a.name.upcase <=> b.name.upcase}
+    @categories = current_firm.categories.sort{ |a,b| a.name.upcase <=> b.name.upcase}
   end
 
   def update

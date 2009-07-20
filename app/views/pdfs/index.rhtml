@@ -15,8 +15,8 @@
       <th id="FKey">FKey<% @no = 0 %></th>
       <th>Date</th>
       <th>Name</th>
-      <th>Category</th>
       <th>Client</th>
+      <th>Category</th>
     </tr>
     
     <% for pdf in @pdfs %>
@@ -25,8 +25,9 @@
 
       <td><%= pdf.pdfdate %></td>
       <td><%= link_to pdf.pdfname, :action => "attachment", :id => pdf.id %></td>
-      <td><%= pdf.category.name %></td>
+
       <td><%= pdf.client.name %></td>
+      <td><%= pdf.category.name %></td>
 
       <!-- 
 	   OLD Way

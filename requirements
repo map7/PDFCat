@@ -1,7 +1,0 @@
-
-Requires the following packages/ports:
-pdfjam = for rotation.
-pdftk = split, merge, watermark
-
-
-Configure email server for outgoing email.

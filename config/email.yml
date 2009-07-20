@@ -1,0 +1,9 @@
+development:
+  :address: mail.lan
+  :port: 25
+  :authentication: plain
+
+production:
+  :address: mail.lan
+  :port: 25
+  :authentication: plain
