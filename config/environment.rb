@@ -13,6 +13,19 @@ require File.join(File.dirname(__FILE__), 'boot')
 Rails::Initializer.run do |config|
   # Settings in config/environments/* take precedence over those specified here
 
+  # Email settings
+  config.action_mailer.delivery_method = :smtp
+
+  # I do care if the mailer can't send
+  config.action_mailer.raise_delivery_errors = true
+
+  # Include your app's configuration here:
+  config.action_mailer.smtp_settings = {
+    :address => "mail.lan",
+    :port => "25",
+    :domain => "lan"
+  }
+
   # RESTful ACL support.
   config.gem "mdarby-restful_acl", :lib => 'restful_acl_controller'
 
@@ -51,6 +64,9 @@ Rails::Initializer.run do |config|
 
   # See Rails::Configuration for more options
 end
+
+
+
 
 # Add new inflection rules using the following format
 # (all these examples are active by default):

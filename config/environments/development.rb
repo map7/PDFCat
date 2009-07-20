@@ -18,7 +18,7 @@ config.action_controller.perform_caching             = false
 config.action_view.debug_rjs                         = true
 
 # Don't care if the mailer can't send
-config.action_mailer.raise_delivery_errors = false
+#config.action_mailer.raise_delivery_errors = false
 
 SITE_NAME= "Pdfcat-development"
 UPLOAD_DIR = "/home/d110/pdfcat_test_upload"
