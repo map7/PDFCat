@@ -1,0 +1,17 @@
+Clone from the server
+$ git clone ssh://map7@paistram/usr/home/map7/git-server/pdfcat
+
+Commit changes
+$ git commit -a
+
+Merge with master
+$ git checkout master
+$ git merge <last branch used>
+
+Upload changes to server (First merge with master)
+$ git push paistram-server master
+
+Merge in changes from the server into the master branch.
+$ git pull origin master
+
+
