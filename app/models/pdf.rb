@@ -85,19 +85,17 @@ class Pdf < ActiveRecord::Base
 
   def move_file(current_firm,original)
 
+    # If the original isn't where it should be get the files modified path.
+    unless File.exist?(original)
+      original = self.fullpath(current_firm)
+      self.path = nil
+      self.save
+    end
+
+
     # Make directories
     Dir.mkdir(current_firm.store_dir + "/" + client.name.downcase, 0775) unless File.exists?(current_firm.store_dir + "/" + client.name.downcase)
     Dir.mkdir(current_firm.store_dir + "/" + client.name.downcase + "/" + category.name.downcase, 0755) unless File.exists?(current_firm.store_dir + "/" + client.name.downcase + "/" + category.name.downcase)
-
-=begin
-    @filedate = pdfdate.to_formatted_s(:file_format)
-
-    filename = original
-
-    # Format the new filename.
-    @new_filename =  STORE_DIR + "/" + client.name.downcase + "/" + category.name.downcase + "/" + @filedate + "-" + pdfname + File.extname(filename)
-
-=end
 
 
     filename = original
@@ -264,12 +262,15 @@ class Pdf < ActiveRecord::Base
 # Validators
   # Validate the the current file exists before moving it.
   def does_file_exist?(current_firm, oldclient, oldcategory)
-    if !File.exist?(current_firm.store_dir + "/" + oldclient.downcase + "/" + oldcategory.downcase + "/" + filename)
-      errors.add(filename, " has gone missing!")
+
+    # If the old path exists or the files modified path exists return true.
+    # Otherwise return an error.
+    if File.exist?(current_firm.store_dir + "/" + oldclient.downcase + "/" + oldcategory.downcase + "/" + filename) or File.exist?(self.fullpath(current_firm))
+      return true
+    else
+      errors.add(filename, " has gone missing, please relink!")
       return false
     end
-
-    return true
   end
 
   def file_exist?(current_firm)

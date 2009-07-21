@@ -140,15 +140,23 @@ class PdfsController < ApplicationController
       flash[:notice] = 'Pdf was successfully updated.'
       redirect_to :action => 'show', :id => @pdf
 
-      # Move the actual file
-      @filename = @pdf.move_file(current_firm, current_firm.store_dir + "/" + @oldclient + "/" + @oldcategory + "/" + @pdf.filename)
+      if @pdf.client.name.upcase == @oldclient.upcase and @pdf.category.name.upcase == @oldcategory.upcase and @pdf.filename == @pdf.get_new_filename(current_firm,@pdf.filename)
+        # Nothing has changed leave the filename the same.
+        @filename = @pdf.filename
+      else
+        # Move the file
+        @filename = @pdf.move_file(current_firm, current_firm.store_dir + "/" + @oldclient + "/" + @oldcategory + "/" + @pdf.filename)
+        logger.warn("Move File #{@filename}")
 
-      # Write changes of the filename back to the pdf object.
-      @pdf.update_attribute(:filename, @filename)
+        # Write changes of the filename back to the pdf object.
+        @pdf.update_attribute(:filename, @filename)
+      end
 
       @pdf.update_attribute(:md5, @pdf.md5calc(current_firm))
 
     else
+      @clients = current_firm.clients.sort{ |a,b| a.name.upcase <=> b.name.upcase}
+      @categories = current_firm.categories.sort{ |a,b| a.name.upcase <=> b.name.upcase}
       render :action => 'edit'
     end
   end

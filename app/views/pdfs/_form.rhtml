@@ -1,6 +1,5 @@
 <%= error_messages_for 'pdf' %>
 
-<!--[form:pdf]-->
 <p><label for="pdf_filename">Current Filename: </label>
 <%= hidden_field 'pdf','filename' %><%= @pdf.filename %></p>
 
@@ -35,5 +34,3 @@
 
 <!-- Add your focus after all the text fields have been made -->
 <script>$('pdf_pdfname').focus();</script>
-<!--[eoform:pdf]-->
-
