@@ -8,7 +8,7 @@ class Pdf < ActiveRecord::Base
   belongs_to :client
 
   validates_presence_of :pdfdate, :pdfname, :filename, :category_id, :client_id
-  validates_uniqueness_of :pdfname, :scope => [:pdfdate, :category_id, :client_id]
+  validates_uniqueness_of :pdfname, :scope => [:pdfdate, :category_id, :client_id, :firm_id]
   validates_format_of :pdfname, :with => /^[(|)|A-Z|a-z|0-9][,|&|(|)|'| |.|\-|A-Z|a-z|0-9]+$/
 # validate :does_file_exist?  # Must check if the original filename exists not the new one
 

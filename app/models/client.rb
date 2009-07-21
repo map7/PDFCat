@@ -4,7 +4,7 @@ class Client < ActiveRecord::Base
   has_many :pdfs
 
   validates_presence_of :name
-  validates_uniqueness_of :name, :case_sensitive => false
+  validates_uniqueness_of :name, :case_sensitive => false, :scope => :firm_id
   validates_format_of :name, :with => /^[(|)|A-Z|a-z|0-9][,|&|(|)|'| |.|\-|A-Z|a-z|0-9]+$/    # Validate correct for filenames
   validates_format_of :email, :with => /^[^@][\w.-]+@[\w.-]+[.][a-z]{2,4}$|.*/i
 
