@@ -14,6 +14,7 @@
       <th><%= column.human_name %></th>
     <% end %>
 
+    <th>Documents</th>
   </tr>
   
 <% for client in @clients %>
@@ -23,9 +24,11 @@
     <td><%=h client.send(column.name) %></td>
   <% end %>
 
+    <td><%=h client.pdfs.count %></td>
+
     <td><%= link_to 'Show', :action => 'show', :id => client %></td>
     <td><%= link_to 'Edit', :action => 'edit', :id => client %></td>
-    <td><%= link_to 'Delete', { :action => 'destroy', :id => client }, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%= link_to 'Delete', { :action => 'destroy', :id => client }, :confirm => "You are going to delete a category which contains #{client.pdfs.count} document(s)\n\n Are you sure?", :method => :delete %></td>
   </tr>
 <% end %>
 </table>

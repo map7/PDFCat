@@ -6,34 +6,26 @@
   <tr id=header>
     <th id="FKey">FKey<% @no = 0 %></th>
 
-  <% for column in Category.content_columns %>
-    <th><%= column.human_name %></th>
-  <% end %>
+    <% for column in Category.content_columns %>
+      <th><%= column.human_name %></th>
+    <% end %>
+    <th>Documents</th>
+
   </tr>
   
 <% for category in @categories %>
-	<tr id=listitem>
-	  <td id="FKey"><%= @no = @no +1 %></td>
-  <% for column in Category.content_columns %>
-    <td><%=h category.send(column.name) %></td>
-  <% end %>
+  <tr id=listitem>
+    <td id="FKey"><%= @no = @no +1 %></td>
+    <% for column in Category.content_columns %>
+      <td><%=h category.send(column.name) %></td>
+    <% end %>
 
-
-	<td>
-		<!-- TODO improve this AJAX to have links and shortcuts to replace the show page -->
-		<!--
-		<%= link_to_remote("ajax",
-						:update => "item",
-						:loading => "$('item').show()",
-						:url => { :action => :show_item, :id => category }) %>
-
-		<div id=item style='display:none'></div>
-		-->
-	</td>
+    <td><%=h category.pdfs.count %></td>
 
     <td><%= link_to 'Show', :action => 'show', :id => category %></td>
     <td><%= link_to 'Edit', :action => 'edit', :id => category %></td>
-    <td><%= link_to 'Delete', { :action => 'destroy', :id => category }, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%= link_to 'Delete', { :action => 'destroy', :id => category }, :confirm => "You are going to delete a category which contains #{category.pdfs.count} document(s)\n\n Are you sure?", :method => :delete %></td>
+
   </tr>
 <% end %>
 </table>

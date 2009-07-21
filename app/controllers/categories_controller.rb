@@ -24,11 +24,15 @@ class CategoriesController < ApplicationController
     @category = Category.new(params[:category])
     @category.firm_id = current_firm.id
 
-    if @category.save
-      flash[:notice] = 'Category was successfully created.'
-      redirect_to :action => 'index'
-    else
+    if @category.new_dir_exists?(current_firm)
       render :action => 'new'
+    else
+      if @category.save
+        flash[:notice] = 'Category was successfully created.'
+        redirect_to :action => 'index'
+      else
+        render :action => 'new'
+      end
     end
   end
 
@@ -40,18 +44,18 @@ class CategoriesController < ApplicationController
     @category = Category.find(params[:id])
 
     # Move directory, if dir exists
-    #@newcategory = Category.new(params[:category])
-    #@newcategory.name = @category.move_dir(@newcategory.name)
-  @oldcat = @category.name
+    # @newcategory = Category.new(params[:category])
+    # @newcategory.name = @category.move_dir(current_firm, @newcategory.name)
+    @oldcat = @category.name
 
     # Store the data
     #if @category.errors.size == 0 and @category.update_attributes(params[:category])
     if @category.update_attributes(params[:category])
-    @category.move_dir(@oldcat)
-    flash[:notice] = 'Category was successfully updated.'
-    redirect_to :action => 'show', :id => @category
+      @category.move_dir(current_firm,@oldcat)
+      flash[:notice] = 'Category was successfully updated.'
+      redirect_to :action => 'show', :id => @category
     else
-    render :action => 'edit'
+      render :action => 'edit'
     end
   end
 
