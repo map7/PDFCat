@@ -9,12 +9,12 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20090716040709) do
+ActiveRecord::Schema.define(:version => 20090716040615) do
 
   create_table "categories", :force => true do |t|
     t.string  "name"
-    t.string  "description"
     t.integer "firm_id"
+    t.string  "description"
   end
 
   create_table "clients", :force => true do |t|

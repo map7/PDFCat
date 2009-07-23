@@ -11,7 +11,7 @@ class CreateUsers < ActiveRecord::Migration
       t.column :remember_token,            :string, :limit => 40
       t.column :remember_token_expires_at, :datetime
       t.column :is_admin, :boolean
-
+      t.column :firm_id, :integer
     end
     add_index :users, :login, :unique => true
   end
