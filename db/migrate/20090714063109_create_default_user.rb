@@ -9,6 +9,7 @@ class CreateDefaultUser < ActiveRecord::Migration
     u.password_confirmation = password
     u.crypted_password = u.encrypt(password)
     u.is_admin = true
+    u.firm_id = 1
     u.save
 
   end

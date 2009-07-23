@@ -8,6 +8,7 @@ class CategoriesController < ApplicationController
 
   def index
     @categories = Category.paginate(:page => params[:page], :per_page => 10, :order => "upper(name)", :conditions => { :firm_id => current_firm.id })
+
     @no = -1  # Used for shorcuts
   end
 

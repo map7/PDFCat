@@ -9,7 +9,13 @@ class PdfsController < ApplicationController
   def index
 
     if session[:pdf_search].nil? and session[:client_search].nil?
-      @pdfs = Pdf.paginate(:page => params[:page], :per_page => 10, :order => 'pdfdate DESC', :conditions => { :firm_id => current_firm.id })
+
+      if current_firm.nil?
+        @pdfs = Pdf.paginate(:page => params[:page], :per_page => 10, :order => 'pdfdate DESC')
+      else
+        @pdfs = Pdf.paginate(:page => params[:page], :per_page => 10, :order => 'pdfdate DESC', :conditions => { :firm_id => current_firm.id })
+      end
+
     else
 #      @pdfs = Pdf.paginate(:page => params[:page], :per_page => 10, :order => 'pdfdate DESC')
       search()
