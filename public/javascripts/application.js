@@ -8,4 +8,6 @@ function hide_all(){
     $('help').hide();
 
     clearHighlight(); // Clear highlighting from the last listing
+
+    $('contentBox').focus();
 }
