@@ -10,7 +10,9 @@ class ApplicationController < ActionController::Base
 
 
   def current_firm
-    current_user.firm unless current_user.firm.nil?
+    unless current_user.nil?
+      current_user.firm unless current_user.firm.nil?
+    end
   end
 
   helper_method :current_firm

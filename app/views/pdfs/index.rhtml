@@ -1,6 +1,6 @@
 
 <%= shortcut 'a', "#{BASE_URL}/" + controller.controller_name %>  <!-- Disable Add New -->
-<%= shortcut_function 's', "$('client').focus();$('client').style.backgroundColor='#FFE887';" %>  <!-- Disable Add New -->
+<%= shortcut_ctrl_function 's', "$('client').focus();$('client').style.backgroundColor='#FFE887';" %>  <!-- Disable Add New -->
 
 <div id=search><%= render :partial => "search" %></div>
 
@@ -24,7 +24,8 @@
       <td id="FKey"><%= @no = @no +1 %></td>
 
       <td><%= pdf.pdfdate %></td>
-      <td><%= link_to pdf.pdfname, :action => "attachment", :id => pdf.id %></td>
+      <td><%= link_to pdf.pdfname, {:action => "attachment", :id => pdf.id},
+	        :id => "view", :method => :get %></td>
 
       <td><%= pdf.client.name %></td>
       <td><%= pdf.category.name %></td>
@@ -35,12 +36,12 @@
 
 	-->
       
-      <td><%= link_to 'Show', 
-	      :action => 'show',
-	      :id => pdf %>
-      </td>
-      <td><%= link_to 'Edit', :action => 'edit', :id => pdf %></td>
-      <td><%= link_to 'Delete', { :action => 'destroy', :id => pdf }, :confirm => 'Are you sure?', :method => :post %></td>
+      <td><%= link_to 'Show', {:action => 'show',:id => pdf},
+	        :id => "show", :method => :get %></td>
+      <td><%= link_to 'Edit', {:action => 'edit', :id => pdf},
+	        :id => "edit", :method => :get %></td>
+      <td><%= link_to 'Delete', { :action => 'destroy', :id => pdf },
+	        :id => "del", :confirm => 'Are you sure?', :method => :post %></td>
 
     </tr>
 
@@ -69,7 +70,6 @@
 <!-- Page jump navigation -->
 <%= will_paginate @pdfs %>
 
-
-
-
 </div>
+
+<script>setup('listing');</script>

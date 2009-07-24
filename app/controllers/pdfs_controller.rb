@@ -101,6 +101,9 @@ class PdfsController < ApplicationController
 
       # Throwing an error, Return with an error (throw error)
       @pdf.errors.add :name, "'" + @pdf.pdfname + "' already taken for this client, category and date."
+
+      @clients = current_firm.clients.sort{ |a,b| a.name.upcase <=> b.name.upcase}
+      @categories = current_firm.categories.sort{ |a,b| a.name.upcase <=> b.name.upcase}
       render :action => 'new'
 
     else

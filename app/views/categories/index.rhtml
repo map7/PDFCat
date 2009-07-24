@@ -2,7 +2,7 @@
 
 
 
-<table>
+<table id=listing>
   <tr id=header>
     <th id="FKey">FKey<% @no = 0 %></th>
 
@@ -22,9 +22,12 @@
 
     <td><%=h category.pdfs.count %></td>
 
-    <td><%= link_to 'Show', :action => 'show', :id => category %></td>
-    <td><%= link_to 'Edit', :action => 'edit', :id => category %></td>
-    <td><%= link_to 'Delete', { :action => 'destroy', :id => category }, :confirm => "You are going to delete a category which contains #{category.pdfs.count} document(s)\n\n Are you sure?", :method => :delete %></td>
+    <td><%= link_to 'Show', {:action => 'show', :id => category}, 
+              :id => "show", :method => :get %></td>
+    <td><%= link_to 'Edit', {:action => 'edit', :id => category}, 
+              :id => "edit", :method => :get %></td>
+    <td><%= link_to 'Delete', { :action => 'destroy', :id => category }, 
+              :id => "del", :confirm => "You are going to delete a category which contains #{category.pdfs.count} document(s)\n\n Are you sure?", :method => :delete %></td>
 
   </tr>
 <% end %>
@@ -34,3 +37,5 @@
 <%= will_paginate @categories %>
 
 <%= link_to '<b>A</b>dd New category', :action => 'new' %>
+
+<script>setup('listing');</script>

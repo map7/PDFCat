@@ -273,11 +273,46 @@ tr#listitem:hover{
     font-size: 80%;
 }
 
+
 /********************* Forms **********************/
 
 input, textarea{
     font-size: 130%;
     border: 1px solid #888;
+}
+
+
+/********************* Listing **********************/
+.highlight{ 
+       background-color: #F7EFAA;
+}
+.clear { background-color: white; }
+
+
+/********************* Information Boxes **********************/
+/* Help, Mode, etc boxes */
+
+#info{ 
+  position:absolute;
+  z-index: 20;
+
+  width:100%;
+  height:100px;
+
+  bottom: 40px;
+  right: 16px;
+
+  background-color: #F7EFAA;
+}
+
+#mode{
+  padding-top: 30px;
+
+  width: 100%;
+
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
 }
 
 
@@ -294,6 +329,8 @@ input, textarea{
 .link_add{
     font-size:80%;
 }
+
+
 
 
 

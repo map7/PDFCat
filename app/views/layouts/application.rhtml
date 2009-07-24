@@ -8,7 +8,7 @@
   <%= stylesheet_link_tag 'application' %>
   <%= stylesheet_link_tag 'pdfcat' %>
 
-  <%= javascript_include_tag 'prototype' %>
+  <%= javascript_include_tag 'prototype', 'select_mode' %>
 
   <%= javascript_include_tag :defaults %>		<!-- Used for AJAX and shortcuts plugin -->
 
@@ -31,21 +31,54 @@
 
 </head>
 <body>
-	<!-- Nav keys -->
-	<%= shortcut '1', "#{BASE_URL}/new" %>
-	<%= shortcut '2', "#{BASE_URL}/pdfs" %>
-	<%= shortcut '3', "#{BASE_URL}/clients" %>
-	<%= shortcut '4', "#{BASE_URL}/categories" %>
-	<%= shortcut '8', "#{BASE_URL}/users" %>
-	<%= shortcut '9', "#{BASE_URL}/firms" %>
-	<%= shortcut '0', "#{BASE_URL}/logout" %>
+        <!-- ESC key done using Hex 
+             1B(hex base 16) = 27 (decimal base 10)
+             We do this so that it hits a different area of the shortcut.js, 
+             it checks the KeyCode instead of the code.-->
+        <%= shortcut_function '\x1B', "hide_all();" %>     <!-- ESC key -->
+
+        <!-- Nav keys -->
+	<%= shortcut_fnkey '1', "#{BASE_URL}/new" %>
+	<%= shortcut_fnkey '2', "#{BASE_URL}/pdfs" %>
+	<%= shortcut_fnkey '3', "#{BASE_URL}/clients" %>
+	<%= shortcut_fnkey '4', "#{BASE_URL}/categories" %>
+	<%= shortcut_fnkey '8', "#{BASE_URL}/users" %>
+	<%= shortcut_fnkey '9', "#{BASE_URL}/firms" %>
+	<%= shortcut_fnkey '10', "#{BASE_URL}/logout" %>
 
 	<%= shortcut_function '?', "Element.toggle('help');"  %>
+	<%= shortcut_function 'h', "Element.toggle('help');"  %>
 
+	<!-- Item selection keys. -->
+	<%= shortcut_function '1', "highlight(1);$('info').show();" %>
+	<%= shortcut_function '2', "highlight(2);$('info').show();" %>
+	<%= shortcut_function '3', "highlight(3);$('info').show();" %>
+	<%= shortcut_function '4', "highlight(4);$('info').show();" %>
+	<%= shortcut_function '5', "highlight(5);$('info').show();" %>
+	<%= shortcut_function '6', "highlight(6);$('info').show();" %>
+	<%= shortcut_function '7', "highlight(7);$('info').show();" %>
+	<%= shortcut_function '8', "highlight(8);$('info').show();" %>
+	<%= shortcut_function '9', "highlight(9);$('info').show();" %>
+	<%= shortcut_function '0', "highlight(10);$('info').show();" %>
+
+	<%= shortcut_function 'v', "hide_all();runSelectedName('view');" %>
+
+	<%= shortcut_function 's', "runSelectedName('show');" %>
+	<%= shortcut_function '/', "runSelectedName('show');" %>
+
+	<%= shortcut_function 'e', "runSelectedName('edit');" %>
+	<%= shortcut_function '*', "runSelectedName('edit');" %>
+
+	<%= shortcut_function 'd', "runSelectedName('del');" %>
+	<%= shortcut_function '-', "runSelectedName('del');" %>
+
+	<%= shortcut_function 't', "runSelectedAjaxName('tagajax');$('info').hide();" %>
 
 	<!-- General shortcuts -->
 	<%= shortcut 'a', "#{BASE_URL}/" + controller.controller_name + "/new" %>	<!-- Add New -->
-	<%= shortcut 'b', "#{BASE_URL}/" + controller.controller_name  %>			<!-- Back --> 
+	<%= shortcut '+', "#{BASE_URL}/" + controller.controller_name + "/new" %>	<!-- Add New -->
+
+	<%= shortcut_ctrl 'b', "#{BASE_URL}/" + controller.controller_name  %>			<!-- Back --> 
 
 
 	
@@ -62,28 +95,54 @@
 <div id=help style="display:none">
 	<h2>HELP - Shortcut Keys</h2>
 	<p>If an item is highlighted in red it means the file is missing.  This is shown after a relink has been done so you will either have to rescan this item or find a backup of the file.</p>
-	<b>Page Navigation</b><br />
-	New Page      = !<br />
-	Pdfs Page     = @<br />
-	Client Page   = #<br />
-	Category Page = $<br />
+
+	<table>
+	  <th>Page Navigation</th>
+	  <th>Key</th>
+	  <tr><td>New Page</td><td>F1</td></tr>
+	  <tr><td>Pdfs Page</td><td>F2</td></tr>
+	  <tr><td>Client Page</td><td>F3</td></tr>
+	  <tr><td>Category Page</td><td>F4</td></tr>
+	  <tr><td>Users</td><td>F8</td></tr>
+	  <tr><td>Firms</td><td>F9</td></tr>
+	  <tr><td>Logout</td><td>F10</td></tr>
+	</table>
+ 	<br />
+	<table>
+	  <th>Listing Navigation</th>
+	  <th>Key</th>
+	  <tr><td>Search</td><td>CTRL+s</td></tr>
+	</table>
 	<br />
-	<b>Listing Navigation</b><br />
-	Search		  = s<br />
-	Next Page	  = n<br />
-	Previous Page = p<br />
-	<br />
-	<b>Item Management</b><br />
-	Add new item  = a<br />
-	Edit item     = e<br />
-	Delete item  = d<br />
-	Show item     = 0-9<br />
-	View pdf      = v<br />
-	Email item	  = m<br />
+	<table>
+	  <th>Item Management</th>
+	  <th>Key</th>
+	  <tr><td>Select item</td><td>0-9</td></tr>
+	  <tr><td>Add new item</td><td>a</td></tr>
+	  <tr><td>View pdf</td><td>v</td></tr>
+	  <tr><td>Show item</td><td>s</td></tr>
+	  <tr><td>Edit item</td><td>e</td></tr>
+	  <tr><td>Delete item</td><td>d</td></tr>
+	  <tr><td>Email item</td><td>m</td></tr>
+	</table>
 </div>
 
 
-<div id=info></div>
+<div id=info style='display:none'>
+    <div class="pad1"></div>    
+
+    <div style="float:right">
+      <table>
+	<th>Function</th>  <th> key  </th>
+	<tr><td>Show</td>  <td>s or /</td></tr>
+	<tr><td>Edit</td>  <td>e or *</td></tr>
+	<tr><td>Delete</td><td>d or -</td></tr>
+      </table>
+    </div>
+    
+    <div id="mode">Select Mode</div>
+</div>
+
 <div id=mode></div>
 <div id=modeKeys></div>
 
@@ -115,7 +174,10 @@
   </div>
   
   <div id=footerRight>
-    Logged in as: <%= current_user.login unless current_user.nil? %>
+    <% unless current_user.nil? %>
+      Logged in as: <%= current_user.login unless current_user.nil? %>,
+      Firm: <%= current_firm.name unless current_firm.nil?  %>
+    <% end %>
   </div>
 </div>
 

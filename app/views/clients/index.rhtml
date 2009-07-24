@@ -1,11 +1,13 @@
 
-<%= shortcut_function 's', "$('client').focus();$('client').style.backgroundColor='#FFE887';" %>  <!-- Disable Add New -->
+<%= shortcut_ctrl_function 's', "$('client').focus();$('client').style.backgroundColor='#FFE887';" %>  <!-- Disable Add New -->
+
+
 
 <%= render :partial => "clients/search" %>
 
 <h1>Listing clients</h1>
 
-<table>
+<table id=listing>
 
   <tr id=header>
     <th id="FKey">FKey<% @no = 0 %></th>
@@ -26,9 +28,12 @@
 
     <td><%=h client.pdfs.count %></td>
 
-    <td><%= link_to 'Show', :action => 'show', :id => client %></td>
-    <td><%= link_to 'Edit', :action => 'edit', :id => client %></td>
-    <td><%= link_to 'Delete', { :action => 'destroy', :id => client }, :confirm => "You are going to delete a category which contains #{client.pdfs.count} document(s)\n\n Are you sure?", :method => :delete %></td>
+    <td><%= link_to 'Show', {:action => 'show', :id => client},
+              :id => "show", :method => :get  %></td>
+    <td><%= link_to 'Edit', {:action => 'edit', :id => client},
+              :id => "edit", :method => :get  %></td>
+    <td><%= link_to 'Delete', { :action => 'destroy', :id => client }, 
+              :id => "del", :confirm => "You are going to delete a category which contains #{client.pdfs.count} document(s)\n\n Are you sure?", :method => :delete %></td>
   </tr>
 <% end %>
 </table>
@@ -39,3 +44,5 @@
 <%= will_paginate @clients %>
 
 <%= link_to '<b>A</b>dd New client', :action => 'new' %>
+
+<script>setup('listing');</script>

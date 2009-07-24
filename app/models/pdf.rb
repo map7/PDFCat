@@ -94,12 +94,20 @@ class Pdf < ActiveRecord::Base
 
 
     # Make directories
-    Dir.mkdir(current_firm.store_dir + "/" + client.name.downcase, 0775) unless File.exists?(current_firm.store_dir + "/" + client.name.downcase)
-    Dir.mkdir(current_firm.store_dir + "/" + client.name.downcase + "/" + category.name.downcase, 0755) unless File.exists?(current_firm.store_dir + "/" + client.name.downcase + "/" + category.name.downcase)
+    client_dir = current_firm.store_dir + "/" + client.name.downcase
+    logger.warn("Mkdir #{client_dir}")
+    Dir.mkdir(client_dir, 0775) unless File.exists?(client_dir)
+
+    cat_dir = client_dir + "/" + category.name.downcase
+    logger.warn("Mkdir #{cat_dir}")
+    Dir.mkdir(cat_dir, 0755) unless File.exists?(cat_dir)
 
 
     filename = original
     @new_filename = get_new_filename(current_firm,filename)
+
+    logger.warn("Original filename = #{filename}")
+    logger.warn("     New filename = #{@new_filename}")
 
     if File.exist?(@new_filename)
       # Throw an error here

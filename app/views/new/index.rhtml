@@ -1,6 +1,6 @@
 <h1>File upload</h1>
 
-<table>
+<table id=listing>
   <tr id=header>
     <th id="FKey">FKey<% @no = 0 %></th>
     <th>File Name</th>
@@ -17,8 +17,10 @@
     <td><%= file["size"] %> </td>
     <td><%= file["date"] %> </td>
     
-    <td><%= link_to 'Enter',	:controller => 'pdfs', :action => 'new', 		:filename => file["name"] %></td>
-    <td><%= link_to 'Delete',	{ :action => 'destroy', :filename => file["name"]}, :confirm => 'Are you sure?' %></td>
+    <td><%= link_to 'Enter', {:controller => 'pdfs', :action => 'new', :filename => file["name"] },:id => "edit", :method => :get %></td>
+    <td><%= link_to 'Delete',	{ :action => 'destroy', :filename => file["name"]}, 
+      :id => "del", :method => :get,
+      :confirm => 'Are you sure?' %></td>
   </tr>
 
   <% end %>
@@ -26,3 +28,4 @@
 </table>
 
 <%= will_paginate @files %>
+<script>setup('listing');</script>
