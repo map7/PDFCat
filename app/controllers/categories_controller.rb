@@ -25,15 +25,11 @@ class CategoriesController < ApplicationController
     @category = Category.new(params[:category])
     @category.firm_id = current_firm.id
 
-    if @category.new_dir_exists?(current_firm)
-      render :action => 'new'
+    if @category.save
+      flash[:notice] = 'Category was successfully created.'
+      redirect_to :action => 'index'
     else
-      if @category.save
-        flash[:notice] = 'Category was successfully created.'
-        redirect_to :action => 'index'
-      else
-        render :action => 'new'
-      end
+      render :action => 'new'
     end
   end
 
