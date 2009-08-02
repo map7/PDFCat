@@ -399,25 +399,25 @@ div#item{
 
 
 div#help{
-    position: absolute; 
-    margin: 0; 
-    display: block; 
+  position: absolute; 
+  margin: 0; 
+  display: block; 
 
-	bottom: 0;
-	right: 0;
+  bottom: 0;
+  right: 0;
 
-    width: 40%; 
-    height: 98%; 
+  width: 25%; 
+  height: 98%; 
 
-	padding: 1%;
+  padding: 1%;
 	
-    background: #FFE887;
-    color: #000; 
-    text-align: left; 
-    font-size: 12; 
-    z-index: 4; 
+  background: #FFE887;
+  color: #000; 
+  text-align: left; 
+  font-size: 12; 
+  z-index: 4; 
 
-    /*visibility: hidden;*/
+  /*visibility: hidden;*/
 }
 
 
