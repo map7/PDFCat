@@ -1,18 +1,20 @@
 <h1>Listing users</h1>
 
-<table>
-  <tr>
+<table id=listing>
+  <tr id=header>
+    <th id="FKey">Key<% @no = 0 %></th>
     <th>Login</th>
     <th>Firm</th>
   </tr>
 
 <% for user in @users %>
-  <tr>
+  <tr id=listitem>
+    <td id="FKey"><%= @no = @no +1 %></td>
     <td><%=h user.login %></td>
     <td><%=h user.firm.name unless user.firm.nil? %></td>
-    <td><%= link_to 'Show', user %></td>
-    <td><%= link_to 'Edit', edit_user_path(user) %></td>
-    <td><%= link_to 'Delete', user, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%= link_to 'Show', user, :id => "show", :method => :get %></td>
+    <td><%= link_to 'Edit', edit_user_path(user), :id => "edit", :method => :get %></td>
+    <td><%= link_to 'Delete', user, :confirm => 'Are you sure?', :id => "del", :method => :delete %></td>
   </tr>
 <% end %>
 </table>
@@ -23,3 +25,4 @@
 
 <%= link_to 'New user', new_user_path %>
 
+<script>setup('listing');</script>

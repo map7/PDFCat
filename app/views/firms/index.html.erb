@@ -1,14 +1,16 @@
 <h1>Listing firms</h1>
 
 <table id=listing>
-  <tr>
+  <tr id=heading>
+    <th id="FKey">Key<% @no = 0 %></th>    
     <th>Name</th>
     <th>Store dir</th>
     <th>Upload dir</th>
   </tr>
 
 <% for firm in @firms %>
-  <tr>
+  <tr id=listitem>
+    <td id="FKey"><%= @no = @no +1 %></td>
     <td><%=h firm.name %></td>
     <td><%=h firm.store_dir %></td>
     <td><%=h firm.upload_dir %></td>

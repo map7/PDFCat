@@ -10,7 +10,7 @@
 <table id=listing>
 
   <tr id=header>
-    <th id="FKey">FKey<% @no = 0 %></th>
+    <th id="FKey">Key<% @no = 0 %></th>
 
     <% for column in Client.content_columns %>
       <th><%= column.human_name %></th>
@@ -20,8 +20,8 @@
   </tr>
   
 <% for client in @clients %>
-	<tr id=listitem>
-	  <td id="FKey"><%= @no = @no +1 %></td>
+  <tr id=listitem>
+    <td id="FKey"><%= @no = @no +1 %></td>
   <% for column in Client.content_columns %>
     <td><%=h client.send(column.name) %></td>
   <% end %>
