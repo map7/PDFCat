@@ -264,7 +264,7 @@ class Pdf < ActiveRecord::Base
           print(".")
           STDOUT.flush
 
-          puts(counter) if counter % 10 == 0
+          puts(counter) if counter % 50 == 0
 
           # calculate md5 and store.
           md5=Digest::MD5.hexdigest(File.read(path))

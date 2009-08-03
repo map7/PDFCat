@@ -1,6 +1,6 @@
 --- 
 prefix: /pdfcat
-cwd: /usr/pdfcat
+cwd: /usr/local/www/pdfcat
 log_file: /var/log/mongrel.log
 port: "8000"
 environment: production
