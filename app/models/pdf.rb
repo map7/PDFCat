@@ -137,25 +137,31 @@ class Pdf < ActiveRecord::Base
     end
   end
 
+
   # Go through every pdf in the system and relink
   # Should be done in a cron job.
-  def relink_all(current_firm)
-    @pdfs = Pdf.find(:all)
+  def self.relink_all
+    firms = Firm.find(:all)
 
-    files = store_dir_files(current_firm)
-    puts("done!")
+    firms.each do|firm|
 
-    @pdfs.each do|p|
-      logger.warn("Relinking #{p.pdfname}...")
+      files = Pdf.store_dir_files(firm)
+      puts("done!")
 
-      p.relink_one_file(files)
+      pdfs = Pdf.find(:all)
+      pdfs.each do|pdf|
+        logger.warn("Relinking #{pdf.pdfname}...")
+
+        pdf.relink_one_file(firm, files)
+      end
     end
   end
 
-  # If the file is missing, then find the file and change the path and filename in the database to suit.
+  # If the file is missing, then find the file and change the path and
+  # filename in the database to suit.
   def relink_file(current_firm)
     # Get all the pdfs in the STORE_DIR and their md5
-    files = store_dir_files(current_firm)
+    files = Pdf.store_dir_files(current_firm)
 
     relink_one_file(current_firm, files)
   end
@@ -186,7 +192,7 @@ class Pdf < ActiveRecord::Base
         else
           update_attribute(:missing_flag, true)
 
-          puts "Missing '#{pdfname}' for client ''#{client.name}'"
+          puts "Missing '#{pdfname}' for firm '#{current_firm.name}', client '#{client.name}'"
 
           return false # The file couldn't be found
         end
@@ -237,8 +243,10 @@ class Pdf < ActiveRecord::Base
     system("pdftk '" + fullpath(current_firm) + "' cat " + (SPLIT_NO.to_i+1).to_s + "-end output '" + File.dirname(fullpath(current_firm)) + "/" + File.basename(fullpath(current_firm), '.pdf') + "-part2.pdf'")
   end
 
+
   # Go through each pdf in the STORE_DIR recurisively and store it's md5 and path in a hash
-  def store_dir_files(current_firm)
+  def self.store_dir_files(current_firm)
+
     files = {}  # Initialise hash
 
     # Find all files in the STORE_DIR

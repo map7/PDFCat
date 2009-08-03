@@ -7,7 +7,8 @@
 # Load Rails environment
 puts "Loading rails environment"
 
-RAILS_ENV = "production"
+#RAILS_ENV = "production"
+RAILS_ENV = "development"
 
 require 'rubygems'
 require 'active_record'
@@ -16,9 +17,7 @@ require 'config/environment'
 
 
 puts "Starting to relink all files..."
-# Create a pdf object
-p = Pdf.new
 
 # Relink all pdfs
-p.relink_all
+Pdf.relink_all
 
