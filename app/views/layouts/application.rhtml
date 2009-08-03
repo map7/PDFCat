@@ -42,6 +42,7 @@
 	<%= shortcut_fnkey '2', "#{BASE_URL}/pdfs" %>
 	<%= shortcut_fnkey '3', "#{BASE_URL}/clients" %>
 	<%= shortcut_fnkey '4', "#{BASE_URL}/categories" %>
+	<%= shortcut_fnkey '7', "#{BASE_URL}/missing" %>
 	<%= shortcut_fnkey '8', "#{BASE_URL}/users" %>
 	<%= shortcut_fnkey '9', "#{BASE_URL}/firms" %>
 	<%= shortcut_fnkey '10', "#{BASE_URL}/logout" %>
@@ -156,6 +157,7 @@
     <%= link_to '<div class="menuitem">4-Category</div>', :controller => 'categories' %>
 
     <% if current_user.is_admin? %>
+      <%= link_to '<div class="menuitem">7-Missing</div>', :controller => 'missing' %>
       <%= link_to '<div class="menuitem">8-Users</div>', :controller => 'users' %>
       <%= link_to '<div class="menuitem">9-Firms</div>', :controller => 'firms' %>
     <% end %>

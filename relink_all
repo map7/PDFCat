@@ -2,13 +2,12 @@
 #
 # Relink all pdfs
 #
-#
+# Backup database before running this the first time.
 
 # Load Rails environment
 puts "Loading rails environment"
 
-#RAILS_ENV = "production"
-RAILS_ENV = "development"
+RAILS_ENV = "production"
 
 require 'rubygems'
 require 'active_record'
