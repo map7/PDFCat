@@ -148,7 +148,7 @@ class Pdf < ActiveRecord::Base
       files = Pdf.store_dir_files(firm)
       puts("done!")
 
-      pdfs = Pdf.find(:all)
+      pdfs = Pdf.find(:all, :conditions => {:firm_id => firm})
       pdfs.each do|pdf|
         logger.warn("Relinking #{pdf.pdfname}...")
 
