@@ -249,6 +249,8 @@ class Pdf < ActiveRecord::Base
 
     files = {}  # Initialise hash
 
+    counter = 0
+
     # Find all files in the STORE_DIR
     Find.find(current_firm.store_dir) do |path|
       if FileTest.directory?(path)
@@ -256,9 +258,13 @@ class Pdf < ActiveRecord::Base
       else
         if File.extname(path) == ".pdf"
 
+          counter += 1
+
           # Display some feedback to the relink_all script & flush the output to the console
           print(".")
           STDOUT.flush
+
+          puts(counter) if counter % 10 == 0
 
           # calculate md5 and store.
           md5=Digest::MD5.hexdigest(File.read(path))
