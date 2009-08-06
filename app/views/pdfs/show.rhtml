@@ -14,7 +14,7 @@
 <%= link_to_function "E<b>m</b>ail", "Element.toggle('email_client')" %> | 
 <%= link_to '<b>V</b>iew', :action => "attachment", :id => @pdf.id %> | 
 <%= link_to '<b>E</b>dit', :action => 'edit', :id => @pdf %> | 
-<%= link_to '<b>D</b>estroy', { :action => 'destroy', :id => @pdf.id }, {:confirm => 'Are you sure?', :id => 'destroy', :method => :post} %> | 
+<%= link_to '<b>D</b>estroy', { :action => 'destroy', :id => @pdf.id }, {:confirm => 'Are you sure?', :id => 'destroy', :method => :delete} %> | 
 
 <%= link_to '<b>B</b>ack', :action => 'index' %> | 
 
