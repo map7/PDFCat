@@ -13,7 +13,7 @@
   <tr id=listitem>
     <td id="FKey"><%= @no = @no +1 %></td>
     
-    <td><%= link_to file["name"], :controller => 'pdfs', :action => "attachment_new", :filename => file["name"] %> </td>
+    <td><%= link_to file["name"], {:controller => 'pdfs', :action => "attachment_new", :filename => file["name"]}, :method => :get %> </td>
     <td><%= file["size"] %> </td>
     <td><%= file["date"] %> </td>
     
