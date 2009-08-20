@@ -238,7 +238,7 @@ class Pdf < ActiveRecord::Base
   end
 
   # Split pdf into two parts 1-25, 25-end
-  def split_pdf
+  def split_pdf(current_firm)
     system("pdftk '" + fullpath(current_firm) + "' cat 1-" + SPLIT_NO + " output '" + File.dirname(fullpath(current_firm)) + "/" + File.basename(fullpath(current_firm), '.pdf') + "-part1.pdf'")
     system("pdftk '" + fullpath(current_firm) + "' cat " + (SPLIT_NO.to_i+1).to_s + "-end output '" + File.dirname(fullpath(current_firm)) + "/" + File.basename(fullpath(current_firm), '.pdf') + "-part2.pdf'")
   end

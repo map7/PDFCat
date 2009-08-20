@@ -246,12 +246,12 @@ class PdfsController < ApplicationController
     # Detect how big the file is and split if over 25pages.
     if @pdf.get_no_pages(current_firm).to_i > SPLIT_NO.to_i
       # split up into two parts
-      @pdf.split_pdf
+      @pdf.split_pdf(current_firm)
 
       # Send the email twice with a different attachement each time.
       @original_filename = @pdf.filename
       @pdf.filename = File.basename(@original_filename, '.pdf') + "-part1.pdf"
-      PdfMailer.deliver_email_client(params[:email], params[:subject], params[:body],@pdf)
+      PdfMailer.deliver_email_client(current_firm, params[:email], params[:subject], params[:body],@pdf)
 
       @pdf.filename = File.basename(@original_filename, '.pdf') + "-part2.pdf"
       PdfMailer.deliver_email_client(current_firm, params[:email], params[:subject], params[:body],@pdf)
