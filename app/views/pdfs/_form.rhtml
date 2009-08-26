@@ -4,8 +4,26 @@
   <%= f.hidden_field :filename %><%= @pdf.filename %>
   <%= f.date_select :pdfdate, :label => "Date" %>
   <%= f.text_field :pdfname, :label => "Name" %>
-  <%= f.collection_select(:client_id, @clients, :id, :name) %>
-  <%= f.collection_select(:category_id, @categories, :id, :name) %>
+
+  <p><label for="clients">Clients</label><br />
+    <%= select_tag('client',
+	options_for_select(
+	  @clients.collect {|c| [c.name, c.id] },
+	  @pdf.client_id
+	)
+	)
+	%>
+  </p>
+
+  <p><label for="categories">Categories</label><br />
+    <%= select_tag('category',
+	options_for_select(
+	  @categories.collect {|c| [c.name, c.id] },
+	  @pdf.category_id
+	)
+	)
+	%>
+  </p>
 
   <%= f.text_field :pdfnote, :label => "Note" %>
   
