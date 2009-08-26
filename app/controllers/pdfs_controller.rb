@@ -13,7 +13,7 @@ class PdfsController < ApplicationController
                          :page => params[:page],
                          :per_page => 10,
                          :conditions => search_conditions,
-                         :joins => [:client, :category])
+                         :joins => [:firm, :client, :category])
   end
 
   def show
@@ -225,9 +225,10 @@ class PdfsController < ApplicationController
     category_name = "%%#{params[:category]}%%"
 
     cond_strings = returning([]) do |strings|
-      strings << "pdfs.pdfname like '#{pdfname}'" unless pdfname.blank?
-      strings << "clients.name like '#{client_name}'" unless client_name.blank?
-      strings << "categories.name like '#{category_name}'" unless category_name.blank?
+	  strings << "firms.id = #{current_firm.id}"
+      strings << "pdfs.pdfname ilike '#{pdfname}'" unless pdfname.blank?
+      strings << "clients.name ilike '#{client_name}'" unless client_name.blank?
+      strings << "categories.name ilike '#{category_name}'" unless category_name.blank?
     end
 
     if cond_strings.any?
