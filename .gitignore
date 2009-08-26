@@ -1,2 +1,15 @@
 *.log
 *.cache
+
+*.sqlite3
+
+*~
+log/*
+schemas.xml
+db/schema.rb
+*#
+.#*
+doc/basecamp-docs/*
+.DS_Store
+coverage/*
+
