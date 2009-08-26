@@ -8,69 +8,12 @@ class PdfsController < ApplicationController
   # list all, sort by date (most recent at the top), 10 items per page.
   def index
 
-    if session[:pdf_search].nil? and session[:client_search].nil?
-
-      if current_firm.nil?
-        @pdfs = Pdf.paginate(:page => params[:page], :per_page => 10, :order => 'pdfdate DESC')
-      else
-        @pdfs = Pdf.paginate(:page => params[:page], :per_page => 10, :order => 'pdfdate DESC', :conditions => { :firm_id => current_firm.id })
-      end
-
-    else
-#      @pdfs = Pdf.paginate(:page => params[:page], :per_page => 10, :order => 'pdfdate DESC')
-      search()
-    end
-
-  end
-
-  def search
-
-    session[:pdf_search] = params[:pdf] unless params[:pdf].nil?
-    session[:client_search] = params[:client] unless params[:client].nil?
-
-    @searchpdf = session[:pdf_search]
-    @searchclient = session[:client_search]
-
-    if @searchclient == "" or @searchclient.nil?
-
-       # search just the pdfnames
-      sql = "select p.id,p.pdfdate,p.pdfname,p.category_id,p.client_id, p.missing_flag from pdfs as p inner join clients as c on p.client_id = c.id where pdfname ILIKE E'%#{@searchpdf}%' and p.firm_id = #{current_firm.id} order by pdfdate desc;"
-
-    else
-
-      # search pdfnames linked to a client.
-      sql = "select p.id,p.pdfdate,p.pdfname,p.category_id,p.client_id, p.missing_flag from pdfs as p inner join clients as c on p.client_id = c.id where pdfname ILIKE E'%#{@searchpdf}%' and c.name ILIKE E'%#{@searchclient}%' and p.firm_id = #{current_firm.id} order by pdfdate desc;"
-
-    end
-
-    data = []
-
-    # Go through each row and add to the array.
-    Pdf.find_by_sql(sql).each do |row|
-
-=begin
-      pdfhash = Hash.new
-
-      pdfhash["pdfdate"]= row["pdfdate"]
-      pdfhash["id"] = row.id
-
-      pdfhash["pdfname"]= row.pdfname
-      pdfhash["category"] = row.category
-      pdfhash["client"] = row.client
-=end
-
-
-      logger.warn("log")
-      logger.warn(row.id)
-
-      data << row
-    end
-
-    # Paginate results
-    @pdfs  = data.paginate(:page => params[:page], :per_page => 10)
-
-    # Render the index with the search criteria
-    render :action => 'index'
+    @pdfs = Pdf.paginate(:all,
+                         :order => 'pdfdate DESC',
+                         :page => params[:page],
+                         :per_page => 10,
+                         :conditions => search_conditions,
+                         :joins => [:client, :category])
   end
 
   def show
@@ -137,15 +80,22 @@ class PdfsController < ApplicationController
     @oldcategory = @pdf.category.name.downcase
     @oldclient = @pdf.client.name.downcase
 
+
+
     # Get the category selected from the drop down box and assign this to the foriegn key in pdf table.
     @pdf.category = Category.find(params[:category]) unless params[:category].blank?
 
     # Get the client select from the drop down..
     @pdf.client = Client.find(params[:client]) unless params[:client].blank?
 
+    logger.warn("Old category #{@oldcategory}")
+    logger.warn("New category #{@pdf.category.name.downcase}")
+
+    pdf_exist = @pdf.does_file_exist?(current_firm, @oldclient, @oldcategory)
+
     # Save the form to the table
     #if @pdf.errors.size == 0 and @pdf.update_attributes(params[:pdf])
-    if @pdf.does_file_exist?(current_firm, @oldclient, @oldcategory) and @pdf.update_attributes(params[:pdf])
+    if pdf_exist and @pdf.update_attributes(params[:pdf])
       flash[:notice] = 'Pdf was successfully updated.'
       redirect_to :action => 'show', :id => @pdf
 
@@ -206,6 +156,7 @@ class PdfsController < ApplicationController
                 :type         =>  'application/pdf',
                 :disposition  =>  'attachment'
                 )
+
     else
       flash[:notice] = 'File cannot be found, Please try relinking'
       redirect_to :action => 'show', :id => params[:id]
@@ -262,5 +213,27 @@ class PdfsController < ApplicationController
     end
 
     return true
+  end
+
+  protected
+
+  # Do the search using RESTful technics
+  def search_conditions
+
+    pdfname = "%%#{params[:pdfname]}%%"
+    client_name = "%%#{params[:client]}%%"
+    category_name = "%%#{params[:category]}%%"
+
+    cond_strings = returning([]) do |strings|
+      strings << "pdfs.pdfname like '#{pdfname}'" unless pdfname.blank?
+      strings << "clients.name like '#{client_name}'" unless client_name.blank?
+      strings << "categories.name like '#{category_name}'" unless category_name.blank?
+    end
+
+    if cond_strings.any?
+      [ cond_strings.join(' and '), cond_strings ]
+    else
+      nil
+    end
   end
 end

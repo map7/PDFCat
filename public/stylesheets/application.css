@@ -143,10 +143,11 @@ div#heading{
 
 div#search{
             position:absolute;
-            width: 600px;
+            width: 650px;
             right:10px;
 }
 div#search input { 
+  width: 100px;
     font-size: 100%;
     border: 1px solid #888;
 }
