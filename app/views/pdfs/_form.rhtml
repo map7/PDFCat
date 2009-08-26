@@ -1,36 +1,34 @@
 <%= error_messages_for 'pdf' %>
 
-<p><label for="pdf_filename">Current Filename: </label>
-<%= hidden_field 'pdf','filename' %><%= @pdf.filename %></p>
+<% form_for @pdf do |f| %>
+  <%= f.hidden_field :filename %><%= @pdf.filename %>
+  <%= f.date_select :pdfdate, :label => "Date" %>
+  <%= f.text_field :pdfname, :label => "Name" %>
 
-<p><label for="pdf_pdfdate">Date</label><br/>
-<%= date_select 'pdf', 'pdfdate'  %></p>
-
-<p><label for="pdf_pdfname">Name</label><br/>
-<%= text_field 'pdf', 'pdfname'  %></p>
-
-<p><label for="clients">Clients</label><br />
-	<%= select_tag('client',
-			options_for_select(
-				@clients.collect {|c| [c.name, c.id] },
-				@pdf.client_id
-			)
-		)
+  <p><label for="clients">Clients</label><br />
+    <%= select_tag('client',
+	options_for_select(
+	  @clients.collect {|c| [c.name, c.id] },
+	  @pdf.client_id
+	)
+	)
 	%>
-</p>
+  </p>
 
-<p><label for="categories">Categories</label><br />
-	<%= select_tag('category',
-			options_for_select(
-				@categories.collect {|c| [c.name, c.id] },
-				@pdf.category_id
-			)
-		)
+  <p><label for="categories">Categories</label><br />
+    <%= select_tag('category',
+	options_for_select(
+	  @categories.collect {|c| [c.name, c.id] },
+	  @pdf.category_id
+	)
+	)
 	%>
-</p>
+  </p>
 
-<p><label for="pdf_pdfnote">Notes</label><br/>
-<%= text_area 'pdf', 'pdfnote', 'rows' => 2  %></p>
+  <%= f.text_field :pdfnote, :label => "Note" %>
+  
+  <%= f.submit %>
+<% end %>
 
 <!-- Add your focus after all the text fields have been made -->
 <script>$('pdf_pdfname').focus();</script>
