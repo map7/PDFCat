@@ -31,12 +31,10 @@ class PdfsController < ApplicationController
 
   def create
     @pdf = Pdf.new(params[:pdf])
+
+    # Get firm, category and client from drop downs.
     @pdf.firm_id = current_firm.id
-
-    # Get the category selected from the drop down box and assign this to the foriegn key in pdf table.
     @pdf.category = Category.find(params[:category]) unless params[:category].blank?
-
-    # Get the client select from the drop down..
     @pdf.client = Client.find(params[:client]) unless params[:client].blank?
 
     # Move the file and set the new filename to be saved
@@ -51,16 +49,21 @@ class PdfsController < ApplicationController
 
     else
       # All is good, continue with cataloging pdf.
-      @pdf.filename = @pdf.move_file(current_firm,current_firm.upload_dir + "/" + @pdf.filename) #if @pdf.file_exist?
-
-      # Create md5
-      @pdf.md5 = @pdf.md5calc(current_firm)
 
       # Check for any errors before the save
       if @pdf.errors.size == 0 and @pdf.save
+
+        # Now that the pdf has been validated we can move the pdf
+        @pdf.filename = @pdf.move_file(current_firm,current_firm.upload_dir + "/" + @pdf.filename)
+        # Create md5
+        @pdf.md5 = @pdf.md5calc(current_firm)
+        @pdf.save
+
         flash[:notice] = 'Pdf was successfully created.'
         redirect_to :action => 'index'
       else
+        @clients = current_firm.clients.sort{ |a,b| a.name.upcase <=> b.name.upcase}
+        @categories = current_firm.categories.sort{ |a,b| a.name.upcase <=> b.name.upcase}
         render :action => 'new'
       end
 
@@ -225,7 +228,7 @@ class PdfsController < ApplicationController
     category_name = "%%#{params[:category]}%%"
 
     cond_strings = returning([]) do |strings|
-	  strings << "firms.id = #{current_firm.id}"
+    strings << "firms.id = #{current_firm.id}"
       strings << "pdfs.pdfname ilike '#{pdfname}'" unless pdfname.blank?
       strings << "clients.name ilike '#{client_name}'" unless client_name.blank?
       strings << "categories.name ilike '#{category_name}'" unless category_name.blank?
