@@ -205,14 +205,14 @@ class PdfsController < ApplicationController
       # Send the email twice with a different attachement each time.
       @original_filename = @pdf.filename
       @pdf.filename = File.basename(@original_filename, '.pdf') + "-part1.pdf"
-      PdfMailer.deliver_email_client(current_firm, params[:email], params[:subject], params[:body],@pdf)
+      PdfMailer.deliver_email_client(current_firm, current_user, params[:email], params[:subject], params[:body],@pdf)
 
       @pdf.filename = File.basename(@original_filename, '.pdf') + "-part2.pdf"
-      PdfMailer.deliver_email_client(current_firm, params[:email], params[:subject], params[:body],@pdf)
+      PdfMailer.deliver_email_client(current_firm, current_user, params[:email], params[:subject], params[:body],@pdf)
 
     else
       # Send one email as normal
-      PdfMailer.deliver_email_client(current_firm, params[:email], params[:subject], params[:body],@pdf)
+      PdfMailer.deliver_email_client(current_firm, current_user, params[:email], params[:subject], params[:body],@pdf)
     end
 
     return true
