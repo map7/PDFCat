@@ -2,72 +2,24 @@ class CategoriesController < ApplicationController
 
   before_filter :login_required
 
-  # GETs should be safe (see http://www.w3.org/2001/tag/doc/whenToUseGet.html)
-#  verify :method => :post, :only => [ :destroy, :create, :update ],
-#         :redirect_to => { :action => :index }
+  make_resourceful do
+    actions :all
 
-  def index
-    @categories = Category.paginate(:page => params[:page], :per_page => 10, :order => "upper(name)", :conditions => { :firm_id => current_firm.id })
-
-    @no = -1  # Used for shorcuts
-  end
-
-  def show
-    @category = Category.find(params[:id])
-    @id = params[:id] # Used for shortcuts
-  end
-
-  def new
-    @category = Category.new
-  end
-
-  def create
-    @category = Category.new(params[:category])
-    @category.firm_id = current_firm.id
-
-    if @category.save
-      flash[:notice] = 'Category was successfully created.'
-      redirect_to :action => 'index'
-    else
-      render :action => 'new'
+    before :index do
+      @categories = Category.paginate(:page => params[:page], :per_page => 10, :order => "upper(name)", :conditions => { :firm_id => current_firm.id })
     end
-  end
 
-  def edit
-    @category = Category.find(params[:id])
-  end
+    before :create do
+      @category.firm_id = current_firm.id
+    end
 
-  def update
-    @category = Category.find(params[:id])
+    before :update do
+      @oldcat = @category.name
+    end
 
-    # Move directory, if dir exists
-    # @newcategory = Category.new(params[:category])
-    # @newcategory.name = @category.move_dir(current_firm, @newcategory.name)
-    @oldcat = @category.name
-
-    # Store the data
-    #if @category.errors.size == 0 and @category.update_attributes(params[:category])
-    if @category.update_attributes(params[:category])
+    after :update do
+      # Move directory, if dir exists
       @category.move_dir(current_firm,@oldcat)
-      flash[:notice] = 'Category was successfully updated.'
-      redirect_to :action => 'show', :id => @category
-    else
-      render :action => 'edit'
     end
   end
-
-  def destroy
-    Category.find(params[:id]).destroy
-    redirect_to :action => 'index'
-  end
-
-  def show_item
-  @category = Category.find(params[:id])
-  #@id = params[:id]
-  #render_text "test from controller " + @id
-  #
-  render_text "id: " + @category.id.to_s + "<br />" + "name: " + @category.name.to_s
-
-  end
-
 end
