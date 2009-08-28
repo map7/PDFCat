@@ -84,7 +84,7 @@
 
 	
 
-<p style="color: green"><%= flash[:notice] %></p>
+
 
 
 <div id="contentBox">
@@ -169,10 +169,12 @@
   <%= link_to_function '<div class="menuitem">?-Help</div>', "Element.toggle('help');" %>
 </div>
 
+<div id=flash><%= flash[:notice] %></div>
+
 <div id=foot>
   <div class="pad1"></div>
   <div id=footerLeft>
-    <span id="footerAPP">PDFCat 2.1.09</span>
+    <span id="footerAPP">PDFCat 2.1.10</span>
   </div>
   
   <div id=footerRight>

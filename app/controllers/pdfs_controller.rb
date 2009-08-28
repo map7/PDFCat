@@ -2,75 +2,48 @@ class PdfsController < ApplicationController
 
   before_filter :login_required
 
-  # list all, sort by date (most recent at the top), 10 items per page.
-  def index
+  make_resourceful do
+    actions :all
 
-    @pdfs = Pdf.paginate(:all,
-                         :order => 'pdfdate DESC',
-                         :page => params[:page],
-                         :per_page => 10,
-                         :conditions => search_conditions,
-                         :joins => [:firm, :client, :category])
-  end
+    before :index do
+      @pdfs = Pdf.paginate(:all,
+                           :order => 'pdfdate DESC',
+                           :page => params[:page],
+                           :per_page => 10,
+                           :conditions => search_conditions,
+                           :joins => [:firm, :client, :category])
+    end
 
-  def show
-    @pdf = Pdf.find(params[:id])
-    @id = params[:id] # Used for shortcuts
-  end
-
-  def new
-    @pdf = Pdf.new
-    @pdf.filename = File.basename(params[:filename]) if params[:filename]
-
-    @clients = current_firm.clients.sort{ |a,b| a.name.upcase <=> b.name.upcase}
-    @categories = current_firm.categories.sort{ |a,b| a.name.upcase <=> b.name.upcase}
-  end
-
-  def create
-    @pdf = Pdf.new(params[:pdf])
-
-    # Get firm, category and client from drop downs.
-    @pdf.firm_id = current_firm.id
-    @pdf.category = Category.find(params[:category]) unless params[:category].blank?
-    @pdf.client = Client.find(params[:client]) unless params[:client].blank?
-
-    # Move the file and set the new filename to be saved
-    if File.exist?(@pdf.get_new_filename(current_firm,current_firm.upload_dir + "/" + @pdf.filename))
-
-      # Throwing an error, Return with an error (throw error)
-      @pdf.errors.add :name, "'" + @pdf.pdfname + "' already taken for this client, category and date."
+    before :new, :edit do
+      @pdf.filename = File.basename(params[:filename]) if params[:filename]
 
       @clients = current_firm.clients.sort{ |a,b| a.name.upcase <=> b.name.upcase}
       @categories = current_firm.categories.sort{ |a,b| a.name.upcase <=> b.name.upcase}
-      render :action => 'new'
-
-    else
-      # All is good, continue with cataloging pdf.
-
-      # Check for any errors before the save
-      if @pdf.errors.size == 0 and @pdf.save
-
-        # Now that the pdf has been validated we can move the pdf
-        @pdf.filename = @pdf.move_file(current_firm,current_firm.upload_dir + "/" + @pdf.filename)
-        # Create md5
-        @pdf.md5 = @pdf.md5calc(current_firm)
-        @pdf.save
-
-        flash[:notice] = 'Pdf was successfully created.'
-        redirect_to :action => 'index'
-      else
-        @clients = current_firm.clients.sort{ |a,b| a.name.upcase <=> b.name.upcase}
-        @categories = current_firm.categories.sort{ |a,b| a.name.upcase <=> b.name.upcase}
-        render :action => 'new'
-      end
-
     end
-  end
 
-  def edit
-    @pdf = Pdf.find(params[:id])
-    @clients = current_firm.clients.sort{ |a,b| a.name.upcase <=> b.name.upcase}
-    @categories = current_firm.categories.sort{ |a,b| a.name.upcase <=> b.name.upcase}
+    before :create do
+      # Get firm, category and client from drop downs.
+      @pdf.firm_id = current_firm.id
+      @pdf.category = Category.find(params[:category]) unless params[:category].blank?
+      @pdf.client = Client.find(params[:client]) unless params[:client].blank?
+
+      # Move the file and set the new filename to be saved
+      @pdf.get_new_filename(current_firm,current_firm.upload_dir + "/" + @pdf.filename)
+
+      @clients = current_firm.clients.sort{ |a,b| a.name.upcase <=> b.name.upcase}
+      @categories = current_firm.categories.sort{ |a,b| a.name.upcase <=> b.name.upcase}
+    end
+
+    response_for :create do
+      # Now that the pdf has been validated we can move the pdf
+      @pdf.filename = @pdf.move_file(current_firm,current_firm.upload_dir + "/" + @pdf.filename)
+      flash[:notice] = 'Pdf was successfully created.'
+      redirect_to :action => 'index'
+    end
+
+    after :destroy do
+      @pdf.delete_file(@pdf.fullpath(current_firm))
+    end
   end
 
   def update
@@ -80,22 +53,16 @@ class PdfsController < ApplicationController
     @oldcategory = @pdf.category.name.downcase
     @oldclient = @pdf.client.name.downcase
 
-
-
     # Get the category selected from the drop down box and assign this to the foriegn key in pdf table.
     @pdf.category = Category.find(params[:category]) unless params[:category].blank?
 
     # Get the client select from the drop down..
     @pdf.client = Client.find(params[:client]) unless params[:client].blank?
 
-    logger.warn("Old category #{@oldcategory}")
-    logger.warn("New category #{@pdf.category.name.downcase}")
-
-    pdf_exist = @pdf.does_file_exist?(current_firm, @oldclient, @oldcategory)
+    @pdf_exist = @pdf.does_file_exist?(current_firm, @oldclient, @oldcategory)
 
     # Save the form to the table
-    #if @pdf.errors.size == 0 and @pdf.update_attributes(params[:pdf])
-    if pdf_exist and @pdf.update_attributes(params[:pdf])
+    if @pdf_exist and @pdf.update_attributes(params[:pdf])
       flash[:notice] = 'Pdf was successfully updated.'
       redirect_to :action => 'show', :id => @pdf
 
@@ -105,7 +72,6 @@ class PdfsController < ApplicationController
       else
         # Move the file
         @filename = @pdf.move_file(current_firm, current_firm.store_dir + "/" + @oldclient + "/" + @oldcategory + "/" + @pdf.filename)
-        logger.warn("Move File #{@filename}")
 
         # Write changes of the filename back to the pdf object.
         @pdf.update_attribute(:filename, @filename)
@@ -120,17 +86,6 @@ class PdfsController < ApplicationController
     end
   end
 
-  def destroy
-    # delete the physical file.
-    @pdf = Pdf.find(params[:id])
-    @pdf.delete_file(@pdf.fullpath(current_firm))
-
-    # delete the database record
-    Pdf.find(params[:id]).destroy
-
-    redirect_to :action => 'index'
-  end
-
 
   # Allow user to open up new files
   def attachment_new
@@ -143,13 +98,6 @@ class PdfsController < ApplicationController
   # Allow user to open up files already stored in the database
   def attachment
     @pdf = Pdf.find(params[:id])
-
-    #if !@pdf.file_exist?
-    # if !@pdf.relink_file
-    #   flash[:notice] = 'File cannot be found, failed relinking!'
-    #   redirect_to :action => 'index'
-    # end
-    #end
 
     if @pdf.file_exist?(current_firm)
       send_file(@pdf.fullpath(current_firm),
@@ -184,9 +132,7 @@ class PdfsController < ApplicationController
 
     render :text => "test"
     return @status
-
   end
-
 
   # Email pdfs to clients
   def email_client

@@ -424,6 +424,16 @@ div#help{
 
 /********************* Footer *********************/
 
+#flash {
+  position: absolute;
+  color: white;
+  background: green;
+  width: 100%;
+  font-weight: bold;
+  text-align: center;
+  bottom: 40px;         
+}
+
 div#footer{
 	position: absolute;
 
