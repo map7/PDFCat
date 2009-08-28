@@ -12,9 +12,9 @@ class Client < ActiveRecord::Base
   validate :new_dir_exists?
 
   # Move the directory
-  def move_dir(oldname)
-    @olddir = STORE_DIR + "/" + oldname.downcase
-    @newdir = STORE_DIR + "/" + name.downcase
+  def move_dir(current_firm, oldname)
+    @olddir = current_firm.store_dir + "/" + oldname.downcase
+    @newdir = current_firm.store_dir + "/" + name.downcase
     File.rename(@olddir,@newdir) if File.exists?(@olddir)
   end
 

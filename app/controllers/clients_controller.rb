@@ -2,83 +2,36 @@ class ClientsController < ApplicationController
 
   before_filter :login_required
 
-  # GETs should be safe (see http://www.w3.org/2001/tag/doc/whenToUseGet.html)
-  # This stuffs up the edit function, why is it here?
-#  verify :method => :post, :only => [ :destroy, :create, :update ],
-#         :redirect_to => { :action => :index }
+  make_resourceful do
+    actions :all
 
-  def index
-
-    if session[:client_search].nil?
-      @clients = Client.paginate(:page => params[:page],:per_page => 10, :order => 'upper(name)', :conditions => { :firm_id => current_firm.id })
-    else
-      search()
+    before :index do
+      @clients = Client.paginate(:all,
+                                 :order => 'upper(clients.name)',
+                                 :page => params[:page],
+                                 :per_page => 10,
+                                 :conditions => search_conditions,
+                                 :joins => :firm)
     end
 
-  end
-
-  def search
-    session[:client_search] = params[:client] unless params[:client].nil?
-
-    @searchclient = session[:client_search]
-    @conditions = ["name ILIKE ? and firm_id = ?", "%#{@searchclient}%", current_firm.id]
-
-    @clients = Client.paginate(:page => params[:page],:conditions => @conditions, :order => 'upper(name)', :per_page => 10)
-
-    render :action => 'index'
-  end
-
-  def show
-    @client = Client.find(params[:id])
-    @id = params[:id] # Used for shortcuts
-  end
-
-  def new
-    @client = Client.new
-  end
-
-  def create
-    @client = Client.new(params[:client])
-    @client.firm_id = current_firm.id
-
-    if @client.save
-      flash[:notice] = 'Client was successfully created.'
-      redirect_to :action => 'index'
-    else
-      render :action => 'new'
+    before :create do
+      @client.firm_id = current_firm.id
     end
-  end
 
-  def edit
-    @client = Client.find(params[:id])
-  end
+    before :update do
+      @oldname = @client.name
+    end
 
-  def update
-    @client = Client.find(params[:id])
-
-    # Move directory, if dir exists
-    # @newclient = Client.new(params[:client])
-    # @newclient.name = @client.move_dir(@newclient.name)
-    @oldname = @client.name
-
-
-    # Store the data
-    #if @client.errors.size == 0 and @client.update_attributes(params[:client])
-    if @client.update_attributes(params[:client])
-
-      # If successful in changing the client's details then,
+    after :update do
       # Move the directory.
-      @client.move_dir(@oldname)
-
-      flash[:notice] = 'Client was successfully updated.'
-      redirect_to :action => 'show', :id => @client
-    else
-      render :action => 'edit'
+      @client.move_dir(current_firm, @oldname)
     end
   end
 
-  def destroy
-    Client.find(params[:id]).destroy
-    redirect_to :action => 'index'
+  def search_conditions
+    name = "%%#{params[:client]}%%"
+
+    "name ilike #{name}" unless params[:client].blank?
   end
+
 end

@@ -2,9 +2,6 @@ class PdfsController < ApplicationController
 
   before_filter :login_required
 
-  # GETs should be safe (see http://www.w3.org/2001/tag/doc/whenToUseGet.html)
-#  verify :method => :post, :only => [ :destroy, :create, :update ], :redirect_to => { :action => :index }
-
   # list all, sort by date (most recent at the top), 10 items per page.
   def index
 
@@ -229,9 +226,9 @@ class PdfsController < ApplicationController
 
     cond_strings = returning([]) do |strings|
     strings << "firms.id = #{current_firm.id}"
-      strings << "pdfs.pdfname ilike '#{pdfname}'" unless pdfname.blank?
-      strings << "clients.name ilike '#{client_name}'" unless client_name.blank?
-      strings << "categories.name ilike '#{category_name}'" unless category_name.blank?
+      strings << "pdfs.pdfname ilike '#{pdfname}'" unless params[:pdfname].blank?
+      strings << "clients.name ilike '#{client_name}'" unless params[:client_name].blank?
+      strings << "categories.name ilike '#{category_name}'" unless params[:category_name].blank?
     end
 
     if cond_strings.any?
