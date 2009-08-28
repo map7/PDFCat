@@ -5,7 +5,7 @@
 
 <p>
   <b>Firm</b>
-  <%=h @user.firm.name %>
+  <%=h @user.firm.name unless @user.firm.nil? %>
 </p>
 
 <p>
