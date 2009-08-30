@@ -2,15 +2,20 @@ class PdfsController < ApplicationController
 
   before_filter :login_required
 
-  # list all, sort by date (most recent at the top), 10 items per page.
-  def index
+  make_resourceful do
+    actions :all
 
-    @pdfs = Pdf.paginate(:all,
-                         :order => 'pdfdate DESC',
-                         :page => params[:page],
-                         :per_page => 10,
-                         :conditions => search_conditions,
-                         :joins => [:firm, :client, :category])
+    # list all, sort by date (most recent at the top), 10 items per page.
+    before :index do
+
+      @pdfs = Pdf.paginate(:all,
+                           :order => 'pdfdate DESC',
+                           :page => params[:page],
+                           :per_page => 10,
+                           :conditions => search_conditions,
+                           :joins => [:firm, :client, :category])
+    end
+
   end
 
   def show
