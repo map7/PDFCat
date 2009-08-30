@@ -18,11 +18,6 @@ class PdfsController < ApplicationController
 
   end
 
-  def show
-    @pdf = Pdf.find(params[:id])
-    @id = params[:id] # Used for shortcuts
-  end
-
   def new
     @pdf = Pdf.new
     @pdf.filename = File.basename(params[:filename]) if params[:filename]
