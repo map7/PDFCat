@@ -105,19 +105,11 @@ class PdfsController < ApplicationController
       render :action => 'edit'
     end
 
+    before :destroy do
+      @pdf.delete_file(@pdf.fullpath(current_firm))
+    end
+
   end
-
-  def destroy
-    # delete the physical file.
-    @pdf = Pdf.find(params[:id])
-    @pdf.delete_file(@pdf.fullpath(current_firm))
-
-    # delete the database record
-    Pdf.find(params[:id]).destroy
-
-    redirect_to :action => 'index'
-  end
-
 
   # Allow user to open up new files
   def attachment_new
