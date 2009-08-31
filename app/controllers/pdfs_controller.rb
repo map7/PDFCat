@@ -56,31 +56,31 @@ class PdfsController < ApplicationController
       @categories = current_firm.categories.sort{ |a,b| a.name.upcase <=> b.name.upcase}
       render :action => 'new'
     end
-  end
 
-  def update
-    @pdf = Pdf.find(params[:id])
-
-    # Store the old category and client
-    @oldcategory = @pdf.category.name.downcase
-    @oldclient = @pdf.client.name.downcase
+    before :update do
+      # Store the old category and client
+      @oldcategory = @pdf.category.name.downcase
+      @oldclient = @pdf.client.name.downcase
 
 
 
-    # Get the category selected from the drop down box and assign this to the foriegn key in pdf table.
-    @pdf.category = Category.find(params[:category]) unless params[:category].blank?
+      # Get the category selected from the drop down box and assign this to the foriegn key in pdf table.
+      @pdf.category = Category.find(params[:category]) unless params[:category].blank?
 
-    # Get the client select from the drop down..
-    @pdf.client = Client.find(params[:client]) unless params[:client].blank?
+      # Get the client select from the drop down..
+      @pdf.client = Client.find(params[:client]) unless params[:client].blank?
 
-    logger.warn("Old category #{@oldcategory}")
-    logger.warn("New category #{@pdf.category.name.downcase}")
+      logger.warn("Old category #{@oldcategory}")
+      logger.warn("New category #{@pdf.category.name.downcase}")
 
-    pdf_exist = @pdf.does_file_exist?(current_firm, @oldclient, @oldcategory)
+      pdf_exist = @pdf.does_file_exist?(current_firm, @oldclient, @oldcategory)
 
-    # Save the form to the table
-    #if @pdf.errors.size == 0 and @pdf.update_attributes(params[:pdf])
-    if pdf_exist and @pdf.update_attributes(params[:pdf])
+      unless pdf_exist
+        @pdf.errors.add :name, "'" + @pdf.pdfname + "' already taken for this client, category and date."
+      end
+    end
+
+    response_for :update do
       flash[:notice] = 'Pdf was successfully updated.'
       redirect_to :action => 'show', :id => @pdf
 
@@ -97,12 +97,14 @@ class PdfsController < ApplicationController
       end
 
       @pdf.update_attribute(:md5, @pdf.md5calc(current_firm))
+    end
 
-    else
+    response_for :update_fail do
       @clients = current_firm.clients.sort{ |a,b| a.name.upcase <=> b.name.upcase}
       @categories = current_firm.categories.sort{ |a,b| a.name.upcase <=> b.name.upcase}
       render :action => 'edit'
     end
+
   end
 
   def destroy
