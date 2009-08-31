@@ -16,14 +16,13 @@ class PdfsController < ApplicationController
                            :joins => [:firm, :client, :category])
     end
 
-  end
+    before :new, :edit do
+      @pdf.filename = File.basename(params[:filename]) if params[:filename]
 
-  def new
-    @pdf = Pdf.new
-    @pdf.filename = File.basename(params[:filename]) if params[:filename]
+      @clients = current_firm.clients.sort{ |a,b| a.name.upcase <=> b.name.upcase}
+      @categories = current_firm.categories.sort{ |a,b| a.name.upcase <=> b.name.upcase}
+    end
 
-    @clients = current_firm.clients.sort{ |a,b| a.name.upcase <=> b.name.upcase}
-    @categories = current_firm.categories.sort{ |a,b| a.name.upcase <=> b.name.upcase}
   end
 
   def create
@@ -65,12 +64,6 @@ class PdfsController < ApplicationController
       end
 
     end
-  end
-
-  def edit
-    @pdf = Pdf.find(params[:id])
-    @clients = current_firm.clients.sort{ |a,b| a.name.upcase <=> b.name.upcase}
-    @categories = current_firm.categories.sort{ |a,b| a.name.upcase <=> b.name.upcase}
   end
 
   def update
