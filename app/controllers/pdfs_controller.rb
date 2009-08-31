@@ -5,7 +5,9 @@ class PdfsController < ApplicationController
   make_resourceful do
     actions :all
 
+    # list all, sort by date (most recent at the top), 10 items per page.
     before :index do
+
       @pdfs = Pdf.paginate(:all,
                            :order => 'pdfdate DESC',
                            :page => params[:page],
@@ -28,41 +30,55 @@ class PdfsController < ApplicationController
       @pdf.client = Client.find(params[:client]) unless params[:client].blank?
 
       # Move the file and set the new filename to be saved
-      @pdf.get_new_filename(current_firm,current_firm.upload_dir + "/" + @pdf.filename)
+      if File.exist?(@pdf.get_new_filename(current_firm,current_firm.upload_dir + "/" + @pdf.filename))
 
-      @clients = current_firm.clients.sort{ |a,b| a.name.upcase <=> b.name.upcase}
-      @categories = current_firm.categories.sort{ |a,b| a.name.upcase <=> b.name.upcase}
+        # Throwing an error, Return with an error (throw error)
+        @pdf.errors.add :name, "'" + @pdf.pdfname + "' already taken for this client, category and date."
+
+        @clients = current_firm.clients.sort{ |a,b| a.name.upcase <=> b.name.upcase}
+        @categories = current_firm.categories.sort{ |a,b| a.name.upcase <=> b.name.upcase}
+      end
     end
 
     response_for :create do
       # Now that the pdf has been validated we can move the pdf
       @pdf.filename = @pdf.move_file(current_firm,current_firm.upload_dir + "/" + @pdf.filename)
+      # Create md5
+      @pdf.md5 = @pdf.md5calc(current_firm)
+      @pdf.save
+
       flash[:notice] = 'Pdf was successfully created.'
       redirect_to :action => 'index'
     end
 
-    after :destroy do
-      @pdf.delete_file(@pdf.fullpath(current_firm))
+    response_for :create_fail do
+      @clients = current_firm.clients.sort{ |a,b| a.name.upcase <=> b.name.upcase}
+      @categories = current_firm.categories.sort{ |a,b| a.name.upcase <=> b.name.upcase}
+      render :action => 'new'
     end
-  end
 
-  def update
-    @pdf = Pdf.find(params[:id])
+    before :update do
+      # Store the old category and client
+      @oldcategory = @pdf.category.name.downcase
+      @oldclient = @pdf.client.name.downcase
 
-    # Store the old category and client
-    @oldcategory = @pdf.category.name.downcase
-    @oldclient = @pdf.client.name.downcase
+      # Get the category selected from the drop down box and assign this to the foriegn key in pdf table.
+      @pdf.category = Category.find(params[:category]) unless params[:category].blank?
 
-    # Get the category selected from the drop down box and assign this to the foriegn key in pdf table.
-    @pdf.category = Category.find(params[:category]) unless params[:category].blank?
+      # Get the client select from the drop down..
+      @pdf.client = Client.find(params[:client]) unless params[:client].blank?
 
-    # Get the client select from the drop down..
-    @pdf.client = Client.find(params[:client]) unless params[:client].blank?
+      logger.warn("Old category #{@oldcategory}")
+      logger.warn("New category #{@pdf.category.name.downcase}")
 
-    @pdf_exist = @pdf.does_file_exist?(current_firm, @oldclient, @oldcategory)
+      pdf_exist = @pdf.does_file_exist?(current_firm, @oldclient, @oldcategory)
 
-    # Save the form to the table
-    if @pdf_exist and @pdf.update_attributes(params[:pdf])
+      unless pdf_exist
+        @pdf.errors.add :name, "'" + @pdf.pdfname + "' already taken for this client, category and date."
+      end
+    end
+
+    response_for :update do
       flash[:notice] = 'Pdf was successfully updated.'
       redirect_to :action => 'show', :id => @pdf
 
@@ -78,14 +94,19 @@ class PdfsController < ApplicationController
       end
 
       @pdf.update_attribute(:md5, @pdf.md5calc(current_firm))
+    end
 
-    else
+    response_for :update_fail do
       @clients = current_firm.clients.sort{ |a,b| a.name.upcase <=> b.name.upcase}
       @categories = current_firm.categories.sort{ |a,b| a.name.upcase <=> b.name.upcase}
       render :action => 'edit'
     end
-  end
 
+    before :destroy do
+      @pdf.delete_file(@pdf.fullpath(current_firm))
+    end
+
+  end
 
   # Allow user to open up new files
   def attachment_new
