@@ -23,46 +23,38 @@ class PdfsController < ApplicationController
       @categories = current_firm.categories.sort{ |a,b| a.name.upcase <=> b.name.upcase}
     end
 
-  end
+    before :create do
+      # Get firm, category and client from drop downs.
+      @pdf.firm_id = current_firm.id
+      @pdf.category = Category.find(params[:category]) unless params[:category].blank?
+      @pdf.client = Client.find(params[:client]) unless params[:client].blank?
 
-  def create
-    @pdf = Pdf.new(params[:pdf])
+      # Move the file and set the new filename to be saved
+      if File.exist?(@pdf.get_new_filename(current_firm,current_firm.upload_dir + "/" + @pdf.filename))
 
-    # Get firm, category and client from drop downs.
-    @pdf.firm_id = current_firm.id
-    @pdf.category = Category.find(params[:category]) unless params[:category].blank?
-    @pdf.client = Client.find(params[:client]) unless params[:client].blank?
+        # Throwing an error, Return with an error (throw error)
+        @pdf.errors.add :name, "'" + @pdf.pdfname + "' already taken for this client, category and date."
 
-    # Move the file and set the new filename to be saved
-    if File.exist?(@pdf.get_new_filename(current_firm,current_firm.upload_dir + "/" + @pdf.filename))
+        @clients = current_firm.clients.sort{ |a,b| a.name.upcase <=> b.name.upcase}
+        @categories = current_firm.categories.sort{ |a,b| a.name.upcase <=> b.name.upcase}
+      end
+    end
 
-      # Throwing an error, Return with an error (throw error)
-      @pdf.errors.add :name, "'" + @pdf.pdfname + "' already taken for this client, category and date."
+    response_for :create do
+      # Now that the pdf has been validated we can move the pdf
+      @pdf.filename = @pdf.move_file(current_firm,current_firm.upload_dir + "/" + @pdf.filename)
+      # Create md5
+      @pdf.md5 = @pdf.md5calc(current_firm)
+      @pdf.save
 
+      flash[:notice] = 'Pdf was successfully created.'
+      redirect_to :action => 'index'
+    end
+
+    response_for :create_fail do
       @clients = current_firm.clients.sort{ |a,b| a.name.upcase <=> b.name.upcase}
       @categories = current_firm.categories.sort{ |a,b| a.name.upcase <=> b.name.upcase}
       render :action => 'new'
-
-    else
-      # All is good, continue with cataloging pdf.
-
-      # Check for any errors before the save
-      if @pdf.errors.size == 0 and @pdf.save
-
-        # Now that the pdf has been validated we can move the pdf
-        @pdf.filename = @pdf.move_file(current_firm,current_firm.upload_dir + "/" + @pdf.filename)
-        # Create md5
-        @pdf.md5 = @pdf.md5calc(current_firm)
-        @pdf.save
-
-        flash[:notice] = 'Pdf was successfully created.'
-        redirect_to :action => 'index'
-      else
-        @clients = current_firm.clients.sort{ |a,b| a.name.upcase <=> b.name.upcase}
-        @categories = current_firm.categories.sort{ |a,b| a.name.upcase <=> b.name.upcase}
-        render :action => 'new'
-      end
-
     end
   end
 
