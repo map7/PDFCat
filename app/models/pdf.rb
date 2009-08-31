@@ -83,12 +83,6 @@ class Pdf < ActiveRecord::Base
 
     # Format the new filename.
     @new_filename =  current_firm.store_dir + "/" + client.name.downcase + "/" + category.name.downcase + "/" + @filedate + "-" + pdfname + File.extname(original)
-
-    if File.exist?(@new_filename)
-      self.errors.add :name, "'" + self.pdfname + "' already taken for this client, category and date, or a file exists with that name in that directory already."
-    else
-      @new_filename
-    end
   end
 
   def move_file(current_firm,original)
@@ -139,10 +133,6 @@ class Pdf < ActiveRecord::Base
       unless dir == current_firm.upload_dir
         Dir.rmdir(dir) if Dir[dircheck].empty?
       end
-
-      # Create md5
-      self.md5 = md5calc(current_firm)
-      self.save
 
       # Return the new filename
       File.basename(@new_filename)
