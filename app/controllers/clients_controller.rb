@@ -31,7 +31,16 @@ class ClientsController < ApplicationController
   def search_conditions
     name = "%%#{params[:client]}%%"
 
-    "name ilike #{name}" unless params[:client].blank?
+    cond_strings = returning([]) do |strings|
+      strings << "firms.id = #{current_firm.id}"
+      strings << "name ilike #{name}" unless params[:client].blank?
+    end
+
+    if cond_strings.any?
+      [ cond_strings.join(' and '), cond_strings ]
+    else
+      nil
+    end
   end
 
 end
