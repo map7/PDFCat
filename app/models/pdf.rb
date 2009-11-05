@@ -102,8 +102,7 @@ class Pdf < ActiveRecord::Base
 
     cat_dir = client_dir + "/" + category.name.downcase
     logger.warn("Mkdir #{cat_dir}")
-    Dir.mkdir(cat_dir, 0755) unless File.exists?(cat_dir)
-
+    Dir.mkdir(cat_dir, 0775) unless File.exists?(cat_dir)
 
     filename = original
     @new_filename = get_new_filename(current_firm,filename)
@@ -123,7 +122,11 @@ class Pdf < ActiveRecord::Base
 
       # Set the permissions on the file to 664 (-rw-rw----)
       FileUtils.chmod 0660, @new_filename
-#      FileUtils.chown nil, "tram", @new_filename
+
+      # Set the group for the file
+      unless current_firm.file_group.empty?
+        FileUtils.chown nil, current_firm.file_group, @new_filename
+      end
 
       # Check if the old directory is now empty
       dir = File.dirname(filename)

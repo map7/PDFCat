@@ -40,14 +40,17 @@ class PdfsController < ApplicationController
       end
     end
 
-    response_for :create do
+    after :create do
       # Now that the pdf has been validated we can move the pdf
       @pdf.filename = @pdf.move_file(current_firm,current_firm.upload_dir + "/" + @pdf.filename)
       # Create md5
       @pdf.md5 = @pdf.md5calc(current_firm)
       @pdf.save
 
-      flash[:notice] = 'Pdf was successfully created.'
+
+    end
+
+    response_for :create do
       redirect_to :action => 'index'
     end
 
