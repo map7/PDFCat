@@ -9,7 +9,7 @@ ActionController::Routing::Routes.draw do |map|
 
   map.resource :session
 
-  map.resources :pdfs, :collection => { :attachment_new => :get}
+  map.resources :pdfs, :collection => { :attachment_new => :get, :email => :get}
   map.resources :clients
   map.resources :categories
   map.resources :missing

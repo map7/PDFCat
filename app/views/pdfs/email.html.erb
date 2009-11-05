@@ -1,0 +1,36 @@
+<h1>Emailing <%= @pdf.pdfname %></h1>
+
+<!-- form_remote_tag (
+   :loading => "$('background_tint').show();$('background_center').show();$('wait').show();$('infoemail').show();",
+   :complete => "$('background_tint').hide();$('background_center').hide();$('wait').hide();$('email_client').hide();$('infoemail').hide();",
+   :success => "alert('Email sent successful')", 
+   :failure => "alert('Failed to send email')", 
+   :url => {:action => 'email_client', :id => @pdf.id}) do -->
+
+<% form_tag :action => 'email_client', :id => @pdf.id do %>
+
+<table>
+  <tr>
+    <td width=120px>To:</td>
+    <td><%= text_field_tag 'email', @pdf.client.email, :size => '35' %></td>
+  </tr>
+
+  <tr>
+    <td>Subject:</td>
+    <td><%= text_field_tag 'subject', @pdf.client.name.upcase + ' - ' + @pdf.pdfname + ' ' + @pdf.pdfdate.to_s, :size => '35' %></td>
+  </tr>
+
+  <tr>
+    <td>Body:</td>
+    <td><%= text_area_tag 'body', '', :cols => '70', :rows => '20' %></td>
+  </tr>
+</table>
+
+<p>
+  <%= submit_tag 'Send email' %> 
+  <%= link_to "Cancel", pdfs_url %>
+</p>
+<% end %>
+
+<script>$('email').focus();</script>
+

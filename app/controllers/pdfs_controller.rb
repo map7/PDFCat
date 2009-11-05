@@ -158,9 +158,14 @@ class PdfsController < ApplicationController
     return @status
   end
 
+  # Show the email form.
+  def email
+    @pdf = Pdf.find(params[:id])
+  end
+
   # Email pdfs to clients
   def email_client
-    render :text => "Sending email, please wait..."
+    #render :text => "Sending email, please wait..."
 
     @pdf = Pdf.find(params[:id])
 
@@ -182,7 +187,7 @@ class PdfsController < ApplicationController
       PdfMailer.deliver_email_client(current_firm, current_user, params[:email], params[:subject], params[:body],@pdf)
     end
 
-    return true
+    redirect_to :action => 'index'
   end
 
   protected

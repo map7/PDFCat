@@ -64,6 +64,8 @@
 
 	<%= shortcut_function 'v', "hide_all();runSelectedName('view');" %>
 
+	<%= shortcut_function 'm', "runSelectedName('email');" %>
+	
 	<%= shortcut_function 's', "runSelectedName('show');" %>
 	<%= shortcut_function '/', "runSelectedName('show');" %>
 
@@ -183,6 +185,27 @@
       Firm: <%= current_firm.name unless current_firm.nil?  %>
     <% end %>
   </div>
+</div>
+
+
+<!-- Adding fancy tinting, which also disables the background (good thing) and centers the message box -->
+<div id="background_tint" style=display:none></div>
+
+<div id=background_center style=display:none>
+  <table height=100%><tr><td align=center>
+	<div id=wait style=display:none>
+	  <table>
+	    <tr>
+	      <td>
+		<span id=inforelink style=display:none>Relinking pdf file in database</span>
+		<span id=infoemail style=display:none>Sending email</span>	
+		, Please wait...
+	      </td>
+	      <td><%= image_tag "indicator.gif", :id => 'indicator' %></td>
+	    </tr>
+	  </table>
+	</div>
+  </td></tr></table>
 </div>
 
 </body>
