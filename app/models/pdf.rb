@@ -310,10 +310,25 @@ class Pdf < ActiveRecord::Base
 
   # Send email
   def send_email(current_firm_id, current_user_id, email, subject, body)
+
     current_firm = Firm.find(current_firm_id)
     current_user = User.find(current_user_id)
 
-    PdfMailer.deliver_email_client(current_firm, current_user, email, subject, body, self)
-  end
+    # Detect how big the file is and split if over 25pages.
+    if self.get_no_pages(current_firm).to_i > SPLIT_NO.to_i
+      # split up into two parts
+      self.split_pdf(current_firm)
 
+      # Send the email twice with a different attachement each time.
+      @original_filename = self.filename
+      self.filename = File.basename(@original_filename, '.pdf') + "-part1.pdf"
+      PdfMailer.deliver_email_client(current_firm, current_user, email, subject, body,self)
+
+      self.filename = File.basename(@original_filename, '.pdf') + "-part2.pdf"
+      PdfMailer.deliver_email_client(current_firm, current_user, email, subject, body,self)
+
+    else
+      # Send one email as normal
+      PdfMailer.deliver_email_client(current_firm, current_user, email, subject, body, self)    end
+  end
 end
