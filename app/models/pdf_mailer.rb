@@ -14,6 +14,5 @@ class PdfMailer < ActionMailer::Base
       a.body = File.read(pdf.fullpath(current_firm))
       a.filename = pdf.filename
     end
-
   end
 end

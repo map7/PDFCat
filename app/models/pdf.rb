@@ -308,5 +308,12 @@ class Pdf < ActiveRecord::Base
     return true
   end
 
+  # Send email
+  def send_email(current_firm_id, current_user_id, email, subject, body)
+    current_firm = Firm.find(current_firm_id)
+    current_user = User.find(current_user_id)
+
+    PdfMailer.deliver_email_client(current_firm, current_user, email, subject, body, self)
+  end
 
 end

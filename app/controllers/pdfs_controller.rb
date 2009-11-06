@@ -188,7 +188,7 @@ class PdfsController < ApplicationController
 
     else
       # Send one email as normal
-      PdfMailer.deliver_email_client(current_firm, current_user, email, subject, body,@pdf)
+      @pdf.send_later(:send_email,current_firm.id, current_user.id, email, subject, body)
     end
 
     flash[:notice] = "Sent email to #{email}"
