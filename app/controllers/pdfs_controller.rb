@@ -169,6 +169,10 @@ class PdfsController < ApplicationController
 
     @pdf = Pdf.find(params[:id])
 
+    email = params[:email]
+    subject = params[:subject]
+    body = params[:body]
+
     # Detect how big the file is and split if over 25pages.
     if @pdf.get_no_pages(current_firm).to_i > SPLIT_NO.to_i
       # split up into two parts
@@ -177,16 +181,17 @@ class PdfsController < ApplicationController
       # Send the email twice with a different attachement each time.
       @original_filename = @pdf.filename
       @pdf.filename = File.basename(@original_filename, '.pdf') + "-part1.pdf"
-      PdfMailer.deliver_email_client(current_firm, current_user, params[:email], params[:subject], params[:body],@pdf)
+      PdfMailer.deliver_email_client(current_firm, current_user, email, subject, body,@pdf)
 
       @pdf.filename = File.basename(@original_filename, '.pdf') + "-part2.pdf"
-      PdfMailer.deliver_email_client(current_firm, current_user, params[:email], params[:subject], params[:body],@pdf)
+      PdfMailer.deliver_email_client(current_firm, current_user, email, subject, body,@pdf)
 
     else
       # Send one email as normal
-      PdfMailer.deliver_email_client(current_firm, current_user, params[:email], params[:subject], params[:body],@pdf)
+      PdfMailer.deliver_email_client(current_firm, current_user, email, subject, body,@pdf)
     end
 
+    flash[:notice] = "Sent email to #{email}"
     redirect_to :action => 'index'
   end
 
