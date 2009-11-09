@@ -4,7 +4,7 @@ set :repository,  "apps:/home/map7/pdfcat"
 set :scm, :git
 # Or: `accurev`, `bzr`, `cvs`, `darcs`, `git`, `mercurial`, `perforce`, `subversion` or `none`
 
-set :deploy_to, "/usr/local/www/pdfcat"
+set :deploy_to, "/usr/home/map7/webapps/pdfcat"
 
 role :web, "paistram.lan"                          # Your HTTP server, Apache/etc
 role :app, "paistram.lan"                          # This may be the same as your `Web` server
