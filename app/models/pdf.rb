@@ -120,11 +120,11 @@ class Pdf < ActiveRecord::Base
       # Move the file.
       FileUtils.mv(filename, @new_filename)
 
-      # Set the permissions on the file to 664 (-rw-rw----)
+      # Set the permissions on the file to 660 (-rw-rw----)
       FileUtils.chmod 0660, @new_filename
 
       # Set the group for the file
-      unless current_firm.file_group.empty?
+      unless current_firm.file_group.nil?
         FileUtils.chown nil, current_firm.file_group, @new_filename
       end
 
