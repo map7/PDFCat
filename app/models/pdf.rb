@@ -118,18 +118,22 @@ class Pdf < ActiveRecord::Base
       File.basename(filename)
     else
       # Move the file.
+      logger.warn("Moving #{filename} to #{@new_filename}")
       FileUtils.mv(filename, @new_filename)
 
       # Set the permissions on the file to 660 (-rw-rw----)
+      logger.warn("chmod 0660 for #{@new_filename}")
       FileUtils.chmod 0660, @new_filename
 
       # Set the group for the file
       unless current_firm.file_group.nil?
+        logger.warn("chgrp #{current_firm.file_group} for #{@new_filename}")
 #        FileUtils.chown nil, current_firm.file_group, @new_filename
-        `chown #{current_firm.file_group} #{@new_filename}`
+        `chgrp #{current_firm.file_group} #{@new_filename}`
       end
 
       # Check if the old directory is now empty
+      logger.warn("Check if the old dir is empty.")
       dir = File.dirname(filename)
       dircheck = dir + '/*'
 
