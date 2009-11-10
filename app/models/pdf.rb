@@ -125,7 +125,8 @@ class Pdf < ActiveRecord::Base
 
       # Set the group for the file
       unless current_firm.file_group.nil?
-        FileUtils.chown nil, current_firm.file_group, @new_filename
+#        FileUtils.chown nil, current_firm.file_group, @new_filename
+        `chown #{current_firm.file_group} #{@new_filename}`
       end
 
       # Check if the old directory is now empty
