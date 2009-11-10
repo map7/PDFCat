@@ -16,6 +16,6 @@ role :db,  "paistram.lan", :primary => true # This is where Rails migrations wil
 # these http://github.com/rails/irs_process_scripts
 
 # In ur deploy.rb
-deploy.task :restart, :roles =&gt; :app do
+deploy.task :restart, :roles => :app do
   run "touch #{current_path}/tmp/restart.txt"
 end
