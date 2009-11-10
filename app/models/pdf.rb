@@ -123,7 +123,8 @@ class Pdf < ActiveRecord::Base
 
       # Set the permissions on the file to 660 (-rw-rw----)
       logger.warn("chmod 0660 for #{@new_filename}")
-      FileUtils.chmod 0660, @new_filename
+      #      FileUtils.chmod 0660, @new_filename
+      `chmod 0660 #{@new_filename}`
 
       # Set the group for the file
       unless current_firm.file_group.nil?
