@@ -15,11 +15,7 @@ role :db,  "paistram.lan", :primary => true # This is where Rails migrations wil
 # if you're still using the script/reapear helper you will need
 # these http://github.com/rails/irs_process_scripts
 
-namespace :passenger do
-  desc "Restart Application"
-  task :restart do
-    run "#{try_sudo} touch #{File.join(current_path,'tmp','restart.txt')}"
-  end
+# In ur deploy.rb
+deploy.task :restart, :roles =&gt; :app do
+  run "touch #{current_path}/tmp/restart.txt"
 end
-
-after :deploy, "passenger:restart"
