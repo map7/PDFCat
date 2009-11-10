@@ -1,3 +1,5 @@
+rails_env = "production"
+
 set :application, "pdfcat"
 set :repository,  "apps:/home/map7/pdfcat"
 
