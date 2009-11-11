@@ -93,3 +93,5 @@ ActiveSupport::CoreExtensions::Date::Conversions::DATE_FORMATS.merge!(my_formats
 
 require 'super_form_builder'
 
+    Dir.chdir RAILS_ROOT
+    Delayed::Worker.new.start
