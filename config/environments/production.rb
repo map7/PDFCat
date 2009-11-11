@@ -38,3 +38,6 @@ STORE_DIR = "/home/d110/pdfcat_mick"
 
 BASE_URL= "/pdfcat"
 SPLIT_NO="14"
+
+
+run "cd #{RAILS_ROOT}; RAILS_ENV=production script/delayed_job start"

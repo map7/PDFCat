@@ -93,5 +93,3 @@ ActiveSupport::CoreExtensions::Date::Conversions::DATE_FORMATS.merge!(my_formats
 
 require 'super_form_builder'
 
-require 'delayed/command'
-Delayed::Command.new("start").daemonize

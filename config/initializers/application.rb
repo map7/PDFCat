@@ -13,3 +13,5 @@ if RAILS_ENV != 'test'
   ActionMailer::Base.smtp_settings = email_settings[RAILS_ENV] unless email_settings[RAILS_ENV].nil?
 end
 =end
+
+
