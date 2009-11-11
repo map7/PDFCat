@@ -92,3 +92,13 @@ ActiveSupport::CoreExtensions::Time::Conversions::DATE_FORMATS.merge!(my_formats
 ActiveSupport::CoreExtensions::Date::Conversions::DATE_FORMATS.merge!(my_formats)
 
 require 'super_form_builder'
+
+@dj_pid = spawn do
+  silence_stream(STDOUT) do
+    Delayed::Worker.new(:quiet=>true).start
+  end
+end.handle
+
+at_exit do
+  Process.kill(9,@dj_pid)
+end
