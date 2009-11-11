@@ -93,12 +93,5 @@ ActiveSupport::CoreExtensions::Date::Conversions::DATE_FORMATS.merge!(my_formats
 
 require 'super_form_builder'
 
-@dj_pid = spawn do
-  silence_stream(STDOUT) do
-    Delayed::Worker.new(:quiet=>true).start
-  end
-end.handle
-
-at_exit do
-  Process.kill(9,@dj_pid)
-end
+require 'delayed/command'
+Delayed::Command.new("start").daemonize
