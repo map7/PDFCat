@@ -123,14 +123,22 @@ class Pdf < ActiveRecord::Base
 
       # Set the permissions on the file to 660 (-rw-rw----)
       logger.warn("chmod 0660 for #{@new_filename}")
-      #      FileUtils.chmod 0660, @new_filename
-      `chmod 0660 #{@new_filename}`
+      begin
+        FileUtils.chmod 0660, @new_filename
+      rescue
+        logger.warn "Could not chmod #{@new_filename}"
+      end
+
 
       # Set the group for the file
       unless current_firm.file_group.nil?
         logger.warn("chgrp #{current_firm.file_group} for #{@new_filename}")
-#        FileUtils.chown nil, current_firm.file_group, @new_filename
-        `chgrp #{current_firm.file_group} #{@new_filename}`
+
+        begin
+          FileUtils.chown nil, current_firm.file_group, @new_filename
+        rescue
+          logger.warn "Could not chown #{@new_filename}"
+        end
       end
 
       # Check if the old directory is now empty
