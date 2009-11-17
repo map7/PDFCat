@@ -38,19 +38,14 @@
         <%= shortcut_function '\x1B', "hide_all();" %>     <!-- ESC key -->
 
         <!-- Nav keys -->
-<table>
-  <% for item in request.env %>
-<tr><td><%= item[0] %></td><td><%= item[1] %></td></tr>
-<% end %>
-</table>
-	<%= shortcut_fnkey '1', "#{BASE_URL}/new" %>
-	<%= shortcut_fnkey '2', "#{BASE_URL}/pdfs" %>
-	<%= shortcut_fnkey '3', "#{BASE_URL}/clients" %>
-	<%= shortcut_fnkey '4', "#{BASE_URL}/categories" %>
-	<%= shortcut_fnkey '7', "#{BASE_URL}/missing" %>
-	<%= shortcut_fnkey '8', "#{BASE_URL}/users" %>
-	<%= shortcut_fnkey '9', "#{BASE_URL}/firms" %>
-	<%= shortcut_fnkey '10', "#{BASE_URL}/logout" %>
+	<%= shortcut_fnkey '1', "#{request.env['SCRIPT_NAME']}/new" %>
+	<%= shortcut_fnkey '2', "#{request.env['SCRIPT_NAME']}/pdfs" %>
+	<%= shortcut_fnkey '3', "#{request.env['SCRIPT_NAME']}/clients" %>
+	<%= shortcut_fnkey '4', "#{request.env['SCRIPT_NAME']}/categories" %>
+	<%= shortcut_fnkey '7', "#{request.env['SCRIPT_NAME']}/missing" %>
+	<%= shortcut_fnkey '8', "#{request.env['SCRIPT_NAME']}/users" %>
+	<%= shortcut_fnkey '9', "#{request.env['SCRIPT_NAME']}/firms" %>
+	<%= shortcut_fnkey '10', "#{request.env['SCRIPT_NAME']}/logout" %>
 
 	<%= shortcut_function '?', "Element.toggle('help');"  %>
 	<%= shortcut_function 'h', "Element.toggle('help');"  %>
