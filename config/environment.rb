@@ -7,6 +7,9 @@
 # Specifies gem version of Rails to use when vendor/rails is not present
 RAILS_GEM_VERSION = '2.3.3' unless defined? RAILS_GEM_VERSION
 
+# pdfcat version
+VERSION="2.1.18"
+
 # Bootstrap the Rails environment, frameworks, and default configuration
 require File.join(File.dirname(__FILE__), 'boot')
 
@@ -92,4 +95,5 @@ ActiveSupport::CoreExtensions::Time::Conversions::DATE_FORMATS.merge!(my_formats
 ActiveSupport::CoreExtensions::Date::Conversions::DATE_FORMATS.merge!(my_formats)
 
 require 'super_form_builder'
+
 
