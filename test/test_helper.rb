@@ -2,7 +2,8 @@ ENV["RAILS_ENV"] = "test"
 require File.expand_path(File.dirname(__FILE__) + "/../config/environment")
 require 'test_help'
 
-class Test::Unit::TestCase
+#class Test::Unit::TestCase
+class ActiveSupport::TestCase
   # Transactional fixtures accelerate your tests by wrapping each test method
   # in a transaction that's rolled back on completion.  This ensures that the
   # test database remains unchanged so your fixtures don't have to be reloaded
@@ -25,4 +26,13 @@ class Test::Unit::TestCase
   self.use_instantiated_fixtures  = false
 
   # Add more helper methods to be used by all tests here...
+
+  fixtures :all
+
+  # Login a user member incase we require login for testing.
+  def login_as(user)
+    @request.session[:user_id] = users(user).id
+    @request.session[:firm_id] = users(user).firm.id
+    @current_user ||= User.find_by_id(users(user).id)
+  end
 end

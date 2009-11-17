@@ -21,3 +21,5 @@ config.action_mailer.delivery_method = :test
 SITE_NAME= "Pdfcat-test"
 UPLOAD_DIR = "/livedata/pdfcat_test_upload"
 STORE_DIR = "/livedata/pdfcat_clt"
+
+SPLIT_NO="14"

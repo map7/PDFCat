@@ -20,5 +20,15 @@ class UsersController < ApplicationController
       @user.firm_id = params[:user][:firm_id]
       @user.is_admin = params[:user][:is_admin]
     end
+
+    response_for :create_fails do
+      @firms = Firm.find(:all)
+      render :action => "new"
+    end
+
+    response_for :update_fails do
+      @firms = Firm.find(:all)
+      render :action => "edit"
+    end
   end
 end

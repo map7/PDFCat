@@ -4,7 +4,6 @@ class UserTest < ActiveSupport::TestCase
   # Be sure to include AuthenticatedTestHelper in test/test_helper.rb instead.
   # Then, you can remove it from this and the functional test.
   include AuthenticatedTestHelper
-  fixtures :users
 
   def test_should_create_user
     assert_difference 'User.count' do
@@ -31,13 +30,6 @@ class UserTest < ActiveSupport::TestCase
     assert_no_difference 'User.count' do
       u = create_user(:password_confirmation => nil)
       assert u.errors.on(:password_confirmation)
-    end
-  end
-
-  def test_should_require_email
-    assert_no_difference 'User.count' do
-      u = create_user(:email => nil)
-      assert u.errors.on(:email)
     end
   end
 

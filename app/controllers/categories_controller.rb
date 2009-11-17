@@ -1,5 +1,4 @@
 class CategoriesController < ApplicationController
-
   before_filter :login_required
 
   make_resourceful do
@@ -14,12 +13,17 @@ class CategoriesController < ApplicationController
     end
 
     before :update do
+      # Save the old category before we save the new one.
       @oldcat = @category.name
     end
 
     after :update do
       # Move directory, if dir exists
       @category.move_dir(current_firm,@oldcat)
+    end
+
+    response_for :create, :update do
+      redirect_to :action => "index"
     end
   end
 end

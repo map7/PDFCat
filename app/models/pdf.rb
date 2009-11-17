@@ -77,23 +77,24 @@ class Pdf < ActiveRecord::Base
   end
 
 
-  def get_new_filename(current_firm,original)
+  def get_new_filename(current_firm,original_file)
     # Format date
     @filedate = pdfdate.to_formatted_s(:file_format)
 
     # Format the new filename.
-    @new_filename =  current_firm.store_dir + "/" + client.name.downcase + "/" + category.name.downcase + "/" + @filedate + "-" + pdfname + File.extname(original)
+    @new_filename =  current_firm.store_dir + "/" + client.name.downcase + "/" + category.name.downcase + "/" + @filedate + "-" + pdfname + File.extname(original_file)
   end
 
-  def move_file(current_firm,original)
 
-    # If the original isn't where it should be get the files modified path.
-    unless File.exist?(original)
-      original = self.fullpath(current_firm)
+  # Move file from upload to the store_dir area under client & category.
+  def move_file(current_firm,original_path)
+
+    # If the original_path isn't where it should be get the files modified path.
+    unless File.exist?(original_path)
+      original_path = self.fullpath(current_firm)
       self.path = nil
       self.save
     end
-
 
     # Make directories
     client_dir = current_firm.store_dir + "/" + client.name.downcase
@@ -104,22 +105,19 @@ class Pdf < ActiveRecord::Base
     logger.warn("Mkdir #{cat_dir}")
     Dir.mkdir(cat_dir, 0775) unless File.exists?(cat_dir)
 
-    filename = original
-    @new_filename = get_new_filename(current_firm,filename)
+    @new_filename = get_new_filename(current_firm,original_path)
 
-    logger.warn("Original filename = #{filename}")
+    logger.warn("Original filename = #{original_path}")
     logger.warn("     New filename = #{@new_filename}")
 
     if File.exist?(@new_filename)
       # Throw an error here
-      errors.add(filename,"New file already exists, please change the title")
-
-      # Return the original filename
-      File.basename(filename)
+      errors.add(original_path,"New file already exists, please change the title")
+      File.basename(original_path)      # Return the original filename
     else
       # Move the file.
-      logger.warn("Moving #{filename} to #{@new_filename}")
-      FileUtils.mv(filename, @new_filename)
+      logger.warn("Moving #{original_path} to #{@new_filename}")
+      FileUtils.mv(original_path, @new_filename)
 
       # Set the permissions on the file to 660 (-rw-rw----)
       logger.warn("chmod 0660 for #{@new_filename}")
@@ -143,7 +141,7 @@ class Pdf < ActiveRecord::Base
 
       # Check if the old directory is now empty
       logger.warn("Check if the old dir is empty.")
-      dir = File.dirname(filename)
+      dir = File.dirname(original_path)
       dircheck = dir + '/*'
 
       # Delete the directory if it's empty, as long as it's not the same as the upload directory.
@@ -234,11 +232,11 @@ class Pdf < ActiveRecord::Base
       # Copy the new file over to the old name.
       File.delete(fullpath(current_firm))
       FileUtils.mv(@rotatefile, fullpath(current_firm))
+      return true
     else
       logger.warn("Error command 'pdf90' could not run.")
+      return false
     end
-
-
   end
 
   def get_no_pages(current_firm)
@@ -328,18 +326,20 @@ class Pdf < ActiveRecord::Base
     current_firm = Firm.find(current_firm_id)
     current_user = User.find(current_user_id)
 
-    # Detect how big the file is and split if over 25pages.
+    # Detect how big the file is and split if pdf is over the SPLIT_NO contant value.
+    # which is set in environments/production.rb
     if self.get_no_pages(current_firm).to_i > SPLIT_NO.to_i
-      # split up into two parts
-      self.split_pdf(current_firm)
+      self.split_pdf(current_firm)      # split up into two parts
 
       # Send the email twice with a different attachement each time.
       @original_filename = self.filename
       self.filename = File.basename(@original_filename, '.pdf') + "-part1.pdf"
       PdfMailer.deliver_email_client(current_firm, current_user, email, subject, body,self)
+      File.delete(self.fullpath(current_firm))
 
       self.filename = File.basename(@original_filename, '.pdf') + "-part2.pdf"
       PdfMailer.deliver_email_client(current_firm, current_user, email, subject, body,self)
+      File.delete(self.fullpath(current_firm))
 
     else
       # Send one email as normal

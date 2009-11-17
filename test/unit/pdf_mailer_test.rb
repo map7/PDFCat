@@ -1,6 +1,6 @@
 require File.dirname(__FILE__) + '/../test_helper'
 
-class PdfMailerTest < Test::Unit::TestCase
+class PdfMailerTest < ActiveSupport::TestCase
   FIXTURES_PATH = File.dirname(__FILE__) + '/../fixtures'
   CHARSET = "utf-8"
 
@@ -17,11 +17,17 @@ class PdfMailerTest < Test::Unit::TestCase
   end
 
   def test_email_client
-    @expected.subject = 'PdfMailer#email_client'
-    @expected.body    = read_fixture('email_client')
+    @expected.from = users(:aaron).email
+    @expected.to = "michael@dtcorp.com.au"
+    @expected.subject = 'FASTLINE - Notice Of Assessment 2007-11-20'
+    @expected.body    = 'test body'
     @expected.date    = Time.now
 
-    assert_equal @expected.encoded, PdfMailer.create_email_client(@expected.date).encoded
+    assert PdfMailer.create_email_client(firms(:one), users(:aaron),"michael@dtcorp.com.au", "test", "test body", pdfs(:notice))
+
+#    assert_equal @expected.encoded, PdfMailer.create_email_client(@expected.date).encoded
+    #    assert_equal @expected.encoded, PdfMailer.create_email_client(firms(:one), users(:aaron),"michael@dtcorp.com.au", "test", "test body", pdfs(:notice)).encoded
+
   end
 
   private

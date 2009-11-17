@@ -1,17 +1,9 @@
 require File.dirname(__FILE__) + '/../test_helper'
-require 'clients_controller'
 
-# Re-raise errors caught by the controller.
-class ClientsController; def rescue_action(e) raise e end; end
-
-class ClientsControllerTest < Test::Unit::TestCase
-  fixtures :clients
+class ClientsControllerTest < ActionController::TestCase
 
   def setup
-    @controller = ClientsController.new
-    @request    = ActionController::TestRequest.new
-    @response   = ActionController::TestResponse.new
-
+    login_as(:aaron)
     @first_id = clients(:digitech).id
   end
 
@@ -19,7 +11,6 @@ class ClientsControllerTest < Test::Unit::TestCase
     get :index
     assert_response :success
     assert_template 'index'
-
     assert_not_nil assigns(:clients)
   end
 
@@ -43,15 +34,12 @@ class ClientsControllerTest < Test::Unit::TestCase
   end
 
   def test_create
-    num_clients = Client.count
-
-    post :create, :client => {:name => "johnsmith",
-							  :email => "johnsmith@hotmail.com" }
+    assert_difference('Client.count') do
+      post :create, :client => {:name => "johnsmith", :email => "johnsmith@hotmail.com" }
+    end
 
     assert_response :redirect
     assert_redirected_to :action => 'index'
-
-    assert_equal num_clients + 1, Client.count
   end
 
   def test_edit
@@ -67,7 +55,7 @@ class ClientsControllerTest < Test::Unit::TestCase
   def test_update
     post :update, :id => @first_id
     assert_response :redirect
-    assert_redirected_to :action => 'show', :id => @first_id
+    assert_redirected_to :action => 'index'
   end
 
   def test_destroy

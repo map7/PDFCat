@@ -3,9 +3,9 @@
 
 <!-- Shortcuts -->
 
-<%= shortcut 'v', "#{BASE_URL}/" + controller.controller_name + "/attachment/" +  @pdf.id.to_s  %> 
+<%= shortcut 'v', "/" + controller.controller_name + "/attachment/" +  @pdf.id.to_s  %> 
 <%= shortcut 'e', edit_pdf_path %>
-<%= shortcut 'm', "#{BASE_URL}/" + controller.controller_name + "/email/" +  @pdf.id.to_s  %> 
+<%= shortcut 'm', "/" + controller.controller_name + "/email/" +  @pdf.id.to_s  %> 
 <%= shortcut_function 'd', "document.getElementById('destroy').onclick();"  %> 
 
 <div id="showitem">

@@ -3,8 +3,9 @@ notice:
   id: 1
   pdfdate: "2007-11-20"
   pdfname: 'Notice Of Assessment'
-  filename: '/livedata/pdfcat_test_clt/fastline/tax/20071121-Notice Of Assessment.pdf'
+  filename: '20071121-Notice Of Assessment.pdf'
   pdfnote: "Linda's Assessment"
+  firm_id: 1
   category_id: 2
   client_id: 3 
 
@@ -14,5 +15,26 @@ bas:
   pdfname: '2007 Tax Assessment-adrian'
   filename: '20071107-2007 Tax Assessment - adrian.pdf'
   pdfnote: 
+  firm_id: 1
+  category_id: 1
+  client_id: 1
+
+rotate:
+  id: 3
+  pdfdate: <%= 5.days.ago.to_s(:db) %>
+  pdfname: 'rotate'
+  filename: 'rotate.pdf'
+  pdfnote: 
+  firm_id: 1
+  category_id: 1
+  client_id: 1
+
+big:
+  id: 4
+  pdfdate: <%= 5.days.ago.to_s(:db) %>
+  pdfname: 'big'
+  filename: 'big.pdf'
+  pdfnote: 
+  firm_id: 1
   category_id: 1
   client_id: 1

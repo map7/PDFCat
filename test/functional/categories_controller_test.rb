@@ -1,17 +1,9 @@
 require File.dirname(__FILE__) + '/../test_helper'
-require 'categories_controller'
 
-# Re-raise errors caught by the controller.
-class CategoriesController; def rescue_action(e) raise e end; end
-
-class CategoriesControllerTest < Test::Unit::TestCase
-  fixtures :categories
+class CategoriesControllerTest < ActionController::TestCase
 
   def setup
-    @controller = CategoriesController.new
-    @request    = ActionController::TestRequest.new
-    @response   = ActionController::TestResponse.new
-
+    login_as(:aaron)
     @first_id = categories(:bas).id
   end
 
@@ -42,16 +34,14 @@ class CategoriesControllerTest < Test::Unit::TestCase
   end
 
   def test_create
-    num_categories = Category.count
-
-	# had to edit this
-    post :create, :category => {:name => "ASIC",
-								:description => "Australia Securities and Investments Commission"}
+    assert_difference('Category.count') do
+      # had to edit this
+      post :create, :category => {:name => "ASIC",
+        :description => "Australia Securities and Investments Commission"}
+    end
 
     assert_response :redirect
     assert_redirected_to :action => 'index'
-
-    assert_equal num_categories + 1, Category.count
   end
 
   def test_edit
@@ -67,7 +57,7 @@ class CategoriesControllerTest < Test::Unit::TestCase
   def test_update
     post :update, :id => @first_id
     assert_response :redirect
-    assert_redirected_to :action => 'show', :id => @first_id
+    assert_redirected_to :action => 'index'
   end
 
   def test_destroy

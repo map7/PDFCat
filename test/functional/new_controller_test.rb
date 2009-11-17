@@ -1,18 +1,23 @@
 require File.dirname(__FILE__) + '/../test_helper'
-require 'new_controller'
 
-# Re-raise errors caught by the controller.
-class NewController; def rescue_action(e) raise e end; end
-
-class NewControllerTest < Test::Unit::TestCase
+class NewControllerTest < ActionController::TestCase
   def setup
-    @controller = NewController.new
-    @request    = ActionController::TestRequest.new
-    @response   = ActionController::TestResponse.new
+    login_as(:aaron)
   end
 
-  # Replace this with your real tests.
-  def test_truth
-    assert true
+  def test_should_get_index
+    get :index
+    assert_response :success
+    assert_not_nil assigns(:files)
+  end
+
+  def test_should_destroy_file
+    firm = firms(:one)
+    filename = "#{firm.upload_dir}/temp.pdf"
+    system("touch #{filename}")
+
+    get :destroy, :filename => filename
+    assert_response :redirect
+    assert_redirected_to :action => 'index'
   end
 end

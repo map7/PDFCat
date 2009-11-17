@@ -1,4 +1,6 @@
 class MissingController < ApplicationController
+  before_filter :login_required
+
   # This is to list and fixup the missing PDF's manually.
   #
 

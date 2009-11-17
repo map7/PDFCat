@@ -1,11 +1,14 @@
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
 
 one:
-  name: MyString
-  store_dir: MyString
-  upload_dir: MyString
+  id: 1
+  name: Digitech Corporation
+  store_dir: /home/map7/pdfcat_test_clt
+  upload_dir: /home/map7/pdfcat_test_upload
+  file_group: digi
 
 two:
+  id: 2
   name: MyString
   store_dir: MyString
   upload_dir: MyString

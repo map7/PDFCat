@@ -1,25 +1,47 @@
 require File.dirname(__FILE__) + '/../test_helper'
-require 'pdfs_controller'
 
-# Re-raise errors caught by the controller.
-class PdfsController; def rescue_action(e) raise e end; end
-
-class PdfsControllerTest < Test::Unit::TestCase
-  fixtures :pdfs, :categories, :clients
+class PdfsControllerTest < ActionController::TestCase
 
   def setup
-    @controller = PdfsController.new
-    @request    = ActionController::TestRequest.new
-    @response   = ActionController::TestResponse.new
-
+    login_as(:aaron)
+    @firm = firms(:one)
     @first_id = pdfs(:notice).id
+  end
+
+  def create_file
+    @dir = "/home/map7/pdfcat_test_upload/"
+    @filename = "testfunctional.pdf"
+    @full_filename = @dir + @filename
+
+    # Must create the file
+    f = File.new(@full_filename,"w")
+      f.puts "Test file created by functional pdf test"
+    f.close
+  end
+
+  def create_store_file
+    client = clients(:fastline).name.downcase
+    category = categories(:tax).name.downcase
+    store_file = @firm.store_dir + "/" + client + "/" + category + "/" + '20071121-Notice Of Assessment.pdf'
+
+    # Must create the file
+    f = File.new(store_file,"w")
+      f.puts "Test file created by functional pdf test"
+    f.close
+  end
+
+  def remove_file
+    client = clients(:digitech).name.downcase
+    category = categories(:bas).name.downcase
+    store_dir = @firm.store_dir + "/" + client + "/" + category
+
+    File.delete("#{store_dir}/20071121-testpdf.pdf")
   end
 
   def test_index
     get :index
     assert_response :success
     assert_template 'index'
-
     assert_not_nil assigns(:pdfs)
   end
 
@@ -45,18 +67,16 @@ class PdfsControllerTest < Test::Unit::TestCase
 
   def test_create
     num_pdfs = Pdf.count
-	
-	# Must create the file
-	f = File.new("/livedata/pdfcat_test_upload/testfunctional.pdf","w")
-		f.puts "Test file created by functional pdf test"
-	f.close
 
-	# Note pdfname has to be unique, so for each test up the number on the end of the name
-    post :create, :pdf => {	:pdfdate => "2007-11-21",
-							:pdfname => "testpdf8",
-							:filename => "/livedata/pdfcat_test_upload/testfunctional.pdf",
-   							:category_id => 1, 
-							:client_id => 1	}
+    create_file()
+    remove_file()
+
+    # Note pdfname has to be unique, so for each test up the number on the end of the name
+    post :create, :pdf => { :pdfdate => "2007-11-21",
+      :pdfname => "testpdf",
+      :filename => @filename,
+      :category_id => 1,
+      :client_id => 1 }
 
     assert_response :redirect
     assert_redirected_to :action => 'index'
@@ -75,18 +95,16 @@ class PdfsControllerTest < Test::Unit::TestCase
   end
 
   def test_update
+    create_store_file()
+
     post :update, :id => @first_id
     assert_response :redirect
     assert_redirected_to :action => 'show', :id => @first_id
   end
 
   def test_destroy
-	
-	# create '/livedata/pdfcat_test_clt/fastline/tax/20071121-Notice Of Assessment.pdf'
-	f = File.new("/livedata/pdfcat_test_clt/fastline/tax/20071121-Notice Of Assessment.pdf","w")
-		f.puts "Test file created by functional pdf test"
-	f.close
-	
+    create_file()
+
     assert_nothing_raised {
       Pdf.find(@first_id)
     }

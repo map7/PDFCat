@@ -26,6 +26,10 @@ class ClientsController < ApplicationController
       # Move the directory.
       @client.move_dir(current_firm, @oldname)
     end
+
+    response_for :create, :update do
+      redirect_to :action => "index"
+    end
   end
 
 

@@ -1,6 +1,10 @@
-require 'test_helper'
+require File.dirname(__FILE__) + '/../test_helper'
 
 class FirmsControllerTest < ActionController::TestCase
+  def setup
+    login_as(:aaron)
+  end
+
   def test_should_get_index
     get :index
     assert_response :success
@@ -14,7 +18,7 @@ class FirmsControllerTest < ActionController::TestCase
 
   def test_should_create_firm
     assert_difference('Firm.count') do
-      post :create, :firm => { }
+      post :create, :firm => { :name => 'test', :upload_dir => '/tmp', :store_dir => '/tmp'}
     end
 
     assert_redirected_to firm_path(assigns(:firm))

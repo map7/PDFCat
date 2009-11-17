@@ -38,14 +38,14 @@
         <%= shortcut_function '\x1B', "hide_all();" %>     <!-- ESC key -->
 
         <!-- Nav keys -->
-	<%= shortcut_fnkey '1', "#{BASE_URL}/new" %>
-	<%= shortcut_fnkey '2', "#{BASE_URL}/pdfs" %>
-	<%= shortcut_fnkey '3', "#{BASE_URL}/clients" %>
-	<%= shortcut_fnkey '4', "#{BASE_URL}/categories" %>
-	<%= shortcut_fnkey '7', "#{BASE_URL}/missing" %>
-	<%= shortcut_fnkey '8', "#{BASE_URL}/users" %>
-	<%= shortcut_fnkey '9', "#{BASE_URL}/firms" %>
-	<%= shortcut_fnkey '10', "#{BASE_URL}/logout" %>
+	<%= shortcut_fnkey '1', "/new" %>
+	<%= shortcut_fnkey '2', "/pdfs" %>
+	<%= shortcut_fnkey '3', "/clients" %>
+	<%= shortcut_fnkey '4', "/categories" %>
+	<%= shortcut_fnkey '7', "/missing" %>
+	<%= shortcut_fnkey '8', "/users" %>
+	<%= shortcut_fnkey '9', "/firms" %>
+	<%= shortcut_fnkey '10', "/logout" %>
 
 	<%= shortcut_function '?', "Element.toggle('help');"  %>
 	<%= shortcut_function 'h', "Element.toggle('help');"  %>
@@ -78,10 +78,10 @@
 	<%= shortcut_function 't', "runSelectedAjaxName('tagajax');$('info').hide();" %>
 
 	<!-- General shortcuts -->
-	<%= shortcut 'a', "#{BASE_URL}/" + controller.controller_name + "/new" %>	<!-- Add New -->
-	<%= shortcut '+', "#{BASE_URL}/" + controller.controller_name + "/new" %>	<!-- Add New -->
+	<%= shortcut 'a', "/" + controller.controller_name + "/new" %>	<!-- Add New -->
+	<%= shortcut '+', "/" + controller.controller_name + "/new" %>	<!-- Add New -->
 
-	<%= shortcut_ctrl 'b', "#{BASE_URL}/" + controller.controller_name  %>			<!-- Back --> 
+	<%= shortcut_ctrl 'b', "/" + controller.controller_name  %>			<!-- Back --> 
 
 
 	

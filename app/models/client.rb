@@ -5,8 +5,11 @@ class Client < ActiveRecord::Base
 
   validates_presence_of :name
   validates_uniqueness_of :name, :case_sensitive => false, :scope => :firm_id
-  validates_format_of :name, :with => /^[(|)|A-Z|a-z|0-9][,|&|(|)|'| |.|\-|A-Z|a-z|0-9]+$/    # Validate correct for filenames
-  validates_format_of :email, :with => /^[^@][\w.-]+@[\w.-]+[.][a-z]{2,4}$|.*/i
+
+  # Validate correct for filenames
+  validates_format_of :name, :with => /^[(|)|A-Z|a-z|0-9][,|&|(|)|'| |.|\-|A-Z|a-z|0-9]+$/
+
+  validates_format_of :email, :with => /^([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})$/i
 
   # On creating a new client this validation fails.
   validate :new_dir_exists?
