@@ -22,4 +22,5 @@ SITE_NAME= "Pdfcat-test"
 UPLOAD_DIR = "/livedata/pdfcat_test_upload"
 STORE_DIR = "/livedata/pdfcat_clt"
 
+BASE_URL=""
 SPLIT_NO="14"
