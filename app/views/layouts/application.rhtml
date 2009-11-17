@@ -38,9 +38,11 @@
         <%= shortcut_function '\x1B', "hide_all();" %>     <!-- ESC key -->
 
         <!-- Nav keys -->
-<% for item in request.env %>
+<table>
+  <% for item in request.env %>
 <tr><td><%= item[0] %></td><td><%= item[1] %></td></tr>
 <% end %>
+</table>
 	<%= shortcut_fnkey '1', "#{BASE_URL}/new" %>
 	<%= shortcut_fnkey '2', "#{BASE_URL}/pdfs" %>
 	<%= shortcut_fnkey '3', "#{BASE_URL}/clients" %>
