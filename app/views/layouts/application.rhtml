@@ -38,14 +38,15 @@
         <%= shortcut_function '\x1B', "hide_all();" %>     <!-- ESC key -->
 
         <!-- Nav keys -->
-	<%= shortcut_fnkey '1', "/new" %>
-	<%= shortcut_fnkey '2', "/pdfs" %>
-	<%= shortcut_fnkey '3', "/clients" %>
-	<%= shortcut_fnkey '4', "/categories" %>
-	<%= shortcut_fnkey '7', "/missing" %>
-	<%= shortcut_fnkey '8', "/users" %>
-	<%= shortcut_fnkey '9', "/firms" %>
-	<%= shortcut_fnkey '10', "/logout" %>
+	<%= request.env["HTTP_HOST"] %>
+	<%= shortcut_fnkey '1', "new" %>
+	<%= shortcut_fnkey '2', "pdfs" %>
+	<%= shortcut_fnkey '3', "clients" %>
+	<%= shortcut_fnkey '4', "categories" %>
+	<%= shortcut_fnkey '7', "missing" %>
+	<%= shortcut_fnkey '8', "users" %>
+	<%= shortcut_fnkey '9', "firms" %>
+	<%= shortcut_fnkey '10', "logout" %>
 
 	<%= shortcut_function '?', "Element.toggle('help');"  %>
 	<%= shortcut_function 'h', "Element.toggle('help');"  %>
