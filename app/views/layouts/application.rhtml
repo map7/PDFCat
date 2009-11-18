@@ -78,10 +78,10 @@
 	<%= shortcut_function 't', "runSelectedAjaxName('tagajax');$('info').hide();" %>
 
 	<!-- General shortcuts -->
-	<%= shortcut 'a', "/#{request.env['SCRIPT_NAME']}/" + controller.controller_name + "/new" %>	<!-- Add New -->
-	<%= shortcut '+', "/#{request.env['SCRIPT_NAME']}/" + controller.controller_name + "/new" %>	<!-- Add New -->
+	<%= shortcut 'a', "#{request.env['SCRIPT_NAME']}/" + controller.controller_name + "/new" %>	<!-- Add New -->
+	<%= shortcut '+', "#{request.env['SCRIPT_NAME']}/" + controller.controller_name + "/new" %>	<!-- Add New -->
 
-	<%= shortcut_ctrl 'b', "/#{request.env['SCRIPT_NAME']}/" + controller.controller_name  %>			<!-- Back --> 
+	<%= shortcut_ctrl 'b', "#{request.env['SCRIPT_NAME']}/" + controller.controller_name  %>			<!-- Back --> 
 
 
 	
