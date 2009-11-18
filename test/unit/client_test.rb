@@ -7,7 +7,6 @@ class ClientTest < ActiveSupport::TestCase
     client = Client.new
 
     client.name = "Test client"
-    client.email = "map7@iinet.com.au"
 
     assert client.save
   end
