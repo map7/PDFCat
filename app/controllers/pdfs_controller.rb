@@ -168,7 +168,7 @@ class PdfsController < ApplicationController
     @pdf = Pdf.find(params[:id])
     @pdf.send_later(:send_email,current_firm.id, current_user.id, params[:email], params[:subject], params[:body])
 
-    flash[:notice] = "Sent #{@pdf.pdfname} to #{params[:email]}"
+    flash[:notice] = "Sent #{@pdf.pdfname} to #{params[:email]} and #{current_user.email}"
     redirect_to :action => 'index'
   end
 
