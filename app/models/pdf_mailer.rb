@@ -5,6 +5,7 @@ class PdfMailer < ActionMailer::Base
     @recipients = recipient
     @subject    = pdf.client.name.upcase + ' - ' + pdf.pdfname + ' ' + pdf.pdfdate.to_s
     @from       = current_user.email
+    @bcc        = current_user.email
     @sent_on    = Time.now
     @content_type='text/html'
     @body       = {:pdf => pdf, :body => body}
