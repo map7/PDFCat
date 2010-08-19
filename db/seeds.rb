@@ -6,9 +6,10 @@ password = 'pdfcat'
 
 u = User.new(:login => 'admin',
              :password => password,
-             :password_confirmation => password,
-             :firm_id => 1)
+             :password_confirmation => password)
+
 u.is_admin = true
+u.firm_id = 1
 u.crypted_password = u.encrypt(password)
 u.save
 
