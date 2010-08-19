@@ -1,6 +1,7 @@
 # Build default data
 # rake db:seed
 
+# Create default user
 password = 'pdfcat'
 
 u = User.new(:login => 'admin',
