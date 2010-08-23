@@ -1,0 +1,26 @@
+%h1 Missing pdfs
+
+#listing
+  %table
+    %tr#header
+      %th#FKey Key #{@no = 0}
+      %th Date
+      %th Name
+      %th Client
+      %th Path last seen
+
+- for pdf in @pdfs
+  %tr#listitem
+    %td#FKey= @no = @no +1
+    %td= pdf.pdfdate
+    %td= pdf.pdfname
+    %td= pdf.client.name
+    %td= pdf.fullpath(current_firm) 
+    %td= link_to 'Show', pdf, :id => "show", :method => :get
+    %td= link_to 'Edit', edit_pdf_path(pdf), :id => "edit", :method => :get
+    %td= link_to 'Delete', pdf, :id => "del", :confirm => 'Are you sure?', :method => :delete
+
+= will_paginate @pdfs
+
+:javascript
+  setup('listing');
