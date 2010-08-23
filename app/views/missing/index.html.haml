@@ -1,13 +1,12 @@
 %h1 Missing pdfs
 
-#listing
-  %table
-    %tr#header
-      %th#FKey Key #{@no = 0}
-      %th Date
-      %th Name
-      %th Client
-      %th Path last seen
+%table#listing
+  %tr#header
+    %th#FKey Key #{@no = 0}
+    %th Date
+    %th Name
+    %th Client
+    %th Path last seen
 
   - for pdf in @pdfs
     %tr#listitem

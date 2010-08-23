@@ -19,8 +19,6 @@ role :db,  "paistram.lan", :primary => true # This is where Rails migrations wil
 
 # In ur deploy.rb
 deploy.task :restart, :roles => :app do
-  # Run the following commands manually for some reason we cannot use sudo on these commands.
-  run "#{try_sudo} chmod -R +x #{current_path}"
   run "#{try_sudo} chmod -R +x #{release_path}"
   run "touch #{current_path}/tmp/restart.txt"
 end
