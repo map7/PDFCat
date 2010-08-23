@@ -1,0 +1,13 @@
+- form_for(@firm) do |f|
+  = f.error_messages
+  = f.text_field :name
+  = f.text_field :upload_dir 
+  = f.text_field :store_dir 
+  = f.text_field :file_user 
+  = f.text_field :file_group
+  = f.submit
+
+= link_to 'Back', firms_path 
+
+:javascript
+  $('firm_name').focus();

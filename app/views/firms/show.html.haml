@@ -1,0 +1,18 @@
+%h1 Firm #{@firm.name}
+%p
+  %b Name:
+  = @firm.name
+%p
+  %b Store dir:
+  = @firm.store_dir
+%p
+  %b Upload dir:
+  = @firm.upload_dir 
+%p
+  %b File_User:
+  = @firm.file_user
+%p
+  %b File_Group:
+  = @firm.file_group
+
+= link_to 'Back', firms_path
