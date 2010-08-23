@@ -1,0 +1,29 @@
+%h1 File upload
+
+%table#listing
+  %tr#header
+    %th#FKey FKey #{@no = 0}
+    %th File Name
+    %th Size
+    %th Date
+
+  - for file in @files
+    %tr#listitem
+      %td#FKey= @no = @no +1
+
+      %td= link_to file["name"], {:controller => 'pdfs', :action => "attachment_new",
+      :filename => file["name"]}, :method => :get
+
+      %td= file["size"]
+      %td= file["date"]
+    
+      %td= link_to 'Enter', {:controller => 'pdfs', :action => 'new', :filename => file["name"] },
+      :id => "edit", :method => :get
+      
+      %td= link_to 'Delete',{:action => 'destroy', :filename => file["name"]}, :id => "del",
+      :method => :get, :confirm => 'Are you sure?' 
+
+= will_paginate @files
+
+:javascript
+  setup('listing');

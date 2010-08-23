@@ -1,0 +1,9 @@
+- form_for(@client) do |f|
+  = f.text_field :name 
+  = f.text_field :email 
+  = f.submit 
+
+= link_to 'Back', :action => 'index'
+
+:javascript
+  $('client_name').focus();

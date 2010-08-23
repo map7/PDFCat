@@ -1,9 +1,0 @@
-<div id='search'>
-  <% form_tag({:action => 'index'}, :method => 'get') do %>
-    <b>Name: </b><%= text_field_tag 'pdfname', h(params[:pdfname]) %> 
-    <b>Client: </b><%= text_field_tag 'client', h(params[:client]) %>
-    <b>Category: </b><%= text_field_tag 'category', h(params[:category]) %>
-
-    <%= submit_tag 'Search' %>
-  <% end %>
-</div>

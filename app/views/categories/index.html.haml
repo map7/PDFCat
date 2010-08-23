@@ -1,0 +1,25 @@
+%h1 Listing categories
+
+%table#listing
+  %tr#header
+    %th#FKey FKey #{@no = 0}
+    - for column in Category.content_columns
+      %th= column.human_name
+    %th Documents
+  
+  - for category in @categories
+    %tr#listitem
+      %td#FKey= @no = @no +1
+      %td= category.name
+      %td= category.description
+      %td= category.pdfs.count
+      %td= link_to 'Show', {:action => 'show', :id => category}, :id => "show", :method => :get
+      %td= link_to 'Edit', {:action => 'edit', :id => category}, :id => "edit", :method => :get
+      %td= link_to 'Delete', { :action => 'destroy', :id => category }, :id => "del",
+      :confirm => "Are you sure (contains #{category.pdfs.count} document(s))?", :method => :delete
+
+= will_paginate @categories
+= link_to '<b>A</b>dd New category', :action => 'new'
+
+:javascript
+  setup('listing');

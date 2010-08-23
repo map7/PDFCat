@@ -1,0 +1,9 @@
+- form_for @category do |f|
+  = f.text_field :name  
+  = f.text_field :description
+  = f.submit 
+
+= link_to 'Back', :action => 'index'
+
+:javascript
+  $('category_name').focus();
