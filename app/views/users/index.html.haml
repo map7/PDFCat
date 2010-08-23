@@ -1,0 +1,24 @@
+%h1 Listing users
+
+%table#listing
+  %tr#header
+    %th#FKey Key 
+    %th Login
+    %th Firm
+    %th Email
+
+  - for user in @users
+    %tr#listitem
+      %td#FKey= @no = @no +1
+      %td= user.login
+      %td= user.firm.name unless user.firm.nil?
+      %td= user.email
+      %td= link_to 'Show', user, :id => "show", :method => :get
+      %td= link_to 'Edit', edit_user_path(user), :id => "edit", :method => :get 
+      %td= link_to 'Delete', user, :confirm => 'Are you sure?', :id => "del", :method => :delete
+
+= will_paginate @users
+= link_to 'New user', new_user_path
+
+:javascript
+  setup('listing');

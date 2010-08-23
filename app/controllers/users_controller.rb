@@ -10,6 +10,7 @@ class UsersController < ApplicationController
 
     before :index do
       @users = User.paginate(:page => params[:page], :per_page => 10, :order => 'upper(login)')
+      @no = 0
     end
 
     before :new, :edit do
