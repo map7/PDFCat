@@ -1,0 +1,21 @@
+%h1 Emailing #{@pdf.pdfname}
+
+- form_tag :action => 'email_client', :id => @pdf.id do
+
+  %table
+    %tr
+      %td To:
+      %td= text_field_tag 'email', @pdf.client.email, :size => '35'
+    %tr
+      %td Subject:
+      %td= text_field_tag 'subject', @pdf.client.name.upcase + ' - ' + @pdf.pdfname + ' ' + @pdf.pdfdate.to_s, :size => '35'
+    %tr
+      %td Body:
+      %td= text_area_tag 'body', '', :cols => '70', :rows => '10'
+
+  %p
+    = submit_tag 'Send email' 
+    = link_to "Cancel", pdfs_url
+
+:javascript
+  $('email').focus();
