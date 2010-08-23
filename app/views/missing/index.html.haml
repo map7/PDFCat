@@ -14,7 +14,7 @@
     %td#FKey= @no = @no +1
     %td= pdf.pdfdate
     %td= pdf.pdfname
-    %td= pdf.client.name
+    %td= pdf.client.name unless pdf.client.nil?
     %td= pdf.fullpath(current_firm) 
     %td= link_to 'Show', pdf, :id => "show", :method => :get
     %td= link_to 'Edit', edit_pdf_path(pdf), :id => "edit", :method => :get
