@@ -1,0 +1,12 @@
+%h1 User #{@user.login}
+%p
+  %b Login
+  = @user.login
+%p
+  %b Firm
+  = @user.firm.name unless @user.firm.nil?
+%p
+  %b Admin?
+  = @user.is_admin
+
+= link_to 'Back', users_path

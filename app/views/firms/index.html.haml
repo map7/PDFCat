@@ -1,0 +1,24 @@
+%h1 Listing firms
+
+%table#listing
+  %tr#heading
+    %th#FKey Key #{@no = 0}
+    %th Name
+    %th Store dir
+    %th Upload dir
+
+  - for firm in @firms
+    %tr#listitem
+      %td#FKey= @no = @no +1
+      %td= firm.name
+      %td= firm.store_dir
+      %td= firm.upload_dir
+      %td= link_to 'Show', firm, :id => "show", :method => :get
+      %td= link_to 'Edit', edit_firm_path(firm), :id => "edit", :method => :get
+      %td= link_to 'Delete', firm, :confirm => 'Are you sure?', :id => "del", :method => :delete
+
+= will_paginate @firms
+= link_to 'New firm', new_firm_path
+
+:javascript
+  setup('listing');

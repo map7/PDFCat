@@ -27,8 +27,7 @@ class SuperFormBuilder < ActionView::Helpers::FormBuilder
       error = error_message_on(field)
 
       # Wrap label in paragraph, include the original helper EG: text-field
-      @template.content_tag(:p, label +'<br/>' + super + error)  #wrap with a paragraph
-
+      @template.content_tag(:p, label + @template.tag("br") + super + error)  #wrap with a paragraph
     end
   end
 
@@ -40,7 +39,5 @@ class SuperFormBuilder < ActionView::Helpers::FormBuilder
     # Wrap submit button in paragraph tags and add custom text.
     @template.content_tag(:p,super(prefix, :id => "apply" ))
   end
-
-
 end
 
