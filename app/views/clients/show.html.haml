@@ -1,0 +1,12 @@
+%h1= @client.name
+%p
+  %b Name
+  = @client.name
+%p
+  %b Email
+  = @client.email
+%p
+  %b Documents
+  = @client.pdfs.count unless @client.pdfs.nil?
+
+= link_to 'Back', :action => 'index'

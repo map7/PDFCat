@@ -1,0 +1,27 @@
+= render :partial => "clients/search"
+
+%h1 Listing clients
+
+%table#listing
+  %tr#header
+    %th#FKey Key #{@no = 0}
+    - for column in Client.content_columns
+      %th= column.human_name
+    %th Documents
+  
+  - for client in @clients
+    %tr#listitem
+      %td#FKey #{@no = @no +1}
+      %td= client.name
+      %td= client.email
+      %td= client.pdfs.count
+      %td= link_to 'Show', {:action => 'show', :id => client},:id => "show", :method => :get
+      %td= link_to 'Edit', {:action => 'edit', :id => client},:id => "edit", :method => :get 
+      %td= link_to 'Delete', { :action => 'destroy', :id => client }, :id => "del",
+      :confirm => "Are you sure (contains #{client.pdfs.count} document(s))?", :method => :delete
+
+= will_paginate @clients
+= link_to 'Add New client', :action => 'new'
+
+:javascript
+  setup('listing');

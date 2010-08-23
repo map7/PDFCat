@@ -1,0 +1,4 @@
+#search
+  - form_tag({:action => 'index'}, :method => 'get') do
+    %b Search:
+    = text_field_tag 'client',params[:client]
