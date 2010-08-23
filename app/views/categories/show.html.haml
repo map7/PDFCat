@@ -1,0 +1,12 @@
+%h1= @category.name
+%p
+  %b Name
+  = @category.name
+%p
+  %b Description
+  = @category.description
+%p
+  %b Documents
+  = @category.pdfs.count unless @category.pdfs.nil?
+
+= link_to 'Back', :action => 'index'
