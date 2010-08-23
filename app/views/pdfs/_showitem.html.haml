@@ -1,0 +1,4 @@
+- for column in Pdf.content_columns
+  %p
+    %b= column.human_name
+    = @pdf.send(column.name)

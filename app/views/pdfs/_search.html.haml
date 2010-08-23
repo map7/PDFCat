@@ -1,0 +1,13 @@
+#search
+  - form_tag({:action => 'index'}, :method => 'get') do
+    %b
+      Name:
+      = text_field_tag 'pdfname', h(params[:pdfname])
+    %b
+      Client:
+      = text_field_tag 'client', h(params[:client])
+    %b
+      Category:
+      = text_field_tag 'category', h(params[:category])
+
+    = submit_tag 'Search'
