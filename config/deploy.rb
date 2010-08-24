@@ -24,7 +24,7 @@ deploy.task :restart, :roles => :app do
 end
 
 namespace :submodules do 
-  deploy.task :submodules, :roles => :app do
+  task :init, :roles => :app do
     # Initialise submodules
     run "cd #{current_path}; git submodule update -i public/javascripts/jquery.beeline/"
   end
@@ -50,5 +50,5 @@ end
 
 after "deploy:stop",    "delayed_job:stop"
 after "deploy:start",   "delayed_job:start"
-after "deploy:start",   "submodules:submodules"
+after "deploy:start",   "submodules:init"
 after "deploy:restart", "delayed_job:restart"
