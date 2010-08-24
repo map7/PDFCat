@@ -50,5 +50,5 @@ end
 
 after "deploy:stop",    "delayed_job:stop"
 after "deploy:start",   "delayed_job:start"
-after "deploy:start",   "submodules:init"
+after "deploy:restart",   "submodules:init"
 after "deploy:restart", "delayed_job:restart"
