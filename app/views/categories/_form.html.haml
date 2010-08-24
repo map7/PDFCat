@@ -3,7 +3,4 @@
   = f.text_field :description
   = f.submit 
 
-= link_to 'Back', :action => 'index'
-
-:javascript
-  $('category_name').focus();
+= link_to 'Back', categories_path, :class=> 'ajax', :accesskey=> 'esc'

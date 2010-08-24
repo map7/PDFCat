@@ -9,4 +9,4 @@
   %b Documents
   = @category.pdfs.count unless @category.pdfs.nil?
 
-= link_to 'Back', :action => 'index'
+= link_to 'Back', categories_path, :class=> 'ajax', :accesskey=> 'esc'
