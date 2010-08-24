@@ -27,6 +27,7 @@ namespace :submodules do
   task :init, :roles => :app do
     # Initialise submodules
     run "cd #{current_path}; git submodule update -i public/javascripts/jquery.beeline/"
+    run "cd #{current_path}; git submodule update -i public/javascripts/jquery.depechemode/"
     run "#{try_sudo} chmod -R +x #{release_path}"
   end
 end
