@@ -10,7 +10,4 @@
   = f.check_box :is_admin 
   = f.submit
 
-= link_to 'Back', users_path
-
-:javascript
-  $('user_login').focus();
+= link_to 'Back', users_path, :class=> 'ajax', :accesskey=> 'esc'

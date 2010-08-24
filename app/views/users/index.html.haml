@@ -18,7 +18,4 @@
       %td= link_to 'Delete', user, :confirm => 'Are you sure?', :id => "del", :method => :delete
 
 = will_paginate @users
-= link_to 'New user', new_user_path
-
-:javascript
-  setup('listing');
+= link_to 'New user', new_user_path, :class=> 'ajax', :accesskey=> 'a'

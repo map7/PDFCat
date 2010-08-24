@@ -18,6 +18,9 @@ ActionController::Routing::Routes.draw do |map|
   map.login  '/login',  :controller => 'sessions', :action => 'new'
   map.logout '/logout', :controller => 'sessions', :action => 'destroy'
 
+  map.new_pdfs '/new_pdfs', :controller => 'new'
+  map.missing '/missing', :controller => 'missing'
+  
   # RESTful ACL
   map.error '/error', :controller => 'sessions', :action => 'error'
   map.denied '/denied', :controller => 'sessions', :action => 'denied'

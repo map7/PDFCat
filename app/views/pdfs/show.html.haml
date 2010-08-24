@@ -1,14 +1,11 @@
-= shortcut 'v', "/" + controller.controller_name + "/attachment/" +  @pdf.id.to_s  
-= shortcut 'e', edit_pdf_path 
-= shortcut 'm', "/" + controller.controller_name + "/email/" +  @pdf.id.to_s  
-= shortcut_function 'd', "document.getElementById('destroy').onclick();" 
+%h1= @pdf.pdfname
 
 #showitem= render :partial => "showitem"
 
-= link_to 'Email',  {:action => 'email', :id => @pdf}, :id => "email", :method => :get 
-= link_to 'View', :action => "attachment", :id => @pdf.id  
-= link_to 'Edit', :action => 'edit', :id => @pdf  
-= link_to 'Destroy', {:action => 'destroy', :id => @pdf.id }, {:confirm => 'Are you sure?', :id => 'destroy', :method => :delete} 
+= link_to 'Email', {:action=> 'email', :id=> @pdf}, :id=> "email", :class=>'ajax', :accesskey=>'m'
+= link_to 'View', {:action => "attachment", :id => @pdf.id}
+= link_to 'Edit', edit_pdf_path(@pdf), :class=>'ajax', :accesskey=>'e'
+= link_to 'Destroy', {:action => 'destroy', :id => @pdf.id }, {:confirm => 'Are you sure?', :id => 'destroy', :method => :delete}
 
 = link_to_remote "Relink",:update => "showitem",
 :loading => "$('background_tint').show();$('background_center').show();$('wait').show();$('inforelink').show();",
@@ -22,4 +19,4 @@
 :failure => "alert('Failed to rotate!');", 
 :url => { :controller => "pdfs", :action => "rotate", :id => @pdf.id}
 
-= link_to 'Back', :action => 'index'
+= link_to 'Back', pdfs_path, :class=>'ajax', :accesskey=>'esc'

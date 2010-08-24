@@ -7,7 +7,4 @@
   = f.text_field :file_group
   = f.submit
 
-= link_to 'Back', firms_path 
-
-:javascript
-  $('firm_name').focus();
+= link_to 'Back', firms_path, :class=> 'ajax', :accesskey=> 'esc'

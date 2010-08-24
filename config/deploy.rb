@@ -23,6 +23,11 @@ deploy.task :restart, :roles => :app do
   run "touch #{current_path}/tmp/restart.txt"
 end
 
+deploy.task :submodules, :roles => :app do
+  # Initialise submodules
+  
+end
+
 # For delayed job
 namespace :delayed_job do
   desc "Stop the delayed_job process"

@@ -3,7 +3,4 @@
   = f.text_field :email 
   = f.submit 
 
-= link_to 'Back', :action => 'index'
-
-:javascript
-  $('client_name').focus();
+= link_to 'Back', clients_path, :class=> 'ajax', :accesskey=> 'esc'

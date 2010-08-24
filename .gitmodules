@@ -1,0 +1,6 @@
+[submodule "public/javascripts/jquery.beeline"]
+	path = public/javascripts/jquery.beeline
+	url = git@github.com:map7/jquery.beeline.git
+[submodule "public/javascripts/jquery.depechemode"]
+	path = public/javascripts/jquery.depechemode
+	url = git@github.com:map7/jquery.depechemode.git

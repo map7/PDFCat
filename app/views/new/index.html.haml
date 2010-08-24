@@ -18,12 +18,9 @@
       %td= file["date"]
     
       %td= link_to 'Enter', {:controller => 'pdfs', :action => 'new', :filename => file["name"] },
-      :id => "edit", :method => :get
+      :id=>'edit', :class=>'ajax', :accesskey=>'e', :method => :get
       
       %td= link_to 'Delete',{:action => 'destroy', :filename => file["name"]}, :id => "del",
       :method => :get, :confirm => 'Are you sure?' 
 
 = will_paginate @files
-
-:javascript
-  setup('listing');
