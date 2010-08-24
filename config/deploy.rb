@@ -25,7 +25,7 @@ end
 
 deploy.task :submodules, :roles => :app do
   # Initialise submodules
-  
+  run "cd #{current_path}; git submodule update --init --recursive public/javascript"
 end
 
 # For delayed job
