@@ -1,6 +1,6 @@
 %h1 Listing categories
 
-%table#listing
+%table
   %tr#header
     %th#FKey FKey #{@no = 0}
     - for column in Category.content_columns
@@ -8,7 +8,7 @@
     %th Documents
   
   - for category in @categories
-    %tr#listitem
+    %tr#listing
       %td#FKey= @no = @no +1
       %td= category.name
       %td= category.description

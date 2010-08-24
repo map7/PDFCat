@@ -1,6 +1,6 @@
 %h1 Missing pdfs
 
-%table#listing
+%table
   %tr#header
     %th#FKey Key #{@no = 0}
     %th Date
@@ -9,7 +9,7 @@
     %th Path last seen
 
   - for pdf in @pdfs
-    %tr#listitem
+    %tr#listing
       %td#FKey= @no = @no +1
       %td= pdf.pdfdate
       %td= pdf.pdfname

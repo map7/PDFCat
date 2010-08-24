@@ -7,7 +7,7 @@ jQuery.ajaxSetup({
 })
 
 $(document).beeline();
-$(document).depechemode();
+$(document).depechemode({container: "contentInner"} );
 
 $(document).ready(function(event){
     // Ajax navigation

@@ -2,7 +2,7 @@
 
 %h1 Listing clients
 
-%table#listing
+%table
   %tr#header
     %th#FKey Key #{@no = 0}
     - for column in Client.content_columns
@@ -10,7 +10,7 @@
     %th Documents
   
   - for client in @clients
-    %tr#listitem
+    %tr#listing
       %td#FKey #{@no = @no +1}
       %td= client.name
       %td= client.email

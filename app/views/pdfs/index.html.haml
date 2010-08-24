@@ -2,7 +2,7 @@
 
 %h1 Listing pdfs
 
-%table#listing
+%table
   %tr#header
     %th#FKey FKey #{@no = 0}
     %th Date
@@ -11,7 +11,7 @@
     %th Category
     
   - for pdf in @pdfs 
-    %tr#listitem
+    %tr#listing
       %td#FKey= @no = @no +1
       %td= pdf.pdfdate
       %td= link_to pdf.pdfname, {:action => "attachment", :id => pdf.id}, :id => "view",:method => :get
