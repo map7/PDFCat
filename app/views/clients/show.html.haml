@@ -9,4 +9,4 @@
   %b Documents
   = @client.pdfs.count unless @client.pdfs.nil?
 
-= link_to 'Back', :action => 'index'
+= link_to 'Back', clients_path, :class=>'ajax', :accesskey=>'esc'

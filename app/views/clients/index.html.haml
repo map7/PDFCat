@@ -21,7 +21,4 @@
       :confirm => "Are you sure (contains #{client.pdfs.count} document(s))?", :method => :delete
 
 = will_paginate @clients
-= link_to 'Add New client', :action => 'new'
-
-:javascript
-  setup('listing');
+= link_to 'Add New client', new_client_path, :class=> 'ajax', :accesskey=>'a'

@@ -15,7 +15,4 @@
 
   %p
     = submit_tag 'Send email' 
-    = link_to "Cancel", pdfs_url
-
-:javascript
-  $('email').focus();
+    = link_to "Cancel", pdfs_path, :class=>'ajax', :accesskey=>'esc'

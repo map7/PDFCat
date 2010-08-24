@@ -10,7 +10,4 @@
   = f.text_field :pdfnote, :label => "Note"
   = f.submit
 
-= link_to 'Back', :action => 'index'
-
-:javascript
-  $('pdf_pdfname').focus();
+= link_to 'Back', pdfs_path, :class=>'ajax', :accesskey=>'esc'
