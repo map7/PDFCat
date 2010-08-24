@@ -30,7 +30,8 @@ Rails::Initializer.run do |config|
   }
   
   config.gem "haml"
-
+  config.gem "will_paginate", :version => '~> 2.3.11', :source => "http://gemcutter.org"
+  
   # RESTful ACL support.
   config.gem "mdarby-restful_acl", :lib => 'restful_acl_controller'
 
