@@ -6,4 +6,4 @@
 	url = git@github.com:map7/jquery.depechemode.git
 [submodule "public/javascripts/livequery"]
 	path = public/javascripts/livequery
-	url = git@github.com/brandonaaron/livequery.git
+	url = git://github.com/brandonaaron/livequery.git
