@@ -26,12 +26,11 @@ end
 namespace :submodules do 
   task :init, :roles => :app do
     js_dir = "public/javascripts"
-    depeche_dir = "#{js_dir}/jquery.depechemode"
     
     # Initialise submodules
     run "cd #{current_path}; git submodule update -i #{js_dir}/jquery.beeline/"
-    run "cd #{current_path}; git submodule update -i #{depeche_dir}"
-    run "cd #{current_path}/#{depeche_dir}; git submodule update -i jquery.livequery"
+    run "cd #{current_path}; git submodule update -i #{js_dir}/jquery.depechemode/"
+    run "cd #{current_path}; git submodule update -i #{js_dir}/livequery/"
     run "#{try_sudo} chmod -R +x #{release_path}"
   end
 end
