@@ -7,6 +7,7 @@ jQuery.ajaxSetup({
 })
 
 $(document).beeline();
+$(document).depechemode();
 
 $(document).ready(function(event){
     // Ajax navigation
