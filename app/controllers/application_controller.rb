@@ -8,6 +8,12 @@ class ApplicationController < ActionController::Base
   # RESTful Authentication
   include AuthenticatedSystem
 
+  # If the request is ajax then don't include a layout
+  layout :no_xhr_layout
+  
+  def no_xhr_layout
+    request.xhr? ? false : 'application'
+  end
 
   def current_firm
     unless current_user.nil?

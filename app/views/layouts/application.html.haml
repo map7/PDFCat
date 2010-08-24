@@ -6,53 +6,10 @@
 			= controller.action_name
 
 		= stylesheet_link_tag 'application', 'pdfcat'
-		= javascript_include_tag 'prototype', 'select_mode', :defaults
+		/= javascript_include_tag 'jquery-1.4.2.min', 'jquery.beeline/jquery.beeline', 'application',  'prototype', 'select_mode'
+		= javascript_include_tag 'jquery-1.4.2.min', 'jquery.beeline/jquery.beeline', 'application'
 
 %body
-	= shortcut_function '\x1B', "hide_all();"
-	= shortcut_fnkey '1', "#{request.env['SCRIPT_NAME']}/new" 
-	= shortcut_fnkey '2', "#{request.env['SCRIPT_NAME']}/pdfs" 
-	= shortcut_fnkey '3', "#{request.env['SCRIPT_NAME']}/clients" 
-	= shortcut_fnkey '4', "#{request.env['SCRIPT_NAME']}/categories" 
-	= shortcut_fnkey '7', "#{request.env['SCRIPT_NAME']}/missing" 
-	= shortcut_fnkey '8', "#{request.env['SCRIPT_NAME']}/users" 
-	= shortcut_fnkey '9', "#{request.env['SCRIPT_NAME']}/firms" 
-	= shortcut_fnkey '10', "#{request.env['SCRIPT_NAME']}/logout" 
-
-	= shortcut_function '?', "Element.toggle('help');"
-	= shortcut_function 'h', "Element.toggle('help');"  
-
-	= shortcut_function '1', "highlight(1);$('info').show();"
-	= shortcut_function '2', "highlight(2);$('info').show();" 
-	= shortcut_function '3', "highlight(3);$('info').show();" 
-	= shortcut_function '4', "highlight(4);$('info').show();" 
-	= shortcut_function '5', "highlight(5);$('info').show();" 
-	= shortcut_function '6', "highlight(6);$('info').show();" 
-	= shortcut_function '7', "highlight(7);$('info').show();" 
-	= shortcut_function '8', "highlight(8);$('info').show();" 
-	= shortcut_function '9', "highlight(9);$('info').show();" 
-	= shortcut_function '0', "highlight(10);$('info').show();"
-
-	= shortcut_function 'v', "hide_all();runSelectedName('view');" 
-
-	= shortcut_function 'm', "runSelectedName('email');"
-
-	= shortcut_function 's', "runSelectedName('show');" 
-	= shortcut_function '/', "runSelectedName('show');" 
-
-	= shortcut_function 'e', "runSelectedName('edit');" 
-	= shortcut_function '*', "runSelectedName('edit');" 
-
-	= shortcut_function 'd', "runSelectedName('del');" 
-	= shortcut_function '-', "runSelectedName('del');" 
-
-	= shortcut_function 't', "runSelectedAjaxName('tagajax');$('info').hide();" 
-
-	// General shortcuts 
-	= shortcut 'a', "#{request.env['SCRIPT_NAME']}/" + controller.controller_name + "/new"
-	= shortcut '+', "#{request.env['SCRIPT_NAME']}/" + controller.controller_name + "/new"
-	= shortcut_ctrl 'b', "#{request.env['SCRIPT_NAME']}/" + controller.controller_name
-
 	#contentBox
 		#contentInner= yield
 
@@ -142,20 +99,20 @@
 	.nav
 		.pad1
 		- if current_user
-			= link_to '<div class="menuitem">1-New</div>', :controller => 'new' 
-			= link_to '<div class="menuitem">2-Pdf</div>', :controller => 'pdfs' 
-			= link_to '<div class="menuitem">3-Client</div>', :controller => 'clients' 
-			= link_to '<div class="menuitem">4-Category</div>', :controller => 'categories' 
+			= link_to '<div class=menuitem>1-New</div>',new_pdfs_path,:class =>'ajax',:accesskey =>'f1'
+			= link_to '<div class=menuitem>2-Pdf</div>', pdfs_path, :class => 'ajax', :accesskey => 'f2' 
+			= link_to '<div class=menuitem>3-Client</div>',clients_path,:class =>'ajax', :accesskey =>'f3' 
+			= link_to '<div class=menuitem>4-Category</div>',categories_path,:class=>'ajax',:accesskey=>'f4'
 
 		%a(href="http://paistram.lan/manual")
 			.menuitem 5-Manual
 
 		- if current_user.is_admin?
-			= link_to '<div class="menuitem">7-Missing</div>', :controller => 'missing' 
-			= link_to '<div class="menuitem">8-Users</div>', :controller => 'users' 
-			= link_to '<div class="menuitem">9-Firms</div>', :controller => 'firms' 
+			= link_to '<div class=menuitem>7-Missing</div>',missing_path, :class=>'ajax', :accesskey=>'f7'
+			= link_to '<div class=menuitem>8-Users</div>', users_path, :class=>'ajax',:accesskey=>'f8'
+			= link_to '<div class=menuitem>9-Firms</div>', firms_path, :class=>'ajax',:accesskey=>'f9'
 
-		= link_to '<div class="menuitem">0-Logout</div>', :controller => 'sessions', :action => 'destroy'
+		= link_to '<div class=menuitem>0-Logout</div>', :controller => 'sessions', :action => 'destroy'
 		= link_to_function '<div class="menuitem">?-Help</div>', "Element.toggle('help');" 
 
 	#flash= flash[:notice]
