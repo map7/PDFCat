@@ -1,22 +1,21 @@
 %h1 Listing categories
 
 %table
-  %tr#header
-    %th#FKey FKey #{@no = 0}
-    - for column in Category.content_columns
-      %th= column.human_name
-    %th Documents
-  
-  - for category in @categories
-    %tr#listing
-      %td#FKey= @no = @no +1
-      %td= category.name
-      %td= category.description
-      %td= category.pdfs.count
-      %td= link_to 'Show', {:action => 'show', :id => category}, :id => "show", :method => :get
-      %td= link_to 'Edit', {:action => 'edit', :id => category}, :id => "edit", :method => :get
-      %td= link_to 'Delete', { :action => 'destroy', :id => category }, :id => "del",
-      :confirm => "Are you sure (contains #{category.pdfs.count} document(s))?", :method => :delete
+	%tr#header
+		%th#FKey FKey #{@no = 0}
+		- for column in Category.content_columns
+			%th= column.human_name
+		%th Documents
+
+	- for category in @categories
+		%tr#listing
+			%td#FKey= @no = @no +1
+			%td= category.name
+			%td= category.description
+			%td= category.pdfs.count
+			%td= link_to 'Show', category, :class=>'ajax',:id => 'show'
+			%td= link_to 'Edit', edit_category_path(category), :class => 'ajax', :id => 'edit'
+			%td= link_to 'Delete', category, :class => 'ajax', :return =>'categories/index', :id => "destroy"
 
 = will_paginate @categories
 = link_to 'Add New category', new_category_path, :class=> 'ajax', :accesskey=> 'a'

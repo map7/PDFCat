@@ -112,7 +112,9 @@
 			= link_to '<div class=menuitem>9-Firms</div>', firms_path, :class=>'ajax',:accesskey=>'f9'
 
 		= link_to '<div class=menuitem>0-Logout</div>', :controller => 'sessions', :action => 'destroy'
-		= link_to_function '<div class="menuitem">?-Help</div>', "Element.toggle('help');" 
+
+		%a{:class => 'help_btn'}
+			.menuitem ?-Help
 
 	#flash= flash[:notice]
 
