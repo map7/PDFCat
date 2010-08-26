@@ -30,6 +30,7 @@ namespace :submodules do
     # Initialise submodules
     run "cd #{current_path}; git submodule update -i #{js_dir}/jquery.beeline/"
     run "cd #{current_path}; git submodule update -i #{js_dir}/jquery.depechemode/"
+    run "cd #{current_path}; git submodule update -i #{js_dir}/jquery.overdrive/"
     run "cd #{current_path}; git submodule update -i #{js_dir}/livequery/"
     run "#{try_sudo} chmod -R +x #{current_path}/"
   end

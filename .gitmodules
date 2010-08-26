@@ -7,3 +7,6 @@
 [submodule "public/javascripts/livequery"]
 	path = public/javascripts/livequery
 	url = git://github.com/brandonaaron/livequery.git
+[submodule "public/javascripts/jquery.overdrive"]
+	path = public/javascripts/jquery.overdrive
+	url = git@github.com:map7/jquery.overdrive.git
