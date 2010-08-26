@@ -13,3 +13,4 @@ doc/basecamp-docs/*
 .DS_Store
 coverage/*
 
+.sass-cache
