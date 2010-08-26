@@ -1,12 +1,20 @@
-// Place your application-specific JavaScript functions and classes here
-// This file is automatically included by javascript_include_tag :defaults
-
 // Capture all ajax requests
 jQuery.ajaxSetup({ 
   'beforeSend': function(xhr) {xhr.setRequestHeader("Accept", "text/javascript")}
 })
 
-$(document).beeline();
+function rebind(){
+    $(":input").overdrive({
+	submit_after: true,
+	field_nav: true,
+	field_up: 38,
+	field_down: 40,
+	submit_key_code: 123});
+
+    $.focus_input();  // Set focus in form.
+};
+
+$(document).beeline({field_keys: ['esc','f1','f2', 'f3', 'f4', 'f5', 'f6', 'f7', 'f8', 'f9', 'f10']});
 $(document).depechemode({container: "contentInner"} );
 
 $(document).ready(function(event){
@@ -15,19 +23,9 @@ $(document).ready(function(event){
 	e.preventDefault();
 	link = $(this); 
 	target = link.attr('target') === '' ? 'contentInner' : link.attr('target');
-	$('#'+target).load(link.attr('href'), function() {});
+
+	$('#'+target).load(link.attr('href'), function() {
+	    $('#'+target).ready(function(evt){ rebind(); });
+	});
     });
 });
-
-
-/*
-// Hide all
-function hide_all(){
-    $('info').hide();
-    $('help').hide();
-
-    clearHighlight(); // Clear highlighting from the last listing
-
-    $('contentBox').focus();
-}
-*/
