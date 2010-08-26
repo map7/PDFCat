@@ -1,14 +1,14 @@
 %h1 Listing firms
 
-%table#listing
-  %tr#heading
+%table
+  %tr#header
     %th#FKey Key #{@no = 0}
     %th Name
     %th Store dir
     %th Upload dir
 
   - for firm in @firms
-    %tr#listitem
+    %tr#listing
       %td#FKey= @no = @no +1
       %td= firm.name
       %td= firm.store_dir
