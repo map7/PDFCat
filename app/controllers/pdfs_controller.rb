@@ -154,7 +154,7 @@ class PdfsController < ApplicationController
     @pdf = Pdf.find(params[:id])
     @status = @pdf.rotate_file(current_firm)
 
-    render :text => "test"
+    render :partial => "showitem"
     return @status
   end
 
