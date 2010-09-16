@@ -1,144 +1,144 @@
 !!!
 %html
-	%head
-		%title
-			= SITE_NAME
-			= controller.action_name
+  %head
+    %title
+      = SITE_NAME
+      = controller.action_name
 
-		= stylesheet_link_tag 'style', 'pdfcat'
-		= javascript_include_tag 'jquery-1.4.2.min', 'jquery.beeline/jquery.beeline', 'livequery/jquery.livequery', 'jquery.overdrive/jquery.overdrive', 'jquery.depechemode/jquery.depechemode', 'application'
+    = stylesheet_link_tag 'style', 'pdfcat'
+    = javascript_include_tag 'jquery-1.4.2.min', 'jquery.beeline/jquery.beeline', 'livequery/jquery.livequery', 'jquery.overdrive/jquery.overdrive', 'jquery.depechemode/jquery.depechemode', 'application'
 
 %body
-	#contentBox
-		#contentInner= yield
+  #contentBox
+    #contentInner= yield
 
-	#help(style="display:none")
-		%h2 HELP - Shortcut Keys
-		%p If an item is highlighted in red it means the file is missing.  This is shown after a relink has been done so you will either have to rescan this item or find a backup of the file.
+  #help(style="display:none")
+    %h2 HELP - Shortcut Keys
+    %p If an item is highlighted in red it means the file is missing.  This is shown after a relink has been done so you will either have to rescan this item or find a backup of the file.
 
-		%table
-			%th Page Navigation
-			%th Key
-			%tr
-			%td New Page
-			%td F1
-			%tr
-			%td Pdfs Page
-			%td F2
-			%tr
-			%td Client Page
-			%td F3
-			%tr
-			%td Category Page
-			%td F4
-			%tr
-			%td Users
-			%td F8
-			%tr
-			%td Firms
-			%td F9
-			%tr
-			%td Logout
-			%td F10
+    %table
+      %th Page Navigation
+      %th Key
+      %tr
+      %td New Page
+      %td F1
+      %tr
+      %td Pdfs Page
+      %td F2
+      %tr
+      %td Client Page
+      %td F3
+      %tr
+      %td Category Page
+      %td F4
+      %tr
+      %td Users
+      %td F8
+      %tr
+      %td Firms
+      %td F9
+      %tr
+      %td Logout
+      %td F10
 
-		%table
-			%th Listing Navigation
-			%th Key
-			%tr
-			%td Search
-			%td CTRL+s
+    %table
+      %th Listing Navigation
+      %th Key
+      %tr
+      %td Search
+      %td CTRL+s
 
-		%table
-			%th Item Management
-			%th Key
-			%tr
-			%td Select item
-			%td 0-9
-			%tr
-			%td Add new item
-			%td a
-			%tr
-			%td View pdf
-			%td v
-			%tr
-			%td Show item
-			%td s
-			%tr
-			%td Edit item
-			%td e
-			%tr
-			%td Delete item
-			%td d
-			%tr
-			%td Email item
-			%td m
+    %table
+      %th Item Management
+      %th Key
+      %tr
+      %td Select item
+      %td 0-9
+      %tr
+      %td Add new item
+      %td a
+      %tr
+      %td View pdf
+      %td v
+      %tr
+      %td Show item
+      %td s
+      %tr
+      %td Edit item
+      %td e
+      %tr
+      %td Delete item
+      %td d
+      %tr
+      %td Email item
+      %td m
 
-		#info(style='display:none')
-			.pad1
+    #info(style='display:none')
+      .pad1
 
-			#key1(style="float:right")
-			%table
-			%th Function
-			%th key
-			%tr
-			%td Show
-			%td s or /
-			%tr
-			%td Edit
-			%td e or *
-			%tr
-			%td Delete
-			%td d or -
+      #key1(style="float:right")
+      %table
+      %th Function
+      %th key
+      %tr
+      %td Show
+      %td s or /
+      %tr
+      %td Edit
+      %td e or *
+      %tr
+      %td Delete
+      %td d or -
 
-			#mode Select Mode
+      #mode Select Mode
 
-		#mode
-		#modeKeys
+    #mode
+    #modeKeys
 
-	.nav
-		.pad1
-		- if current_user
-			= link_to '<div class=menuitem>1-New</div>',new_pdfs_path,:class =>'ajax',:accesskey =>'f1'
-			= link_to '<div class=menuitem>2-Pdf</div>', pdfs_path, :class => 'ajax', :accesskey => 'f2' 
-			= link_to '<div class=menuitem>3-Client</div>',clients_path,:class =>'ajax', :accesskey =>'f3' 
-			= link_to '<div class=menuitem>4-Category</div>',categories_path,:class=>'ajax',:accesskey=>'f4'
+  .nav
+    .pad1
+    - if current_user
+      = link_to '<div class=menuitem>1-New</div>',new_pdfs_path,:class =>'ajax',:accesskey =>'f1'
+      = link_to '<div class=menuitem>2-Pdf</div>', pdfs_path, :class => 'ajax', :accesskey => 'f2' 
+      = link_to '<div class=menuitem>3-Client</div>',clients_path,:class =>'ajax', :accesskey =>'f3' 
+      = link_to '<div class=menuitem>4-Category</div>',categories_path,:class=>'ajax',:accesskey=>'f4'
 
-		%a(href="http://paistram.lan/manual")
-			.menuitem 5-Manual
-      
+    %a(href="http://paistram.lan/manual")
+      .menuitem 5-Manual
+
     - unless current_user.nil?
       - if current_user.is_admin?
         = link_to '<div class=menuitem>7-Missing</div>',missing_path, :class=>'ajax', :accesskey=>'f7'
         = link_to '<div class=menuitem>8-Users</div>', users_path, :class=>'ajax',:accesskey=>'f8'
         = link_to '<div class=menuitem>9-Firms</div>', firms_path, :class=>'ajax',:accesskey=>'f9'
 
-		= link_to '<div class=menuitem>0-Logout</div>', :controller => 'sessions', :action => 'destroy'
+    = link_to '<div class=menuitem>0-Logout</div>', :controller => 'sessions', :action => 'destroy'
 
-		%a{:class => 'help_btn'}
-			.menuitem ?-Help
+    %a{:class => 'help_btn'}
+      .menuitem ?-Help
 
-	#flash= flash[:notice]
+  #flash= flash[:notice]
 
-	#foot
-		.pad1
-		#footerLeft
-			#footerAPP PDFCat #{PDFCAT_VERSION}
-			
-		#footerRight
-			- unless current_user.nil?
-				Logged in as: #{current_user.login unless current_user.nil?},
-				Firm: #{current_firm.name unless current_firm.nil?}
+  #foot
+    .pad1
+    #footerLeft
+      #footerAPP PDFCat #{PDFCAT_VERSION}
 
-	/ Adding fancy tinting, which also disables the background (good thing) and centers the message box 
-	#background_tint(style='display:none')
+    #footerRight
+      - unless current_user.nil?
+        Logged in as: #{current_user.login unless current_user.nil?},
+        Firm: #{current_firm.name unless current_firm.nil?}
 
-	#background_center(style='display:none')
-		%table
-			%td
-				#wait(style='display:none')
-					%table
-						%td
-							#inforelink(style='display:none') Relinking pdf file in database
-							#infoemail(style='display:none') Sending email, Please wait...
-						%td= image_tag 'indicator.gif', :id => 'indicator'
+  / Adding fancy tinting, which also disables the background (good thing) and centers the message box 
+  #background_tint(style='display:none')
+
+  #background_center(style='display:none')
+    %table
+      %td
+        #wait(style='display:none')
+          %table
+            %td
+              #inforelink(style='display:none') Relinking pdf file in database
+              #infoemail(style='display:none') Sending email, Please wait...
+            %td= image_tag 'indicator.gif', :id => 'indicator'
 
