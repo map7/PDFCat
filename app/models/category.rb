@@ -15,16 +15,22 @@ class Category < ActiveRecord::Base
 
     # Build an array of clients which this change will affect making sure each is unique.
     @pdf.each do|p|
-      @clientname = p.client.name.downcase
+      unless p.client.nil?
+        @clientname = p.client.name.downcase
 
-      unless @client.include?(@clientname)  # If this is the first time we have come across this client then...
-        @client << @clientname
+        unless @client.include?(@clientname)  # If this is the first time we have come across this client then...
+          @client << @clientname
 
-        @olddir = current_firm.store_dir + "/" + @clientname + "/" + oldname.downcase
-        @newdir = current_firm.store_dir + "/" +  @clientname + "/" + name.downcase
+          @olddir = current_firm.store_dir + "/" + @clientname + "/" + oldname.downcase
+          @newdir = current_firm.store_dir + "/" +  @clientname + "/" + name.downcase
 
-        # Move the category directory to the new one.
-        File.rename(@olddir,@newdir) if File.exists?(@olddir)
+          # Move the category directory to the new one.
+          if File.exists?(@newdir)
+            `mv "#{@olddir}/*.pdf" "#{newdir}"`
+          else
+            File.rename(@olddir,@newdir) if File.exists?(@olddir)
+          end
+        end
       end
     end
   end
