@@ -209,7 +209,9 @@ class Pdf < ActiveRecord::Base
         else
           update_attribute(:missing_flag, true)
 
-          puts "Missing '#{pdfname}' for firm '#{current_firm.name}', client '#{client.name}'"
+          unless current_firm.nil? or client.nil?
+            puts "Missing '#{pdfname}' for firm '#{current_firm.name}', client '#{client.name}'"
+          end
 
           return false # The file couldn't be found
         end
