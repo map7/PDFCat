@@ -14,8 +14,8 @@
 development:
   adapter: postgresql
   database: pdfcat_development
-  username: map7
-  password: 
+  username: pdfcat
+  password: pdfcat
 #  socket: /tmp/mysql.sock
 
 # Warning: The database defined as 'test' will be erased and
@@ -24,8 +24,8 @@ development:
 test:
   adapter: postgresql
   database: pdfcat_test
-  username: map7
-  password: 
+  username: pdfcat
+  password: pdfcat
 #  socket: /tmp/mysql.sock
 
 production:

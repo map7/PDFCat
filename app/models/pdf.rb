@@ -284,7 +284,7 @@ class Pdf < ActiveRecord::Base
           puts(counter) if counter % 50 == 0
 
           # calculate md5 and store.
-          md5=Digest::MD5.hexdigest(File.read(path))
+          md5=Digest::MD5.hexdigest(File.read(path)) if File.exists?(path)
 
           # Add to the hash table.
           files[md5] = path
