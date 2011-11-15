@@ -1,7 +1,7 @@
 rails_env = "production"
 
 set :application, "pdfcat"
-set :repository,  "apps:/home/map7/pdfcat"
+set :repository,  "ltsp.lan:/home/map7/pdfcat"
 
 set :scm, :git
 # Or: `accurev`, `bzr`, `cvs`, `darcs`, `git`, `mercurial`, `perforce`, `subversion` or `none`
