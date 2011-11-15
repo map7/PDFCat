@@ -39,6 +39,10 @@ Rails::Initializer.run do |config|
   # awesome nested set for sub categories
   config.gem "awesome_nested_set", :version => "< 2.0"
   
+  # rspec tests
+  config.gem "rspec"
+  config.gem "rspec-rails"
+  
   # Skip frameworks you're not going to use (only works if using vendor/rails)
   # config.frameworks -= [ :action_web_service, :action_mailer ]
 
