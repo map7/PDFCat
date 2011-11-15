@@ -21,7 +21,7 @@ class CategoriesController < ApplicationController
       # Move directory, if dir exists
       @category.move_dir(current_firm,@oldcat)
     end
-
+    
     response_for :create, :update do
       redirect_to :action => "index"
     end
