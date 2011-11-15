@@ -9,12 +9,15 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20091106044129) do
+ActiveRecord::Schema.define(:version => 20111115030536) do
 
   create_table "categories", :force => true do |t|
     t.string  "name"
     t.integer "firm_id"
     t.string  "description"
+    t.integer "parent_id"
+    t.integer "lft"
+    t.integer "rgt"
   end
 
   create_table "clients", :force => true do |t|
