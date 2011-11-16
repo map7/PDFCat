@@ -40,6 +40,7 @@ Rails::Initializer.run do |config|
   config.gem "awesome_nested_set", :version => "< 2.0"
   
   # rspec tests
+  config.gem 'machinist', :version => "< 2.0"
   config.gem "rspec", :version => "1.3.0", :lib => false
   config.gem "rspec-rails", :version => "1.3.2", :lib => false
   

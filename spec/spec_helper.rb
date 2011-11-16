@@ -5,14 +5,29 @@ require File.expand_path(File.join(File.dirname(__FILE__),'..','config','environ
 require 'spec/autorun'
 require 'spec/rails'
 
+require File.expand_path(File.dirname(__FILE__) + "/blueprints")
+
 # Uncomment the next line to use webrat's matchers
 #require 'webrat/integrations/rspec-rails'
+
+def login_user
+  logout_user
+  sign_in User.make!
+end
+
+def logout_user
+  sign_out :user
+end
+
 
 # Requires supporting files with custom matchers and macros, etc,
 # in ./support/ and its subdirectories.
 Dir[File.expand_path(File.join(File.dirname(__FILE__),'support','**','*.rb'))].each {|f| require f}
 
 Spec::Runner.configure do |config|
+  config.before(:all)    { Sham.reset(:before_all)  }
+  config.before(:each)   { Sham.reset(:before_each) }
+  
   # If you're not using ActiveRecord you should remove these
   # lines, delete config/database.yml and disable :active_record
   # in your config/boot.rb
