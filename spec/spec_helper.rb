@@ -10,14 +10,33 @@ require File.expand_path(File.dirname(__FILE__) + "/blueprints")
 # Uncomment the next line to use webrat's matchers
 #require 'webrat/integrations/rspec-rails'
 
+
+
+# Login a user member incase we require login for testing.
 def login_user
-  logout_user
-  sign_in User.make!
+  password = 'passwd'
+  user = User.new(:login => 'admin',
+               :password => password,
+               :password_confirmation => password)
+
+  user.is_admin = true
+  user.firm_id = 1
+  user.crypted_password = user.encrypt(password)
+  user.save
+#  user = User.make
+  @request.session[:user_id] = user.id
+  @request.session[:firm_id] = 1
+  @current_user ||= User.find_by_id(user.id)
 end
 
-def logout_user
-  sign_out :user
-end
+# def login_user
+#   logout_user
+#   sign_in User.make!
+# end
+
+# def logout_user
+#   sign_out :user
+# end
 
 
 # Requires supporting files with custom matchers and macros, etc,

@@ -8,6 +8,8 @@ describe CategoriesController do
 
     describe "#index" do
       it "should render index" do
+        current_firm = mock_model(Firm, :id => 1)
+        controller.stub!(:current_firm).and_return(current_firm)
         get :index
         response.should render_template('index')
       end
