@@ -11,7 +11,7 @@ require 'spec/rails'
 
 # Login a user member incase we require login for testing.
 def login_user
-   user = User.make
+  user = User.make
   @request.session[:user_id] = user.id
   @request.session[:firm_id] = 1
   @current_user ||= User.find_by_id(user.id)
