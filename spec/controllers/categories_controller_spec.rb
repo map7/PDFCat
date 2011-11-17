@@ -87,7 +87,9 @@ describe CategoriesController do
       end
       
       it "should delete a category" do
-        delete :destroy, :id => @category.id
+        lambda do 
+          delete :destroy, :id => @category.id
+        end.should change(Category, :count).from(1).to(0)
       end
       
       it "redirects to listing categories" do
