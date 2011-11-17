@@ -2,28 +2,35 @@
 # from the project root directory.
 ENV["RAILS_ENV"] ||= 'test'
 require File.expand_path(File.join(File.dirname(__FILE__),'..','config','environment'))
+require File.expand_path(File.dirname(__FILE__) + "/blueprints")
 require 'spec/autorun'
 require 'spec/rails'
-
-require File.expand_path(File.dirname(__FILE__) + "/blueprints")
 
 # Uncomment the next line to use webrat's matchers
 #require 'webrat/integrations/rspec-rails'
 
-
-
 # Login a user member incase we require login for testing.
 def login_user
-  password = 'passwd'
-  user = User.new(:login => 'admin',
-               :password => password,
-               :password_confirmation => password)
+  #  http://stackoverflow.com/questions/8146516/rails-2-3-8-machinist-undefined-method-make
+  # user = User.make!
 
-  user.is_admin = true
-  user.firm_id = 1
-  user.crypted_password = user.encrypt(password)
-  user.save
-#  user = User.make
+  # # Work around
+  # password = 'passwd'
+  # user = User.new(:login => 'admin',
+  #              :password => password,
+  #              :password_confirmation => password)
+
+  # user.is_admin = true
+  # user.firm_id = 1
+  # user.crypted_password = user.encrypt(password)
+  # user.save
+
+  # @request.session[:user_id] = user.id
+  # @request.session[:firm_id] = 1
+  # @current_user ||= User.find_by_id(user.id)
+
+  user = users(:quentin)
+  
   @request.session[:user_id] = user.id
   @request.session[:firm_id] = 1
   @current_user ||= User.find_by_id(user.id)
@@ -44,16 +51,17 @@ end
 Dir[File.expand_path(File.join(File.dirname(__FILE__),'support','**','*.rb'))].each {|f| require f}
 
 Spec::Runner.configure do |config|
-  config.before(:all)    { Sham.reset(:before_all)  }
-  config.before(:each)   { Sham.reset(:before_each) }
-  
   # If you're not using ActiveRecord you should remove these
   # lines, delete config/database.yml and disable :active_record
   # in your config/boot.rb
   config.use_transactional_fixtures = true
   config.use_instantiated_fixtures  = false
-  config.fixture_path = RAILS_ROOT + '/spec/fixtures/'
+  config.fixture_path = RAILS_ROOT + '/test/fixtures/'
 
+  # Machinist
+  config.before(:all)    { Sham.reset(:before_all)  }
+  config.before(:each)   { Sham.reset(:before_each) }
+  
   # == Fixtures
   #
   # You can declare fixtures for each example_group like this:
@@ -65,6 +73,7 @@ Spec::Runner.configure do |config|
   # names with your fixtures.
   #
   # config.global_fixtures = :table_a, :table_b
+  config.global_fixtures = :users
   #
   # If you declare global fixtures, be aware that they will be declared
   # for all of your examples, even those that don't use them.

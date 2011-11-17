@@ -14,5 +14,13 @@ describe CategoriesController do
         response.should render_template('index')
       end
     end
+
+    describe "machinist" do
+      it "should create a user" do
+        user = User.make
+        user.login.should == "map7"
+      end
+    end
   end
+
 end
