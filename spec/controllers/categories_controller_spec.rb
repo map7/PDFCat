@@ -16,9 +16,9 @@ describe CategoriesController do
     end
 
     describe "machinist" do
-      it "should create a user" do
-        user = User.make
-        user.login.should == "map7"
+      it "should create a category" do
+        category = Category.make
+        category.name.should == "General"
       end
     end
   end

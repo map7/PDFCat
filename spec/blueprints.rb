@@ -6,3 +6,7 @@ User.blueprint do
   name  {'Michael Pope'}
   email {'michael@dtcorp.com.au'}
 end
+
+Category.blueprint do
+  name {"General"}
+end
