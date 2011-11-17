@@ -96,6 +96,11 @@ describe CategoriesController do
         delete :destroy, :id => @category.id
         response.should redirect_to(categories_path)
       end
+
+      it "should flash message" do
+        delete :destroy, :id => @category.id
+        flash[:notice].should == "Category deleted successfully!"
+      end
     end
   end # Logged in
 end

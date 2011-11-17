@@ -30,6 +30,10 @@ class CategoriesController < ApplicationController
       @category.move_dir(current_firm,@oldcat)
     end
     
+    after :destroy do
+      flash[:notice] = "Category deleted successfully!"
+    end
+    
     response_for :create, :update do
       redirect_to :action => "index"
     end
