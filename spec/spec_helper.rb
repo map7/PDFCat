@@ -11,26 +11,7 @@ require 'spec/rails'
 
 # Login a user member incase we require login for testing.
 def login_user
-  #  http://stackoverflow.com/questions/8146516/rails-2-3-8-machinist-undefined-method-make
-  # user = User.make!
-
-  # # Work around
-  # password = 'passwd'
-  # user = User.new(:login => 'admin',
-  #              :password => password,
-  #              :password_confirmation => password)
-
-  # user.is_admin = true
-  # user.firm_id = 1
-  # user.crypted_password = user.encrypt(password)
-  # user.save
-
-  # @request.session[:user_id] = user.id
-  # @request.session[:firm_id] = 1
-  # @current_user ||= User.find_by_id(user.id)
-
-  user = users(:quentin)
-  
+   user = User.make
   @request.session[:user_id] = user.id
   @request.session[:firm_id] = 1
   @current_user ||= User.find_by_id(user.id)
