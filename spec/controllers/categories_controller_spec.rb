@@ -58,6 +58,28 @@ describe CategoriesController do
         response.should be_success
       end
     end
+
+    describe "#update" do
+      before do
+        @category = Category.make
+        Category.stub!(:find).and_return(@category)
+      end
+
+      it "should update category" do
+        @category.should_receive(:update_attributes)
+        put :update, :id => @category.id
+      end
+      
+      it "should redirect to categories" do
+        put :update, :id => @category.id
+        response.should redirect_to(categories_path)
+      end
+
+      it "should display flash message" do 
+        put :update, :id => @category.id
+        flash[:notice].should == "Category updated successfully!"
+      end
+    end
     
     describe "#destroy" do
       before do
