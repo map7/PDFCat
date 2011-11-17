@@ -27,6 +27,7 @@ describe CategoriesController do
         controller.stub!(:current_firm).and_return(mock_model(Firm, :id => 1))
         @category = Category.make
         Category.stub!(:new).and_return(@category)
+        @category.stub!(:save).and_return(true)
       end
       
       it "creates new category" do
@@ -38,8 +39,18 @@ describe CategoriesController do
         @category.should_receive(:save).and_return(true)
         post :create, :category => @category
       end
+      
+      it "should redirect to categories listing" do
+        post :create, :category => @category
+        response.should redirect_to(categories_path)
+      end
+
+      it "should display a flash message" do
+        post :create, :category => @category
+        flash[:notice].should == "Category created successfully!"
+      end
     end
-    
+
     describe "#edit" do
       it "should edit a category" do
         category = Category.make
