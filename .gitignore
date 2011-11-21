@@ -14,3 +14,4 @@ doc/basecamp-docs/*
 coverage/*
 
 .sass-cache
+.rvmrc
