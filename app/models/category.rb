@@ -19,7 +19,8 @@ class Category < ActiveRecord::Base
       unless p.client.nil?
         @clientname = p.client.name.downcase
 
-        unless @client.include?(@clientname)  # If this is the first time we have come across this client then...
+        # If this is the first time we have come across this client then...
+        unless @client.include?(@clientname)  
           @client << @clientname
 
           @olddir = current_firm.store_dir + "/" + @clientname + "/" + oldname.downcase
@@ -46,16 +47,19 @@ class Category < ActiveRecord::Base
     @pdf.each do|p|
       @clientname = p.client.name.downcase
 
-      unless @client.include?(@clientname)    # If this is the first time we have come across this client then...
+      # If this is the first time we have come across this client then...
+      unless @client.include?(@clientname)    
         @client << @clientname
 
         # Checking if the directory exists
         @newdir = current_firm.store_dir + "/" +  @clientname + "/" + name.downcase
         puts "Checking '" + @newdir + "'..."
 
-        # Move the directory, I require some error checking here, must check if the directory exists.
+        # Move the directory, I require some error checking here,
+        # must check if the directory exists.
         if File.exists?(@newdir)
-          errors.add(name," dir already exists, please change the clients name")   # Throw an error here
+          # Throw an error here
+          errors.add(name," dir already exists, please change the clients name")   
           return true
         else
           return false
@@ -63,5 +67,4 @@ class Category < ActiveRecord::Base
       end
     end
   end
-
 end
