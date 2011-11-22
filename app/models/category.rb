@@ -3,6 +3,7 @@ class Category < ActiveRecord::Base
   
   belongs_to :firm
   has_many :pdfs
+  has_many :clients, :through => :pdfs
 
   validates_presence_of :name
   validates_uniqueness_of :name, :case_sensitive => false, :scope => :firm_id
@@ -37,18 +38,10 @@ class Category < ActiveRecord::Base
     end
   end
 
+  # Check if new proposed directory exists under any client with the category.
   def new_dir_exists?
-    @client = []    # Initialise an array
-    
-    # Build an array of clients which this change will affect making sure each is unique.
-    self.pdfs.each do|pdf|
-      @clientname = pdf.client.name.downcase
-
-      # If this is the first time we have come across this client then...
-      unless @client.include?(@clientname)    
-        @client << @clientname
-        return pdf.category_dir_exists?(name.downcase) 
-      end                       
+    self.clients.each do|client|
+      return File.exists?("#{client.firm.store_dir}/#{client.name}/#{self.name}".downcase)
     end
   end
 end
