@@ -58,3 +58,24 @@ after "deploy:stop",    "delayed_job:stop"
 after "deploy:start",   "delayed_job:start"
 after "deploy:restart",   "submodules:init"
 after "deploy:restart", "delayed_job:restart"
+
+# Currently have to do this manually
+# # Update gems 
+# namespace :gems do
+#   desc "Install required gems"
+#   task :install, :roles => :app do
+#     run "cd #{release_path} && sudo rake gems:install"
+
+#     on_rollback do
+#       if previous_release
+#         run "cd #{previous_release} && sudo rake gems:install"
+#       else
+#         logger.important "no previous release to rollback to, rollback of gems:install skipped"
+#       end
+#     end
+#   end
+# end
+
+# before "deploy:assets:precompile", "gems:install"
+# after "deploy:rollback:revision", "gems:install"
+# after "deploy:update_code", "gems:install"
