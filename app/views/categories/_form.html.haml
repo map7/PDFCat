@@ -1,6 +1,7 @@
 - form_for @category do |f|
-  = f.text_field :name  
-  = f.text_field :description
-  = f.submit 
+
+	= f.text_field :name  
+	= f.text_field :description
+	= f.submit 
 
 = link_to 'Back', categories_path, :class=> 'ajax', :accesskey=> 'esc'

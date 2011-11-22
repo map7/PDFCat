@@ -17,11 +17,23 @@ class CategoriesController < ApplicationController
       @oldcat = @category.name
     end
 
+    after :create do
+      flash[:notice] = "Category created successfully!"
+    end
+
+    after :update do
+      flash[:notice] = "Category updated successfully!"
+    end
+    
     after :update do
       # Move directory, if dir exists
       @category.move_dir(current_firm,@oldcat)
     end
-
+    
+    after :destroy do
+      flash[:notice] = "Category deleted successfully!"
+    end
+    
     response_for :create, :update do
       redirect_to :action => "index"
     end
