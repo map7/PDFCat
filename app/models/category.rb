@@ -9,6 +9,8 @@ class Category < ActiveRecord::Base
   validates_uniqueness_of :name, :case_sensitive => false, :scope => :firm_id
   validates_format_of :name, :with => /^[(|)|A-Z|a-z|0-9][,|&|(|)|'| |.|\-|A-Z|a-z|0-9]+$/
 
+  validate :new_dir_available?
+  
   def move_dir(current_firm,oldname)
     @client = []  # Initialise an array
 
@@ -39,9 +41,14 @@ class Category < ActiveRecord::Base
   end
 
   # Check if new proposed directory exists under any client with the category.
-  def new_dir_exists?
+  def new_dir_available?
     self.clients.each do|client|
-      return File.exists?("#{client.firm.store_dir}/#{client.name}/#{self.name}".downcase)
+      if File.exists?("#{client.firm.store_dir}/#{client.name}/#{self.name}".downcase)
+        errors.add(name, "Category directory exists for some clients")
+        return false 
+      end
     end
+
+    return true
   end
 end

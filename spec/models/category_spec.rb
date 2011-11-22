@@ -3,23 +3,43 @@ require 'spec_helper'
 describe Category do
 
   # Write tests for the model, break down move / creating of files.
-  describe "#new_dir_exists" do
+  describe "#new_dir_available" do
     before do
       @cat = Category.make
       @pdf = Pdf.make(:category => @cat)
     end
     
-    context "for multiple pdfs with diff category name" do
+    context "for one pdf with new category name not existing" do
       it "checks new category dir doesn't exists" do
-        File.stub!(:exists?).and_return(false)
-        @cat.new_dir_exists?.should be_false
+        File.stub!(:exists?).
+          with("#{@pdf.firm.store_dir}/#{@pdf.client.name}/#{@cat.name}".downcase).
+          and_return(false)
+        @cat.new_dir_available?.should be_true
       end
     end
 
-    context "for multiple pdfs with same category name" do
+    context "for one pdf with new category name existing" do
       it "checks new category dir exists" do
-        File.stub!(:exists?).and_return(true)
-        @cat.new_dir_exists?.should be_true
+        File.stub!(:exists?).
+          with("#{@pdf.firm.store_dir}/#{@pdf.client.name}/#{@cat.name}".downcase).
+          and_return(true)
+        @cat.new_dir_available?.should be_false
+      end
+    end
+    
+    context "multiple pdfs one with existing category name" do
+      it "should store the result and return" do
+        @pdf2 = Pdf.make(:client => Client.make(:name => "fred"), :category => @cat)
+        
+        File.stub!(:exists?).
+          with("#{@pdf.firm.store_dir}/#{@pdf.client.name}/#{@cat.name}".downcase).
+          and_return(false)
+
+        File.stub!(:exists?).
+          with("#{@pdf2.firm.store_dir}/#{@pdf2.client.name}/#{@cat.name}".downcase).
+          and_return(true)
+        
+        @cat.new_dir_available?.should be_false
       end
     end
   end
