@@ -30,6 +30,8 @@ Rails::Initializer.run do |config|
     :domain => "lan"
   }
   
+  config.gem "pg"
+  
   config.gem "haml"
   config.gem "will_paginate", :version => '~> 2.3.11', :source => "http://gemcutter.org"
   

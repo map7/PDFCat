@@ -14,13 +14,32 @@ class Pdf < ActiveRecord::Base
 
   # validate :does_file_exist?  # Must check if the original filename exists not the new one
 
+  def client_name
+    client.name.downcase
+  end
+
+  def category_name
+    category.name.downcase
+  end
+
+  def client_dir
+    self.firm.store_dir + "/" +  client_name
+  end
+  
+  def full_dir
+    client_dir + "/" + category_name
+  end
+  
+  # Checking if the directory exists
+  def category_dir_exists?(cat_name)
+    File.exists?(client_dir + "/" + cat_name)
+  end  
 
   # List uploaded files
     def self.list_files(current_firm)
       require 'find'
 
       files = Array.new
-
 
       # Get the constant variable from the environment.rb file
       # for each development/testing and production.

@@ -37,34 +37,18 @@ class Category < ActiveRecord::Base
     end
   end
 
-  def new_dir_exists?(current_firm)
+  def new_dir_exists?
     @client = []    # Initialise an array
-
-    # Search all pdfs for this id
-    @pdf = Pdf.find(:all, :conditions => {:category_id => id})
-
+    
     # Build an array of clients which this change will affect making sure each is unique.
-    @pdf.each do|p|
-      @clientname = p.client.name.downcase
+    self.pdfs.each do|pdf|
+      @clientname = pdf.client.name.downcase
 
       # If this is the first time we have come across this client then...
       unless @client.include?(@clientname)    
         @client << @clientname
-
-        # Checking if the directory exists
-        @newdir = current_firm.store_dir + "/" +  @clientname + "/" + name.downcase
-        puts "Checking '" + @newdir + "'..."
-
-        # Move the directory, I require some error checking here,
-        # must check if the directory exists.
-        if File.exists?(@newdir)
-          # Throw an error here
-          errors.add(name," dir already exists, please change the clients name")   
-          return true
-        else
-          return false
-        end
-      end
+        return pdf.category_dir_exists?(name.downcase) 
+      end                       
     end
   end
 end

@@ -10,6 +10,28 @@ User.blueprint do
   firm_id { 1 }
 end
 
+Firm.blueprint do
+  name { "Digitech" }
+  store_dir  {"/home/map7/pdfcat_test_clt"}
+  upload_dir {"/home/map7/pdfcat_test_upload"}
+end
+
 Category.blueprint do
+  firm
   name {"General"}
+end
+
+Client.blueprint do
+  firm
+  name {"Publishing Solutions"}
+  email {"aep@publishing-solutions.com.au"}
+end
+
+Pdf.blueprint do
+  firm
+  client
+  category
+  pdfdate {Date.parse("28-01-2010")}
+  pdfname {"Unit Trust Deed"}
+  filename {"20100128-unit_trust_deed.pdf"}
 end
