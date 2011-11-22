@@ -44,7 +44,7 @@ class Category < ActiveRecord::Base
   def new_dir_available?
     self.clients.each do|client|
       if File.exists?("#{client.firm.store_dir}/#{client.name}/#{self.name}".downcase)
-        errors.add(name, "Category directory exists for some clients")
+        errors.add(:name, "Category directory exists for some clients")
       end
     end
     return errors.count == 0
