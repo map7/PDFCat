@@ -45,10 +45,8 @@ class Category < ActiveRecord::Base
     self.clients.each do|client|
       if File.exists?("#{client.firm.store_dir}/#{client.name}/#{self.name}".downcase)
         errors.add(name, "Category directory exists for some clients")
-        return false 
       end
     end
-
-    return true
+    return errors.count == 0
   end
 end

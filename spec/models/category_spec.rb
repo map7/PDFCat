@@ -7,22 +7,19 @@ describe Category do
     before do
       @cat = Category.make
       @pdf = Pdf.make(:category => @cat)
+      @pdf_dir = "#{@pdf.firm.store_dir}/#{@pdf.client.name}/#{@cat.name}".downcase
     end
     
     context "for one pdf with new category name not existing" do
       it "checks new category dir doesn't exists" do
-        File.stub!(:exists?).
-          with("#{@pdf.firm.store_dir}/#{@pdf.client.name}/#{@cat.name}".downcase).
-          and_return(false)
+        File.stub!(:exists?).with(@pdf_dir).and_return(false)
         @cat.new_dir_available?.should be_true
       end
     end
 
     context "for one pdf with new category name existing" do
       it "checks new category dir exists" do
-        File.stub!(:exists?).
-          with("#{@pdf.firm.store_dir}/#{@pdf.client.name}/#{@cat.name}".downcase).
-          and_return(true)
+        File.stub!(:exists?).with(@pdf_dir).and_return(true)
         @cat.new_dir_available?.should be_false
       end
     end
@@ -30,11 +27,9 @@ describe Category do
     context "multiple pdfs one with existing category name" do
       it "should store the result and return" do
         @pdf2 = Pdf.make(:client => Client.make(:name => "fred"), :category => @cat)
-        
-        File.stub!(:exists?).
-          with("#{@pdf.firm.store_dir}/#{@pdf.client.name}/#{@cat.name}".downcase).
-          and_return(false)
 
+        # The second pdf is available but not the first.
+        File.stub!(:exists?).with(@pdf_dir).and_return(false)
         File.stub!(:exists?).
           with("#{@pdf2.firm.store_dir}/#{@pdf2.client.name}/#{@cat.name}".downcase).
           and_return(true)
@@ -42,7 +37,5 @@ describe Category do
         @cat.new_dir_available?.should be_false
       end
     end
-  end
-
-  
+  end  
 end
