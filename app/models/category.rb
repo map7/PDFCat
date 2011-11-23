@@ -42,11 +42,15 @@ class Category < ActiveRecord::Base
 
   # Check if new proposed directory exists under any client with the category.
   def new_dir_available?
-    self.clients.each do|client|
-      if File.exists?("#{client.firm.store_dir}/#{client.name}/#{self.name}".downcase)
-        errors.add(:name, "Category directory exists for some clients")
+    if self.name_changed?
+      self.clients.each do|client|
+        if File.exists?("#{client.firm.store_dir}/#{client.name}/#{self.name}".downcase)
+          errors.add(:name, "Category directory exists for some clients")
+        end
       end
+      return errors.count == 0
+    else
+      return true
     end
-    return errors.count == 0
   end
 end
