@@ -54,7 +54,7 @@ class Pdf < ActiveRecord::Base
 
   # The new improved move_file routine, now with testing!
   def move_file2
-    Dir.mkdir_p(full_dir) unless File.exists?(full_dir)
+    Dir.mkdir_p(full_dir, 0775) unless File.exists?(full_dir)
     FileUtils.mv(prev_full_path, full_path)
   end
   
@@ -110,14 +110,19 @@ class Pdf < ActiveRecord::Base
     Digest::MD5.hexdigest(File.read(fullpath(current_firm)))
   end
 
-
+  def get_new_filename2
+    date = pdfdate.to_formatted_s(:file_format)
+    ext = File.extname(prev_full_path)
+    "#{full_dir}/#{date}-#{pdfname}#{ext}"
+  end
+  
   def get_new_filename(current_firm,original_file)
     # Format date
     @filedate = pdfdate.to_formatted_s(:file_format)
 
     # Format the new filename.
     @new_filename =  current_firm.store_dir + "/" + client.name.downcase + "/" + category.name.downcase + "/" + @filedate + "-" + pdfname + File.extname(original_file)
-  end
+   end
 
 
   # Move file from upload to the store_dir area under client & category.
