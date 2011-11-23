@@ -48,9 +48,7 @@ class Category < ActiveRecord::Base
           errors.add(:name, "Category directory exists for some clients")
         end
       end
-      return errors.count == 0
-    else
-      return true
     end
+    return errors.count == 0
   end
 end
