@@ -91,29 +91,42 @@ describe Pdf do
     
   end
   
-  describe "#move_dir" do
-    context "when directory exists" do
-      context "changing category" do
-        before do
-          @pdf = pdf
-          @cat = Category.make(:name => "new")
-          @pdf.category = @cat
-          FileUtils.stub!(:mv)
-        end
-        
-        it "should move the pdf" do
-          FileUtils.should_receive(:mv).with(full_path,
-                                             "#{client_dir}/#{@cat.name}/#{filename}")
-          @pdf.move_dir
-        end
+  describe "#move_file2" do
+    context "when changing category" do
 
+      let(:dest_dir){"#{client_dir}/#{@cat.name}"}
+      
+      before do
+        @pdf = pdf
+        @cat = Category.make(:name => "new")
+        @pdf.category = @cat
+        FileUtils.stub!(:mv)
+        File.stub!(:exists).and_return(true)
+        Dir.stub!(:mkdir_p)
+      end
+      
+      it "should move the pdf" do
+        FileUtils.should_receive(:mv).with(full_path,
+                                           "#{client_dir}/#{@cat.name}/#{filename}")
+        @pdf.move_file2
+      end
+
+      context "dest dir doesn't exist" do 
         it "should check the destination directory" do
-          
+          File.should_receive(:exists?).with(dest_dir).and_return(false)
+          Dir.should_receive(:mkdir_p).with(dest_dir)
+          @pdf.move_file2
+        end
+      end
+
+      context "dest dir does exist" do 
+        it "should check the destination directory" do
+          File.should_receive(:exists?).with(dest_dir).and_return(true)
+          Dir.should_not_receive(:mkdir_p)
+          @pdf.move_file2
         end
       end
     end
-
-    context "when directory doesn't exist"
   end
   
   

@@ -52,11 +52,13 @@ class Pdf < ActiveRecord::Base
     File.exists?(client_dir + "/" + cat_name)
   end  
 
-  def move_dir
+  # The new improved move_file routine, now with testing!
+  def move_file2
+    Dir.mkdir_p(full_dir) unless File.exists?(full_dir)
     FileUtils.mv(prev_full_path, full_path)
   end
   
-  
+ 
   
   # List uploaded files
     def self.list_files(current_firm)
