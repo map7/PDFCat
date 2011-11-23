@@ -1,6 +1,18 @@
 require 'spec_helper'
 
+
 describe Category do
+
+  
+  describe "#move_dir" do
+    context "when it's a main category" do
+      it "will move the directory" do
+        
+      end
+    end
+
+    context "when it's a sub-category"
+  end
 
   # Write tests for the model, break down move / creating of files.
   describe "#new_dir_available" do
