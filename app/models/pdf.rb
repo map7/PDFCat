@@ -30,6 +30,13 @@ class Pdf < ActiveRecord::Base
     client_dir + "/" + category_name
   end
 
+  def prev_full_path
+    from_client = Client.find(client_id_was)
+    from_cat = Category.find(category_id_was)
+    path_was ? path_was :
+      "#{firm.store_dir}/#{from_client.name.downcase}/#{from_cat.name.downcase}/#{filename}"
+  end
+  
   def full_path
     fullpath(firm)
   end
@@ -45,8 +52,8 @@ class Pdf < ActiveRecord::Base
     File.exists?(client_dir + "/" + cat_name)
   end  
 
-  def move_dir(dest_dir)
-    
+  def move_dir
+    FileUtils.mv(prev_full_path, full_path)
   end
   
   
