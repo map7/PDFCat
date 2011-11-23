@@ -66,10 +66,10 @@ class PdfsController < ApplicationController
       @oldclient = @pdf.client.name.downcase
 
       # Get the category selected from the drop down box and assign this to the foriegn key in pdf table.
-      @pdf.category = Category.find(params[:category]) unless params[:category].blank?
+      @pdf.category = Category.find(params[:pdf][:category_id]) unless params[:pdf][:category_id].blank?
 
       # Get the client select from the drop down..
-      @pdf.client = Client.find(params[:client]) unless params[:client].blank?
+      @pdf.client = Client.find(params[:pdf][:client_id]) unless params[:client_id].blank?
 
       logger.warn("Old category #{@oldcategory}")
       logger.warn("New category #{@pdf.category.name.downcase}")
