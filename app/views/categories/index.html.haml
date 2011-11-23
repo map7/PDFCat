@@ -3,8 +3,8 @@
 %table
 	%tr#header
 		%th#FKey FKey #{@no = 0}
-		- for column in Category.content_columns
-			%th= column.human_name
+		%th Name
+		%th Description
 		%th Documents
 
 	- for category in @categories
