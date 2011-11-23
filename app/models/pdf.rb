@@ -29,12 +29,28 @@ class Pdf < ActiveRecord::Base
   def full_dir
     client_dir + "/" + category_name
   end
+
+  def full_path
+    fullpath(firm)
+  end
+  
+  # Return the full path of the final filename.
+  # Keep this as it's referenced though out the app.
+  def fullpath(current_firm)
+    path ? path + "/" + filename : full_dir + "/" + filename
+  end
   
   # Checking if the directory exists
   def category_dir_exists?(cat_name)
     File.exists?(client_dir + "/" + cat_name)
   end  
 
+  def move_dir(dest_dir)
+    
+  end
+  
+  
+  
   # List uploaded files
     def self.list_files(current_firm)
       require 'find'
@@ -79,16 +95,6 @@ class Pdf < ActiveRecord::Base
     File.delete(filename) if File.exist?(filename)
   end
 
-  # Return the full path of the final filename.
-  def fullpath(current_firm)
-    if path
-      # If there is a path return this
-      path + "/" + filename
-    else
-      # Otherwise return our premade one.
-      current_firm.store_dir + "/" + client.name.downcase + "/" + category.name.downcase + "/" + filename
-    end
-  end
 
   # Create a md5
   def md5calc(current_firm)

@@ -6,6 +6,11 @@ describe Category do
   
   describe "#move_dir" do
     context "when it's a main category" do
+      before do 
+        @cat = Category.make
+        @pdf = Pdf.make(:category => @cat)
+      end
+      
       it "will move the directory" do
         
       end

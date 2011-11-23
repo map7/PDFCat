@@ -26,6 +26,12 @@ describe Pdf do
       pdf.full_dir.should == "/home/map7/pdfcat_test_clt/publishing solutions/general"
     end
   end
+
+  describe "#full_path" do
+    it "should return the full path including filename" do
+      pdf.full_path.should == "/home/map7/pdfcat_test_clt/publishing solutions/general/20100128-unit_trust_deed.pdf"
+    end
+  end
   
   describe "#category_dir_exists?" do
     let(:cat_name) { "general"}
@@ -45,7 +51,18 @@ describe Pdf do
       end
     end    
   end
+
   
+  describe "#move_dir" do
+    context "when directory exists" do
+      it "should move the pdf" do
+        pdf = Pdf.make
+        #puts pdf.full_dir
+      end
+    end
+
+    context "when directory doesn't exist"
+  end
   
   
 end
