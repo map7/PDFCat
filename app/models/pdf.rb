@@ -58,21 +58,18 @@ class Pdf < ActiveRecord::Base
 
   # The new improved move_file routine, now with testing!
   def move_file2
-#    debugger
-    unless does_new_full_path_exist?
-      unless prev_full_path == new_full_path
-        FileUtils.mkdir_p(full_dir, :mode => 0775) unless File.exists?(full_dir)
-        FileUtils.mv(prev_full_path, new_full_path)
-        self.filename = get_new_filename2
-      end
+    unless prev_full_path == new_full_path or does_new_full_path_exist?
+      FileUtils.mkdir_p(full_dir, :mode => 0775) unless File.exists?(full_dir)
+      FileUtils.mv(prev_full_path, new_full_path)
+      self.filename = get_new_filename2
     end
   end
   
- 
+  
   
   # List uploaded files
-    def self.list_files(current_firm)
-      require 'find'
+  def self.list_files(current_firm)
+    require 'find'
 
       files = Array.new
 
