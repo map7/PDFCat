@@ -125,6 +125,12 @@ class PdfsController < ApplicationController
     @clients, @categories = current_firm.clients_sorted, current_firm.categories_sorted
   end
   
+  def create
+    @pdf = Pdf.new(:filename => params[:filename])
+    @pdf.md5calc2
+    redirect_to new_pdfs_path
+  end
+  
   def edit
     @pdf = Pdf.find(params[:id])
     @clients, @categories = current_firm.clients_sorted, current_firm.categories_sorted
@@ -139,7 +145,7 @@ class PdfsController < ApplicationController
       unless @pdf.does_new_full_path_exist?
         @pdf.save
         redirect_to @pdf
-      end
+      end 
     end
 
     if @pdf.errors.count > 0

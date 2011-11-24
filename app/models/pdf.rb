@@ -62,7 +62,7 @@ class Pdf < ActiveRecord::Base
       FileUtils.mkdir_p(full_dir, :mode => 0775) unless File.exists?(full_dir)
       FileUtils.mv(prev_full_path, new_full_path)
       self.filename = get_new_filename2
-    end
+    end    
   end
   
   
@@ -113,6 +113,10 @@ class Pdf < ActiveRecord::Base
 
 
   # Create a md5
+  def md5calc2(current_firm)
+    md5 = Digest::MD5.hexdigest(File.read(fullpath(current_firm)))
+  end
+
   def md5calc(current_firm)
     Digest::MD5.hexdigest(File.read(fullpath(current_firm)))
   end

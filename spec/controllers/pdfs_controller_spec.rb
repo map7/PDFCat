@@ -49,6 +49,28 @@ describe PdfsController do
         @new_pdf.firm.should == pdf.firm
       end
     end
+
+    describe "#create" do
+      before do
+        Pdf.stub!(:new).and_return(pdf)
+        pdf.stub!(:md5calc2)
+      end
+      
+      it "should create new pdf" do
+        Pdf.should_receive(:new).with(:filename => "test.pdf")
+        post :create, :filename => "test.pdf"
+      end
+      
+      it "should create a md5" do 
+        pdf.should_receive(:md5calc2)
+        post :create, :filename => "test.pdf"
+      end
+      
+      it "should redirect to new" do
+        post :create, :filename => "test.pdf"
+        response.should redirect_to(new_pdfs_path)
+      end
+    end
     
     describe "#edit" do
       it "should assign @pdf" do
