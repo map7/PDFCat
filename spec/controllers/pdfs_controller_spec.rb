@@ -57,7 +57,8 @@ describe PdfsController do
       end
       
       it "should create new pdf" do
-        Pdf.should_receive(:new)
+        pdf.stub!(:move_uploaded_file).and_return(true)
+        Pdf.should_receive(:new).and_return(pdf)
         post :create, :filename => "test.pdf"
       end
 

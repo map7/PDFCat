@@ -114,7 +114,7 @@ class PdfsController < ApplicationController
     @pdf.filename = File.basename(params[:filename]) if params[:filename]
     
     if @pdf.valid?
-      @pdf.move_file2
+      @pdf.move_uploaded_file
       @pdf.md5calc2
       redirect_to new_pdfs_path
     else
