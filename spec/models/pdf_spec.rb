@@ -124,6 +124,20 @@ describe Pdf do
         @pdf.move_file2
       end
 
+
+      context "new full path doesn't exist" do 
+
+        before do 
+          @pdf.stub!(:does_new_full_path_exist?).and_return(true)
+          File.stub!(:exists?).with(dest_dir).and_return(false)
+        end
+
+        it "shouldn't move" do
+          FileUtils.should_not_receive(:mkdir_p)
+          @pdf.move_file2
+        end
+      end
+      
       context "new full path doesn't exist" do 
 
         before do 
