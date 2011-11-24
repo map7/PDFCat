@@ -146,7 +146,6 @@ describe Pdf do
 
         context "dest dir doesn't exist" do 
           it "should create the destination directory" do
-
             File.should_receive(:exists?).with(dest_dir).and_return(false)
             FileUtils.should_receive(:mkdir_p).with(dest_dir, :mode => 0775)
             @pdf.move_file2
@@ -155,13 +154,12 @@ describe Pdf do
 
         context "dest dir does exist" do 
           it "should check the destination directory only" do
-            
             File.should_receive(:exists?).with(dest_dir).and_return(true)
             FileUtils.should_not_receive(:mkdir_p)
             @pdf.move_file2
           end
         end
-      end
+      end # new full path doesn't exist
     end
   end
 

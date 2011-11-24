@@ -46,8 +46,6 @@ class PdfsController < ApplicationController
   #     # Create md5
   #     @pdf.md5 = @pdf.md5calc(current_firm)
   #     @pdf.save
-
-
   #   end
 
   #   response_for :create do
@@ -70,9 +68,6 @@ class PdfsController < ApplicationController
 
   #     # Get the client select from the drop down..
   #     @pdf.client = Client.find(params[:pdf][:client_id]) unless params[:client_id].blank?
-
-  #     logger.warn("Old category #{@oldcategory}")
-  #     logger.warn("New category #{@pdf.category.name.downcase}")
 
   #     pdf_exist = @pdf.does_file_exist?(current_firm, @oldclient, @oldcategory)
 
@@ -123,6 +118,8 @@ class PdfsController < ApplicationController
   def show
     @pdf = Pdf.find(params[:id])    
   end
+  
+  
   
   def edit
     @pdf = Pdf.find(params[:id])
