@@ -78,11 +78,6 @@ describe PdfsController do
           post :create, :filename => "test.pdf"
         end
         
-        it "should create a md5" do 
-          pdf.should_receive(:md5calc2)
-          post :create, :filename => "test.pdf"
-        end
-        
         it "should move the file" do
           pdf.should_receive(:move_uploaded_file).and_return(true)
           post :create, :filename => "test.pdf"

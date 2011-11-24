@@ -70,6 +70,7 @@ class Pdf < ActiveRecord::Base
       FileUtils.mkdir_p(full_dir, :mode => 0775) unless File.exists?(full_dir)
       FileUtils.mv(from, new_full_path)
       self.filename = get_new_filename2
+      self.md5 = md5calc2(self.firm)
     end
   end
   

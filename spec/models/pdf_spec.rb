@@ -106,16 +106,30 @@ describe Pdf do
   
  
   describe "#move_uploaded_file" do 
+    before do
+      pdf.stub!(:md5calc2)
+      FileUtils.stub!(:mv)
+    end
+    
     context "when new file" do
       it "should move the pdf" do 
         pdf.filename = "/path/to/uploaded file.pdf"
         FileUtils.should_receive(:mv).with(pdf.filename,pdf.new_full_path)
         pdf.move_uploaded_file
       end
+
+      it "should call md5calc2" do
+        pdf.should_receive(:md5calc2)
+        pdf.move_uploaded_file
+      end
     end
   end
   
   describe "#move_file2" do
+    before do 
+      pdf.stub!(:md5calc2)
+    end
+    
     context "when changing category" do
       let(:dest_dir){"#{client_dir}/#{@cat.name}"}
       

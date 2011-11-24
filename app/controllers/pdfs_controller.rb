@@ -118,7 +118,6 @@ class PdfsController < ApplicationController
       @pdf.move_uploaded_file
       unless @pdf.does_new_full_path_exist?
         @pdf.save
-        @pdf.md5calc2(current_firm)
         redirect_to new_pdfs_path
       end
     end
