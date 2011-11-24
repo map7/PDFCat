@@ -109,10 +109,6 @@ class PdfsController < ApplicationController
   def create
     @pdf = Pdf.new(params[:pdf])
     @pdf.filename = File.basename(params[:filename]) if params[:filename]
-
-    @pdf.category = Category.find(params[:category]) unless params[:category].blank?
-    @pdf.client = Client.find(params[:client]) unless params[:client].blank?
-    @pdf.firm = current_firm
     
     if @pdf.valid?
       @pdf.move_uploaded_file
