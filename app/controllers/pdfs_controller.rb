@@ -9,9 +9,6 @@ class PdfsController < ApplicationController
 
   #   before :create do
   #     # Get firm, category and client from drop downs.
-  #     @pdf.firm_id = current_firm.id
-  #     @pdf.category = Category.find(params[:category]) unless params[:category].blank?
-  #     @pdf.client = Client.find(params[:client]) unless params[:client].blank?
 
   #     # Move the file and set the new filename to be saved
   #     if File.exist?(@pdf.get_new_filename(current_firm,current_firm.upload_dir + "/" + @pdf.filename))
@@ -112,12 +109,21 @@ class PdfsController < ApplicationController
   def create
     @pdf = Pdf.new(params[:pdf])
     @pdf.filename = File.basename(params[:filename]) if params[:filename]
+
+    @pdf.category = Category.find(params[:category]) unless params[:category].blank?
+    @pdf.client = Client.find(params[:client]) unless params[:client].blank?
+    @pdf.firm = current_firm
     
     if @pdf.valid?
       @pdf.move_uploaded_file
-      @pdf.md5calc2
-      redirect_to new_pdfs_path
-    else
+      unless @pdf.does_new_full_path_exist?
+        @pdf.save
+        @pdf.md5calc2(current_firm)
+        redirect_to new_pdfs_path
+      end
+    end
+    
+    if @pdf.errors.count > 0
       @clients, @categories = current_firm.clients_sorted, current_firm.categories_sorted
       render "new"
     end

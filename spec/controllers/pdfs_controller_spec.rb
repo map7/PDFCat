@@ -70,6 +70,12 @@ describe PdfsController do
       context "if data is valid" do
         before do
           pdf.stub!(:move_uploaded_file).and_return(true)
+          pdf.stub!(:does_new_full_path_exist?).and_return(false)
+        end
+
+        it "should set the new pdf to current firm" do
+          pdf.should_receive(:firm=)
+          post :create, :filename => "test.pdf"
         end
         
         it "should create a md5" do 
@@ -79,6 +85,11 @@ describe PdfsController do
         
         it "should move the file" do
           pdf.should_receive(:move_uploaded_file).and_return(true)
+          post :create, :filename => "test.pdf"
+        end
+
+        it "should save the pdf" do
+          pdf.should_receive(:save).and_return(true)
           post :create, :filename => "test.pdf"
         end
         
@@ -91,6 +102,7 @@ describe PdfsController do
       context "if data is invalid" do
         before do
           pdf.stub!(:valid?).and_return(false)
+          pdf.stub_chain(:errors, :count).and_return(1)
         end
 
         it "should render new" do
