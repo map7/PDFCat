@@ -30,6 +30,25 @@ describe PdfsController do
         assigns(:pdf).should == pdf
       end
     end
+
+    describe "#new" do
+
+      before do 
+        @new_pdf = Pdf.new
+        controller.stub!(:current_firm).and_return(pdf.firm)
+        Pdf.stub!(:new).and_return(@new_pdf)
+      end
+      
+      it "should assign @pdf" do
+        get :new, :filename => "test.pdf"
+        assigns(:pdf).should == @new_pdf
+      end
+
+      it "should set the firm to current firm" do
+        get :new, :filename => "test.pdf"
+        @new_pdf.firm.should == pdf.firm
+      end
+    end
     
     describe "#edit" do
       it "should assign @pdf" do

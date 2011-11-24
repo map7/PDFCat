@@ -119,7 +119,12 @@ class PdfsController < ApplicationController
     @pdf = Pdf.find(params[:id])    
   end
   
-  
+  def new
+    @pdf = Pdf.new(:filename => params[:filename])
+    @pdf.firm = current_firm
+    @clients = @pdf.firm.clients.sort{ |a,b| a.name.downcase <=> b.name.downcase}
+    @categories = @pdf.firm.categories.sort{ |a,b| a.name.downcase <=> b.name.downcase}    
+  end
   
   def edit
     @pdf = Pdf.find(params[:id])
