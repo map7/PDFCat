@@ -8,11 +8,11 @@ describe PdfsController do
 
     let(:pdf) {Pdf.make}
 
+    before do
+      controller.stub!(:current_firm).and_return(pdf.firm)
+    end
+    
     describe "#index" do
-      before do
-        controller.stub!(:current_firm).and_return(pdf.firm)
-      end
-      
       it "should show index" do
         get :index
         response.should be_success

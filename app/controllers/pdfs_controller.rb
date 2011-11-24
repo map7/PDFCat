@@ -122,14 +122,12 @@ class PdfsController < ApplicationController
   def new
     @pdf = Pdf.new(:filename => params[:filename])
     @pdf.firm = current_firm
-    @clients = @pdf.firm.clients.sort{ |a,b| a.name.downcase <=> b.name.downcase}
-    @categories = @pdf.firm.categories.sort{ |a,b| a.name.downcase <=> b.name.downcase}    
+    @clients, @categories = current_firm.clients_sorted, current_firm.categories_sorted
   end
   
   def edit
     @pdf = Pdf.find(params[:id])
-    @clients = @pdf.firm.clients.sort{ |a,b| a.name.downcase <=> b.name.downcase}
-    @categories = @pdf.firm.categories.sort{ |a,b| a.name.downcase <=> b.name.downcase}    
+    @clients, @categories = current_firm.clients_sorted, current_firm.categories_sorted
   end
   
   def update
@@ -145,8 +143,7 @@ class PdfsController < ApplicationController
     end
 
     if @pdf.errors.count > 0
-      @clients = @pdf.firm.clients.sort{ |a,b| a.name.downcase <=> b.name.downcase}
-      @categories = @pdf.firm.categories.sort{ |a,b| a.name.downcase <=> b.name.downcase} 
+      @clients, @categories = current_firm.clients_sorted, current_firm.categories_sorted
       render :action => "edit"
     end
   end
