@@ -88,7 +88,13 @@ describe Pdf do
         end
       end
     end  
-    
+  end
+  
+  describe "#get_new_filename" do
+    it "should return new filename" do
+      pdf.pdfname = "foobar"
+      pdf.get_new_filename2.should == "#{full_dir}/20100128-foobar.pdf"
+    end
   end
   
   describe "#move_file2" do
@@ -128,12 +134,6 @@ describe Pdf do
       end
     end
   end
-  
-  describe "#get_new_filename" do
-    it "should return new filename" do
-      pdf.pdfname = "foobar"
-      pdf.get_new_filename2.should == "#{full_dir}/20100128-foobar.pdf"
-    end
-  end
+
   
 end
