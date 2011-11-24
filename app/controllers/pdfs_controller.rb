@@ -111,13 +111,33 @@ class PdfsController < ApplicationController
 
   # end # make_resourceful
 
-
+  def index
+      @pdfs = Pdf.paginate(:all,
+                           :order => 'pdfdate DESC',
+                           :page => params[:page],
+                           :per_page => 10,
+                           :conditions => search_conditions,
+                           :joins => [:firm, :client, :category])
+  end
+  
+  def show
+    @pdf = Pdf.find(params[:id])    
+  end
+  
+  def edit
+    @pdf = Pdf.find(params[:id])
+    @clients = @pdf.firm.clients.sort{ |a,b| a.name.downcase <=> b.name.downcase}
+    @categories = @pdf.firm.categories.sort{ |a,b| a.name.downcase <=> b.name.downcase}    
+  end
   
   def update
     @pdf = Pdf.find(params[:id])
+    @pdf.attributes = params[:pdf]
+
     if @pdf.valid?
+#      debugger
       @pdf.move_file2
-      @pdf.update_attributes(params[:pdf])
+      @pdf.save
       redirect_to @pdf
     else
       render :action => "edit"

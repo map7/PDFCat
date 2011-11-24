@@ -8,10 +8,43 @@ describe PdfsController do
 
     let(:pdf) {Pdf.make}
 
+    describe "#index" do
+      before do
+        controller.stub!(:current_firm).and_return(pdf.firm)
+      end
+      
+      it "should show index" do
+        get :index
+        response.should be_success
+      end
+
+      it "should assign @pdfs" do
+        get :index
+        assigns(:pdfs).should == Pdf.all
+      end
+    end
+    
+    describe "#show" do
+      it "should assign @pdf" do
+        get :show, :id => pdf.id
+        assigns(:pdf).should == pdf
+      end
+    end
+    
     describe "#edit" do
       it "should assign @pdf" do
         get :edit, :id => pdf.id
         assigns(:pdf).should == pdf
+      end
+
+      it "should assign @clients" do
+        get :edit, :id => pdf.id
+        assigns(:clients).should == pdf.firm.clients
+      end
+
+      it "should assign @categories" do
+        get :edit, :id => pdf.id
+        assigns(:categories).should == pdf.firm.categories
       end
     end
     
@@ -23,7 +56,8 @@ describe PdfsController do
       
       context "with valid attributes" do
         before do
-          pdf.stub!(:update_attributes).and_return(true)
+          pdf.stub!(:attributes).and_return(true)
+          pdf.stub!(:save).and_return(true)
           Pdf.stub!(:find).and_return(pdf)
         end
 
@@ -33,7 +67,7 @@ describe PdfsController do
         end
         
         it "should update pdf" do
-          pdf.should_receive(:update_attributes).and_return(true)
+          pdf.should_receive(:attributes=).and_return(true)
           put :update, :id => pdf.id
         end
         
@@ -50,7 +84,7 @@ describe PdfsController do
       
       context "with invalid attributes" do
         before do
-          pdf.stub!(:valid?).and_return(false)
+          pdf.pdfname = ""
           Pdf.stub!(:find).and_return(pdf)
         end
 
