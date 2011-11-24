@@ -57,18 +57,50 @@ describe PdfsController do
       end
       
       it "should create new pdf" do
-        Pdf.should_receive(:new).with(:filename => "test.pdf")
+        Pdf.should_receive(:new)
+        post :create, :filename => "test.pdf"
+      end
+
+      it "should call valid?" do
+        pdf.should_receive(:valid?)
         post :create, :filename => "test.pdf"
       end
       
-      it "should create a md5" do 
-        pdf.should_receive(:md5calc2)
-        post :create, :filename => "test.pdf"
+      context "if data is valid" do
+        before do
+          pdf.stub!(:move_uploaded_file).and_return(true)
+        end
+        
+        it "should create a md5" do 
+          pdf.should_receive(:md5calc2)
+          post :create, :filename => "test.pdf"
+        end
+        
+        it "should move the file" do
+          pdf.should_receive(:move_uploaded_file).and_return(true)
+          post :create, :filename => "test.pdf"
+        end
+        
+        it "should redirect to new" do
+          post :create, :filename => "test.pdf"
+          response.should redirect_to(new_pdfs_path)
+        end
       end
-      
-      it "should redirect to new" do
-        post :create, :filename => "test.pdf"
-        response.should redirect_to(new_pdfs_path)
+
+      context "if data is invalid" do
+        before do
+          pdf.stub!(:valid?).and_return(false)
+        end
+
+        it "should render new" do
+          post :create, :filename => "test.pdf"
+          response.should render_template("new")
+        end
+
+        it "should assign @pdf" do
+          post :create, :filename => "test.pdf"
+          assigns(:pdf).should == pdf
+        end
       end
     end
     

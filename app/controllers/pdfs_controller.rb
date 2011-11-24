@@ -5,23 +5,7 @@ class PdfsController < ApplicationController
   # make_resourceful do
   #   actions :all
 
-  #   # list all, sort by date (most recent at the top), 10 items per page.
-  #   before :index do
 
-  #     @pdfs = Pdf.paginate(:all,
-  #                          :order => 'pdfdate DESC',
-  #                          :page => params[:page],
-  #                          :per_page => 10,
-  #                          :conditions => search_conditions,
-  #                          :joins => [:firm, :client, :category])
-  #   end
-
-  #   before :new, :edit do
-  #     @pdf.filename = File.basename(params[:filename]) if params[:filename]
-
-  #     @clients = current_firm.clients.sort{ |a,b| a.name.upcase <=> b.name.upcase}
-  #     @categories = current_firm.categories.sort{ |a,b| a.name.upcase <=> b.name.upcase}
-  #   end
 
   #   before :create do
   #     # Get firm, category and client from drop downs.
@@ -126,9 +110,17 @@ class PdfsController < ApplicationController
   end
   
   def create
-    @pdf = Pdf.new(:filename => params[:filename])
-    @pdf.md5calc2
-    redirect_to new_pdfs_path
+    @pdf = Pdf.new(params[:pdf])
+    @pdf.filename = File.basename(params[:filename]) if params[:filename]
+    
+    if @pdf.valid?
+      @pdf.move_file2
+      @pdf.md5calc2
+      redirect_to new_pdfs_path
+    else
+      @clients, @categories = current_firm.clients_sorted, current_firm.categories_sorted
+      render "new"
+    end
   end
   
   def edit
@@ -150,7 +142,7 @@ class PdfsController < ApplicationController
 
     if @pdf.errors.count > 0
       @clients, @categories = current_firm.clients_sorted, current_firm.categories_sorted
-      render :action => "edit"
+      render "edit"
     end
   end
   

@@ -104,9 +104,19 @@ describe Pdf do
     end
   end
   
+ 
+  describe "#move_uploaded_file" do 
+    context "when new file" do
+      it "should move the pdf" do 
+        pdf.filename = "/path/to/uploaded file.pdf"
+        FileUtils.should_receive(:mv).with(pdf.filename,pdf.new_full_path)
+        pdf.move_uploaded_file
+      end
+    end
+  end
+  
   describe "#move_file2" do
     context "when changing category" do
-
       let(:dest_dir){"#{client_dir}/#{@cat.name}"}
       
       before do
