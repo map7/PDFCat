@@ -93,10 +93,20 @@ describe PdfsController do
           response.should render_template("edit")
         end
 
-        it "assigns @pdf" do
-          put :update, :id => pdf.id
+        it "should assign @pdf" do
+          get :edit, :id => pdf.id
           assigns(:pdf).should == pdf
         end
+
+        it "should assign @clients" do
+          get :edit, :id => pdf.id
+          assigns(:clients).should == pdf.firm.clients
+        end
+
+        it "should assign @categories" do
+          get :edit, :id => pdf.id
+          assigns(:categories).should == pdf.firm.categories
+        end        
       end
       
 

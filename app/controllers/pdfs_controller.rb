@@ -3,7 +3,7 @@ class PdfsController < ApplicationController
   before_filter :login_required
 
   # make_resourceful do
-  #   actions :all, :except => :update
+  #   actions :all
 
   #   # list all, sort by date (most recent at the top), 10 items per page.
   #   before :index do
@@ -135,11 +135,16 @@ class PdfsController < ApplicationController
     @pdf.attributes = params[:pdf]
 
     if @pdf.valid?
-#      debugger
       @pdf.move_file2
-      @pdf.save
-      redirect_to @pdf
-    else
+      unless @pdf.does_new_full_path_exist?
+        @pdf.save
+        redirect_to @pdf
+      end
+    end
+
+    if @pdf.errors.count > 0
+      @clients = @pdf.firm.clients.sort{ |a,b| a.name.downcase <=> b.name.downcase}
+      @categories = @pdf.firm.categories.sort{ |a,b| a.name.downcase <=> b.name.downcase} 
       render :action => "edit"
     end
   end

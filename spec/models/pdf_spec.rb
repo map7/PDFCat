@@ -38,6 +38,13 @@ describe Pdf do
     end
   end
   
+  describe "#new_full_path" do
+    it "should return the full path including new filename" do
+      pdf.pdfname = "test"
+      pdf.new_full_path.should == "#{full_dir}/#{pdf.get_new_filename2}"
+    end
+  end
+  
   describe "#category_dir_exists?" do
     let(:cat_name) { "general"}
     
@@ -93,7 +100,7 @@ describe Pdf do
   describe "#get_new_filename" do
     it "should return new filename" do
       pdf.pdfname = "foobar"
-      pdf.get_new_filename2.should == "#{full_dir}/20100128-foobar.pdf"
+      pdf.get_new_filename2.should == "20100128-foobar.pdf"
     end
   end
   
@@ -108,7 +115,7 @@ describe Pdf do
         @pdf.category = @cat
         FileUtils.stub!(:mv)
         File.stub!(:exists).and_return(true)
-        Dir.stub!(:mkdir_p)
+        FileUtils.stub!(:mkdir_p)
       end
       
       it "should move the pdf" do
@@ -117,19 +124,28 @@ describe Pdf do
         @pdf.move_file2
       end
 
-      context "dest dir doesn't exist" do 
-        it "should create the destination directory" do
-          File.should_receive(:exists?).with(dest_dir).and_return(false)
-          Dir.should_receive(:mkdir_p).with(dest_dir, 0775)
-          @pdf.move_file2
-        end
-      end
+      context "new full path doesn't exist" do 
 
-      context "dest dir does exist" do 
-        it "should check the destination directory only" do
-          File.should_receive(:exists?).with(dest_dir).and_return(true)
-          Dir.should_not_receive(:mkdir_p)
-          @pdf.move_file2
+        before do 
+          @pdf.stub!(:does_new_full_path_exist?).and_return(false)
+        end
+
+        context "dest dir doesn't exist" do 
+          it "should create the destination directory" do
+
+            File.should_receive(:exists?).with(dest_dir).and_return(false)
+            FileUtils.should_receive(:mkdir_p).with(dest_dir, :mode => 0775)
+            @pdf.move_file2
+          end
+        end
+
+        context "dest dir does exist" do 
+          it "should check the destination directory only" do
+            
+            File.should_receive(:exists?).with(dest_dir).and_return(true)
+            FileUtils.should_not_receive(:mkdir_p)
+            @pdf.move_file2
+          end
         end
       end
     end

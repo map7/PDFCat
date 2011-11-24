@@ -13,7 +13,7 @@ class Pdf < ActiveRecord::Base
   validates_format_of :pdfname, :with => /^[^\/\\\?\*:|"<>]+$/, :message => "cannot contain any of the following characters: / \\ ? * : | \" < >"
 
   # validate :does_file_exist?  # Must check if the original filename exists not the new one
-
+  
   def client_name
     client.name.downcase
   end
@@ -37,6 +37,10 @@ class Pdf < ActiveRecord::Base
       "#{firm.store_dir}/#{from_client.name.downcase}/#{from_cat.name.downcase}/#{filename}"
   end
   
+  def new_full_path
+    "#{full_dir}/#{get_new_filename2}".downcase
+  end
+  
   def full_path
     fullpath(firm)
   end
@@ -55,9 +59,12 @@ class Pdf < ActiveRecord::Base
   # The new improved move_file routine, now with testing!
   def move_file2
 #    debugger
-    unless prev_full_path == full_path
-      FileUtils.mkdir_p(full_dir, :mode => 0775) unless File.exists?(full_dir)
-      FileUtils.mv(prev_full_path, full_path)
+    unless does_new_full_path_exist?
+      unless prev_full_path == new_full_path
+        FileUtils.mkdir_p(full_dir, :mode => 0775) unless File.exists?(full_dir)
+        FileUtils.mv(prev_full_path, new_full_path)
+        self.filename = get_new_filename2
+      end
     end
   end
   
@@ -116,7 +123,8 @@ class Pdf < ActiveRecord::Base
   def get_new_filename2
     date = pdfdate.to_formatted_s(:file_format)
     ext = File.extname(prev_full_path)
-    "#{full_dir}/#{date}-#{pdfname}#{ext}"
+    filename = "#{date}-#{pdfname}#{ext}".gsub(/ /,"_")
+    filename
   end
   
   def get_new_filename(current_firm,original_file)
@@ -343,6 +351,13 @@ class Pdf < ActiveRecord::Base
 
 
 # Validators
+  def does_new_full_path_exist?
+    if File.exists?(new_full_path) and full_path != new_full_path
+      self.errors.add(:pdfname, " already exists, please change pdfname")
+    end
+    errors.count > 0
+  end
+  
   # Validate the the current file exists before moving it.
   def does_file_exist?(current_firm, oldclient, oldcategory)
     # If the old path exists or the files modified path exists return true.
@@ -350,14 +365,14 @@ class Pdf < ActiveRecord::Base
     if File.exist?(current_firm.store_dir + "/" + oldclient.downcase + "/" + oldcategory.downcase + "/" + filename) or File.exist?(self.fullpath(current_firm))
       return true
     else
-      errors.add(filename, " has gone missing, please relink!")
+      errors.add(:filename, " has gone missing, please relink!")
       return false
     end
   end
 
   def file_exist?(current_firm)
     if !File.exist?(fullpath(current_firm))
-      errors.add(filename, " has gone missing!")
+      errors.add(:filename, " has gone missing!")
       return false
     end
 
