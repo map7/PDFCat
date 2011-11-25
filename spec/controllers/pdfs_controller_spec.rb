@@ -73,11 +73,6 @@ describe PdfsController do
           pdf.stub!(:does_new_full_path_exist?).and_return(false)
         end
 
-        it "should set the new pdf to current firm" do
-          pdf.should_receive(:firm=)
-          post :create, :filename => "test.pdf"
-        end
-        
         it "should move the file" do
           pdf.should_receive(:move_uploaded_file).and_return(true)
           post :create, :filename => "test.pdf"
@@ -160,6 +155,11 @@ describe PdfsController do
         it "should redirect to pdfs path" do
           put :update, :id => pdf.id
           response.should redirect_to pdf_path(pdf.id)
+        end
+        
+        it "flashes update message" do
+          put :update, :id => pdf.id
+          flash[:notice].should == "Pdf was successfully updated."
         end
       end
       

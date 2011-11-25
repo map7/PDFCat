@@ -3,59 +3,6 @@ class PdfsController < ApplicationController
   before_filter :login_required
 
   # make_resourceful do
-  #   actions :all
-
-
-
-  #   before :create do
-  #     # Get firm, category and client from drop downs.
-
-  #     # Move the file and set the new filename to be saved
-  #     if File.exist?(@pdf.get_new_filename(current_firm,current_firm.upload_dir + "/" + @pdf.filename))
-
-  #       # Throwing an error, Return with an error (throw error)
-  #       @pdf.errors.add :name, "'" + @pdf.pdfname + "' already taken for this client, category and date."
-
-  #       @clients = current_firm.clients.sort{ |a,b| a.name.upcase <=> b.name.upcase}
-  #       @categories = current_firm.categories.sort{ |a,b| a.name.upcase <=> b.name.upcase}
-  #     end
-  #   end
-
-  #   after :create do
-  #     # Now that the pdf has been validated we can move the pdf
-  #     @pdf.filename = @pdf.move_file(current_firm,current_firm.upload_dir + "/" + @pdf.filename)
-  #     # Create md5
-  #     @pdf.md5 = @pdf.md5calc(current_firm)
-  #     @pdf.save
-  #   end
-
-  #   response_for :create do
-  #     redirect_to :action => 'index'
-  #   end
-
-  #   response_for :create_fail do
-  #     @clients = current_firm.clients.sort{ |a,b| a.name.upcase <=> b.name.upcase}
-  #     @categories = current_firm.categories.sort{ |a,b| a.name.upcase <=> b.name.upcase}
-  #     render :action => 'new'
-  #   end
-
-  #   before :update do
-  #     # Store the old category and client
-  #     @oldcategory = @pdf.category.name.downcase
-  #     @oldclient = @pdf.client.name.downcase
-
-  #     # Get the category selected from the drop down box and assign this to the foriegn key in pdf table.
-  #     @pdf.category = Category.find(params[:pdf][:category_id]) unless params[:pdf][:category_id].blank?
-
-  #     # Get the client select from the drop down..
-  #     @pdf.client = Client.find(params[:pdf][:client_id]) unless params[:client_id].blank?
-
-  #     pdf_exist = @pdf.does_file_exist?(current_firm, @oldclient, @oldcategory)
-
-  #     unless pdf_exist
-  #       @pdf.errors.add :name, "'" + @pdf.pdfname + "' already taken for this client, category and date."
-  #     end
-  #   end
 
   #   response_for :update do
   #     flash[:notice] = 'Pdf was successfully updated.'
@@ -137,6 +84,7 @@ class PdfsController < ApplicationController
       @pdf.move_file2
       unless @pdf.does_new_full_path_exist?
         @pdf.save
+        flash[:notice] = "Pdf was successfully updated."
         redirect_to @pdf
       end 
     end
