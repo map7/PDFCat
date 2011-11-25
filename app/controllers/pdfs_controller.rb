@@ -48,8 +48,7 @@ class PdfsController < ApplicationController
   end
   
   def new
-    @pdf = Pdf.new(:filename => params[:filename])
-    @pdf.firm = current_firm
+    @pdf = Pdf.new(:filename => params[:filename], :firm_id => current_firm.id)
     @clients, @categories = current_firm.clients_sorted, current_firm.categories_sorted
   end
   

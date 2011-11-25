@@ -36,17 +36,17 @@ describe PdfsController do
       before do 
         @new_pdf = Pdf.new
         controller.stub!(:current_firm).and_return(pdf.firm)
-        Pdf.stub!(:new).and_return(@new_pdf)
       end
       
       it "should assign @pdf" do
+        Pdf.stub!(:new).and_return(@new_pdf)
         get :new, :filename => "test.pdf"
         assigns(:pdf).should == @new_pdf
       end
 
       it "should set the firm to current firm" do
         get :new, :filename => "test.pdf"
-        @new_pdf.firm.should == pdf.firm
+        assigns(:pdf).firm_id.should == pdf.firm.id
       end
     end
 
