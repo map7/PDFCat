@@ -189,9 +189,36 @@ describe PdfsController do
           assigns(:categories).should == pdf.firm.categories
         end        
       end
+
+    end # edit
+
+    describe "#delete" do
+      before do 
+        pdf.stub!(:delete_file)
+      end
       
+      it "deletes the pdf db record" do
+        lambda do 
+          delete :destroy, :id => pdf.id
+        end.should change(Pdf, :count).from(1).to(0)
+      end
 
-
+      it "deletes the pdf file" do
+        Pdf.stub!(:find).and_return(pdf)
+        pdf.should_receive(:delete_file)
+        delete :destroy, :id => pdf.id
+      end
+      
+      it "sets a flash message" do
+        delete :destroy, :id => pdf.id
+        flash[:notice].should == "Pdf successfully deleted."
+      end
+      
+      it "redirects to pdf listing" do
+        delete :destroy, :id => pdf.id
+        response.should redirect_to pdfs_path
+      end
     end
-  end
+    
+  end # logged in user
 end

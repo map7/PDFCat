@@ -29,7 +29,7 @@ class PdfsController < ApplicationController
   #   end
 
   #   before :destroy do
-  #     @pdf.delete_file(@pdf.fullpath(current_firm))
+
   #   end
 
   # end # make_resourceful
@@ -93,7 +93,14 @@ class PdfsController < ApplicationController
       render "edit"
     end
   end
-  
+
+  def destroy
+    pdf = Pdf.find(params[:id])
+    pdf.delete_file(pdf.fullpath(current_firm))
+    pdf.delete
+    flash[:notice] = "Pdf successfully deleted."
+    redirect_to pdfs_path
+  end
   
   
   
