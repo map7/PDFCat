@@ -55,10 +55,14 @@ class Pdf < ActiveRecord::Base
     fullpath(firm)
   end
   
+  def get_filename
+    filename.downcase.gsub(/ /,"_")
+  end
+  
   # Return the full path of the final filename.
   # Keep this as it's referenced though out the app.
   def fullpath(current_firm)
-    path ? path + "/" + filename.downcase : full_dir + "/" + filename.downcase
+    path ? path + "/" + get_filename : full_dir + "/" + get_filename
   end
   
   # Checking if the directory exists
