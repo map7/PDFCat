@@ -12,6 +12,16 @@ class Category < ActiveRecord::Base
   # Just use the directory if it exists, don't deny people the right to use an existing dir.
   # validate :new_dir_available?   
 
+  default_scope :order => "upper(name)"
+  
+  def self.per_page
+    10
+  end
+  
+  def self.with_conditions(firm_id, page)
+    Category.paginate(:page => page, :conditions => { :firm_id => firm_id })    
+  end
+  
   def category_dir 
     if level == 0
       name.downcase

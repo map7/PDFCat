@@ -2,16 +2,16 @@ class CategoriesController < ApplicationController
   before_filter :login_required
 
   def index
-    @categories = Category.paginate(:page => params[:page], :per_page => 10, :order => "upper(name)", :conditions => { :firm_id => current_firm.id })    
+    @categories = Category.with_conditions(current_firm.id, params[:page])
   end
 
   def new
     @category = Category.new
-    @category.firm_id = current_firm.id
   end
 
   def create
     @category = Category.new(params[:category])
+    @category.firm_id = current_firm.id
 
     if @category.save
       flash[:notice] = "Category created successfully!"
