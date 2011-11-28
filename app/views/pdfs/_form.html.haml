@@ -1,13 +1,14 @@
 = error_messages_for 'pdf'
 
 - form_for @pdf do |f|
-  = f.hidden_field :filename 
-  = @pdf.filename
-  = f.date_select :pdfdate, :label => "Date"
-  = f.text_field :pdfname, :label => "Name"
-  = f.collection_select :client_id, @clients, :id, :name
-  = f.collection_select :category_id, @categories, :id, :name
-  = f.text_field :pdfnote, :label => "Note"
-  = f.submit
+	= f.hidden_field :filename
+	= f.hidden_field :firm_id
+	= @pdf.filename
+	= f.date_select :pdfdate, :label => "Date"
+	= f.text_field :pdfname, :label => "Name"
+	= f.collection_select :client_id, current_firm.clients_sorted, :id, :name
+	= f.collection_select :category_id, current_firm.categories_sorted, :id, :name
+	= f.text_field :pdfnote, :label => "Note"
+	= f.submit
 
 = link_to 'Back', pdfs_path, :class=>'ajax', :accesskey=>'esc'

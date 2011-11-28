@@ -12,7 +12,17 @@ class Pdf < ActiveRecord::Base
 
   validates_format_of :pdfname, :with => /^[^\/\\\?\*:|"<>]+$/, :message => "cannot contain any of the following characters: / \\ ? * : | \" < >"
 
+  named_scope :joined, :joins => [:firm, :client, :category]
+  default_scope :order => 'pdfdate DESC'
+  
+  def self.per_page
+    10
+  end
+  
   # validate :does_file_exist?  # Must check if the original filename exists not the new one
+  def self.with_conditions(query, page)
+    @pdfs = Pdf.joined.paginate(:page => page, :conditions => query)
+  end
 
   def client_name
     client.name.downcase
@@ -29,15 +39,55 @@ class Pdf < ActiveRecord::Base
   def full_dir
     client_dir + "/" + category_name
   end
+
+  def prev_full_path
+    from_client = Client.find(client_id_was)
+    from_cat = Category.find(category_id_was)
+    path_was ? path_was :
+      "#{firm.store_dir}/#{from_client.name.downcase}/#{from_cat.name.downcase}/#{filename}"
+  end
+  
+  def new_full_path
+    "#{full_dir}/#{get_new_filename2}".downcase
+  end
+  
+  def full_path
+    fullpath(firm)
+  end
+  
+  # Return the full path of the final filename.
+  # Keep this as it's referenced though out the app.
+  def fullpath(current_firm)
+    path ? path + "/" + filename : full_dir + "/" + filename
+  end
   
   # Checking if the directory exists
   def category_dir_exists?(cat_name)
     File.exists?(client_dir + "/" + cat_name)
   end  
 
+  # The new improved move_file routine, now with testing!
+  def move_file2
+    move_file_common(prev_full_path) unless prev_full_path == new_full_path
+  end
+  
+  def move_uploaded_file
+    move_file_common(filename)
+  end
+  
+  def move_file_common(from)
+    unless does_new_full_path_exist?
+      FileUtils.mkdir_p(full_dir, :mode => 0775) unless File.exists?(full_dir)
+      FileUtils.mv(from, new_full_path)
+      self.filename = get_new_filename2
+      self.md5 = md5calc2(self.firm)
+    end
+  end
+  
+  
   # List uploaded files
-    def self.list_files(current_firm)
-      require 'find'
+  def self.list_files(current_firm)
+    require 'find'
 
       files = Array.new
 
@@ -79,30 +129,29 @@ class Pdf < ActiveRecord::Base
     File.delete(filename) if File.exist?(filename)
   end
 
-  # Return the full path of the final filename.
-  def fullpath(current_firm)
-    if path
-      # If there is a path return this
-      path + "/" + filename
-    else
-      # Otherwise return our premade one.
-      current_firm.store_dir + "/" + client.name.downcase + "/" + category.name.downcase + "/" + filename
-    end
-  end
 
   # Create a md5
+  def md5calc2(current_firm)
+    md5 = Digest::MD5.hexdigest(File.read(fullpath(current_firm)))
+  end
+
   def md5calc(current_firm)
     Digest::MD5.hexdigest(File.read(fullpath(current_firm)))
   end
 
-
+  def get_new_filename2
+    date = pdfdate.to_formatted_s(:file_format)
+    ext = File.extname(full_path)
+    "#{date}-#{pdfname}#{ext}".gsub(/ /,"_")
+  end
+  
   def get_new_filename(current_firm,original_file)
     # Format date
     @filedate = pdfdate.to_formatted_s(:file_format)
 
     # Format the new filename.
     @new_filename =  current_firm.store_dir + "/" + client.name.downcase + "/" + category.name.downcase + "/" + @filedate + "-" + pdfname + File.extname(original_file)
-  end
+   end
 
 
   # Move file from upload to the store_dir area under client & category.
@@ -319,7 +368,14 @@ class Pdf < ActiveRecord::Base
 
 
 
-# Validators
+  # Validators
+  def does_new_full_path_exist?
+    if File.exists?(new_full_path) and full_path != new_full_path
+      self.errors.add(:pdfname, " already exists, please change pdfname")
+    end
+    errors.count > 0
+  end
+  
   # Validate the the current file exists before moving it.
   def does_file_exist?(current_firm, oldclient, oldcategory)
     # If the old path exists or the files modified path exists return true.
@@ -327,14 +383,14 @@ class Pdf < ActiveRecord::Base
     if File.exist?(current_firm.store_dir + "/" + oldclient.downcase + "/" + oldcategory.downcase + "/" + filename) or File.exist?(self.fullpath(current_firm))
       return true
     else
-      errors.add(filename, " has gone missing, please relink!")
+      errors.add(:filename, " has gone missing, please relink!")
       return false
     end
   end
 
   def file_exist?(current_firm)
     if !File.exist?(fullpath(current_firm))
-      errors.add(filename, " has gone missing!")
+      errors.add(:filename, " has gone missing!")
       return false
     end
 

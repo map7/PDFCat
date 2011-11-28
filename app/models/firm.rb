@@ -26,8 +26,6 @@ class Firm < ActiveRecord::Base
     errors.add("store_dir", "does not exist") unless store_dir_exists?
   end
 
-
-
   # Permissions
   def is_updatable_by(user)
     user.is_admin?
@@ -49,4 +47,12 @@ class Firm < ActiveRecord::Base
     user.is_admin?
   end
 
+  def clients_sorted
+    clients.sort{ |a,b| a.name.downcase <=> b.name.downcase}
+  end
+  
+  def categories_sorted
+    categories.sort{ |a,b| a.name.downcase <=> b.name.downcase}    
+  end
+  
 end

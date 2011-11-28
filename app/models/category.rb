@@ -9,7 +9,8 @@ class Category < ActiveRecord::Base
   validates_uniqueness_of :name, :case_sensitive => false, :scope => :firm_id
   validates_format_of :name, :with => /^[(|)|A-Z|a-z|0-9][,|&|(|)|'| |.|\-|A-Z|a-z|0-9]+$/
 
-  validate :new_dir_available?
+  # Just use the directory if it exists, don't deny people the right to use an existing dir.
+  # validate :new_dir_available?   
   
   def move_dir(current_firm,oldname)
     @client = []  # Initialise an array
@@ -48,9 +49,7 @@ class Category < ActiveRecord::Base
           errors.add(:name, "Category directory exists for some clients")
         end
       end
-      return errors.count == 0
-    else
-      return true
     end
+    return errors.count == 0
   end
 end
