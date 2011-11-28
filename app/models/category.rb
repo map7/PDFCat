@@ -23,9 +23,18 @@ class Category < ActiveRecord::Base
     level == 0 ? name.downcase : "#{parent.name}/#{name}".downcase
   end
   
+  def prev_category_dir
+    if level == 0
+      name_was.downcase
+    else
+      prev_parent = Category.find(parent_id_was)
+      "#{prev_parent.name}/#{name_was}".downcase
+    end
+  end
+  
   def move_dir
     pdfs.each do|pdf|
-      old_dir = "#{pdf.client_dir}/#{name_was.downcase}"
+      old_dir = "#{pdf.client_dir}/#{prev_category_dir}"
       old_path = "#{old_dir}/#{pdf.filename}"
 
       # Move the category directory to the new one.
