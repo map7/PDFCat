@@ -48,6 +48,8 @@ describe PdfsController do
         get :new, :filename => "test.pdf"
         assigns(:pdf).firm_id.should == pdf.firm.id
       end
+
+
     end
 
     describe "#create" do
@@ -66,7 +68,7 @@ describe PdfsController do
         pdf.should_receive(:valid?)
         post :create, :filename => "test.pdf"
       end
-      
+
       context "if data is valid" do
         before do
           pdf.stub!(:move_uploaded_file).and_return(true)
@@ -86,6 +88,11 @@ describe PdfsController do
         it "should redirect to new" do
           post :create, :filename => "test.pdf"
           response.should redirect_to(new_pdfs_path)
+        end
+
+        it "flashes success message" do
+          post :create, :filename => "test.pdf"
+          flash[:notice].should == "Pdf successfully created."
         end
       end
 

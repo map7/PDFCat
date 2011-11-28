@@ -3,12 +3,6 @@ class PdfsController < ApplicationController
 
   def index
     @pdfs = Pdf.with_conditions(search_conditions, params[:page])
-      # @pdfs = Pdf.paginate(:all,
-      #                      :order => 'pdfdate DESC',
-      #                      :page => params[:page],
-      #                      :per_page => 10,
-      #                      :conditions => search_conditions,
-      #                      :joins => [:firm, :client, :category])
   end
   
   def show
@@ -31,6 +25,7 @@ class PdfsController < ApplicationController
     if @pdf.errors.count > 0
       render "new"
     else
+      flash[:notice] = "Pdf successfully created."
       redirect_to new_pdfs_path
     end
   end
