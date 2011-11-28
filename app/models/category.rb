@@ -19,20 +19,20 @@ class Category < ActiveRecord::Base
     Category.paginate(:page => page, :conditions => { :firm_id => firm_id })    
   end
   
-  def category_dir 
+  def category_dir
     level == 0 ? name.downcase : "#{parent.name}/#{name}".downcase
   end
   
   def move_dir
     pdfs.each do|pdf|
-      @old_dir = "#{pdf.client_dir}/#{name_was.downcase}"
-      @old_path = "#{@old_dir}/#{pdf.filename}"
+      old_dir = "#{pdf.client_dir}/#{name_was.downcase}"
+      old_path = "#{old_dir}/#{pdf.filename}"
 
       # Move the category directory to the new one.
-      if File.exists?(pdf.full_dir) and File.exists?(@old_path)
-        File.rename(@old_path, pdf.full_path)
-      elsif File.exists?(@old_dir)
-        File.rename(@old_dir,pdf.full_dir)
+      if File.exists?(pdf.full_dir) and File.exists?(old_path)
+        File.rename(old_path, pdf.full_path)
+      elsif File.exists?(old_dir)
+        File.rename(old_dir,pdf.full_dir)
       end
     end
   end
