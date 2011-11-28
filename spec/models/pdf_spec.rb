@@ -102,14 +102,13 @@ describe Pdf do
     end  
   end
   
-  describe "#get_new_filename" do
+  describe "#get_new_filename2" do
     it "should return new filename" do
       pdf.pdfname = "foobar"
       pdf.get_new_filename2.should == "20100128-foobar.pdf"
     end
   end
   
- 
   describe "#move_uploaded_file" do 
     before do
       pdf.stub!(:md5calc2)
@@ -154,7 +153,7 @@ describe Pdf do
       end
 
 
-      context "new full path doesn't exist" do 
+      context "new full path does exist" do 
 
         before do 
           @pdf.stub!(:does_new_full_path_exist?).and_return(true)
