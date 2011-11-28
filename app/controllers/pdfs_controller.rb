@@ -1,38 +1,5 @@
 class PdfsController < ApplicationController
-
   before_filter :login_required
-
-  # make_resourceful do
-
-  #   response_for :update do
-  #     flash[:notice] = 'Pdf was successfully updated.'
-  #     redirect_to :action => 'show', :id => @pdf
-
-  #     if @pdf.client_id_changed? and @pdf.category_id_changed? and @pdf.filename == @pdf.get_new_filename(current_firm,@pdf.filename)
-  #       # Nothing has changed leave the filename the same.
-  #       @filename = @pdf.filename
-  #     else
-  #       # Move the file
-  #       @filename = @pdf.move_file(current_firm, current_firm.store_dir + "/" + @oldclient + "/" + @oldcategory + "/" + @pdf.filename)
-
-  #       # Write changes of the filename back to the pdf object.
-  #       @pdf.update_attribute(:filename, @filename)
-  #     end
-
-  #     @pdf.update_attribute(:md5, @pdf.md5calc(current_firm))
-  #   end
-
-  #   response_for :update_fail do
-  #     @clients = current_firm.clients.sort{ |a,b| a.name.downcase <=> b.name.downcase}
-  #     @categories = current_firm.categories.sort{ |a,b| a.name.downcase <=> b.name.downcase}
-  #     render :action => 'edit'
-  #   end
-
-  #   before :destroy do
-
-  #   end
-
-  # end # make_resourceful
 
   def index
       @pdfs = Pdf.paginate(:all,
@@ -44,12 +11,11 @@ class PdfsController < ApplicationController
   end
   
   def show
-    @pdf = Pdf.find(params[:id])    
+    @pdf = Pdf.find(params[:id])  
   end
   
   def new
     @pdf = Pdf.new(:filename => params[:filename], :firm_id => current_firm.id)
-    @clients, @categories = current_firm.clients_sorted, current_firm.categories_sorted
   end
   
   def create
@@ -58,21 +24,18 @@ class PdfsController < ApplicationController
     
     if @pdf.valid?
       @pdf.move_uploaded_file
-      unless @pdf.does_new_full_path_exist?
-        @pdf.save
-        redirect_to new_pdfs_path
-      end
+      @pdf.save unless @pdf.does_new_full_path_exist?
     end
     
     if @pdf.errors.count > 0
-      @clients, @categories = current_firm.clients_sorted, current_firm.categories_sorted
       render "new"
+    else
+      redirect_to new_pdfs_path
     end
   end
   
   def edit
     @pdf = Pdf.find(params[:id])
-    @clients, @categories = current_firm.clients_sorted, current_firm.categories_sorted
   end
   
   def update
@@ -81,16 +44,14 @@ class PdfsController < ApplicationController
 
     if @pdf.valid?
       @pdf.move_file2
-      unless @pdf.does_new_full_path_exist?
-        @pdf.save
-        flash[:notice] = "Pdf was successfully updated."
-        redirect_to @pdf
-      end 
+      @pdf.save unless @pdf.does_new_full_path_exist?
     end
 
     if @pdf.errors.count > 0
-      @clients, @categories = current_firm.clients_sorted, current_firm.categories_sorted
       render "edit"
+    else
+      flash[:notice] = "Pdf was successfully updated."
+      redirect_to @pdf
     end
   end
 

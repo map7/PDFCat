@@ -112,16 +112,6 @@ describe PdfsController do
         get :edit, :id => pdf.id
         assigns(:pdf).should == pdf
       end
-
-      it "should assign @clients" do
-        get :edit, :id => pdf.id
-        assigns(:clients).should == pdf.firm.clients
-      end
-
-      it "should assign @categories" do
-        get :edit, :id => pdf.id
-        assigns(:categories).should == pdf.firm.categories
-      end
     end
     
     describe "#update" do
@@ -178,16 +168,6 @@ describe PdfsController do
           get :edit, :id => pdf.id
           assigns(:pdf).should == pdf
         end
-
-        it "should assign @clients" do
-          get :edit, :id => pdf.id
-          assigns(:clients).should == pdf.firm.clients
-        end
-
-        it "should assign @categories" do
-          get :edit, :id => pdf.id
-          assigns(:categories).should == pdf.firm.categories
-        end        
       end
 
     end # edit
@@ -218,7 +198,7 @@ describe PdfsController do
         delete :destroy, :id => pdf.id
         response.should redirect_to pdfs_path
       end
-    end
+    end # delete
     
   end # logged in user
 end
