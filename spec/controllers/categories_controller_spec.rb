@@ -69,15 +69,39 @@ describe CategoriesController do
         @category.should_receive(:update_attributes)
         put :update, :id => @category.id
       end
-      
-      it "should redirect to categories" do
-        put :update, :id => @category.id
-        response.should redirect_to(categories_path)
+
+      context "with valid data" do
+        before do 
+          @category.stub!(:valid?).and_return(true)
+          @category.stub_chain(:errors, :count).and_return(0)
+        end
+
+        it "should redirect to categories" do
+          put :update, :id => @category.id
+          response.should redirect_to(categories_path)
+        end
+
+        it "should display flash message" do 
+          put :update, :id => @category.id
+          flash[:notice].should == "Category updated successfully!"
+        end
       end
 
-      it "should display flash message" do 
-        put :update, :id => @category.id
-        flash[:notice].should == "Category updated successfully!"
+      context "with invalid data" do
+        before do 
+          @category.stub!(:valid?).and_return(false)
+          @category.stub_chain(:errors, :count).and_return(1)
+        end
+
+        it "should render edit" do
+          put :update, :id => @category.id
+          response.should render_template(:edit)
+        end
+
+        it "assigns category" do
+          put :update, :id => @category.id
+          assigns[:category].should == @category
+        end
       end
     end
     

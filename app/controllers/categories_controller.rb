@@ -29,12 +29,16 @@ class CategoriesController < ApplicationController
     @category = Category.find(params[:id])
     @oldcat = @category.name
     
-    if @category.update_attributes(params[:category])
+    if @category.valid?
       @category.move_dir(current_firm,@oldcat)
+      @category.update_attributes(params[:category])
+    end
+
+    if @category.errors.count > 0
+      render :edit
+    else
       flash[:notice] = "Category updated successfully!"
       redirect_to categories_path
-    else
-      render :edit
     end
   end
 
