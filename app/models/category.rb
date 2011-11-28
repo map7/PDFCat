@@ -31,30 +31,15 @@ class Category < ActiveRecord::Base
   end
   
   def move_dir(current_firm,oldname)
-    @client = []  # Initialise an array
+    pdfs.each do|pdf|
+      @old_dir = "#{pdf.client_dir}/#{oldname.downcase}"
+      @old_path = "#{@old_dir}/#{pdf.filename}"
 
-    # Search all pdfs for this id
-    @pdf = Pdf.find(:all, :conditions => {:category_id => id})
-
-    # Build an array of clients which this change will affect making sure each is unique.
-    @pdf.each do|p|
-      unless p.client.nil?
-        @clientname = p.client.name.downcase
-
-        # If this is the first time we have come across this client then...
-        unless @client.include?(@clientname)  
-          @client << @clientname
-
-          @olddir = current_firm.store_dir + "/" + @clientname + "/" + oldname.downcase
-          @newdir = current_firm.store_dir + "/" +  @clientname + "/" + name.downcase
-
-          # Move the category directory to the new one.
-          if File.exists?(@newdir)
-            system("mv \"#{@olddir}/\"*.pdf \"#{@newdir}\"")
-          else
-            File.rename(@olddir,@newdir) if File.exists?(@olddir)
-          end
-        end
+      # Move the category directory to the new one.
+      if File.exists?(pdf.full_dir)
+        File.rename(@old_path, pdf.full_path)
+      elsif File.exists?(@old_dir)
+        File.rename(@old_dir,pdf.full_dir)
       end
     end
   end

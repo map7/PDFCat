@@ -25,11 +25,39 @@ describe Category do
   describe "#move_dir" do
     context "when it's a main category" do
       before do 
-        @pdf = Pdf.make(:category => cat)
+        @pdf = Pdf.make
+        @pdf.save
+        @old_dir = "/home/map7/pdfcat_test_clt/publishing solutions/old_name"
+        @new_dir = "/home/map7/pdfcat_test_clt/publishing solutions/new_name"
+        @cat = @pdf.category
+        Pdf.stub!(:find).and_return([@pdf])
       end
       
-      it "will move the directory" do
+      context "new dir doesn't exist" do 
+        before do 
+          File.stub!(:exists?).with(@new_dir).and_return(false)
+          File.stub!(:exists?).with(@old_dir).and_return(true)
+        end
         
+        it "will rename the old directory" do
+          @cat.name = "new_name"
+          File.should_receive(:rename).with(@old_dir, @new_dir)
+          @cat.move_dir(@cat.firm, "old_name")
+        end
+      end
+      
+      context "new dir does exist" do
+        before do 
+          File.stub!(:exists?).with(@new_dir).and_return(true)
+          @old_path = "/home/map7/pdfcat_test_clt/publishing solutions/old_name/20100128-Unit_Trust_Deed.pdf"
+          @new_path = "/home/map7/pdfcat_test_clt/publishing solutions/new_name/20100128-Unit_Trust_Deed.pdf"
+        end
+        
+        it "will move each pdf" do
+          @cat.name = "new_name"
+          File.should_receive(:rename).with(@old_path, @new_path)
+          @cat.move_dir(@cat.firm, "old_name")
+        end
       end
     end
 

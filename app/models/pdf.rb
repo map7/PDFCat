@@ -28,12 +28,18 @@ class Pdf < ActiveRecord::Base
     client.name.downcase
   end
 
+  def client_dir
+    self.firm.store_dir + "/" +  client_name
+  end
+
   def category_name
     category.category_dir
   end
 
-  def client_dir
-    self.firm.store_dir + "/" +  client_name
+  def prev_full_dir
+    from_client = Client.find(client_id_was)
+    from_cat = Category.find(category_id_was)
+    "#{firm.store_dir}/#{from_client.name.downcase}/#{from_cat.name.downcase}"
   end
   
   def full_dir
@@ -41,10 +47,7 @@ class Pdf < ActiveRecord::Base
   end
 
   def prev_full_path
-    from_client = Client.find(client_id_was)
-    from_cat = Category.find(category_id_was)
-    path_was ? path_was :
-      "#{firm.store_dir}/#{from_client.name.downcase}/#{from_cat.name.downcase}/#{filename}"
+    path_was ? path_was : "#{prev_full_dir}/#{filename}"
   end
   
   def new_full_path
