@@ -12,8 +12,18 @@ class Pdf < ActiveRecord::Base
 
   validates_format_of :pdfname, :with => /^[^\/\\\?\*:|"<>]+$/, :message => "cannot contain any of the following characters: / \\ ? * : | \" < >"
 
-  # validate :does_file_exist?  # Must check if the original filename exists not the new one
+  named_scope :joined, :joins => [:firm, :client, :category]
+  default_scope :order => 'pdfdate DESC'
   
+  def self.per_page
+    10
+  end
+  
+  # validate :does_file_exist?  # Must check if the original filename exists not the new one
+  def self.with_conditions(query, page)
+    @pdfs = Pdf.joined.paginate(:page => page, :conditions => query)
+  end
+
   def client_name
     client.name.downcase
   end

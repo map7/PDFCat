@@ -2,12 +2,13 @@ class PdfsController < ApplicationController
   before_filter :login_required
 
   def index
-      @pdfs = Pdf.paginate(:all,
-                           :order => 'pdfdate DESC',
-                           :page => params[:page],
-                           :per_page => 10,
-                           :conditions => search_conditions,
-                           :joins => [:firm, :client, :category])
+    @pdfs = Pdf.with_conditions(search_conditions, params[:page])
+      # @pdfs = Pdf.paginate(:all,
+      #                      :order => 'pdfdate DESC',
+      #                      :page => params[:page],
+      #                      :per_page => 10,
+      #                      :conditions => search_conditions,
+      #                      :joins => [:firm, :client, :category])
   end
   
   def show
