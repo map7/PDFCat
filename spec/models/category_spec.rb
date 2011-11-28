@@ -42,7 +42,7 @@ describe Category do
         
         it "will rename the old directory" do
           File.should_receive(:rename).with(@old_dir, @new_dir)
-          @cat.move_dir(@cat.firm, "old_name")
+          @cat.move_dir("old_name")
         end
         
 
@@ -59,7 +59,7 @@ describe Category do
         it "will move each pdf" do
           File.stub!(:exists?).with(@old_path).and_return(true)
           File.should_receive(:rename).with(@old_path, @new_path)
-          @cat.move_dir(@cat.firm, "old_name")
+          @cat.move_dir("old_name")
         end
         
         context "old directory has already been renamed" do
@@ -67,7 +67,7 @@ describe Category do
             File.stub!(:exists?).with(@old_path).and_return(false)
             File.stub!(:exists?).with(@old_dir).and_return(false)            
             File.should_not_receive(:rename).with(@old_path, @new_path)
-            @cat.move_dir(@cat.firm, "old_name")
+            @cat.move_dir("old_name")
           end
         end
       end

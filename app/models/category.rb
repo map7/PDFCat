@@ -23,7 +23,7 @@ class Category < ActiveRecord::Base
     level == 0 ? name.downcase : "#{parent.name}/#{name}".downcase
   end
   
-  def move_dir(current_firm,oldname)
+  def move_dir(oldname)
     pdfs.each do|pdf|
       @old_dir = "#{pdf.client_dir}/#{oldname.downcase}"
       @old_path = "#{@old_dir}/#{pdf.filename}"
