@@ -65,10 +65,7 @@ class PdfsController < ApplicationController
 
   # Allow user to open up new files
   def attachment_new
-    send_file(params[:filename],
-              :type         =>  'application/pdf',
-              :disposition  =>  'attachment'
-              )
+    send_file(params[:filename], :type => 'application/pdf', :disposition => 'attachment')
   end
 
   # Allow user to open up files already stored in the database
@@ -78,9 +75,7 @@ class PdfsController < ApplicationController
     if @pdf.file_exist?(current_firm)
       send_file(@pdf.fullpath(current_firm),
                 :type         =>  'application/pdf',
-                :disposition  =>  'attachment'
-                )
-
+                :disposition  =>  'attachment')
     else
       flash[:notice] = 'File cannot be found, Please try relinking'
       redirect_to :action => 'show', :id => params[:id]
@@ -91,7 +86,8 @@ class PdfsController < ApplicationController
   # This is incase a file was moved or renamed.
   def relink
     @pdf = Pdf.find(params[:id])
-
+    flash[:notice] = "Relinking - please wait 5minutes whilst I find your file."
+    
     if @pdf.relink_file(current_firm)
       render :partial => "showitem"
       return true

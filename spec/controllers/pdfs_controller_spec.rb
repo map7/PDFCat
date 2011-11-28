@@ -11,6 +11,14 @@ describe PdfsController do
     before do
       controller.stub!(:current_firm).and_return(pdf.firm)
     end
+
+    describe "#relink" do
+      it "flashes relinking message" do 
+        pdf.stub!(:relink_file).and_return(true)
+        get :relink, :id => pdf.id
+        flash[:notice].should == "Relinking - please wait 5minutes whilst I find your file."
+      end      
+    end
     
     describe "#index" do
       it "should show index" do
