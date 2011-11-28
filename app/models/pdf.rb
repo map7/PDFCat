@@ -37,7 +37,7 @@ class Pdf < ActiveRecord::Base
   end
   
   def full_dir
-    client_dir + "/" + category_name
+    "#{client_dir}/#{category_name}".downcase
   end
 
   def prev_full_path
@@ -48,7 +48,7 @@ class Pdf < ActiveRecord::Base
   end
   
   def new_full_path
-    "#{full_dir}/#{get_new_filename2}".downcase
+    "#{full_dir}/#{get_new_filename2}"
   end
   
   def full_path
@@ -56,7 +56,7 @@ class Pdf < ActiveRecord::Base
   end
   
   def get_filename
-    filename.downcase.gsub(/ /,"_")
+    filename.gsub(/ /,"_")
   end
   
   # Return the full path of the final filename.

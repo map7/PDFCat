@@ -3,7 +3,7 @@ require 'spec_helper'
 describe Pdf do
   let(:pdf) {Pdf.make}
   
-  let(:filename)   {"20100128-unit_trust_deed.pdf"}
+  let(:filename)   {"20100128-Unit_Trust_Deed.pdf"}
   let(:client_dir) {"/home/map7/pdfcat_test_clt/publishing solutions"}
   let(:full_dir)   {"#{client_dir}/general"}
   let(:full_path)  {"#{full_dir}/#{filename}"}  
@@ -37,9 +37,9 @@ describe Pdf do
       pdf.full_path.should == full_path
     end
     
-    it "should return lowercase" do
+    it "should return lowercase except filename" do
       pdf = Pdf.make(:filename => "Testing.pdf")
-      pdf.full_path.should == "#{full_dir}/testing.pdf"
+      pdf.full_path.should == "#{full_dir}/Testing.pdf"
     end
   end
   
