@@ -26,7 +26,6 @@ describe Category do
     context "when it's a main category" do
       before do 
         @pdf = Pdf.make
-        @pdf.save
         @old_dir = "/home/map7/pdfcat_test_clt/publishing solutions/general"
         @new_dir = "/home/map7/pdfcat_test_clt/publishing solutions/new_name"
         @cat = @pdf.category
