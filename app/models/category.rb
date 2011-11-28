@@ -13,7 +13,11 @@ class Category < ActiveRecord::Base
   # validate :new_dir_available?   
 
   def category_dir 
-    name.downcase
+    if level == 0
+      name.downcase
+    else
+      "#{parent.name}/#{name}".downcase
+    end
   end
   
   def move_dir(current_firm,oldname)

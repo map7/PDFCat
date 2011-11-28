@@ -12,7 +12,13 @@ describe Category do
       end
     end
 
-    context "when sub category" 
+    context "when sub category" do
+      it "should return parent/sub in downcase" do
+        sub = Category.make(:name => "Sub1")
+        sub.move_to_child_of cat
+        sub.category_dir.should == "general/sub1"
+      end
+    end
 
   end
   
