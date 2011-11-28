@@ -9,7 +9,7 @@ class Category < ActiveRecord::Base
   validates_uniqueness_of :name, :case_sensitive => false, :scope => :firm_id
   validates_format_of :name, :with => /^[(|)|A-Z|a-z|0-9][,|&|(|)|'| |.|\-|A-Z|a-z|0-9]+$/
 
-  default_scope :order => "upper(name)"
+  default_scope :order => "lft,upper(name)"
   
   def self.per_page
     10
