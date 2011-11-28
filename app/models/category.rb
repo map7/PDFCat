@@ -11,6 +11,10 @@ class Category < ActiveRecord::Base
 
   # Just use the directory if it exists, don't deny people the right to use an existing dir.
   # validate :new_dir_available?   
+
+  def category_dir 
+    name.downcase
+  end
   
   def move_dir(current_firm,oldname)
     @client = []  # Initialise an array

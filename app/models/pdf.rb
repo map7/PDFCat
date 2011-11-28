@@ -29,7 +29,7 @@ class Pdf < ActiveRecord::Base
   end
 
   def category_name
-    category.name.downcase
+    category.category_dir
   end
 
   def client_dir
@@ -129,7 +129,6 @@ class Pdf < ActiveRecord::Base
     File.delete(filename) if File.exist?(filename)
   end
 
-
   # Create a md5
   def md5calc2(current_firm)
     md5 = Digest::MD5.hexdigest(File.read(fullpath(current_firm)))
@@ -152,76 +151,6 @@ class Pdf < ActiveRecord::Base
     # Format the new filename.
     @new_filename =  current_firm.store_dir + "/" + client.name.downcase + "/" + category.name.downcase + "/" + @filedate + "-" + pdfname + File.extname(original_file)
    end
-
-
-  # Move file from upload to the store_dir area under client & category.
-  # def move_file(current_firm,original_path)
-
-  #   # If the original_path isn't where it should be get the files modified path.
-  #   unless File.exist?(original_path)
-  #     original_path = self.fullpath(current_firm)
-  #     self.path = nil
-  #     self.save
-  #   end
-
-  #   # Make directories
-  #   client_dir = current_firm.store_dir + "/" + client.name.downcase
-  #   logger.warn("Mkdir #{client_dir}")
-  #   Dir.mkdir(client_dir, 0775) unless File.exists?(client_dir)
-
-  #   cat_dir = client_dir + "/" + category.name.downcase
-  #   logger.warn("Mkdir #{cat_dir}")
-  #   Dir.mkdir(cat_dir, 0775) unless File.exists?(cat_dir)
-
-  #   @new_filename = get_new_filename(current_firm,original_path)
-
-  #   logger.warn("Original filename = #{original_path}")
-  #   logger.warn("     New filename = #{@new_filename}")
-
-  #   if File.exist?(@new_filename)
-  #     # Throw an error here
-  #     errors.add(original_path,"New file already exists, please change the title")
-  #     File.basename(original_path)      # Return the original filename
-  #   else
-  #     # Move the file.
-  #     logger.warn("Moving #{original_path} to #{@new_filename}")
-  #     FileUtils.mv(original_path, @new_filename)
-
-  #     # Set the permissions on the file to 660 (-rw-rw----)
-  #     logger.warn("chmod 0660 for #{@new_filename}")
-  #     begin
-  #       FileUtils.chmod 0660, @new_filename
-  #     rescue
-  #       logger.warn "Could not chmod #{@new_filename}"
-  #     end
-
-
-  #     # Set the group for the file
-  #     unless current_firm.file_group.nil?
-  #       logger.warn("chgrp #{current_firm.file_group} for #{@new_filename}")
-
-  #       begin
-  #         FileUtils.chown nil, current_firm.file_group, @new_filename
-  #       rescue
-  #         logger.warn "Could not chown #{@new_filename}"
-  #       end
-  #     end
-
-  #     # Check if the old directory is now empty
-  #     logger.warn("Check if the old dir is empty.")
-  #     dir = File.dirname(original_path)
-  #     dircheck = dir + '/*'
-
-  #     # Delete the directory if it's empty, as long as it's not the same as the upload directory.
-  #     unless dir == current_firm.upload_dir
-  #       Dir.rmdir(dir) if Dir[dircheck].empty?
-  #     end
-
-  #     # Return the new filename
-  #     File.basename(@new_filename)
-  #   end
-  # end
-
 
   # Go through every pdf in the system and relink
   # Should be done in a rake task and put in cron
