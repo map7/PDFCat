@@ -30,7 +30,7 @@ class CategoriesController < ApplicationController
     @oldcat = @category.name
     
     if @category.valid?
-      @category.move_dir(@oldcat)
+      @category.move_dir
       @category.update_attributes(params[:category])
     end
 

@@ -27,7 +27,7 @@ describe Category do
       before do 
         @pdf = Pdf.make
         @pdf.save
-        @old_dir = "/home/map7/pdfcat_test_clt/publishing solutions/old_name"
+        @old_dir = "/home/map7/pdfcat_test_clt/publishing solutions/general"
         @new_dir = "/home/map7/pdfcat_test_clt/publishing solutions/new_name"
         @cat = @pdf.category
         Pdf.stub!(:find).and_return([@pdf])
@@ -42,7 +42,7 @@ describe Category do
         
         it "will rename the old directory" do
           File.should_receive(:rename).with(@old_dir, @new_dir)
-          @cat.move_dir("old_name")
+          @cat.move_dir
         end
         
 
@@ -51,7 +51,7 @@ describe Category do
       context "new dir does exist" do
         before do 
           File.stub!(:exists?).with(@new_dir).and_return(true)
-          @old_path = "/home/map7/pdfcat_test_clt/publishing solutions/old_name/20100128-Unit_Trust_Deed.pdf"
+          @old_path = "/home/map7/pdfcat_test_clt/publishing solutions/general/20100128-Unit_Trust_Deed.pdf"
           @new_path = "/home/map7/pdfcat_test_clt/publishing solutions/new_name/20100128-Unit_Trust_Deed.pdf"
           @cat.name = "new_name"
         end
@@ -59,7 +59,7 @@ describe Category do
         it "will move each pdf" do
           File.stub!(:exists?).with(@old_path).and_return(true)
           File.should_receive(:rename).with(@old_path, @new_path)
-          @cat.move_dir("old_name")
+          @cat.move_dir
         end
         
         context "old directory has already been renamed" do
@@ -67,7 +67,7 @@ describe Category do
             File.stub!(:exists?).with(@old_path).and_return(false)
             File.stub!(:exists?).with(@old_dir).and_return(false)            
             File.should_not_receive(:rename).with(@old_path, @new_path)
-            @cat.move_dir("old_name")
+            @cat.move_dir
           end
         end
       end
