@@ -20,11 +20,7 @@ class Category < ActiveRecord::Base
   end
   
   def category_dir 
-    if level == 0
-      name.downcase
-    else
-      "#{parent.name}/#{name}".downcase
-    end
+    level == 0 ? name.downcase : "#{parent.name}/#{name}".downcase
   end
   
   def move_dir(current_firm,oldname)
