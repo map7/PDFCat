@@ -36,6 +36,11 @@ describe Pdf do
     it "should return the full path including filename" do
       pdf.full_path.should == full_path
     end
+    
+    it "should return lowercase" do
+      pdf = Pdf.make(:filename => "Testing.pdf")
+      pdf.full_path.should == "#{full_dir}/testing.pdf"
+    end
   end
   
   describe "#new_full_path" do
