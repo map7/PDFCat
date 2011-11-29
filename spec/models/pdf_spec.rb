@@ -3,7 +3,7 @@ require 'spec_helper'
 describe Pdf do
   let(:pdf) {Pdf.make}
   
-  let(:filename)   {"20100128-unit_trust_deed.pdf"}
+  let(:filename)   {"20100128-Unit_Trust_Deed.pdf"}
   let(:client_dir) {"/home/map7/pdfcat_test_clt/publishing solutions"}
   let(:full_dir)   {"#{client_dir}/general"}
   let(:full_path)  {"#{full_dir}/#{filename}"}  
@@ -37,9 +37,9 @@ describe Pdf do
       pdf.full_path.should == full_path
     end
     
-    it "should return lowercase" do
+    it "should return lowercase except filename" do
       pdf = Pdf.make(:filename => "Testing.pdf")
-      pdf.full_path.should == "#{full_dir}/testing.pdf"
+      pdf.full_path.should == "#{full_dir}/Testing.pdf"
     end
   end
   
@@ -102,14 +102,13 @@ describe Pdf do
     end  
   end
   
-  describe "#get_new_filename" do
+  describe "#get_new_filename2" do
     it "should return new filename" do
       pdf.pdfname = "foobar"
       pdf.get_new_filename2.should == "20100128-foobar.pdf"
     end
   end
   
- 
   describe "#move_uploaded_file" do 
     before do
       pdf.stub!(:md5calc2)
@@ -154,7 +153,7 @@ describe Pdf do
       end
 
 
-      context "new full path doesn't exist" do 
+      context "new full dir doesn't  exist" do 
 
         before do 
           @pdf.stub!(:does_new_full_path_exist?).and_return(true)
@@ -182,13 +181,36 @@ describe Pdf do
         end
 
         context "dest dir does exist" do 
+          
+          before do
+            File.stub!(:exists?).and_return(true)
+          end
+          
           it "should check the destination directory only" do
             File.should_receive(:exists?).with(dest_dir).and_return(true)
             FileUtils.should_not_receive(:mkdir_p)
             @pdf.move_file2
           end
+
+          it "should update filename" do
+            lambda do
+              @pdf.pdfname="Testing filename"
+              @pdf.move_file2              
+            end.should change(@pdf, :filename).
+              from("20100128-Unit_Trust_Deed.pdf").
+              to("20100128-Testing_filename.pdf")
+          end
+
+          it "should update md5" do
+            @pdf.stub!(:md5calc2).and_return("the_md5")
+            lambda do
+              @pdf.move_file2              
+            end.should change(@pdf, :md5).
+              from(nil).
+              to("the_md5")
+          end
         end
-      end # new full path doesn't exist
+      end 
     end
   end
 

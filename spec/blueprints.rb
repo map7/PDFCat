@@ -33,5 +33,5 @@ Pdf.blueprint do
   category
   pdfdate {Date.parse("28-01-2010")}
   pdfname {"Unit Trust Deed"}
-  filename {"20100128-unit_trust_deed.pdf"}
+  filename {"20100128-Unit_Trust_Deed.pdf"}
 end

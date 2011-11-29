@@ -23,7 +23,7 @@ class PdfsController < ApplicationController
     end
     
     if @pdf.errors.count > 0
-      render "new"
+      render :new
     else
       flash[:notice] = "Pdf successfully created."
       redirect_to new_pdfs_path
@@ -44,7 +44,7 @@ class PdfsController < ApplicationController
     end
 
     if @pdf.errors.count > 0
-      render "edit"
+      render :edit
     else
       flash[:notice] = "Pdf was successfully updated."
       redirect_to @pdf
