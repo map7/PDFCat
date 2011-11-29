@@ -11,10 +11,15 @@ class Category < ActiveRecord::Base
 
   default_scope :order => "lft,upper(name)"
   
-  before_save :sort_categories
+  after_save :sort_categories
   
   def sort_categories
-#    next_cat = Category.all(:conditions => ("name > ? and firm_id = ?", self.name, self.firm_id)
+#    debugger if name == "Admin"
+    next_cat = Category.find(:all,
+                             :conditions=>["name > ? and firm_id = ? and parent_id is null",
+                                           self.name, self.firm_id], :order => :name,
+                             :limit => 1)
+    self.move_to_left_of(next_cat.first) unless next_cat.size == 0
   end
   
   def self.per_page

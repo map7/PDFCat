@@ -12,10 +12,10 @@ describe Category do
     context "when saving" do
       context "a parent" do 
         it "should sort in alphabetical" do
-          cat2=Category.make(:name => "admin")
+          cat2=Category.make(:name => "Admin", :firm_id => cat.firm_id)
 
           categories = Category.all
-          categories.first.name.should == "admin"          
+          categories.first.name.should == "Admin"          
         end      
       end
     end
