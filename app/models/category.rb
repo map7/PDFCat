@@ -14,7 +14,6 @@ class Category < ActiveRecord::Base
   after_save :sort_categories
   
   def sort_categories
-#    debugger if name == "Admin"
     next_cat = Category.find(:all,
                              :conditions=>["name > ? and firm_id = ? and parent_id is null",
                                            self.name, self.firm_id], :order => :name,
