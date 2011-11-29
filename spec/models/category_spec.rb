@@ -74,15 +74,20 @@ describe Category do
   end
   
   describe "#move_dir" do
+    before do
+      @pdf = Pdf.make
+      @client_dir = "#{@pdf.firm.store_dir}/publishing solutions"
+    end
+    
     context "when it's a main category" do
       before do 
-        @pdf = Pdf.make
-        @old_dir = "/home/map7/pdfcat_test_clt/publishing solutions/general"
-        @new_dir = "/home/map7/pdfcat_test_clt/publishing solutions/new_name"
-        @old_path = "#{@old_dir}/20100128-Unit_Trust_Deed.pdf"
-        @new_path = "#{@new_dir}/20100128-Unit_Trust_Deed.pdf"
         @cat = @pdf.category
         Pdf.stub!(:find).and_return([@pdf])
+
+        @old_dir = "#{@client_dir}/general"
+        @new_dir = "#{@client_dir}/new_name"
+        @old_path = "#{@old_dir}/20100128-Unit_Trust_Deed.pdf"
+        @new_path = "#{@new_dir}/20100128-Unit_Trust_Deed.pdf"
       end
       
       context "new dir doesn't exist" do 
@@ -125,9 +130,47 @@ describe Category do
     end
 
     context "when it's a sub-category" do
+      before do 
+        @cat = @pdf.category
+        @sub = Category.make(:sub)
+        @sub.move_to_child_of @cat
+        @subpdf = Pdf.make(:pdfname => "subpdf", :category_id => @sub.id)
+        
+        Pdf.stub!(:find).and_return([@subpdf])
+
+        @old_dir = "#{@client_dir}/general/sub"
+        @new_dir = "#{@client_dir}/general/new_sub"
+        @old_path = "#{@old_dir}/20100128-Unit_Trust_Deed.pdf"
+        @new_path = "#{@new_dir}/20100128-Unit_Trust_Deed.pdf"
+      end
       
+      context "new dir doesn't exist" do
+        before do 
+          File.stub!(:exists?).with(@new_dir).and_return(false)
+          File.stub!(:exists?).with(@old_dir).and_return(true)
+          @sub.name = "new_sub"
+        end
+        
+        it "will rename the old directory" do
+          File.should_receive(:rename).with(@old_dir, @new_dir)
+          @sub.move_dir
+        end        
+      end
+        
+      context "new dir does exist" do
+        before do 
+          File.stub!(:exists?).with(@new_dir).and_return(true)
+          File.stub!(:exists?).with(@old_path).and_return(true)
+          @sub.name = "new_sub"
+        end
+        
+        it "will move each pdf" do
+          File.should_receive(:rename).with(@old_path, @new_path)
+          @sub.move_dir
+        end
+        
+        context "old directory has already been renamed" 
+      end
     end
   end
-  
-
 end

@@ -52,14 +52,16 @@ class Category < ActiveRecord::Base
   
   def move_dir
     pdfs.each do|pdf|
+      new_dir = "#{pdf.client_dir}/#{category_dir}"
+      new_path = "#{new_dir}/#{pdf.filename}"
       old_dir = "#{pdf.client_dir}/#{prev_category_dir}"
       old_path = "#{old_dir}/#{pdf.filename}"
-
+      
       # Move the category directory to the new one.
-      if File.exists?(pdf.full_dir) and File.exists?(old_path)
-        File.rename(old_path, pdf.full_path)
+      if File.exists?(new_dir) and File.exists?(old_path)
+        File.rename(old_path, new_path)
       elsif File.exists?(old_dir)
-        File.rename(old_dir,pdf.full_dir)
+        File.rename(old_dir,new_dir)
       end
     end
   end
