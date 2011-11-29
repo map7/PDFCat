@@ -91,16 +91,15 @@ describe Pdf do
     context "when sub category changes" do
       before do 
         @sub_full_dir = "#{full_dir}/sub"
+        @cat = Category.make
+        @sub = Category.make(:name => "sub", :parent_id=> @cat.id, :firm_id => @cat.firm.id)
+        @pdf = Pdf.make(:category_id => @sub.id, :firm_id => @cat.firm.id)
       end
       
       it "should return previous dir" do
-        cat = Category.make
-        sub = Category.make(:name => "sub", :parent_id => cat.id, :firm_id => cat.firm.id)
-        pdf = Pdf.make(:category_id => sub.id, :firm_id => cat.firm.id)
-
-        pdf.category = Category.make(:name => "newsub", :parent_id => cat.id,
-                                :firm_id => cat.firm.id)
-        pdf.prev_full_dir.should == @sub_full_dir
+        @pdf.category = Category.make(:name => "newsub", :parent_id => @cat.id,
+                                :firm_id => @cat.firm.id)
+        @pdf.prev_full_dir.should == @sub_full_dir
       end
     end
   end
