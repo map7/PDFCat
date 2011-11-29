@@ -77,11 +77,11 @@ describe Category do
     before do
       @pdf = Pdf.make
       @client_dir = "#{@pdf.firm.store_dir}/publishing solutions"
+      @cat = @pdf.category
     end
     
     context "when it's a main category" do
       before do 
-        @cat = @pdf.category
         Pdf.stub!(:find).and_return([@pdf])
 
         @old_dir = "#{@client_dir}/general"
@@ -131,7 +131,6 @@ describe Category do
 
     context "when it's a sub-category" do
       before do 
-        @cat = @pdf.category
         @sub = Category.make(:sub)
         @sub.move_to_child_of @cat
         @subpdf = Pdf.make(:pdfname => "subpdf", :category_id => @sub.id)
@@ -169,7 +168,17 @@ describe Category do
           @sub.move_dir
         end
         
-        context "old directory has already been renamed" 
+        context "old directory has already been renamed" do
+          before do 
+            File.stub!(:exists?).with(@old_path).and_return(false)
+            File.stub!(:exists?).with(@old_dir).and_return(false)            
+          end
+          
+          it "should not rename the file" do
+            File.should_not_receive(:rename).with(@old_path, @new_path)
+            @sub.move_dir
+          end          
+        end
       end
     end
   end
