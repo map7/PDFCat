@@ -15,7 +15,8 @@
 			%td= category.pdfs.count
 			%td= link_to 'Show', category, :class=>'ajax',:id => 'show'
 			%td= link_to 'Edit', edit_category_path(category), :class => 'ajax', :id => 'edit'
-			%td= link_to 'Delete', category, :class => 'ajax', :return =>'categories/index', :id => "destroy"
+			%td= link_to 'Delete', { :action => 'destroy', :id => category }, :id => "del",
+			:confirm => 'Are you sure?', :method => :delete 
 
 = will_paginate @categories
 = link_to 'Add New category', new_category_path, :class=> 'ajax', :accesskey=> 'a'

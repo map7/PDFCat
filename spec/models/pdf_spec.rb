@@ -73,6 +73,37 @@ describe Pdf do
     end    
   end
 
+  describe "#prev_full_dir" do
+    context "when client changes" do
+      it "should return previous dir" do
+        pdf.client = Client.make(:name => "fred")
+        pdf.prev_full_dir.should == full_dir
+      end
+    end
+    
+    context "when category changes" do
+      it "should return previous dir" do 
+        pdf.category = Category.make(:name => "new")
+        pdf.prev_full_dir.should == full_dir
+      end
+    end
+    
+    context "when sub category changes" do
+      before do 
+        @sub_full_dir = "#{full_dir}/sub"
+        @cat = Category.make
+        @sub = Category.make(:name => "sub", :parent_id=> @cat.id, :firm_id => @cat.firm.id)
+        @pdf = Pdf.make(:category_id => @sub.id, :firm_id => @cat.firm.id)
+      end
+      
+      it "should return previous dir" do
+        @pdf.category = Category.make(:name => "newsub", :parent_id => @cat.id,
+                                :firm_id => @cat.firm.id)
+        @pdf.prev_full_dir.should == @sub_full_dir
+      end
+    end
+  end
+  
   describe "#prev_full_path" do
     context "when client changes" do
       it "should return previous path" do
@@ -143,8 +174,7 @@ describe Pdf do
       
       before do
         @pdf = pdf
-        @cat = Category.make(:name => "new")
-        @pdf.category = @cat
+        @pdf.category = @cat = Category.make(:name => "new")
         FileUtils.stub!(:mv)
         File.stub!(:exists).and_return(true)
         FileUtils.stub!(:mkdir_p)
@@ -156,9 +186,7 @@ describe Pdf do
         @pdf.move_file2
       end
 
-
-      context "new full dir doesn't  exist" do 
-
+      context "new full dir doesn't exist" do 
         before do 
           @pdf.stub!(:does_new_full_path_exist?).and_return(true)
           File.stub!(:exists?).with(dest_dir).and_return(false)
@@ -171,7 +199,6 @@ describe Pdf do
       end
       
       context "new full path doesn't exist" do 
-
         before do 
           @pdf.stub!(:does_new_full_path_exist?).and_return(false)
         end
@@ -185,7 +212,6 @@ describe Pdf do
         end
 
         context "dest dir does exist" do 
-          
           before do
             File.stub!(:exists?).and_return(true)
           end

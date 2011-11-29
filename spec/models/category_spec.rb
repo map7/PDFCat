@@ -4,7 +4,7 @@ describe Category do
   let(:cat) {Category.make}
   
   before do 
-    @sub = Category.make(:name => "Sub1")
+    @sub = Category.make(:name => "Sub1", :firm_id => cat.firm_id)
     @sub.move_to_child_of cat
   end
 
@@ -12,11 +12,18 @@ describe Category do
     context "when saving" do
       context "a parent" do 
         it "should sort in alphabetical" do
-          cat2=Category.make(:name => "admin")
-
-          categories = Category.all
-          categories.first.name.should == "admin"          
+          cat2=Category.make(:name => "Admin", :firm_id => cat.firm_id)
+          Category.first.name.should == "Admin"          
         end      
+      end
+
+      context "a sub category" do
+        it "should sort in alphabetical" do
+          sub2= Category.make(:name =>"sub2", :firm_id => cat.firm_id, :parent_id => cat.id)
+          sub= Category.make(:name =>"asub", :firm_id => cat.firm_id, :parent_id => cat.id)
+          
+          Category.all[1].name.should == "asub"
+        end
       end
     end
   end
@@ -67,15 +74,20 @@ describe Category do
   end
   
   describe "#move_dir" do
+    before do
+      @pdf = Pdf.make
+      @client_dir = "#{@pdf.firm.store_dir}/publishing solutions"
+      @cat = @pdf.category
+    end
+    
     context "when it's a main category" do
       before do 
-        @pdf = Pdf.make
-        @old_dir = "/home/map7/pdfcat_test_clt/publishing solutions/general"
-        @new_dir = "/home/map7/pdfcat_test_clt/publishing solutions/new_name"
+        Pdf.stub!(:find).and_return([@pdf])
+
+        @old_dir = "#{@client_dir}/general"
+        @new_dir = "#{@client_dir}/new_name"
         @old_path = "#{@old_dir}/20100128-Unit_Trust_Deed.pdf"
         @new_path = "#{@new_dir}/20100128-Unit_Trust_Deed.pdf"
-        @cat = @pdf.category
-        Pdf.stub!(:find).and_return([@pdf])
       end
       
       context "new dir doesn't exist" do 
@@ -118,9 +130,56 @@ describe Category do
     end
 
     context "when it's a sub-category" do
+      before do 
+        @sub = Category.make(:sub)
+        @sub.move_to_child_of @cat
+        @subpdf = Pdf.make(:pdfname => "subpdf", :category_id => @sub.id)
+        
+        Pdf.stub!(:find).and_return([@subpdf])
+
+        @old_dir = "#{@client_dir}/general/sub"
+        @new_dir = "#{@client_dir}/general/new_sub"
+        @old_path = "#{@old_dir}/20100128-Unit_Trust_Deed.pdf"
+        @new_path = "#{@new_dir}/20100128-Unit_Trust_Deed.pdf"
+      end
       
+      context "new dir doesn't exist" do
+        before do 
+          File.stub!(:exists?).with(@new_dir).and_return(false)
+          File.stub!(:exists?).with(@old_dir).and_return(true)
+          @sub.name = "new_sub"
+        end
+        
+        it "will rename the old directory" do
+          File.should_receive(:rename).with(@old_dir, @new_dir)
+          @sub.move_dir
+        end        
+      end
+        
+      context "new dir does exist" do
+        before do 
+          File.stub!(:exists?).with(@new_dir).and_return(true)
+          File.stub!(:exists?).with(@old_path).and_return(true)
+          @sub.name = "new_sub"
+        end
+        
+        it "will move each pdf" do
+          File.should_receive(:rename).with(@old_path, @new_path)
+          @sub.move_dir
+        end
+        
+        context "old directory has already been renamed" do
+          before do 
+            File.stub!(:exists?).with(@old_path).and_return(false)
+            File.stub!(:exists?).with(@old_dir).and_return(false)            
+          end
+          
+          it "should not rename the file" do
+            File.should_not_receive(:rename).with(@old_path, @new_path)
+            @sub.move_dir
+          end          
+        end
+      end
     end
   end
-  
-
 end

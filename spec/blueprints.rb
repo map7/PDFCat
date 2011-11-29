@@ -21,6 +21,11 @@ Category.blueprint do
   name {"General"}
 end
 
+Category.blueprint(:sub) do
+  firm
+  name {"sub"}
+end
+
 Client.blueprint do
   firm
   name {"Publishing Solutions"}

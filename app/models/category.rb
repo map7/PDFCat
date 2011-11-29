@@ -9,12 +9,24 @@ class Category < ActiveRecord::Base
   validates_uniqueness_of :name, :case_sensitive => false, :scope => :firm_id
   validates_format_of :name, :with => /^[(|)|A-Z|a-z|0-9][,|&|(|)|'| |.|\-|A-Z|a-z|0-9]+$/
 
-  default_scope :order => "lft,upper(name)"
+  default_scope :order => "lft"
   
-  before_save :sort_categories
+  after_save :sort_categories
   
   def sort_categories
-#    next_cat = Category.all(:conditions => ("name > ? and firm_id = ?", self.name, self.firm_id)
+    if self.child?
+      next_cat=Category.find(:all,
+                             :conditions=>["name > ? and firm_id = ? and parent_id = ?",
+                                           self.name, self.firm_id, self.parent_id],
+                             :order => :name,
+                             :limit => 1)
+    else
+      next_cat=Category.find(:all,
+                             :conditions=>["name > ? and firm_id = ? and parent_id is null",
+                                           self.name, self.firm_id], :order => :name,
+                             :limit => 1)
+    end
+    self.move_to_left_of(next_cat.first) unless next_cat.size == 0
   end
   
   def self.per_page
@@ -24,7 +36,11 @@ class Category < ActiveRecord::Base
   def self.with_conditions(firm_id, page)
     Category.paginate(:page => page, :conditions => { :firm_id => firm_id })    
   end
-  
+
+  def level_name
+    level == 0 ? name : "-- #{name}"
+  end
+
   def category_dir
     level == 0 ? name.downcase : "#{parent.name}/#{name}".downcase
   end
@@ -40,14 +56,16 @@ class Category < ActiveRecord::Base
   
   def move_dir
     pdfs.each do|pdf|
+      new_dir = "#{pdf.client_dir}/#{category_dir}"
+      new_path = "#{new_dir}/#{pdf.filename}"
       old_dir = "#{pdf.client_dir}/#{prev_category_dir}"
       old_path = "#{old_dir}/#{pdf.filename}"
-
+      
       # Move the category directory to the new one.
-      if File.exists?(pdf.full_dir) and File.exists?(old_path)
-        File.rename(old_path, pdf.full_path)
+      if File.exists?(new_dir) and File.exists?(old_path)
+        File.rename(old_path, new_path)
       elsif File.exists?(old_dir)
-        File.rename(old_dir,pdf.full_dir)
+        File.rename(old_dir,new_dir)
       end
     end
   end

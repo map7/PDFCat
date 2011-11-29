@@ -72,6 +72,7 @@ describe CategoriesController do
 
       context "with valid data" do
         before do 
+          @category.stub!(:size).and_return(0)
           @category.stub!(:valid?).and_return(true)
           @category.stub_chain(:errors, :count).and_return(0)
         end
