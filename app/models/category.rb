@@ -9,47 +9,46 @@ class Category < ActiveRecord::Base
   validates_uniqueness_of :name, :case_sensitive => false, :scope => :firm_id
   validates_format_of :name, :with => /^[(|)|A-Z|a-z|0-9][,|&|(|)|'| |.|\-|A-Z|a-z|0-9]+$/
 
-  # Just use the directory if it exists, don't deny people the right to use an existing dir.
-  # validate :new_dir_available?   
+  default_scope :order => "lft,upper(name)"
   
-  def move_dir(current_firm,oldname)
-    @client = []  # Initialise an array
-
-    # Search all pdfs for this id
-    @pdf = Pdf.find(:all, :conditions => {:category_id => id})
-
-    # Build an array of clients which this change will affect making sure each is unique.
-    @pdf.each do|p|
-      unless p.client.nil?
-        @clientname = p.client.name.downcase
-
-        # If this is the first time we have come across this client then...
-        unless @client.include?(@clientname)  
-          @client << @clientname
-
-          @olddir = current_firm.store_dir + "/" + @clientname + "/" + oldname.downcase
-          @newdir = current_firm.store_dir + "/" +  @clientname + "/" + name.downcase
-
-          # Move the category directory to the new one.
-          if File.exists?(@newdir)
-            system("mv \"#{@olddir}/\"*.pdf \"#{@newdir}\"")
-          else
-            File.rename(@olddir,@newdir) if File.exists?(@olddir)
-          end
-        end
-      end
+  before_save :sort_categories
+  
+  def sort_categories
+#    next_cat = Category.all(:conditions => ("name > ? and firm_id = ?", self.name, self.firm_id)
+  end
+  
+  def self.per_page
+    10
+  end
+  
+  def self.with_conditions(firm_id, page)
+    Category.paginate(:page => page, :conditions => { :firm_id => firm_id })    
+  end
+  
+  def category_dir
+    level == 0 ? name.downcase : "#{parent.name}/#{name}".downcase
+  end
+  
+  def prev_category_dir
+    if level == 0
+      name_was.downcase
+    else
+      prev_parent = Category.find(parent_id_was)
+      "#{prev_parent.name}/#{name_was}".downcase
     end
   end
+  
+  def move_dir
+    pdfs.each do|pdf|
+      old_dir = "#{pdf.client_dir}/#{prev_category_dir}"
+      old_path = "#{old_dir}/#{pdf.filename}"
 
-  # Check if new proposed directory exists under any client with the category.
-  def new_dir_available?
-    if self.name_changed?
-      self.clients.each do|client|
-        if File.exists?("#{client.firm.store_dir}/#{client.name}/#{self.name}".downcase)
-          errors.add(:name, "Category directory exists for some clients")
-        end
+      # Move the category directory to the new one.
+      if File.exists?(pdf.full_dir) and File.exists?(old_path)
+        File.rename(old_path, pdf.full_path)
+      elsif File.exists?(old_dir)
+        File.rename(old_dir,pdf.full_dir)
       end
     end
-    return errors.count == 0
   end
 end
