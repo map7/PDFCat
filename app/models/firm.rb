@@ -52,7 +52,8 @@ class Firm < ActiveRecord::Base
   end
   
   def categories_sorted
-    categories.sort{ |a,b| a.name.downcase <=> b.name.downcase}    
+#    categories.roots.sort{ |a,b| a.name.downcase <=> b.name.downcase}    
+    categories
   end
   
 end

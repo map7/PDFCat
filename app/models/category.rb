@@ -36,7 +36,11 @@ class Category < ActiveRecord::Base
   def self.with_conditions(firm_id, page)
     Category.paginate(:page => page, :conditions => { :firm_id => firm_id })    
   end
-  
+
+  def level_name
+    level == 0 ? name : "-- #{name}"
+  end
+
   def category_dir
     level == 0 ? name.downcase : "#{parent.name}/#{name}".downcase
   end

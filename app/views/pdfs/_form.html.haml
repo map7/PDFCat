@@ -7,7 +7,7 @@
 	= f.date_select :pdfdate, :label => "Date"
 	= f.text_field :pdfname, :label => "Name"
 	= f.collection_select :client_id, current_firm.clients_sorted, :id, :name
-	= f.collection_select :category_id, current_firm.categories_sorted, :id, :name
+	= f.collection_select :category_id, current_firm.categories_sorted, :id, :level_name
 	= f.text_field :pdfnote, :label => "Note"
 	= f.submit
 
