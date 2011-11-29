@@ -14,10 +14,18 @@ class Category < ActiveRecord::Base
   after_save :sort_categories
   
   def sort_categories
-    next_cat = Category.find(:all,
+    if self.child?
+      next_cat=Category.find(:all,
+                             :conditions=>["name > ? and firm_id = ? and parent_id = ?",
+                                           self.name, self.firm_id, self.parent_id],
+                             :order => :name,
+                             :limit => 1)
+    else
+      next_cat=Category.find(:all,
                              :conditions=>["name > ? and firm_id = ? and parent_id is null",
                                            self.name, self.firm_id], :order => :name,
                              :limit => 1)
+    end
     self.move_to_left_of(next_cat.first) unless next_cat.size == 0
   end
   

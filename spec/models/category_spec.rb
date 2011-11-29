@@ -4,7 +4,7 @@ describe Category do
   let(:cat) {Category.make}
   
   before do 
-    @sub = Category.make(:name => "Sub1")
+    @sub = Category.make(:name => "Sub1", :firm_id => cat.firm_id)
     @sub.move_to_child_of cat
   end
 
@@ -13,10 +13,17 @@ describe Category do
       context "a parent" do 
         it "should sort in alphabetical" do
           cat2=Category.make(:name => "Admin", :firm_id => cat.firm_id)
-
-          categories = Category.all
-          categories.first.name.should == "Admin"          
+          Category.first.name.should == "Admin"          
         end      
+      end
+
+      context "a sub category" do
+        it "should sort in alphabetical" do
+          sub2= Category.make(:name =>"sub2", :firm_id => cat.firm_id, :parent_id => cat.id)
+          sub= Category.make(:name =>"asub", :firm_id => cat.firm_id, :parent_id => cat.id)
+          
+          Category.all[1].name.should == "asub"
+        end
       end
     end
   end
