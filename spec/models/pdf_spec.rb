@@ -7,6 +7,10 @@ describe Pdf do
   let(:client_dir) {"/home/map7/pdfcat_test_clt/publishing solutions"}
   let(:full_dir)   {"#{client_dir}/general"}
   let(:full_path)  {"#{full_dir}/#{filename}"}  
+
+  before do 
+    FileUtils.stub!(:chown).and_return(true)
+  end
   
   describe "#client_name" do
     it "should return client name in downcase" do
