@@ -11,6 +11,12 @@ class Category < ActiveRecord::Base
 
   default_scope :order => "lft,upper(name)"
   
+  before_save :sort_categories
+  
+  def sort_categories
+#    next_cat = Category.all(:conditions => ("name > ? and firm_id = ?", self.name, self.firm_id)
+  end
+  
   def self.per_page
     10
   end

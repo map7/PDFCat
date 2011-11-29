@@ -7,6 +7,19 @@ describe Category do
     @sub = Category.make(:name => "Sub1")
     @sub.move_to_child_of cat
   end
+
+  describe "#sort_categories" do
+    context "when saving" do
+      context "a parent" do 
+        it "should sort in alphabetical" do
+          cat2=Category.make(:name => "admin")
+
+          categories = Category.all
+          categories.first.name.should == "admin"          
+        end      
+      end
+    end
+  end
   
   describe "#category_dir" do    
     context "when main category" do
