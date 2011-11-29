@@ -86,9 +86,9 @@ class PdfsController < ApplicationController
   # This is incase a file was moved or renamed.
   def relink
     @pdf = Pdf.find(params[:id])
-    flash[:notice] = "Relinking - please wait 5minutes whilst I find your file."
     
     if @pdf.relink_file(current_firm)
+      flash[:notice] = "Relinking - please wait 5minutes whilst I find your file."
       render :partial => "showitem"
       return true
     else
