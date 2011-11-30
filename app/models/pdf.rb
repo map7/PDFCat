@@ -97,7 +97,12 @@ class Pdf < ActiveRecord::Base
     unless does_new_full_path_exist?
       FileUtils.mkdir_p(full_dir, :mode => 0775) unless File.exists?(full_dir)
       FileUtils.mv(from, new_full_path)
-      FileUtils.chown(nil,firm.file_group,new_full_path)
+
+      begin
+        FileUtils.chown(nil,firm.file_group,new_full_path)
+      rescue
+        logger.warn 'Could not set permissions on #{new_full_path}'
+      end
       
       self.filename = get_new_filename2
       self.md5 = md5calc2(self.firm)
