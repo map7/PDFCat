@@ -75,9 +75,18 @@ class Pdf < ActiveRecord::Base
     File.exists?(client_dir + "/" + cat_name)
   end  
 
+  def directory_empty?(dir)
+    (Dir.entries(dir) - %w{ . .. }).empty?
+  end
+  
+  def remove_prev_dir
+    FileUtils.rmdir prev_full_dir if directory_empty?(prev_full_dir)
+  end
+  
   # The new improved move_file routine, now with testing!
   def move_file2
     move_file_common(prev_full_path) unless prev_full_path == new_full_path
+    remove_prev_dir
   end
   
   def move_uploaded_file
@@ -90,8 +99,8 @@ class Pdf < ActiveRecord::Base
       FileUtils.mv(from, new_full_path)
       FileUtils.chown(nil,firm.file_group,new_full_path)
       
-      self.update_attribute(:filename, get_new_filename2)
-      self.update_attribute(:md5, md5calc2(self.firm))
+      self.filename = get_new_filename2
+      self.md5 = md5calc2(self.firm)
     end
   end
   

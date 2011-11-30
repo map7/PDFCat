@@ -164,9 +164,53 @@ describe Pdf do
     end
   end
   
+  describe "#remove_prev_dir" do
+    context "when main directory" do
+      context "is empty" do
+        it "should remove the dir" do
+          Dir.stub!(:entries).and_return(%w{. ..})
+          FileUtils.should_receive(:rmdir).with(pdf.prev_full_dir).and_return(true)
+          pdf.remove_prev_dir
+        end
+      end
+      
+      context "is full" do
+        it "should not move dir" do
+          Dir.stub!(:entries).and_return(%w{. .. test.pdf})
+          FileUtils.should_not_receive(:rmdir)
+          pdf.remove_prev_dir
+        end
+      end
+    end
+    
+    context "when sub directory" do
+      before do
+        @sub = Category.make(:name => "sub",
+                             :parent_id=> pdf.category.id, :firm_id => pdf.category.firm.id)
+        @pdf = Pdf.make(:category_id => @sub.id, :firm_id => @sub.firm.id)
+      end
+      
+      context "is empty" do
+        it "should remove the dir" do
+          Dir.stub!(:entries).and_return(%w{. ..})
+          FileUtils.should_receive(:rmdir).with(@pdf.prev_full_dir).and_return(true)
+          @pdf.remove_prev_dir
+        end
+      end
+
+      context "is full" do
+        it "should not move dir"
+      end
+    end
+
+
+
+  end
+  
   describe "#move_file2" do
     before do 
       pdf.stub!(:md5calc2)
+      Dir.stub!(:entries).and_return(%w{. .. test.pdf}) # Directory is full
     end
     
     context "when changing category" do
