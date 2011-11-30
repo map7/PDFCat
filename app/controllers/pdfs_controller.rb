@@ -73,11 +73,11 @@ class PdfsController < ApplicationController
     @pdf = Pdf.find(params[:id])
 
     if @pdf.file_exist?(current_firm)
-      send_file(@pdf.fullpath(current_firm),
+      send_file(@pdf.full_path,
                 :type         =>  'application/pdf',
                 :disposition  =>  'attachment')
     else
-      flash[:notice] = 'File cannot be found, Please try relinking'
+      flash[:notice] = 'File #{@pdf.full_path} cannot be found, Please try relinking'
       redirect_to :action => 'show', :id => params[:id]
     end
   end
