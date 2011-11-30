@@ -77,7 +77,7 @@ class PdfsController < ApplicationController
                 :type         =>  'application/pdf',
                 :disposition  =>  'attachment')
     else
-      flash[:notice] = 'File #{@pdf.full_path} cannot be found, Please try relinking'
+      flash[:notice] = "File #{@pdf.full_path} cannot be found, Please try relinking"
       redirect_to :action => 'show', :id => params[:id]
     end
   end
