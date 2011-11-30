@@ -99,8 +99,8 @@ class Pdf < ActiveRecord::Base
       FileUtils.mv(from, new_full_path)
       FileUtils.chown(nil,firm.file_group,new_full_path)
       
-      self.update_attribute(:filename, get_new_filename2)
-      self.update_attribute(:md5, md5calc2(self.firm))
+      self.filename = get_new_filename2
+      self.md5 = md5calc2(self.firm)
     end
   end
   
