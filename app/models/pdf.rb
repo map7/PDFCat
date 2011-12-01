@@ -76,7 +76,11 @@ class Pdf < ActiveRecord::Base
   end  
 
   def directory_empty?(dir)
-    (Dir.entries(dir) - %w{ . .. }).empty?
+    if File.exists?(dir)
+      (Dir.entries(dir) - %w{ . .. }).empty?
+    else
+      return false
+    end
   end
   
   def remove_prev_dir
