@@ -53,7 +53,7 @@ class Pdf < ActiveRecord::Base
   end
 
   def prev_full_path
-    path_was ? path_was : "#{prev_full_dir}/#{filename}"
+    path_was ? "#{path_was}/#{filename}" : "#{prev_full_dir}/#{filename}"
   end
   
   def new_full_path
@@ -95,6 +95,7 @@ class Pdf < ActiveRecord::Base
   
   def move_file_common(from)
     unless does_new_full_path_exist?
+      
       FileUtils.mkdir_p(full_dir, :mode => 0775) unless File.exists?(full_dir)
       FileUtils.mv(from, new_full_path)
 
@@ -105,7 +106,7 @@ class Pdf < ActiveRecord::Base
       end
       
       self.filename = get_new_filename2
-      self.md5 = md5calc2(self.firm)
+      self.md5 = Digest::MD5.hexdigest(new_full_path)
     end
   end
   

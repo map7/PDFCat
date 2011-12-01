@@ -40,7 +40,7 @@ class PdfsController < ApplicationController
 
     if @pdf.valid?
       @pdf.move_file2
-      @pdf.save unless @pdf.does_new_full_path_exist?
+      @pdf.save unless @pdf.errors.count > 0
     end
 
     if @pdf.errors.count > 0
