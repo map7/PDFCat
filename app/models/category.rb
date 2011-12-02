@@ -67,6 +67,8 @@ class Category < ActiveRecord::Base
       elsif File.exists?(old_dir)
         File.rename(old_dir,new_dir)
       end
+      
+      pdf.relink_file(pdf.firm) if pdf.path
     end
   end
 end

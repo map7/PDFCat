@@ -86,11 +86,19 @@ class Pdf < ActiveRecord::Base
   def remove_prev_dir
     FileUtils.rmdir prev_full_dir if directory_empty?(prev_full_dir)
   end
+
+  def prev_full_path_exists?
+    File.exists?(prev_full_path)
+  end
   
   # The new improved move_file routine, now with testing!
   def move_file2
-    move_file_common(prev_full_path) unless prev_full_path == new_full_path
-    remove_prev_dir
+    unless prev_full_path == new_full_path 
+      if prev_full_path_exists?
+        move_file_common(prev_full_path) 
+        remove_prev_dir
+      end
+    end
   end
   
   def move_uploaded_file

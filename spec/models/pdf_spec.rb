@@ -166,14 +166,18 @@ describe Pdf do
   
   describe "#remove_prev_dir" do
     context "when main directory" do
-      context "is empty" do
+      context "exists and is empty" do
+        before do 
+          File.stub!(:exists).with(pdf.prev_full_dir).and_return(true)
+        end
+      
         it "should remove the dir" do
           Dir.stub!(:entries).and_return(%w{. ..})
           FileUtils.should_receive(:rmdir).with(pdf.prev_full_dir).and_return(true)
           pdf.remove_prev_dir
         end
       end
-      
+
       context "is full" do
         it "should not move dir" do
           Dir.stub!(:entries).and_return(%w{. .. test.pdf})
@@ -190,9 +194,12 @@ describe Pdf do
         @pdf = Pdf.make(:category_id => @sub.id, :firm_id => @sub.firm.id)
       end
       
-      context "is empty" do
+      context "exists and is empty" do
+        before do 
+          @pdf.stub!(:directory_empty?).and_return(true)
+        end
+
         it "should remove the dir" do
-          Dir.stub!(:entries).and_return(%w{. ..})
           FileUtils.should_receive(:rmdir).with(@pdf.prev_full_dir).and_return(true)
           @pdf.remove_prev_dir
         end
@@ -220,8 +227,15 @@ describe Pdf do
         @pdf = pdf
         @pdf.category = @cat = Category.make(:name => "new")
         FileUtils.stub!(:mv)
-        File.stub!(:exists).and_return(true)
+
+        @pdf.stub!(:prev_full_path_exists?).and_return(true)
+        File.stub!(:exists).with("#{client_dir}/#{@cat.name}").and_return(true) #dest
+        
+        # Stub out mkdir
         FileUtils.stub!(:mkdir_p)
+
+        # Don't worry about removing the old directory
+        @pdf.stub!(:directory_empty?).and_return(false)
       end
       
       it "should move the pdf" do
@@ -230,7 +244,7 @@ describe Pdf do
         @pdf.move_file2
       end
 
-      context "new full dir doesn't exist" do 
+      context "where the new full dir doesn't exist" do 
         before do 
           @pdf.stub!(:does_new_full_path_exist?).and_return(true)
           File.stub!(:exists?).with(dest_dir).and_return(false)
@@ -283,6 +297,15 @@ describe Pdf do
           #     from(nil).
           #     to("the_md5")
           # end
+        end
+        
+        context "when pdf original path doesn't exist" do
+          it "should not move file" do
+            @pdf.stub!(:prev_full_path_exists?).and_return(false)
+            @pdf.update_attribute(:path, "/path/does/not/exist")
+            FileUtils.should_not_receive(:mv)
+            @pdf.move_file2            
+          end
         end
       end 
     end
