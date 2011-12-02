@@ -28,6 +28,7 @@ class CategoriesController < ApplicationController
   def update
     @category = Category.find(params[:id])
     @oldcat = @category.name
+    @category.attributes = params[:category]
     
     if @category.valid?
       @category.move_dir
