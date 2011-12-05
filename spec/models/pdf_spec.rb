@@ -206,7 +206,14 @@ describe Pdf do
       end
 
       context "is full" do
-        it "should not move dir"
+        before do 
+          @pdf.stub!(:directory_empty?).and_return(false)
+        end
+
+        it "should not move dir" do
+          FileUtils.should_not_receive(:rmdir).with(@pdf.prev_full_dir).and_return(true)
+          @pdf.remove_prev_dir
+        end
       end
     end
 
