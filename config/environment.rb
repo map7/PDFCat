@@ -32,6 +32,8 @@ Rails::Initializer.run do |config|
   
   config.gem "pg"
   
+  config.gem 'rdoc'
+  
   config.gem "haml"
   config.gem "will_paginate", :version => '~> 2.3.11', :source => "http://gemcutter.org"
   
