@@ -80,7 +80,7 @@ Rails::Initializer.run do |config|
   # config.active_record.default_timezone = :utc
 
   config.action_controller.session = {
-      :session_key => "_myapp_session",
+      :key => "_myapp_session",
       :secret => "afs9u34nmv1op2348,.asJKLSDF:lkq3409uasdkvj90vlkja;erf"
   }
 
