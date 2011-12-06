@@ -91,14 +91,14 @@ describe Pdf do
     context "when sub category changes" do
       before do 
         @sub_full_dir = "#{full_dir}/sub"
-        @cat = Category.make
-        @sub = Category.make(:name => "sub", :parent_id=> @cat.id, :firm_id => @cat.firm.id)
-        @pdf = Pdf.make(:category_id => @sub.id, :firm_id => @cat.firm.id)
+        @sub = Category.make(:name => "sub",
+                             :parent_id=> pdf.category.id, :firm_id =>pdf.firm.id)
+        @pdf = Pdf.make(:category_id => @sub.id, :firm_id => @sub.firm.id)
       end
       
       it "should return previous dir" do
-        @pdf.category = Category.make(:name => "newsub", :parent_id => @cat.id,
-                                :firm_id => @cat.firm.id)
+        @pdf.category = Category.make(:name => "newsub",
+                                      :parent_id => @sub.parent_id,:firm_id => @sub.firm.id)
         @pdf.prev_full_dir.should == @sub_full_dir
       end
     end
@@ -127,11 +127,14 @@ describe Pdf do
       end
     
       context "but path has changed" do
+        before do
+          @pdf = Pdf.make(:path => "mypath")
+          @pdf.path = "changed"
+        end
+        
         it "should trust the path variable" do
-          pdf = Pdf.make(:path => "mypath")
-          pdf.path = "changed"
-          pdf.category = Category.make(:name => "new")          
-          pdf.prev_full_path.should == "mypath/20100128-Unit_Trust_Deed.pdf"
+          @pdf.category = Category.make(:name => "new")          
+          @pdf.prev_full_path.should == "mypath/20100128-Unit_Trust_Deed.pdf"
         end
       end
     end  
@@ -206,7 +209,14 @@ describe Pdf do
       end
 
       context "is full" do
-        it "should not move dir"
+        before do 
+          @pdf.stub!(:directory_empty?).and_return(false)
+        end
+
+        it "should not move dir" do
+          FileUtils.should_not_receive(:rmdir).with(@pdf.prev_full_dir).and_return(true)
+          @pdf.remove_prev_dir
+        end
       end
     end
 
@@ -310,6 +320,4 @@ describe Pdf do
       end 
     end
   end
-
-  
 end

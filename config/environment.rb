@@ -32,6 +32,8 @@ Rails::Initializer.run do |config|
   
   config.gem "pg"
   
+  config.gem 'rdoc'
+  
   config.gem "haml"
   config.gem "will_paginate", :version => '~> 2.3.11', :source => "http://gemcutter.org"
   
@@ -78,7 +80,7 @@ Rails::Initializer.run do |config|
   # config.active_record.default_timezone = :utc
 
   config.action_controller.session = {
-      :session_key => "_myapp_session",
+      :key => "_myapp_session",
       :secret => "afs9u34nmv1op2348,.asJKLSDF:lkq3409uasdkvj90vlkja;erf"
   }
 
