@@ -320,6 +320,4 @@ describe Pdf do
       end 
     end
   end
-
-  
 end
