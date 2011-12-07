@@ -1,5 +1,40 @@
 #flash= flash[:notice]
-- for column in Pdf.content_columns
-  %p
-    %b= column.human_name
-    = @pdf.send(column.name)
+
+%table
+	%tr
+		%td
+			%b Date
+		%td= @pdf.pdfdate
+	%tr
+		%td
+			%b Name
+		%td= @pdf.pdfname
+	%tr
+		%td 
+			%b Client
+		%td= @pdf.client.name
+	%tr
+		%td 
+			%b Category
+		%td= @pdf.category.name
+	%tr
+		%td 
+			%b Full Path
+		%td= @pdf.full_path
+	%tr
+		%td
+			%b Relocated Path
+		%td= @pdf.path
+	%tr
+		%td
+			%b md5
+		%td= @pdf.md5
+	%tr
+		%td
+			%b Missing
+		%td= @pdf.missing_flag
+	%tr
+		%td
+			%b Note
+		%td= @pdf.pdfnote
+%br
