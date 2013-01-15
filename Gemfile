@@ -19,6 +19,7 @@ gem "awesome_nested_set", "< 2.0"
 gem 'machinist', "< 2.0"
 gem "rspec", "1.3.0"
 gem "rspec-rails", "1.3.2"
+gem "test-unit"
 
 # Deployment
 gem "capistrano"
