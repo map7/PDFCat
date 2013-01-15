@@ -16,3 +16,5 @@ coverage/*
 .sass-cache
 .rvmrc
 rdoc/
+
+.rbenv-version
