@@ -10,7 +10,7 @@ gem "haml"
 gem "will_paginate", '~> 2.3.11'
 
 # RESTful ACL support.
-gem "restful_acl"
+gem "restful_acl", "3.0.4"
 
 # awesome nested set for sub categories
 gem "awesome_nested_set", "< 2.0"
