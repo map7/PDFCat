@@ -2,7 +2,7 @@ source :gemcutter
 
 gem "rails", "2.3.17"
 
-gem "pg"
+gem "pg", "0.11.0"
 
 gem 'rdoc'
 
