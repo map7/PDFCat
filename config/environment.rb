@@ -7,8 +7,6 @@
 # Specifies gem version of Rails to use when vendor/rails is not present
 # RAILS_GEM_VERSION = '2.3.8' unless defined? RAILS_GEM_VERSION
 
-PDFCAT_VERSION="2.3.2"
-
 # Bootstrap the Rails environment, frameworks, and default configuration
 require 'thread'
 require File.join(File.dirname(__FILE__), 'boot')
