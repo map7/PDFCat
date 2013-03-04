@@ -5,7 +5,7 @@
 # ENV['RAILS_ENV'] ||= 'production'
 
 # Specifies gem version of Rails to use when vendor/rails is not present
-RAILS_GEM_VERSION = '2.3.8' unless defined? RAILS_GEM_VERSION
+# RAILS_GEM_VERSION = '2.3.8' unless defined? RAILS_GEM_VERSION
 
 PDFCAT_VERSION="2.3.2"
 
@@ -30,26 +30,26 @@ Rails::Initializer.run do |config|
     :domain => "lan"
   }
   
-  config.gem "pg"
+  # config.gem "pg"
   
-  config.gem 'rdoc'
+  # config.gem 'rdoc'
   
-  config.gem "haml"
-  config.gem "will_paginate", :version => '~> 2.3.11', :source => "http://gemcutter.org"
+  # config.gem "haml"
+  # config.gem "will_paginate", :version => '~> 2.3.11', :source => "http://gemcutter.org"
   
-  # RESTful ACL support.
-  config.gem "mdarby-restful_acl", :lib => 'restful_acl_controller'
+  # # RESTful ACL support.
+  # config.gem "mdarby-restful_acl", :lib => 'restful_acl_controller'
 
-  # awesome nested set for sub categories
-  config.gem "awesome_nested_set", :version => "< 2.0"
+  # # awesome nested set for sub categories
+  # config.gem "awesome_nested_set", :version => "< 2.0"
   
-  # rspec tests
-  config.gem 'machinist', :version => "< 2.0"
-  config.gem "rspec", :version => "1.3.0", :lib => false
-  config.gem "rspec-rails", :version => "1.3.2", :lib => false
+  # # rspec tests
+  # config.gem 'machinist', :version => "< 2.0"
+  # config.gem "rspec", :version => "1.3.0", :lib => false
+  # config.gem "rspec-rails", :version => "1.3.2", :lib => false
 
-  # Deployment
-  config.gem "capistrano"
+  # # Deployment
+  # config.gem "capistrano"
   
   # Skip frameworks you're not going to use (only works if using vendor/rails)
   # config.frameworks -= [ :action_web_service, :action_mailer ]
