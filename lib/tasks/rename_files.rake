@@ -5,7 +5,6 @@ namespace :pdfs do
     
     Pdf.all.each do |pdf|
       if pdf.path
-        puts "\t*IGNORE* Relocated Path\t\tID: #{pdf.id}-#{pdf.full_path}"
 
         # Get the filename
         f=File.basename pdf.full_path
@@ -16,7 +15,11 @@ namespace :pdfs do
         # Get date from start of relocated file
         date=f.match(/^\d{8}/).to_s
 
-        unless date == ""
+        if date == ""
+          puts "\t*IGNORE* Already renamed\tID: #{pdf.id}-#{pdf.full_path}"
+          
+        else
+          puts "\t*IGNORE* Relocated Path\t\tID: #{pdf.id}-#{pdf.full_path}"
 
           # Get the filename
           filename=f.match(/[^^\d{8}-].*[^$.pdf]/).to_s
