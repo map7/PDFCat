@@ -25,7 +25,7 @@ class Pdf < ActiveRecord::Base
   end
 
   def client_name
-    client.name.downcase
+    client.name.downcase unless client.nil?
   end
 
   def client_dir
@@ -33,7 +33,7 @@ class Pdf < ActiveRecord::Base
   end
 
   def category_name
-    category.category_dir
+    category.try(:category_dir)
   end
 
   def prev_full_dir
