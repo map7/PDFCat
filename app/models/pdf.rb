@@ -223,7 +223,7 @@ class Pdf < ActiveRecord::Base
 
 
   def relink_one_file(current_firm, files)
-    if client_name && category_name
+    if client_name
       if File.exists?(fullpath(current_firm))
         update_attribute(:missing_flag, false)
       else
