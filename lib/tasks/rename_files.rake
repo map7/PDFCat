@@ -3,13 +3,13 @@ namespace :pdfs do
   task :rename => :environment do |t|
     Pdf.all.each do |pdf|
       if pdf.path
-        puts "\t*IGNORE* Reloated Path\t\t#{pdf.full_path}"
+        puts "\t*IGNORE* Reloated Path\t\tID: #{pdf.id}-#{pdf.full_path}"
       elsif pdf.client.nil?
-        puts "\t*IGNORE* Client blank\t\t#{pdf.id}"
+        puts "\t*IGNORE* Client blank\t\tID: #{pdf.id}"
       elsif pdf.category.nil?
-        puts "\t*IGNORE* Category blank\t\t#{pdf.full_path}"
+        puts "\t*IGNORE* Category blank\t\tID: #{pdf.id}-#{pdf.full_path}"
       elsif pdf.category && pdf.client && pdf.full_path == pdf.new_full_path
-        puts "\t*IGNORE* Already renamed\t#{pdf.full_path}"
+        puts "\t*IGNORE* Already renamed\tID: #{pdf.id}-#{pdf.full_path}"
       elsif File.exists?(pdf.full_path)
         puts "ID:#{pdf.id}-#{pdf.full_path} \t-> #{pdf.new_full_path}"       
         
@@ -19,7 +19,7 @@ namespace :pdfs do
         # Save the new filename
         pdf.update_attribute(:filename, pdf.get_new_filename2)
       else
-        puts "\t*IGNORE* File missing\t\t#{pdf.full_path}"
+        puts "\t*IGNORE* File missing\t\tID: #{pdf.id}-#{pdf.full_path}"
       end
     end
   end
