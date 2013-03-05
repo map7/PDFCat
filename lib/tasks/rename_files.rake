@@ -4,10 +4,26 @@ namespace :pdfs do
     Pdf.all.each do |pdf|
       if pdf.path
         puts "\t*IGNORE* Reloated Path\t\tID: #{pdf.id}-#{pdf.full_path}"
+
+        # Get the file object
+
+        # Put the date onto the end
+
+        # Rename file
+
+        # Fix up database
+        
       elsif pdf.client.nil?
         puts "\t*IGNORE* Client blank\t\tID: #{pdf.id}"
       elsif pdf.category.nil?
         puts "\t*IGNORE* Category blank\t\tID: #{pdf.id}-#{pdf.full_path}"
+        
+        # Assign to a category
+
+        # Rename file
+
+        # Fix up database
+        
       elsif pdf.category && pdf.client && pdf.full_path == pdf.new_full_path
         puts "\t*IGNORE* Already renamed\tID: #{pdf.id}-#{pdf.full_path}"
       elsif File.exists?(pdf.full_path)

@@ -13,14 +13,32 @@ describe Pdf do
   end
   
   describe "#client_name" do
-    it "should return client name in downcase" do
-      pdf.client_name.should == "publishing solutions"
+    context "Given a pdf which has a client" do 
+      it "should return client name in downcase" do
+        pdf.client_name.should == "publishing solutions"
+      end
+    end
+
+    context "Given a pdf which doesn't have a client" do
+      it "should return nil" do
+        pdf.client = nil
+        pdf.client_name.should == nil
+      end
     end
   end
   
   describe "#category_name" do
-    it "should return category name in downcase" do
-      pdf.category_name.should == "general"
+    context "Given a pdf which has a category" do 
+      it "should return category name in downcase" do
+        pdf.category_name.should == "general"
+      end
+    end
+
+    context "Given a pdf which doesn't have a category" do
+      it "should return nil" do
+        pdf.category = nil
+        pdf.category_name.should == nil
+      end
     end
   end
 

@@ -25,7 +25,7 @@ class Pdf < ActiveRecord::Base
   end
 
   def client_name
-    client.name.downcase unless client.nil?
+    client.name.downcase if client
   end
 
   def client_dir
