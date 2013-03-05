@@ -49,7 +49,7 @@ class Pdf < ActiveRecord::Base
   end
   
   def full_dir
-    "#{client_dir}/#{category.category_dir}".downcase
+    "#{client_dir}/#{category.try(:category_dir)}".downcase
   end
 
   def prev_full_path
@@ -123,7 +123,6 @@ class Pdf < ActiveRecord::Base
     end
   end
   
-  
   # List uploaded files
   def self.list_files(current_firm)
     require 'find'
@@ -180,7 +179,7 @@ class Pdf < ActiveRecord::Base
   def get_new_filename2
     date = pdfdate.to_formatted_s(:file_format)
     ext = File.extname(full_path)
-    "#{date}-#{pdfname}#{ext}".gsub(/ /,"_")
+    "#{pdfname}-#{date}#{ext}".gsub(/ /,"_")
   end
   
   def get_new_filename(current_firm,original_file)

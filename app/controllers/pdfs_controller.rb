@@ -131,8 +131,8 @@ class PdfsController < ApplicationController
     client_name = "%%#{params[:client]}%%"
     category_name = "%%#{params[:category]}%%"
 
-    cond_strings = returning([]) do |strings|
-    strings << "firms.id = #{current_firm.id}"
+    cond_strings = [].tap do |strings|
+      strings << "firms.id = #{current_firm.id}"
       strings << "pdfs.pdfname ilike '#{pdfname}'" unless params[:pdfname].blank?
       strings << "clients.name ilike '#{client_name}'" unless client_name.blank?
       strings << "categories.name ilike '#{category_name}'" unless category_name.blank?

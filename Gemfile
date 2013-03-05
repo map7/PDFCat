@@ -26,3 +26,4 @@ gem "capistrano"
 
 # Background Jobs (ie: Emailing)
 gem 'delayed_job', "~> 2.0.4"
+

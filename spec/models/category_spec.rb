@@ -86,8 +86,8 @@ describe Category do
 
         @old_dir = "#{@client_dir}/general"
         @new_dir = "#{@client_dir}/new_name"
-        @old_path = "#{@old_dir}/20100128-Unit_Trust_Deed.pdf"
-        @new_path = "#{@new_dir}/20100128-Unit_Trust_Deed.pdf"
+        @old_path = "#{@old_dir}/Unit_Trust_Deed-20100128.pdf"
+        @new_path = "#{@new_dir}/Unit_Trust_Deed-20100128.pdf"
       end
       
       context "new dir doesn't exist" do 
@@ -139,8 +139,8 @@ describe Category do
 
         @old_dir = "#{@client_dir}/general/sub"
         @new_dir = "#{@client_dir}/general/new_sub"
-        @old_path = "#{@old_dir}/20100128-Unit_Trust_Deed.pdf"
-        @new_path = "#{@new_dir}/20100128-Unit_Trust_Deed.pdf"
+        @old_path = "#{@old_dir}/Unit_Trust_Deed-20100128.pdf"
+        @new_path = "#{@new_dir}/Unit_Trust_Deed-20100128.pdf"
       end
       
       context "new dir doesn't exist" do

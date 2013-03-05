@@ -3,7 +3,7 @@ require 'spec_helper'
 describe Pdf do
   let(:pdf) {Pdf.make}
   
-  let(:filename)   {"20100128-Unit_Trust_Deed.pdf"}
+  let(:filename)   {"Unit_Trust_Deed-20100128.pdf"}
   let(:client_dir) {"/home/map7/pdfcat_test_clt/publishing solutions"}
   let(:full_dir)   {"#{client_dir}/general"}
   let(:full_path)  {"#{full_dir}/#{filename}"}  
@@ -122,7 +122,7 @@ describe Pdf do
         it "should trust the path variable" do
           pdf = Pdf.make(:path => "mypath")
           pdf.category = Category.make(:name => "new")          
-          pdf.prev_full_path.should == "mypath/20100128-Unit_Trust_Deed.pdf"
+          pdf.prev_full_path.should == "mypath/Unit_Trust_Deed-20100128.pdf"
         end
       end
     
@@ -134,7 +134,7 @@ describe Pdf do
         
         it "should trust the path variable" do
           @pdf.category = Category.make(:name => "new")          
-          @pdf.prev_full_path.should == "mypath/20100128-Unit_Trust_Deed.pdf"
+          @pdf.prev_full_path.should == "mypath/Unit_Trust_Deed-20100128.pdf"
         end
       end
     end  
@@ -143,7 +143,7 @@ describe Pdf do
   describe "#get_new_filename2" do
     it "should return new filename" do
       pdf.pdfname = "foobar"
-      pdf.get_new_filename2.should == "20100128-foobar.pdf"
+      pdf.get_new_filename2.should == "foobar-20100128.pdf"
     end
   end
   
@@ -295,8 +295,8 @@ describe Pdf do
               @pdf.pdfname="Testing filename"
               @pdf.move_file2              
             end.should change(@pdf, :filename).
-              from("20100128-Unit_Trust_Deed.pdf").
-              to("20100128-Testing_filename.pdf")
+              from("Unit_Trust_Deed-20100128.pdf").
+              to("Testing_filename-20100128.pdf")
           end
 
           # it "should update md5" do
