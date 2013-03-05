@@ -220,38 +220,38 @@ class Pdf < ActiveRecord::Base
 
 
   def relink_one_file(current_firm, files)
+    if client_name && category_name
+      if File.exists?(fullpath(current_firm))
+        update_attribute(:missing_flag, false)
+      else
 
-    if File.exists?(fullpath(current_firm))
-      update_attribute(:missing_flag, false)
-    else
 
+        # Don't bother unless there is a md5 tag.
+        if md5
 
-      # Don't bother unless there is a md5 tag.
-      if md5
+          # Match the missing file with it's new path
+          @missing_file = files[md5]
 
-        # Match the missing file with it's new path
-        @missing_file = files[md5]
+          if @missing_file
+            # Update database information
+            update_attribute(:path, File.dirname(@missing_file))
+            update_attribute(:filename, File.basename(@missing_file))
+            update_attribute(:missing_flag, false)
 
-        if @missing_file
-          # Update database information
-          update_attribute(:path, File.dirname(@missing_file))
-          update_attribute(:filename, File.basename(@missing_file))
-          update_attribute(:missing_flag, false)
+            #        puts "Relinking '#{pdfname}' to #{@missing_file} for client #{client.name}"
 
-          #        puts "Relinking '#{pdfname}' to #{@missing_file} for client #{client.name}"
+            return true  # The file was found and fixed
+          else
+            update_attribute(:missing_flag, true)
 
-          return true  # The file was found and fixed
-        else
-          update_attribute(:missing_flag, true)
+            unless current_firm.nil? or client.nil?
+              puts "Missing '#{pdfname}' for firm '#{current_firm.name}', client '#{client.name}'"
+            end
 
-          unless current_firm.nil? or client.nil?
-            puts "Missing '#{pdfname}' for firm '#{current_firm.name}', client '#{client.name}'"
+            return false # The file couldn't be found
           end
-
-          return false # The file couldn't be found
         end
       end
-
     end
   end
 
