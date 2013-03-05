@@ -1,4 +1,7 @@
 #!/usr/local/bin/ruby
+#
+# THIS HAS BEEN REPLACED BY A RAKE TASK
+#
 # Find all missing files
 
 # Connect to postgres database
