@@ -33,6 +33,9 @@ class Pdf < ActiveRecord::Base
   end
 
   def category_name
+    if category.nil?
+      self.update_attribute(:category, firm.categories.first)
+    end
     category.try(:category_dir)
   end
 

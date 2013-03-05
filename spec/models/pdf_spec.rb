@@ -37,7 +37,11 @@ describe Pdf do
     context "Given a pdf which doesn't have a category" do
       it "should return nil" do
         pdf.category = nil
-        pdf.category_name.should == nil
+        firm = Firm.make
+        firm.categories << Category.make(:name => "foo")
+        pdf.firm = firm
+        
+        pdf.category_name.should == "foo"
       end
     end
   end

@@ -19,12 +19,7 @@ namespace :pdfs do
         puts "\t*IGNORE* Client missing\t\tID: #{pdf.id}"
       elsif pdf.category.nil?
         puts "\t*IGNORE* Category missing\t\tID: #{pdf.id}-#{pdf.full_path}"
-        
-        # Assign to a category
-        if pdf.firm && pdf.firm.categories.count > 0
-          pdf.update(:category, pdf.firm.categories.first)
-          @rerun = true
-        end
+
         
       elsif pdf.category && pdf.client && pdf.full_path == pdf.new_full_path
         puts "\t*IGNORE* Already renamed\tID: #{pdf.id}-#{pdf.full_path}"
