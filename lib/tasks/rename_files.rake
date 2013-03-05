@@ -3,7 +3,7 @@ namespace :pdfs do
   task :rename => :environment do |t|
     Pdf.all.each do |pdf|
       if pdf.path
-        puts "\t*IGNORE* Reloated Path\t\tID: #{pdf.id}-#{pdf.full_path}"
+        puts "\t*IGNORE* Relocated Path\t\tID: #{pdf.id}-#{pdf.full_path}"
 
         # Get the file object
 
