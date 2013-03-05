@@ -14,9 +14,9 @@ namespace :pdfs do
         # Fix up database
         
       elsif pdf.client.nil?
-        puts "\t*IGNORE* Client blank\t\tID: #{pdf.id}"
+        puts "\t*IGNORE* Client missing\t\tID: #{pdf.id}"
       elsif pdf.category.nil?
-        puts "\t*IGNORE* Category blank\t\tID: #{pdf.id}-#{pdf.full_path}"
+        puts "\t*IGNORE* Category missing\t\tID: #{pdf.id}-#{pdf.full_path}"
         
         # Assign to a category
 
