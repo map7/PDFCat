@@ -49,7 +49,7 @@ class Pdf < ActiveRecord::Base
   end
   
   def full_dir
-    "#{client_dir}/#{category.category_dir}".downcase
+    "#{client_dir}/#{category.try(:category_dir)}".downcase
   end
 
   def prev_full_path
