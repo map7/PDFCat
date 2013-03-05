@@ -7,13 +7,35 @@ namespace :pdfs do
       if pdf.path
         puts "\t*IGNORE* Relocated Path\t\tID: #{pdf.id}-#{pdf.full_path}"
 
-        # Get the file object
+        # Get the filename
+        f=File.basename pdf.full_path
 
-        # Put the date onto the end
+        # Get path
+        pdf.path
 
-        # Rename file
+        # Get date from start of relocated file
+        date=f.match(/^\d{8}/).to_s
 
-        # Fix up database
+        unless date == ""
+
+          # Get the filename
+          filename=f.match(/[^^\d{8}-].*[^$.pdf]/).to_s
+          
+          # Form new filename
+          newfilename = "#{filename}-#{date}.pdf"
+
+          newpath = "#{pdf.path}/#{newfilename}"
+
+          if File.exists?(pdf.full_path)
+            puts "\t\t\t\t\t       #{newpath}"
+
+            # Rename file
+            FileUtils.mv(pdf.full_path, newpath)
+            
+            # Fix up database
+            pdf.update_attribute(:filename, newfilename)
+          end
+        end
         
       elsif pdf.client.nil?
         puts "\t*IGNORE* Client missing\t\tID: #{pdf.id}"
