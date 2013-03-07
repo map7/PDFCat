@@ -4,7 +4,12 @@ namespace :pdfs do
     @rerun = false
     
     Pdf.all.each do |pdf|
-      if pdf.path
+      if pdf.client.nil?
+        puts "\t*IGNORE* Client missing\t\tID: #{pdf.id}"
+      elsif pdf.category.nil?
+        puts "\t*IGNORE* Category missing\tID: #{pdf.id}-#{pdf.full_path}"
+
+      elsif pdf.path
 
         # Get the filename
         f=File.basename pdf.full_path
@@ -40,10 +45,6 @@ namespace :pdfs do
           end
         end
         
-      elsif pdf.client.nil?
-        puts "\t*IGNORE* Client missing\t\tID: #{pdf.id}"
-      elsif pdf.category.nil?
-        puts "\t*IGNORE* Category missing\tID: #{pdf.id}-#{pdf.full_path}"
 
         
       elsif pdf.category && pdf.client && pdf.full_path == pdf.new_full_path
