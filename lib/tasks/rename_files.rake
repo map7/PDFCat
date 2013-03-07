@@ -9,7 +9,7 @@ namespace :pdfs do
       elsif pdf.category.nil?
         puts "\t*IGNORE* Category missing\tID: #{pdf.id}-#{pdf.full_path}"
 
-      elsif pdf.path
+      elsif File.exists?(pdf.path) # Check relocated path exists
 
         # Get the filename
         f=File.basename pdf.full_path
