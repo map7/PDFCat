@@ -77,7 +77,13 @@ describe Pdf do
       end
     end
 
-    # context "pdf has no category"    
+    context "pdf has no category" do
+      it "returns dir with out category" do
+        pdf = Pdf.make()
+        pdf.update_attribute(:category_id, nil)
+        pdf.full_path.should == "#{client_dir}/#{filename}"
+      end
+    end
   end
   
   describe "#new_full_path" do
