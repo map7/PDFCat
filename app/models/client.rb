@@ -14,6 +14,8 @@ class Client < ActiveRecord::Base
   # On creating a new client this validation fails.
   validate :new_dir_exists?
 
+  before_destroy :check_pdfs
+  
   # Move the directory
   def move_dir(current_firm, oldname)
     @olddir = current_firm.store_dir + "/" + oldname.downcase
@@ -42,4 +44,15 @@ class Client < ActiveRecord::Base
     end
   end
 
+  private
+  def check_pdfs
+    if pdfs.count == 0
+      return true
+    else
+      # Add the raw error message (ie: don't add 'is invalid' on the end)
+      errors.add_to_base "Cannot delete Client as there are #{pdfs.count} document(s) attached"
+      return false
+    end
+  end
+  
 end
