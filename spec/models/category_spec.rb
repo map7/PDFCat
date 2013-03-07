@@ -7,6 +7,21 @@ describe Category do
     @sub = Category.make(:name => "Sub1", :firm_id => cat.firm_id)
     @sub.move_to_child_of cat
   end
+  
+  describe "destroy" do
+    context "with no pdfs attached" do
+      it "deletes" do
+        cat.delete
+        Category.find_by_id(cat.id).should == nil
+      end
+    end
+    
+    context "with pdfs attached" do
+      it "should not delete" do
+        
+      end
+    end
+  end
 
   describe "#sort_categories" do
     context "when saving" do
