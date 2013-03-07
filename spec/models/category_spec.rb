@@ -11,14 +11,24 @@ describe Category do
   describe "destroy" do
     context "with no pdfs attached" do
       it "deletes" do
-        cat.delete
-        Category.find_by_id(cat.id).should == nil
+        cat.destroy
+        lambda { Category.find(cat.id) }.should raise_error(ActiveRecord::RecordNotFound)
       end
     end
     
     context "with pdfs attached" do
+      before do
+        cat.pdfs << Pdf.make
+      end
+      
       it "should not delete" do
-        
+        cat.destroy
+        lambda { Category.find(cat.id) }.should_not raise_error(ActiveRecord::RecordNotFound)        
+      end
+
+      it "adds an error" do
+        cat.destroy
+        cat.errors.count.should == 1
       end
     end
   end

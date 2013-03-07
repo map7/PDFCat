@@ -13,6 +13,9 @@ class Category < ActiveRecord::Base
   
   after_save :sort_categories
   
+  before_destroy :check_pdfs
+  
+  
   def sort_categories
     if self.child?
       next_cat=Category.find(:all,
@@ -71,4 +74,15 @@ class Category < ActiveRecord::Base
       pdf.relink_file(pdf.firm) if pdf.path
     end
   end
+
+  private
+  def check_pdfs
+    if pdfs.count == 0
+      return true
+    else
+      errors.add "Cannot delete Category as there are #{pdfs.count} document(s) attached"
+      return false
+    end
+  end
+  
 end
