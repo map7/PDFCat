@@ -12,11 +12,11 @@
 	%tr
 		%td 
 			%b Client
-		%td= @pdf.client.name
+		%td= @pdf.client.try(:name)
 	%tr
 		%td 
 			%b Category
-		%td= @pdf.category.name
+		%td= @pdf.category.try(:name)
 	%tr
 		%td 
 			%b Full Path
