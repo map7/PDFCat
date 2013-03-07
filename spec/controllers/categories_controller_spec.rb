@@ -111,20 +111,30 @@ describe CategoriesController do
         @category = Category.make
       end
       
-      it "should delete a category" do
-        lambda do 
+      context "no pdfs attached" do 
+        it "deletes a category" do
+          lambda do 
+            delete :destroy, :id => @category.id
+          end.should change(Category, :count).from(1).to(0)
+        end
+        
+        it "redirects to listing categories" do
           delete :destroy, :id => @category.id
-        end.should change(Category, :count).from(1).to(0)
-      end
-      
-      it "redirects to listing categories" do
-        delete :destroy, :id => @category.id
-        response.should redirect_to(categories_path)
+          response.should redirect_to(categories_path)
+        end
+
+        it "displays flash message" do
+          delete :destroy, :id => @category.id
+          flash[:notice].should == "Category deleted successfully!"
+        end
       end
 
-      it "should flash message" do
-        delete :destroy, :id => @category.id
-        flash[:notice].should == "Category deleted successfully!"
+      context "pdfs attached" do 
+        it "displays error message" do
+          @category.pdfs << Pdf.make
+          delete :destroy, :id => @category.id
+          flash[:error].should == "Cannot delete Category as there are 1 document(s) attached"
+        end
       end
     end
   end # Logged in

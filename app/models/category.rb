@@ -80,7 +80,8 @@ class Category < ActiveRecord::Base
     if pdfs.count == 0
       return true
     else
-      errors.add "Cannot delete Category as there are #{pdfs.count} document(s) attached"
+      # Add the raw error message (ie: don't add 'is invalid' on the end)
+      errors.add_to_base "Cannot delete Category as there are #{pdfs.count} document(s) attached"
       return false
     end
   end
