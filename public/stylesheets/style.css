@@ -307,6 +307,15 @@ input, textarea {
   font-weight: bold;
   text-align: center; }
 
+#error {
+  position: absolute;
+  bottom: 40px;
+  width: 100%;
+  background: red;
+  color: white;
+  font-weight: bold;
+  text-align: center; }
+
 #footer {
   position: absolute;
   right: 0;

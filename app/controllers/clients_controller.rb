@@ -3,7 +3,7 @@ class ClientsController < ApplicationController
   before_filter :login_required
 
   make_resourceful do
-    actions :all
+    actions :all, :except => :destroy
 
     before :index do
       @clients = Client.paginate(:all,
@@ -32,6 +32,15 @@ class ClientsController < ApplicationController
     end
   end
 
+  def destroy
+    @client = Client.find(params[:id])
+    if @client.destroy
+      flash[:notice] = "Client deleted successfully!"
+    else
+      flash[:error] = @client.errors.full_messages.to_sentence # Convert error messages.
+    end
+    redirect_to clients_path
+  end
 
   protected
   def search_conditions
