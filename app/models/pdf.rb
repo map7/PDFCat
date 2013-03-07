@@ -29,7 +29,11 @@ class Pdf < ActiveRecord::Base
   end
 
   def client_dir
-    self.firm.store_dir + "/" +  client_name
+    if client_name
+      self.firm.store_dir + "/" +  client_name
+    else
+      self.firm.store_dir
+    end
   end
 
   def category_name
@@ -52,7 +56,11 @@ class Pdf < ActiveRecord::Base
   end
   
   def full_dir
-    "#{client_dir}/#{category.try(:category_dir)}".downcase
+    if category
+      "#{client_dir}/#{category.category_dir}".downcase
+    else
+      client_dir.downcase      
+    end
   end
 
   def prev_full_path
@@ -70,7 +78,7 @@ class Pdf < ActiveRecord::Base
   # Return the full path of the final filename.
   # Keep this as it's referenced though out the app.
   def fullpath(current_firm)
-    path ? path + "/" + filename : full_dir + "/" + filename
+    path ? "#{path}/#{filename}" : "#{full_dir}/#{filename}"
   end
   
   # Checking if the directory exists
