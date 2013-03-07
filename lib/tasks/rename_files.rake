@@ -5,7 +5,7 @@ namespace :pdfs do
     
     Pdf.all.each do |pdf|
       if pdf.client.nil?
-        puts "\t*IGNORE* Client missing\t\tID: #{pdf.id}"
+        puts "\t*IGNORE* Client missing\t\tID: #{pdf.id}-#{pdf.full_path}"
       elsif pdf.category.nil?
         puts "\t*IGNORE* Category missing\tID: #{pdf.id}-#{pdf.full_path}"
 
