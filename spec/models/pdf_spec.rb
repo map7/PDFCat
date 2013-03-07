@@ -118,12 +118,30 @@ describe Pdf do
         pdf.client = Client.make(:name => "fred")
         pdf.prev_full_dir.should == full_dir
       end
+
+      context "prev client doesn't exist anymore" do
+        it "gets a previous dir without client" do
+          client = Client.make(:name => "fred")
+          pdf.client.delete # Remove previous client
+          pdf.client = client
+          pdf.prev_full_dir.should == store_dir
+        end
+      end
     end
     
     context "when category changes" do
       it "should return previous dir" do 
         pdf.category = Category.make(:name => "new")
         pdf.prev_full_dir.should == full_dir
+      end
+
+      context "prev category doesn't exist anymore" do
+        it "gets a previous dir without category" do
+          category = Category.make(:name => "tax")
+          pdf.category.delete # Remove previous category
+          pdf.category = category
+          pdf.prev_full_dir.should == store_dir
+        end
       end
     end
     
