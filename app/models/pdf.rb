@@ -44,13 +44,18 @@ class Pdf < ActiveRecord::Base
   end
 
   def prev_full_dir
-    from_client = Client.find(client_id_was)
-    from_cat = Category.find(category_id_was)
-    if from_cat.level == 0
-      "#{firm.store_dir}/" + "#{from_client.name}/#{from_cat.name}".downcase
+    from_client = Client.find_by_id(client_id_was)
+    from_cat = Category.find_by_id(category_id_was)
+
+    if from_client && from_cat
+      if from_cat.level == 0
+
+        "#{firm.store_dir}/#{from_client.name}/#{from_cat.name}".downcase
+      else
+        "#{firm.store_dir}/#{from_client.name}/#{from_cat.parent.name}/#{from_cat.name}".downcase
+      end
     else
-      "#{firm.store_dir}/" +
-        "#{from_client.name}/#{from_cat.parent.name}/#{from_cat.name}".downcase
+      firm.store_dir.downcase
     end
 
   end
