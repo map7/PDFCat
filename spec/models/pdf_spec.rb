@@ -4,7 +4,8 @@ describe Pdf do
   let(:pdf) {Pdf.make}
   
   let(:filename)   {"Unit_Trust_Deed-20100128.pdf"}
-  let(:client_dir) {"/home/map7/pdfcat_test_clt/publishing solutions"}
+  let(:store_dir)  {"/home/map7/pdfcat_test_clt"}
+  let(:client_dir) {"#{store_dir}/publishing solutions"}
   let(:full_dir)   {"#{client_dir}/general"}
   let(:full_path)  {"#{full_dir}/#{filename}"}  
 
@@ -67,6 +68,16 @@ describe Pdf do
       pdf = Pdf.make(:filename => "Testing.pdf")
       pdf.full_path.should == "#{full_dir}/Testing.pdf"
     end
+
+    context "pdf has no client" do
+      it "returns dir with out client" do
+        pdf = Pdf.make()
+        pdf.update_attribute(:client_id, nil)
+        pdf.full_path.should == "#{store_dir}/general/#{filename}"
+      end
+    end
+
+    # context "pdf has no category"    
   end
   
   describe "#new_full_path" do
