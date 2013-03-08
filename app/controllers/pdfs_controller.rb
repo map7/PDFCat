@@ -44,11 +44,12 @@ class PdfsController < ApplicationController
       @pdf.save unless @pdf.errors.count > 0
     end
 
-    if @pdf.errors.count > 0
-      render :edit
-    else
+    if @pdf.errors.count == 0
+      File.utime(0, Time.now, @pdf.client_dir) # Change access time for the client dir.      
       flash[:notice] = "Pdf was successfully updated."
       redirect_to @pdf
+    else
+      render :edit
     end
   end
 
