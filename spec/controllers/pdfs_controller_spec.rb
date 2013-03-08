@@ -44,7 +44,6 @@ describe PdfsController do
     end
 
     describe "#new" do
-
       before do 
         @new_pdf = Pdf.new
         controller.stub!(:current_firm).and_return(pdf.firm)
@@ -60,8 +59,6 @@ describe PdfsController do
         get :new, :filename => "test.pdf"
         assigns(:pdf).firm_id.should == pdf.firm.id
       end
-
-
     end
 
     describe "#create" do
