@@ -103,6 +103,18 @@ describe PdfsController do
           post :create, :filename => "test.pdf"
           flash[:notice].should == "Pdf successfully created."
         end
+        
+        context "no permissions on files" do
+          before do
+            File.stub(:exists?).and_return(true)
+            File.stub(:utime).and_throw(:insufficient_permissions)
+          end
+
+          it "submits the file anyway and returns to new" do 
+            post :create, :filename => "test.pdf"
+            response.should redirect_to(new_pdfs_path)
+          end
+        end
       end
 
       context "if data is invalid" do

@@ -23,8 +23,14 @@ class PdfsController < ApplicationController
     end
     
     if @pdf.errors.count == 0
-      # Change access time for the client dir.
-      File.utime(0, Time.now, @pdf.client_dir) if File.exists?(@pdf.client_dir)
+
+      begin
+        # Change access time for the client dir.
+        File.utime(0, Time.now, @pdf.client_dir) if File.exists?(@pdf.client_dir)
+      rescue
+        logger.warn 'Could not set utime on #{@pdf.client_dir}'
+      end
+
       flash[:notice] = "Pdf successfully created."
       redirect_to new_pdfs_path
     else
