@@ -130,7 +130,7 @@ class Pdf < ActiveRecord::Base
       begin
         FileUtils.chown(nil,firm.file_group,new_full_path)
       rescue
-        logger.warn 'Could not set permissions on #{new_full_path}'
+        logger.warn "Could not set permissions on #{new_full_path}"
       end
       
       self.filename = get_new_filename2
