@@ -1,6 +1,6 @@
 source :gemcutter
 
-gem "rails", "2.3.17"
+gem "rails", "2.3.18"
 
 gem "pg", "0.11.0"
 
