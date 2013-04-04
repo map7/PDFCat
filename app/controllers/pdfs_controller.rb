@@ -26,7 +26,7 @@ class PdfsController < ApplicationController
 
       begin
         # Change access time for the client dir.
-        FileUtils.touch(pdf.client_dir) if File.exists?(@pdf.client_dir)
+        FileUtils.touch("#{@pdf.client_dir}") if File.exists?(@pdf.client_dir)
       rescue
         logger.warn "Could not set utime on #{@pdf.client_dir}"
       end
