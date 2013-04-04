@@ -107,7 +107,7 @@ describe PdfsController do
         context "no permissions on files" do
           before do
             File.stub(:exists?).and_return(true)
-            File.stub(:utime).and_throw(:insufficient_permissions)
+            FileUtils.stub(:touch).and_throw(:insufficient_permissions)
           end
 
           it "submits the file anyway and returns to new" do 
