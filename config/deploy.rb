@@ -1,5 +1,8 @@
 rails_env = "production"
 
+# Only install production gems
+set :bundle_without, [:development, :test]
+
 set :application, "pdfcat"
 set :repository,  "ltsp.lan:/home/map7/pdfcat"
 
