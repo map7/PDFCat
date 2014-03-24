@@ -15,11 +15,17 @@ gem "restful_acl", "3.0.4"
 # awesome nested set for sub categories
 gem "awesome_nested_set", "< 2.0"
 
-# rspec tests
-gem 'machinist', "< 2.0"
-gem "rspec", "1.3.0"
-gem "rspec-rails", "1.3.2"
-gem "test-unit"
+group :development, :test do
+  # rspec tests
+  gem 'machinist', "< 2.0"
+  gem "rspec", "1.3.0"
+  gem "rspec-rails", "1.3.2"
+  gem "test-unit"
+end
+
+group :development do
+  gem "iconv", "~> 1.0.3"
+end
 
 # Deployment
 gem "capistrano"
@@ -27,6 +33,3 @@ gem "capistrano"
 # Background Jobs (ie: Emailing)
 gem 'delayed_job', "~> 2.0.4"
 
-group :development do
-  gem "iconv", "~> 1.0.3"
-end
