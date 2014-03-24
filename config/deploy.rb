@@ -1,8 +1,5 @@
 rails_env = "production"
 
-# Only install production gems
-set :bundle_without, [:development, :test]
-
 set :application, "pdfcat"
 set :repository,  "ltsp.lan:/home/map7/pdfcat"
 
@@ -71,7 +68,7 @@ namespace :bundler do
   end
 
   task :install, :roles => :app do
-    run "cd #{release_path} && #{try_sudo} bundle install"
+    run "cd #{release_path} && #{try_sudo} bundle install --without development test"
   end
 
   task :bundle_new_release, :roles => :db do
