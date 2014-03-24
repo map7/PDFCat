@@ -27,5 +27,6 @@ gem "capistrano"
 # Background Jobs (ie: Emailing)
 gem 'delayed_job', "~> 2.0.4"
 
-
-gem "iconv", "~> 1.0.3"
+group :development do
+  gem "iconv", "~> 1.0.3"
+end
