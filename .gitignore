@@ -18,3 +18,4 @@ coverage/*
 rdoc/
 
 .rbenv-version
+.bundle
