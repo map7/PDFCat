@@ -20,7 +20,7 @@ namespace :pdfs do
           puts pdf.pdfname
 
           # Locate files
-          result = `locate -ir  \"^#{firm.store_dir}.*#{pdf.pdfname}.*\" --limit 30`
+          result = `find #{firm.store_dir} -iregex \".*#{pdf.pdfname}.*\"`
 
           # Store the results
           results = result.split("\n")
@@ -41,6 +41,7 @@ namespace :pdfs do
             pdf.path = File.dirname(selected)
             pdf.filename = File.basename(selected)
             pdf.missing_flag = false
+            pdf.md5 = Digest::MD5.hexdigest(File.read(selected)) # md5 the file contents.
             pdf.save
           else
             puts "Nothing selected"
