@@ -17,23 +17,20 @@ res = db.exec('select c.name,cat.name,filename from clients as c,categories as c
 
 # Display every path to every file in the database
 res.each do |row|
-	@filepath=STORE_DIR + '/' +row[0].downcase+'/'+row[1].downcase+'/'+row[2]
-	print 'file path = ',@filepath
+  @filepath="#{STORE_DIR}/#{row[0].downcase}/#{row[1].downcase}/#{row[2]}"
+  print 'file path = ',@filepath
 
-	if File.exist?(@filepath)
-		FileUtils.chmod 0664, @filepath 
-		FileUtils.chown 'scanner','www', @filepath
-	else
-		print "FILE DOES NOT EXIST!!!"
-	end
-	
-#	row.each do |column|
-#		print column
-#		(20-column.length).times{print ' '}
-#	end
-	
-	puts
+  if File.exist?(@filepath)
+    FileUtils.chmod 0664, @filepath
+    FileUtils.chown 'scanner','www', @filepath
+  else
+    print "FILE DOES NOT EXIST!!!"
+  end
+
+  #	row.each do |column|
+  #		print column
+  #		(20-column.length).times{print ' '}
+  #	end
+
+  puts
 end
-
-
-
