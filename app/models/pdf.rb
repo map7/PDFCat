@@ -134,7 +134,7 @@ class Pdf < ActiveRecord::Base
 
       self.filename = get_new_filename2
       self.path = nil
-      self.md5 = Digest::MD5.hexdigest(new_full_path)
+      self.md5 = Digest::MD5.hexdigest(File.read(new_full_path)) # md5 the file contents.
     end
   end
   

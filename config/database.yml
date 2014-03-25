@@ -26,8 +26,8 @@ development:
 test:
   adapter: postgresql
   database: pdfcat_test
-  username: pdfcat
-  password: pdfcat
+  username: map7
+  password:
 #  socket: /tmp/mysql.sock
 
 production:

@@ -208,6 +208,8 @@ describe Pdf do
     before do
       pdf.stub!(:md5calc2)
       FileUtils.stub!(:mv)
+      File.stub!(:read).and_return(0)
+      Digest::MD5.stub!(:hexdigest).and_return(0)
     end
     
     context "when new file" do
@@ -303,6 +305,8 @@ describe Pdf do
 
         # Don't worry about removing the old directory
         @pdf.stub!(:directory_empty?).and_return(false)
+        File.stub!(:read).and_return(0)
+        Digest::MD5.stub!(:hexdigest).and_return(0)
       end
       
       it "should move the pdf" do
@@ -326,6 +330,8 @@ describe Pdf do
       context "new full path doesn't exist" do 
         before do 
           @pdf.stub!(:does_new_full_path_exist?).and_return(false)
+          File.stub!(:read).and_return(0)
+          Digest::MD5.stub!(:hexdigest).and_return(0)
         end
 
         context "dest dir doesn't exist" do 
@@ -339,6 +345,8 @@ describe Pdf do
         context "dest dir does exist" do 
           before do
             File.stub!(:exists?).and_return(true)
+            File.stub!(:read).and_return(0)
+            Digest::MD5.stub!(:hexdigest).and_return(0)
           end
           
           it "should check the destination directory only" do
