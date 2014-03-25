@@ -1,5 +1,7 @@
 #!/usr/local/bin/ruby
-
+#
+# Fix up permissions on all the pdfs
+#
 # Connect to postgres database
 require 'rubygems'
 require 'postgres'
@@ -22,7 +24,7 @@ res.each do |row|
 
   if File.exist?(@filepath)
     FileUtils.chmod 0664, @filepath
-    FileUtils.chown 'scanner','www', @filepath
+    FileUtils.chown 'map7','tram', @filepath
   else
     print "FILE DOES NOT EXIST!!!"
   end
