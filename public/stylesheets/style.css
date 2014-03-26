@@ -86,6 +86,7 @@ h1 {
 #contentBox {
   padding-bottom: 50px;
   margin: 20px;
+  margin-top: 50px;
   border: 1px solid #000;
   background-color: #fff; }
 
@@ -150,7 +151,7 @@ div#loginform {
   z-index: 104;
   display: block;
   margin: 0;
-  bottom: 20px;
+  top: 20px;
   left: 0px;
   width: 100%;
   height: 20px;
@@ -297,6 +298,42 @@ input, textarea {
   height: 98%;
   background: #FFE887; }
 
+/********************* Header *********************/
+#head {
+  color: #000;
+  font-size: 12px;
+  text-align: left;
+  position: absolute;
+  z-index: 104;
+  display: block;
+  top: 0;
+  margin: 0;
+  width: 100%;
+  height: 20px;
+  background: #979388; }
+
+#headerLeft {
+  position: absolute;
+  z-index: 111;
+  display: block;
+  left: 18px;
+  color: #5b5441; }
+
+#headerRight {
+  position: absolute;
+  z-index: 111;
+  display: block;
+  right: 18px;
+  width: 500px;
+  height: 20px;
+  color: #5b5441;
+  text-align: right; }
+
+#headerAPP {
+  font-style: italic;
+  font-weight: bold; }
+
+
 /********************* Footer *********************/
 #flash {
   position: absolute;
@@ -320,40 +357,6 @@ input, textarea {
   position: absolute;
   right: 0;
   bottom: 0; }
-
-#foot {
-  color: #000;
-  font-size: 12px;
-  text-align: left;
-  position: absolute;
-  z-index: 104;
-  display: block;
-  bottom: 0;
-  margin: 0;
-  width: 100%;
-  height: 20px;
-  background: #979388; }
-
-#footerLeft {
-  position: absolute;
-  z-index: 111;
-  display: block;
-  left: 18px;
-  color: #5b5441; }
-
-#footerRight {
-  position: absolute;
-  z-index: 111;
-  display: block;
-  right: 18px;
-  width: 500px;
-  height: 20px;
-  color: #5b5441;
-  text-align: right; }
-
-#footerAPP {
-  font-style: italic;
-  font-weight: bold; }
 
 #background_tint {
   position: absolute;

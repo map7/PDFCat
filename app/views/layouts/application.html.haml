@@ -95,6 +95,16 @@
 		#mode
 		#modeKeys
 
+	#head
+		.pad1
+		#headerLeft
+			#headerAPP PDFCat
+
+		#headerRight
+			- unless current_user.nil?
+				Logged in as: #{current_user.login unless current_user.nil?},
+				Firm: #{current_firm.name unless current_firm.nil?}
+
 	.nav
 		.pad1
 		- if current_user
@@ -120,15 +130,6 @@
 	#flash= flash[:notice]
 	#error= flash[:error]
 
-	#foot
-		.pad1
-		#footerLeft
-			#footerAPP PDFCat
-
-		#footerRight
-			- unless current_user.nil?
-				Logged in as: #{current_user.login unless current_user.nil?},
-				Firm: #{current_firm.name unless current_firm.nil?}
 
 	/ Adding fancy tinting, which also disables the background (good thing) and centers the message box 
 	#background_tint(style='display:none')
