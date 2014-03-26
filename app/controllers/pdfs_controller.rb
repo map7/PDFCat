@@ -1,6 +1,31 @@
 class PdfsController < ApplicationController
   before_filter :login_required
 
+  # Display unallocated files to select from
+  def assign
+    @pdf = Pdf.find(params[:id])
+    @unallocated = MissingFile.unallocated_files(@pdf.firm)
+  end
+
+  # Assign the selected file to the pdf path
+  def assign_file
+    @pdf = Pdf.find(params[:id])
+
+    unless params[:path].nil?
+      @pdf.path = File.dirname(params[:path])
+      @pdf.filename = File.basename(params[:path])
+      @pdf.missing_flag = false
+    else
+      redirect_to assign_pdf_path(@pdf)
+    end
+
+    if @pdf.save
+      redirect_to pdf_path(@pdf)
+    else
+      redirect_to assign_pdf_path(@pdf)
+    end
+  end
+
   def index
     @pdfs = Pdf.with_conditions(search_conditions, params[:page])
   end

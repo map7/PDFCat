@@ -22,6 +22,7 @@ gem "rspec-rails", "1.3.2"
 gem "test-unit"
 
 group :development do
+  gem "ruby-debug"
   gem "iconv", "~> 1.0.3"
 end
 
