@@ -27,7 +27,12 @@ class MissingFile
   # missing PDF's within the system.
   def self.unallocated_files(firm)
     # Get files in firms storage dir
-    files = MissingFile.get_pdfs_in_storage_dir(firm)
+    if Rails.cache.read('files_expires').nil? || Time.now > Rails.cache.read('files_expires')
+      Rails.cache.write('files_expires', Time.now + 1.day)
+      files = Rails.cache.write('files', MissingFile.get_pdfs_in_storage_dir(firm))
+    else
+      files = Rails.cache.read('files')
+    end
 
     # remove allocated
     MissingFile.remove_allocated(firm, files)
