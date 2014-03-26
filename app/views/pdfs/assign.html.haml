@@ -9,7 +9,7 @@
   = hidden_field_tag 'id', @pdf.id
   - @unallocated.each do |file|
     = radio_button_tag 'path', file
-    = file
+    = link_to file, {:controller => 'pdfs', :action => "attachment_new", :filename => file}, :method => :get
     %br
 
   = submit_tag
