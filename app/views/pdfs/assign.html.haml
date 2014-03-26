@@ -1,0 +1,17 @@
+%h1 Find missing PDF
+
+%h2 PDF Summary
+= render :partial => "showitem"
+
+-# Select the pdf which matches the pdf name.
+
+- form_tag({:action => "assign_file"}, :method => :post) do |f|
+  = hidden_field_tag 'id', @pdf.id
+  - @unallocated.each do |file|
+    = radio_button_tag 'path', file
+    = file
+    %br
+
+  = submit_tag
+
+= link_to :back, :back
