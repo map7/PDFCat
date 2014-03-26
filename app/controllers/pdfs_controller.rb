@@ -14,6 +14,7 @@ class PdfsController < ApplicationController
     unless params[:path].nil?
       @pdf.path = File.dirname(params[:path])
       @pdf.filename = File.basename(params[:path])
+      @pdf.md5 = Digest::MD5.hexdigest(IO.read(params[:path]))
       @pdf.missing_flag = false
     else
       redirect_to assign_pdf_path(@pdf)
