@@ -5,7 +5,9 @@ class MissingController < ApplicationController
   #
 
   def index
-    @pdfs = Pdf.paginate(:page => params[:page], :per_page => 10, :order => 'pdfdate DESC', :conditions => { :firm_id => current_firm, :missing_flag => true })
+    @pdfs = Pdf.all(:order => 'pdfdate DESC', :conditions => { :firm_id => current_firm, :missing_flag => true })
+    @total = @pdfs.count
+    @pdfs = @pdfs.paginate(:page => params[:page], :per_page => 10)
   end
 
 end
