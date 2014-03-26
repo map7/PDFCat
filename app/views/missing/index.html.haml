@@ -15,6 +15,7 @@
       %td= pdf.pdfname
       %td= pdf.client.name unless pdf.client.nil?
       %td= pdf.fullpath(current_firm) 
+      %td= link_to 'Assign', assign_pdf_path(pdf) if pdf.missing_flag
       %td= link_to 'Show', pdf, :id => "show", :method => :get
       %td= link_to 'Edit', edit_pdf_path(pdf), :id => "edit", :method => :get
       %td= link_to 'Delete', pdf, :id => "del", :confirm => 'Are you sure?', :method => :delete
