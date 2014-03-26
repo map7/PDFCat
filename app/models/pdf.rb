@@ -210,6 +210,7 @@ class Pdf < ActiveRecord::Base
   def self.relink_all
     firms = Firm.find(:all)
 
+    # Go through each firm.
     firms.each do|firm|
 
       files = Pdf.store_dir_files(firm)
