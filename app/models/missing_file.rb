@@ -28,9 +28,11 @@ class MissingFile
   def self.unallocated_files(firm)
     # Get files in firms storage dir
     if Rails.cache.read('files_expires').nil? || Time.now > Rails.cache.read('files_expires')
+      Rails.logger.info('Renewal cache')
       Rails.cache.write('files_expires', Time.now + 1.day)
       files = Rails.cache.write('files', MissingFile.get_pdfs_in_storage_dir(firm))
     else
+      Rails.logger.info('Read from cache')
       files = Rails.cache.read('files')
     end
 
