@@ -1,4 +1,4 @@
-source :gemcutter
+source "https://rubygems.org"
 
 gem "rails", "2.3.18"
 
@@ -27,7 +27,7 @@ group :development do
 end
 
 # Deployment
-gem "capistrano"
+gem "capistrano", "~> 2.14"
 
 # Background Jobs (ie: Emailing)
 gem 'delayed_job', "~> 2.0.4"

@@ -1,5 +1,5 @@
 GEM
-  remote: http://rubygems.org/
+  remote: https://rubygems.org/
   specs:
     actionmailer (2.3.18)
       actionpack (= 2.3.18)
@@ -72,7 +72,7 @@ PLATFORMS
 
 DEPENDENCIES
   awesome_nested_set (< 2.0)
-  capistrano
+  capistrano (~> 2.14)
   delayed_job (~> 2.0.4)
   haml
   iconv (~> 1.0.3)

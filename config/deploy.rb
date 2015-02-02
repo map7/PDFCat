@@ -1,5 +1,9 @@
 rails_env = "production"
 
+require "bundler/capistrano"
+set :bundle_flags, "--deployment --quiet --binstubs"
+set (:bundle_cmd) {"#{release_path}/bin/bundle"}
+
 set :application, "pdfcat"
 set :repository,  "ltsp.lan:/home/map7/pdfcat"
 
@@ -8,12 +12,13 @@ set :keep_releases, 8
 set :scm, :git
 # Or: `accurev`, `bzr`, `cvs`, `darcs`, `git`, `mercurial`, `perforce`, `subversion` or `none`
 
-set :deploy_to, "/usr/home/map7/webapps/pdfcat"
+set :deploy_to, "/var/www/pdfcat"
 
-role :web, "paistram.lan"                          # Your HTTP server, Apache/etc
-role :app, "paistram.lan"                          # This may be the same as your `Web` server
-role :db,  "paistram.lan", :primary => true # This is where Rails migrations will run
+role :web, "ltsp.lan"                          # Your HTTP server, Apache/etc
+role :app, "ltsp.lan"                          # This may be the same as your `Web` server
+role :db,  "ltsp.lan", :primary => true # This is where Rails migrations will run
 #role :db,  "your slave db-server here"
+default_run_options[:pty] = true
 
 # If you are using Passenger mod_rails uncomment this:
 # if you're still using the script/reapear helper you will need
