@@ -33,6 +33,6 @@ test:
 production:
   adapter: postgresql
   database: pdfcat_production
-  username: pdfcat
-  password: pdfcat
+  username: map7
+  password:
 #  socket: /tmp/mysql.sock
