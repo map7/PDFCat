@@ -3,6 +3,9 @@ rails_env = "production"
 require "bundler/capistrano"
 set :bundle_flags, "--deployment --quiet --binstubs"
 set (:bundle_cmd) {"#{release_path}/bin/bundle"}
+set :default_environment, {
+  'PATH' => "/usr/local/rbenv/shims:/usr/local/rbenv/bin:$PATH"
+}
 
 set :application, "pdfcat"
 set :repository,  "ltsp.lan:/home/map7/pdfcat"
@@ -12,7 +15,7 @@ set :keep_releases, 8
 set :scm, :git
 # Or: `accurev`, `bzr`, `cvs`, `darcs`, `git`, `mercurial`, `perforce`, `subversion` or `none`
 
-set :deploy_to, "/var/www/pdfcat"
+set :deploy_to, "/var/www/pdfcat_app"
 
 role :web, "ltsp.lan"                          # Your HTTP server, Apache/etc
 role :app, "ltsp.lan"                          # This may be the same as your `Web` server
@@ -66,25 +69,25 @@ after "deploy:start",   "delayed_job:start"
 after "deploy:restart",   "submodules:init"
 after "deploy:restart", "delayed_job:restart"
 
-# Bundler
-namespace :bundler do
-  task :create_symlink, :roles => :app do
-    shared_dir = File.join(shared_path, 'bundle')
-    release_dir = File.join(release_path, '.bundle')
-    run("mkdir -p #{shared_dir} && ln -s #{shared_dir} #{release_dir}")
-  end
+# # Bundler
+# namespace :bundler do
+#   task :create_symlink, :roles => :app do
+#     shared_dir = File.join(shared_path, 'bundle')
+#     release_dir = File.join(release_path, '.bundle')
+#     run("mkdir -p #{shared_dir} && ln -s #{shared_dir} #{release_dir}")
+#   end
 
-  task :install, :roles => :app do
-    run "cd #{release_path} && #{try_sudo} bundle install --without development test"
-  end
+#   task :install, :roles => :app do
+#     run "cd #{release_path} && #{try_sudo} bundle install --without development test"
+#   end
 
-  task :bundle_new_release, :roles => :db do
-    bundler.create_symlink
-    bundler.install
-  end
-end
+#   task :bundle_new_release, :roles => :db do
+#     bundler.create_symlink
+#     bundler.install
+#   end
+# end
 
-after "deploy:update_code", "bundler:bundle_new_release"
+# after "deploy:update_code", "bundler:bundle_new_release"
 
 # Currently have to do this manually
 # # Update gems 
