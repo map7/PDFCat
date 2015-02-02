@@ -17,6 +17,5 @@ coverage/*
 .rvmrc
 rdoc/
 
-.rbenv-version
 .bundle
 *_flymake*
