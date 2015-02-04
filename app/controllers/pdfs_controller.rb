@@ -78,7 +78,11 @@ class PdfsController < ApplicationController
     end
 
     if @pdf.errors.count == 0
-      File.utime(0, Time.now, @pdf.client_dir) if File.exists?(@pdf.client_dir)
+      begin
+        File.utime(0, Time.now, @pdf.client_dir) if File.exists?(@pdf.client_dir)
+      rescue
+        logger.warn "Could not set utime on #{@pdf.client_dir}"
+      end
       flash[:notice] = "Pdf was successfully updated."
       redirect_to @pdf
     else
