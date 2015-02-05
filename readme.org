@@ -1,5 +1,7 @@
 * PDFcat
 
+PDFcat is a document management system to be ran on your lan. The idea is that you setup your scanner to scan to the upload directory and then catalogue the result though the web interface.
+
 ** Installation
 
 Tested using Debian 7 stable.
@@ -33,3 +35,37 @@ Tested using Debian 7 stable.
 
 9. Start server
    : script/server
+
+** Usage
+
+1. Install on a production server within your network
+2. Create an storage & upload directory eg: /home/<user>/upload & /home/<user>/storage
+3. Use samba to share the upload directory to the network
+4. Point your PDF scanner to the upload directory
+5. Do a test by scanning to the upload directory and catalogue the result
+
+** Contributing
+
+1. Fork it!
+2. Create your feature branch: git checkout -b my-new-feature
+3. Commit your changes: git commit -am 'Add some feature'
+4. Push to the branch: git push origin my-new-feature
+5. Submit a pull request :D
+
+** TODO
+
+- Allow more than just PDFs to be stored
+- Write more file tests
+- upgrade to the latest ruby (2.2)
+- upgrade to the latest rails (4.2)
+- Add in OCR support
+- Improve the email facility to use dropbox linking or yousend it for large files
+- Add a pdf preview to the listing & show areas
+
+** History
+
+Created in 2009 in Rails 2.x it started as a simple pdf document management system for one company. Now it will handle multiple companies, staff and categories. It also has shortcut keys throughout.
+
+** License
+
+MIT
