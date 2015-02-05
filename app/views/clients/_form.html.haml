@@ -1,6 +1,10 @@
 - form_for(@client) do |f|
-  = f.text_field :name 
-  = f.text_field :email 
+  %p
+    = f.label :name
+    = f.text_field :name
+  %p
+    = f.label :email
+    = f.text_field :email
   = f.submit 
 
 = link_to 'Back', clients_path, :class=> 'ajax', :accesskey=> 'esc'
