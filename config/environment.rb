@@ -110,6 +110,4 @@ my_formats = {
 ActiveSupport::CoreExtensions::Time::Conversions::DATE_FORMATS.merge!(my_formats)
 ActiveSupport::CoreExtensions::Date::Conversions::DATE_FORMATS.merge!(my_formats)
 
-require 'super_form_builder'
-
 

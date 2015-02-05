@@ -3,10 +3,14 @@ source "https://rubygems.org"
 gem "rails", "2.3.18"
 
 gem "pg", "0.11.0"                # PostgreSQL adapter
+
+gem "sass"                        # CSS
 gem "haml"                        # HAML HTML template
 gem "will_paginate", '~> 2.3.11'  # Pagination
-gem "restful_acl", "3.0.4"        # RESTful ACL support.
+
 gem "awesome_nested_set", "< 2.0" # awesome nested set for sub categories
+gem "restful_acl", "3.0.4"        # RESTful ACL support.
+
 gem 'delayed_job', "~> 2.0.4"     # Background Jobs (ie: Emailing)
 
 group :development, :test do

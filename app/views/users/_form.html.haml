@@ -2,12 +2,24 @@
 
 - form_for(@user) do |f|
   = @user.password = @user.password_confirmation = nil
-  = f.text_field :login
-  = f.collection_select :firm_id, @firms, :id, :name 
-  = f.text_field :email
-  = f.password_field :password
-  = f.password_field :password_confirmation
-  = f.check_box :is_admin 
+  %p
+    = f.label :login
+    = f.text_field :login
+  %p
+    = f.label :firm_id
+    = f.collection_select :firm_id, @firms, :id, :name
+  %p
+    = f.label :email
+    = f.text_field :email
+  %p
+    = f.label :password
+    = f.password_field :password
+  %p
+    = f.label :password_confirmation
+    = f.password_field :password_confirmation
+  %p
+    = f.label :is_admin
+    = f.check_box :is_admin
   = f.submit
 
 = link_to 'Back', users_path, :class=> 'ajax', :accesskey=> 'esc'

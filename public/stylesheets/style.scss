@@ -124,6 +124,7 @@ $bar-height: 20px;
 		#contentBox{ 
 			padding-bottom: 50px;
 			margin: 20px;
+      margin-top: 50px;
 			border: 1px solid #000;
 			background-color: #fff;
 		}
@@ -203,7 +204,7 @@ $bar-height: 20px;
 			@include nav-font;
 			@include absolute(104);
 			margin:0;
-			bottom:$bar-height;
+			top:$bar-height;
 			left:0px;
 			width:100%;
 			height:$bar-height;
@@ -259,6 +260,8 @@ $bar-height: 20px;
 			@include normal-font;
 			border: 1px solid #888;
 		}
+
+    label{float: left;width: 150px;}
 
 		/********************* Listing **********************/
 		.highlight{ 	background-color: $highlight-color;}
@@ -347,7 +350,7 @@ $bar-height: 20px;
 			background: #FFE887;
 		}
 
-		/********************* Footer *********************/
+		/********************* Header *********************/
 		#flash {
 			position: absolute;
 			bottom: 40px;
@@ -358,29 +361,23 @@ $bar-height: 20px;
 			text-align: center;
 		}
 
-		#footer{
-			position: absolute;
-			right:0;
-			bottom:0;
-		}
-
-		#foot {
+		#head {
 			@include normal-font;
 			@include absolute(104);
-			bottom:0;
+			top:0;
 			margin:0;
 			width:100%; 
 			height:$bar-height; 
 			background:#979388;
 		}
 
-		#footerLeft {
+		#headerLeft {
 			@include absolute(111);
 			left: 18px;
 			color: $footer-color;
 		}
 
-		#footerRight {
+		#headerRight {
 			@include absolute(111);
 			right:18px;
 			width:500px;
@@ -389,7 +386,7 @@ $bar-height: 20px;
 			text-align:right;
 		}
 
-		#footerAPP{
+		#headerAPP{
 			font: {
 				style: italic;
 				weight: bold;
