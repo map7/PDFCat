@@ -1,8 +1,5 @@
 # Load my custom formbuilder as the default for all forms.
 
-ActionView::Base.default_form_builder = SuperFormBuilder
-
-
 # This is for ActionMailer which we use to send pdfs to clients
 #
 #
