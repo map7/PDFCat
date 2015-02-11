@@ -23,7 +23,7 @@ res.each do |row|
   print 'file path = ',@filepath
 
   if File.exist?(@filepath)
-    FileUtils.chmod 0664, @filepath
+    FileUtils.chmod "u=wrx,g=swrx", @filepath
     FileUtils.chown 'map7','tram', @filepath
   else
     print "FILE DOES NOT EXIST!!!"

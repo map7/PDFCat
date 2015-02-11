@@ -130,6 +130,7 @@ class Pdf < ActiveRecord::Base
       end
       
       FileUtils.mkdir_p(full_dir, :mode => 0775) unless File.exists?(full_dir)
+      FileUtils.chmod "u=wrx,g=swrx", client_dir
       FileUtils.mv(from, new_full_path)
 
       self.filename = get_new_filename2
