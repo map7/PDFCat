@@ -130,8 +130,12 @@ class Pdf < ActiveRecord::Base
       end
       
       FileUtils.mkdir_p(full_dir, :mode => 0775) unless File.exists?(full_dir)
-      FileUtils.chmod_R "u=wrx,g=swrx", client_dir
       FileUtils.mv(from, new_full_path)
+
+      # Change the permissions on client, category & the file
+      FileUtils.chmod "u=wrx,g=swrx", client_dir
+      FileUtils.chmod "u=wrx,g=swrx", category_dir
+      FileUtils.chmod "u=wrx,g=swrx", new_full_path
 
       self.filename = get_new_filename2
       self.path = nil
