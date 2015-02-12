@@ -129,14 +129,9 @@ class Pdf < ActiveRecord::Base
         logger.warn "Could not set group #{firm.file_group} on #{from}"
       end
       
-      FileUtils.mkdir_p(full_dir, :mode => 0775) unless File.exists?(full_dir)
+      FileUtils.mkdir_p(full_dir) unless File.exists?(full_dir)
       FileUtils.mv(from, new_full_path)
-
-      # Change the permissions on client, category & the file
-      FileUtils.chmod "u=wrx,g=swrx", client_dir
-      FileUtils.chmod "u=wrx,g=swrx", category_dir
-      FileUtils.chmod "u=wrx,g=swrx", new_full_path
-
+      FileUtils.chmod_R "u=wrx,g=swrx", client_dir
       self.filename = get_new_filename2
       self.path = nil
       self.md5 = Digest::MD5.hexdigest(File.read(new_full_path)) # md5 the file contents.
