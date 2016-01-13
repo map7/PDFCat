@@ -10,7 +10,7 @@ set :default_environment, {
 set :application, "pdfcat"
 set :repository,  "ltsp.lan:/home/map7/pdfcat"
 
-set :keep_releases, 8
+set :keep_releases, 3
 
 set :scm, :git
 # Or: `accurev`, `bzr`, `cvs`, `darcs`, `git`, `mercurial`, `perforce`, `subversion` or `none`
