@@ -13,6 +13,8 @@ gem "restful_acl", "3.0.4"        # RESTful ACL support.
 
 gem 'delayed_job', "~> 2.0.4"     # Background Jobs (ie: Emailing)
 
+gem 'pdf-reader'                # Get info of the PDF (ie: page count)
+
 group :development, :test do
   # rspec tests
   gem 'machinist', "< 2.0"
