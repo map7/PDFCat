@@ -21,9 +21,6 @@ group :development, :test do
   gem "rspec", "1.3.0"
   gem "rspec-rails", "1.3.2"
   gem "test-unit"
-end
-
-group :development do
   gem "debugger"
   gem "iconv", "~> 1.0.3"
   gem "capistrano", "~> 2.14"   # Deployment
