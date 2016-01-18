@@ -34,6 +34,11 @@ class Pdf < ActiveRecord::Base
     return total
   end
 
+  # All PDFs for a given year
+  def self.yearly_pdfs(year)
+    Pdf.find(:all, :conditions => ["pdfdate >= ? AND pdfdate <= ?", Date.parse("#{year}-01-01"), Date.parse("#{year}-12-31")])
+  end
+
   def client_name
     client.name.downcase if client
   end
