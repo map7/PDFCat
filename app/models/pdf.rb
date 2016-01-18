@@ -21,7 +21,7 @@ class Pdf < ActiveRecord::Base
   
   # validate :does_file_exist?  # Must check if the original filename exists not the new one
   def self.with_conditions(query, page)
-    @pdfs = Pdf.joined.paginate(:page => page, :conditions => query)
+    @pdfs = Pdf.joined.paginate(:page => page, :conditions => query, :order => "pdfdate DESC, id")
   end
 
   def client_name
