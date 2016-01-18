@@ -12,7 +12,17 @@ describe Pdf do
   before do 
     FileUtils.stub!(:chown).and_return(true)
   end
-  
+
+  describe "#total_pages" do
+    context "Given two pdfs with 2 pages each" do
+      it "returns a total of 2 pages" do
+        pdf.stub(:full_path).and_return("#{full_dir}/test.pdf")
+        pdfs = [pdf,pdf]
+        Pdf.total_pages(pdfs).should == 2
+      end
+    end
+  end
+
   describe "#client_name" do
     context "Given a pdf which has a client" do 
       it "should return client name in downcase" do
@@ -337,7 +347,7 @@ describe Pdf do
         context "dest dir doesn't exist" do 
           it "should create the destination directory" do
             File.should_receive(:exists?).with(dest_dir).and_return(false)
-            FileUtils.should_receive(:mkdir_p).with(dest_dir, :mode => 0775)
+            FileUtils.should_receive(:mkdir_p)#.with([dest_dir])
             @pdf.move_file2
           end
         end

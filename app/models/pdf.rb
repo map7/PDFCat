@@ -24,6 +24,16 @@ class Pdf < ActiveRecord::Base
     @pdfs = Pdf.joined.paginate(:page => page, :conditions => query, :order => "pdfdate DESC, id")
   end
 
+  # Find the total number of pages in a given set of PDFs
+  def self.total_pages(pdfs)
+    total = 0
+    pdfs.each do |pdf|
+      r=PDF::Reader.new(pdf.full_path)
+      total += r.page_count if File.exists?(pdf.full_path)
+    end
+    return total
+  end
+
   def client_name
     client.name.downcase if client
   end
