@@ -28,9 +28,13 @@ class Pdf < ActiveRecord::Base
   def self.total_pages(pdfs)
     total = 0
     pdfs.each do |pdf|
-      if File.exists?(pdf.full_path)
-        r=PDF::Reader.new(pdf.full_path)
-        total += r.page_count
+      begin
+        if File.exists?(pdf.full_path)
+          r=PDF::Reader.new(pdf.full_path)
+          total += r.page_count
+        end
+      rescue
+        next
       end
     end
     return total
