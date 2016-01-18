@@ -23,6 +23,18 @@ describe Pdf do
     end
   end
 
+  describe "#yearly_pdfs" do
+    context "Given two pdfs for a year" do
+      it "returns all pdfs for that year only" do
+        pdf2=Pdf.make
+        pdf_out_of_range = Pdf.make(:pdfdate => Date.new(2000,01,01))
+        pdfs = [pdf,pdf2]
+        Pdf.all.count.should == 3
+        Pdf.yearly_pdfs(pdf.pdfdate.year).count.should == 2
+      end
+    end
+  end
+
   describe "#client_name" do
     context "Given a pdf which has a client" do 
       it "should return client name in downcase" do
