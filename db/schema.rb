@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111115030536) do
+ActiveRecord::Schema.define(:version => 20160119053601) do
 
   create_table "categories", :force => true do |t|
     t.string  "name"
@@ -60,6 +60,8 @@ ActiveRecord::Schema.define(:version => 20111115030536) do
     t.string  "path"
     t.boolean "missing_flag"
     t.integer "firm_id"
+    t.integer "page_count"
+    t.boolean "ocr",          :default => false
   end
 
   create_table "users", :force => true do |t|
