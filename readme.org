@@ -44,6 +44,19 @@ Tested using Debian 7 stable.
 4. Point your PDF scanner to the upload directory
 5. Do a test by scanning to the upload directory and catalogue the result
 
+** OCR
+
+I use [[http://www.abbyy.com.au/ocr-sdk-linux/][Abbyy FineReader Engine for Linux]]. You have to have a license from them to use this product.
+
+I've created a simple rake task to do the OCR at night as it can use a lot of resources. As I have only brought a 12,000 page a year license I've coded my rake task to do 20 pdfs a night. (Most of my pdfs only have 1 page so this is ok). This means I most likely won't go over my yearly quota.
+
+To use do the following
+1. Purchase a license
+2. Add the following to your crontab
+   : 00	0	* * *	root	/bin/bash -c 'cd /var/www/pdfcat_app/current; export RAILS_ENV=production; bundle exec rake pdfs:ocr'
+   I use rbenv so mine looks like so;
+   : 00	21	* * *	map7	/bin/bash -c 'export HOME="/home/map7";export PATH="/usr/local/rbenv/bin:$PATH" ; cd /var/www/pdfcat_app/current; eval "$(rbenv init -)"; export RAILS_ENV=production; bundle exec rake pdfs:ocr'
+
 ** Contributing
 
 1. Fork it!
