@@ -6,35 +6,38 @@ PDFcat is a document management system to be ran on your lan. The idea is that y
 
 Tested using Debian 7 stable.
 
-1. Install postgresql
+1. Install requirements
+   : sudo apt-get install pdftk texlive-extra-utils
+
+2. Install postgresql
    : sudo apt-get install postgresql libpq-dev
 
-2. Create pdfcat role
+3. Create pdfcat role
    : sudo su postgres
    : createrole <your user>
    : exit
 
-3. Install ruby 1.8
+4. Install ruby 1.8
    : sudo apt-get install ruby1.8 rubygems1.8
 
-4. Install bundler
+5. Install bundler
    : sudo gem install bundler
 
-5. Clone this repository
+6. Clone this repository
 
-6. Install required gems
+7. Install required gems
    : cd pdfcat
    : bundle
 
-7. Edit the db/database.yml & change username to your username
+8. Edit the db/database.yml & change username to your username
 
-8. Create database
+9. Create database
    : rake db:create
    : rake db:migrate
    : rake db:seed
 
-9. Start server
-   : script/server
+10. Start server
+    : script/server
 
 ** Usage
 
