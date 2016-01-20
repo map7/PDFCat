@@ -64,10 +64,11 @@ namespace :delayed_job do
   end
 end
 
-after "deploy:stop",    "delayed_job:stop"
-after "deploy:start",   "delayed_job:start"
+# after "deploy:stop",    "delayed_job:stop"
+# after "deploy:start",   "delayed_job:start"
 after "deploy:restart",   "submodules:init"
-after "deploy:restart", "delayed_job:restart"
+# after "deploy:restart", "delayed_job:restart"
+after "deploy", "deploy:migrate"
 
 # # Bundler
 # namespace :bundler do
