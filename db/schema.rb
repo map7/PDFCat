@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20160119053601) do
+ActiveRecord::Schema.define(:version => 20160120023144) do
 
   create_table "categories", :force => true do |t|
     t.string  "name"
@@ -58,7 +58,7 @@ ActiveRecord::Schema.define(:version => 20160119053601) do
     t.integer "client_id"
     t.string  "md5"
     t.string  "path"
-    t.boolean "missing_flag"
+    t.boolean "missing_flag", :default => false
     t.integer "firm_id"
     t.integer "page_count"
     t.boolean "ocr",          :default => false
