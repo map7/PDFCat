@@ -8,7 +8,7 @@ set :default_environment, {
 }
 
 set :application, "pdfcat"
-set :repository,  "ltsp.lan:/home/map7/pdfcat"
+set :repository,  "ltsp.lan:/home/map7/code/pdfcat"
 
 set :keep_releases, 3
 
