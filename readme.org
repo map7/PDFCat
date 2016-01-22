@@ -7,7 +7,7 @@ PDFcat is a document management system to be ran on your lan. The idea is that y
 Tested using Debian 7 stable.
 
 1. Install requirements
-   : sudo apt-get install pdftk texlive-extra-utils
+   : sudo apt-get install pdftk texlive-extra-utils libmagickwand-dev imagemagick
 
 2. Install postgresql
    : sudo apt-get install postgresql libpq-dev
