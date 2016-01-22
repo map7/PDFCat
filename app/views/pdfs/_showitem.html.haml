@@ -1,44 +1,48 @@
 #flash= flash[:notice]
 
-%table
-	%tr
-		%td
-			%b Date
-		%td= @pdf.pdfdate
-	%tr
-		%td
-			%b Name
-		%td= @pdf.pdfname
-	%tr
-		%td 
-			%b Client
-		%td= @pdf.client.try(:name)
-	%tr
-		%td 
-			%b Category
-		%td= @pdf.category.try(:name)
-	%tr
-		%td 
-			%b Full Path
-		%td= @pdf.full_path
-	%tr
-		%td
-			%b Relocated Path
-		%td= @pdf.path
-	%tr
-		%td
-			%b md5
-		%td= @pdf.md5
-	%tr
-		%td
-			%b Missing
-		%td= @pdf.missing_flag
-	%tr
-		%td
-			%b Optical Character Recognition (OCR)
-		%td= @pdf.ocr
-	%tr
-		%td
-			%b Note
-		%td= @pdf.pdfnote
+= if File.exists?("#{Rails.root}/public/images/thumbnails/#{@pdf.id}.png")
+  .thumbnail= image_tag("thumbnails/#{@pdf.id}.png")
+
+%table.showitem
+  %tr
+    %td
+      %b Date
+    %td= @pdf.pdfdate
+  %tr
+    %td
+      %b Name
+    %td= @pdf.pdfname
+  %tr
+    %td 
+      %b Client
+    %td= @pdf.client.try(:name)
+  %tr
+    %td 
+      %b Category
+    %td= @pdf.category.try(:name)
+  %tr
+    %td 
+      %b Full Path
+    %td= @pdf.full_path
+  %tr
+    %td
+      %b Relocated Path
+    %td= @pdf.path
+  %tr
+    %td
+      %b md5
+    %td= @pdf.md5
+  %tr
+    %td
+      %b Missing
+    %td= @pdf.missing_flag
+  %tr
+    %td
+      %b Optical Character Recognition (OCR)
+    %td= @pdf.ocr
+  %tr
+    %td
+      %b Note
+    %td= @pdf.pdfnote
+
 %br

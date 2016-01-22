@@ -398,3 +398,13 @@ label {
   height: 25px; }
 
 /*# sourceMappingURL=style.css.map */
+table.showitem {
+    width: 80%;
+}
+
+.thumbnail {
+    float: right;
+    margin-right: 20px;
+    padding: 4px;
+    border: 4px solid grey;
+}

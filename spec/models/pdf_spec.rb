@@ -13,6 +13,12 @@ describe Pdf do
     FileUtils.stub!(:chown).and_return(true)
   end
 
+  describe "#thumbnail_full_path" do
+    it "should equal <id>.png" do
+      pdf.thumbnail_full_path.should == "#{Rails.root}/public/images/thumbnails/#{pdf.id}.png"
+    end    
+  end
+
   describe "#total_pages" do
     context "Given two pdfs with 2 pages each" do
       it "returns a total of 2 pages" do
