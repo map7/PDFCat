@@ -7,6 +7,8 @@ set :default_environment, {
   'PATH' => "/usr/local/rbenv/shims:/usr/local/rbenv/bin:$PATH"
 }
 
+set :shared_children, shared_children + %w{public/images}
+
 set :application, "pdfcat"
 set :repository,  "ltsp.lan:/home/map7/code/pdfcat"
 
