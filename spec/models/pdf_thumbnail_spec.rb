@@ -3,7 +3,7 @@ require "spec_helper"
 describe PdfThumbnail do
   let(:pdf) {Pdf.make}
   before do
-    @thumbnail_dir = "/home/map7/pdfcat_test_clt/.pdfcat_thumbnail"
+    @thumbnail_dir = "#{Rails.root}/public/images/thumbnails"
   end
 
   describe "#make_thumbnail" do

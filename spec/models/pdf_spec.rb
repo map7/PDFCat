@@ -15,7 +15,7 @@ describe Pdf do
 
   describe "#thumbnail_full_path" do
     it "should equal <id>.png" do
-      pdf.thumbnail_full_path.should == "#{Rails.root}/public/images/#{pdf.id}.png"
+      pdf.thumbnail_full_path.should == "#{Rails.root}/public/images/thumbnails/#{pdf.id}.png"
     end    
   end
 
