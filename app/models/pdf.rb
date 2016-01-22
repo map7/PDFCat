@@ -45,6 +45,10 @@ class Pdf < ActiveRecord::Base
     Pdf.find(:all, :conditions => ["pdfdate >= ? AND pdfdate <= ?", Date.parse("#{year}-01-01"), Date.parse("#{year}-12-31")])
   end
 
+  def thumbnail_full_path
+    "#{firm.store_dir}/.pdfcat_thumbnail/#{id}.png"
+  end
+  
   def client_name
     client.name.downcase if client
   end
