@@ -1,6 +1,7 @@
 #flash= flash[:notice]
 
-.thumbnail= image_tag("thumbnails/#{@pdf.id}.png")
+= if File.exists?("#{Rails.root}/public/images/thumbnails/#{@pdf.id}.png")
+  .thumbnail= image_tag("thumbnails/#{@pdf.id}.png")
 
 %table.showitem
   %tr
