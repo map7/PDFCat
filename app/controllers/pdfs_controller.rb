@@ -57,6 +57,7 @@ class PdfsController < ApplicationController
         logger.warn "Could not set utime on #{@pdf.client_dir}"
       end
 
+      PdfThumbnail.delay.make_thumbnail(@pdf)
       flash[:notice] = "Pdf successfully created."
       redirect_to new_pdfs_path
     else
