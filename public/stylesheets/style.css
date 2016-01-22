@@ -408,3 +408,17 @@ table.showitem {
     padding: 4px;
     border: 4px solid grey;
 }
+
+.hover_thumbnail{
+    position: absolute;
+    bottom: 120px;
+    left: 600px;
+    padding: 20px;
+    border: 4px solid black;
+    color: grey;
+    display:none;
+}
+
+a:hover + .hover_thumbnail {
+    display:block;
+}
