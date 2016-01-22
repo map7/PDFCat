@@ -46,7 +46,7 @@ class Pdf < ActiveRecord::Base
   end
 
   def thumbnail_full_path
-    "#{firm.store_dir}/.pdfcat_thumbnail/#{id}.png"
+    "#{Rails.root}/public/images/#{id}.png"
   end
   
   def client_name
