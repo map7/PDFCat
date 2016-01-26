@@ -4,9 +4,11 @@ class PdfThumbnail
   # Create a thumbnail of the first pdf page
   def self.make_thumbnail(original_pdf)
     PdfThumbnail.create_dir(original_pdf)
-    pdf=Magick::ImageList.new(original_pdf.full_path)
-    thumb=pdf.scale(180,250)
-    thumb.write(original_pdf.thumbnail_full_path)
+    if File.exists?(original_pdf.full_path)
+      pdf=Magick::ImageList.new(original_pdf.full_path)
+      thumb=pdf.scale(180,250)
+      thumb.write(original_pdf.thumbnail_full_path)
+    end
   end
   
   # Create the thumbnails directory
