@@ -1,12 +1,12 @@
-namespace :pdfs do
+namespace :cat do
   desc 'Clean/merge hardly used categories into one called unallocated (Tramontana Accountants only)'
   task :clean, [:firm,:threshold] => :environment do |t, args|
 
     if args.count == 0
       puts "Please include an argument\n\n"
       
-      puts "rake pdfs:clean[<firm name>,<threshold>]"
-      puts "rake pdfs:clean[\"Tramontana Accountants\",20]\n\n"
+      puts "rake cat:clean[<firm name>,<threshold>]"
+      puts "rake cat:clean[\"Tramontana Accountants\",20]\n\n"
       
       puts "NOTE: The default threshold is 10"
 
@@ -36,6 +36,18 @@ namespace :pdfs do
           end
         end
       end
+    end
+  end
+
+  desc 'Remove zero categories'
+  task :remove_zero, [:firm] => :environment do |t, args|
+    firm=Firm.find_by_name(args[:firm])
+    firm.categories.find(:all).each do |cat|
+      if cat.pdfs.count == 0
+        puts "Removing #{cat.id}-#{cat.name}"
+        cat.delete
+      end
+      
     end
   end
 end
