@@ -32,6 +32,7 @@ GEM
     delayed_job (2.0.7)
       activesupport (~> 2.0)
       daemons (= 1.0.10)
+    fakefs (0.8.0)
     haml (3.1.7)
     hashery (2.1.1)
     highline (1.6.15)
@@ -86,6 +87,7 @@ DEPENDENCIES
   capistrano (~> 2.14)
   debugger
   delayed_job (~> 2.0.4)
+  fakefs
   haml
   iconv (~> 1.0.3)
   machinist (< 2.0)

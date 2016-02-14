@@ -26,6 +26,7 @@ group :development, :test do
   gem "iconv", "~> 1.0.3"
   gem "capistrano", "~> 2.14"   # Deployment
   gem 'rdoc'                    # Project documentation generator
+  gem 'fakefs'                  # Mock fileutils & file operations
 end
 
 
