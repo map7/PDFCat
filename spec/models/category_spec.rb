@@ -1,6 +1,7 @@
 require 'spec_helper'
 require 'fakefs/safe'
 
+# Make the client & upload directories
 def make_basedirs
   FileUtils.mkdir_p("/home/map7/pdfcat_test_clt")
   FileUtils.mkdir_p("/home/map7/pdfcat_test_upload")
@@ -102,11 +103,8 @@ describe Category do
           assert File.exists?("#{@client_dir}/#{@cat.name.downcase}/other_dir/Unit_Trust-20100128.pdf")
         end
       end
-    end                         # sub
+    end # sub
   end
-
-
-
   
   context "without fakefs" do 
     let(:cat) {Category.make}
