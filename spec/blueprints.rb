@@ -37,6 +37,6 @@ Pdf.blueprint do
   client
   category
   pdfdate {Date.parse("28-01-2010")}
-  pdfname {"Unit Trust Deed"}
-  filename {"Unit_Trust_Deed-20100128.pdf"}
+  pdfname {"Unit Trust"}
+  filename {"Unit_Trust-20100128.pdf"}
 end

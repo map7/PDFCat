@@ -63,14 +63,14 @@ class Category < ActiveRecord::Base
       new_path = "#{new_dir}/#{pdf.filename}"
       old_dir = "#{pdf.client_dir}/#{prev_category_dir}"
       old_path = "#{old_dir}/#{pdf.filename}"
-      
+
       # Move the category directory to the new one.
       if File.exists?(new_dir) and File.exists?(old_path)
         File.rename(old_path, new_path)
       elsif File.exists?(old_dir)
         File.rename(old_dir,new_dir)
       end
-      
+
       pdf.relink_file(pdf.firm) if pdf.path
     end
   end
