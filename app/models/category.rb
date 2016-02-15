@@ -45,9 +45,7 @@ class Category < ActiveRecord::Base
   end
 
   def roots_without_self
-    cats = firm.categories.roots
-    cats.delete(self)
-    cats
+    firm.categories.roots.reject{|c| c == self}
   end
   
   def category_dir
