@@ -45,11 +45,15 @@ class Category < ActiveRecord::Base
   end
 
   def category_dir
-    level == 0 ? name.downcase : "#{parent.name}/#{name}".downcase
+    if (level == 0 && parent_id == parent_id_was) || (level == 0 && parent_id == nil)
+      name.downcase
+    else
+      "#{parent.name}/#{name}".downcase
+    end
   end
   
   def prev_category_dir
-    if level == 0
+    if level == 0 && parent_id_was == nil
       name_was.downcase
     else
       prev_parent = Category.find(parent_id_was)

@@ -165,7 +165,7 @@ describe Category do
         end
       end
     end
-    
+        
     describe "#category_dir" do    
       context "when main category" do
         it "should return the name in downcase" do 
@@ -207,6 +207,29 @@ describe Category do
         it "should return parent/sub in downcase" do
           @sub.prev_category_dir.should == "general/sub1"
           @sub.category_dir.should == "mail/new"
+        end
+      end
+
+      context "when moving a main to sub" do
+        before do
+          cat2 = Category.make(:name => "mail")
+          cat.parent_id = cat2.id
+        end
+
+        it "should set the prev category" do
+          cat.prev_category_dir.should == "general"
+          cat.category_dir.should == "mail/tax"
+        end
+      end
+
+      context "when moving a sub to a main" do
+        before do
+          @sub.parent_id = nil
+        end
+
+        it "should set the prev category" do
+          @sub.prev_category_dir.should == "general/sub1"
+          @sub.category_dir.should == "new"
         end
       end
     end
