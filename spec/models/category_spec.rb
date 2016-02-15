@@ -14,6 +14,13 @@ def make_sub(cat, subname)
   sub
 end
 
+# Make a category and sub category2
+def make_cat_and_sub(catname, subname)
+  cat = Category.make(name: catname)
+  sub = make_sub(cat, subname)
+  [cat, sub]
+end
+
 # Make a directory with one file
 def make_dir_with_file(dir,file)
   FileUtils.mkdir_p(dir)
@@ -108,6 +115,21 @@ describe Category do
             assert File.exists?("#{@client_dir}/#{@cat.name.downcase}/other_dir/Unit_Trust-20100128.pdf")
           end
         end
+
+        context "when moving a sub to a sub" do
+          before do 
+            @cat2 = Category.make(name: "Cat2")
+          end
+
+          it "should appear in the new sub directory" do
+            assert @sub.category_dir.should == "general/sub"
+            @sub.parent = @cat2
+            @sub.move_dir
+            assert @sub.category_dir.should == "cat2/sub"
+            assert @sub.parent_dir.should == "cat2"
+            assert File.exists?("#{@client_dir}/#{@cat2.name.downcase}/#{@sub.name.downcase}/Unit_Trust-20100128.pdf")
+          end
+        end
       end # sub
     end
   end
@@ -180,6 +202,20 @@ describe Category do
       end
     end
 
+    describe "#parent_dir" do
+      context "when main category" do
+        it "should return the name in downcase" do 
+          cat.parent_dir.should == nil
+        end
+      end
+
+      context "when sub category" do
+        it "should return parent/sub in downcase" do
+          @sub.parent_dir.should == "general"
+        end
+      end
+    end
+
     describe "#prev_category_dir" do
       before do
         cat.name = "tax"
@@ -232,6 +268,7 @@ describe Category do
           @sub.category_dir.should == "new"
         end
       end
+
     end
 
     describe "#roots_without_self" do

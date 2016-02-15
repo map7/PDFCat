@@ -55,6 +55,10 @@ class Category < ActiveRecord::Base
       "#{parent.name}/#{name}".downcase
     end
   end
+
+  def parent_dir
+    parent.category_dir if parent
+  end
   
   def prev_category_dir
     if level == 0 && parent_id_was == nil
@@ -72,6 +76,11 @@ class Category < ActiveRecord::Base
       old_dir = "#{pdf.client_dir}/#{prev_category_dir}"
       old_path = "#{old_dir}/#{pdf.filename}"
 
+      # If the parent directory doesn't exist make it!
+      if File.exists?("#{pdf.client_dir}/#{parent_dir}") == false
+        FileUtils.mkdir_p "#{pdf.client_dir}/#{parent_dir}"
+      end
+      
       # Move the category directory to the new one.
       if File.exists?(new_dir) and File.exists?(old_path)
         File.rename(old_path, new_path)
