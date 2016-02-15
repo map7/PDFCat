@@ -274,8 +274,17 @@ describe Category do
         cat2=Category.make(name: "cat2", firm: cat.firm)
       end
 
-      it "returns a list of cat1 & cat2 only" do
-        cat.roots_without_self.length.should == 2
+      context "when we have a new category" do
+        it "returns all the roots" do
+          new_cat = Category.new(firm: cat.firm)
+          new_cat.roots_without_self.length.should == 3
+        end          
+      end
+
+      context "when we have a category" do
+        it "returns a list of cat1 & cat2 only" do
+          cat.roots_without_self.length.should == 2
+        end
       end
     end
   end
