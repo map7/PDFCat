@@ -233,5 +233,16 @@ describe Category do
         end
       end
     end
+
+    describe "#roots_without_self" do
+      before do
+        cat1=Category.make(name: "cat1", firm: cat.firm)
+        cat2=Category.make(name: "cat2", firm: cat.firm)
+      end
+
+      it "returns a list of cat1 & cat2 only" do
+        cat.roots_without_self.length.should == 2
+      end
+    end
   end
 end

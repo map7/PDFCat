@@ -44,6 +44,12 @@ class Category < ActiveRecord::Base
     level == 0 ? name : "-- #{name}"
   end
 
+  def roots_without_self
+    cats = firm.categories.roots
+    cats.delete(self)
+    cats
+  end
+  
   def category_dir
     if (level == 0 && parent_id == parent_id_was) || (level == 0 && parent_id == nil)
       name.downcase

@@ -1,7 +1,7 @@
 - form_for @category do |f|
   %p
     = f.label :parent_id
-    = f.collection_select :parent_id, current_firm.categories.roots, :id, :name, :include_blank => true 
+    = f.collection_select :parent_id, @category.roots_without_self, :id, :name, :include_blank => true 
   %p
     = f.label :name
     = f.text_field :name
