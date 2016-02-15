@@ -122,11 +122,8 @@ describe Category do
           end
 
           it "should appear in the new sub directory" do
-            assert @sub.category_dir.should == "general/sub"
             @sub.parent = @cat2
             @sub.move_dir
-            assert @sub.category_dir.should == "cat2/sub"
-            assert @sub.parent_dir.should == "cat2"
             assert File.exists?("#{@client_dir}/#{@cat2.name.downcase}/#{@sub.name.downcase}/Unit_Trust-20100128.pdf")
           end
         end
