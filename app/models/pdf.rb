@@ -33,6 +33,10 @@ class Pdf < ActiveRecord::Base
   # --------------------------------------------------------------------------------
   # Display functions
   # --------------------------------------------------------------------------------
+  def pdfname_format
+    
+  end
+  
   def client_name
     client.name.downcase if client
   end

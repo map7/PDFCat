@@ -25,6 +25,14 @@ describe Pdf do
     end
   end
 
+  describe "#pdfname_format" do
+    context "when all fields are given" do
+      it "displays <business name> <contact> <description> <date>" do
+
+      end
+    end
+  end
+
   describe "#client_name" do
     context "Given a pdf which has a client" do 
       it "should return client name in downcase" do
