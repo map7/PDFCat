@@ -13,22 +13,6 @@ describe Pdf do
     FileUtils.stub!(:chown).and_return(true)
   end
 
-  describe "#thumbnail_full_path" do
-    it "should equal <id>.png" do
-      pdf.thumbnail_full_path.should == "#{Rails.root}/public/images/thumbnails/#{pdf.id}.png"
-    end    
-  end
-
-  describe "#total_pages" do
-    context "Given two pdfs with 2 pages each" do
-      it "returns a total of 2 pages" do
-        pdf.stub(:full_path).and_return("#{full_dir}/test.pdf")
-        pdfs = [pdf,pdf]
-        Pdf.total_pages(pdfs).should == 2
-      end
-    end
-  end
-
   describe "#yearly_pdfs" do
     context "Given two pdfs for a year" do
       it "returns all pdfs for that year only" do
@@ -56,22 +40,10 @@ describe Pdf do
     end
   end
   
-  describe "#category_name" do
-    context "Given a pdf which has a category" do 
-      it "should return category name in downcase" do
-        pdf.category_name.should == "general"
-      end
-    end
-
-    context "Given a pdf which doesn't have a category" do
-      it "should return nil" do
-        pdf.category = nil
-        firm = Firm.make
-        firm.categories << Category.make(:name => "foo")
-        pdf.firm = firm
-        
-        pdf.category_name.should == "foo"
-      end
+  describe "#get_new_filename2" do
+    it "should return new filename" do
+      pdf.pdfname = "foobar"
+      pdf.get_new_filename2.should == "foobar-20100128.pdf"
     end
   end
 
@@ -79,65 +51,6 @@ describe Pdf do
     it "should return storage dir + client for the pdf in question" do
       pdf.client_dir.should == client_dir
     end
-  end
-
-  describe "#full_dir" do
-    it "should return full pdf directory in downcase" do
-      pdf.full_dir.should == full_dir
-    end
-  end
-
-  describe "#full_path" do
-    it "should return the full path including filename" do
-      pdf.full_path.should == full_path
-    end
-    
-    it "should return lowercase except filename" do
-      pdf = Pdf.make(:filename => "Testing.pdf")
-      pdf.full_path.should == "#{full_dir}/Testing.pdf"
-    end
-
-    context "pdf has no client" do
-      it "returns dir with out client" do
-        pdf = Pdf.make()
-        pdf.update_attribute(:client_id, nil)
-        pdf.full_path.should == "#{store_dir}/general/#{filename}"
-      end
-    end
-
-    context "pdf has no category" do
-      it "returns dir with out category" do
-        pdf = Pdf.make()
-        pdf.update_attribute(:category_id, nil)
-        pdf.full_path.should == "#{client_dir}/#{filename}"
-      end
-    end
-  end
-  
-  describe "#new_full_path" do
-    it "should return the full path including new filename" do
-      pdf.pdfname = "test"
-      pdf.new_full_path.should == "#{full_dir}/#{pdf.get_new_filename2}"
-    end
-  end
-  
-  describe "#category_dir_exists?" do
-    let(:cat_name) { "general"}
-    
-    context "when new directory already exists" do 
-      it "should return true" do
-        File.stub!(:exists?).and_return(true)
-        pdf.category_dir_exists?(cat_name).should be_true
-      end
-    end
-    
-    context "when new directory does not exist" do 
-      it "should return false" do
-        dir = pdf.client_dir + "/" + cat_name
-        File.stub!(:exists?).with(dir).and_return(false)
-        pdf.category_dir_exists?(cat_name).should be_false
-      end
-    end    
   end
 
   describe "#prev_full_dir" do
@@ -188,79 +101,39 @@ describe Pdf do
       end
     end
   end
-  
-  describe "#prev_full_path" do
-    context "when client changes" do
-      it "should return previous path" do
-        pdf.client = Client.make(:name => "fred")
-        pdf.prev_full_path.should == full_path
-      end
-    end
-    
-    context "when category changes" do
-      it "should return previous path" do 
-        pdf.category = Category.make(:name => "new")
-        pdf.prev_full_path.should == full_path
-      end
-      
-      context "but path is the same" do
-        it "should trust the path variable" do
-          pdf = Pdf.make(:path => "mypath")
-          pdf.category = Category.make(:name => "new")          
-          pdf.prev_full_path.should == "mypath/Unit_Trust-20100128.pdf"
-        end
-      end
-    
-      context "but path has changed" do
-        before do
-          @pdf = Pdf.make(:path => "mypath")
-          @pdf.path = "changed"
-        end
-        
-        it "should trust the path variable" do
-          @pdf.category = Category.make(:name => "new")          
-          @pdf.prev_full_path.should == "mypath/Unit_Trust-20100128.pdf"
-        end
-      end
-    end  
-  end
-  
-  describe "#get_new_filename2" do
-    it "should return new filename" do
-      pdf.pdfname = "foobar"
-      pdf.get_new_filename2.should == "foobar-20100128.pdf"
-    end
-  end
-  
-  describe "#move_uploaded_file" do 
-    before do
-      pdf.stub!(:md5calc2)
-      FileUtils.stub!(:mv)
-      File.stub!(:read).and_return(0)
-      Digest::MD5.stub!(:hexdigest).and_return(0)
-    end
-    
-    context "when new file" do
-      it "should move the pdf" do 
-        pdf.filename = "/path/to/uploaded file.pdf"
-        FileUtils.should_receive(:mv).with(pdf.filename,pdf.new_full_path)
-        pdf.move_uploaded_file
-      end
 
-      # it "should call md5calc2" do
-      #   pdf.should_receive(:md5calc2)
-      #   pdf.move_uploaded_file
-      # end
+  describe "#full_dir" do
+    it "should return full pdf directory in downcase" do
+      pdf.full_dir.should == full_dir
     end
   end
-  
+
+  describe "#category_dir_exists?" do
+    let(:cat_name) { "general"}
+    
+    context "when new directory already exists" do 
+      it "should return true" do
+        File.stub!(:exists?).and_return(true)
+        pdf.category_dir_exists?(cat_name).should be_true
+      end
+    end
+    
+    context "when new directory does not exist" do 
+      it "should return false" do
+        dir = pdf.client_dir + "/" + cat_name
+        File.stub!(:exists?).with(dir).and_return(false)
+        pdf.category_dir_exists?(cat_name).should be_false
+      end
+    end    
+  end
+
   describe "#remove_prev_dir" do
     context "when main directory" do
       context "exists and is empty" do
         before do 
           File.stub!(:exists).with(pdf.prev_full_dir).and_return(true)
         end
-      
+        
         it "should remove the dir" do
           Dir.stub!(:entries).and_return(%w{. ..})
           FileUtils.should_receive(:rmdir).with(pdf.prev_full_dir).and_return(true)
@@ -306,10 +179,115 @@ describe Pdf do
         end
       end
     end
+  end # remove_prev_dir
 
-
-
+  describe "#prev_full_path" do
+    context "when client changes" do
+      it "should return previous path" do
+        pdf.client = Client.make(:name => "fred")
+        pdf.prev_full_path.should == full_path
+      end
+    end
+    
+    context "when category changes" do
+      it "should return previous path" do 
+        pdf.category = Category.make(:name => "new")
+        pdf.prev_full_path.should == full_path
+      end
+      
+      context "but path is the same" do
+        it "should trust the path variable" do
+          pdf = Pdf.make(:path => "mypath")
+          pdf.category = Category.make(:name => "new")          
+          pdf.prev_full_path.should == "mypath/Unit_Trust-20100128.pdf"
+        end
+      end
+      
+      context "but path has changed" do
+        before do
+          @pdf = Pdf.make(:path => "mypath")
+          @pdf.path = "changed"
+        end
+        
+        it "should trust the path variable" do
+          @pdf.category = Category.make(:name => "new")          
+          @pdf.prev_full_path.should == "mypath/Unit_Trust-20100128.pdf"
+        end
+      end
+    end  
   end
+
+  describe "#new_full_path" do
+    it "should return the full path including new filename" do
+      pdf.pdfname = "test"
+      pdf.new_full_path.should == "#{full_dir}/#{pdf.get_new_filename2}"
+    end
+  end
+
+  describe "#full_path" do
+    it "should return the full path including filename" do
+      pdf.full_path.should == full_path
+    end
+    
+    it "should return lowercase except filename" do
+      pdf = Pdf.make(:filename => "Testing.pdf")
+      pdf.full_path.should == "#{full_dir}/Testing.pdf"
+    end
+
+    context "pdf has no client" do
+      it "returns dir with out client" do
+        pdf = Pdf.make()
+        pdf.update_attribute(:client_id, nil)
+        pdf.full_path.should == "#{store_dir}/general/#{filename}"
+      end
+    end
+
+    context "pdf has no category" do
+      it "returns dir with out category" do
+        pdf = Pdf.make()
+        pdf.update_attribute(:category_id, nil)
+        pdf.full_path.should == "#{client_dir}/#{filename}"
+      end
+    end
+  end
+  
+  describe "#thumbnail_full_path" do
+    it "should equal <id>.png" do
+      pdf.thumbnail_full_path.should == "#{Rails.root}/public/images/thumbnails/#{pdf.id}.png"
+    end    
+  end
+
+  describe "#total_pages" do
+    context "Given two pdfs with 2 pages each" do
+      it "returns a total of 2 pages" do
+        pdf.stub(:full_path).and_return("#{full_dir}/test.pdf")
+        pdfs = [pdf,pdf]
+        Pdf.total_pages(pdfs).should == 2
+      end
+    end
+  end
+
+  
+  
+  describe "#category_name" do
+    context "Given a pdf which has a category" do 
+      it "should return category name in downcase" do
+        pdf.category_name.should == "general"
+      end
+    end
+
+    context "Given a pdf which doesn't have a category" do
+      it "should return nil" do
+        pdf.category = nil
+        firm = Firm.make
+        firm.categories << Category.make(:name => "foo")
+        pdf.firm = firm
+        
+        pdf.category_name.should == "foo"
+      end
+    end
+  end
+
   
   describe "#move_file2" do
     before do 
@@ -388,8 +366,8 @@ describe Pdf do
               @pdf.pdfname="Testing filename"
               @pdf.move_file2              
             end.should change(@pdf, :filename).
-              from("Unit_Trust-20100128.pdf").
-              to("Testing_filename-20100128.pdf")
+                        from("Unit_Trust-20100128.pdf").
+                        to("Testing_filename-20100128.pdf")
           end
 
           # it "should update md5" do
@@ -411,6 +389,28 @@ describe Pdf do
           end
         end
       end 
+    end
+  end # move_file2  
+  
+  describe "#move_uploaded_file" do 
+    before do
+      pdf.stub!(:md5calc2)
+      FileUtils.stub!(:mv)
+      File.stub!(:read).and_return(0)
+      Digest::MD5.stub!(:hexdigest).and_return(0)
+    end
+    
+    context "when new file" do
+      it "should move the pdf" do 
+        pdf.filename = "/path/to/uploaded file.pdf"
+        FileUtils.should_receive(:mv).with(pdf.filename,pdf.new_full_path)
+        pdf.move_uploaded_file
+      end
+
+      # it "should call md5calc2" do
+      #   pdf.should_receive(:md5calc2)
+      #   pdf.move_uploaded_file
+      # end
     end
   end
 end
