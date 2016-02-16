@@ -53,16 +53,11 @@ class Pdf < ActiveRecord::Base
     "#{thumbnail_full_dir}/#{id}.png"
   end
   
+  # --------------------------------------------------------------------------------
+  # Display functions
+  # --------------------------------------------------------------------------------
   def client_name
     client.name.downcase if client
-  end
-
-  def client_dir
-    if client_name
-      self.firm.store_dir + "/" +  client_name
-    else
-      self.firm.store_dir
-    end
   end
 
   def category_name
@@ -70,6 +65,34 @@ class Pdf < ActiveRecord::Base
       self.update_attribute(:category, firm.categories.first)
     end
     category.try(:category_dir)
+  end
+
+  # --------------------------------------------------------------------------------
+  # File functions
+  # --------------------------------------------------------------------------------
+  def get_new_filename2
+    date = pdfdate.to_formatted_s(:file_format)
+    ext = File.extname(full_path)
+    "#{pdfname}-#{date}#{ext}".gsub(/ /,"_")
+  end
+  
+  def get_new_filename(current_firm,original_file)
+    # Format date
+    @filedate = pdfdate.to_formatted_s(:file_format)
+
+    # Format the new filename.
+    @new_filename =  current_firm.store_dir + "/" + client.name.downcase + "/" + category.name.downcase + "/" + @filedate + "-" + pdfname + File.extname(original_file)
+   end
+  
+  # --------------------------------------------------------------------------------
+  # Directory functions
+  # --------------------------------------------------------------------------------
+  def client_dir
+    if client_name
+      self.firm.store_dir + "/" +  client_name
+    else
+      self.firm.store_dir
+    end
   end
 
   def prev_full_dir
@@ -97,6 +120,26 @@ class Pdf < ActiveRecord::Base
     end
   end
 
+  # Checking if the directory exists
+  def category_dir_exists?(cat_name)
+    File.exists?(client_dir + "/" + cat_name)
+  end  
+
+  def directory_empty?(dir)
+    if File.exists?(dir)
+      (Dir.entries(dir) - %w{ . .. }).empty?
+    else
+      return false
+    end
+  end
+  
+  def remove_prev_dir
+    FileUtils.rmdir prev_full_dir if directory_empty?(prev_full_dir)
+  end
+
+  # --------------------------------------------------------------------------------
+  # Path functions
+  # --------------------------------------------------------------------------------
   def prev_full_path
     path_was ? "#{path_was}/#{filename}" : "#{prev_full_dir}/#{filename}"
   end
@@ -115,26 +158,13 @@ class Pdf < ActiveRecord::Base
     path ? "#{path}/#{filename}" : "#{full_dir}/#{filename}"
   end
   
-  # Checking if the directory exists
-  def category_dir_exists?(cat_name)
-    File.exists?(client_dir + "/" + cat_name)
-  end  
-
-  def directory_empty?(dir)
-    if File.exists?(dir)
-      (Dir.entries(dir) - %w{ . .. }).empty?
-    else
-      return false
-    end
-  end
-  
-  def remove_prev_dir
-    FileUtils.rmdir prev_full_dir if directory_empty?(prev_full_dir)
-  end
-
   def prev_full_path_exists?
     File.exists?(prev_full_path)
   end
+  
+  # --------------------------------------------------------------------------------
+  # Move functions
+  # --------------------------------------------------------------------------------
   
   # The new improved move_file routine, now with testing!
   def move_file2
@@ -220,20 +250,11 @@ class Pdf < ActiveRecord::Base
     Digest::MD5.hexdigest(File.read(fullpath(current_firm)))
   end
 
-  def get_new_filename2
-    date = pdfdate.to_formatted_s(:file_format)
-    ext = File.extname(full_path)
-    "#{pdfname}-#{date}#{ext}".gsub(/ /,"_")
-  end
-  
-  def get_new_filename(current_firm,original_file)
-    # Format date
-    @filedate = pdfdate.to_formatted_s(:file_format)
 
-    # Format the new filename.
-    @new_filename =  current_firm.store_dir + "/" + client.name.downcase + "/" + category.name.downcase + "/" + @filedate + "-" + pdfname + File.extname(original_file)
-   end
-
+  # --------------------------------------------------------------------------------
+  # Relinking functions
+  # --------------------------------------------------------------------------------
+  #
   # Go through every pdf in the system and relink
   # Should be done in a rake task and put in cron
   def self.relink_all
@@ -263,13 +284,11 @@ class Pdf < ActiveRecord::Base
     relink_one_file(current_firm, files)
   end
 
-
   def relink_one_file(current_firm, files)
     if client_name
       if File.exists?(fullpath(current_firm))
         update_attribute(:missing_flag, false)
       else
-
 
         # Don't bother unless there is a md5 tag.
         if md5
@@ -300,11 +319,10 @@ class Pdf < ActiveRecord::Base
     end
   end
 
+  # --------------------------------------------------------------------------------
+  # Pdf Utility functions
+  # --------------------------------------------------------------------------------
   def rotate_file(current_firm)
-
-    #x = system("date")
-    #print x,"\n"
-
     @rotatefile = File.basename(fullpath(current_firm),'.pdf') + "-rotated.pdf"
 
     # Rotate anti-clockwise 90 degrees
@@ -377,10 +395,34 @@ class Pdf < ActiveRecord::Base
     files       # Return the hash of md5 and path.
   end
 
+  # Send email
+  def send_email(current_firm_id, current_user_id, email, subject, body)
+    current_firm = Firm.find(current_firm_id)
+    current_user = User.find(current_user_id)
 
+    # Detect how big the file is and split if pdf is over the SPLIT_NO contant value.
+    # which is set in environments/production.rb
+    if self.get_no_pages(current_firm).to_i > SPLIT_NO.to_i
+      self.split_pdf(current_firm)      # split up into two parts
 
+      # Send the email twice with a different attachement each time.
+      @original_filename = self.filename
+      self.filename = File.basename(@original_filename, '.pdf') + "-part1.pdf"
+      PdfMailer.deliver_email_client(current_firm, current_user, email, subject, body,self)
+      File.delete(self.fullpath(current_firm))
 
+      self.filename = File.basename(@original_filename, '.pdf') + "-part2.pdf"
+      PdfMailer.deliver_email_client(current_firm, current_user, email, subject, body,self)
+      File.delete(self.fullpath(current_firm))
+
+    else
+      # Send one email as normal
+      PdfMailer.deliver_email_client(current_firm, current_user, email, subject, body, self)    end
+  end
+  
+  # --------------------------------------------------------------------------------
   # Validators
+  # --------------------------------------------------------------------------------
   def does_new_full_path_exist?
     if File.exists?(new_full_path) and full_path != new_full_path
       self.errors.add(:pdfname, " already exists, please change pdfname")
@@ -409,29 +451,4 @@ class Pdf < ActiveRecord::Base
     return true
   end
 
-  # Send email
-  def send_email(current_firm_id, current_user_id, email, subject, body)
-
-    current_firm = Firm.find(current_firm_id)
-    current_user = User.find(current_user_id)
-
-    # Detect how big the file is and split if pdf is over the SPLIT_NO contant value.
-    # which is set in environments/production.rb
-    if self.get_no_pages(current_firm).to_i > SPLIT_NO.to_i
-      self.split_pdf(current_firm)      # split up into two parts
-
-      # Send the email twice with a different attachement each time.
-      @original_filename = self.filename
-      self.filename = File.basename(@original_filename, '.pdf') + "-part1.pdf"
-      PdfMailer.deliver_email_client(current_firm, current_user, email, subject, body,self)
-      File.delete(self.fullpath(current_firm))
-
-      self.filename = File.basename(@original_filename, '.pdf') + "-part2.pdf"
-      PdfMailer.deliver_email_client(current_firm, current_user, email, subject, body,self)
-      File.delete(self.fullpath(current_firm))
-
-    else
-      # Send one email as normal
-      PdfMailer.deliver_email_client(current_firm, current_user, email, subject, body, self)    end
-  end
 end
