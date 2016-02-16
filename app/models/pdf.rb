@@ -9,7 +9,6 @@ class Pdf < ActiveRecord::Base
 
   validates_presence_of :pdfdate, :pdfname, :filename, :category_id, :client_id
   validates_uniqueness_of :pdfname, :scope => [:pdfdate, :category_id, :client_id, :firm_id]
-
   validates_format_of :pdfname, :with => /^[^\/\\\?\*:|"<>]+$/, :message => "cannot contain any of the following characters: / \\ ? * : | \" < >"
 
   named_scope :joined, :joins => [:firm, :client, :category]
@@ -18,41 +17,19 @@ class Pdf < ActiveRecord::Base
   def self.per_page
     10
   end
+
+  # --------------------------------------------------------------------------------
+  # Queries
+  # --------------------------------------------------------------------------------
   
-  # validate :does_file_exist?  # Must check if the original filename exists not the new one
-  def self.with_conditions(query, page)
-    @pdfs = Pdf.joined.paginate(:page => page, :conditions => query, :order => "pdfdate DESC, id")
-  end
-
-  # Find the total number of pages in a given set of PDFs
-  def self.total_pages(pdfs)
-    total = 0
-    pdfs.each do |pdf|
-      begin
-        if File.exists?(pdf.full_path)
-          r=PDF::Reader.new(pdf.full_path)
-          total += r.page_count
-        end
-      rescue
-        next
-      end
-    end
-    return total
-  end
-
   # All PDFs for a given year
   def self.yearly_pdfs(year)
-    Pdf.find(:all, :conditions => ["pdfdate >= ? AND pdfdate <= ?", Date.parse("#{year}-01-01"), Date.parse("#{year}-12-31")])
+    Pdf.find(:all,
+             :conditions => ["pdfdate >= ? AND pdfdate <= ?",
+                             Date.parse("#{year}-01-01"),
+                             Date.parse("#{year}-12-31")])
   end
 
-  def thumbnail_full_dir
-    "#{Rails.root}/public/images/thumbnails"
-  end
-  
-  def thumbnail_full_path
-    "#{thumbnail_full_dir}/#{id}.png"
-  end
-  
   # --------------------------------------------------------------------------------
   # Display functions
   # --------------------------------------------------------------------------------
@@ -82,7 +59,7 @@ class Pdf < ActiveRecord::Base
 
     # Format the new filename.
     @new_filename =  current_firm.store_dir + "/" + client.name.downcase + "/" + category.name.downcase + "/" + @filedate + "-" + pdfname + File.extname(original_file)
-   end
+  end
   
   # --------------------------------------------------------------------------------
   # Directory functions
@@ -137,6 +114,10 @@ class Pdf < ActiveRecord::Base
     FileUtils.rmdir prev_full_dir if directory_empty?(prev_full_dir)
   end
 
+  def thumbnail_full_dir
+    "#{Rails.root}/public/images/thumbnails"
+  end
+
   # --------------------------------------------------------------------------------
   # Path functions
   # --------------------------------------------------------------------------------
@@ -161,7 +142,11 @@ class Pdf < ActiveRecord::Base
   def prev_full_path_exists?
     File.exists?(prev_full_path)
   end
-  
+
+  def thumbnail_full_path
+    "#{thumbnail_full_dir}/#{id}.png"
+  end
+
   # --------------------------------------------------------------------------------
   # Move functions
   # --------------------------------------------------------------------------------
@@ -250,11 +235,9 @@ class Pdf < ActiveRecord::Base
     Digest::MD5.hexdigest(File.read(fullpath(current_firm)))
   end
 
-
   # --------------------------------------------------------------------------------
   # Relinking functions
   # --------------------------------------------------------------------------------
-  #
   # Go through every pdf in the system and relink
   # Should be done in a rake task and put in cron
   def self.relink_all
@@ -339,6 +322,22 @@ class Pdf < ActiveRecord::Base
     end
   end
 
+  # Find the total number of pages in a given set of PDFs
+  def self.total_pages(pdfs)
+    total = 0
+    pdfs.each do |pdf|
+      begin
+        if File.exists?(pdf.full_path)
+          r=PDF::Reader.new(pdf.full_path)
+          total += r.page_count
+        end
+      rescue
+        next
+      end
+    end
+    return total
+  end
+  
   def get_no_pages(current_firm)
     get_no_pages2(fullpath(current_firm))
   end
@@ -423,6 +422,11 @@ class Pdf < ActiveRecord::Base
   # --------------------------------------------------------------------------------
   # Validators
   # --------------------------------------------------------------------------------
+  # validate :does_file_exist?  # Must check if the original filename exists not the new one
+  def self.with_conditions(query, page)
+    @pdfs = Pdf.joined.paginate(:page => page, :conditions => query, :order => "pdfdate DESC, id")
+  end
+
   def does_new_full_path_exist?
     if File.exists?(new_full_path) and full_path != new_full_path
       self.errors.add(:pdfname, " already exists, please change pdfname")
