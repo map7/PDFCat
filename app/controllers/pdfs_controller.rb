@@ -41,6 +41,7 @@ class PdfsController < ApplicationController
   
   def create
     @pdf = Pdf.new(params[:pdf])
+    @pdf.pdfname_format
     @pdf.filename = File.basename(params[:filename]) if params[:filename]
     
     if @pdf.valid?
@@ -72,6 +73,7 @@ class PdfsController < ApplicationController
   def update
     @pdf = Pdf.find(params[:id])
     @pdf.attributes = params[:pdf]
+    @pdf.pdfname_format
 
     if @pdf.valid?
       @pdf.move_file2

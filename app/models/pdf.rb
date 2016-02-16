@@ -7,13 +7,13 @@ class Pdf < ActiveRecord::Base
   belongs_to :category
   belongs_to :client
 
-  validates_presence_of :pdfdate, :pdfname, :filename, :category_id, :client_id
+  validates_presence_of :pdfdate, :pdfname, :filename, :category_id, :client_id, :business_name, :contact, :description
   validates_uniqueness_of :pdfname, :scope => [:pdfdate, :category_id, :client_id, :firm_id]
   validates_format_of :pdfname, :with => /^[^\/\\\?\*:|"<>]+$/, :message => "cannot contain any of the following characters: / \\ ? * : | \" < >"
 
   named_scope :joined, :joins => [:firm, :client, :category]
   default_scope :order => 'pdfdate DESC'
-  
+
   def self.per_page
     10
   end
@@ -33,10 +33,22 @@ class Pdf < ActiveRecord::Base
   # --------------------------------------------------------------------------------
   # Display functions
   # --------------------------------------------------------------------------------
-  def pdfname_format
-    
+  def business_name_cap
+    business_name.split.map(&:capitalize).join(' ')
   end
   
+  def contact_cap
+    contact.split.map(&:capitalize).join(' ')
+  end
+
+  def pdfdate_formatted
+    pdfdate.strftime("#{pdfdate.day.ordinalize} %b %Y")
+  end
+
+  def pdfname_format
+    self.pdfname = "#{business_name_cap} #{contact_cap} #{description} #{pdfdate_formatted}"
+  end
+
   def client_name
     client.name.downcase if client
   end

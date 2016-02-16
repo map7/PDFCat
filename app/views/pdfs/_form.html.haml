@@ -9,8 +9,17 @@
     = f.label :date
     = f.date_select :pdfdate
   %p
+    = f.label :business_name
+    = f.text_field :business_name
+  %p
+    = f.label :contact
+    = f.text_field :contact
+  %p
+    = f.label :description
+    = f.text_field :description
+  %p
     = f.label :name
-    = f.text_field :pdfname
+    = f.text_field :pdfname, disabled: true
   %p
     = f.label :client_id
     = f.collection_select :client_id, current_firm.clients_sorted, :id, :name

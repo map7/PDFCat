@@ -183,7 +183,7 @@ describe PdfsController do
       
       context "with invalid attributes" do
         before do
-          pdf.pdfname = ""
+          pdf.description = ""
           Pdf.stub!(:find).and_return(pdf)
         end
 
