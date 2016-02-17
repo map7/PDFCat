@@ -7,7 +7,7 @@ class Pdf < ActiveRecord::Base
   belongs_to :category
   belongs_to :client
 
-  validates_presence_of :pdfdate, :pdfname, :filename, :category_id, :client_id, :business_name, :contact, :description
+  validates_presence_of :pdfdate, :pdfname, :filename, :category_id, :client_id, :contact, :description
   validates_uniqueness_of :pdfname, :scope => [:pdfdate, :category_id, :client_id, :firm_id]
   validates_format_of :pdfname, :with => /^[^\/\\\?\*:|"<>]+$/, :message => "cannot contain any of the following characters: / \\ ? * : | \" < >"
 
@@ -46,7 +46,7 @@ class Pdf < ActiveRecord::Base
   end
 
   def pdfname_format
-    self.pdfname = "#{business_name_cap} #{contact_cap} #{description} #{pdfdate_formatted}"
+    self.pdfname = "#{business_name_cap} #{contact_cap} #{description} #{pdfdate_formatted}".strip
   end
 
   def client_name
