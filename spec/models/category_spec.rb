@@ -139,6 +139,29 @@ describe Category do
       @sub = Category.make(:name => "Sub1", :firm_id => cat.firm_id)
       @sub.move_to_child_of cat
     end
+
+    describe "#pdfs_total" do
+      context "sub category has one pdf & main has one" do 
+        it "returns two" do
+          @sub.pdfs << Pdf.make
+          cat.pdfs << Pdf.make
+          cat.pdfs_total.should == 2
+        end
+      end
+
+      context "sub category has one pdf" do 
+        it "returns one" do
+          @sub.pdfs << Pdf.make
+          cat.pdfs_total.should == 1
+        end
+      end
+      
+      context "sub category has zero pdfs" do
+        it "returns zero" do 
+          cat.pdfs_total.should == 0
+        end
+      end
+    end
     
     describe "destroy" do
       context "with no pdfs attached" do

@@ -62,16 +62,79 @@ describe CategoriesController do
     describe "#update" do
       before do
         @category = Category.make
-        Category.stub!(:find).and_return(@category)
       end
 
       it "should update category" do
+        Category.stub(:find).and_return(@category)
+        @category.stub!(:pdfs_total).and_return(0)
         @category.should_receive(:update_attributes)
-        put :update, :id => @category.id
+        put :update, :id => @category.id, category: {name: "test"}
+      end
+
+      context "with pdfs attached" do
+
+        context "as admin user" do 
+          context "main category" do
+            before do
+              login_admin
+              @pdf = Pdf.make
+            end
+            
+            it "accepts admin user updating" do
+              @category.pdfs << @pdf
+              put :update, :id => @category.id
+              response.should redirect_to(categories_path)
+            end
+
+            context "where sub category has pdfs but main doesn't" do
+              before do 
+                @sub = Category.make(:sub)
+                @sub.move_to_child_of @category
+                @sub.update_attribute(:firm, @category.firm)
+                @sub.pdfs << @pdf
+              end
+              
+              it "accepts admin user updating" do
+                put :update, :id => @category.id
+                response.should redirect_to(categories_path)
+              end
+            end
+          end
+        end # admin user
+
+        context "as regular user" do
+          context "main category" do
+            before do 
+              @pdf = Pdf.make
+            end
+            
+            it "denies user updating" do
+              @category.pdfs << @pdf
+              put :update, :id => @category.id
+              response.should render_template(:edit)
+            end
+
+            context "where sub category has pdfs but main doesn't" do
+              before do 
+                @sub = Category.make(:sub)
+                @sub.move_to_child_of @category
+                @sub.update_attribute(:firm, @category.firm)
+                @sub.pdfs << @pdf
+              end
+              
+              it "denies user updating" do
+                put :update, :id => @category.id
+                response.should render_template(:edit)
+              end
+            end
+          end
+        end                     # reg user
       end
 
       context "with valid data" do
         before do 
+          Category.stub!(:find).and_return(@category)
+          @category.stub!(:pdfs_total).and_return(0)
           @category.stub!(:size).and_return(0)
           @category.stub!(:valid?).and_return(true)
           @category.stub_chain(:errors, :count).and_return(0)
@@ -90,6 +153,8 @@ describe CategoriesController do
 
       context "with invalid data" do
         before do 
+          Category.stub!(:find).and_return(@category)
+          @category.stub!(:pdfs_total).and_return(0)
           @category.stub!(:valid?).and_return(false)
           @category.stub_chain(:errors, :count).and_return(1)
         end

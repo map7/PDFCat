@@ -17,6 +17,13 @@ def login_user
   @current_user ||= User.find_by_id(user.id)
 end
 
+def login_admin
+  user = User.make(:admin)
+  @request.session[:user_id] = user.id
+  @request.session[:firm_id] = 1
+  @current_user ||= User.find_by_id(user.id)
+end
+
 # def login_user
 #   logout_user
 #   sign_in User.make!

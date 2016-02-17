@@ -27,19 +27,29 @@ class CategoriesController < ApplicationController
 
   def update
     @category = Category.find(params[:id])
-    @oldcat = @category.name
-    @category.attributes = params[:category]
-    
-    if @category.valid?
-      @category.move_dir
-      @category.update_attributes(params[:category])
-    end
 
-    if @category.errors.count > 0
-      render :edit
+    # If there are pdfs in the category only admin should be able to move them.
+    # This is due to the interface waiting around until the move has been done, which can
+    # take a long time.
+    if @category.pdfs_total == 0 || current_user.is_admin
+      
+      @oldcat = @category.name
+      @category.attributes = params[:category]
+      
+      if @category.valid?
+        @category.move_dir
+        @category.update_attributes(params[:category])
+      end
+
+      if @category.errors.count > 0
+        render :edit
+      else
+        flash[:notice] = "Category updated successfully!"
+        redirect_to categories_path
+      end
     else
-      flash[:notice] = "Category updated successfully!"
-      redirect_to categories_path
+      flash[:error] = "Category can only be updated by admin!"
+      render :edit
     end
   end
 

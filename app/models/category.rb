@@ -35,6 +35,11 @@ class Category < ActiveRecord::Base
   def self.per_page
     10
   end
+
+  # Total all pdfs
+  def pdfs_total
+    self.self_and_descendants.inject(0){|sum, c| sum + c.pdfs.count}
+  end
   
   def self.with_conditions(firm_id, page)
     Category.paginate(:page => page, :conditions => { :firm_id => firm_id })    

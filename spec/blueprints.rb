@@ -10,6 +10,16 @@ User.blueprint do
   firm_id { 1 }
 end
 
+User.blueprint(:admin) do
+  login {'admin'}
+  name  {'admin dude'}
+  is_admin {true}
+  email {'michael@dtcorp.com.au'}
+  salt  { '356a192b7913b04c54574d18c28d46e6395428ab' } # SHA1('0')
+  crypted_password { '7f31da8d30980bf79ffa1599861448f6d4c8733d' } # 'monkey'
+  firm_id { 1 }
+end
+
 Firm.blueprint do
   name { "Digitech" }
   store_dir  {"/home/map7/pdfcat_test_clt"}
