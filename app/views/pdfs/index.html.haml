@@ -18,7 +18,9 @@
         = link_to pdf.pdfname, {:action => "attachment", :id => pdf.id}, :id => "view",:method => :get
         - if File.exists?("#{Rails.root}/public/images/thumbnails/#{pdf.id}.png")
           .hover_thumbnail= image_tag("thumbnails/#{pdf.id}.png")
-      %td= pdf.client.name 
+        %br
+        %i= pdf.pdfnote        
+      %td= pdf.client.name
       %td= pdf.category.name 
       %td= link_to 'eMail',  {:action => 'email', :id => pdf}, :id => "email", :method => :get
       %td= link_to 'Show',   {:action => 'show', :id => pdf}, :id => "show",  :method => :get 
