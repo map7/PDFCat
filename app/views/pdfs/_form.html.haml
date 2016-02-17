@@ -14,6 +14,12 @@
     = f.label :date
     = f.date_select :pdfdate
   %p
+    = f.label :client_id
+    = f.collection_select :client_id, current_firm.clients_sorted, :id, :name
+  %p
+    = f.label :category_id
+    = f.collection_select :category_id, current_firm.categories_sorted, :id, :level_name
+  %p
     = f.label :business_name
     = f.text_field :business_name
   %p
@@ -22,12 +28,6 @@
   %p
     = f.label :description
     = f.text_field :description
-  %p
-    = f.label :client_id
-    = f.collection_select :client_id, current_firm.clients_sorted, :id, :name
-  %p
-    = f.label :category_id
-    = f.collection_select :category_id, current_firm.categories_sorted, :id, :level_name
 
   - if @pdf.missing_flag
     %p
