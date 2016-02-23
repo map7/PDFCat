@@ -17,8 +17,8 @@
     = f.label :client_id
     = f.collection_select :client_id, current_firm.clients_sorted, :id, :name
   %p
-    = f.label :category_id
-    = f.collection_select :category_id, current_firm.categories_sorted, :id, :level_name
+    = f.label :category_id, "Category/Sub Category"
+    = f.collection_select :category_id, current_firm.categories_sorted, :id, :full_sub_name
   %p
     = f.label :business_name
     = f.text_field :business_name

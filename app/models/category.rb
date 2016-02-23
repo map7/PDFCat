@@ -49,6 +49,10 @@ class Category < ActiveRecord::Base
     level == 0 ? name : "-- #{name}"
   end
 
+  def full_sub_name
+    level == 0 ? name : "#{parent.name}/#{name}"
+  end
+
   def roots_without_self
     firm.categories.roots.reject{|c| c == self}
   end
