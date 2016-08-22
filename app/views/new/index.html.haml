@@ -8,7 +8,7 @@
     %th Date
 
   - for file in @files
-    %tr#listitem
+    %tr#listitem.listing
       %td#FKey= @no = @no +1
 
       %td= link_to file["name"], {:controller => 'pdfs', :action => "attachment_new",

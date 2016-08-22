@@ -10,7 +10,7 @@
     %th Documents
   
   - for client in @clients
-    %tr#listing
+    %tr#listing.listing
       %td#FKey #{@no = @no +1}
       %td= client.name
       %td= client.email

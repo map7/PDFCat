@@ -8,7 +8,7 @@
 		%th Documents
 
 	- for category in @categories
-		%tr#listing
+		%tr#listing.listing
 			%td#FKey= @no = @no +1
 			%td(style='padding-left:#{category.level * 20}px')= category.name
 			%td= category.description
