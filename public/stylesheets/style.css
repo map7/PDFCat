@@ -192,12 +192,14 @@ div#loginform {
 
 /********************* Tables *********************/
 table {
-  width: 100%;
-  border-spacing: 0px; }
-  table tr {
+    width: 100%;
+    border-spacing: 0px; }
+table tr {
     text-align: left; }
-    table tr #listitem:hover {
-      background-color: #FFE887; }
+table tr #listitem:hover {
+    background-color: #FFE887; }
+table tr.listing:hover {
+    background-color: #FFE887; }
 
 .action {
   font-size: 80%; }
