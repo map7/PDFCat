@@ -443,7 +443,7 @@ class Pdf < ActiveRecord::Base
       logger.info "OCR #{full_path}"
       cmd = "abbyyocr --multiProcessingMode Parallel --recognitionProcessesCount 32 --progressInformation --useNotOnlyPhysicalCPUCores -if \"#{full_path}\" -f PDF -of \"#{full_path}\""
       logger.info "#{cmd}"
-      status = system(cmd)
+      status = system("#{cmd}")
       self.update_attribute(:ocr, true) if status
     end
   end
