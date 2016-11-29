@@ -437,7 +437,10 @@ class Pdf < ActiveRecord::Base
   end
 
   def ocr_file
-    unless self.ocr
+    if self.ocr == true
+      logger.info "#{full_path} already ocr'd"
+    else
+      logger.info "OCR #{full_path}"
       status = system("abbyyocr --multiProcessingMode Parallel --recognitionProcessesCount 32 --progressInformation --useNotOnlyPhysicalCPUCores -if \"#{full_path}\" -f PDF -of \"#{full_path}\"")
       update_attribute(:ocr, true) if status
     end
