@@ -148,6 +148,14 @@ class PdfsController < ApplicationController
     return @status
   end
 
+  # Manually OCR a file
+  def ocr
+    @pdf = Pdf.find(params[:id])
+
+    @pdf.ocr_file
+    render :partial => "showitem"
+  end
+  
   # Show the email form.
   def email
     @pdf = Pdf.find(params[:id])
