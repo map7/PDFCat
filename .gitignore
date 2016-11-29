@@ -20,3 +20,4 @@ rdoc/
 .bundle
 *_flymake*
 public/images/thumbnails
+tmp
