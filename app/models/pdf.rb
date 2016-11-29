@@ -434,6 +434,13 @@ class Pdf < ActiveRecord::Base
       # Send one email as normal
       PdfMailer.deliver_email_client(current_firm, current_user, email, subject, body, self)    end
   end
+
+  def ocr_file
+    unless self.ocr
+      status = system("abbyyocr --multiProcessingMode Parallel --recognitionProcessesCount 32 --progressInformation --useNotOnlyPhysicalCPUCores -if \"#{full_path}\" -f PDF -of \"#{full_path}\"")
+      update_attribute(:ocr, true) if status
+    end
+  end
   
   # --------------------------------------------------------------------------------
   # Validators
