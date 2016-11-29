@@ -331,6 +331,7 @@ class Pdf < ActiveRecord::Base
       # Copy the new file over to the old name.
       File.delete(fullpath(current_firm))
       FileUtils.mv(@rotatefile, fullpath(current_firm))
+      PdfThumbnail.delay.update_thumbnail(self) # Take a new thumbnail
       return true
     else
       logger.warn("Error command 'pdf90' could not run.")

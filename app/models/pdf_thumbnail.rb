@@ -5,13 +5,17 @@ class PdfThumbnail
   def self.make_thumbnail(original_pdf)
     PdfThumbnail.create_dir(original_pdf)
     if File.exists?(original_pdf.full_path) && !File.exists?(original_pdf.thumbnail_full_path)
-      begin
-        pdf=Magick::ImageList.new(original_pdf.full_path)
-        thumb=pdf.scale(180,250)
-        thumb.write(original_pdf.thumbnail_full_path)
-      rescue
-        puts "** Issues with: #{original_pdf.full_path}"
-      end
+      self.update_thumbnail(original_pdf)
+    end
+  end
+
+  def self.update_thumbnail(original_pdf)
+    begin
+      pdf=Magick::ImageList.new(original_pdf.full_path)
+      thumb=pdf.scale(180,250)
+      thumb.write(original_pdf.thumbnail_full_path)
+    rescue
+      puts "** Issues with: #{original_pdf.full_path}"
     end
   end
   
