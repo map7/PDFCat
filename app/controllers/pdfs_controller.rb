@@ -152,7 +152,12 @@ class PdfsController < ApplicationController
   def ocr
     @pdf = Pdf.find(params[:id])
 
-    @pdf.ocr_file
+    if @pdf.ocr == true
+      flash[:notice] = "File already OCR'd"
+    else
+      flash[:notice] = "OCR - please wait 5minutes whilst we run optical character recognition."
+      @pdf.delay.ocr_file
+    end
     render :partial => "showitem"
   end
   
