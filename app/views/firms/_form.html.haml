@@ -1,10 +1,20 @@
 - form_for(@firm) do |f|
   = f.error_messages
-  = f.text_field :name
-  = f.text_field :upload_dir 
-  = f.text_field :store_dir 
-  = f.text_field :file_user 
-  = f.text_field :file_group
+  %p
+    = f.label :name
+    = f.text_field :name
+  %p
+    = f.label :upload_dir
+    = f.text_field :upload_dir 
+  %p
+    = f.label :store_dir
+    = f.text_field :store_dir 
+  %p
+    = f.label :file_user
+    = f.text_field :file_user 
+  %p
+    = f.label :file_group
+    = f.text_field :file_group
   = f.submit
 
 = link_to 'Back', firms_path, :class=> 'ajax', :accesskey=> 'esc'
