@@ -9,6 +9,6 @@
 
 = link_to 'Relink', {:action => 'relink', :id => @pdf.id }, :id => "relink", :class => 'ajax', :target => 'showitem'
 = link_to 'Rotate', {:action => 'rotate', :id => @pdf.id }, :id => "rotate", :class => 'ajax', :target => 'showitem'
--# = link_to 'Ocr', {:action => 'ocr', :id => @pdf.id }, :id => "ocr", :class => 'ajax', :target => 'showitem'
+= link_to 'Ocr', {:action => 'ocr', :id => @pdf.id }, :id => "ocr", :class => 'ajax', :target => 'showitem'
 = link_to 'Assign', assign_pdf_path(@pdf) if @pdf.missing_flag
 = link_to 'Back', pdfs_path, :class=>'ajax', :accesskey=>'esc'
