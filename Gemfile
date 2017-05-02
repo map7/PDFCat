@@ -1,5 +1,7 @@
 source "https://rubygems.org"
 
+gem "rake", "~> 10.0.4"
+
 gem "rails", "2.3.18"
 
 gem "pg", "0.11.0"                # PostgreSQL adapter
@@ -21,7 +23,7 @@ group :development, :test do
   gem 'machinist', "< 2.0"
   gem "rspec", "1.3.0"
   gem "rspec-rails", "1.3.2"
-  gem "test-unit"
+  gem "test-unit", "1.2.3"
   gem "debugger"
   gem "iconv", "~> 1.0.3"
   gem "capistrano", "= 2.14.1"   # Deployment
