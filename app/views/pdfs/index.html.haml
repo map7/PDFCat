@@ -13,7 +13,7 @@
   - for pdf in @pdfs 
     %tr#listing.listing
       %td#FKey= @no = @no +1
-      %td= pdf.pdfdate
+      %td= pdf.pdfdate.strftime("%d/%m/%Y")
       %td
         = link_to pdf.pdfname, {:action => "attachment", :id => pdf.id}, :id => "view",:method => :get
         - if File.exists?("#{Rails.root}/public/images/thumbnails/#{pdf.id}.png")
