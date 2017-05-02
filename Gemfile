@@ -27,7 +27,7 @@ group :development, :test do
   gem "debugger"
   gem "iconv", "~> 1.0.3"
   gem "capistrano", "= 2.14.1"   # Deployment
-  gem 'rdoc'                    # Project documentation generator
+  gem 'rdoc', "~> 3.12"          # Project documentation generator
   gem 'fakefs', "~> 0.11.0", require: "fakefs/safe" # Mock fileutils & file operations
 end
 
