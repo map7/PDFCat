@@ -31,4 +31,6 @@ group :development, :test do
   gem 'fakefs', "~> 0.11.0", require: "fakefs/safe" # Mock fileutils & file operations
 end
 
-
+# Frozen Gems due to old version of Ruby
+gem "net-ssh", "~> 2.6.3"
+gem "ttfunk", "~> 1.4.0"
