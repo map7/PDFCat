@@ -4,8 +4,8 @@ gem "rails", "2.3.18"
 
 gem "pg", "0.11.0"                # PostgreSQL adapter
 
-gem "sass"                        # CSS
-gem "haml"                        # HAML HTML template
+gem "sass", "~> 3.4.11"           # CSS
+gem "haml", "~> 3.1.7"            # HAML HTML template
 gem "will_paginate", '~> 2.3.11'  # Pagination
 
 gem "awesome_nested_set", "< 2.0" # awesome nested set for sub categories

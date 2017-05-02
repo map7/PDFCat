@@ -33,7 +33,7 @@ GEM
       activesupport (~> 2.0)
       daemons (= 1.0.10)
     fakefs (0.8.0)
-    haml (3.1.7)
+    haml (3.1.8)
     hashery (2.1.1)
     highline (1.6.15)
     hoe (3.4.0)
@@ -88,7 +88,7 @@ DEPENDENCIES
   debugger
   delayed_job (~> 2.0.4)
   fakefs
-  haml
+  haml (~> 3.1.7)
   iconv (~> 1.0.3)
   machinist (< 2.0)
   pdf-reader
@@ -102,3 +102,6 @@ DEPENDENCIES
   sass
   test-unit
   will_paginate (~> 2.3.11)
+
+BUNDLED WITH
+   1.14.6
