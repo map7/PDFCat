@@ -22,3 +22,4 @@ rdoc/
 public/images/thumbnails
 tmp
 /docker-compose-prod.yml
+*.rails2
