@@ -18,6 +18,8 @@ gem 'delayed_job', "~> 2.0.4"     # Background Jobs (ie: Emailing)
 gem 'pdf-reader', "~> 2.0.0"    # Get info of the PDF (ie: page count)
 gem 'poleica'                   # PDF thumbnail generator
 
+gem 'restful_authentication'
+
 group :development, :test do
   # rspec tests
   gem 'machinist', "< 2.0"
