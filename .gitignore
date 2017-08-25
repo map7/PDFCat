@@ -21,3 +21,4 @@ rdoc/
 *_flymake*
 public/images/thumbnails
 tmp
+/docker-compose-prod.yml
