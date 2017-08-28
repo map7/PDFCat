@@ -1,0 +1,6 @@
+* Changelog
+
+** 2.2.5 (28/07/2017)
+
+- Fixed pagination on new pdfs
+- Changed order of columns within pdf
