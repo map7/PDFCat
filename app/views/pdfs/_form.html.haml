@@ -20,15 +20,15 @@
     = f.label :category_id, "Category/Sub Category"
     = f.collection_select :category_id, current_firm.categories_sorted, :id, :full_sub_name
   %p
-    = f.label :business_name
-    = f.text_field :business_name
-    (Optional)
+    = f.label :description
+    = f.text_field :description
   %p
     = f.label :contact
     = f.text_field :contact
   %p
-    = f.label :description
-    = f.text_field :description
+    = f.label :business_name
+    = f.text_field :business_name
+    (Optional)
 
   - if @pdf.missing_flag
     %p
