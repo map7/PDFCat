@@ -1,4 +1,4 @@
-class NewController < ApplicationController
+class NewPdfsController < ApplicationController
   before_filter :login_required
 
   # Create a upload variable to list files from the upload dir.
