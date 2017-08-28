@@ -29,7 +29,7 @@ describe Pdf do
     context "when all fields are given" do
       it "displays <business name> <contact> <description> <date>" do
         pdf.pdfname_format
-        pdf.pdfname.should == "Mercedes Benz Frank Smith building quote 28th Jan 2010"
+        pdf.pdfname.should == "building quote Frank Smith Mercedes Benz 28th Jan 2010"
       end
     end
 
@@ -37,7 +37,7 @@ describe Pdf do
       it "displays <contact> <description> <date>" do
         pdf.business_name = ""
         pdf.pdfname_format
-        pdf.pdfname.should == "Frank Smith building quote 28th Jan 2010"
+        pdf.pdfname.should == "building quote Frank Smith 28th Jan 2010"
       end
     end
   end
