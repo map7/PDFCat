@@ -24,7 +24,7 @@ ActionController::Routing::Routes.draw do |map|
   map.login  '/login',  :controller => 'sessions', :action => 'new'
   map.logout '/logout', :controller => 'sessions', :action => 'destroy'
 
-  map.new_pdfs '/new_pdfs', :controller => 'new'
+  map.resources :new_pdfs
   map.missing '/missing', :controller => 'missing'
   
   # RESTful ACL
