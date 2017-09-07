@@ -13,7 +13,11 @@ class PdfThumbnail
   def self.update_thumbnail(original_pdf)
     thumb = Poleica.new(original_pdf.full_path).to_png(width: 180, height: 250)
 
-    if File.exists?(thumb) & !File.exists("#{THUMBNAIL_DIR}/#{original_pdf.id}.png")
+    if File.exists?(thumb)
+      if File.exists?("#{THUMBNAIL_DIR}/#{original_pdf.id}.png")
+        File.delete "#{THUMBNAIL_DIR}/#{original_pdf.id}.png"
+      end
+      
       FileUtils.mv(thumb, "#{THUMBNAIL_DIR}/#{original_pdf.id}.png")      
     end
   end
