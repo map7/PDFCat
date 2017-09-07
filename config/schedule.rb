@@ -17,7 +17,7 @@
 #   runner "AnotherModel.prune_old_records"
 # end
 
-every 1.day, :at => "1:12pm" do
+every 1.day, :at => "1:20pm" do
   rake "pdfs:ocr"
 end
 
