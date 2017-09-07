@@ -36,3 +36,4 @@ end
 # Frozen Gems due to old version of Ruby
 gem "net-ssh", "~> 2.6.3"
 gem "ttfunk", "~> 1.4.0"
+gem 'whenever', :require => false
