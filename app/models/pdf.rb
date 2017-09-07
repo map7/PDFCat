@@ -220,20 +220,11 @@ class Pdf < ActiveRecord::Base
       # Go through each file and make an array of hashes
       allfiles.each do |file|
         filehash = Hash.new
-
         filehash["name"] = file
         filehash["size"] = File.size(file)
-
-        # Calculate no of pages for current file
-        # Takes too long.
-#        filehash["pages"] = get_no_pages2(file)
-
-        if File.ctime(file) > Time.now - 1.day and File.ctime(file).day == Time.now.day
-          filehash["date"] = File.ctime(file).strftime '%H:%M'
-        else
-          filehash["date"] = File.ctime(file).strftime '%d/%m/%Y'
-        end
-
+        filehash["date"] = File.mtime(file).strftime '%H:%M %d/%m/%Y'
+        # Calculate no of pages for current file-Takes too long.
+        #filehash["pages"] = get_no_pages2(file)
         files << filehash
       end
 
