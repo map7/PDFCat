@@ -18,7 +18,7 @@
 # end
 set :output, {:error => 'error.log', :standard => 'cron.log'}
 
-every 1.day, :at => "10:00pm" do
+every 1.day, :at => "1:27pm" do
   rake "pdfs:ocr"
 end
 
