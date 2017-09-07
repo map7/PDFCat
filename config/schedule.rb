@@ -17,10 +17,8 @@
 #   runner "AnotherModel.prune_old_records"
 # end
 
-if @envinonment == 'production'
-  every 1.day, :at => "1:12pm" do
-    rake "pdfs:ocr"
-  end
+every 1.day, :at => "1:12pm" do
+  rake "pdfs:ocr"
 end
 
 # Learn more: http://github.com/javan/whenever
