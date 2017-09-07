@@ -1,6 +1,11 @@
 rails_env = "production"
 
 require "bundler/capistrano"
+
+# Setup whenever (cron schedule)
+set :whenever_command, "bundle exec whenever"
+require "whenever/capistrano"
+
 set :bundle_flags, "--deployment --quiet --binstubs"
 set (:bundle_cmd) {"#{release_path}/bin/bundle"}
 set :default_environment, {
