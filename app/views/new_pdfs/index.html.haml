@@ -21,6 +21,6 @@
       :id=>'edit', :class=>'ajax', :accesskey=>'e', :method => :get
       
       %td= link_to 'Delete',{:action => 'destroy', :filename => file["name"]}, :id => "del",
-      :method => :get, :confirm => 'Are you sure?' 
+      :method => :delete, :confirm => 'Are you sure?' 
 
 = will_paginate @files
