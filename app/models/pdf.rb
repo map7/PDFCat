@@ -47,9 +47,9 @@ class Pdf < ActiveRecord::Base
 
   def pdfname_format
     if business_name_cap.blank?
-      self.pdfname = "#{description} #{contact_cap} #{pdfdate_formatted}".strip
+      self.pdfname = "#{description} #{contact_cap}".strip
     else
-      self.pdfname = "#{description} #{contact_cap} #{business_name_cap} #{pdfdate_formatted}".strip
+      self.pdfname = "#{description} #{contact_cap} #{business_name_cap}".strip
     end
   end
 
