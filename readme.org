@@ -68,6 +68,16 @@ To use do the following
 4. Push to the branch: git push origin my-new-feature
 5. Submit a pull request :D
 
+** Tests
+
+*** Running test suite
+
+Running all
+: rake
+
+Individual
+: spec spec/models/pdf_spec.rb
+
 ** TODO
 
 
