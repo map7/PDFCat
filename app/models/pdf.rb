@@ -67,14 +67,6 @@ class Pdf < ActiveRecord::Base
     "#{pdfname}#{File.extname(full_path)}".gsub(/ /,"_")
   end
   
-  def get_new_filename(current_firm,original_file)
-    # Format date
-    @filedate = pdfdate.to_formatted_s(:file_format)
-
-    # Format the new filename.
-    @new_filename =  current_firm.store_dir + "/" + client.name.downcase + "/" + category.name.downcase + "/" + @filedate + "-" + pdfname + File.extname(original_file)
-  end
-  
   # --------------------------------------------------------------------------------
   # Directory functions
   # --------------------------------------------------------------------------------
