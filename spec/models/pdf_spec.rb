@@ -27,17 +27,9 @@ describe Pdf do
 
   describe "#pdfname_format" do
     context "when all fields are given" do
-      it "displays <business name> <contact> <description>" do
+      it "displays <description>" do
         pdf.pdfname_format
-        pdf.pdfname.should == "building quote Frank Smith Mercedes Benz"
-      end
-    end
-
-    context "when contact & description fields are given" do
-      it "displays <contact> <description>" do
-        pdf.business_name = ""
-        pdf.pdfname_format
-        pdf.pdfname.should == "building quote Frank Smith"
+        pdf.pdfname.should == "building quote"
       end
     end
   end
