@@ -25,6 +25,7 @@
   %p
     = f.label :contact
     = f.text_field :contact
+    (Optional)
   %p
     = f.label :business_name
     = f.text_field :business_name
@@ -37,6 +38,7 @@
   %p
     = f.label :pdfnote, "Note"
     = f.text_field :pdfnote
+    (Optional)
   = f.submit
 
 = link_to 'Back', pdfs_path, :class=>'ajax', :accesskey=>'esc'
