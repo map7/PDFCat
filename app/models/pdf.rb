@@ -64,9 +64,7 @@ class Pdf < ActiveRecord::Base
   # File functions
   # --------------------------------------------------------------------------------
   def get_new_filename2
-    date = pdfdate.to_formatted_s(:file_format)
-    ext = File.extname(full_path)
-    "#{pdfname}#{ext}".gsub(/ /,"_")
+    "#{pdfname}#{File.extname(full_path)}".gsub(/ /,"_")
   end
   
   def get_new_filename(current_firm,original_file)
