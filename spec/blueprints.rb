@@ -48,7 +48,7 @@ Pdf.blueprint do
   category
   pdfdate {Date.parse("28-01-2010")}
   pdfname {"Unit Trust"}
-  filename {"Unit_Trust-20100128.pdf"}
+  filename {"Unit_Trust.pdf"}
   business_name {"mercedes benz"}
   contact {"frank smith"}
   description {"building quote"}

@@ -50,7 +50,7 @@ describe Category do
 
       context "when changing the main category" do
         before do 
-          make_dir_with_file("#{@client_dir}/general", "Unit_Trust-20100128.pdf") # Make the old directory
+          make_dir_with_file("#{@client_dir}/general", "Unit_Trust.pdf") # Make the old directory
           @cat.name = "new_name" # Change the category name
         end
         
@@ -65,7 +65,7 @@ describe Category do
           it "will move each pdf" do
             FileUtils.mkdir_p("#{@client_dir}/#{@cat.name}")   # Make the new dir
             @cat.move_dir
-            assert File.exists?("#{@client_dir}/#{@cat.name}/Unit_Trust-20100128.pdf")
+            assert File.exists?("#{@client_dir}/#{@cat.name}/Unit_Trust.pdf")
           end
         end
 
@@ -73,7 +73,7 @@ describe Category do
           it "should not rename the file" do
             FileUtils.mv("#{@client_dir}/general","#{@client_dir}/new_name") # Rename old to new move_dir.
             @cat.move_dir
-            assert File.exists?("#{@client_dir}/#{@cat.name}/Unit_Trust-20100128.pdf")
+            assert File.exists?("#{@client_dir}/#{@cat.name}/Unit_Trust.pdf")
           end
         end
       end                         # main cat
@@ -81,20 +81,20 @@ describe Category do
       context "when it's a sub-category" do
         before do
           @sub = make_sub(@cat, "sub") # current dir
-          make_dir_with_file("#{@client_dir}/#{@cat.name.downcase}/#{@sub.name}","Unit_Trust-20100128.pdf")
+          make_dir_with_file("#{@client_dir}/#{@cat.name.downcase}/#{@sub.name}","Unit_Trust.pdf")
           @pdf.update_attribute(:category_id, @sub.id) # Make sure pdf is part of the sub category
           @newsub = make_sub(@cat, "newsub")
         end
 
         context "new dir doesn't exist" do
           it "exists before the move" do
-            assert File.exists?("#{@client_dir}/#{@cat.name.downcase}/#{@sub.name}/Unit_Trust-20100128.pdf")
+            assert File.exists?("#{@client_dir}/#{@cat.name.downcase}/#{@sub.name}/Unit_Trust.pdf")
           end
           
           it "will renames the old dir" do
             @sub.name = "newsub"
             @sub.move_dir
-            assert File.exists?("#{@client_dir}/#{@cat.name.downcase}/#{@newsub.name}/Unit_Trust-20100128.pdf")
+            assert File.exists?("#{@client_dir}/#{@cat.name.downcase}/#{@newsub.name}/Unit_Trust.pdf")
           end        
         end
 
@@ -103,7 +103,7 @@ describe Category do
             FileUtils.mkdir_p "#{@client_dir}/#{@cat.name.downcase}/#{@newsub.name}"
             @sub.name = "newsub"
             @sub.move_dir
-            assert File.exists?("#{@client_dir}/#{@cat.name.downcase}/#{@newsub.name}/Unit_Trust-20100128.pdf")
+            assert File.exists?("#{@client_dir}/#{@cat.name.downcase}/#{@newsub.name}/Unit_Trust.pdf")
           end
         end
 
@@ -112,7 +112,7 @@ describe Category do
             FileUtils.mv("#{@client_dir}/#{@cat.name.downcase}/#{@sub.name}","#{@client_dir}/#{@cat.name.downcase}/other_dir")
             @sub.name = "newsub"
             @sub.move_dir
-            assert File.exists?("#{@client_dir}/#{@cat.name.downcase}/other_dir/Unit_Trust-20100128.pdf")
+            assert File.exists?("#{@client_dir}/#{@cat.name.downcase}/other_dir/Unit_Trust.pdf")
           end
         end
 
@@ -124,7 +124,7 @@ describe Category do
           it "should appear in the new sub directory" do
             @sub.parent = @cat2
             @sub.move_dir
-            assert File.exists?("#{@client_dir}/#{@cat2.name.downcase}/#{@sub.name.downcase}/Unit_Trust-20100128.pdf")
+            assert File.exists?("#{@client_dir}/#{@cat2.name.downcase}/#{@sub.name.downcase}/Unit_Trust.pdf")
           end
         end
       end # sub
