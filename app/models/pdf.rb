@@ -7,9 +7,9 @@ class Pdf < ActiveRecord::Base
   belongs_to :category
   belongs_to :client
 
-  validates_presence_of :pdfdate, :pdfname, :filename, :category_id, :client_id, :description
+  validates_presence_of :pdfdate, :filename, :category_id, :client_id, :description
   validates_uniqueness_of :pdfname, :scope => [:pdfdate, :category_id, :client_id, :firm_id]
-  validates_format_of :pdfname, :with => /^[^\/\\\?\*:|"<>]+$/, :message => "cannot contain any of the following characters: / \\ ? * : | \" < >"
+  validates_format_of :description, :with => /^[^\/\\\?\*:|"<>]+$/, :message => "cannot contain any of the following characters: / \\ ? * : | \" < >"
 
   named_scope :joined, :joins => [:firm, :client, :category]
   default_scope :order => 'pdfdate DESC'
