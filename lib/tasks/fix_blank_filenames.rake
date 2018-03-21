@@ -6,7 +6,7 @@ namespace :fix do
     Pdf.find(:all, :conditions => {:missing_flag => false}, :order => "ID DESC",:limit => limit).each do |pdf|
       if File.exists?(pdf.full_path) && pdf.pdfname == ""
         dir = File.dirname(pdf.full_path)
-        newfilename = "#{pdf.pdfdate}.pdf".gsub(/ /,"_")
+        newfilename = "#{pdf.pdfdate}-PDF_ID_#{pdf.id}.pdf".gsub(/ /,"_")
         newpath = "#{dir}/#{newfilename}"
 
         puts "Fix filename for #{pdf.id} \n\t#{pdf.filename} \n\t#{newfilename}\n"
