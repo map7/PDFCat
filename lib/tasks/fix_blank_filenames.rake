@@ -4,9 +4,10 @@ namespace :fix do
     limit = ENV['LIMIT'] || Pdf.count
 
     Pdf.find(:all, :conditions => {:missing_flag => false}, :order => "ID DESC",:limit => limit).each do |pdf|
-      if File.exists?(pdf.full_path) && pdf.pdfname == ""
+      if File.exists?(pdf.full_path) && pdf.filename == ".pdf"
         dir = File.dirname(pdf.full_path)
-        newfilename = "#{pdf.pdfdate}-PDF_ID_#{pdf.id}.pdf".gsub(/ /,"_")
+        pdf.update_attribute(:description, "#{pdf.pdfdate}-PDF_ID_#{pdf.id}")
+        newfilename = "#{pdf.description}.pdf".gsub(/ /,"_")
         newpath = "#{dir}/#{newfilename}"
 
         puts "Fix filename for #{pdf.id} \n\t#{pdf.filename} \n\t#{newfilename}\n"
