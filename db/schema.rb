@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20160216023130) do
+ActiveRecord::Schema.define(:version => 20180402235552) do
 
   create_table "categories", :force => true do |t|
     t.string  "name"
@@ -65,6 +65,7 @@ ActiveRecord::Schema.define(:version => 20160216023130) do
     t.string  "business_name"
     t.string  "contact"
     t.string  "description"
+    t.boolean "is_valid"
   end
 
   create_table "users", :force => true do |t|
