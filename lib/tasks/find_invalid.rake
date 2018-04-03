@@ -6,6 +6,7 @@ namespace :pdfs do
       if File.exists?(pdf.full_path)
 
         # Test if valid
+        puts "testing: #{pdf.full_path}"
         result = `jhove -m pdf-hul "#{pdf.full_path}" | grep -a "Status:"`
 
         # Record valid/invalid
