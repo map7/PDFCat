@@ -1,5 +1,9 @@
 * Changelog
 
+** 2.2.10 (03/04/2018)
+
+- Check for invalid pdfs and record them.
+
 ** 2.2.9 (21/03/2018)
 
 - Make pdf filename description only
