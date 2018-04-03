@@ -17,9 +17,14 @@
 #   runner "AnotherModel.prune_old_records"
 # end
 set :output, {:error => 'error.log', :standard => 'cron.log'}
+env 'MAILTO', 'michael@dtcorp.com.au'
+
+every 1.hour do 
+  rake "pdfs:find_invalid"
+end
 
 every 1.day, :at => "10:00pm" do
-  rake "pdfs:ocr"
+  rake "pdfs:find pdfs:ocr pdfs:fix_invalid"
 end
 
 # Learn more: http://github.com/javan/whenever
