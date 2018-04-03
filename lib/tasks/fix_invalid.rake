@@ -7,8 +7,15 @@ end
 # Make a backup and replace original with fixed file
 def replace_original_with_fixed(backup_dir, fixed_file, pdf)
   backup_file="#{backup_dir}/#{pdf.id}-#{pdf.filename}"
-  FileUtils.mv(pdf.full_path, backup_file)
-  FileUtils.mv(fixed_file, pdf.full_path)
+
+  begin
+    FileUtils.mv(pdf.full_path, backup_file)
+    FileUtils.mv(fixed_file, pdf.full_path)
+    return true
+  rescue Exception
+    STDERR.puts "#{Time.now}-Failed to move file #{$!}"
+    return false
+  end
 end
 
 def mark_as_valid(pdf)
@@ -22,14 +29,17 @@ namespace :pdfs do
     BACKUP_DIR = "/media/data/backup/pdfs"
     URL = "http://ltsp/pdfcat/pdfs"
 
-    Pdf.find(:all, :conditions => {:missing_flag => false, :is_valid => false},:limit => LIMIT).each do |pdf|
+    Pdf.find(:all, :conditions => {:missing_flag => false, :is_valid => false}, :order => "id DESC", :limit => LIMIT).each do |pdf|
       if File.exists?(pdf.full_path)
         fixed_file="#{pdf.full_path}.fixed"
 
         fix_pdf(fixed_file, pdf)
-        replace_original_with_fixed(BACKUP_DIR, fixed_file, pdf)
-        mark_as_valid(pdf)
-        puts "\tFIXED: #{URL}/#{pdf.id}\n"
+        status = replace_original_with_fixed(BACKUP_DIR, fixed_file, pdf)
+
+        if status
+          mark_as_valid(pdf)
+          puts "\t#{Time.now}\n\tFIXED: #{URL}/#{pdf.id}\n"
+        end
 
       end
     end
