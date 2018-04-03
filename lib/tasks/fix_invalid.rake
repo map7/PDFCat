@@ -20,6 +20,7 @@ namespace :pdfs do
   task :fix_invalid => :environment do |t|
     LIMIT = ENV['LIMIT'] || Pdf.count
     BACKUP_DIR = "/media/data/backup/pdfs"
+    URL = "http://ltsp/pdfcat/pdfs"
 
     Pdf.find(:all, :conditions => {:missing_flag => false, :is_valid => false},:limit => LIMIT).each do |pdf|
       if File.exists?(pdf.full_path)
@@ -28,6 +29,7 @@ namespace :pdfs do
         fix_pdf(fixed_file, pdf)
         replace_original_with_fixed(BACKUP_DIR, fixed_file, pdf)
         mark_as_valid(pdf)
+        puts "\tFIXED: #{URL}/#{pdf.id}\n"
 
       end
     end
