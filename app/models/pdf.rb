@@ -422,9 +422,16 @@ class Pdf < ActiveRecord::Base
       logger.info "#{full_path} already ocr'd"
     else
       logger.info "OCR #{full_path}"
-      cmd = "abbyyocr --multiProcessingMode Parallel --recognitionProcessesCount 32 --progressInformation --useNotOnlyPhysicalCPUCores -if '#{full_path}' -f PDF -of '#{full_path}'"
+      ocr_tmp="#{full_path}.tmp"
+      cmd = "abbyyocr --multiProcessingMode Parallel --recognitionProcessesCount 32 --progressInformation --useNotOnlyPhysicalCPUCores -if '#{full_path}' -f PDF -of '#{ocr_tmp}'"
       logger.info "#{cmd}"
       status = system(cmd)
+
+      # Replace the old file with the OCR'd file.
+      FileUtils.mv(full_path, "#{full_path}.bak")
+      FileUtils.mv(ocr_tmp, full_path)
+      File.delete("#{full_path}.bak")
+      
       self.update_attribute(:ocr, true) if status
     end
   end
