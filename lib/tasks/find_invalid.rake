@@ -16,12 +16,12 @@ namespace :pdfs do
         result = `jhove -m pdf-hul "#{pdf.full_path}" | grep -a "Status:"`
 
         # Record valid/invalid
-        if result =~ /Well-Formed and valid/
-          puts "#{pdf.filename} is valid"
-          pdf.update_attribute(:is_valid, true)
-        else
+        if result =~ /not valid/
           puts "#{pdf.filename} is invalid"
           pdf.update_attribute(:is_valid, false)
+        else
+          puts "#{pdf.filename} is valid"
+          pdf.update_attribute(:is_valid, true)
         end
 
       end
