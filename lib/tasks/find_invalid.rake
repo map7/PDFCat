@@ -2,7 +2,7 @@ namespace :pdfs do
   desc 'Go through all pdfs and test if they are valid or not'
   task :find_invalid => :environment do |t|
 
-    if ENV[:CHECK_ALL]
+    if ENV['CHECK_ALL']
       pdfs = Pdf.find(:all, :conditions => {:missing_flag => false})
     else
       pdfs = Pdf.find(:all, :conditions => {:missing_flag => false, :is_valid => nil})
