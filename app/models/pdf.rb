@@ -427,12 +427,14 @@ class Pdf < ActiveRecord::Base
       logger.info "#{cmd}"
       status = system(cmd)
 
-      # Replace the old file with the OCR'd file.
-      FileUtils.mv(full_path, "#{full_path}.bak")
-      FileUtils.mv(ocr_tmp, full_path)
-      File.delete("#{full_path}.bak")
-      
-      self.update_attribute(:ocr, true) if status
+      if File.exist?(ocr_tmp)
+        # Replace the old file with the OCR'd file.
+        FileUtils.mv(full_path, "#{full_path}.bak")
+        FileUtils.mv(ocr_tmp, full_path)
+        File.delete("#{full_path}.bak")
+        
+        self.update_attribute(:ocr, true) if status
+      end
     end
   end
   
