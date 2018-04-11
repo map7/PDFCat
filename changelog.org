@@ -1,5 +1,10 @@
 * Changelog
 
+** 2.2.11 (11/04/2018)
+
+- PDF
+  - FIX issue with OCR not escaping single quotes
+
 ** 2.2.10 (03/04/2018)
 
 - Check for invalid pdfs and record them.
