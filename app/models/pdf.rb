@@ -423,7 +423,7 @@ class Pdf < ActiveRecord::Base
     else
       logger.info "OCR #{full_path}"
       ocr_tmp="#{full_path}.tmp"
-      cmd = "abbyyocr --multiProcessingMode Parallel --recognitionProcessesCount 32 --progressInformation --useNotOnlyPhysicalCPUCores -if '#{full_path}' -f PDF -of '#{ocr_tmp}'"
+      cmd = "abbyyocr --multiProcessingMode Parallel --recognitionProcessesCount 32 --progressInformation --useNotOnlyPhysicalCPUCores -if \"#{full_path}\" -f PDF -of \"#{ocr_tmp}\""
       logger.info "#{cmd}"
       status = system(cmd)
 
