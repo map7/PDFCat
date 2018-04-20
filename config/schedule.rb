@@ -24,12 +24,12 @@ every 1.hour do
 end
 
 every 1.day, :at => "10:00pm" do
+  env "CHECK_ALL", "true"
   rake "pdfs:find pdfs:ocr"
 end
 
-every :weekend do
-  rake "pdfs:fix_invalid"
-  
+every 1.day, :at => "11:00pm" do
+  rake "pdfs:fix_invalid"  
 end
 
 # Learn more: http://github.com/javan/whenever
