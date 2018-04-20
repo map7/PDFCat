@@ -1,8 +1,19 @@
+def log_invalid(pdf)
+  logfile="/tmp/pdfcat_invalid.csv"
+  logexists = File.exists?(logfile)
+  
+  File.open(logfile, "a") do |file|
+    file.puts "id,date,name,client,category,ocr,missing,valid,fullpath" unless logexists
+    file.puts "#{pdf.id},#{pdf.pdfdate},#{pdf.pdfname},#{pdf.client.name},#{pdf.category.name},#{pdf.ocr},#{pdf.missing_flag},#{pdf.is_valid},#{pdf.fullpath(pdf)}"
+  end
+end
+
 def record_valid(result, pdf)
   # Record valid/invalid
   if result =~ /not valid/
     puts "ID: #{pdf.id}\t is INVALID\t#{pdf.filename}"
     pdf.update_attribute(:is_valid, false)
+    log_invalid(pdf)
   else
     puts "ID: #{pdf.id}\t is VALID\t#{pdf.filename}"
     pdf.update_attribute(:is_valid, true)
@@ -15,13 +26,13 @@ def test_if_valid(pdf)
 end
 
 def print_summary
-  invalid = Pdf.find(:all, :conditions => {:is_valid => false}).count
-  valid = Pdf.find(:all, :conditions => {:is_valid => true}).count
+  invalid = Pdf.find(:all, :conditions => {:is_valid => false})
+  valid = Pdf.find(:all, :conditions => {:is_valid => true})
 
   puts "\n--------------------------------------------------------------------------------"
   puts "\nSummary" \
-    "\nInvalid:\t#{invalid}" \
-    "\nValid:\t\t#{valid}"
+    "\nInvalid:\t#{invalid.count}" \
+    "\nValid:\t\t#{valid.count}"
   puts "\n--------------------------------------------------------------------------------"
 end
 
